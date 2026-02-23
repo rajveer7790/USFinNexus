@@ -1,0 +1,40 @@
+npm warn Unknown user config "always-auth". This will stop working in the next major version of npm.
+`next lint` is deprecated and will be removed in Next.js 16.
+For new projects, use create-next-app to choose your preferred linter.
+For existing projects, migrate to the ESLint CLI:
+npx @next/codemod@canary next-lint-to-eslint-cli .
+
+
+./src/app/about/page.tsx
+42:32  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+42:50  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+
+./src/app/calculators/affordability/page.tsx
+15:23  Warning: 'setInsurance' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+16:17  Warning: 'setHoa' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+
+./src/app/calculators/comparison/page.tsx
+4:31  Warning: 'calcMonthlyPI' is defined but never used.  @typescript-eslint/no-unused-vars
+4:62  Warning: 'formatPercent' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/app/calculators/interest-only/InterestOnlyClient.tsx
+156:73  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+156:87  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+
+./src/app/calculators/mortgage/MortgageCalculatorClient.tsx
+3:33  Warning: 'useRef' is defined but never used.  @typescript-eslint/no-unused-vars
+17:30  Warning: 'ChevronDown' is defined but never used.  @typescript-eslint/no-unused-vars
+17:43  Warning: 'ChevronUp' is defined but never used.  @typescript-eslint/no-unused-vars
+453:37  Warning: The attribute aria-selected is not supported by the role button. This role is implicit on the element button.  jsx-a11y/role-supports-aria-props
+641:121  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./src/app/calculators/refinance/page.tsx
+4:25  Warning: 'calcMonthlyPI' is defined but never used.  @typescript-eslint/no-unused-vars
+6:10  Warning: 'TrendingDown' is defined but never used.  @typescript-eslint/no-unused-vars
+6:24  Warning: 'Calendar' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/app/calculators/rent-vs-buy/page.tsx
+12:22  Warning: 'setLoanTerm' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+15:17  Warning: 'setHoa' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules

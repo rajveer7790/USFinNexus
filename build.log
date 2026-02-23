@@ -1,0 +1,26 @@
+npm warn Unknown user config "always-auth". This will stop working in the next major version of npm.
+
+> usfinnexus@1.0.0 build
+> next build
+
+ ⚠ Invalid next.config.ts options detected: 
+ ⚠     Unrecognized key(s) in object: 'allowedDevOrigins' at "experimental"
+ ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+   ▲ Next.js 15.5.12
+   - Experiments (use with caution):
+     · allowedDevOrigins
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 4.6s
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/23) ...
+Error occurred prerendering page "/articles/march-1-2026-fincen-rule-all-cash-home-buyers". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: Home is not defined
+    at n (E:\UsFinNexus\.next\server\app\articles\march-1-2026-fincen-rule-all-cash-home-buyers\page.js:1:11532)
+    at stringify (<anonymous>) {
+  digest: '3783958650'
+}
+Export encountered an error on /articles/march-1-2026-fincen-rule-all-cash-home-buyers/page: /articles/march-1-2026-fincen-rule-all-cash-home-buyers, exiting the build.
+ ⨯ Next.js build worker exited with code: 1 and signal: null
