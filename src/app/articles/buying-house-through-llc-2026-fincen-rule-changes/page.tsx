@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, Home, FileText, CheckCircle2, ShieldCore } from 'lucide-react';
+import { ArrowLeft, Home, FileText, CheckCircle2, Shield } from 'lucide-react';
 import RelatedArticles from '@/components/RelatedArticles';
 
 export const metadata: Metadata = {
@@ -72,7 +72,7 @@ export default function ArticlePage() {
 
                 <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-6 my-8">
                     <div className="flex items-start gap-4">
-                        <ShieldCore className="w-6 h-6 text-green-600 mt-1 shrink-0" />
+                        <Shield className="w-6 h-6 text-green-600 mt-1 shrink-0" />
                         <div>
                             <p className="font-bold text-green-900 dark:text-green-300 m-0 mb-2">Are My Public Records Still Private?</p>
                             <p className="text-green-800 dark:text-green-200 m-0">
