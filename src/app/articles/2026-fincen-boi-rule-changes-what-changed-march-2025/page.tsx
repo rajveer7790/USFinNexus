@@ -76,7 +76,7 @@ export default function ArticlePage() {
                         <div>
                             <p className="font-bold text-blue-900 dark:text-blue-300 m-0 mb-2">The March 2025 Resolution</p>
                             <p className="text-blue-800 dark:text-blue-200 m-0">
-                                Rather than fighting a protracted Supreme Court battle, FinCEN released the "March 2025 Domestic Optimization Directive," fundamentally overhauling the CTA's scope and creating the 2026 framework we operate under today.
+                                Rather than fighting a protracted Supreme Court battle, FinCEN released the &quot;March 2025 Domestic Optimization Directive,&quot; fundamentally overhauling the CTA&apos;s scope and creating the 2026 framework we operate under today.
                             </p>
                         </div>
                     </div>
@@ -84,7 +84,7 @@ export default function ArticlePage() {
 
                 <h2>Key Change 1: The Domestic Exemption (#24)</h2>
                 <p>
-                    The single most important outcome of the March 2025 rule change was the introduction of Exemption #24. Prior to this, the only exemptions available were for heavily regulated entities like banks, insurance providers, and massive "large operating companies" (20+ employees, $5M+ revenue).
+                    The single most important outcome of the March 2025 rule change was the introduction of Exemption #24. Prior to this, the only exemptions available were for heavily regulated entities like banks, insurance providers, and massive &quot;large operating companies&quot; (20+ employees, $5M+ revenue).
                 </p>
                 <p>
                     The new directive protected 100% U.S.-owned small businesses. If your LLC is owned entirely by U.S. citizens or green card holders, and operates physically within the United States, your federal BOI reporting requirement vanished overnight. FinCEN recognized that domestic small businesses were not the primary vehicles for the international money laundering they were trying to prevent.
@@ -112,12 +112,12 @@ export default function ArticlePage() {
                     </div>
                 </div>
 
-                <h2>Key Change 2: Precision in "Substantial Control"</h2>
+                <h2>Key Change 2: Precision in &quot;Substantial Control&quot;</h2>
                 <p>
-                    One of the most heavily debated aspects of the original CTA was the vague definition of "Substantial Control." Did a minority investor with veto rights need to report? What about a third-party non-owner CEO?
+                    One of the most heavily debated aspects of the original CTA was the vague definition of &quot;Substantial Control.&quot; Did a minority investor with veto rights need to report? What about a third-party non-owner CEO?
                 </p>
                 <p>
-                    The March 2025 guidance finally provided concrete safe harbors. It clarified that standard contractual rights (such as a lender's covenants or a landlord's operational restrictions) do <em>not</em> constitute substantial control. However, board members, executive officers (CEO, CFO, COO), and any individual legally authorized to dissolve the LLC or drastically alter its business nature absolutely must be reported.
+                    The March 2025 guidance finally provided concrete safe harbors. It clarified that standard contractual rights (such as a lender&apos;s covenants or a landlord&apos;s operational restrictions) do <em>not</em> constitute substantial control. However, board members, executive officers (CEO, CFO, COO), and any individual legally authorized to dissolve the LLC or drastically alter its business nature absolutely must be reported.
                 </p>
 
                 <h2>Key Change 3: The Automated Passport Verification System</h2>
@@ -141,7 +141,7 @@ export default function ArticlePage() {
 
                 <h2>How State Legislatures Reacted</h2>
                 <p>
-                    The federal rollback in March 2025 had an unintended side effect: it galvanized certain state legislatures. Feeling that FinCEN was "going soft" on corporate anonymity, states like New York and California accelerated their own "Mini-CTA" laws.
+                    The federal rollback in March 2025 had an unintended side effect: it galvanized certain state legislatures. Feeling that FinCEN was &quot;going soft&quot; on corporate anonymity, states like New York and California accelerated their own &quot;Mini-CTA&quot; laws.
                 </p>
                 <p>
                     The <strong>New York LLC Transparency Act</strong>, which went live in early 2026, unapologetically demands beneficial ownership data from thousands of entities that FinCEN deemed federally exempt. The March 2025 federal update inadvertently shifted the compliance battleground from Washington D.C. to individual state capitals.

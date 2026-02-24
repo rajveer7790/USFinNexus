@@ -75,7 +75,7 @@ export default function ArticlePage() {
                         <TrendingUp className="w-8 h-8 text-blue-500 mb-3" />
                         <h4 className="font-bold text-lg mb-2" style={{ color: 'var(--color-navy)' }}>Prior to 2026</h4>
                         <p className="text-sm text-gray-600 dark:text-gray-400">
-                            Over 32 million ordinary US businesses were classified as "Reporting Entities" and forced to comply.
+                            Over 32 million ordinary US businesses were classified as &quot;Reporting Entities&quot; and forced to comply.
                         </p>
                     </div>
 
@@ -96,7 +96,7 @@ export default function ArticlePage() {
                     </div>
                 </div>
 
-                <h2>The "Domestic Business Exemption" Explained</h2>
+                <h2>The &quot;Domestic Business Exemption&quot; Explained</h2>
                 <p>
                     The 2026 regulatory update introduced the ultimate lifeline for U.S. citizens: Exemption #24, informally known as the Domestic Business Exemption. It fundamentally changes the compliance landscape.
                 </p>
@@ -107,8 +107,8 @@ export default function ArticlePage() {
                 <h3>How to Quality for the Exemption</h3>
                 <p>To drop your FinCEN reporting requirement, your LLC or Corporation must be:</p>
                 <ul className="list-disc pl-5">
-                    <li><strong>100% U.S. Owned:</strong> Every equity holder, member, and individual with "substantial control" (directors, senior officers) MUST be a United States citizen or Lawful Permanent Resident (Green Card holder).</li>
-                    <li><strong>Physically Located in the US:</strong> You must operate primarily from a physical U.S. street address. A virtual office or a Registered Agent's address does not satisfy this operational requirement.</li>
+                    <li><strong>100% U.S. Owned:</strong> Every equity holder, member, and individual with &quot;substantial control&quot; (directors, senior officers) MUST be a United States citizen or Lawful Permanent Resident (Green Card holder).</li>
+                    <li><strong>Physically Located in the US:</strong> You must operate primarily from a physical U.S. street address. A virtual office or a Registered Agent&apos;s address does not satisfy this operational requirement.</li>
                     <li><strong>Direct Ownership:</strong> The ownership must not be obfuscated through foreign holding companies or complex trusts that make identifying natural persons difficult.</li>
                 </ul>
 
@@ -123,12 +123,12 @@ export default function ArticlePage() {
                     </div>
                 </figure>
 
-                <h2>"I Already Filed in 2024/2025. Now What?"</h2>
+                <h2>&quot;I Already Filed in 2024/2025. Now What?&quot;</h2>
                 <p>
                     If you were a diligent business owner who rushed to file your BOI report prior to the 2026 rule change, you might be feeling frustrated right now. Fortunately, FinCEN provides a frictionless path forward.
                 </p>
                 <p>
-                    If your business profile matches the new Domestic Exemption, you do not need to log in and file a complicated "withdrawal" or update your driver's license ever again. FinCEN simply places compliant, exempt records into an inactive archival state. <strong>You are effectively done with the CTA.</strong>
+                    If your business profile matches the new Domestic Exemption, you do not need to log in and file a complicated &quot;withdrawal&quot; or update your driver&apos;s license ever again. FinCEN simply places compliant, exempt records into an inactive archival state. <strong>You are effectively done with the CTA.</strong>
                 </p>
                 <p>
                     <em>However</em>, if you sell 10% of your business to a Canadian investor, or if a foreign national becomes your new CEO, your exemption is immediately destroyed. In that event, you have exactly 30 calendar days to file an updated BOI report detailing the new foreign beneficial owners.
@@ -136,7 +136,7 @@ export default function ArticlePage() {
 
                 <h2>Who Still Has to Worry about FinCEN?</h2>
                 <p>
-                    While the "Mom-and-Pop" shops are safe, FinCEN has intensified enforcement on the remaining targets:
+                    While the &quot;Mom-and-Pop&quot; shops are safe, FinCEN has intensified enforcement on the remaining targets:
                 </p>
                 <ol>
                     <li><strong>Foreign-Owned Entities:</strong> International investors utilizing U.S. LLCs for e-commerce, software businesses, or protecting IP.</li>
@@ -158,7 +158,7 @@ export default function ArticlePage() {
                 <div className="bg-gray-100 dark:bg-gray-900 p-8 rounded-2xl text-center not-prose">
                     <h3 className="text-2xl font-black mb-3" style={{ color: 'var(--color-navy)' }}>Are You 100% Certain You Are Exempt?</h3>
                     <p className="mb-6 text-gray-600 dark:text-gray-400">
-                        Don't guess when $500-a-day penalties are on the line. Have our compliance attorneys audit your LLC's ownership structure to confirm your 2026 exemption status.
+                        Don&apos;t guess when $500-a-day penalties are on the line. Have our compliance attorneys audit your LLC&apos;s ownership structure to confirm your 2026 exemption status.
                     </p>
                     <button className="btn-primary py-3 px-8 text-sm w-full sm:w-auto shadow-xl">
                         Get Your Free Exemption Audit

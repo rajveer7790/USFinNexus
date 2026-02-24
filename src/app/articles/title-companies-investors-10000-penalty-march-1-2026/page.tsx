@@ -25,11 +25,11 @@ export default function ArticlePage() {
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight tracking-tight" style={{ color: 'var(--color-text)' }}>
-                    Title Companies & Investors: The $10,000 Penalty You'll Face After March 1, 2026
+                    Title Companies &amp; Investors: The $10,000 Penalty You&apos;ll Face After March 1, 2026
                 </h1>
 
                 <p className="text-xl leading-relaxed mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    When the federal government enacted the FinCEN Residential Real Estate Rule, it didn't just place an administrative burden on high-net-worth property buyers. It effectively conscripted the entire U.S. title insurance and settlement industry into becoming unpaid, federally mandated anti-money laundering agents. And the penalties for real estate professionals who fail to execute these new duties are severe.
+                    When the federal government enacted the FinCEN Residential Real Estate Rule, it didn&apos;t just place an administrative burden on high-net-worth property buyers. It effectively conscripted the entire U.S. title insurance and settlement industry into becoming unpaid, federally mandated anti-money laundering agents. And the penalties for real estate professionals who fail to execute these new duties are severe.
                 </p>
 
                 <div className="flex items-center gap-4 border-t border-b py-4 border-gray-200 dark:border-gray-800">
@@ -62,12 +62,12 @@ export default function ArticlePage() {
                     </figcaption>
                 </figure>
 
-                <h2>The Target is the "Reporting Person"</h2>
+                <h2>The Target is the &quot;Reporting Person&quot;</h2>
                 <p>
                     Unlike the Corporate Transparency Act (which places the burden of filing BOI reports squarely on the shoulders of the business owner), the March 1, 2026 Real Estate Reporting Rule delegates the primary filing responsibility to real estate professionals managing the transaction.
                 </p>
                 <p>
-                    FinCEN defines a precise "Reporting Cascade" to ensure that <em>somebody</em> in the settlement ecosystem is legally on the hook if an all-cash LLC transaction goes unreported.
+                    FinCEN defines a precise &quot;Reporting Cascade&quot; to ensure that <em>somebody</em> in the settlement ecosystem is legally on the hook if an all-cash LLC transaction goes unreported.
                 </p>
 
                 <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-6 my-8">
@@ -76,7 +76,7 @@ export default function ArticlePage() {
                         <div>
                             <p className="font-bold text-red-900 dark:text-red-300 m-0 mb-2">The Liability Cascade</p>
                             <p className="text-red-800 dark:text-red-200 m-0">
-                                You are the legally accountable "Reporting Person" if you are the highest-tier professional involved: (1) Listed closing agent → (2) Statement preparer → (3) Deed filer → (4) Title underwriter → (5) Fund disburser.
+                                You are the legally accountable &quot;Reporting Person&quot; if you are the highest-tier professional involved: (1) Listed closing agent → (2) Statement preparer → (3) Deed filer → (4) Title underwriter → (4) Fund disburser.
                             </p>
                         </div>
                     </div>
@@ -120,8 +120,8 @@ export default function ArticlePage() {
                 <ul className="list-disc pl-5">
                     <li><strong>Rigid Intakes:</strong> Gone are the days of sending a wire transfer via a newly formed Delaware LLC on a Friday afternoon to close the same day. Title companies now demand weeks of lead time to run full KYC (Know Your Customer) checks on entity buyers.</li>
                     <li><strong>Refusal to Close:</strong> Escrow agents will flatly refuse to disburse funds or file a deed if the purchasing LLC has not provided complete, certified beneficial ownership data and passport copies. <em>They simply will not risk the liability.</em></li>
-                    <li><strong>Designation Agreements:</strong> FinCEN allows professionals within the reporting cascade to shift the filing burden via a written "Designation Agreement." Attorneys and title underwriters are heavily aggressively utilizing these contracts to push the liability onto lower-tier settlement agents prior to closing.</li>
-                    <li><strong>New Fees:</strong> The enormous administrative burden of securely collecting, verifying, encrypting, and uploading highly sensitive PII to FinCEN means "FinCEN Compliance Fees" are now standard line items on the ALTA settlement statement.</li>
+                    <li><strong>Designation Agreements:</strong> FinCEN allows professionals within the reporting cascade to shift the filing burden via a written &quot;Designation Agreement.&quot; Attorneys and title underwriters are heavily aggressively utilizing these contracts to push the liability onto lower-tier settlement agents prior to closing.</li>
+                    <li><strong>New Fees:</strong> The enormous administrative burden of securely collecting, verifying, encrypting, and uploading highly sensitive PII to FinCEN means &quot;FinCEN Compliance Fees&quot; are now standard line items on the ALTA settlement statement.</li>
                 </ul>
 
                 <figure className="my-12">
@@ -135,9 +135,9 @@ export default function ArticlePage() {
                     </div>
                 </figure>
 
-                <h2>The Reliance "Safe Harbor" (Why Investors Must Tell the Truth)</h2>
+                <h2>The Reliance &quot;Safe Harbor&quot; (Why Investors Must Tell the Truth)</h2>
                 <p>
-                    While title agents carry the filing burden, they are offered a critical "safe harbor." If a settlement agent relies on the information provided by the purchasing LLC, they are generally protected against penalties if that information turns out to be false—<strong>provided the agent did not have actual knowledge that it was incorrect.</strong>
+                    While title agents carry the filing burden, they are offered a critical &quot;safe harbor.&quot; If a settlement agent relies on the information provided by the purchasing LLC, they are generally protected against penalties if that information turns out to be false—<strong>provided the agent did not have actual knowledge that it was incorrect.</strong>
                 </p>
                 <p>
                     FinCEN requires the purchasing LLC to sign a legally binding certification verifying that they have accurately identified every single beneficial owner. If an investor lies on this certification form, FinCEN will bypass the title agent and pursue federal criminal fraud and evasion charges directly against the investor.
@@ -153,7 +153,7 @@ export default function ArticlePage() {
                 <div className="bg-gray-100 dark:bg-gray-900 p-8 rounded-2xl text-center not-prose">
                     <h3 className="text-2xl font-black mb-3" style={{ color: 'var(--color-navy)' }}>Are You a Real Estate Professional?</h3>
                     <p className="mb-6 text-gray-600 dark:text-gray-400">
-                        Don't let the FinCEN Real Estate Reporting Rule expose your agency to $10,000 penalties. Partner with us to outsource your firm's beneficial ownership data collection and reporting.
+                        Don&apos;t let the FinCEN Real Estate Reporting Rule expose your agency to $10,000 penalties. Partner with us to outsource your firm&apos;s beneficial ownership data collection and reporting.
                     </p>
                     <button className="btn-primary py-3 px-8 text-sm w-full sm:w-auto shadow-xl">
                         Schedule an Agency Compliance Call

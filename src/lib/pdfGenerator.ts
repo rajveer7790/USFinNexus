@@ -46,7 +46,7 @@ export async function generateMortgagePDF(
     // Tagline
     doc.setFontSize(9);
     doc.setFont('helvetica', 'normal');
-    doc.setTextColor(255, 255, 255, 0.7);
+    doc.setTextColor(255, 255, 255, 0.9);
     doc.text('Free Mortgage & Finance Calculators | usfinnexus.com', margin + 22, 27);
 
     // Report title
@@ -58,7 +58,7 @@ export async function generateMortgagePDF(
     // Date
     doc.setFontSize(8);
     doc.setFont('helvetica', 'normal');
-    doc.setTextColor(200, 200, 200);
+    doc.setTextColor(230, 230, 230);
     doc.text(`Generated: ${new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}`, pageWidth - margin, 44, { align: 'right' });
 
     let y = 70;
@@ -227,7 +227,7 @@ AFFILIATION: USFinNexus.com is not affiliated with, endorsed by, or sponsored by
 
     // Footer on disclaimer page
     doc.setFontSize(8);
-    doc.setTextColor(150, 150, 160);
+    doc.setTextColor(100, 100, 110);
     doc.text('USFinNexus.com | Free Mortgage Calculators | Not financial advice', pageWidth / 2, pageHeight - 15, { align: 'center' });
     doc.text(`Generated ${new Date().toLocaleDateString('en-US')}`, pageWidth / 2, pageHeight - 10, { align: 'center' });
 
@@ -236,7 +236,7 @@ AFFILIATION: USFinNexus.com is not affiliated with, endorsed by, or sponsored by
     for (let i = 1; i <= totalPages; i++) {
         doc.setPage(i);
         doc.setFontSize(8);
-        doc.setTextColor(160, 160, 175);
+        doc.setTextColor(100, 100, 110);
         doc.text(
             `Page ${i} of ${totalPages} | USFinNexus.com — For estimation only`,
             pageWidth / 2,

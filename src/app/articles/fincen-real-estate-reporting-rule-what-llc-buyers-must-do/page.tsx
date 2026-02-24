@@ -64,10 +64,10 @@ export default function ArticlePage() {
 
                 <h2>The New Burden on Buyers</h2>
                 <p>
-                    Previously, utilizing a Delaware or Wyoming LLC to purchase a luxury condo in Miami or a vacation home in Aspen was a relatively frictionless process. Aside from standard title checks and wire transfers, the beneficial owner's identity could remain completely shielded from the public deed and federal regulators.
+                    Previously, utilizing a Delaware or Wyoming LLC to purchase a luxury condo in Miami or a vacation home in Aspen was a relatively frictionless process. Aside from standard title checks and wire transfers, the beneficial owner&apos;s identity could remain completely shielded from the public deed and federal regulators.
                 </p>
                 <p>
-                    Effective March 1, 2026, FinCEN enforces nationwide mandatory reporting for all "non-financed" transfers of residential property to legal entities. The title agent or closing attorney is legally required to file a Real Estate Report with FinCEN detailing exactly who owns and controls the purchasing LLC.
+                    Effective March 1, 2026, FinCEN enforces nationwide mandatory reporting for all &quot;non-financed&quot; transfers of residential property to legal entities. The title agent or closing attorney is legally required to file a Real Estate Report with FinCEN detailing exactly who owns and controls the purchasing LLC.
                 </p>
                 <p>
                     If the title agent cannot obtain this information from you, <strong>they will refuse to close the transaction</strong> because they face severe civil and criminal liability.
@@ -94,13 +94,13 @@ export default function ArticlePage() {
                     <li>The purchase does NOT utilize external financing from a highly regulated financial institution (like a traditional bank mortgage). Private lender financing or seller financing still triggers the rule.</li>
                 </ul>
 
-                <h3>☐ Map Your Entity's Beneficial Ownership</h3>
+                <h3>☐ Map Your Entity&apos;s Beneficial Ownership</h3>
                 <p>
-                    The title company will require a full breakdown of the purchasing entity. You must identify every single "Beneficial Owner." This means identifying every human being who:
+                    The title company will require a full breakdown of the purchasing entity. You must identify every single &quot;Beneficial Owner.&quot; This means identifying every human being who:
                 </p>
                 <ol>
                     <li>Owns or controls 25% or more of the equity in the LLC or Trust.</li>
-                    <li>Exercises "Substantial Control" over the entity (e.g., the manager of a manager-managed LLC, a senior partner, or someone with sole authority to dissolve the entity).</li>
+                    <li>Exercises &quot;Substantial Control&quot; over the entity (e.g., the manager of a manager-managed LLC, a senior partner, or someone with sole authority to dissolve the entity).</li>
                 </ol>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
@@ -110,7 +110,7 @@ export default function ArticlePage() {
                             Gather Identification
                         </h4>
                         <p className="text-sm text-gray-600 dark:text-gray-400">
-                            Collect a color copy of an unexpired, government-issued photo ID (Driver's License or Passport) and current residential street address for EVERY beneficial owner.
+                            Collect a color copy of an unexpired, government-issued photo ID (Driver&apos;s License or Passport) and current residential street address for EVERY beneficial owner.
                         </p>
                     </div>
 
@@ -129,12 +129,12 @@ export default function ArticlePage() {
 
                 <h3>☐ Secure Data Transmission</h3>
                 <p>
-                    You are transmitting highly sensitive Personal Identifiable Information (PII). Ensure your closing attorney or title agent has a secure, encrypted portal for transferring IDs and trust documents. Never email copies of passports or drivers' licenses via unencrypted connections, as the real estate industry is heavily targeted by wire fraud hackers.
+                    You are transmitting highly sensitive Personal Identifiable Information (PII). Ensure your closing attorney or title agent has a secure, encrypted portal for transferring IDs and trust documents. Never email copies of passports or drivers&apos; licenses via unencrypted connections, as the real estate industry is heavily targeted by wire fraud hackers.
                 </p>
 
                 <h3>☐ Review Closing Disclosures for FinCEN Fees</h3>
                 <p>
-                    Because title companies are now burdened with acting as federal reporting agents, they are legally assuming the risk of FinCEN audits. Expect to see new line items on your closing disclosure, typically labeled <strong>"FinCEN Compliance Fee"</strong> or <strong>"Real Estate Report Filing Fee."</strong> Market rates currently range from $200 to $500 per transaction depending on the complexity of the ownership structure.
+                    Because title companies are now burdened with acting as federal reporting agents, they are legally assuming the risk of FinCEN audits. Expect to see new line items on your closing disclosure, typically labeled <strong>&quot;FinCEN Compliance Fee&quot;</strong> or <strong>&quot;Real Estate Report Filing Fee.&quot;</strong> Market rates currently range from $200 to $500 per transaction depending on the complexity of the ownership structure.
                 </p>
 
                 <figure className="my-12">
@@ -153,23 +153,23 @@ export default function ArticlePage() {
                     If you mapped your beneficial ownership correctly and provided the IDs securely in advance, the actual closing will proceed normally.
                 </p>
                 <p>
-                    The title agent will verify that the funds wired match the "Reporting Person" criteria and finalize the closing statement. They will have you sign the final FinCEN Data Certification form alongside the standard closing package.
+                    The title agent will verify that the funds wired match the &quot;Reporting Person&quot; criteria and finalize the closing statement. They will have you sign the final FinCEN Data Certification form alongside the standard closing package.
                 </p>
 
                 <h3>☐ The 30-Day Post-Closing Window</h3>
                 <p>
-                    The burden of actually filing the report with the federal government falls on the "Reporting Person" (your settlement agent or title company), who has 30 days post-closing to submit the data to the FinCEN database.
+                    The burden of actually filing the report with the federal government falls on the &quot;Reporting Person&quot; (your settlement agent or title company), who has 30 days post-closing to submit the data to the FinCEN database.
                 </p>
                 <p>
                     As the buyer, your responsibility is essentially over once the closing is complete—<strong>provided you did not lie or purposely obscure ownership.</strong> Submitting fraudulent documents or intentionally misrepresenting the beneficial owners to the title agent is a direct violation of the Bank Secrecy Act and carries federal criminal penalties.
                 </p>
 
-                <h2>A Note on "Financing" Loopholes</h2>
+                <h2>A Note on &quot;Financing&quot; Loopholes</h2>
                 <p>
                     Investors occasionally ask if they can avoid the rule by simply getting a tiny mortgage. The answer is technically <em>yes</em>.
                 </p>
                 <p>
-                    The FinCEN rule only applies to "non-financed" transfers. If the transaction involves an extension of credit secured by the property that is granted by a tightly regulated financial institution (like a national bank or credit union), the Real Estate Report is not required. Why? Because the bank is already required to run extensive Anti-Money Laundering (AML) and Know Your Customer (KYC) checks on the LLC under existing FinCEN banking regulations. FinCEN does not require double-reporting.
+                    The FinCEN rule only applies to &quot;non-financed&quot; transfers. If the transaction involves an extension of credit secured by the property that is granted by a tightly regulated financial institution (like a national bank or credit union), the Real Estate Report is not required. Why? Because the bank is already required to run extensive Anti-Money Laundering (AML) and Know Your Customer (KYC) checks on the LLC under existing FinCEN banking regulations. FinCEN does not require double-reporting.
                 </p>
 
                 <h2>Conclusion</h2>

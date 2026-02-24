@@ -25,11 +25,11 @@ export default function ArticlePage() {
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight tracking-tight" style={{ color: 'var(--color-text)' }}>
-                    Foreign-Owned US LLCs: Your New 30-Day BOI Deadline in 2026 – Don't Miss It!
+                    Foreign-Owned US LLCs: Your New 30-Day BOI Deadline in 2026 – Don&apos;t Miss It!
                 </h1>
 
                 <p className="text-xl leading-relaxed mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    The "grace period" for international entrepreneurs operating in the United States is officially over. In 2026, FinCEN tightened its target scope specifically onto foreign nationals utilizing U.S. shell companies. If you are a non-resident alien launching a Wyoming or Delaware LLC, your margin for error has vanished to exactly 30 calendar days.
+                    The &quot;grace period&quot; for international entrepreneurs operating in the United States is officially over. In 2026, FinCEN tightened its target scope specifically onto foreign nationals utilizing U.S. shell companies. If you are a non-resident alien launching a Wyoming or Delaware LLC, your margin for error has vanished to exactly 30 calendar days.
                 </p>
 
                 <div className="flex items-center gap-4 border-t border-b py-4 border-gray-200 dark:border-gray-800">
@@ -90,8 +90,8 @@ export default function ArticlePage() {
                     The 30-day timeline begins at the <strong>earlier</strong> of two events:
                 </p>
                 <ul className="list-disc pl-5">
-                    <li>The date you receive <strong>actual notice</strong> from the secretary of state that your LLC's creation or registration has become effective.</li>
-                    <li>The date the secretary of state provides <strong>public notice</strong> (like publishing it on their searchable online database) that the entity's creation is effective.</li>
+                    <li>The date you receive <strong>actual notice</strong> from the secretary of state that your LLC&apos;s creation or registration has become effective.</li>
+                    <li>The date the secretary of state provides <strong>public notice</strong> (like publishing it on their searchable online database) that the entity&apos;s creation is effective.</li>
                 </ul>
                 <p>
                     This means if a registered agent files your documents in Wyoming on a Tuesday and they are approved on Wednesday, your 30 days have already commenced, regardless of whether you have received the hard copies in the mail yet.
@@ -104,7 +104,7 @@ export default function ArticlePage() {
                             Foreign ID Complexities
                         </h4>
                         <p className="text-sm text-gray-600 dark:text-gray-400">
-                            Filing within 30 days means having your acceptable identification ready. Foreign citizens must supply an unexpired foreign passport (driver's licenses from other countries are NOT accepted by FinCEN).
+                            Filing within 30 days means having your acceptable identification ready. Foreign citizens must supply an unexpired foreign passport (driver&apos;s licenses from other countries are NOT accepted by FinCEN).
                         </p>
                     </div>
 
@@ -114,14 +114,14 @@ export default function ArticlePage() {
                             Company Applicant Data
                         </h4>
                         <p className="text-sm text-gray-600 dark:text-gray-400">
-                            You must also report the "Company Applicant" (the person who directed the filing of your LLC). This is often your registered agent or attorney, and tracking down their FinCEN ID takes time.
+                            You must also report the &quot;Company Applicant&quot; (the person who directed the filing of your LLC). This is often your registered agent or attorney, and tracking down their FinCEN ID takes time.
                         </p>
                     </div>
                 </div>
 
                 <h2>Updates vs. Initial Filings: A Crucial Distinction</h2>
                 <p>
-                    The 30-day deadline isn't just for new companies. Once you file your initial report, the 30-day clock constantly hovers over your business operations.
+                    The 30-day deadline isn&apos;t just for new companies. Once you file your initial report, the 30-day clock constantly hovers over your business operations.
                 </p>
                 <p>
                     If there is <em>any</em> change to the information previously reported about your company or its beneficial owners, you must file an updated BOI report no later than <strong>30 days after the date on which the change occurred.</strong>
@@ -131,7 +131,7 @@ export default function ArticlePage() {
                     <li>A foreign owner moving and obtaining a new residential address in their home country.</li>
                     <li>A foreign owner renewing their passport (the new document image and number must be uploaded).</li>
                     <li>Selling equity to a new foreign or domestic partner who surpasses the 25% ownership threshold.</li>
-                    <li>Changing the name or expanding the "DBA" trade names of the US LLC.</li>
+                    <li>Changing the name or expanding the &quot;DBA&quot; trade names of the US LLC.</li>
                 </ul>
                 <p>
                     Every time a passport is renewed, a 30-day countdown starts. Overlooking this administrative detail will trigger the identical $500-a-day evasion penalties that an initial filing failure would cause.
@@ -142,7 +142,7 @@ export default function ArticlePage() {
                     For international entrepreneurs seeking access to the lucrative U.S. consumer market, forming an LLC in Delaware or Wyoming remains an excellent strategy. However, the regulatory toll for doing business has increased.
                 </p>
                 <p>
-                    FinCEN's 2026 stance is clear: you are welcome to utilize US entity structures, but you will be closely monitored, and you will comply promptly. Incorporate the BOI filing into the very first steps of your operational launch checklist—do not wait for the EIN to arrive, and do not try to file on day 29.
+                    FinCEN&apos;s 2026 stance is clear: you are welcome to utilize US entity structures, but you will be closely monitored, and you will comply promptly. Incorporate the BOI filing into the very first steps of your operational launch checklist—do not wait for the EIN to arrive, and do not try to file on day 29.
                 </p>
 
                 <hr className="my-10 border-gray-200 dark:border-gray-800" />
@@ -150,7 +150,7 @@ export default function ArticlePage() {
                 <div className="bg-gray-100 dark:bg-gray-900 p-8 rounded-2xl text-center not-prose">
                     <h3 className="text-2xl font-black mb-3" style={{ color: 'var(--color-navy)' }}>Facing the 30-Day Deadline?</h3>
                     <p className="mb-6 text-gray-600 dark:text-gray-400">
-                        Don't let foreign ID complications or confusing government portals result in daily $500 fines. We specialize in fast-tracking BOI compliance for non-U.S. residents.
+                        Don&apos;t let foreign ID complications or confusing government portals result in daily $500 fines. We specialize in fast-tracking BOI compliance for non-U.S. residents.
                     </p>
                     <button className="btn-primary py-3 px-8 text-sm w-full sm:w-auto shadow-xl">
                         Start My Express BOI Filing

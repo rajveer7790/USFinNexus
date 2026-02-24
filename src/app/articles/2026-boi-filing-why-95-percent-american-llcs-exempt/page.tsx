@@ -65,7 +65,7 @@ export default function ArticlePage() {
 
                 <h2>The March 2025 BOI Turning Point</h2>
                 <p>
-                    The original rollout of the Corporate Transparency Act required roughly 32 million American small businesses to file BOI reports with the Financial Crimes Enforcement Network (FinCEN). It threatened $500-per-day fines for failing to upload drivers' licenses and home addresses to a federal database.
+                    The original rollout of the Corporate Transparency Act required roughly 32 million American small businesses to file BOI reports with the Financial Crimes Enforcement Network (FinCEN). It threatened $500-per-day fines for failing to upload drivers&apos; licenses and home addresses to a federal database.
                 </p>
                 <p>
                     However, following an onslaught of federal lawsuits (most notably <em>National Small Business United v. Yellen</em>) and immense bipartisan pressure from Congress regarding the burden placed on Mom-and-Pop shops, the Treasury Department issued a massive course correction via the March 2025 regulatory update.
@@ -73,13 +73,13 @@ export default function ArticlePage() {
                 <div className="bg-gray-50 dark:bg-gray-800/50 border-l-4 border-green-500 p-6 my-8 rounded-r-xl">
                     <p className="font-bold text-lg m-0 mb-2">The New Standard for 2026:</p>
                     <p className="m-0 text-gray-700 dark:text-gray-300">
-                        FinCEN recognized that illicit finance is overwhelmingly routed through foreign actors using U.S. shell companies. Therefore, the new 2026 rules effectively create a "Domestic Safe Harbor" for entirely U.S.-owned and operated small entities.
+                        FinCEN recognized that illicit finance is overwhelmingly routed through foreign actors using U.S. shell companies. Therefore, the new 2026 rules effectively create a &quot;Domestic Safe Harbor&quot; for entirely U.S.-owned and operated small entities.
                     </p>
                 </div>
 
                 <h2>Are You Among the 95% Exempt in 2026?</h2>
                 <p>
-                    Prior to 2026, there were 23 highly specific exemptions (mostly for large operating companies or highly regulated entities like banks and insurance companies). Now, the <strong>"Domestic Ownership Exemption"</strong> (Exemption #24) covers the lion's share of American business owners.
+                    Prior to 2026, there were 23 highly specific exemptions (mostly for large operating companies or highly regulated entities like banks and insurance companies). Now, the <strong>&quot;Domestic Ownership Exemption&quot;</strong> (Exemption #24) covers the lion&apos;s share of American business owners.
                 </p>
 
                 <h3>The 4-Prong Test for the 2026 Domestic Exemption</h3>
@@ -90,7 +90,7 @@ export default function ArticlePage() {
                         <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
                         <div>
                             <strong className="block text-gray-900 dark:text-gray-100 text-lg mb-1">1. 100% U.S. Citizen or Permanent Resident Ownership</strong>
-                            <span className="text-gray-600 dark:text-gray-400 text-sm">Every single person holding equity, voting rights, or "substantial control" over the company must be a U.S. person (citizen or green card holder). If even 1% is owned by a foreign national, you lose this exemption.</span>
+                            <span className="text-gray-600 dark:text-gray-400 text-sm">Every single person holding equity, voting rights, or &quot;substantial control&quot; over the company must be a U.S. person (citizen or green card holder). If even 1% is owned by a foreign national, you lose this exemption.</span>
                         </div>
                     </li>
                     <li className="flex gap-4 items-start p-5 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
@@ -104,7 +104,7 @@ export default function ArticlePage() {
                         <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
                         <div>
                             <strong className="block text-gray-900 dark:text-gray-100 text-lg mb-1">3. Active Good Standing Status</strong>
-                            <span className="text-gray-600 dark:text-gray-400 text-sm">The entity must have been filed and currently be in "Good Standing" with your state's Secretary of State, meaning all state-level franchise taxes and annual reports have been paid.</span>
+                            <span className="text-gray-600 dark:text-gray-400 text-sm">The entity must have been filed and currently be in &quot;Good Standing&quot; with your state&apos;s Secretary of State, meaning all state-level franchise taxes and annual reports have been paid.</span>
                         </div>
                     </li>
                     <li className="flex gap-4 items-start p-5 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
@@ -132,7 +132,7 @@ export default function ArticlePage() {
                     </div>
                 </figure>
 
-                <h2>The Catch: State-Level "Mini-CTA" Laws Are Rising</h2>
+                <h2>The Catch: State-Level &quot;Mini-CTA&quot; Laws Are Rising</h2>
                 <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-6 my-8">
                     <div className="flex items-start gap-4">
                         <ShieldAlert className="w-6 h-6 text-yellow-600 mt-1 shrink-0" />
@@ -160,7 +160,7 @@ export default function ArticlePage() {
                             No Grace Period
                         </h4>
                         <p className="text-sm text-gray-600 dark:text-gray-400">
-                            Foreign-owned entities created in 2026 no longer have a 90-day grace period. You must file your BOI report within <strong>30 calendar days</strong> of receiving actual or public notice that your company's creation or registration is effective.
+                            Foreign-owned entities created in 2026 no longer have a 90-day grace period. You must file your BOI report within <strong>30 calendar days</strong> of receiving actual or public notice that your company&apos;s creation or registration is effective.
                         </p>
                     </div>
 
@@ -170,7 +170,7 @@ export default function ArticlePage() {
                             Stricter Document Review
                         </h4>
                         <p className="text-sm text-gray-600 dark:text-gray-400">
-                            FinCEN's 2026 automated systems now cross-reference foreign passports submitted in BOI reports against updated international databases. Uploading blurry, expired, or fraudulent foreign ID documents will instantaneously trigger an audit flag.
+                            FinCEN&apos;s 2026 automated systems now cross-reference foreign passports submitted in BOI reports against updated international databases. Uploading blurry, expired, or fraudulent foreign ID documents will instantaneously trigger an audit flag.
                         </p>
                     </div>
                 </div>
@@ -180,20 +180,20 @@ export default function ArticlePage() {
                     Given the unforgiving 30-day deadline and the fact that penalties remain stubbornly set at <strong>$500 per day</strong> (up to $10,000 and 2 years in prison), foreign investors are overwhelmingly abandoning DIY filing attempts.
                 </p>
                 <p>
-                    Unlike an American accessing the online portal with a local Driver's License, foreign owners face hurdles with acceptable identification formats, FinCEN ID creation, and understanding the precise definition of "Substantial Control" across international borders. Using a dedicated compliance service has transitioned from a convenience to a strict necessity for risk mitigation.
+                    Unlike an American accessing the online portal with a local Driver&apos;s License, foreign owners face hurdles with acceptable identification formats, FinCEN ID creation, and understanding the precise definition of &quot;Substantial Control&quot; across international borders. Using a dedicated compliance service has transitioned from a convenience to a strict necessity for risk mitigation.
                 </p>
 
                 <h2>Summary: Your 2026 Action Plan</h2>
                 <ol>
                     <li><strong>Are you an exclusively US-owned, domestic small business?</strong> Check your state requirements (like NY), but you are likely exempt from federal FinCEN BOI reporting. Celebrate the win.</li>
-                    <li><strong>Do you have any foreign owners, investors, or "substantial controllers"?</strong> File immediately. You are a prime target for FinCEN enforcement sweeps in 2026.</li>
-                    <li><strong>Did you already file in 2024 or 2025?</strong> If you now qualify for the Domestic Exemption, you do not need to file an "exemption update." FinCEN allows your profile to simply go dormant as long as you maintain the domestic criteria.</li>
+                    <li><strong>Do you have any foreign owners, investors, or &quot;substantial controllers&quot;?</strong> File immediately. You are a prime target for FinCEN enforcement sweeps in 2026.</li>
+                    <li><strong>Did you already file in 2024 or 2025?</strong> If you now qualify for the Domestic Exemption, you do not need to file an &quot;exemption update.&quot; FinCEN allows your profile to simply go dormant as long as you maintain the domestic criteria.</li>
                 </ol>
 
                 <hr className="my-10 border-gray-200 dark:border-gray-800" />
 
                 <div className="bg-gray-100 dark:bg-gray-900 p-8 rounded-2xl text-center not-prose">
-                    <h3 className="text-2xl font-black mb-3" style={{ color: 'var(--color-navy)' }}>Foreign-Owned LLC? Don't Risk $500 Daily Fines.</h3>
+                    <h3 className="text-2xl font-black mb-3" style={{ color: 'var(--color-navy)' }}>Foreign-Owned LLC? Don&apos;t Risk $500 Daily Fines.</h3>
                     <p className="mb-6 text-gray-600 dark:text-gray-400">
                         Our FinCEN compliance experts specialize in foreign-owned U.S. structures. We navigate the 30-day deadline ensuring your BOI report is 100% accurate.
                     </p>

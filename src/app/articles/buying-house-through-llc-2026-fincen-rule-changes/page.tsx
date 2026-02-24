@@ -64,7 +64,7 @@ export default function ArticlePage() {
 
                 <h2>Why Does the Federal Government Care?</h2>
                 <p>
-                    Historically, a Russian oligarch or a drug cartel could form a Wyoming LLC entirely anonymously, wire $5 million into a U.S. escrow account, and purchase a luxury mansion in Beverly Hills. Because it was an "all-cash" deal involving an entity, no bank ran a background check, and the true owner's name never appeared on the public deed.
+                    Historically, a Russian oligarch or a drug cartel could form a Wyoming LLC entirely anonymously, wire $5 million into a U.S. escrow account, and purchase a luxury mansion in Beverly Hills. Because it was an &quot;all-cash&quot; deal involving an entity, no bank ran a background check, and the true owner&apos;s name never appeared on the public deed.
                 </p>
                 <p>
                     To stop this flow of illicit international funds, the Treasury enacted the 2026 Real Estate Reporting Rule. Now, anytime a residential property is transferred to an LLC (or any other legal entity/trust) <em>without</em> a traditional bank mortgage, a massive compliance tripwire is triggered.
@@ -92,7 +92,7 @@ export default function ArticlePage() {
                         <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
                         <div>
                             <strong className="block text-gray-900 dark:text-gray-100 mb-1">Beneficial Ownership Mapping</strong>
-                            <span className="text-gray-600 dark:text-gray-400 text-sm">You must supply the title company with the full legal names, home addresses, dates of birth, and unexpired passport or driver's license copies for every individual holding 25% or more equity in the LLC.</span>
+                            <span className="text-gray-600 dark:text-gray-400 text-sm">You must supply the title company with the full legal names, home addresses, dates of birth, and unexpired passport or driver&apos;s license copies for every individual holding 25% or more equity in the LLC.</span>
                         </div>
                     </li>
                     <li className="flex gap-4 items-start p-4 bg-gray-50 dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-gray-800">
@@ -119,7 +119,7 @@ export default function ArticlePage() {
 
                 <h2>Pro-Tip: Get a FinCEN ID</h2>
                 <p>
-                    If you are an active investor flipping multiple houses a year through your LLC, do not repeatedly email your driver's license to different title agencies. Log into the FinCEN portal once, create a free "FinCEN ID," and simply provide that 12-digit number to your closing attorney. It satisfies the regulatory requirement entirely via a secure, government-managed token.
+                    If you are an active investor flipping multiple houses a year through your LLC, do not repeatedly email your driver&apos;s license to different title agencies. Log into the FinCEN portal once, create a free &quot;FinCEN ID,&quot; and simply provide that 12-digit number to your closing attorney. It satisfies the regulatory requirement entirely via a secure, government-managed token.
                 </p>
 
                 <hr className="my-10 border-gray-200 dark:border-gray-800" />
@@ -127,7 +127,7 @@ export default function ArticlePage() {
                 <div className="bg-gray-100 dark:bg-gray-900 p-8 rounded-2xl text-center not-prose">
                     <h3 className="text-2xl font-black mb-3" style={{ color: 'var(--color-navy)' }}>Ready to Form Your Real Estate LLC?</h3>
                     <p className="mb-6 text-gray-600 dark:text-gray-400">
-                        We don't just form the entity—we ensure your LLC is instantly compliant with 2026 FinCEN BOI regulations and ready to purchase property cleanly and legally.
+                        We don&apos;t just form the entity—we ensure your LLC is instantly compliant with 2026 FinCEN BOI regulations and ready to purchase property cleanly and legally.
                     </p>
                     <button className="btn-primary py-3 px-8 text-sm w-full sm:w-auto shadow-xl">
                         View Our Real Estate Entity Packages

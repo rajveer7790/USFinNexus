@@ -61,21 +61,21 @@ export default function ArticlePage() {
 
                 <h2>The Double-Compliance Trap for Canadians</h2>
                 <p>
-                    The overarching goal of the latest Treasury Department regulations is to eliminate anonymous, foreign-funded cash purchases in the U.S. housing market. Because of this, Canadian buyers utilizing legal entities are caught squarely in FinCEN's crosshairs.
+                    The overarching goal of the latest Treasury Department regulations is to eliminate anonymous, foreign-funded cash purchases in the U.S. housing market. Because of this, Canadian buyers utilizing legal entities are caught squarely in FinCEN&apos;s crosshairs.
                 </p>
                 <p>
                     If you are a Canadian buying U.S. property through an entity in 2026, you actually face a <strong>double-compliance trap</strong>:
                 </p>
                 <ol>
                     <li><strong>The Corporate Transparency Act (CTA):</strong> You must file a BOI report for your U.S. LLC within 30 days of creating it, because you are a foreign owner and therefore do not qualify for the Domestic Business Exemption.</li>
-                    <li><strong>The Real Estate Reporting Rule:</strong> Your title company must file a secondary "Real Estate Report" within 30 days of the closing.</li>
+                    <li><strong>The Real Estate Reporting Rule:</strong> Your title company must file a secondary &quot;Real Estate Report&quot; within 30 days of the closing.</li>
                 </ol>
 
                 <div className="bg-teal-50 dark:bg-teal-900/20 border-l-4 border-teal-500 p-6 my-8">
                     <div className="flex items-start gap-4">
                         <Globe className="w-6 h-6 text-teal-600 mt-1 shrink-0" />
                         <div>
-                            <p className="font-bold text-teal-900 dark:text-teal-300 m-0 mb-2">Are "Snowbirds" Exempt?</p>
+                            <p className="font-bold text-teal-900 dark:text-teal-300 m-0 mb-2">Are &quot;Snowbirds&quot; Exempt?</p>
                             <p className="text-teal-800 dark:text-teal-200 m-0">
                                 If you and your spouse buy a vacation home strictly in your own personal, individual names (John and Jane Doe), the FinCEN Real Estate Rule <strong>does not apply to you.</strong> The rule strictly targets purchases made via LLCs, Corporations, and Trusts.
                             </p>
@@ -88,7 +88,7 @@ export default function ArticlePage() {
                     Many Canadian buyers utilize Cross-Border Trusts to avoid the devastating U.S. Estate Tax (which applies to U.S. property owned by non-residents upon death).
                 </p>
                 <p>
-                    Under the new rules, transferring residential property into these trusts triggers the reporting requirement. The title company will demand the unexpired Canadian Passports and physical residential addresses of the Grantor (the person creating the trust), the Trustee (the person managing it), and often the Beneficiaries, depending on the trust's exact structure and control mechanisms.
+                    Under the new rules, transferring residential property into these trusts triggers the reporting requirement. The title company will demand the unexpired Canadian Passports and physical residential addresses of the Grantor (the person creating the trust), the Trustee (the person managing it), and often the Beneficiaries, depending on the trust&apos;s exact structure and control mechanisms.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
@@ -98,7 +98,7 @@ export default function ArticlePage() {
                             Acceptable Identification
                         </h4>
                         <p className="text-sm text-gray-600 dark:text-gray-400">
-                            A Canadian provincial driver's license (like an Ontario or BC license) is <strong>NOT</strong> an acceptable form of ID for foreign nationals under FinCEN rules. You MUST use an unexpired Canadian Passport.
+                            A Canadian provincial driver&apos;s license (like an Ontario or BC license) is <strong>NOT</strong> an acceptable form of ID for foreign nationals under FinCEN rules. You MUST use an unexpired Canadian Passport.
                         </p>
                     </div>
 
@@ -108,7 +108,7 @@ export default function ArticlePage() {
                             FinCEN Identifiers
                         </h4>
                         <p className="text-sm text-gray-600 dark:text-gray-400">
-                            We strongly recommend Canadian buyers obtain a "FinCEN ID" prior to searching for properties. Providing a 12-digit FinCEN ID to your title company satisfies your reporting duty without emailing them a raw copy of your passport.
+                            We strongly recommend Canadian buyers obtain a &quot;FinCEN ID&quot; prior to searching for properties. Providing a 12-digit FinCEN ID to your title company satisfies your reporting duty without emailing them a raw copy of your passport.
                         </p>
                     </div>
                 </div>
@@ -118,10 +118,10 @@ export default function ArticlePage() {
                     If you bought U.S. property via an LLC or Trust prior to 2026, you likely wired the funds from your Canadian bank to the U.S. title company with minimal friction. That era is over.
                 </p>
                 <p>
-                    U.S. title companies now carry immense liability for failing to file these reports. As a result, they will dramatically increase their "Know Your Customer" (KYC) intake procedures for foreign buyers.
+                    U.S. title companies now carry immense liability for failing to file these reports. As a result, they will dramatically increase their &quot;Know Your Customer&quot; (KYC) intake procedures for foreign buyers.
                 </p>
                 <ul>
-                    <li><strong>Delays in Closing:</strong> Expect the title company to demand your LLC or Trust documents weeks before closing to identify all "beneficial owners."</li>
+                    <li><strong>Delays in Closing:</strong> Expect the title company to demand your LLC or Trust documents weeks before closing to identify all &quot;beneficial owners.&quot;</li>
                     <li><strong>Refusal to Disburse:</strong> If a Canadian buyer refuses to provide a passport or sign the FinCEN ownership certification form, the U.S. title agent is legally prohibited from completing the transaction.</li>
                     <li><strong>Compliance Fees:</strong> You will notice a new line item on your ALTA Closing Statement for FinCEN Compliance, typically ranging from $250 to $500.</li>
                 </ul>
@@ -136,7 +136,7 @@ export default function ArticlePage() {
                 <div className="bg-gray-100 dark:bg-gray-900 p-8 rounded-2xl text-center not-prose">
                     <h3 className="text-2xl font-black mb-3" style={{ color: 'var(--color-navy)' }}>Canadian Investor?</h3>
                     <p className="mb-6 text-gray-600 dark:text-gray-400">
-                        Don't let cross-border FinCEN regulations delay your U.S. real estate closing. Our team handles both your Corporate Transparency Act BOI filings and your Real Estate Reporting requirements.
+                        Don&apos;t let cross-border FinCEN regulations delay your U.S. real estate closing. Our team handles both your Corporate Transparency Act BOI filings and your Real Estate Reporting requirements.
                     </p>
                     <button className="btn-primary py-3 px-8 text-sm w-full sm:w-auto shadow-xl">
                         Schedule a Cross-Border Consultation

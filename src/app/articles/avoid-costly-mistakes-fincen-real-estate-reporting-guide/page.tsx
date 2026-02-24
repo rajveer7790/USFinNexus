@@ -59,14 +59,14 @@ export default function ArticlePage() {
                     </div>
                 </figure>
 
-                <h2>Mistake #1: Thinking the "Domestic Exemption" Applies to Real Estate</h2>
+                <h2>Mistake #1: Thinking the &quot;Domestic Exemption&quot; Applies to Real Estate</h2>
                 <p>
                     This is by far the most dangerous assumption floating around real estate investor circles in 2026.
                 </p>
                 <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-6 my-6">
                     <p className="font-bold text-red-900 dark:text-red-300 m-0 mb-2">The Fatal Assumption:</p>
                     <p className="text-red-800 dark:text-red-200 m-0 text-sm">
-                        "My LLC is 100% owned by US citizens, so we qualified for the Domestic Exemption and don't have to file a BOI report. Therefore, we don't have to report anything when we buy this house with cash."
+                        &quot;My LLC is 100% owned by US citizens, so we qualified for the Domestic Exemption and don&apos;t have to file a BOI report. Therefore, we don&apos;t have to report anything when we buy this house with cash.&quot;
                     </p>
                 </div>
                 <p>
@@ -76,9 +76,8 @@ export default function ArticlePage() {
                     Even if your 100% US-owned LLC is exempt from filing an annual BOI report with FinCEN, the title company <strong>must still file a Real Estate Report</strong> when that LLC buys a residential property without a mortgage. The real estate rule does not share the same domestic exemptions as the CTA. Do not argue with your closing attorney—they are legally obligated to report your transaction.
                 </p>
 
-                <h2>Mistake #2: Misunderstanding "Non-Financed"</h2>
                 <p>
-                    The FinCEN Real Estate Rule only applies to "non-financed transfers." However, FinCEN's definition of financing is extremely narrow.
+                    The FinCEN Real Estate Rule only applies to &quot;non-financed transfers.&quot; However, FinCEN&apos;s definition of financing is extremely narrow.
                 </p>
 
                 <ul className="list-none pl-0 space-y-4 my-8 not-prose">
@@ -98,12 +97,12 @@ export default function ArticlePage() {
                     </li>
                 </ul>
                 <p>
-                    If an investor uses a hard money lender to flip a property, they often assume it's a "financed" transaction. Under FinCEN's rules, it is treated as an all-cash transaction and must be reported.
+                    If an investor uses a hard money lender to flip a property, they often assume it&apos;s a &quot;financed&quot; transaction. Under FinCEN&apos;s rules, it is treated as an all-cash transaction and must be reported.
                 </p>
 
                 <h2>Mistake #3: Filing the Report Too Early</h2>
                 <p>
-                    For Title Agents and Closing Attorneys acting as the "Reporting Person," timing is strictly mandated.
+                    For Title Agents and Closing Attorneys acting as the &quot;Reporting Person,&quot; timing is strictly mandated.
                 </p>
                 <div className="bg-indigo-50 dark:bg-indigo-900/20 border-l-4 border-indigo-500 p-6 my-6">
                     <div className="flex items-start gap-4">
@@ -120,10 +119,10 @@ export default function ArticlePage() {
 
                 <h2>Mistake #4: Submitting Expired Identification</h2>
                 <p>
-                    When a buyer submits their identification document to the title company (to be relayed to FinCEN), the document must be an <strong>unexpired</strong>, government-issued photo ID (typically a U.S. Driver's License or a Passport).
+                    When a buyer submits their identification document to the title company (to be relayed to FinCEN), the document must be an <strong>unexpired</strong>, government-issued photo ID (typically a U.S. Driver&apos;s License or a Passport).
                 </p>
                 <p>
-                    Since the rollout of the automated verification system in 2026, FinCEN instantly reviews these documents. If a beneficial owner submits a driver's license that expired last week, the system flags the entity. The title company is now out of compliance until they track the owner down for an updated ID, creating massive post-closing friction. Check the expiration dates <em>before</em> closing.
+                    Since the rollout of the automated verification system in 2026, FinCEN instantly reviews these documents. If a beneficial owner submits a driver&apos;s license that expired last week, the system flags the entity. The title company is now out of compliance until they track the owner down for an updated ID, creating massive post-closing friction. Check the expiration dates <em>before</em> closing.
                 </p>
 
                 <h2>Conclusion: Embrace the FinCEN ID</h2>
@@ -131,7 +130,7 @@ export default function ArticlePage() {
                     The overarching solution to most of these mistakes lies in the FinCEN ID. Every real estate investor utilizing an LLC should proactively obtain a 12-digit FinCEN Identifier directly from the government.
                 </p>
                 <p>
-                    When it's time to close on a property, instead of securely transferring your passport, driver's license, and home address to a new title company every time, you simply provide your FinCEN ID. The title company inputs the ID into their report, shifting the burden of verifying your personal data entirely off their shoulders and streamlining the entire compliance process.
+                    When it&apos;s time to close on a property, instead of securely transferring your passport, driver&apos;s license, and home address to a new title company every time, you simply provide your FinCEN ID. The title company inputs the ID into their report, shifting the burden of verifying your personal data entirely off their shoulders and streamlining the entire compliance process.
                 </p>
 
                 <hr className="my-10 border-gray-200 dark:border-gray-800" />
@@ -151,6 +150,6 @@ export default function ArticlePage() {
             </div>
 
             <RelatedArticles currentSlug="avoid-costly-mistakes-fincen-real-estate-reporting-guide" />
-        </article>
+        </article >
     );
 }

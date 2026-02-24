@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, CheckCircle2, ShieldCore, XCircle } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, ShieldCheck, XCircle } from 'lucide-react';
 import RelatedArticles from '@/components/RelatedArticles';
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export default function ArticlePage() {
                 </h1>
 
                 <p className="text-xl leading-relaxed mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    With the drastic overhaul of the Corporate Transparency Act (CTA) going into effect in 2026, millions of American small business owners no longer have to file a Beneficial Ownership Information (BOI) report. But before you completely ignore FinCEN, you must confirm your entity strictly meets the "Domestic Ownership Exemption" criteria.
+                    With the drastic overhaul of the Corporate Transparency Act (CTA) going into effect in 2026, millions of American small business owners no longer have to file a Beneficial Ownership Information (BOI) report. But before you completely ignore FinCEN, you must confirm your entity strictly meets the &quot;Domestic Ownership Exemption&quot; criteria.
                 </p>
 
                 <div className="flex items-center gap-4 border-t border-b py-4 border-gray-200 dark:border-gray-800">
@@ -75,7 +75,7 @@ export default function ArticlePage() {
                         <div>
                             <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">1. 100% U.S. Persons Ownership</h3>
                             <p className="text-gray-600 dark:text-gray-400 mb-0">
-                                Every single individual who owns equity, or exercises "substantial control" (like an executive officer or major decision-maker) is a United States citizen or Lawful Permanent Resident. There are <strong>zero</strong> foreign nationals involved.
+                                Every single individual who owns equity, or exercises &quot;substantial control&quot; (like an executive officer or major decision-maker) is a United States citizen or Lawful Permanent Resident. There are <strong>zero</strong> foreign nationals involved.
                             </p>
                         </div>
                     </div>
@@ -114,7 +114,7 @@ export default function ArticlePage() {
                         <div>
                             <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">4. Good Standing Status</h3>
                             <p className="text-gray-600 dark:text-gray-400 mb-0">
-                                The entity is currently listed as "active" and in "good standing" with the Secretary of State where it was formed. Meaning, you haven't skipped paying your annual franchise tax or filing your state annual report.
+                                The entity is currently listed as &quot;active&quot; and in &quot;good standing&quot; with the Secretary of State where it was formed. Meaning, you haven&apos;t skipped paying your annual franchise tax or filing your state annual report.
                             </p>
                         </div>
                     </div>
@@ -130,7 +130,7 @@ export default function ArticlePage() {
                             YES
                         </h4>
                         <p className="text-sm text-green-900 dark:text-green-100">
-                            Congratulations. You fall under the 2026 Domestic Exemption. You do not need to file a FinCEN BOI report, and you can stop paying third-party compliance companies annual "maintenance" fees for a federal requirement that no longer applies to you.
+                            Congratulations. You fall under the 2026 Domestic Exemption. You do not need to file a FinCEN BOI report, and you can stop paying third-party compliance companies annual &quot;maintenance&quot; fees for a federal requirement that no longer applies to you.
                         </p>
                     </div>
 
@@ -140,7 +140,7 @@ export default function ArticlePage() {
                             NO (Failed at least one)
                         </h4>
                         <p className="text-sm text-red-900 dark:text-red-100">
-                            You are still classified as a "Reporting Entity." You are legally required to submit a Beneficial Ownership Information report to FinCEN and keep it updated within 30 days of any changes. Failure to do so incurs $500 daily penalties.
+                            You are still classified as a &quot;Reporting Entity.&quot; You are legally required to submit a Beneficial Ownership Information report to FinCEN and keep it updated within 30 days of any changes. Failure to do so incurs $500 daily penalties.
                         </p>
                     </div>
                 </div>
@@ -153,7 +153,7 @@ export default function ArticlePage() {
                 <hr className="my-10 border-gray-200 dark:border-gray-800" />
 
                 <div className="bg-gray-100 dark:bg-gray-900 p-8 rounded-2xl text-center not-prose">
-                    <h3 className="text-2xl font-black mb-3" style={{ color: 'var(--color-navy)' }}>Didn't Meet the Exemption?</h3>
+                    <h3 className="text-2xl font-black mb-3" style={{ color: 'var(--color-navy)' }}>Didn&apos;t Meet the Exemption?</h3>
                     <p className="mb-6 text-gray-600 dark:text-gray-400">
                         If your US LLC has foreign owners or complex structures, you must file. We guarantee flawless FinCEN submissions for non-exempt entities.
                     </p>

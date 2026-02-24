@@ -58,7 +58,7 @@ export default function ArticlePage() {
                         />
                     </div>
                     <figcaption className="text-center text-sm mt-3 text-gray-500 dark:text-gray-400">
-                        New York's distinct state-level reporting creates a massive trap for entities that incorrectly assume a federal exemption protects them.
+                        New York&apos;s distinct state-level reporting creates a massive trap for entities that incorrectly assume a federal exemption protects them.
                     </figcaption>
                 </figure>
 
@@ -84,7 +84,7 @@ export default function ArticlePage() {
 
                 <h2>Who Must Comply by January 1, 2026?</h2>
                 <p>
-                    The law applies broadly to "reporting companies." Under NYLTA, this means:
+                    The law applies broadly to &quot;reporting companies.&quot; Under NYLTA, this means:
                 </p>
                 <ul>
                     <li><strong>Domestic LLCs:</strong> Any limited liability company formed under New York law.</li>
@@ -118,14 +118,14 @@ export default function ArticlePage() {
 
                 <h2>What Information Exactly is NY Demanding?</h2>
                 <p>
-                    If your LLC is not exempt under one of the 23 CTA-aligned exemptions, you must file a "beneficial ownership disclosure" with the New York Secretary of State. The information required mirrors the federal FinCEN form, but is submitted to a completely different database.
+                    If your LLC is not exempt under one of the 23 CTA-aligned exemptions, you must file a &quot;beneficial ownership disclosure&quot; with the New York Secretary of State. The information required mirrors the federal FinCEN form, but is submitted to a completely different database.
                 </p>
                 <p>For every beneficial owner (anyone holding 25% or more equity, or exercising substantial control), you must provide:</p>
                 <ol>
                     <li>Full legal name</li>
                     <li>Date of birth</li>
                     <li>Current residential or business street address</li>
-                    <li>A unique identifying number from an acceptable identification document (such as a passport or driver's license)</li>
+                    <li>A unique identifying number from an acceptable identification document (such as a passport or driver&apos;s license)</li>
                 </ol>
 
                 <figure className="my-12">
@@ -144,7 +144,7 @@ export default function ArticlePage() {
                     While FinCEN threatens severe $500/day federal fines, New York utilizes a different enforcement mechanism that is arguably more dangerous to the day-to-day operations of your business: <strong>Status suspension.</strong>
                 </p>
                 <p>
-                    If an LLC fails to file its required beneficial ownership disclosure for more than 30 days past the deadline, it will be marked as "past due" precisely on the Department of State's records. If the failure persists beyond two years, the LLC's status becomes "delinquent," followed by a mandatory suspension.
+                    If an LLC fails to file its required beneficial ownership disclosure for more than 30 days past the deadline, it will be marked as &quot;past due&quot; precisely on the Department of State&apos;s records. If the failure persists beyond two years, the LLC&apos;s status becomes &quot;delinquent,&quot; followed by a mandatory suspension.
                 </p>
                 <ul className="list-disc pl-5">
                     <li><strong>Suspension means:</strong> You cannot open a NY bank account, sue for breach of contract in NY courts, or obtain financing on NY real estate.</li>
@@ -178,7 +178,7 @@ export default function ArticlePage() {
                         <ShieldCheck className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
                         <div>
                             <strong className="block text-gray-900 dark:text-gray-100 mb-1">Exempt Entities</strong>
-                            <span className="text-gray-600 dark:text-gray-400 text-sm">Even if you qualify for an exemption, you must still file a "statement of exemption" detailing which specific clause protects you from the full disclosure.</span>
+                            <span className="text-gray-600 dark:text-gray-400 text-sm">Even if you qualify for an exemption, you must still file a &quot;statement of exemption&quot; detailing which specific clause protects you from the full disclosure.</span>
                         </div>
                     </li>
                 </ul>
@@ -196,7 +196,7 @@ export default function ArticlePage() {
                 <div className="bg-gray-100 dark:bg-gray-900 p-8 rounded-2xl text-center not-prose">
                     <h3 className="text-2xl font-black mb-3" style={{ color: 'var(--color-navy)' }}>Doing Business in New York?</h3>
                     <p className="mb-6 text-gray-600 dark:text-gray-400">
-                        Don't let the NY LLC Transparency Act suspend your right to operate. Our team handles your federal FinCEN AND state-level filings simultaneously.
+                        Don&apos;t let the NY LLC Transparency Act suspend your right to operate. Our team handles your federal FinCEN AND state-level filings simultaneously.
                     </p>
                     <button className="btn-primary py-3 px-8 text-sm w-full sm:w-auto shadow-xl">
                         Schedule a NY Compliance Review
