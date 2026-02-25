@@ -719,3 +719,410 @@ export function formatMonthYear(date: Date): string {
 export function parseCurrency(str: string): number {
     return parseFloat(str.replace(/[$,]/g, '')) || 0;
 }
+
+// ─── Phase 3: New Calculator Types & Functions ───────────────────────────────
+
+// ─── HELOC Calculator ─────────────────────────────────────────────────────────
+
+export interface HELOCInputs {
+    homeValue: number;
+    mortgageBalance: number;
+    creditLimitPercent: number;   // lender CLTV limit, e.g. 85%
+    drawAmount: number;
+    drawPeriodYears: number;      // e.g. 10
+    repaymentPeriodYears: number; // e.g. 20
+    drawRate: number;             // variable rate during draw (annual %)
+    repaymentRate: number;        // rate during repayment (annual %)
+}
+
+export interface HELOCResult {
+    availableEquity: number;
+    maxCreditLine: number;
+    drawMonthlyPayment: number;   // interest-only during draw
+    repaymentMonthlyPayment: number; // P&I during repayment
+    totalInterest: number;
+    totalCost: number;
+}
+
+export function calcHELOC(inputs: HELOCInputs): HELOCResult {
+    const { homeValue, mortgageBalance, creditLimitPercent, drawAmount,
+        drawPeriodYears, repaymentPeriodYears, drawRate, repaymentRate } = inputs;
+
+    const maxCreditLine = homeValue * (creditLimitPercent / 100) - mortgageBalance;
+    const availableEquity = homeValue - mortgageBalance;
+    const amount = Math.min(drawAmount, Math.max(0, maxCreditLine));
+
+    // Draw period: interest-only payments
+    const drawMonthlyRate = drawRate / 100 / 12;
+    const drawMonthlyPayment = amount * drawMonthlyRate;
+    const drawMonths = drawPeriodYears * 12;
+    const drawTotalInterest = drawMonthlyPayment * drawMonths;
+
+    // Repayment period: fully amortizing P&I
+    const repaymentMonthlyPayment = repaymentPeriodYears > 0
+        ? calcMonthlyPI(amount, repaymentRate, repaymentPeriodYears) : 0;
+    const repaymentMonths = repaymentPeriodYears * 12;
+    const repaymentTotalPaid = repaymentMonthlyPayment * repaymentMonths;
+    const repaymentTotalInterest = repaymentTotalPaid - amount;
+
+    return {
+        availableEquity,
+        maxCreditLine: Math.max(0, maxCreditLine),
+        drawMonthlyPayment,
+        repaymentMonthlyPayment,
+        totalInterest: drawTotalInterest + repaymentTotalInterest,
+        totalCost: drawTotalInterest + repaymentTotalPaid,
+    };
+}
+
+// ─── FHA / VA / USDA Government Loan Calculator ──────────────────────────────
+
+export type GovLoanType = 'fha' | 'va' | 'usda';
+
+export interface GovLoanInputs {
+    loanType: GovLoanType;
+    homePrice: number;
+    downPaymentPercent: number;
+    annualInterestRate: number;
+    loanTermYears: number;
+    annualPropertyTax: number;
+    annualInsurance: number;
+    // VA specific
+    vaFirstTimeUse: boolean;
+    vaDisabilityExempt: boolean;
+    // FHA specific: calculated automatically
+}
+
+export interface GovLoanResult {
+    loanAmount: number;
+    baseLoanAmount: number;
+    upfrontFee: number;          // FHA MIP, VA funding fee, USDA guarantee fee
+    upfrontFeePercent: number;
+    annualFee: number;           // annual MIP / USDA annual fee
+    annualFeePercent: number;
+    monthlyPrincipalInterest: number;
+    monthlyMIP: number;
+    monthlyPropertyTax: number;
+    monthlyInsurance: number;
+    totalMonthly: number;
+    totalInterest: number;
+    totalCost: number;
+}
+
+export function calcGovLoan(inputs: GovLoanInputs): GovLoanResult {
+    const { loanType, homePrice, downPaymentPercent, annualInterestRate,
+        loanTermYears, annualPropertyTax, annualInsurance } = inputs;
+
+    const downPayment = homePrice * (downPaymentPercent / 100);
+    const baseLoanAmount = homePrice - downPayment;
+    let upfrontFeePercent = 0;
+    let annualFeePercent = 0;
+
+    if (loanType === 'fha') {
+        // FHA: 1.75% upfront MIP, 0.55% annual MIP (for 30yr, LTV > 95%)
+        upfrontFeePercent = 1.75;
+        annualFeePercent = downPaymentPercent >= 10 ? 0.50 : 0.55;
+    } else if (loanType === 'va') {
+        // VA funding fee tiers (2026)
+        if (inputs.vaDisabilityExempt) {
+            upfrontFeePercent = 0;
+        } else if (inputs.vaFirstTimeUse) {
+            if (downPaymentPercent >= 10) upfrontFeePercent = 1.25;
+            else if (downPaymentPercent >= 5) upfrontFeePercent = 1.5;
+            else upfrontFeePercent = 2.15;
+        } else {
+            if (downPaymentPercent >= 10) upfrontFeePercent = 1.25;
+            else if (downPaymentPercent >= 5) upfrontFeePercent = 1.5;
+            else upfrontFeePercent = 3.3;
+        }
+        annualFeePercent = 0; // VA has no annual fee
+    } else if (loanType === 'usda') {
+        // USDA: 1% upfront guarantee, 0.35% annual fee
+        upfrontFeePercent = 1.0;
+        annualFeePercent = 0.35;
+    }
+
+    const upfrontFee = baseLoanAmount * (upfrontFeePercent / 100);
+    // FHA rolls upfront MIP into loan; VA/USDA can too
+    const loanAmount = baseLoanAmount + upfrontFee;
+    const annualFee = baseLoanAmount * (annualFeePercent / 100);
+
+    const monthlyPI = calcMonthlyPI(loanAmount, annualInterestRate, loanTermYears);
+    const monthlyMIP = annualFee / 12;
+    const monthlyPropertyTax = annualPropertyTax / 12;
+    const monthlyInsurance = annualInsurance / 12;
+    const totalMonthly = monthlyPI + monthlyMIP + monthlyPropertyTax + monthlyInsurance;
+
+    const n = loanTermYears * 12;
+    const totalPaid = monthlyPI * n;
+    const totalInterest = totalPaid - loanAmount;
+    const totalCost = totalPaid + (monthlyMIP * n) + upfrontFee;
+
+    return {
+        loanAmount, baseLoanAmount, upfrontFee, upfrontFeePercent,
+        annualFee, annualFeePercent,
+        monthlyPrincipalInterest: monthlyPI, monthlyMIP,
+        monthlyPropertyTax, monthlyInsurance, totalMonthly,
+        totalInterest, totalCost,
+    };
+}
+
+// ─── Closing Costs Calculator ─────────────────────────────────────────────────
+
+export interface ClosingCostInputs {
+    homePrice: number;
+    loanAmount: number;
+    state: string;           // two-letter state code
+    loanType: 'conventional' | 'fha' | 'va';
+    isNewConstruction: boolean;
+}
+
+export interface ClosingCostLineItem {
+    label: string;
+    amount: number;
+    category: 'lender' | 'title' | 'government' | 'prepaid' | 'seller';
+}
+
+export interface ClosingCostResult {
+    buyerTotal: number;
+    sellerTotal: number;
+    buyerItems: ClosingCostLineItem[];
+    sellerItems: ClosingCostLineItem[];
+    buyerPercent: number;
+    sellerPercent: number;
+}
+
+// State transfer tax rates per $1,000 of sale price (buyer side varies)
+const STATE_TRANSFER_TAX: Record<string, { buyer: number; seller: number }> = {
+    AL: { buyer: 0.50, seller: 0.50 }, AK: { buyer: 0, seller: 0 },
+    AZ: { buyer: 0.22, seller: 0.22 }, AR: { buyer: 1.10, seller: 2.20 },
+    CA: { buyer: 0.55, seller: 0.55 }, CO: { buyer: 0.01, seller: 0.01 },
+    CT: { buyer: 3.75, seller: 3.75 }, DE: { buyer: 1.50, seller: 2.50 },
+    FL: { buyer: 0.35, seller: 0.70 }, GA: { buyer: 0.50, seller: 0.50 },
+    HI: { buyer: 0.10, seller: 0.50 }, ID: { buyer: 0, seller: 0 },
+    IL: { buyer: 0.50, seller: 0.50 }, IN: { buyer: 0, seller: 0 },
+    IA: { buyer: 0.80, seller: 0.80 }, KS: { buyer: 0, seller: 0 },
+    KY: { buyer: 0.50, seller: 0.50 }, LA: { buyer: 0, seller: 0 },
+    ME: { buyer: 2.20, seller: 2.20 }, MD: { buyer: 2.50, seller: 3.00 },
+    MA: { buyer: 2.28, seller: 2.28 }, MI: { buyer: 3.75, seller: 3.75 },
+    MN: { buyer: 0.33, seller: 1.70 }, MS: { buyer: 0, seller: 0 },
+    MO: { buyer: 0, seller: 0 }, MT: { buyer: 0, seller: 0 },
+    NE: { buyer: 1.13, seller: 1.13 }, NV: { buyer: 1.30, seller: 1.30 },
+    NH: { buyer: 3.75, seller: 3.75 }, NJ: { buyer: 0, seller: 2.00 },
+    NM: { buyer: 0, seller: 0 }, NY: { buyer: 2.00, seller: 2.00 },
+    NC: { buyer: 1.00, seller: 1.00 }, ND: { buyer: 0, seller: 0 },
+    OH: { buyer: 1.00, seller: 1.00 }, OK: { buyer: 0.75, seller: 0.75 },
+    OR: { buyer: 0.50, seller: 0.50 }, PA: { buyer: 1.00, seller: 1.00 },
+    RI: { buyer: 2.30, seller: 2.30 }, SC: { buyer: 0.93, seller: 0.93 },
+    SD: { buyer: 0.50, seller: 0.50 }, TN: { buyer: 1.85, seller: 1.85 },
+    TX: { buyer: 0, seller: 0 }, UT: { buyer: 0, seller: 0 },
+    VT: { buyer: 6.25, seller: 6.25 }, VA: { buyer: 0.50, seller: 0.50 },
+    WA: { buyer: 0.78, seller: 0.78 }, WV: { buyer: 1.65, seller: 1.65 },
+    WI: { buyer: 1.50, seller: 1.50 }, WY: { buyer: 0, seller: 0 },
+    DC: { buyer: 1.10, seller: 1.45 },
+};
+
+export { STATE_TRANSFER_TAX };
+
+export function calcClosingCosts(inputs: ClosingCostInputs): ClosingCostResult {
+    const { homePrice, loanAmount, state, loanType } = inputs;
+    const rates = STATE_TRANSFER_TAX[state] || { buyer: 0, seller: 0 };
+
+    const buyerItems: ClosingCostLineItem[] = [
+        { label: 'Loan Origination Fee (1%)', amount: loanAmount * 0.01, category: 'lender' },
+        { label: 'Appraisal Fee', amount: 550, category: 'lender' },
+        { label: 'Credit Report', amount: 50, category: 'lender' },
+        { label: 'Flood Certification', amount: 25, category: 'lender' },
+        { label: 'Title Search', amount: 400, category: 'title' },
+        { label: 'Title Insurance (Lender)', amount: loanAmount * 0.003, category: 'title' },
+        { label: 'Title Insurance (Owner)', amount: homePrice * 0.005, category: 'title' },
+        { label: 'Escrow/Settlement Fee', amount: 750, category: 'title' },
+        { label: `Transfer Tax (${state || 'N/A'})`, amount: (homePrice / 1000) * rates.buyer, category: 'government' },
+        { label: 'Recording Fees', amount: 150, category: 'government' },
+        { label: 'Prepaid Property Tax (3 months)', amount: (homePrice * 0.012 / 12) * 3, category: 'prepaid' },
+        { label: 'Prepaid Insurance (1 year)', amount: 1400, category: 'prepaid' },
+        { label: 'Prepaid Interest (15 days)', amount: (loanAmount * 0.065 / 365) * 15, category: 'prepaid' },
+    ];
+
+    if (loanType === 'fha') {
+        buyerItems.push({ label: 'FHA Upfront MIP (1.75%)', amount: loanAmount * 0.0175, category: 'lender' });
+    }
+
+    const sellerItems: ClosingCostLineItem[] = [
+        { label: 'Listing Agent Commission (3%)', amount: homePrice * 0.03, category: 'seller' },
+        { label: 'Buyer Agent Commission (2.5%)', amount: homePrice * 0.025, category: 'seller' },
+        { label: `Transfer Tax (${state || 'N/A'})`, amount: (homePrice / 1000) * rates.seller, category: 'government' },
+        { label: 'Title Search', amount: 300, category: 'title' },
+        { label: 'Escrow Fee', amount: 500, category: 'title' },
+        { label: 'Prorated Property Tax', amount: (homePrice * 0.012 / 12) * 6, category: 'prepaid' },
+    ];
+
+    const buyerTotal = buyerItems.reduce((s, i) => s + i.amount, 0);
+    const sellerTotal = sellerItems.reduce((s, i) => s + i.amount, 0);
+
+    return {
+        buyerTotal, sellerTotal,
+        buyerItems, sellerItems,
+        buyerPercent: (buyerTotal / homePrice) * 100,
+        sellerPercent: (sellerTotal / homePrice) * 100,
+    };
+}
+
+// ─── Debt Payoff (Snowball / Avalanche) Calculator ────────────────────────────
+
+export interface DebtItem {
+    name: string;
+    balance: number;
+    rate: number;           // annual interest rate %
+    minPayment: number;
+}
+
+export interface DebtPayoffInputs {
+    debts: DebtItem[];
+    extraMonthly: number;
+}
+
+export interface DebtPayoffMonth {
+    month: number;
+    debtName: string;
+    payment: number;
+    principal: number;
+    interest: number;
+    balance: number;
+}
+
+export interface DebtPayoffResult {
+    totalMonths: number;
+    totalInterest: number;
+    totalPaid: number;
+    payoffOrder: string[];
+    schedule: DebtPayoffMonth[];
+}
+
+export function calcDebtPayoff(
+    inputs: DebtPayoffInputs,
+    strategy: 'snowball' | 'avalanche'
+): DebtPayoffResult {
+    const { debts, extraMonthly } = inputs;
+    if (debts.length === 0) {
+        return { totalMonths: 0, totalInterest: 0, totalPaid: 0, payoffOrder: [], schedule: [] };
+    }
+
+    // Clone balances
+    const balances = debts.map(d => d.balance);
+    const schedule: DebtPayoffMonth[] = [];
+    const payoffOrder: string[] = [];
+    let totalInterest = 0;
+    let totalPaid = 0;
+    let month = 0;
+
+    while (balances.some(b => b > 0.01) && month < 600) {
+        month++;
+        let extraBudget = extraMonthly;
+
+        // Sort order for targeting: snowball=lowest balance, avalanche=highest rate
+        const activeIndices = balances
+            .map((b, i) => (b > 0.01 ? i : -1))
+            .filter(i => i >= 0);
+
+        const sorted = [...activeIndices].sort((a, b) => {
+            if (strategy === 'snowball') return balances[a] - balances[b];
+            return debts[b].rate - debts[a].rate;
+        });
+
+        // Pay minimums first
+        for (const idx of activeIndices) {
+            const rate = debts[idx].rate / 100 / 12;
+            const interest = balances[idx] * rate;
+            const minPay = Math.min(debts[idx].minPayment, balances[idx] + interest);
+            const principal = Math.max(0, minPay - interest);
+            balances[idx] = Math.max(0, balances[idx] - principal);
+            totalInterest += interest;
+            totalPaid += minPay;
+
+            schedule.push({
+                month, debtName: debts[idx].name,
+                payment: minPay, principal, interest,
+                balance: balances[idx],
+            });
+        }
+
+        // Apply extra to target debt
+        for (const idx of sorted) {
+            if (extraBudget <= 0 || balances[idx] <= 0.01) continue;
+            const extra = Math.min(extraBudget, balances[idx]);
+            balances[idx] -= extra;
+            extraBudget -= extra;
+            totalPaid += extra;
+
+            // Update last schedule entry for this debt
+            const lastEntry = schedule.filter(s => s.month === month && s.debtName === debts[idx].name).pop();
+            if (lastEntry) {
+                lastEntry.payment += extra;
+                lastEntry.principal += extra;
+                lastEntry.balance = balances[idx];
+            }
+        }
+
+        // Track payoff order
+        for (const idx of activeIndices) {
+            if (balances[idx] <= 0.01 && !payoffOrder.includes(debts[idx].name)) {
+                payoffOrder.push(debts[idx].name);
+                // Freed-up min payment rolls into extra budget for next month
+            }
+        }
+    }
+
+    return { totalMonths: month, totalInterest, totalPaid, payoffOrder, schedule };
+}
+
+// ─── Budget 50/30/20 Calculator ───────────────────────────────────────────────
+
+export interface BudgetCategory {
+    label: string;
+    amount: number;
+}
+
+export interface BudgetInputs {
+    monthlyIncome: number;
+    needs: BudgetCategory[];
+    wants: BudgetCategory[];
+    savings: BudgetCategory[];
+}
+
+export interface BudgetResult {
+    targetNeeds: number;
+    targetWants: number;
+    targetSavings: number;
+    actualNeeds: number;
+    actualWants: number;
+    actualSavings: number;
+    needsDiff: number;
+    wantsDiff: number;
+    savingsDiff: number;
+    needsPercent: number;
+    wantsPercent: number;
+    savingsPercent: number;
+}
+
+export function calcBudget(inputs: BudgetInputs): BudgetResult {
+    const { monthlyIncome, needs, wants, savings } = inputs;
+    const targetNeeds = monthlyIncome * 0.50;
+    const targetWants = monthlyIncome * 0.30;
+    const targetSavings = monthlyIncome * 0.20;
+    const actualNeeds = needs.reduce((s, c) => s + c.amount, 0);
+    const actualWants = wants.reduce((s, c) => s + c.amount, 0);
+    const actualSavings = savings.reduce((s, c) => s + c.amount, 0);
+
+    return {
+        targetNeeds, targetWants, targetSavings,
+        actualNeeds, actualWants, actualSavings,
+        needsDiff: targetNeeds - actualNeeds,
+        wantsDiff: targetWants - actualWants,
+        savingsDiff: targetSavings - actualSavings,
+        needsPercent: monthlyIncome > 0 ? (actualNeeds / monthlyIncome) * 100 : 0,
+        wantsPercent: monthlyIncome > 0 ? (actualWants / monthlyIncome) * 100 : 0,
+        savingsPercent: monthlyIncome > 0 ? (actualSavings / monthlyIncome) * 100 : 0,
+    };
+}
+

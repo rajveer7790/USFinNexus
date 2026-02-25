@@ -10,6 +10,13 @@ const CALC_LINKS = [
     { href: '/calculators/comparison', label: 'Loan Comparison' },
     { href: '/calculators/rent-vs-buy', label: 'Rent vs. Buy' },
     { href: '/calculators/points-buydown', label: 'Points Buy-Down' },
+    { href: '/calculators/heloc', label: 'HELOC Calculator' },
+    { href: '/calculators/fha-va-usda', label: 'FHA / VA / USDA' },
+    { href: '/calculators/closing-costs', label: 'Closing Costs' },
+    { href: '/calculators/debt-payoff', label: 'Debt Payoff' },
+    { href: '/calculators/budget', label: 'Budget 50/30/20' },
+    { href: '/calculators/arm', label: 'ARM Calculator' },
+    { href: '/calculators/interest-only', label: 'Interest-Only' },
 ];
 
 const RESOURCE_LINKS = [

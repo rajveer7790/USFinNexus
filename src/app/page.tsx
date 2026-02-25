@@ -3,7 +3,8 @@ import type { Metadata } from 'next';
 import {
     Home, DollarSign, TrendingUp, Car, Calculator,
     Scale, ArrowLeftRight, BarChart2, FileDown, Table2, Link2,
-    Shield, Zap, Star,
+    Shield, Zap, Star, Landmark, FileText, Target, PiggyBank,
+    Activity, Percent,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -76,6 +77,62 @@ const TOOLS = [
         desc: 'Find break-even on paying discount points to lower your interest rate.',
         badge: '',
         color: '#059669',
+    },
+    {
+        href: '/calculators/heloc',
+        icon: Home,
+        title: 'HELOC Calculator',
+        desc: 'Calculate home equity line of credit payments with draw and repayment period breakdown.',
+        badge: 'New',
+        color: '#0891b2',
+    },
+    {
+        href: '/calculators/fha-va-usda',
+        icon: Landmark,
+        title: 'FHA / VA / USDA',
+        desc: 'Compare government-backed loans with MIP, VA funding fees, and USDA guarantee fees.',
+        badge: 'New',
+        color: '#059669',
+    },
+    {
+        href: '/calculators/closing-costs',
+        icon: FileText,
+        title: 'Closing Costs',
+        desc: 'Full buyer & seller closing cost breakdown with state-specific transfer taxes.',
+        badge: 'New',
+        color: '#d97706',
+    },
+    {
+        href: '/calculators/debt-payoff',
+        icon: Target,
+        title: 'Debt Payoff',
+        desc: 'Compare snowball vs avalanche payoff strategies and find your fastest path to debt-free.',
+        badge: 'New',
+        color: '#dc2626',
+    },
+    {
+        href: '/calculators/budget',
+        icon: PiggyBank,
+        title: 'Budget 50/30/20',
+        desc: 'Plan your monthly budget with the popular 50/30/20 rule. Track needs, wants, and savings.',
+        badge: 'New',
+        color: '#7c3aed',
+    },
+    {
+        href: '/calculators/arm',
+        icon: Activity,
+        title: 'ARM Calculator',
+        desc: 'Adjustable rate mortgage worst-case scenarios with rate cap analysis.',
+        badge: '',
+        color: '#0e7490',
+    },
+    {
+        href: '/calculators/interest-only',
+        icon: Percent,
+        title: 'Interest-Only',
+        desc: 'Compare interest-only period payments vs full amortization jump.',
+        badge: '',
+        color: '#9333ea',
     },
 ];
 
@@ -151,7 +208,7 @@ export default function HomePage() {
                     {/* Trust stats */}
                     <div className="flex flex-wrap justify-center gap-8 mt-16 text-center">
                         {[
-                            { value: '8', label: 'Free Calculators' },
+                            { value: '15', label: 'Free Calculators' },
                             { value: '$0', label: 'Downloads Cost' },
                             { value: '2026', label: 'CFPB Standards' },
                             { value: '∞', label: 'No Signups' },
@@ -252,8 +309,8 @@ export default function HomePage() {
 
             {/* ── CTA Bottom ──────────────────────────────────────────────────────── */}
             <section className="gradient-navy py-16 px-4 text-center text-white">
-                <h2 className="text-3xl font-black mb-4">Ready to Run the Numbers?</h2>
-                <p className="text-white/60 mb-8 max-w-xl mx-auto">
+                <h2 className="text-3xl font-black mb-4 text-white">Ready to Run the Numbers?</h2>
+                <p className="text-white/85 mb-8 max-w-xl mx-auto">
                     Free PDF reports, real-time results, no signup. Built for Americans, backed by CFPB standards.
                 </p>
                 <Link href="/calculators/mortgage" className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-lg font-black transition-all hover:-translate-y-1" style={{ background: '#00C853', color: '#060f1e' }}>

@@ -32,7 +32,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/calculators/personal-loan',
         '/calculators/points-buydown',
         '/calculators/refinance',
-        '/calculators/rent-vs-buy'
+        '/calculators/rent-vs-buy',
+        '/calculators/heloc',
+        '/calculators/fha-va-usda',
+        '/calculators/closing-costs',
+        '/calculators/debt-payoff',
+        '/calculators/budget',
+        '/calculators/arm',
+        '/calculators/interest-only',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),

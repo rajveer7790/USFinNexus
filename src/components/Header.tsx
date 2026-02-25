@@ -6,6 +6,7 @@ import { useTheme } from 'next-themes';
 import {
     Calculator, Home, TrendingUp, Car, DollarSign,
     Scale, ArrowLeftRight, Menu, X, Sun, Moon, ChevronDown,
+    Landmark, FileText, Target, PiggyBank,
 } from 'lucide-react';
 import LogoIcon from './LogoIcon';
 
@@ -20,6 +21,11 @@ const CALCULATORS = [
     { href: '/calculators/comparison', label: 'Loan Comparison', icon: Scale, desc: 'Side-by-side scenarios' },
     { href: '/calculators/rent-vs-buy', label: 'Rent vs. Buy', icon: ArrowLeftRight, desc: 'Which makes more sense?' },
     { href: '/calculators/points-buydown', label: 'Points Buy-Down', icon: TrendingUp, desc: 'Rate reduction analysis' },
+    { href: '/calculators/heloc', label: 'HELOC Calculator', icon: Home, desc: 'Home equity line of credit' },
+    { href: '/calculators/fha-va-usda', label: 'FHA / VA / USDA', icon: Landmark, desc: 'Government loan comparison' },
+    { href: '/calculators/closing-costs', label: 'Closing Costs', icon: FileText, desc: 'Buyer & seller breakdown' },
+    { href: '/calculators/debt-payoff', label: 'Debt Payoff', icon: Target, desc: 'Snowball vs Avalanche' },
+    { href: '/calculators/budget', label: 'Budget 50/30/20', icon: PiggyBank, desc: 'Monthly budget planner' },
 ];
 
 export default function Header() {
@@ -62,10 +68,10 @@ export default function Header() {
 
                             {toolsOpen && (
                                 <div
-                                    className="absolute top-full left-0 mt-1 w-80 rounded-xl shadow-2xl border overflow-hidden animate-fade-in"
+                                    className="absolute top-full left-0 mt-1 w-[600px] rounded-xl shadow-2xl border overflow-hidden animate-fade-in"
                                     style={{ background: 'var(--color-card)', borderColor: 'var(--color-border)' }}
                                 >
-                                    <div className="p-2">
+                                    <div className="p-3 grid grid-cols-2 gap-1">
                                         {CALCULATORS.map((calc) => (
                                             <Link
                                                 key={calc.href}

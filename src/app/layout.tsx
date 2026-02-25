@@ -5,7 +5,13 @@ import './globals.css';
 export const dynamic = 'force-static';
 export const revalidate = 86400; // Cache for 24 hours
 
-const inter = Inter({ subsets: ['latin'], display: 'swap' });
+const inter = Inter({
+    subsets: ['latin'],
+    display: 'swap',
+    weight: ['400', '500', '700', '900'],
+    preload: true,
+    variable: '--font-inter',
+});
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { ThemeProvider } from '@/components/ThemeProvider';
@@ -24,6 +30,14 @@ export const metadata: Metadata = {
         'amortization schedule', 'PITI calculator', 'home loan calculator',
     ],
     metadataBase: new URL('https://usfinnexus.com'),
+    icons: {
+        icon: [
+            { url: '/icon.svg', type: 'image/svg+xml' },
+            { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+            { url: '/icon-512.png', type: 'image/png', sizes: '512x512' }
+        ],
+        apple: '/icon-192.png',
+    },
     openGraph: {
         type: 'website',
         locale: 'en_US',
@@ -64,7 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     crossOrigin="anonymous"
                 ></script>
             </head>
-            <body className={inter.className}>
+            <body className={inter.className} suppressHydrationWarning>
                 <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
                     <Header />
                     <main className="min-h-screen">{children}</main>

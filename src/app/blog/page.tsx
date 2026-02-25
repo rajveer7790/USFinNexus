@@ -38,7 +38,7 @@ export default function BlogPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {POSTS.map(post => (
-                    <div key={post.slug} className="card p-6 cursor-pointer hover:-translate-y-1 transition-all duration-200">
+                    <Link href={`/blog/${post.slug}`} key={post.slug} className="card p-6 cursor-pointer hover:-translate-y-1 transition-all duration-200 block no-underline">
                         <span className="inline-block px-2 py-0.5 rounded text-xs font-bold mb-3" style={{ background: 'rgba(0,200,83,0.12)', color: '#00C853' }}>
                             {post.category}
                         </span>
@@ -50,7 +50,7 @@ export default function BlogPage() {
                             <span>·</span>
                             <span>{post.readTime} read</span>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
 
