@@ -22,6 +22,7 @@ const CALC_LINKS = [
 const RESOURCE_LINKS = [
     { href: '/blog', label: 'Blog & Resources' },
     { href: '/about', label: 'About Us' },
+    { href: '/contact', label: 'Contact Us' },
     { href: '/privacy', label: 'Privacy Policy' },
     { href: '/terms', label: 'Terms of Service' },
     { href: '/disclaimer', label: 'Disclaimer' },

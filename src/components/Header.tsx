@@ -102,6 +102,9 @@ export default function Header() {
                         <Link href="/about" className="px-4 py-2 rounded-lg text-sm font-semibold text-white/80 hover:text-white hover:bg-white/10 transition-all">
                             About
                         </Link>
+                        <Link href="/contact" className="px-4 py-2 rounded-lg text-sm font-semibold text-white/80 hover:text-white hover:bg-white/10 transition-all">
+                            Contact
+                        </Link>
                     </nav>
 
                     {/* Right Actions */}
@@ -158,6 +161,12 @@ export default function Header() {
                         </Link>
                         <Link href="/articles" onClick={() => setMobileOpen(false)} className="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-semibold text-white/80 hover:bg-white/10">
                             Articles
+                        </Link>
+                        <Link href="/about" onClick={() => setMobileOpen(false)} className="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-semibold text-white/80 hover:bg-white/10">
+                            About
+                        </Link>
+                        <Link href="/contact" onClick={() => setMobileOpen(false)} className="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-semibold text-white/80 hover:bg-white/10">
+                            Contact
                         </Link>
                     </div>
                 </div>
