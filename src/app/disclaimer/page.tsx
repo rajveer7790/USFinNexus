@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Shield } from 'lucide-react';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = { title: 'Disclaimer | USFinNexus', description: 'Important disclaimer for all USFinNexus.com calculator results.' };
 
 export default function DisclaimerPage() {
     return (
         <div className="max-w-3xl mx-auto px-4 py-12">
+            <Breadcrumbs items={[{ name: 'Disclaimer', item: '/disclaimer' }]} />
             <div className="flex items-center gap-3 mb-2">
                 <Shield style={{ color: '#f59e0b' }} size={28} />
                 <h1 className="text-3xl font-black" style={{ color: 'var(--color-text)' }}>Disclaimer</h1>

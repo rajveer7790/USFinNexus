@@ -1,0 +1,1298 @@
+﻿node.exe : npm warn Unknown user config 
+"always-auth". This will stop working 
+in the next major version of npm.
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" 
+"C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecif 
+   ied: (npm warn Unknow...version of   
+  npm.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCom 
+   mandError
+ 
+
+> usfinnexus@1.0.0 build
+> next build
+
+   Γû▓ Next.js 15.5.12
+   - Experiments (use with caution):
+     ┬╖ optimizePackageImports
+
+   Creating an optimized production build ...
+ Γ£ô Compiled successfully in 6.2s
+   Linting and checking validity of types ...
+
+Failed to compile.
+
+./src/app/articles/2026-boi-filing-why-9
+5-percent-american-llcs-exempt/page.tsx
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/articles/2026-fincen-boi-rule-
+changes-what-changed-march-2025/page.tsx
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+4:21  Warning: 'Clock' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/articles/2026-income-tax-brack
+ets-how-the-tcja-sunset-affects-you/page
+.tsx
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+3:8  Warning: 'Image' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+4:21  Warning: 'CheckCircle2' is 
+defined but never used.  
+@typescript-eslint/no-unused-vars
+4:50  Warning: 'TrendingUp' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+31:121  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+31:133  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+68:70  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+68:80  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+68:280  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+68:288  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+80:67  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+80:80  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+87:100  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+87:113  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+107:30  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+107:40  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+159:46  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+159:63  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+224:59  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+224:78  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+237:38  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+237:52  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+258:105  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+258:129  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+258:309  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+258:314  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+261:21  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+261:30  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+266:46  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+266:56  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+266:168  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+
+./src/app/articles/2026-tax-changes-20-p
+ercent-qbi-deduction-permanent/page.tsx
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+4:47  Warning: 'TrendingUp' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/articles/avoid-costly-mistakes
+-fincen-real-estate-reporting-guide/page
+.tsx
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+4:21  Warning: 'Edit3' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/articles/boi-exemption-confirm
+ed-2026-free-checklist/page.tsx
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+4:35  Warning: 'ShieldCheck' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/articles/buying-house-through-
+llc-2026-fincen-rule-changes/page.tsx
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+4:21  Warning: 'Home' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:27  Warning: 'FileText' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/articles/california-new-york-t
+exas-state-boi-rules-2026/page.tsx
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+4:50  Warning: 'TrendingUp' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+4:62  Warning: 'Shield' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/articles/canadian-business-own
+ers-2026-us-llc-compliance-roadmap/page.
+tsx
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/articles/canadian-buyers-us-pr
+operty-fincen-residential-rule/page.tsx
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+4:51  Warning: 'Home' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/articles/end-of-anonymous-all-
+cash-home-buying-fincen-march-2026/page.
+tsx
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/articles/fincen-irs-compliance
+-checklist-us-llc-2026/page.tsx
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/articles/fincen-killed-boi-us-
+companies-what-llc-owners-must-know/page
+.tsx
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+4:21  Warning: 'CheckCircle2' is 
+defined but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/articles/fincen-real-estate-re
+porting-rule-what-llc-buyers-must-do/pag
+e.tsx
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+4:21  Warning: 'CheckSquare' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+4:40  Warning: 'Shield' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/articles/fincen-saves-us-small
+-businesses-500-penalties-2026/page.tsx
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+4:21  Warning: 'CheckCircle2' is 
+defined but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/articles/foreign-owned-us-llcs
+-new-30-day-boi-deadline/page.tsx
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+4:41  Warning: 'Calendar' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/articles/march-1-2026-fincen-r
+ule-all-cash-home-buyers/page.tsx
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+4:50  Warning: 'FileText' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/articles/new-york-llc-transpar
+ency-act-2026-foreign-owners/page.tsx
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/articles/ny-boi-law-starts-jan
+uary-2026-even-if-federal-exempt/page.ts
+x
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/articles/stop-wasting-money-bo
+i-filing-domestic-llc-2026/page.tsx
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/articles/title-companies-inves
+tors-10000-penalty-march-1-2026/page.tsx
+2:8  Warning: 'Link' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+4:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+4:43  Warning: 'Shield' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/blog/free-mortgage-calculator-
+2026-pdf/page.tsx
+3:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/blog/how-much-house-can-i-affo
+rd-2026/page.tsx
+3:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/blog/mortgage-amortization-sch
+edule-guide/page.tsx
+3:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/blog/pmi-explained-avoid-cance
+l/page.tsx
+3:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/blog/should-i-refinance-2026/p
+age.tsx
+3:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/blog/usa-people-search-finance
+/page.tsx
+3:10  Warning: 'ArrowLeft' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/calculators/affordability/Affo
+rdabilitySeoContent.tsx
+12:283  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+12:295  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+19:71  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+19:83  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+26:338  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+26:358  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+31:37  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+31:48  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+31:53  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+31:66  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+68:241  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+68:253  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+
+./src/app/calculators/amortization/Amort
+izationSeoContent.tsx
+22:59  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+22:74  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+31:42  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+31:58  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+46:137  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+46:144  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+53:190  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+53:197  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+53:290  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+53:300  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+
+./src/app/calculators/arm/ArmSeoContent.
+tsx
+11:125  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+11:132  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+21:103  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+21:109  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+22:143  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+22:145  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+26:39  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+26:59  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+39:192  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+39:203  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+
+./src/app/calculators/california/Califor
+niaSeoContent.tsx
+11:115  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+11:121  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+18:181  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+30:136  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+30:342  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+30:355  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+45:136  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+45:153  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+60:31  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+60:42  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+
+./src/app/calculators/canada/CanadaSeoCo
+ntent.tsx
+11:150  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+11:172  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+18:45  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+18:55  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+38:72  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+38:82  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+52:245  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+52:251  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+74:221  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+74:237  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+
+./src/app/calculators/canada/page.tsx
+24:85  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+24:104  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+
+./src/app/calculators/closing-costs/Clos
+ingCostsClient.tsx
+4:59  Warning: 'STATE_TRANSFER_TAX' is 
+defined but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/calculators/closing-costs/Clos
+ingCostsSeoContent.tsx
+12:242  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+12:377  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+26:94  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+26:166  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+29:125  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+41:135  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+41:158  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+44:141  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+44:147  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+47:38  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+47:148  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+47:156  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+60:68  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+60:151  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+60:188  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+60:204  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+71:38  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+71:52  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+78:283  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+78:302  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+85:296  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+85:303  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+
+./src/app/calculators/down-payment/DownP
+aymentSeoContent.tsx
+41:24  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+44:103  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+44:117  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+47:85  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+58:188  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+58:200  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+65:145  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+
+./src/app/calculators/dti/DtiSeoContent.
+tsx
+18:62  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+18:73  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+22:185  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+22:204  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+23:215  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+23:236  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+27:36  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+27:41  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+
+./src/app/calculators/fha/FhaSeoContent.
+tsx
+26:169  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+26:175  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+26:224  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+26:232  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+
+./src/app/calculators/fha-va-usda/GovLoa
+nClient.tsx
+4:72  Warning: 'US_MORTGAGE_CONSTANTS' 
+is defined but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/calculators/florida/FloridaSeo
+Content.tsx
+23:317  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+23:342  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+36:52  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+36:67  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+39:42  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+45:98  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+45:215  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+56:138  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+56:150  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+63:93  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+63:104  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+63:359  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+
+./src/app/calculators/mortgage/MortgageC
+alculatorClient.tsx
+6:34  Warning: 'AlertCircle' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+6:47  Warning: 'CheckCircle' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+7:5  Warning: 'ChevronDown' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+7:18  Warning: 'ChevronUp' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+7:29  Warning: 'Plus' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+7:35  Warning: 'X' is defined but never 
+used.  @typescript-eslint/no-unused-vars
+7:38  Warning: 'Share2' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+7:46  Warning: 'ArrowRight' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+8:5  Warning: 'Shield' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+8:13  Warning: 'Download' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/calculators/mortgage/MortgageC
+harts.tsx
+5:29  Warning: 'Legend' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/calculators/mortgage/MortgageS
+eoContent.tsx
+12:89  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+12:281  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+19:24  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+19:153  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+23:122  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+57:241  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+57:251  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+57:263  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+64:70  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+67:294  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+74:29  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+88:122  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+88:255  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+102:422  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+102:435  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+
+./src/app/calculators/refinance/Refinanc
+eSeoContent.tsx
+12:239  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+12:355  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+12:373  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+52:130  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+52:150  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+66:51  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+66:68  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+66:186  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+73:68  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+73:78  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+80:324  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+
+./src/app/calculators/rent-vs-buy/RentVs
+BuySeoContent.tsx
+12:92  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+12:124  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+19:150  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+19:161  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+22:88  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+24:118  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+35:95  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+80:144  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+80:243  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+
+./src/app/calculators/texas/TexasSeoCont
+ent.tsx
+24:106  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+24:108  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+39:197  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+42:50  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+42:65  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+57:186  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+57:193  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+64:134  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+64:146  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+
+./src/app/calculators/va/VaSeoContent.ts
+x
+36:97  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+36:110  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+48:199  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+48:220  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+63:166  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+
+./src/app/data/home-affordability-by-cit
+y/page.tsx
+23:62  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+29:141  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+29:153  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+32:21  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+32:43  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+76:21  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+76:32  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+
+./src/app/data/home-affordability-by-sta
+te/page.tsx
+34:75  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+34:93  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+34:157  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+118:41  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+118:50  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+
+./src/app/guides/15-vs-30-year-mortgage/
+page.tsx
+27:27  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+34:280  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+43:352  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+43:360  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+58:24  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+108:25  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+108:30  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+
+./src/app/guides/buying-canadian-propert
+y-as-american/page.tsx
+45:247  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+45:265  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+75:27  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+75:30  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+75:36  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+75:98  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+75:120  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+80:175  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+80:192  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+
+./src/app/guides/buying-us-property-as-c
+anadian/page.tsx
+26:43  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+26:52  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+50:130  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+50:158  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+50:176  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+
+./src/app/guides/cross-border-mortgage-g
+uide/page.tsx
+27:121  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+
+./src/app/guides/first-time-homebuyer-gu
+ide/page.tsx
+58:154  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+58:172  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+58:188  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+58:239  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+58:252  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+66:112  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+68:192  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+78:43  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+78:52  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+78:176  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+78:219  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+79:283  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+89:94  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+89:116  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+93:103  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+107:87  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+107:102  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+107:314  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+
+./src/app/guides/first-time-homebuyer-pr
+ograms/page.tsx
+31:40  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+31:57  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+34:102  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+34:123  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+59:188  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+69:40  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+69:56  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+74:311  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+83:429  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+93:82  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+93:118  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+93:127  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+93:170  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+93:376  Error: `'` can be escaped with 
+`&apos;`, `&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unescaped-entities
+
+./src/app/guides/mortgage-credit-score-r
+equirements/page.tsx
+28:77  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+28:82  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+40:48  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+40:61  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+42:169  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+42:180  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+72:126  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+72:155  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+80:98  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+80:108  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+90:98  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+90:119  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+107:258  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+107:281  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+114:214  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+114:228  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+
+./src/app/guides/page.tsx
+3:33  Warning: 'Star' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+3:39  Warning: 'Shield' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+3:47  Warning: 'TrendingUp' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+3:59  Warning: 'DollarSign' is defined 
+but never used.  
+@typescript-eslint/no-unused-vars
+
+./src/app/guides/us-vs-canada-mortgages/
+page.tsx
+44:86  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+44:107  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+44:270  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+44:277  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+64:254  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+64:262  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+73:208  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+73:235  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+81:75  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+81:90  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+82:91  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+82:104  Error: `"` can be escaped with 
+`&quot;`, `&ldquo;`, `&#34;`, 
+`&rdquo;`.  react/no-unescaped-entities
+
+./src/app/page.tsx
+244:50  Warning: 'idx' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+272:43  Warning: 'idx' is defined but 
+never used.  
+@typescript-eslint/no-unused-vars
+
+info  - Need to disable some ESLint 
+rules? Learn more here: https://nextjs.o
+rg/docs/app/api-reference/config/eslint#
+disabling-rules

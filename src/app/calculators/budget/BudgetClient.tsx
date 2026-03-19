@@ -80,28 +80,28 @@ export default function BudgetClient() {
         const pct = group === 'needs' ? result.needsPercent : group === 'wants' ? result.wantsPercent : result.savingsPercent;
 
         return (
-            <div key={group} className="card p-5 mb-4">
-                <div className="flex justify-between items-center mb-4">
+            <div key={group} className="glass-card p-6 mb-6">
+                <div className="flex justify-between items-center mb-6">
                     <div className="flex items-center gap-2">
                         <span className="text-xl">{config.emoji}</span>
                         <div>
                             <h3 className="text-sm font-bold" style={{ color: 'var(--color-text)' }}>{config.title} ({config.rule})</h3>
-                            <p className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>{config.target}</p>
+                            <p className="text-xs text-gray-400">{config.target}</p>
                         </div>
                     </div>
-                    <button onClick={() => addItem(group)} className="flex items-center gap-1 text-xs font-bold px-2 py-1 rounded-lg hover:bg-green-600/10" style={{ color: '#00C853' }}>
+                    <button onClick={() => addItem(group)} className="flex items-center gap-1 text-xs font-black px-3 py-2 min-h-[36px] rounded-lg transition-colors bg-[#0da6f2]/10 text-[#0da6f2] hover:bg-[#0da6f2]/20 uppercase tracking-widest">
                         <Plus size={12} /> Add
                     </button>
                 </div>
 
                 {items.map((item, i) => (
                     <div key={i} className="flex items-center gap-2 mb-2">
-                        <input type="text" className="input-field text-sm flex-1 py-1.5" value={item.label} onChange={e => updateItem(group, i, 'label', e.target.value)} />
-                        <div className="relative w-28">
-                            <span className="absolute left-2 top-1/2 -translate-y-1/2 text-xs" style={{ color: 'var(--color-text-muted)' }}>$</span>
-                            <input type="number" className="input-field pl-5 text-sm py-1.5" value={item.amount} onChange={e => updateItem(group, i, 'amount', e.target.value)} min={0} step={10} />
+                        <input type="text" className="input-field text-sm flex-1 py-1.5 min-w-0" value={item.label} onChange={e => updateItem(group, i, 'label', e.target.value)} />
+                        <div className="relative w-28 flex-shrink-0">
+                            <span className="absolute left-2 top-1/2 -translate-y-1/2 text-xs text-gray-400">$</span>
+                            <input type="number" className="input-field pl-5 text-sm py-2 w-full" value={item.amount} onChange={e => updateItem(group, i, 'amount', e.target.value)} min={0} step={10} />
                         </div>
-                        <button onClick={() => removeItem(group, i)} className="p-1 rounded hover:bg-red-100 dark:hover:bg-red-900/20 text-red-400 hover:text-red-600">
+                        <button onClick={() => removeItem(group, i)} className="flex-shrink-0 p-2 min-h-[36px] min-w-[36px] flex items-center justify-center rounded hover:bg-red-100 text-red-400 hover:text-red-600">
                             <X size={12} />
                         </button>
                     </div>
@@ -137,27 +137,38 @@ export default function BudgetClient() {
     };
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
-            <div className="mb-8">
-                <h1 className="text-3xl font-black text-navy-900 dark:text-white mb-2">
-                    Budget Calculator — 50/30/20 Rule
+        <div className="relative min-h-screen bg-white text-navy-900 pb-20">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#0da6f2]/6 rounded-full blur-[130px]" />
+                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-500/6 rounded-full blur-[120px]" />
+            </div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 relative z-10">
+            <div className="mb-6 sm:mb-12">
+                <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
+                        <CheckCircle className="text-emerald-500" size={22} />
+                    </div>
+                    <span className="text-xs font-black uppercase tracking-[0.3em] text-emerald-500">Budget Planner</span>
+                </div>
+                <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight bg-gradient-to-r from-navy-900 via-emerald-500 to-navy-900 bg-clip-text text-transparent">
+                    Budget Calculator
                 </h1>
-                <p className="text-gray-500 dark:text-gray-400 max-w-2xl">
-                    Plan your monthly budget using the popular 50/30/20 rule. 50% for Needs, 30% for Wants, 20% for Savings &amp; Debt repayment.
+                <p className="text-gray-500 max-w-2xl font-medium text-lg">
+                    Plan your monthly budget using the 50/30/20 rule. 50% Needs, 30% Wants, 20% Savings & Debt repayment.
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 xl:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
                 {/* LEFT: Income + Categories */}
-                <div className="xl:col-span-3 space-y-4">
+                <div className="lg:col-span-3 space-y-4">
                     {/* Income */}
-                    <div className="card p-6">
-                        <h2 className="text-sm font-bold uppercase tracking-wide mb-4" style={{ color: 'var(--color-text-muted)' }}>
+                    <div className="glass-card p-4 sm:p-8">
+                        <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-4 sm:mb-6">
                             Monthly After-Tax Income
                         </h2>
                         <div className="relative">
-                            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>$</span>
-                            <input type="number" className="input-field pl-7 text-lg font-black" value={income} onChange={e => setIncome(+e.target.value)} min={500} step={100} />
+                            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">$</span>
+                            <input type="number" className="input-field pl-7" value={income} onChange={e => setIncome(+e.target.value)} min={500} step={100} />
                         </div>
                         <input type="range" min={1000} max={25000} step={100} value={income} onChange={e => setIncome(+e.target.value)} className="slider w-full mt-2" style={{ '--value': `${((income - 1000) / 24000) * 100}%` } as React.CSSProperties} />
                     </div>
@@ -167,9 +178,9 @@ export default function BudgetClient() {
                 </div>
 
                 {/* RIGHT: Summary */}
-                <div className="xl:col-span-2 space-y-5">
-                    <div className="card p-6 animate-slide-up sticky top-20">
-                        <h2 className="text-sm font-bold uppercase tracking-wide mb-5" style={{ color: 'var(--color-text-muted)' }}>
+                <div className="lg:col-span-2 space-y-6 lg:self-start">
+                    <div className="glass-card p-4 sm:p-8 animate-slide-up lg:sticky lg:top-24">
+                        <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-8">
                             Budget Summary
                         </h2>
 
@@ -242,6 +253,7 @@ export default function BudgetClient() {
                     </div>
                     <DisclaimerBanner calculatorName="the Budget Calculator" />
                 </div>
+            </div>
             </div>
         </div>
     );

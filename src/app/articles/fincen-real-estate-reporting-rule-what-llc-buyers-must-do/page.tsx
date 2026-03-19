@@ -1,24 +1,49 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, CheckSquare, Home, Shield, AlertCircle, FileText } from 'lucide-react';
+import { CheckSquare, Home, Shield, AlertCircle, FileText } from 'lucide-react';
 import RelatedArticles from '@/components/RelatedArticles';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
     title: 'FinCEN Real Estate Reporting Rule 2026: LLC Buyer Checklist',
     description: 'A step-by-step checklist for LLCs, Trusts, and corporate buyers purchasing residential real estate without a mortgage under the 2026 FinCEN reporting rule.',
+    openGraph: {
+        title: 'FinCEN Real Estate Reporting Rule 2026: LLC Buyer Checklist',
+        description: 'A step-by-step checklist for LLCs, Trusts, and corporate buyers purchasing residential real estate without a mortgage under the 2026 FinCEN reporting rule.',
+        url: 'https://usfinnexus.com/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do',
+        type: 'article',
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/images/real_estate_rule_hero_1772351582917.png', width: 1200, height: 630, alt: 'Step-by-step real estate closing compliance checklist for LLC buyers under the 2026 FinCEN rule' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'FinCEN Real Estate Reporting Rule 2026: LLC Buyer Checklist',
+        description: 'A step-by-step checklist for LLCs, Trusts, and corporate buyers purchasing residential real estate without a mortgage under the 2026 FinCEN reporting rule.',
+        images: ['https://usfinnexus.com/images/real_estate_rule_hero_1772351582917.png'],
+    },
+    alternates: {
+        canonical: 'https://usfinnexus.com/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do',
+    },
 };
 
 export default function ArticlePage() {
     return (
+        <>
+        <ArticleSchema
+            title="FinCEN Real Estate Reporting Rule 2026: LLC Buyer Checklist"
+            description="A step-by-step checklist for LLCs, Trusts, and corporate buyers purchasing residential real estate without a mortgage under the 2026 FinCEN reporting rule."
+            url="https://usfinnexus.com/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do"
+            datePublished="2026-02-24"
+            dateModified="2026-02-24"
+            authorName="USFinNexus Compliance Team"
+        />
         <article className="max-w-4xl mx-auto px-4 py-12 md:py-20 lg:px-8">
-            <Link href="/articles" className="inline-flex items-center text-sm mb-8 hover:text-blue-600 transition-colors" style={{ color: 'var(--color-text-muted)' }}>
-                <ArrowLeft className="w-4 h-4 mr-2" /> Back to Articles
-            </Link>
+            <Breadcrumbs items={[{ name: 'Articles', item: '/articles' }, { name: 'LLC Buyer Rule', item: '/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do' }]} />
 
             <header className="mb-12">
                 <div className="flex flex-wrap items-center gap-3 mb-6">
-                    <span className="inline-block px-3 py-1 rounded bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-400 text-xs font-bold uppercase tracking-wider">
+                    <span className="inline-block px-3 py-1 rounded bg-indigo-100 text-indigo-800 text-xs font-bold uppercase tracking-wider">
                         Real Estate Compliance
                     </span>
                     <span className="text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>Updated: February 24, 2026</span>
@@ -32,13 +57,13 @@ export default function ArticlePage() {
                     If you intend to purchase residential real estate using a Limited Liability Company (LLC), Corporate Entity, or Trust without utilizing a traditional bank mortgage, the purchasing process will feel entirely different starting March 1, 2026. The new FinCEN Real Estate Reporting Rule demands total transparency. Here is your step-by-step checklist to ensure a smooth closing and avoid federal penalties.
                 </p>
 
-                <div className="flex items-center gap-4 border-t border-b py-4 border-gray-200 dark:border-gray-800">
+                <div className="flex items-center gap-4 border-t border-b py-4 border-gray-200">
                     <div className="flex-1 flex gap-4 text-sm font-medium">
                         <div className="flex flex-col">
                             <span style={{ color: 'var(--color-text-muted)' }}>Written by</span>
                             <span style={{ color: 'var(--color-text)' }}>USFinNexus Compliance Team</span>
                         </div>
-                        <div className="flex flex-col border-l pl-4 border-gray-200 dark:border-gray-800">
+                        <div className="flex flex-col border-l pl-4 border-gray-200">
                             <span style={{ color: 'var(--color-text-muted)' }}>Reading Time</span>
                             <span style={{ color: 'var(--color-text)' }}>9 minutes</span>
                         </div>
@@ -46,18 +71,18 @@ export default function ArticlePage() {
                 </div>
             </header>
 
-            <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-blue-600 hover:prose-a:text-blue-500">
+            <div className="prose prose-lg max-w-none prose-headings:font-bold prose-a:text-blue-600 hover:prose-a:text-blue-500">
                 <figure className="my-10">
-                    <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-800">
+                    <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
                         <Image
-                            src="/images/fincen-hero.png"
+                            src="/images/real_estate_rule_hero_1772351582917.png"
                             alt="Step by step real estate closing compliance checklist representation"
                             fill
                             className="object-cover"
                             priority
                         />
                     </div>
-                    <figcaption className="text-center text-sm mt-3 text-gray-500 dark:text-gray-400">
+                    <figcaption className="text-center text-sm mt-3 text-gray-500">
                         The March 1, 2026 mandate requires unprecedented pre-closing documentation from high-net-worth buyers utilizing LLCs.
                     </figcaption>
                 </figure>
@@ -73,12 +98,12 @@ export default function ArticlePage() {
                     If the title agent cannot obtain this information from you, <strong>they will refuse to close the transaction</strong> because they face severe civil and criminal liability.
                 </p>
 
-                <div className="bg-indigo-50 dark:bg-indigo-900/20 border-l-4 border-indigo-500 p-6 my-8">
+                <div className="bg-indigo-50 border-l-4 border-indigo-500 p-6 my-8">
                     <div className="flex items-start gap-4">
                         <AlertCircle className="w-6 h-6 text-indigo-600 mt-1 shrink-0" />
                         <div>
-                            <p className="font-bold text-indigo-900 dark:text-indigo-300 m-0 mb-2">Phase 1: 30 Days Before Closing</p>
-                            <p className="text-indigo-800 dark:text-indigo-200 m-0">
+                            <p className="font-bold text-indigo-900 m-0 mb-2">Phase 1: 30 Days Before Closing</p>
+                            <p className="text-indigo-800 m-0">
                                 Preparation must begin immediately after a contract is executed. Do not wait until the final walkthrough to gather documentation.
                             </p>
                         </div>
@@ -104,22 +129,22 @@ export default function ArticlePage() {
                 </ol>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
-                    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 rounded-xl shadow-sm">
+                    <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm">
                         <h4 className="font-bold text-lg mb-3 flex items-center gap-2" style={{ color: 'var(--color-navy)' }}>
                             <FileText className="w-5 h-5 text-green-600" />
                             Gather Identification
                         </h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                        <p className="text-sm text-gray-600">
                             Collect a color copy of an unexpired, government-issued photo ID (Driver&apos;s License or Passport) and current residential street address for EVERY beneficial owner.
                         </p>
                     </div>
 
-                    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 rounded-xl shadow-sm">
+                    <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm">
                         <h4 className="font-bold text-lg mb-3 flex items-center gap-2" style={{ color: 'var(--color-navy)' }}>
                             <Home className="w-5 h-5 text-blue-500" />
                             Sign Certification Forms
                         </h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                        <p className="text-sm text-gray-600">
                             A designated representative of the purchasing LLC will be required to sign a formal certification attesting that all beneficial ownership info provided to the title company is accurate and complete.
                         </p>
                     </div>
@@ -138,7 +163,7 @@ export default function ArticlePage() {
                 </p>
 
                 <figure className="my-12">
-                    <div className="relative w-full h-[350px] md:h-[450px] rounded-xl overflow-hidden bg-gray-50 dark:bg-gray-900 flex items-center justify-center border border-gray-200 dark:border-gray-700 p-8">
+                    <div className="relative w-full h-[350px] md:h-[450px] rounded-xl overflow-hidden bg-gray-50 flex items-center justify-center border border-gray-200 p-8">
                         <Image
                             src="/images/all-cash.png"
                             alt="The end of anonymous all cash purchases in US real estate"
@@ -177,11 +202,11 @@ export default function ArticlePage() {
                     The 2026 framework removes the veil of secrecy from US real estate acquisitions. For legitimate investors purchasing through LLCs for liability protection rather than anonymity, the rule simply adds a heavy layer of administrative busywork prior to closing. By following this checklist and organizing your beneficial ownership data 30 days in advance, you can ensure your luxury purchase goes off without a hitch.
                 </p>
 
-                <hr className="my-10 border-gray-200 dark:border-gray-800" />
+                <hr className="my-10 border-gray-200" />
 
-                <div className="bg-gray-100 dark:bg-gray-900 p-8 rounded-2xl text-center not-prose">
+                <div className="bg-gray-100 p-8 rounded-2xl text-center not-prose">
                     <h3 className="text-2xl font-black mb-3" style={{ color: 'var(--color-navy)' }}>Avoid Real Estate Closing Delays</h3>
-                    <p className="mb-6 text-gray-600 dark:text-gray-400">
+                    <p className="mb-6 text-gray-600">
                         Our compliance experts map complex LLC and Trust ownership structures to ensure you meet all FinCEN Real Estate Reporting requirements smoothly before your closing date.
                     </p>
                     <button className="btn-primary py-3 px-8 text-sm w-full sm:w-auto shadow-xl">
@@ -195,5 +220,6 @@ export default function ArticlePage() {
 
             <RelatedArticles currentSlug="fincen-real-estate-reporting-rule-what-llc-buyers-must-do" />
         </article>
+        </>
     );
 }

@@ -1,24 +1,49 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, AlertTriangle, CheckCircle2, FileText, Info, Home, Shield } from 'lucide-react';
+import { AlertTriangle, CheckCircle2, FileText, Info, Home, Shield } from 'lucide-react';
 import RelatedArticles from '@/components/RelatedArticles';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
     title: 'March 1, 2026 FinCEN Rule: All-Cash Home Buyers Must Reveal Owners',
     description: 'Complete 2026 guide to the new FinCEN Residential Real Estate Rule taking effect March 1. Find out how LLC buyers, trusts, and title professionals are impacted and how to avoid penalties.',
+    openGraph: {
+        title: 'March 1, 2026 FinCEN Rule: All-Cash Home Buyers Must Reveal Owners',
+        description: 'Complete 2026 guide to the new FinCEN Residential Real Estate Rule taking effect March 1. Find out how LLC buyers, trusts, and title professionals are impacted and how to avoid penalties.',
+        url: 'https://usfinnexus.com/articles/march-1-2026-fincen-rule-all-cash-home-buyers',
+        type: 'article',
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/images/march_1_rule_hero_1772351631601.png', width: 1200, height: 630, alt: 'FinCEN Real Estate Compliance 2026 representing new March 1 reporting regulations for all-cash home buyers' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'March 1, 2026 FinCEN Rule: All-Cash Home Buyers Must Reveal Owners',
+        description: 'Complete 2026 guide to the new FinCEN Residential Real Estate Rule taking effect March 1. Find out how LLC buyers, trusts, and title professionals are impacted and how to avoid penalties.',
+        images: ['https://usfinnexus.com/images/march_1_rule_hero_1772351631601.png'],
+    },
+    alternates: {
+        canonical: 'https://usfinnexus.com/articles/march-1-2026-fincen-rule-all-cash-home-buyers',
+    },
 };
 
 export default function ArticlePage() {
     return (
+        <>
+        <ArticleSchema
+            title="March 1, 2026 FinCEN Rule: All-Cash Home Buyers Must Reveal Owners"
+            description="Complete 2026 guide to the new FinCEN Residential Real Estate Rule taking effect March 1. Find out how LLC buyers, trusts, and title professionals are impacted and how to avoid penalties."
+            url="https://usfinnexus.com/articles/march-1-2026-fincen-rule-all-cash-home-buyers"
+            datePublished="2026-02-24"
+            dateModified="2026-02-24"
+            authorName="USFinNexus Compliance Team"
+        />
         <article className="max-w-4xl mx-auto px-4 py-12 md:py-20 lg:px-8">
-            <Link href="/articles" className="inline-flex items-center text-sm mb-8 hover:text-blue-600 transition-colors" style={{ color: 'var(--color-text-muted)' }}>
-                <ArrowLeft className="w-4 h-4 mr-2" /> Back to Articles
-            </Link>
+            <Breadcrumbs items={[{ name: 'Articles', item: '/articles' }, { name: 'March 1 Rule', item: '/articles/march-1-2026-fincen-rule-all-cash-home-buyers' }]} />
 
             <header className="mb-12">
                 <div className="flex flex-wrap items-center gap-3 mb-6">
-                    <span className="inline-block px-3 py-1 rounded bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 text-xs font-bold uppercase tracking-wider">
+                    <span className="inline-block px-3 py-1 rounded bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider">
                         Real Estate Compliance Alerts
                     </span>
                     <span className="text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>Updated: February 24, 2026</span>
@@ -32,13 +57,13 @@ export default function ArticlePage() {
                     The era of anonymous, all-cash luxury real estate purchases in the United States is officially ending. If you are buying a home without a mortgage using an LLC, trust, or other legal entity after <strong>March 1, 2026</strong>, the Financial Crimes Enforcement Network (FinCEN) now demands to know exactly who you are. Here&apos;s exactly what changed, the penalties you face, and how to comply with this massive regulatory shift.
                 </p>
 
-                <div className="flex items-center gap-4 border-t border-b py-4 border-gray-200 dark:border-gray-800">
+                <div className="flex items-center gap-4 border-t border-b py-4 border-gray-200">
                     <div className="flex-1 flex gap-4 text-sm font-medium">
                         <div className="flex flex-col">
                             <span style={{ color: 'var(--color-text-muted)' }}>Written by</span>
                             <span style={{ color: 'var(--color-text)' }}>USFinNexus Compliance Team</span>
                         </div>
-                        <div className="flex flex-col border-l pl-4 border-gray-200 dark:border-gray-800">
+                        <div className="flex flex-col border-l pl-4 border-gray-200">
                             <span style={{ color: 'var(--color-text-muted)' }}>Reading Time</span>
                             <span style={{ color: 'var(--color-text)' }}>8 minutes</span>
                         </div>
@@ -46,19 +71,19 @@ export default function ArticlePage() {
                 </div>
             </header>
 
-            <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-blue-600 hover:prose-a:text-blue-500">
+            <div className="prose prose-lg max-w-none prose-headings:font-bold prose-a:text-blue-600 hover:prose-a:text-blue-500">
                 {/* Hero Image */}
                 <figure className="my-10">
-                    <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-800">
+                    <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
                         <Image
-                            src="/images/fincen-hero.png"
+                            src="/images/march_1_rule_hero_1772351631601.png"
                             alt="FinCEN Real Estate Compliance 2026 representing reporting regulations"
                             fill
                             className="object-cover"
                             priority
                         />
                     </div>
-                    <figcaption className="text-center text-sm mt-3 text-gray-500 dark:text-gray-400">
+                    <figcaption className="text-center text-sm mt-3 text-gray-500">
                         The March 2026 Residential Real Estate Rule introduces a digital padlock of transparency for property transfers.
                     </figcaption>
                 </figure>
@@ -71,12 +96,12 @@ export default function ArticlePage() {
                     That all changes drastically on <strong>March 1, 2026</strong>. Following years of pilot programs via Geographic Targeting Orders (GTOs), the Treasury Department&apos;s Financial Crimes Enforcement Network (FinCEN) finalized a sweeping, nationwide reporting requirement. The new regulation aims to curb illicit finance, money laundering, and the parking of illicit funds in the U.S. housing market.
                 </p>
 
-                <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-600 p-6 my-8 rounded-r-xl">
+                <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8 rounded-r-xl">
                     <div className="flex items-start gap-4">
                         <Info className="w-6 h-6 text-blue-600 mt-1 shrink-0" />
                         <div>
-                            <h3 className="text-xl font-bold text-blue-900 dark:text-blue-300 m-0 mb-2">The TL;DR on the FinCEN Real Estate Rule</h3>
-                            <ul className="m-0 pl-5 text-blue-800 dark:text-blue-200 space-y-2">
+                            <h3 className="text-xl font-bold text-blue-900 m-0 mb-2">The TL;DR on the FinCEN Real Estate Rule</h3>
+                            <ul className="m-0 pl-5 text-blue-800 space-y-2">
                                 <li><strong>Effective Date:</strong> Applies to closings on or after March 1, 2026.</li>
                                 <li><strong>Trigger:</strong> Non-financed (all-cash) transfers of residential real estate to legal entities or trusts.</li>
                                 <li><strong>Requirement:</strong> A &quot;Real Estate Report&quot; must be filed with FinCEN identifying the beneficial owners of the purchasing entity.</li>
@@ -107,7 +132,7 @@ export default function ArticlePage() {
 
                 {/* Secondary Image */}
                 <figure className="my-12">
-                    <div className="relative w-full h-[350px] md:h-[450px] rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 flex items-center justify-center border border-gray-200 dark:border-gray-700">
+                    <div className="relative w-full h-[350px] md:h-[450px] rounded-xl overflow-hidden bg-gray-100 flex items-center justify-center border border-gray-200">
                         <Image
                             src="/images/all-cash.png"
                             alt="All-cash real estate transactions shifting to strict compliance and reporting requirements"
@@ -141,12 +166,12 @@ export default function ArticlePage() {
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
-                    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 rounded-xl shadow-sm">
+                    <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm">
                         <h4 className="font-bold text-lg mb-3 flex items-center gap-2" style={{ color: 'var(--color-navy)' }}>
                             <Home className="w-5 h-5 text-green-600" />
                             Property & Transaction Details
                         </h4>
-                        <ul className="text-sm space-y-2 text-gray-600 dark:text-gray-400">
+                        <ul className="text-sm space-y-2 text-gray-600">
                             <li>• The physical address of the property</li>
                             <li>• The date of the closing or transfer</li>
                             <li>• Total consideration (the exact purchase price)</li>
@@ -154,12 +179,12 @@ export default function ArticlePage() {
                         </ul>
                     </div>
 
-                    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 rounded-xl shadow-sm">
+                    <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm">
                         <h4 className="font-bold text-lg mb-3 flex items-center gap-2" style={{ color: 'var(--color-navy)' }}>
                             <Shield className="w-5 h-5 text-red-500" />
                             Beneficial Owner Details
                         </h4>
-                        <ul className="text-sm space-y-2 text-gray-600 dark:text-gray-400">
+                        <ul className="text-sm space-y-2 text-gray-600">
                             <li>• Full legal name and date of birth</li>
                             <li>• Current residential street address</li>
                             <li>• A unique identifying number (e.g., Driver&apos;s License or Passport number)</li>
@@ -173,12 +198,12 @@ export default function ArticlePage() {
                 </p>
 
                 <h2>Penalties for Non-Compliance in 2026</h2>
-                <div className="bg-red-50 dark:bg-red-950/20 border-l-4 border-red-500 p-6 my-8">
+                <div className="bg-red-50 border-l-4 border-red-500 p-6 my-8">
                     <div className="flex items-start gap-4">
                         <AlertTriangle className="w-6 h-6 text-red-600 mt-1 shrink-0" />
                         <div>
-                            <p className="font-bold text-red-900 dark:text-red-300 m-0 mb-2">Heavy Fines Await</p>
-                            <p className="text-red-800 dark:text-red-200 m-0">
+                            <p className="font-bold text-red-900 m-0 mb-2">Heavy Fines Await</p>
+                            <p className="text-red-800 m-0">
                                 Violations of the Bank Secrecy Act (BSA) reporting requirements are notoriously severe. Failing to file a Real Estate Report, or willfully submitting false information, can result in civil penalties of <strong>up to $1,000 per day</strong> for each day the violation continues, and criminal penalties exceeding <strong>$10,000 and up to multiple years in federal prison</strong>.
                             </p>
                         </div>
@@ -196,32 +221,32 @@ export default function ArticlePage() {
                 </p>
 
                 <ul className="list-none pl-0 space-y-4 my-8 not-prose">
-                    <li className="flex gap-4 items-start p-4 bg-gray-50 dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-gray-800">
+                    <li className="flex gap-4 items-start p-4 bg-gray-50 rounded-lg border border-gray-100">
                         <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
                         <div>
-                            <strong className="block text-gray-900 dark:text-gray-100 mb-1">Determine Beneficial Ownership Early</strong>
-                            <span className="text-gray-600 dark:text-gray-400 text-sm">Don&apos;t wait until the closing table. Map out your LLC or Trust&apos;s ownership structure exactly. Know who hits the 25% threshold or has &quot;substantial control.&quot;</span>
+                            <strong className="block text-gray-900 mb-1">Determine Beneficial Ownership Early</strong>
+                            <span className="text-gray-600 text-sm">Don&apos;t wait until the closing table. Map out your LLC or Trust&apos;s ownership structure exactly. Know who hits the 25% threshold or has &quot;substantial control.&quot;</span>
                         </div>
                     </li>
-                    <li className="flex gap-4 items-start p-4 bg-gray-50 dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-gray-800">
+                    <li className="flex gap-4 items-start p-4 bg-gray-50 rounded-lg border border-gray-100">
                         <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
                         <div>
-                            <strong className="block text-gray-900 dark:text-gray-100 mb-1">Gather IDs in Advance</strong>
-                            <span className="text-gray-600 dark:text-gray-400 text-sm">Ensure all beneficial owners have unexpired, government-issued photo IDs ready to securely transmit to your closing attorney.</span>
+                            <strong className="block text-gray-900 mb-1">Gather IDs in Advance</strong>
+                            <span className="text-gray-600 text-sm">Ensure all beneficial owners have unexpired, government-issued photo IDs ready to securely transmit to your closing attorney.</span>
                         </div>
                     </li>
-                    <li className="flex gap-4 items-start p-4 bg-gray-50 dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-gray-800">
+                    <li className="flex gap-4 items-start p-4 bg-gray-50 rounded-lg border border-gray-100">
                         <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
                         <div>
-                            <strong className="block text-gray-900 dark:text-gray-100 mb-1">Expect Higher Title/Escrow Fees</strong>
-                            <span className="text-gray-600 dark:text-gray-400 text-sm">Because closing agents assume immense legal risk and compliance burden, expect specific &quot;FinCEN Compliance Fees&quot; to appear on your closing disclosure.</span>
+                            <strong className="block text-gray-900 mb-1">Expect Higher Title/Escrow Fees</strong>
+                            <span className="text-gray-600 text-sm">Because closing agents assume immense legal risk and compliance burden, expect specific &quot;FinCEN Compliance Fees&quot; to appear on your closing disclosure.</span>
                         </div>
                     </li>
-                    <li className="flex gap-4 items-start p-4 bg-gray-50 dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-gray-800">
+                    <li className="flex gap-4 items-start p-4 bg-gray-50 rounded-lg border border-gray-100">
                         <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
                         <div>
-                            <strong className="block text-gray-900 dark:text-gray-100 mb-1">Review Financing Options</strong>
-                            <span className="text-gray-600 dark:text-gray-400 text-sm">If you traditionally buy with cash but value your privacy, obtaining a small mortgage from a regulated financial institution technically exempts the transaction from this specific non-financed reporting rule (though the bank will still perform KYC on you).</span>
+                            <strong className="block text-gray-900 mb-1">Review Financing Options</strong>
+                            <span className="text-gray-600 text-sm">If you traditionally buy with cash but value your privacy, obtaining a small mortgage from a regulated financial institution technically exempts the transaction from this specific non-financed reporting rule (though the bank will still perform KYC on you).</span>
                         </div>
                     </li>
                 </ul>
@@ -234,11 +259,11 @@ export default function ArticlePage() {
                     For legitimate real estate investors, this is merely an added layer of paperwork and a mild privacy intrusion. But failing to take it seriously, or working with a settlement agent who drops the ball, could result in catastrophic financial penalties. As we move into 2026, transparency is no longer optional—it is the law of the land.
                 </p>
 
-                <hr className="my-10 border-gray-200 dark:border-gray-800" />
+                <hr className="my-10 border-gray-200" />
 
-                <div className="bg-gray-100 dark:bg-gray-900 p-8 rounded-2xl text-center not-prose">
+                <div className="bg-gray-100 p-8 rounded-2xl text-center not-prose">
                     <h3 className="text-2xl font-black mb-3" style={{ color: 'var(--color-navy)' }}>Need Help Navigating 2026 Regulations?</h3>
-                    <p className="mb-6 text-gray-600 dark:text-gray-400">
+                    <p className="mb-6 text-gray-600">
                         Ensure your LLC and real estate purchases remain 100% compliant with FinCEN&apos;s aggressive new reporting requirements. Let our professionals handle the red tape.
                     </p>
                     <button className="btn-primary py-3 px-8 text-sm w-full sm:w-auto shadow-xl">
@@ -252,5 +277,6 @@ export default function ArticlePage() {
 
             <RelatedArticles currentSlug="march-1-2026-fincen-rule-all-cash-home-buyers" />
         </article>
+        </>
     );
 }

@@ -1,11 +1,14 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { Linkedin } from 'lucide-react';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = { title: 'About USFinNexus | Free Mortgage Calculators', description: 'About USFinNexus.com — our mission to provide free, spam-free mortgage and finance calculators for Americans.' };
 
 export default function AboutPage() {
     return (
         <div className="max-w-3xl mx-auto px-4 py-12">
+            <Breadcrumbs items={[{ name: 'About', item: '/about' }]} />
             <h1 className="text-3xl font-black mb-6" style={{ color: 'var(--color-text)' }}>About USFinNexus</h1>
 
             <div className="card p-6 mb-6" style={{ borderLeft: '4px solid #00C853' }}>
@@ -45,9 +48,13 @@ export default function AboutPage() {
                 </section>
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-3">
-                <Link href="/calculators/mortgage" className="btn-green">Start Mortgage Calculator</Link>
-                <Link href="/disclaimer" className="btn-outline">View Full Disclaimer</Link>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+                <Link href="/calculators/mortgage" className="btn-green text-sm">Start Mortgage Calculator</Link>
+                <Link href="/disclaimer" className="btn-outline text-sm">View Full Disclaimer</Link>
+                <a href="https://linkedin.com/in/rajveer7790" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-[#0da6f2] transition-colors text-sm font-semibold ml-auto">
+                    <Linkedin size={18} />
+                    Follow on LinkedIn
+                </a>
             </div>
         </div>
     );

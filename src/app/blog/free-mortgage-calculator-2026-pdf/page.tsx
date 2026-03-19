@@ -1,18 +1,49 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle2, Download, Calculator } from 'lucide-react';
+import { CheckCircle2, Download, Calculator } from 'lucide-react';
+import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
+import RelatedCalculators from '@/components/RelatedCalculators';
+import RelatedArticles from '@/components/RelatedArticles';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
     title: 'Best Free Mortgage Calculator 2026 with PDF Download | USFinNexus',
     description: 'Compare the best free mortgage calculators in 2026. Get instant PDF and CSV amortization schedules with no signup required.',
+    openGraph: {
+        title: 'Best Free Mortgage Calculator 2026 with PDF Download',
+        description: 'Compare the best free mortgage calculators in 2026. Get instant PDF and CSV amortization schedules with no signup required.',
+        url: 'https://usfinnexus.com/blog/free-mortgage-calculator-2026-pdf',
+        type: 'article',
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Free mortgage calculator with PDF download for 2026 home buyers' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Best Free Mortgage Calculator 2026 with PDF Download',
+        description: 'Compare the best free mortgage calculators in 2026. Get instant PDF and CSV amortization schedules with no signup required.',
+        images: ['https://usfinnexus.com/images/home-hero-v2.png'],
+    },
+    alternates: {
+        canonical: 'https://usfinnexus.com/blog/free-mortgage-calculator-2026-pdf',
+    },
 };
 
 export default function BlogPost() {
     return (
-        <article className="max-w-3xl mx-auto px-4 py-12 md:py-20">
-            <Link href="/blog" className="inline-flex items-center text-sm mb-8 hover:opacity-80 transition-opacity" style={{ color: 'var(--color-text-muted)' }}>
-                <ArrowLeft className="w-4 h-4 mr-2" /> Back to Blog
-            </Link>
+        <>
+        <ArticleSchema
+            title="Best Free Mortgage Calculator 2026 with PDF Download | USFinNexus"
+            description="Compare the best free mortgage calculators in 2026. Get instant PDF and CSV amortization schedules with no signup required."
+            url="https://usfinnexus.com/blog/free-mortgage-calculator-2026-pdf"
+            datePublished="2026-02-25"
+            dateModified="2026-03-12"
+            authorName="USFinNexus Editorial Team"
+        />
+        <div className="max-w-4xl mx-auto px-4 py-12">
+            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Free Mortgage Calculator 2026', item: '/blog/free-mortgage-calculator-2026-pdf' }]} />
+            <article className="prose prose-slate max-w-none">
+
 
             <header className="mb-10">
                 <span className="inline-block px-3 py-1 rounded text-xs font-bold mb-4" style={{ background: 'rgba(0,200,83,0.12)', color: '#00C853' }}>
@@ -21,12 +52,14 @@ export default function BlogPost() {
                 <h1 className="text-3xl md:text-5xl font-black mb-6 leading-tight" style={{ color: 'var(--color-text)' }}>
                     Best Free Mortgage Calculator 2026 with PDF Download
                 </h1>
-                <div className="flex items-center gap-4 text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>
-                    <span>By USFinNexus Editorial Team</span>
+                <div className="flex flex-wrap items-center gap-3 text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>
+                    <span>By {USFinNexusEditorialTeam.name}</span>
                     <span>·</span>
                     <span>February 25, 2026</span>
                     <span>·</span>
                     <span>5 min read</span>
+                    <span>·</span>
+                    <span className="text-[#0da6f2] font-bold">Updated March 12, 2026</span>
                 </div>
             </header>
 
@@ -47,7 +80,7 @@ export default function BlogPost() {
                 </ul>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What to Look for in a 2026 Mortgage Calculator</h2>
-                <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-6 mb-8">
+                <div className="bg-gray-50 rounded-xl p-6 mb-8">
                     <ul className="space-y-3">
                         <li className="flex items-start gap-3">
                             <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#00C853' }} />
@@ -97,7 +130,7 @@ export default function BlogPost() {
                     Don&apos;t settle for calculators that only show you a single monthly number. In 2026, with rates fluctuating and home prices at historic levels, you need the full picture. A downloadable PDF amortization schedule is the gold standard for informed home buying.
                 </p>
 
-                <hr className="my-10 border-gray-200 dark:border-gray-800" />
+                <hr className="my-10 border-gray-200" />
 
                 <div className="card p-8 text-center">
                     <Calculator className="w-10 h-10 mx-auto mb-4" style={{ color: 'var(--color-navy)' }} />
@@ -109,7 +142,16 @@ export default function BlogPost() {
                         Open Mortgage Calculator
                     </Link>
                 </div>
+                <AuthorBio author={USFinNexusEditorialTeam} updatedDate="March 12, 2026" />
             </div>
-        </article>
+            </article>
+        </div>
+        <RelatedCalculators
+            exclude={['/calculators/mortgage']}
+            limit={4}
+            title="Try These Free Calculators"
+        />
+        <RelatedArticles currentSlug="free-mortgage-calculator-2026-pdf" category="Mortgage" />
+        </>
     );
 }

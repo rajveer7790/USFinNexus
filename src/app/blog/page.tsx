@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'Mortgage & Finance Resources Blog | USFinNexus',
@@ -20,6 +21,7 @@ const CATEGORIES = ['All', 'Mortgage', 'Affordability', 'Refinance', 'Education'
 export default function BlogPage() {
     return (
         <div className="max-w-5xl mx-auto px-4 py-12">
+            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }]} />
             <div className="mb-10">
                 <h1 className="text-3xl font-black mb-3" style={{ color: 'var(--color-text)' }}>Mortgage & Finance Resources</h1>
                 <p style={{ color: 'var(--color-text-muted)' }}>
@@ -29,7 +31,7 @@ export default function BlogPage() {
 
             <div className="flex flex-wrap gap-2 mb-8">
                 {CATEGORIES.map(c => (
-                    <button key={c} className={`px-4 py-1.5 rounded-lg text-xs font-semibold border transition-all ${c === 'All' ? 'text-white border-transparent' : 'border-current'}`}
+                    <button key={c} className={`px-4 py-2 min-h-[36px] rounded-lg text-xs font-semibold border transition-all ${c === 'All' ? 'text-white border-transparent' : 'border-current'}`}
                         style={{ background: c === 'All' ? 'var(--color-navy)' : 'transparent', color: c === 'All' ? 'white' : 'var(--color-text-muted)' }}>
                         {c}
                     </button>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useDeferredValue } from 'react';
 import { calcMortgageSummary, formatCurrency } from '@/lib/formulas';
 import DisclaimerBanner from '@/components/DisclaimerBanner';
 
@@ -27,16 +27,19 @@ export default function ComparisonClient() {
         setScenarios(prev => prev.map((s, idx) => idx === i ? { ...s, [field]: val } : s));
     };
 
-    const results = useMemo(() => scenarios.map(s => {
+    // Defer triple mortgage calculation so inputs stay snappy
+    const dScenarios = useDeferredValue(scenarios);
+
+    const results = useMemo(() => dScenarios.map(s => {
         try {
             return calcMortgageSummary({
                 homePrice: s.homePrice, downPayment: s.downPayment, annualInterestRate: s.rate,
                 loanTermYears: s.termYears, annualPropertyTax: s.propTax, annualInsurance: s.insurance,
-                monthlyHOA: 0, pmiRate: s.homePrice > 0 && (s.homePrice - s.downPayment) / s.homePrice > 0.80 ? 0.0085 : 0,
+                monthlyHOA: 0, pmiRate: (s.homePrice > 0 && (s.homePrice - s.downPayment) / s.homePrice > 0.80) ? 0.0085 : 0,
                 startDate: new Date(),
             });
         } catch { return null; }
-    }), [scenarios]);
+    }), [dScenarios]);
 
     const COLORS = ['#0A2540', '#00C853', '#1a4d9a'];
     const compareRows = [
@@ -58,15 +61,28 @@ export default function ComparisonClient() {
     }, -1);
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
-            <div className="mb-8">
-                <h1 className="text-3xl font-black text-navy-900 dark:text-white mb-2">Side-by-Side Loan Comparison</h1>
-                <p className="text-gray-500 dark:text-gray-400 max-w-2xl">Compare up to 3 mortgage scenarios simultaneously. Edit any field to see results update instantly.</p>
+        <div className="relative min-h-screen bg-white text-navy-900 pb-20">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#0da6f2]/6 rounded-full blur-[130px]" />
+                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-500/6 rounded-full blur-[120px]" />
+            </div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 relative z-10">
+            <div className="mb-6 sm:mb-12">
+                <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 rounded-xl bg-[#0da6f2]/10 border border-[#0da6f2]/20">
+                        <span className="text-[#0da6f2] font-black text-lg">A|B</span>
+                    </div>
+                    <span className="text-xs font-black uppercase tracking-[0.3em] text-[#0da6f2]">Scenario Analysis</span>
+                </div>
+                <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight bg-gradient-to-r from-navy-900 via-[#0da6f2] to-navy-900 bg-clip-text text-transparent">
+                    Side-by-Side Comparison
+                </h1>
+                <p className="text-gray-500 max-w-2xl font-medium text-lg">Compare up to 3 mortgage scenarios simultaneously. Edit any field to see results update instantly.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
                 {scenarios.map((s, i) => (
-                    <div key={i} className="card p-5" style={{ borderTop: `3px solid ${COLORS[i]}` }}>
+                    <div key={i} className="glass-card p-6" style={{ borderTop: `3px solid ${COLORS[i]}`, borderTopLeftRadius: '0.75rem', borderTopRightRadius: '0.75rem' }}>
                         <input type="text" className="input-field text-center font-bold mb-4" value={s.label} onChange={e => update(i, 'label', e.target.value)} />
                         {[
                             { label: 'Home Price', field: 'homePrice' as keyof Scenario, prefix: '$', step: 5000 },
@@ -79,9 +95,9 @@ export default function ComparisonClient() {
                             <div className="mb-3" key={f.field}>
                                 <label className="input-label">{f.label}</label>
                                 <div className="relative">
-                                    {f.prefix && <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>{f.prefix}</span>}
+                                    {f.prefix && <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">{f.prefix}</span>}
                                     <input type="number" className={`input-field ${f.prefix ? 'pl-7' : ''} ${f.suffix ? 'pr-8' : ''}`} value={Number(s[f.field])} onChange={e => update(i, f.field, +e.target.value)} step={f.step} min={0} />
-                                    {f.suffix && <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>{f.suffix}</span>}
+                                    {f.suffix && <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">{f.suffix}</span>}
                                 </div>
                             </div>
                         ))}
@@ -96,7 +112,7 @@ export default function ComparisonClient() {
                 ))}
             </div>
 
-            <div className="card overflow-hidden">
+            <div className="glass-card overflow-hidden">
                 <div className="overflow-x-auto">
                     <table className="data-table">
                         <thead>
@@ -117,8 +133,7 @@ export default function ComparisonClient() {
                 </div>
             </div>
 
-            <div className="mt-6">
-                <DisclaimerBanner calculatorName="the Loan Comparison Calculator" />
+            <DisclaimerBanner calculatorName="the Loan Comparison Calculator" />
             </div>
         </div>
     );

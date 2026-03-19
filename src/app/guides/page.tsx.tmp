@@ -1,0 +1,6 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { BookOpen, Globe, Home, Star, Shield, TrendingUp, DollarSign } from 'lucide-react';
+import Breadcrumbs from '@/components/Header'; // Wait, I should use the real Breadcrumbs component
+
+// I'll check the import path for Breadcrumbs again

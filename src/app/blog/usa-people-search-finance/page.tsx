@@ -1,18 +1,48 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle2, ShieldAlert, Search } from 'lucide-react';
+import { CheckCircle2, ShieldAlert, Search } from 'lucide-react';
+import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
+import RelatedCalculators from '@/components/RelatedCalculators';
+import RelatedArticles from '@/components/RelatedArticles';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
     title: 'USA People Search for Personal Finance: Find Lost Money Daily',
     description: 'Learn how running a USA people search can uncover unclaimed money, lost inheritances, and protect your personal finance on a daily basis.',
+    openGraph: {
+        title: 'USA People Search for Personal Finance: Find Lost Money Daily',
+        description: 'Learn how running a USA people search can uncover unclaimed money, lost inheritances, and protect your personal finance on a daily basis.',
+        url: 'https://usfinnexus.com/blog/usa-people-search-finance',
+        type: 'article',
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'USA people search tools for uncovering unclaimed money and protecting personal finances' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'USA People Search for Personal Finance: Find Lost Money Daily',
+        description: 'Learn how running a USA people search can uncover unclaimed money, lost inheritances, and protect your personal finance on a daily basis.',
+        images: ['https://usfinnexus.com/images/home-hero-v2.png'],
+    },
+    alternates: {
+        canonical: 'https://usfinnexus.com/blog/usa-people-search-finance',
+    },
 };
 
 export default function UsaPeopleSearchFinanceBlog() {
     return (
-        <article className="max-w-3xl mx-auto px-4 py-12 md:py-20">
-            <Link href="/blog" className="inline-flex items-center text-sm mb-8 hover:opacity-80 transition-opacity" style={{ color: 'var(--color-text-muted)' }}>
-                <ArrowLeft className="w-4 h-4 mr-2" /> Back to Blog
-            </Link>
+        <>
+        <ArticleSchema
+            title="USA People Search for Personal Finance: Find Lost Money Daily"
+            description="Learn how running a USA people search can uncover unclaimed money, lost inheritances, and protect your personal finance on a daily basis."
+            url="https://usfinnexus.com/blog/usa-people-search-finance"
+            datePublished="2026-02-24"
+            dateModified="2026-03-12"
+            authorName="USFinNexus Editorial Team"
+        />
+        <div className="max-w-4xl mx-auto px-4 py-12">
+            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'USA People Search Finance', item: '/blog/usa-people-search-finance' }]} />
+            <article className="prose prose-slate max-w-none">
 
             <header className="mb-10">
                 <span className="inline-block px-3 py-1 rounded text-xs font-bold mb-4" style={{ background: 'rgba(0,200,83,0.12)', color: '#00C853' }}>
@@ -22,12 +52,14 @@ export default function UsaPeopleSearchFinanceBlog() {
                     USA People Search: The Surprising Tool for Your Daily Personal Finance Habit
                 </h1>
 
-                <div className="flex items-center gap-4 text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>
-                    <span>By USFinNexus Editorial Team</span>
+                <div className="flex flex-wrap items-center gap-3 text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>
+                    <span>By {USFinNexusEditorialTeam.name}</span>
                     <span>·</span>
                     <span>February 24, 2026</span>
                     <span>·</span>
                     <span>6 min read</span>
+                    <span>·</span>
+                    <span className="text-[#0da6f2] font-bold">Updated March 12, 2026</span>
                 </div>
             </header>
 
@@ -66,7 +98,7 @@ export default function UsaPeopleSearchFinanceBlog() {
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">3. Defensive Finance: Spotting Identity Theft Early</h2>
-                <div className="card p-6 mb-8 bg-red-50 dark:bg-red-950/20 border-l-4 border-red-500">
+                <div className="card p-6 mb-8 bg-red-50 border-l-4 border-red-500">
                     <div className="flex gap-4">
                         <ShieldAlert className="w-6 h-6 shrink-0 text-red-500" />
                         <div>
@@ -90,7 +122,7 @@ export default function UsaPeopleSearchFinanceBlog() {
                     While calling it a &quot;daily basis&quot; habit might apply if you are an active skip-tracer or real estate investor looking for off-market properties via public records, for the average consumer, checking these databases <strong>quarterly (every 3 months)</strong> is the sweet spot.
                 </p>
 
-                <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-6 mb-12">
+                <div className="bg-gray-50 rounded-xl p-6 mb-12">
                     <h3 className="font-bold text-lg mb-4">The 15-Minute Financial Audit Routine:</h3>
                     <ul className="space-y-3">
                         <li className="flex items-start gap-3">
@@ -108,7 +140,7 @@ export default function UsaPeopleSearchFinanceBlog() {
                     </ul>
                 </div>
 
-                <hr className="my-10 border-gray-200 dark:border-gray-800" />
+                <hr className="my-10 border-gray-200" />
 
                 <div className="card p-8 text-center">
                     <h3 className="text-xl font-bold mb-3">Taking Control of Your Data and Finances</h3>
@@ -124,7 +156,12 @@ export default function UsaPeopleSearchFinanceBlog() {
                         </Link>
                     </div>
                 </div>
+                <AuthorBio author={USFinNexusEditorialTeam} updatedDate="March 12, 2026" />
             </div>
-        </article>
+            </article>
+        </div>
+        <RelatedCalculators exclude={[]} limit={4} title="Related Finance Calculators" />
+        <RelatedArticles currentSlug="usa-people-search-finance" category="Personal Finance" />
+        </>
     );
 }

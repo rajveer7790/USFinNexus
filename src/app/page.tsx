@@ -1,10 +1,15 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import AdUnit from '@/components/AdUnit';
+import { AD_SLOTS } from '@/lib/adConfig';
 import {
     Home, DollarSign, TrendingUp, Car, Calculator,
-    Scale, ArrowLeftRight, BarChart2, FileDown, Table2, Link2,
-    Shield, Zap, Star, Landmark, FileText, Target, PiggyBank,
-    Activity, Percent,
+    Scale, ArrowLeftRight, BarChart2, Table2,
+    Landmark, FileText, Target, PiggyBank,
+    Activity, Percent, LineChart, Map, ChevronRight,
+    BookOpen, Star, CheckCircle, Users, Lock,
+    Shield, Zap, TrendingDown, ArrowRight, Sparkles,
+    Eye, Download, Clock,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -13,310 +18,294 @@ export const metadata: Metadata = {
         'Free mortgage, affordability, refinance, auto & personal loan calculators. Instant PDF + CSV downloads — no signup, no email, no lead-gen spam. Built for Americans.',
 };
 
+/* ═══ DATA ═══ */
+const RATES = [
+    { l: '30-Yr Fixed', v: '6.84%' }, { l: '15-Yr Fixed', v: '6.12%' },
+    { l: 'FHA', v: '6.53%' }, { l: 'VA', v: '6.28%' },
+    { l: 'CONFORMING', v: '$832,750' }, { l: 'FHA FLOOR', v: '$541,287' },
+    { l: 'MAX DTI', v: '43%' }, { l: 'PMI @', v: '78% LTV' },
+];
+
+const STEPS = [
+    { n: '01', h: 'Pick a Calculator', p: 'Choose from 28+ CFPB-verified tools.' },
+    { n: '02', h: 'Enter Numbers', p: 'Simple inputs — no signup or email.' },
+    { n: '03', h: 'Get Results', p: 'Instant breakdown with charts & tables.' },
+    { n: '04', h: 'Download PDF', p: 'One-click PDF report. Zero server contact.' },
+];
+
 const TOOLS = [
-    {
-        href: '/calculators/mortgage',
-        icon: Home,
-        title: 'Mortgage Calculator',
-        desc: 'Full PITI breakdown, amortization schedule, extra payments, and free PDF + CSV export.',
-        badge: 'Most Popular',
-        color: '#0A2540',
-    },
-    {
-        href: '/calculators/affordability',
-        icon: DollarSign,
-        title: 'Affordability Calculator',
-        desc: 'Based on CFPB 28%/43% DTI guidelines. Find out how much house you can actually afford.',
-        badge: '',
-        color: '#00C853',
-    },
-    {
-        href: '/calculators/refinance',
-        icon: TrendingUp,
-        title: 'Refinance Calculator',
-        desc: 'Calculate monthly savings and break-even timeline before refinancing your mortgage.',
-        badge: '',
-        color: '#1a4d9a',
-    },
-    {
-        href: '/calculators/auto-loan',
-        icon: Car,
-        title: 'Auto Loan Calculator',
-        desc: 'Vehicle financing with taxes, trade-in, full amortization, and CSV download.',
-        badge: '',
-        color: '#7c3aed',
-    },
-    {
-        href: '/calculators/personal-loan',
-        icon: Calculator,
-        title: 'Personal Loan Calculator',
-        desc: 'Calculate any debt payment with full payoff schedule and exportable data.',
-        badge: '',
-        color: '#dc2626',
-    },
-    {
-        href: '/calculators/comparison',
-        icon: Scale,
-        title: 'Loan Comparison',
-        desc: 'Compare up to 3 mortgage scenarios side by side. Find the best deal instantly.',
-        badge: 'Unique',
-        color: '#d97706',
-    },
-    {
-        href: '/calculators/rent-vs-buy',
-        icon: ArrowLeftRight,
-        title: 'Rent vs. Buy',
-        desc: 'Comprehensive net-cost analysis to help you decide whether to rent or buy.',
-        badge: '',
-        color: '#0891b2',
-    },
-    {
-        href: '/calculators/points-buydown',
-        icon: BarChart2,
-        title: 'Points Buy-Down',
-        desc: 'Find break-even on paying discount points to lower your interest rate.',
-        badge: '',
-        color: '#059669',
-    },
-    {
-        href: '/calculators/heloc',
-        icon: Home,
-        title: 'HELOC Calculator',
-        desc: 'Calculate home equity line of credit payments with draw and repayment period breakdown.',
-        badge: 'New',
-        color: '#0891b2',
-    },
-    {
-        href: '/calculators/fha-va-usda',
-        icon: Landmark,
-        title: 'FHA / VA / USDA',
-        desc: 'Compare government-backed loans with MIP, VA funding fees, and USDA guarantee fees.',
-        badge: 'New',
-        color: '#059669',
-    },
-    {
-        href: '/calculators/closing-costs',
-        icon: FileText,
-        title: 'Closing Costs',
-        desc: 'Full buyer & seller closing cost breakdown with state-specific transfer taxes.',
-        badge: 'New',
-        color: '#d97706',
-    },
-    {
-        href: '/calculators/debt-payoff',
-        icon: Target,
-        title: 'Debt Payoff',
-        desc: 'Compare snowball vs avalanche payoff strategies and find your fastest path to debt-free.',
-        badge: 'New',
-        color: '#dc2626',
-    },
-    {
-        href: '/calculators/budget',
-        icon: PiggyBank,
-        title: 'Budget 50/30/20',
-        desc: 'Plan your monthly budget with the popular 50/30/20 rule. Track needs, wants, and savings.',
-        badge: 'New',
-        color: '#7c3aed',
-    },
-    {
-        href: '/calculators/arm',
-        icon: Activity,
-        title: 'ARM Calculator',
-        desc: 'Adjustable rate mortgage worst-case scenarios with rate cap analysis.',
-        badge: '',
-        color: '#0e7490',
-    },
-    {
-        href: '/calculators/interest-only',
-        icon: Percent,
-        title: 'Interest-Only',
-        desc: 'Compare interest-only period payments vs full amortization jump.',
-        badge: '',
-        color: '#9333ea',
-    },
+    // Mortgage & Housing
+    { href: '/calculators/mortgage', icon: Home, title: 'Mortgage Calculator', desc: 'Full PITI + amortization. Instant PDF export.', badge: 'hot', cat: 'mortgage' },
+    { href: '/calculators/affordability', icon: DollarSign, title: 'Home Affordability', desc: 'CFPB 28/43 DTI guidelines.', badge: 'hot', cat: 'mortgage' },
+    { href: '/calculators/refinance', icon: TrendingUp, title: 'Refinance Calculator', desc: 'Monthly savings & break-even point.', badge: 'hot', cat: 'mortgage' },
+    { href: '/calculators/rent-vs-buy', icon: ArrowLeftRight, title: 'Rent vs. Buy', desc: '5-year total cost comparison.', cat: 'mortgage' },
+    { href: '/calculators/fha-va-usda', icon: Landmark, title: 'FHA / VA / USDA', desc: 'Government loan comparison.', cat: 'mortgage' },
+    { href: '/calculators/heloc', icon: Home, title: 'HELOC', desc: 'Equity line estimator.', cat: 'mortgage' },
+    { href: '/calculators/fha', icon: Home, title: 'FHA Calculator', desc: 'FHA-specific with MIP.', cat: 'mortgage' },
+    { href: '/calculators/va', icon: Star, title: 'VA Calculator', desc: 'Zero-down VA loan math.', cat: 'mortgage' },
+    { href: '/calculators/arm', icon: Activity, title: 'ARM Calculator', desc: 'Adjustable rate scenarios.', cat: 'mortgage' },
+    { href: '/calculators/interest-only', icon: Percent, title: 'Interest-Only', desc: 'IO period vs full amortization.', cat: 'mortgage' },
+    { href: '/calculators/amortization', icon: Table2, title: 'Amortization', desc: 'Full schedule with extra payments.', cat: 'mortgage' },
+    { href: '/calculators/down-payment', icon: PiggyBank, title: 'Down Payment', desc: 'Savings timeline planner.', cat: 'mortgage' },
+    { href: '/calculators/points-buydown', icon: BarChart2, title: 'Points Buy-Down', desc: 'Rate buy-down break-even.', cat: 'mortgage' },
+    { href: '/calculators/dti', icon: Scale, title: 'DTI Calculator', desc: 'Front & back-end ratios.', cat: 'mortgage' },
+    // Loans & Debt
+    { href: '/calculators/auto-loan', icon: Car, title: 'Auto Loan', desc: 'Monthly payment + total interest.', cat: 'loans' },
+    { href: '/calculators/student-loan', icon: BookOpen, title: 'Student Loan', desc: 'Repayment plan comparison.', badge: 'new', cat: 'loans' },
+    { href: '/calculators/credit-card', icon: Target, title: 'Credit Card Payoff', desc: 'Payoff date + interest saved.', badge: 'new', cat: 'loans' },
+    { href: '/calculators/personal-loan', icon: Calculator, title: 'Personal Loan', desc: 'APR comparison tool.', cat: 'loans' },
+    { href: '/calculators/debt-payoff', icon: Target, title: 'Debt Payoff Planner', desc: 'Snowball vs Avalanche strategies.', badge: 'hot', cat: 'loans' },
+    { href: '/calculators/comparison', icon: Scale, title: 'Loan Comparison', desc: 'Side-by-side loan analysis.', cat: 'loans' },
+    // Wealth & Tax
+    { href: '/calculators/retirement', icon: TrendingUp, title: 'Retirement Planner', desc: 'Compound growth projections.', badge: 'new', cat: 'wealth' },
+    { href: '/calculators/investment', icon: LineChart, title: 'Compound Interest', desc: 'Investment growth calculator.', badge: 'new', cat: 'wealth' },
+    { href: '/calculators/income-tax', icon: FileText, title: 'Income Tax 2026', desc: '2026 brackets + TCJA sunset.', badge: 'new', cat: 'wealth' },
+    { href: '/calculators/budget', icon: PiggyBank, title: 'Budget 50/30/20', desc: 'Needs, wants, savings split.', cat: 'wealth' },
+    // Regional
+    { href: '/calculators/california', icon: Map, title: 'California Closing', desc: 'CA-specific costs.', cat: 'regional' },
+    { href: '/calculators/texas', icon: Map, title: 'Texas Closing', desc: 'TX-specific costs.', cat: 'regional' },
+    { href: '/calculators/florida', icon: Map, title: 'Florida Closing', desc: 'FL-specific costs.', cat: 'regional' },
+    { href: '/calculators/closing-costs', icon: FileText, title: 'General Closing', desc: 'National average estimate.', cat: 'regional' },
 ];
 
-const DIFFERENTIATORS = [
-    {
-        icon: FileDown,
-        title: 'Free PDF Reports',
-        desc: 'Professional multi-page reports with your results, tables, and legal disclaimers — downloaded in one click.',
-    },
-    {
-        icon: Table2,
-        title: 'Free CSV / Excel',
-        desc: 'Full amortization data ready to open in Excel or Google Sheets. No pay wall ever.',
-    },
-    {
-        icon: Link2,
-        title: 'Shareable Links',
-        desc: 'One click to copy a URL with all your inputs pre-filled. Share with your realtor or spouse.',
-    },
-    {
-        icon: Shield,
-        title: 'Privacy First',
-        desc: 'All calculations run locally in your browser. Your financial data is never sent to any server.',
-    },
-    {
-        icon: Zap,
-        title: 'Real-Time Results',
-        desc: 'Results update as you type — no "Calculate" button needed. Sliders and inputs stay in sync.',
-    },
-    {
-        icon: Star,
-        title: 'US Standard Math',
-        desc: 'Formulas follow CFPB guidelines, FHFA 2026 loan limits ($832,750), and standard US amortization.',
-    },
+const STATS = [
+    { val: '50,000+', label: 'Monthly Users', src: 'Analytics' },
+    { val: '28+', label: 'Free Calculators', src: 'Platform' },
+    { val: '$0', label: 'Cost to You', src: 'Always' },
+    { val: '0 bytes', label: 'Data Collected', src: 'Privacy' },
 ];
 
+const DIFFS = [
+    { icon: Shield, h: 'CFPB-Verified Math', p: 'Every formula follows Consumer Financial Protection Bureau guidelines.', c: 'di-cyan' },
+    { icon: Lock, h: 'Zero Data Collection', p: 'All calculations run client-side — nothing hits our servers.', c: 'di-mag' },
+    { icon: Download, h: 'Instant PDF Reports', p: 'One-click professional PDF. Generated in your browser.', c: 'di-vio' },
+    { icon: Eye, h: 'No Paywalls or Signup', p: 'Every tool is free forever. No email walls. No lead-gen.', c: 'di-lime' },
+    { icon: Zap, h: '2026 Limits Updated', p: '$832,750 conforming · $541,287 FHA floor · Updated monthly.', c: 'di-amb' },
+];
+
+/* ═══ PAGE ═══ */
 export default function HomePage() {
     return (
-        <div>
-            {/* ── Hero ──────────────────────────────────────────────────────────────── */}
-            <section className="gradient-hero text-white py-20 px-4">
-                <div className="max-w-5xl mx-auto text-center">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold mb-6" style={{ background: 'rgba(0,200,83,0.2)', color: '#00C853', border: '1px solid rgba(0,200,83,0.3)' }}>
-                        <Zap size={12} /> 100% Free • No Signup • No Lead-Gen Spam
+        <div className="neo-root">
+
+            {/* ═══ HERO ═══ */}
+            <section className="neo-hero">
+                <div className="neo-orb neo-orb-a" />
+                <div className="neo-orb neo-orb-b" />
+                <div className="neo-orb neo-orb-c" />
+
+                <div className="neo-hero-grid neo-container">
+                    {/* Left */}
+                    <div className="neo-hero-left">
+                        <div className="neo-status neo-reveal">
+                            <span className="neo-status-pulse" />
+                            CFPB Compliant · March 2026
+                        </div>
+                        <h1 className="neo-h1 neo-reveal neo-reveal--d1">
+                            <span className="neo-h1-w1">Smart Financial</span>
+                            <span className="neo-h1-w2">Tools. Built for</span>
+                            <span className="neo-h1-w3">Americans.</span>
+                        </h1>
+                        <p className="neo-hero-p neo-reveal neo-reveal--d2">
+                            28+ professional calculators with instant <strong>PDF reports</strong>.
+                            No signup, no email, no hidden fees — <strong>100% free, forever.</strong>
+                        </p>
+                        <div className="neo-hero-actions neo-reveal neo-reveal--d3">
+                            <Link href="/calculators/mortgage" className="neo-btn-main">
+                                <Home size={17} /> Mortgage Calculator <ArrowRight size={15} />
+                            </Link>
+                            <Link href="#tools" className="neo-btn-alt">
+                                Browse All Tools <ChevronRight size={15} />
+                            </Link>
+                        </div>
+                        <div className="neo-hero-trust neo-reveal neo-reveal--d4">
+                            {[
+                                { i: Users, t: '50K+ Users' },
+                                { i: Lock, t: 'Zero Data' },
+                                { i: Shield, t: 'CFPB Verified' },
+                            ].map(x => (
+                                <span key={x.t} className="neo-trust-pill"><x.i size={12} /> {x.t}</span>
+                            ))}
+                        </div>
                     </div>
 
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 text-white" style={{ lineHeight: 1.1 }}>
-                        Free Mortgage &amp; Finance
-                        <br />
-                        <span style={{ color: '#00C853' }}>Calculators for Americans</span>
-                    </h1>
-
-                    <p className="text-lg sm:text-xl text-white/70 max-w-2xl mx-auto mb-10">
-                        Professional-grade mortgage calculations with instant <strong className="text-white">PDF &amp; CSV downloads</strong> — no email, no signup, no lender spam. Built to US CFPB standards.
-                    </p>
-
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <Link
-                            href="/calculators/mortgage"
-                            className="px-8 py-4 rounded-xl text-lg font-black text-navy-900 transition-all hover:-translate-y-1 hover:shadow-xl"
-                            style={{ background: '#00C853', color: '#060f1e' }}
-                        >
-                            🏠 Start Mortgage Calculator
-                        </Link>
-                        <Link
-                            href="/calculators/affordability"
-                            className="px-8 py-4 rounded-xl text-lg font-semibold border border-white/30 text-white hover:bg-white/10 transition-all"
-                        >
-                            💰 How Much Can I Afford?
-                        </Link>
-                    </div>
-
-                    {/* Trust stats */}
-                    <div className="flex flex-wrap justify-center gap-8 mt-16 text-center">
-                        {[
-                            { value: '15', label: 'Free Calculators' },
-                            { value: '$0', label: 'Downloads Cost' },
-                            { value: '2026', label: 'CFPB Standards' },
-                            { value: '∞', label: 'No Signups' },
-                        ].map(s => (
-                            <div key={s.label}>
-                                <p className="text-3xl font-black" style={{ color: '#00C853' }}>{s.value}</p>
-                                <p className="text-sm text-white/50 mt-1">{s.label}</p>
+                    {/* Right — Dashboard Preview */}
+                    <div className="neo-hero-right neo-reveal neo-reveal--d3">
+                        <div className="neo-dash">
+                            <div className="neo-dash-top">
+                                <div className="neo-dash-dots">
+                                    <span className="dd-red" /><span className="dd-yel" /><span className="dd-grn" />
+                                </div>
+                                <span className="neo-dash-title">MORTGAGE CALCULATOR</span>
                             </div>
-                        ))}
+                            <div className="neo-dash-amount">$2,847<span>/mo</span></div>
+                            <div className="neo-dash-sub">$450,000 loan · 30yr fixed · 6.84% APR</div>
+                            <div className="neo-dash-bars">
+                                {[
+                                    { l: 'Principal', w: '72', c: 'bar-neo' },
+                                    { l: 'Interest', w: '18', c: 'bar-mag' },
+                                    { l: 'Tax', w: '6', c: 'bar-vio' },
+                                    { l: 'Insurance', w: '4', c: 'bar-amb' },
+                                ].map(b => (
+                                    <div key={b.l} className="neo-bar-row">
+                                        <span className="neo-bar-label">{b.l}</span>
+                                        <div className="neo-bar-track">
+                                            <div className={`neo-bar-fill ${b.c}`} style={{ width: `${b.w}%` }} />
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="neo-dash-chips">
+                                <div className="neo-chip"><span className="neo-chip-val">$574K</span><span className="neo-chip-lbl">Total Paid</span></div>
+                                <div className="neo-chip"><span className="neo-chip-val">$124K</span><span className="neo-chip-lbl">Interest</span></div>
+                                <div className="neo-chip"><span className="neo-chip-val">78%</span><span className="neo-chip-lbl">PMI Drop</span></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* ── Why USFinNexus ──────────────────────────────────────────────────── */}
-            <section className="py-16 px-4" style={{ background: 'var(--color-bg-secondary)' }}>
-                <div className="max-w-6xl mx-auto">
-                    <h2 className="text-2xl font-black text-center mb-3" style={{ color: 'var(--color-text)' }}>
-                        Why Americans Choose USFinNexus
-                    </h2>
-                    <p className="text-center mb-10 max-w-xl mx-auto" style={{ color: 'var(--color-text-muted)' }}>
-                        Bankrate, Zillow, and NerdWallet don&rsquo;t offer free PDF/CSV downloads. We do.
-                    </p>
+            {/* ═══ TICKER ═══ */}
+            <div className="neo-ticker">
+                <div className="neo-ticker-track">
+                    {[...RATES, ...RATES].map((r, i) => (
+                        <span key={i} className="neo-ticker-item">
+                            <span className="neo-ticker-dot" />{r.l} <strong>{r.v}</strong>
+                        </span>
+                    ))}
+                </div>
+            </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {DIFFERENTIATORS.map(d => (
-                            <div key={d.title} className="card p-5 flex gap-4">
-                                <div className="p-2.5 rounded-xl flex-shrink-0 h-fit" style={{ background: 'rgba(0,200,83,0.12)' }}>
-                                    <d.icon size={20} style={{ color: '#00C853' }} />
-                                </div>
-                                <div>
-                                    <p className="font-bold mb-1" style={{ color: 'var(--color-text)' }}>{d.title}</p>
-                                    <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>{d.desc}</p>
-                                </div>
+            {/* ═══ HOW IT WORKS (LIGHT ZONE) ═══ */}
+            <section className="neo-light-zone">
+                <div className="neo-container neo-steps-section">
+                    <div className="neo-sec-tag"><span className="neo-sec-dot" /> How It Works</div>
+                    <h2 className="neo-sec-h2">Clarity in <em>four simple steps.</em></h2>
+                    <p className="neo-sec-p">From question to professional PDF report in under 60 seconds.</p>
+                    <div className="neo-steps-grid">
+                        {STEPS.map(s => (
+                            <div key={s.n} className="neo-step-card">
+                                <div className="neo-step-num">{s.n}</div>
+                                <h3>{s.h}</h3>
+                                <p>{s.p}</p>
                             </div>
                         ))}
                     </div>
                 </div>
-            </section>
 
-            {/* ── All Tools ───────────────────────────────────────────────────────── */}
-            <section className="py-16 px-4">
-                <div className="max-w-6xl mx-auto">
-                    <h2 className="text-2xl font-black text-center mb-3" style={{ color: 'var(--color-text)' }}>
-                        All Free Finance Tools
-                    </h2>
-                    <p className="text-center mb-10" style={{ color: 'var(--color-text-muted)' }}>
-                        Every tool is 100% free, real-time updating, and PDF/CSV ready.
-                    </p>
+                {/* ═══ ALL TOOLS ═══ */}
+                <div className="neo-container neo-tools-section" id="tools">
+                    <div className="neo-sec-tag"><span className="neo-sec-dot" /> Calculator Suite</div>
+                    <h2 className="neo-sec-h2">28+ <em>free tools,</em> one platform.</h2>
+                    <p className="neo-sec-p">Every calculator is CFPB-verified with instant PDF export.</p>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                        {TOOLS.map(tool => (
-                            <Link key={tool.href} href={tool.href} className="tool-card relative group">
-                                {tool.badge && (
-                                    <span className="absolute top-4 right-4 text-xs font-bold px-2 py-0.5 rounded-full" style={{ background: '#00C853', color: '#060f1e' }}>
-                                        {tool.badge}
+                    {/* Spotlight hero card */}
+                    <Link href="/calculators/mortgage" className="neo-tool-hero">
+                        <div>
+                            <span className="neo-tool-badge neo-badge-hot">Most Popular</span>
+                            <h3>Mortgage Calculator</h3>
+                            <p>Full PITI breakdown with amortization schedule, PMI, taxes & insurance. Instant PDF export.</p>
+                        </div>
+                        <span className="neo-hero-launch"><Home size={15} /> Launch Calculator <ArrowRight size={14} /></span>
+                    </Link>
+
+                    <div className="neo-tools-grid">
+                        {TOOLS.filter(t => t.href !== '/calculators/mortgage').map(t => (
+                            <Link key={t.href} href={t.href} className="neo-tool-card">
+                                {t.badge && (
+                                    <span className={`neo-tool-badge ${t.badge === 'hot' ? 'neo-badge-hot' : t.badge === 'new' ? 'neo-badge-new' : ''}`}>
+                                        {t.badge === 'hot' ? 'Popular' : 'New'}
                                     </span>
                                 )}
-                                <div className="p-3 rounded-xl w-fit mb-3" style={{ background: `${tool.color}15` }}>
-                                    <tool.icon size={22} style={{ color: tool.color }} />
-                                </div>
-                                <h3 className="font-bold mb-1.5" style={{ color: 'var(--color-text)' }}>{tool.title}</h3>
-                                <p className="text-xs leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>{tool.desc}</p>
-                                <p className="text-xs font-bold mt-3" style={{ color: '#00C853' }}>
-                                    Open Calculator →
-                                </p>
+                                <h3><t.icon size={15} className="neo-tool-card-icon" /> {t.title}</h3>
+                                <p>{t.desc}</p>
+                                <span className="neo-tool-go"><ArrowRight size={12} /></span>
                             </Link>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* ── 2026 Reference ─────────────────────────────────────────────────── */}
-            <section className="py-12 px-4" style={{ background: 'var(--color-bg-secondary)' }}>
-                <div className="max-w-6xl mx-auto">
-                    <h2 className="text-xl font-black text-center mb-8" style={{ color: 'var(--color-text)' }}>
-                        2026 US Mortgage Reference Data
-                    </h2>
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                        {[
-                            { label: 'Conforming Loan Limit', value: '$832,750', source: 'FHFA 2026' },
-                            { label: 'FHA Floor (Low-Cost)', value: '$541,287', source: 'HUD 2026' },
-                            { label: 'FHA Ceiling (High-Cost)', value: '$1,249,125', source: 'HUD 2026' },
-                            { label: 'QM Max DTI (CFPB)', value: '43%', source: 'CFPB Standard' },
-                            { label: 'PMI Triggered Below', value: '20% Down', source: 'Conventional' },
-                            { label: 'PMI Auto-Cancel LTV', value: '78%', source: 'HPA (Federal Law)' },
-                            { label: 'Front-End DTI Limit', value: '28%', source: 'CFPB Recommended' },
-                            { label: 'VA Baseline Limit', value: '$832,750', source: 'VA 2026' },
-                        ].map(r => (
-                            <div key={r.label} className="card p-4 text-center">
-                                <p className="text-xs mb-1" style={{ color: 'var(--color-text-muted)' }}>{r.label}</p>
-                                <p className="text-xl font-black" style={{ color: 'var(--color-navy)' }}>{r.value}</p>
-                                <p className="text-xs mt-1" style={{ color: 'var(--color-text-muted)' }}>{r.source}</p>
+            {/* ═══ STATS (DARK BAND) ═══ */}
+            <section className="neo-stats-band">
+                <div className="neo-stats-bg" />
+                <div className="neo-container neo-stats-inner">
+                    <div className="neo-sec-tag neo-sec-tag--dark"><span className="neo-sec-dot" /> By The Numbers</div>
+                    <h2 className="neo-sec-h2 neo-sec-h2--light">Trusted by <em>thousands.</em></h2>
+                    <div className="neo-stats-row">
+                        {STATS.map(s => (
+                            <div key={s.label} className="neo-stat-block">
+                                <div className="neo-stat-val">{s.val}</div>
+                                <div className="neo-stat-name">{s.label}</div>
+                                <div className="neo-stat-src">{s.src}</div>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* ── CTA Bottom ──────────────────────────────────────────────────────── */}
-            <section className="gradient-navy py-16 px-4 text-center text-white">
-                <h2 className="text-3xl font-black mb-4 text-white">Ready to Run the Numbers?</h2>
-                <p className="text-white/85 mb-8 max-w-xl mx-auto">
-                    Free PDF reports, real-time results, no signup. Built for Americans, backed by CFPB standards.
-                </p>
-                <Link href="/calculators/mortgage" className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-lg font-black transition-all hover:-translate-y-1" style={{ background: '#00C853', color: '#060f1e' }}>
-                    <Home size={20} />
-                    Open Mortgage Calculator — Free
-                </Link>
+            {/* ═══ AD UNIT ═══ */}
+            <div className="neo-container py-4">
+                <AdUnit slot={AD_SLOTS.HOMEPAGE_BANNER} format="horizontal" />
+            </div>
+
+            {/* ═══ WHY USFINNEXUS (LIGHT) ═══ */}
+            <section className="neo-light-zone">
+                <div className="neo-container neo-diff-section">
+                    <div className="neo-sec-tag"><span className="neo-sec-dot" /> Why USFinNexus</div>
+                    <h2 className="neo-sec-h2">What makes us <em>different.</em></h2>
+                    <div className="neo-diff-grid">
+                        <div className="neo-diff-list">
+                            {DIFFS.map(d => (
+                                <div key={d.h} className="neo-diff-item">
+                                    <div className={`neo-diff-icon ${d.c}`}><d.icon size={18} /></div>
+                                    <div>
+                                        <h4>{d.h}</h4>
+                                        <p>{d.p}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="neo-diff-visual">
+                            <div className="neo-dv-glow" />
+                            <div className="neo-dv-title">Feature Comparison</div>
+                            <div className="neo-dv-header">
+                                <span>Others</span>
+                                <span>USFinNexus</span>
+                            </div>
+                            {[
+                                { l: 'Cost', them: '$9.99/mo', us: 'Free Forever' },
+                                { l: 'Email Required', them: 'Yes', us: 'Never' },
+                                { l: 'Data Collected', them: 'Everything', us: '0 bytes' },
+                                { l: 'PDF Export', them: 'Premium Only', us: 'Always Free' },
+                                { l: 'CFPB Verified', them: '✕', us: '✓' },
+                            ].map(r => (
+                                <div key={r.l} className="neo-dv-row">
+                                    <span className="neo-dv-label">{r.l}</span>
+                                    <span className="neo-dv-them">{r.them}</span>
+                                    <span className="neo-dv-us">{r.us}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ═══ CTA ═══ */}
+            <section className="neo-cta">
+                <div className="neo-cta-glow-a" />
+                <div className="neo-cta-glow-b" />
+                <div className="neo-container neo-cta-inner">
+                    <div className="neo-sec-tag neo-sec-tag--dark"><span className="neo-sec-dot" /> Get Started</div>
+                    <h2 className="neo-sec-h2 neo-sec-h2--light">Your financial clarity <em>starts here.</em></h2>
+                    <p className="neo-cta-p">Join 50,000+ monthly users making smarter decisions. Always free. Always private.</p>
+                    <div className="neo-cta-btns">
+                        <Link href="/calculators/mortgage" className="neo-btn-main">
+                            <Home size={16} /> Start Mortgage Calculator <ArrowRight size={14} />
+                        </Link>
+                        <Link href="/guides" className="neo-btn-alt">Financial Guides</Link>
+                    </div>
+                </div>
             </section>
         </div>
     );

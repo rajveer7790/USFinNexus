@@ -1,24 +1,49 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, AlertTriangle, CheckCircle2, TrendingUp, Shield } from 'lucide-react';
+import { AlertTriangle, CheckCircle2, TrendingUp, Shield } from 'lucide-react';
 import RelatedArticles from '@/components/RelatedArticles';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
     title: 'California, New York & Texas: State BOI Rules Every LLC Must Know in 2026',
     description: 'Federal exemption does not protect you from aggressive state-level transparency laws. Learn the 2026 state BOI requirements for CA, NY, and TX.',
+    openGraph: {
+        title: 'California, New York & Texas: State BOI Rules Every LLC Must Know in 2026',
+        description: 'Federal exemption does not protect you from aggressive state-level transparency laws. Learn the 2026 state BOI requirements for CA, NY, and TX.',
+        url: 'https://usfinnexus.com/articles/california-new-york-texas-state-boi-rules-2026',
+        type: 'article',
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/images/state_rules_hero_1772351467101.png', width: 1200, height: 630, alt: 'US map highlighting California, New York, and Texas with 2026 state BOI compliance overlays' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'California, New York & Texas: State BOI Rules Every LLC Must Know in 2026',
+        description: 'Federal exemption does not protect you from aggressive state-level transparency laws. Learn the 2026 state BOI requirements for CA, NY, and TX.',
+        images: ['https://usfinnexus.com/images/state_rules_hero_1772351467101.png'],
+    },
+    alternates: {
+        canonical: 'https://usfinnexus.com/articles/california-new-york-texas-state-boi-rules-2026',
+    },
 };
 
 export default function ArticlePage() {
     return (
+        <>
+            <ArticleSchema
+                title="California, New York & Texas: State BOI Rules Every LLC Must Know in 2026"
+                description="Federal exemption does not protect you from aggressive state-level transparency laws. Learn the 2026 state BOI requirements for CA, NY, and TX."
+                url="https://usfinnexus.com/articles/california-new-york-texas-state-boi-rules-2026"
+                datePublished="2026-02-25"
+                dateModified="2026-02-25"
+                authorName="USFinNexus Compliance Team"
+            />
         <article className="max-w-4xl mx-auto px-4 py-12 md:py-20 lg:px-8">
-            <Link href="/articles" className="inline-flex items-center text-sm mb-8 hover:text-blue-600 transition-colors" style={{ color: 'var(--color-text-muted)' }}>
-                <ArrowLeft className="w-4 h-4 mr-2" /> Back to Articles
-            </Link>
+            <Breadcrumbs items={[{ name: 'Articles', item: '/articles' }, { name: 'State BOI Rules', item: '/articles/california-new-york-texas-state-boi-rules-2026' }]} />
 
             <header className="mb-12">
                 <div className="flex flex-wrap items-center gap-3 mb-6">
-                    <span className="inline-block px-3 py-1 rounded bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400 text-xs font-bold uppercase tracking-wider">
+                    <span className="inline-block px-3 py-1 rounded bg-purple-100 text-purple-800 text-xs font-bold uppercase tracking-wider">
                         State Compliance
                     </span>
                     <span className="text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>Updated: February 25, 2026</span>
@@ -32,13 +57,13 @@ export default function ArticlePage() {
                     Federal exemption does not protect you from aggressive state-level transparency laws. Even if FinCEN no longer requires your domestic LLC to file a BOI report, California, New York, and Texas each have their own compliance mandates that could catch you off guard.
                 </p>
 
-                <div className="flex items-center gap-4 border-t border-b py-4 border-gray-200 dark:border-gray-800">
+                <div className="flex items-center gap-4 border-t border-b py-4 border-gray-200">
                     <div className="flex-1 flex gap-4 text-sm font-medium">
                         <div className="flex flex-col">
                             <span style={{ color: 'var(--color-text-muted)' }}>Written by</span>
                             <span style={{ color: 'var(--color-text)' }}>USFinNexus Compliance Team</span>
                         </div>
-                        <div className="flex flex-col border-l pl-4 border-gray-200 dark:border-gray-800">
+                        <div className="flex flex-col border-l pl-4 border-gray-200">
                             <span style={{ color: 'var(--color-text-muted)' }}>Reading Time</span>
                             <span style={{ color: 'var(--color-text)' }}>8 minutes</span>
                         </div>
@@ -46,12 +71,12 @@ export default function ArticlePage() {
                 </div>
             </header>
 
-            <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-blue-600 hover:prose-a:text-blue-500">
+            <div className="prose prose-lg max-w-none prose-headings:font-bold prose-a:text-blue-600 hover:prose-a:text-blue-500">
                 <figure className="my-10">
-                    <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-800 bg-gray-100 dark:bg-gray-800">
-                        <Image src="/images/state-boi-rules.png" alt="US map highlighting California, New York, and Texas with compliance overlays" fill className="object-cover" priority />
+                    <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-gray-100">
+                        <Image src="/images/state_rules_hero_1772351467101.png" alt="US map highlighting California, New York, and Texas with compliance overlays" fill className="object-cover" priority />
                     </div>
-                    <figcaption className="text-center text-sm mt-3 text-gray-500 dark:text-gray-400">State-level BOI mandates are creating a patchwork of requirements across the country.</figcaption>
+                    <figcaption className="text-center text-sm mt-3 text-gray-500">State-level BOI mandates are creating a patchwork of requirements across the country.</figcaption>
                 </figure>
 
                 <h2>The Federal Exemption Gap</h2>
@@ -72,12 +97,12 @@ export default function ArticlePage() {
                     <li>Annual updates if ownership changes occur.</li>
                 </ul>
 
-                <div className="bg-red-50 dark:bg-red-950/20 border-l-4 border-red-500 p-6 my-8">
+                <div className="bg-red-50 border-l-4 border-red-500 p-6 my-8">
                     <div className="flex items-start gap-4">
                         <AlertTriangle className="w-6 h-6 text-red-600 mt-1 shrink-0" />
                         <div>
-                            <p className="font-bold text-red-900 dark:text-red-300 m-0 mb-2">NY Penalties Are Severe</p>
-                            <p className="text-red-800 dark:text-red-200 m-0 text-sm">
+                            <p className="font-bold text-red-900 m-0 mb-2">NY Penalties Are Severe</p>
+                            <p className="text-red-800 m-0 text-sm">
                                 Failure to comply with the NYLLCTA can result in <strong>suspension or cancellation</strong> of your LLC&apos;s authority to do business in New York—effectively shutting you down.
                             </p>
                         </div>
@@ -109,25 +134,25 @@ export default function ArticlePage() {
 
                 <h2>Your 2026 State Compliance Checklist</h2>
                 <ul className="list-none pl-0 space-y-4 my-8 not-prose">
-                    <li className="flex gap-4 items-start p-4 bg-gray-50 dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-gray-800">
+                    <li className="flex gap-4 items-start p-4 bg-gray-50 rounded-lg border border-gray-100">
                         <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
                         <div>
-                            <strong className="block text-gray-900 dark:text-gray-100 mb-1">Check Your State&apos;s Secretary of State Website</strong>
-                            <span className="text-gray-600 dark:text-gray-400 text-sm">Look for any new beneficial ownership disclosure requirements that may have taken effect in 2026.</span>
+                            <strong className="block text-gray-900 mb-1">Check Your State&apos;s Secretary of State Website</strong>
+                            <span className="text-gray-600 text-sm">Look for any new beneficial ownership disclosure requirements that may have taken effect in 2026.</span>
                         </div>
                     </li>
-                    <li className="flex gap-4 items-start p-4 bg-gray-50 dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-gray-800">
+                    <li className="flex gap-4 items-start p-4 bg-gray-50 rounded-lg border border-gray-100">
                         <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
                         <div>
-                            <strong className="block text-gray-900 dark:text-gray-100 mb-1">Don&apos;t Assume Federal Exemption = Total Exemption</strong>
-                            <span className="text-gray-600 dark:text-gray-400 text-sm">Your federal BOI pass does not override state-level mandates. Treat them as completely separate obligations.</span>
+                            <strong className="block text-gray-900 mb-1">Don&apos;t Assume Federal Exemption = Total Exemption</strong>
+                            <span className="text-gray-600 text-sm">Your federal BOI pass does not override state-level mandates. Treat them as completely separate obligations.</span>
                         </div>
                     </li>
-                    <li className="flex gap-4 items-start p-4 bg-gray-50 dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-gray-800">
+                    <li className="flex gap-4 items-start p-4 bg-gray-50 rounded-lg border border-gray-100">
                         <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
                         <div>
-                            <strong className="block text-gray-900 dark:text-gray-100 mb-1">Calendar All Deadlines</strong>
-                            <span className="text-gray-600 dark:text-gray-400 text-sm">New York, California, and Texas each have different filing windows. Missing them can result in penalties or loss of good standing.</span>
+                            <strong className="block text-gray-900 mb-1">Calendar All Deadlines</strong>
+                            <span className="text-gray-600 text-sm">New York, California, and Texas each have different filing windows. Missing them can result in penalties or loss of good standing.</span>
                         </div>
                     </li>
                 </ul>
@@ -137,11 +162,11 @@ export default function ArticlePage() {
                     The 2026 compliance landscape is a patchwork. While the federal government has largely freed domestic LLCs from BOI reporting, individual states are filling in the gaps with their own transparency mandates. If you operate in California, New York, or Texas, make sure you understand your local obligations—federal exemption alone won&apos;t keep you safe.
                 </p>
 
-                <hr className="my-10 border-gray-200 dark:border-gray-800" />
+                <hr className="my-10 border-gray-200" />
 
-                <div className="bg-gray-100 dark:bg-gray-900 p-8 rounded-2xl text-center not-prose">
+                <div className="bg-gray-100 p-8 rounded-2xl text-center not-prose">
                     <h3 className="text-2xl font-black mb-3" style={{ color: 'var(--color-navy)' }}>Need Help with State-Level Compliance?</h3>
-                    <p className="mb-6 text-gray-600 dark:text-gray-400">
+                    <p className="mb-6 text-gray-600">
                         Our team tracks compliance requirements across all 50 states. Let us ensure your LLC meets every single obligation.
                     </p>
                     <button className="btn-primary py-3 px-8 text-sm w-full sm:w-auto shadow-xl">
@@ -152,5 +177,6 @@ export default function ArticlePage() {
 
             <RelatedArticles currentSlug="california-new-york-texas-state-boi-rules-2026" />
         </article>
+        </>
     );
 }

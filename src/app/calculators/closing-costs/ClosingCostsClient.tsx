@@ -66,28 +66,39 @@ export default function ClosingCostsClient() {
     };
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
-            <div className="mb-8">
-                <h1 className="text-3xl font-black text-navy-900 dark:text-white mb-2">
+        <div className="relative min-h-screen bg-white text-navy-900 pb-20">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#0da6f2]/6 rounded-full blur-[130px]" />
+                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-500/6 rounded-full blur-[120px]" />
+            </div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 relative z-10">
+            <div className="mb-6 sm:mb-12">
+                <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 rounded-xl bg-[#0da6f2]/10 border border-[#0da6f2]/20">
+                        <DollarSign className="text-[#0da6f2]" size={22} />
+                    </div>
+                    <span className="text-xs font-black uppercase tracking-[0.3em] text-[#0da6f2]">Cost Estimator</span>
+                </div>
+                <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight bg-gradient-to-r from-navy-900 via-[#0da6f2] to-navy-900 bg-clip-text text-transparent">
                     Closing Costs Calculator 2026
                 </h1>
-                <p className="text-gray-500 dark:text-gray-400 max-w-2xl">
+                <p className="text-gray-500 max-w-2xl font-medium text-lg">
                     Estimate buyer and seller closing costs for any US home purchase. Includes state-specific transfer taxes for all 50 states + DC.
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 xl:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
                 {/* LEFT: Inputs */}
-                <div className="xl:col-span-2 space-y-4">
-                    <div className="card p-6">
-                        <h2 className="text-sm font-bold uppercase tracking-wide mb-5" style={{ color: 'var(--color-text-muted)' }}>
+                <div className="lg:col-span-2 space-y-6">
+                    <div className="glass-card p-4 sm:p-8">
+                        <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-5 sm:mb-8">
                             Purchase Details
                         </h2>
 
                         <div className="mb-5">
                             <label className="input-label">Home Price</label>
                             <div className="relative">
-                                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>$</span>
+                                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">$</span>
                                 <input type="number" className="input-field pl-7" value={homePrice} onChange={e => setHomePrice(+e.target.value)} min={50000} step={5000} />
                             </div>
                             <input type="range" min={100000} max={2000000} step={10000} value={homePrice} onChange={e => setHomePrice(+e.target.value)} className="slider w-full mt-2" style={{ '--value': `${((homePrice - 100000) / 1900000) * 100}%` } as React.CSSProperties} />
@@ -97,7 +108,7 @@ export default function ClosingCostsClient() {
                             <label className="input-label">Down Payment</label>
                             <div className="relative">
                                 <input type="number" className="input-field pr-8" value={downPct} onChange={e => setDownPct(+e.target.value)} min={0} max={100} step={0.5} />
-                                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>%</span>
+                                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">%</span>
                             </div>
                             <p className="text-xs mt-1" style={{ color: 'var(--color-text-muted)' }}>
                                 Loan Amount: {formatCurrency(loanAmount)}
@@ -129,27 +140,27 @@ export default function ClosingCostsClient() {
                 </div>
 
                 {/* RIGHT: Results */}
-                <div className="xl:col-span-3 space-y-5">
+                <div className="lg:col-span-3 space-y-6 lg:self-start">
                     {result ? (
                         <>
                             {/* Summary cards */}
-                            <div className="grid grid-cols-2 gap-4">
-                                <div className="card p-5 text-center animate-slide-up">
-                                    <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: 'var(--color-text-muted)' }}>Buyer Closing Costs</p>
-                                    <div className="text-2xl font-black" style={{ color: '#0A2540' }}>{formatCurrency(result.buyerTotal)}</div>
-                                    <p className="text-xs mt-1" style={{ color: 'var(--color-text-muted)' }}>{formatPercent(result.buyerPercent, 1)} of home price</p>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                                <div className="glass-card p-5 sm:p-8 text-center animate-slide-up">
+                                    <p className="text-xs font-black uppercase tracking-[0.3em] text-[#0da6f2] mb-4">Buyer Closing Costs</p>
+                                    <div className="text-2xl sm:text-4xl font-black text-[#0da6f2]">{formatCurrency(result.buyerTotal)}</div>
+                                    <p className="text-xs mt-4 font-bold uppercase tracking-widest text-gray-500">{formatPercent(result.buyerPercent, 1)} of home price</p>
                                 </div>
-                                <div className="card p-5 text-center animate-slide-up">
-                                    <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: 'var(--color-text-muted)' }}>Seller Closing Costs</p>
-                                    <div className="text-2xl font-black" style={{ color: '#ef4444' }}>{formatCurrency(result.sellerTotal)}</div>
-                                    <p className="text-xs mt-1" style={{ color: 'var(--color-text-muted)' }}>{formatPercent(result.sellerPercent, 1)} of home price</p>
+                                <div className="glass-card p-5 sm:p-8 text-center animate-slide-up">
+                                    <p className="text-xs font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Seller Closing Costs</p>
+                                    <div className="text-2xl sm:text-4xl font-black text-rose-400">{formatCurrency(result.sellerTotal)}</div>
+                                    <p className="text-xs mt-4 font-bold uppercase tracking-widest text-gray-500">{formatPercent(result.sellerPercent, 1)} of home price</p>
                                 </div>
                             </div>
 
                             {/* Buyer breakdown */}
-                            <div className="card p-6 animate-slide-up">
-                                <h3 className="text-sm font-bold uppercase tracking-wide mb-4" style={{ color: 'var(--color-text-muted)' }}>
-                                    📥 Buyer Cost Breakdown
+                            <div className="glass-card p-8 animate-slide-up">
+                                <h3 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-8">
+                                    Buyer Cost Breakdown
                                 </h3>
                                 {Object.entries(groupByCategory(result.buyerItems)).map(([cat, items]) => (
                                     <div key={cat} className="mb-4">
@@ -171,9 +182,9 @@ export default function ClosingCostsClient() {
                             </div>
 
                             {/* Seller breakdown */}
-                            <div className="card p-6 animate-slide-up">
-                                <h3 className="text-sm font-bold uppercase tracking-wide mb-4" style={{ color: 'var(--color-text-muted)' }}>
-                                    📤 Seller Cost Breakdown
+                            <div className="glass-card p-8 animate-slide-up">
+                                <h3 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-8">
+                                    Seller Cost Breakdown
                                 </h3>
                                 {result.sellerItems.map(item => (
                                     <div key={item.label} className="result-row">
@@ -188,11 +199,11 @@ export default function ClosingCostsClient() {
                             </div>
 
                             {/* Cash needed */}
-                            <div className="card p-5">
-                                <h3 className="text-sm font-bold uppercase tracking-wide mb-3" style={{ color: 'var(--color-text-muted)' }}>
-                                    💰 Total Cash Needed to Close (Buyer)
+                            <div className="glass-card p-8">
+                                <h3 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-6">
+                                    Total Cash Needed to Close
                                 </h3>
-                                <div className="grid grid-cols-3 gap-3">
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                                     {[
                                         ['Down Payment', formatCurrency(homePrice * downPct / 100)],
                                         ['Closing Costs', formatCurrency(result.buyerTotal)],
@@ -219,7 +230,7 @@ export default function ClosingCostsClient() {
                             </button>
                         </>
                     ) : (
-                        <div className="card p-12 text-center">
+                        <div className="card p-6 sm:p-12 text-center">
                             <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: 'var(--color-bg-secondary)' }}>
                                 <DollarSign size={28} style={{ color: 'var(--color-text-muted)' }} />
                             </div>
@@ -231,6 +242,7 @@ export default function ClosingCostsClient() {
                     )}
                     <DisclaimerBanner calculatorName="the Closing Costs Calculator" />
                 </div>
+            </div>
             </div>
         </div>
     );

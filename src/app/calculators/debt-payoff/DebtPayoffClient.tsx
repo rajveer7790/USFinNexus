@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useDeferredValue } from 'react';
 import { calcDebtPayoff, formatCurrency, type DebtItem } from '@/lib/formulas';
 import { exportGenericCSV } from '@/lib/csvExporter';
 import DisclaimerBanner from '@/components/DisclaimerBanner';
@@ -26,8 +26,13 @@ export default function DebtPayoffClient() {
         setDebts(updated);
     };
 
-    const snowball = useMemo(() => calcDebtPayoff({ debts, extraMonthly: extra }, 'snowball'), [debts, extra]);
-    const avalanche = useMemo(() => calcDebtPayoff({ debts, extraMonthly: extra }, 'avalanche'), [debts, extra]);
+    // Defer heavy dual-simulation calculations so inputs stay responsive
+    const deferredDebts = useDeferredValue(debts);
+    const deferredExtra = useDeferredValue(extra);
+    const isCalculating = deferredDebts !== debts || deferredExtra !== extra;
+
+    const snowball = useMemo(() => calcDebtPayoff({ debts: deferredDebts, extraMonthly: deferredExtra }, 'snowball'), [deferredDebts, deferredExtra]);
+    const avalanche = useMemo(() => calcDebtPayoff({ debts: deferredDebts, extraMonthly: deferredExtra }, 'avalanche'), [deferredDebts, deferredExtra]);
     const active = strategy === 'snowball' ? snowball : avalanche;
 
     const interestSaved = snowball.totalInterest - avalanche.totalInterest;
@@ -35,28 +40,39 @@ export default function DebtPayoffClient() {
     const totalMinPayments = debts.reduce((s, d) => s + d.minPayment, 0);
 
     // No extra payments baseline
-    const noExtra = useMemo(() => calcDebtPayoff({ debts, extraMonthly: 0 }, strategy), [debts, strategy]);
+    const noExtra = useMemo(() => calcDebtPayoff({ debts: deferredDebts, extraMonthly: 0 }, strategy), [deferredDebts, strategy]);
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
-            <div className="mb-8">
-                <h1 className="text-3xl font-black text-navy-900 dark:text-white mb-2">
-                    Debt Payoff Calculator — Snowball vs Avalanche
+        <div className="relative min-h-screen bg-white text-navy-900 pb-20">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-rose-500/6 rounded-full blur-[130px]" />
+                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#0da6f2]/8 rounded-full blur-[120px]" />
+            </div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 relative z-10">
+            <div className="mb-6 sm:mb-12">
+                <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 rounded-xl bg-rose-500/10 border border-rose-500/20">
+                        <TrendingDown className="text-rose-500" size={22} />
+                    </div>
+                    <span className="text-xs font-black uppercase tracking-[0.3em] text-rose-500">Debt Strategy</span>
+                </div>
+                <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight bg-gradient-to-r from-navy-900 via-rose-500 to-navy-900 bg-clip-text text-transparent">
+                    Debt Payoff Calculator
                 </h1>
-                <p className="text-gray-500 dark:text-gray-400 max-w-2xl">
-                    Add your debts and compare payoff strategies. See which method saves you the most interest and gets you debt-free fastest.
+                <p className="text-gray-500 max-w-2xl font-medium text-lg">
+                    Add your debts and compare payoff strategies. Snowball vs Avalanche — see which method saves you the most.
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 xl:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
                 {/* LEFT: Inputs */}
-                <div className="xl:col-span-2 space-y-4">
-                    <div className="card p-6">
-                        <div className="flex justify-between items-center mb-5">
-                            <h2 className="text-sm font-bold uppercase tracking-wide" style={{ color: 'var(--color-text-muted)' }}>
+                <div className="lg:col-span-2 space-y-6">
+                    <div className="glass-card p-4 sm:p-8">
+                        <div className="flex justify-between items-center mb-5 sm:mb-8">
+                            <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400">
                                 Your Debts
                             </h2>
-                            <button onClick={addDebt} className="flex items-center gap-1 text-xs font-bold px-3 py-1.5 rounded-lg transition-colors hover:bg-green-600/10" style={{ color: '#00C853' }}>
+                            <button onClick={addDebt} className="flex items-center gap-1 text-xs font-black px-3 py-2 min-h-[36px] rounded-lg transition-colors bg-[#0da6f2]/10 text-[#0da6f2] hover:bg-[#0da6f2]/20 uppercase tracking-widest">
                                 <Plus size={14} /> Add Debt
                             </button>
                         </div>
@@ -65,32 +81,32 @@ export default function DebtPayoffClient() {
                             {debts.map((debt, i) => (
                                 <div key={i} className="p-4 rounded-xl border relative" style={{ borderColor: 'var(--color-border)' }}>
                                     {debts.length > 1 && (
-                                        <button onClick={() => removeDebt(i)} className="absolute top-2 right-2 p-1 rounded-lg hover:bg-red-100 dark:hover:bg-red-900/20 text-red-400 hover:text-red-600 transition-colors">
+                                        <button onClick={() => removeDebt(i)} className="absolute top-2 right-2 p-1 rounded-lg hover:bg-red-100 text-red-400 hover:text-red-600 transition-colors">
                                             <X size={14} />
                                         </button>
                                     )}
                                     <div className="mb-3">
                                         <input type="text" className="input-field text-sm font-bold" value={debt.name} onChange={e => updateDebt(i, 'name', e.target.value)} placeholder="Debt name" />
                                     </div>
-                                    <div className="grid grid-cols-3 gap-2">
+                                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                                         <div>
-                                            <label className="text-[10px] font-bold uppercase mb-1 block" style={{ color: 'var(--color-text-muted)' }}>Balance</label>
+                                            <label className="text-xs font-bold uppercase mb-1 block" style={{ color: 'var(--color-text-muted)' }}>Balance</label>
                                             <div className="relative">
-                                                <span className="absolute left-2 top-1/2 -translate-y-1/2 text-xs" style={{ color: 'var(--color-text-muted)' }}>$</span>
+                                                <span className="absolute left-2 top-1/2 -translate-y-1/2 text-xs text-gray-400">$</span>
                                                 <input type="number" className="input-field pl-5 text-sm" value={debt.balance} onChange={e => updateDebt(i, 'balance', +e.target.value)} min={0} step={100} />
                                             </div>
                                         </div>
                                         <div>
-                                            <label className="text-[10px] font-bold uppercase mb-1 block" style={{ color: 'var(--color-text-muted)' }}>APR</label>
+                                            <label className="text-xs font-bold uppercase mb-1 block" style={{ color: 'var(--color-text-muted)' }}>APR</label>
                                             <div className="relative">
                                                 <input type="number" className="input-field pr-6 text-sm" value={debt.rate} onChange={e => updateDebt(i, 'rate', +e.target.value)} min={0} max={40} step={0.1} />
-                                                <span className="absolute right-2 top-1/2 -translate-y-1/2 text-xs" style={{ color: 'var(--color-text-muted)' }}>%</span>
+                                                <span className="absolute right-2 top-1/2 -translate-y-1/2 text-xs text-gray-400">%</span>
                                             </div>
                                         </div>
                                         <div>
-                                            <label className="text-[10px] font-bold uppercase mb-1 block" style={{ color: 'var(--color-text-muted)' }}>Min Pay</label>
+                                            <label className="text-xs font-bold uppercase mb-1 block" style={{ color: 'var(--color-text-muted)' }}>Min Pay</label>
                                             <div className="relative">
-                                                <span className="absolute left-2 top-1/2 -translate-y-1/2 text-xs" style={{ color: 'var(--color-text-muted)' }}>$</span>
+                                                <span className="absolute left-2 top-1/2 -translate-y-1/2 text-xs text-gray-400">$</span>
                                                 <input type="number" className="input-field pl-5 text-sm" value={debt.minPayment} onChange={e => updateDebt(i, 'minPayment', +e.target.value)} min={10} step={10} />
                                             </div>
                                         </div>
@@ -100,12 +116,12 @@ export default function DebtPayoffClient() {
                         </div>
                     </div>
 
-                    <div className="card p-6">
-                        <h2 className="text-sm font-bold uppercase tracking-wide mb-4" style={{ color: 'var(--color-text-muted)' }}>
+                    <div className="glass-card p-4 sm:p-8">
+                        <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-4 sm:mb-6">
                             Extra Monthly Payment
                         </h2>
                         <div className="relative">
-                            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>$</span>
+                            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">$</span>
                             <input type="number" className="input-field pl-7" value={extra} onChange={e => setExtra(+e.target.value)} min={0} step={25} />
                         </div>
                         <input type="range" min={0} max={2000} step={25} value={extra} onChange={e => setExtra(+e.target.value)} className="slider w-full mt-2" style={{ '--value': `${(extra / 2000) * 100}%` } as React.CSSProperties} />
@@ -115,52 +131,50 @@ export default function DebtPayoffClient() {
                     </div>
 
                     {/* Summary */}
-                    <div className="p-4 rounded-xl" style={{ background: 'var(--color-bg-secondary)' }}>
+                    <div className="glass-panel p-5">
                         <div className="grid grid-cols-2 gap-3">
                             <div>
-                                <p className="text-xs" style={{ color: 'var(--color-text-muted)' }}>Total Debt</p>
-                                <p className="text-lg font-black" style={{ color: 'var(--color-text)' }}>{formatCurrency(totalBalance)}</p>
+                                <p className="text-xs uppercase tracking-widest font-black text-gray-400 mb-1">Total Debt</p>
+                                <p className="text-xl font-black text-rose-500">{formatCurrency(totalBalance)}</p>
                             </div>
                             <div>
-                                <p className="text-xs" style={{ color: 'var(--color-text-muted)' }}>Number of Debts</p>
-                                <p className="text-lg font-black" style={{ color: 'var(--color-text)' }}>{debts.length}</p>
+                                <p className="text-xs uppercase tracking-widest font-black text-gray-400 mb-1">Number of Debts</p>
+                                <p className="text-xl font-black">{debts.length}</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 {/* RIGHT: Results */}
-                <div className="xl:col-span-3 space-y-5">
+                <div className="lg:col-span-3 space-y-6 lg:self-start">
                     {/* Strategy toggle */}
-                    <div className="flex gap-2">
+                    <div className="glass-tab-list p-1 flex gap-2">
                         <button onClick={() => setStrategy('avalanche')}
-                            className={`flex-1 px-4 py-3 rounded-xl text-sm font-bold transition-all border-2 ${strategy === 'avalanche' ? 'text-white border-transparent' : ''}`}
-                            style={{ background: strategy === 'avalanche' ? '#ef4444' : 'transparent', color: strategy === 'avalanche' ? 'white' : 'var(--color-text-muted)', borderColor: strategy === 'avalanche' ? 'transparent' : 'var(--color-border)' }}>
-                            🔥 Avalanche <span className="block text-xs font-normal mt-0.5 opacity-80">Highest rate first (saves most $)</span>
+                            className={`flex-1 px-4 py-3 rounded-xl text-xs font-black transition-all ${strategy === 'avalanche' ? 'bg-rose-500 text-white shadow-lg' : 'text-gray-500 hover:bg-white/5'}`}>
+                            🔥 Avalanche <span className="block font-medium mt-0.5 opacity-80 normal-case">Highest rate first</span>
                         </button>
                         <button onClick={() => setStrategy('snowball')}
-                            className={`flex-1 px-4 py-3 rounded-xl text-sm font-bold transition-all border-2 ${strategy === 'snowball' ? 'text-white border-transparent' : ''}`}
-                            style={{ background: strategy === 'snowball' ? '#1d4ed8' : 'transparent', color: strategy === 'snowball' ? 'white' : 'var(--color-text-muted)', borderColor: strategy === 'snowball' ? 'transparent' : 'var(--color-border)' }}>
-                            ❄️ Snowball <span className="block text-xs font-normal mt-0.5 opacity-80">Smallest balance first (quick wins)</span>
+                            className={`flex-1 px-4 py-3 rounded-xl text-xs font-black transition-all ${strategy === 'snowball' ? 'bg-[#0da6f2] text-white shadow-lg' : 'text-gray-500 hover:bg-white/5'}`}>
+                            ❄️ Snowball <span className="block font-medium mt-0.5 opacity-80 normal-case">Smallest balance first</span>
                         </button>
                     </div>
 
                     {/* Results comparison */}
-                    <div className="card p-6 animate-slide-up">
-                        <div className="grid grid-cols-2 gap-4 mb-6">
-                            <div className="text-center p-4 rounded-xl" style={{ background: 'rgba(239,68,68,0.08)' }}>
-                                <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: 'var(--color-text-muted)' }}>Avalanche</p>
-                                <p className="text-xl font-black" style={{ color: '#ef4444' }}>
+                    <div className="glass-card p-4 sm:p-8 animate-slide-up">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-5 sm:mb-8">
+                            <div className="text-center glass-panel p-6 bg-rose-500/5 border-rose-500/20">
+                                <p className="text-xs font-black uppercase tracking-[0.3em] text-rose-500 mb-3">Avalanche</p>
+                                <p className="text-2xl font-black text-rose-400">
                                     {Math.floor(avalanche.totalMonths / 12)}y {avalanche.totalMonths % 12}m
                                 </p>
-                                <p className="text-xs mt-1" style={{ color: 'var(--color-text-muted)' }}>Interest: {formatCurrency(avalanche.totalInterest)}</p>
+                                <p className="text-xs mt-3 font-bold uppercase tracking-widest text-gray-500">Interest: {formatCurrency(avalanche.totalInterest)}</p>
                             </div>
-                            <div className="text-center p-4 rounded-xl" style={{ background: 'rgba(29,78,216,0.08)' }}>
-                                <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: 'var(--color-text-muted)' }}>Snowball</p>
-                                <p className="text-xl font-black" style={{ color: '#1d4ed8' }}>
+                            <div className="text-center glass-panel p-6 bg-[#0da6f2]/5 border-[#0da6f2]/20">
+                                <p className="text-xs font-black uppercase tracking-[0.3em] text-[#0da6f2] mb-3">Snowball</p>
+                                <p className="text-2xl font-black text-[#0da6f2]">
                                     {Math.floor(snowball.totalMonths / 12)}y {snowball.totalMonths % 12}m
                                 </p>
-                                <p className="text-xs mt-1" style={{ color: 'var(--color-text-muted)' }}>Interest: {formatCurrency(snowball.totalInterest)}</p>
+                                <p className="text-xs mt-3 font-bold uppercase tracking-widest text-gray-500">Interest: {formatCurrency(snowball.totalInterest)}</p>
                             </div>
                         </div>
 
@@ -190,8 +204,8 @@ export default function DebtPayoffClient() {
 
                         {/* Comparison */}
                         {Math.abs(interestSaved) > 1 && (
-                            <div className="p-3 rounded-xl border border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700 mb-6">
-                                <p className="text-xs" style={{ color: 'var(--color-text-muted)' }}>
+                            <div className="p-3 rounded-xl border border-amber-200 bg-amber-50 mb-6">
+                                <p className="text-xs text-gray-400">
                                     <strong>💡 Comparison:</strong> Avalanche saves <strong style={{ color: 'var(--color-text)' }}>{formatCurrency(Math.abs(interestSaved))}</strong> more in interest than Snowball. Snowball provides faster psychological wins by eliminating smaller debts first.
                                 </p>
                             </div>
@@ -206,7 +220,7 @@ export default function DebtPayoffClient() {
                                         {i + 1}
                                     </span>
                                     <span className="font-bold text-sm" style={{ color: 'var(--color-text)' }}>{name}</span>
-                                    <span className="ml-auto text-xs" style={{ color: 'var(--color-text-muted)' }}>
+                                    <span className="ml-auto text-xs text-gray-400">
                                         {formatCurrency(debts.find(d => d.name === name)?.balance || 0)} at {debts.find(d => d.name === name)?.rate}%
                                     </span>
                                 </div>
@@ -231,6 +245,7 @@ export default function DebtPayoffClient() {
                     </div>
                     <DisclaimerBanner calculatorName="the Debt Payoff Calculator" />
                 </div>
+            </div>
             </div>
         </div>
     );

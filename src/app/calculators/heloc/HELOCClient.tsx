@@ -53,28 +53,39 @@ export default function HELOCClient() {
     const maxLine = useMemo(() => Math.max(0, homeValue * (cltvLimit / 100) - mortgageBalance), [homeValue, mortgageBalance, cltvLimit]);
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
-            <div className="mb-8">
-                <h1 className="text-3xl font-black text-navy-900 dark:text-white mb-2">
+        <div className="relative min-h-screen bg-white text-navy-900 pb-20">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#0da6f2]/6 rounded-full blur-[130px]" />
+                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-500/6 rounded-full blur-[120px]" />
+            </div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 relative z-10">
+            <div className="mb-6 sm:mb-12">
+                <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 rounded-xl bg-[#0da6f2]/10 border border-[#0da6f2]/20">
+                        <Home className="text-[#0da6f2]" size={22} />
+                    </div>
+                    <span className="text-xs font-black uppercase tracking-[0.3em] text-[#0da6f2]">Home Equity</span>
+                </div>
+                <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight bg-gradient-to-r from-navy-900 via-[#0da6f2] to-navy-900 bg-clip-text text-transparent">
                     HELOC Calculator 2026
                 </h1>
-                <p className="text-gray-500 dark:text-gray-400 max-w-2xl">
-                    Calculate payments on a Home Equity Line of Credit. See interest-only draw period payments and full P&amp;I repayment period costs side by side.
+                <p className="text-gray-500 max-w-2xl font-medium text-lg">
+                    Calculate payments on a Home Equity Line of Credit. See interest-only draw period payments and full P&I repayment costs.
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 xl:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
                 {/* LEFT: Inputs */}
-                <div className="xl:col-span-2 space-y-4">
-                    <div className="card p-6">
-                        <h2 className="text-sm font-bold uppercase tracking-wide mb-5" style={{ color: 'var(--color-text-muted)' }}>
+                <div className="lg:col-span-2 space-y-6">
+                    <div className="glass-card p-4 sm:p-8">
+                        <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-5 sm:mb-8">
                             Home & Equity
                         </h2>
 
                         <div className="mb-5">
                             <label className="input-label">Home Value</label>
                             <div className="relative">
-                                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>$</span>
+                                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">$</span>
                                 <input type="number" className="input-field pl-7" value={homeValue} onChange={e => setHomeValue(+e.target.value)} min={50000} step={5000} />
                             </div>
                             <input type="range" min={100000} max={2000000} step={10000} value={homeValue} onChange={e => setHomeValue(+e.target.value)} className="slider w-full mt-2" style={{ '--value': `${((homeValue - 100000) / 1900000) * 100}%` } as React.CSSProperties} />
@@ -83,7 +94,7 @@ export default function HELOCClient() {
                         <div className="mb-5">
                             <label className="input-label">Outstanding Mortgage Balance</label>
                             <div className="relative">
-                                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>$</span>
+                                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">$</span>
                                 <input type="number" className="input-field pl-7" value={mortgageBalance} onChange={e => setMortgageBalance(+e.target.value)} min={0} step={5000} />
                             </div>
                         </div>
@@ -92,18 +103,18 @@ export default function HELOCClient() {
                             <label className="input-label">CLTV Limit <span className="text-xs font-normal">(lender max)</span></label>
                             <div className="relative">
                                 <input type="number" className="input-field pr-8" value={cltvLimit} onChange={e => setCltvLimit(+e.target.value)} min={50} max={100} step={5} />
-                                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>%</span>
+                                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">%</span>
                             </div>
                         </div>
 
                         <div className="mb-5">
                             <label className="input-label">Draw Amount</label>
                             <div className="relative">
-                                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>$</span>
+                                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">$</span>
                                 <input type="number" className="input-field pl-7" value={drawAmount} onChange={e => setDrawAmount(+e.target.value)} min={1000} step={1000} />
                             </div>
                             {drawAmount > maxLine && maxLine > 0 && (
-                                <p className="text-xs mt-1.5 text-amber-600 dark:text-amber-400 flex items-center gap-1">
+                                <p className="text-xs mt-1.5 text-amber-600 flex items-center gap-1">
                                     <Info size={12} /> Draw exceeds max credit line of {formatCurrency(maxLine)}. Capped automatically.
                                 </p>
                             )}
@@ -125,41 +136,41 @@ export default function HELOCClient() {
                         </div>
                     </div>
 
-                    <div className="card p-6">
-                        <h2 className="text-sm font-bold uppercase tracking-wide mb-5" style={{ color: 'var(--color-text-muted)' }}>
+                    <div className="glass-card p-4 sm:p-8">
+                        <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-5 sm:mb-8">
                             HELOC Terms
                         </h2>
 
-                        <div className="grid grid-cols-2 gap-4 mb-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                             <div>
                                 <label className="input-label">Draw Period</label>
                                 <div className="relative">
                                     <input type="number" className="input-field pr-10" value={drawYears} onChange={e => setDrawYears(+e.target.value)} min={1} max={15} />
-                                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-bold" style={{ color: 'var(--color-text-muted)' }}>YRS</span>
+                                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-gray-400">YRS</span>
                                 </div>
                             </div>
                             <div>
                                 <label className="input-label">Repayment Period</label>
                                 <div className="relative">
                                     <input type="number" className="input-field pr-10" value={repayYears} onChange={e => setRepayYears(+e.target.value)} min={5} max={30} />
-                                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-bold" style={{ color: 'var(--color-text-muted)' }}>YRS</span>
+                                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-gray-400">YRS</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                                 <label className="input-label">Draw Rate (Variable)</label>
                                 <div className="relative">
                                     <input type="number" className="input-field pr-8" value={drawRate} onChange={e => setDrawRate(+e.target.value)} min={1} max={20} step={0.125} />
-                                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>%</span>
+                                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">%</span>
                                 </div>
                             </div>
                             <div>
                                 <label className="input-label">Repayment Rate</label>
                                 <div className="relative">
                                     <input type="number" className="input-field pr-8" value={repayRate} onChange={e => setRepayRate(+e.target.value)} min={1} max={20} step={0.125} />
-                                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>%</span>
+                                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">%</span>
                                 </div>
                             </div>
                         </div>
@@ -167,25 +178,25 @@ export default function HELOCClient() {
                 </div>
 
                 {/* RIGHT: Results */}
-                <div className="xl:col-span-3 space-y-5">
+                <div className="lg:col-span-3 space-y-6 lg:self-start">
                     {result ? (
-                        <div className="card p-6 animate-slide-up">
+                        <div className="glass-card p-4 sm:p-8 animate-slide-up">
                             {/* Hero stats */}
-                            <div className="grid grid-cols-2 gap-4 mb-6">
-                                <div className="text-center p-4 rounded-xl" style={{ background: 'rgba(0,200,83,0.08)' }}>
-                                    <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: 'var(--color-text-muted)' }}>Draw Period Payment</p>
-                                    <div className="payment-amount text-2xl">{formatCurrency(result.drawMonthlyPayment)}</div>
-                                    <p className="text-xs mt-1" style={{ color: 'var(--color-text-muted)' }}>Interest-only / month</p>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-5 sm:mb-8">
+                                <div className="text-center glass-panel p-6 bg-emerald-500/5 border-emerald-500/20">
+                                    <p className="text-xs font-black uppercase tracking-[0.3em] text-emerald-500 mb-3">Draw Period Payment</p>
+                                    <div className="text-3xl font-black text-emerald-400">{formatCurrency(result.drawMonthlyPayment)}</div>
+                                    <p className="text-xs mt-3 font-bold uppercase tracking-widest text-gray-500">Interest-only / month</p>
                                 </div>
-                                <div className="text-center p-4 rounded-xl" style={{ background: 'rgba(10,37,64,0.08)' }}>
-                                    <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: 'var(--color-text-muted)' }}>Repayment Period Payment</p>
-                                    <div className="text-2xl font-black" style={{ color: 'var(--color-navy)' }}>{formatCurrency(result.repaymentMonthlyPayment)}</div>
-                                    <p className="text-xs mt-1" style={{ color: 'var(--color-text-muted)' }}>P&amp;I / month</p>
+                                <div className="text-center glass-panel p-6 bg-[#0da6f2]/5 border-[#0da6f2]/20">
+                                    <p className="text-xs font-black uppercase tracking-[0.3em] text-[#0da6f2] mb-3">Repayment Period Payment</p>
+                                    <div className="text-3xl font-black text-[#0da6f2]">{formatCurrency(result.repaymentMonthlyPayment)}</div>
+                                    <p className="text-xs mt-3 font-bold uppercase tracking-widest text-gray-500">P&I / month</p>
                                 </div>
                             </div>
 
                             {/* Detail grid */}
-                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-6">
                                 {[
                                     ['Available Equity', formatCurrency(result.availableEquity)],
                                     ['Max Credit Line', formatCurrency(result.maxCreditLine)],
@@ -241,7 +252,7 @@ export default function HELOCClient() {
                             </div>
                         </div>
                     ) : (
-                        <div className="card p-12 text-center">
+                        <div className="card p-6 sm:p-12 text-center">
                             <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: 'var(--color-bg-secondary)' }}>
                                 <Home size={28} style={{ color: 'var(--color-text-muted)' }} />
                             </div>
@@ -253,6 +264,7 @@ export default function HELOCClient() {
                     )}
                     <DisclaimerBanner calculatorName="the HELOC Calculator" />
                 </div>
+            </div>
             </div>
         </div>
     );

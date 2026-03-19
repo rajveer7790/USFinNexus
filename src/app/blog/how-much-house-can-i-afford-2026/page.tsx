@@ -1,18 +1,48 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle2, DollarSign, AlertTriangle } from 'lucide-react';
+import { CheckCircle2, DollarSign, AlertTriangle } from 'lucide-react';
+import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
+import RelatedCalculators from '@/components/RelatedCalculators';
+import RelatedArticles from '@/components/RelatedArticles';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
     title: 'How Much House Can I Afford in 2026? | USFinNexus',
     description: 'Use the 28/36 rule, factor in 2026 interest rates, and calculate exactly how much house you can afford with our free affordability guide.',
+    openGraph: {
+        title: 'How Much House Can I Afford in 2026?',
+        description: 'Use the 28/36 rule, factor in 2026 interest rates, and calculate exactly how much house you can afford with our free affordability guide.',
+        url: 'https://usfinnexus.com/blog/how-much-house-can-i-afford-2026',
+        type: 'article',
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Guide to calculating how much house you can afford in 2026 using the 28/36 rule' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'How Much House Can I Afford in 2026?',
+        description: 'Use the 28/36 rule, factor in 2026 interest rates, and calculate exactly how much house you can afford with our free affordability guide.',
+        images: ['https://usfinnexus.com/images/home-hero-v2.png'],
+    },
+    alternates: {
+        canonical: 'https://usfinnexus.com/blog/how-much-house-can-i-afford-2026',
+    },
 };
 
 export default function BlogPost() {
     return (
-        <article className="max-w-3xl mx-auto px-4 py-12 md:py-20">
-            <Link href="/blog" className="inline-flex items-center text-sm mb-8 hover:opacity-80 transition-opacity" style={{ color: 'var(--color-text-muted)' }}>
-                <ArrowLeft className="w-4 h-4 mr-2" /> Back to Blog
-            </Link>
+        <>
+        <ArticleSchema
+            title="How Much House Can I Afford in 2026? | USFinNexus"
+            description="Use the 28/36 rule, factor in 2026 interest rates, and calculate exactly how much house you can afford with our free affordability guide."
+            url="https://usfinnexus.com/blog/how-much-house-can-i-afford-2026"
+            datePublished="2026-02-25"
+            dateModified="2026-03-12"
+            authorName="USFinNexus Editorial Team"
+        />
+        <div className="max-w-4xl mx-auto px-4 py-12">
+            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'How Much House Can I Afford?', item: '/blog/how-much-house-can-i-afford-2026' }]} />
+            <article className="prose prose-slate max-w-none">
 
             <header className="mb-10">
                 <span className="inline-block px-3 py-1 rounded text-xs font-bold mb-4" style={{ background: 'rgba(0,200,83,0.12)', color: '#00C853' }}>
@@ -21,12 +51,14 @@ export default function BlogPost() {
                 <h1 className="text-3xl md:text-5xl font-black mb-6 leading-tight" style={{ color: 'var(--color-text)' }}>
                     How Much House Can I Afford in 2026?
                 </h1>
-                <div className="flex items-center gap-4 text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>
-                    <span>By USFinNexus Editorial Team</span>
+                <div className="flex flex-wrap items-center gap-3 text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>
+                    <span>By {USFinNexusEditorialTeam.name}</span>
                     <span>·</span>
                     <span>February 25, 2026</span>
                     <span>·</span>
                     <span>7 min read</span>
+                    <span>·</span>
+                    <span className="text-[#0da6f2] font-bold">Updated March 12, 2026</span>
                 </div>
             </header>
 
@@ -54,7 +86,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Example: $80,000 Annual Income</h2>
                 <p className="mb-6">Let&apos;s walk through a real example for someone earning $80,000 per year:</p>
-                <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-6 mb-8">
+                <div className="bg-gray-50 rounded-xl p-6 mb-8">
                     <ul className="space-y-3">
                         <li className="flex items-start gap-3">
                             <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#00C853' }} />
@@ -76,7 +108,7 @@ export default function BlogPost() {
                 </div>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Hidden Costs Most Buyers Forget</h2>
-                <div className="card p-6 mb-8 bg-yellow-50 dark:bg-yellow-950/20 border-l-4 border-yellow-500">
+                <div className="card p-6 mb-8 bg-yellow-50 border-l-4 border-yellow-500">
                     <div className="flex gap-4">
                         <AlertTriangle className="w-6 h-6 shrink-0 text-yellow-600" />
                         <div>
@@ -108,7 +140,7 @@ export default function BlogPost() {
                     Just because a lender approves you for $350,000 doesn&apos;t mean you should spend that much. Many financial advisors recommend the <strong>&quot;25% rule&quot;</strong>—keeping your total housing costs at or below 25% of your <em>take-home</em> (after-tax) pay, not your gross pay. This gives you a much larger cushion for emergencies, investments, and lifestyle.
                 </p>
 
-                <hr className="my-10 border-gray-200 dark:border-gray-800" />
+                <hr className="my-10 border-gray-200" />
 
                 <div className="card p-8 text-center">
                     <h3 className="text-xl font-bold mb-3">Calculate Your Exact Number</h3>
@@ -119,7 +151,12 @@ export default function BlogPost() {
                         Open Affordability Calculator
                     </Link>
                 </div>
+                <AuthorBio author={USFinNexusEditorialTeam} updatedDate="March 12, 2026" />
             </div>
-        </article>
+            </article>
+        </div>
+        <RelatedCalculators exclude={['/calculators/affordability']} limit={4} title="Related Calculators" />
+        <RelatedArticles currentSlug="how-much-house-can-i-afford-2026" category="Affordability" />
+        </>
     );
 }

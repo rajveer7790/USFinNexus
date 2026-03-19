@@ -1,8 +1,23 @@
 'use client';
 
-import { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useDeferredValue, useTransition } from 'react';
 import dynamic from 'next/dynamic';
-import { Loader2 } from 'lucide-react';
+import { 
+    Loader2, TrendingDown, Info, AlertCircle, CheckCircle, 
+    ChevronDown, ChevronUp, Plus, X, Share2, ArrowRight, 
+    Shield, Download, MapPin 
+} from 'lucide-react';
+import { toast } from 'sonner';
+
+const MortgageAmortTable = dynamic(() => import('./MortgageAmortTable'), {
+    ssr: false,
+    loading: () => (
+        <div className="space-y-2 animate-pulse">
+            <div className="h-10 bg-gray-100 rounded-xl" />
+            {[...Array(8)].map((_, i) => <div key={i} className="h-10 bg-gray-50 rounded" />)}
+        </div>
+    ),
+});
 
 const MortgageCharts = dynamic(() => import('./MortgageCharts'), {
     ssr: false,
@@ -12,6 +27,7 @@ const MortgageCharts = dynamic(() => import('./MortgageCharts'), {
         </div>
     )
 });
+
 import {
     calcMortgageSummary, calcAmortization, calcYearlyAmortization,
     formatCurrency, formatPercent, formatMonthYear,
@@ -21,11 +37,8 @@ import { calcPMIRate } from '@/lib/formulas';
 import { getTaxEstimate } from '@/lib/taxEstimates';
 import DisclaimerBanner from '@/components/DisclaimerBanner';
 import DownloadButtons from '@/components/DownloadButtons';
-import { Info, TrendingDown, ChevronDown, ChevronUp, Plus, X, Share2, ArrowRight, Shield, Download, MapPin } from 'lucide-react';
-import { toast } from 'sonner';
 
 const LOAN_TERMS = [10, 15, 20, 30];
-const PIE_COLORS = ['#0A2540', '#00C853', '#1a4d9a', '#f59e0b', '#ef4444'];
 
 const DEFAULT = {
     homePrice: 400000,
@@ -45,7 +58,7 @@ const DEFAULT = {
 
 type TabKey = 'breakdown' | 'amortization' | 'extra' | 'charts';
 
-export default function MortgageCalculator() {
+export default function MortgageCalculator({ initialTab = 'breakdown' }: { initialTab?: TabKey } = {}) {
     const [homePrice, setHomePrice] = useState(DEFAULT.homePrice);
     const [downDollar, setDownDollar] = useState(DEFAULT.downPaymentDollar);
     const [downPct, setDownPct] = useState(DEFAULT.downPaymentPct);
@@ -59,7 +72,9 @@ export default function MortgageCalculator() {
     const [extraMonthly, setExtraMonthly] = useState(0);
     const [biWeekly, setBiWeekly] = useState(false);
     const [pmiOverride, setPmiOverride] = useState<number | null>(null);
-    const [tab, setTab] = useState<TabKey>('breakdown');
+    const [tab, setTab] = useState<TabKey>(initialTab);
+    const [, startTabTransition] = useTransition();
+    const switchTab = (t: TabKey) => startTabTransition(() => setTab(t));
     const [showYearly, setShowYearly] = useState(false);
     const [amortFilter, setAmortFilter] = useState('all');
 
@@ -106,17 +121,22 @@ export default function MortgageCalculator() {
         startDate,
         extraMonthly,
         biWeekly,
-    }), [homePrice, downDollar, rate, loanTermYears, propTax, insurance, hoa, autoPMI, startDate, extraMonthly, biWeekly]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }), [homePrice, downDollar, rate, loanTermYears, propTax, insurance, hoa, autoPMI, extraMonthly, biWeekly]);
+
+    // Defer heavy calculations so inputs stay responsive while amortization computes in background
+    const deferredInputs = useDeferredValue(inputs);
+    const isCalculating = deferredInputs !== inputs;
 
     const summary = useMemo<MortgageSummary | null>(() => {
-        if (homePrice <= 0 || downDollar >= homePrice || rate <= 0) return null;
-        try { return calcMortgageSummary(inputs); } catch { return null; }
-    }, [inputs, homePrice, downDollar, rate]);
+        if (deferredInputs.homePrice <= 0 || deferredInputs.downPayment >= deferredInputs.homePrice || deferredInputs.annualInterestRate <= 0) return null;
+        try { return calcMortgageSummary(deferredInputs); } catch { return null; }
+    }, [deferredInputs]);
 
     const amortization = useMemo<AmortizationRow[]>(() => {
-        if (!summary) return [];
-        return calcAmortization(inputs);
-    }, [inputs, summary]);
+        if (deferredInputs.homePrice <= 0 || deferredInputs.downPayment >= deferredInputs.homePrice || deferredInputs.annualInterestRate <= 0) return [];
+        try { return calcAmortization(deferredInputs); } catch { return []; }
+    }, [deferredInputs]);
 
     const yearlyAmort = useMemo(() => calcYearlyAmortization(amortization), [amortization]);
 
@@ -132,18 +152,6 @@ export default function MortgageCalculator() {
         if (summary.monthlyPMI > 0) d.push({ name: 'PMI', value: +summary.monthlyPMI.toFixed(2) });
         return d;
     }, [summary]);
-
-    // Balance chart data (every 12 months)
-    const balanceData = useMemo(() => {
-        return amortization
-            .filter((_, i) => i % 12 === 11 || i === 0)
-            .map(r => ({
-                year: Math.ceil(r.month / 12),
-                balance: +r.balance.toFixed(0),
-                equity: +(homePrice - r.balance).toFixed(0),
-                interest: +r.cumulativeInterest.toFixed(0),
-            }));
-    }, [amortization, homePrice]);
 
     // Amortization filter
     const filteredAmort = useMemo(() => {
@@ -161,15 +169,18 @@ export default function MortgageCalculator() {
     };
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in relative z-10">
+            {/* Background ambient glow matching Stitch design */}
+            <div className="absolute top-[-100px] left-[-100px] w-96 h-96 bg-[#0da6f2] rounded-full mix-blend-screen filter blur-[128px] opacity-20 pointer-events-none hidden" />
+            <div className="absolute bottom-[-100px] right-[-100px] w-[500px] h-[500px] bg-green-500 rounded-full mix-blend-screen filter blur-[128px] opacity-10 pointer-events-none hidden" />
 
             {/* Page Header */}
-            <div className="mb-8">
-                <h1 className="text-3xl font-black text-navy-900 dark:text-white mb-2">
-                    Free Mortgage Calculator 2026
+            <div className="mb-6 sm:mb-12 text-center relative">
+                <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-navy-900 mb-3 sm:mb-4 tracking-tight leading-tight">
+                    Premium Mortgage Calculator
                 </h1>
-                <p className="text-gray-500 dark:text-gray-400 max-w-2xl">
-                    Calculate your full PITI mortgage payment instantly. Download a professional PDF report or CSV/Excel file — free, no signup required.
+                <p className="text-sm sm:text-lg text-gray-500 max-w-2xl mx-auto">
+                    Calculate your full PITI mortgage payment instantly with our high-end, responsive tool.
                 </p>
             </div>
 
@@ -185,22 +196,23 @@ export default function MortgageCalculator() {
                 </div>
             )}
 
-            <div className="grid grid-cols-1 xl:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 relative">
                 {/* ── LEFT: Inputs ──────────────────────────────────────────────────── */}
-                <div className="xl:col-span-2 space-y-4">
-                    <div className="card p-6">
-                        <h2 className="text-sm font-bold uppercase tracking-wide mb-5" style={{ color: 'var(--color-text-muted)' }}>
+                <div className="lg:col-span-4 space-y-6">
+                    <div className="glass-card p-4 sm:p-6 md:p-8">
+                        <h2 className="text-sm font-bold uppercase tracking-widest mb-5 sm:mb-6 flex items-center gap-2">
+                            <span className="w-2 h-2 rounded-full bg-[#0da6f2] shadow-[0_0_8px_rgba(13,166,242,0.8)]" />
                             Loan Details
                         </h2>
 
                         {/* Home Price */}
-                        <div className="mb-5">
+                        <div className="mb-6">
                             <label className="input-label">Home Price</label>
-                            <div className="relative">
-                                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>$</span>
+                            <div className="relative group">
+                                <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">$</span>
                                 <input
                                     type="number"
-                                    className="input-field pl-7"
+                                    className="glass-input pl-8"
                                     value={homePrice}
                                     onChange={e => syncFromHomePrice(parseFloat(e.target.value) || 0)}
                                     min={50000} max={10000000} step={1000}
@@ -211,45 +223,46 @@ export default function MortgageCalculator() {
                                 type="range" min={50000} max={2000000} step={5000}
                                 value={homePrice}
                                 onChange={e => syncFromHomePrice(parseInt(e.target.value))}
-                                className="slider w-full mt-2"
+                                className="glass-slider w-full mt-4"
                                 style={{ '--value': `${((homePrice - 50000) / (2000000 - 50000)) * 100}%` } as React.CSSProperties}
                             />
-                            <div className="flex justify-between text-xs mt-1" style={{ color: 'var(--color-text-muted)' }}>
+                            <div className="flex justify-between text-xs mt-2 text-gray-400 font-medium">
                                 <span>$50k</span><span>$2M</span>
                             </div>
                         </div>
 
                         {/* Down Payment */}
-                        <div className="mb-5">
+                        <div className="mb-6">
                             <label className="input-label">Down Payment</label>
-                            <div className="flex gap-2">
-                                <div className="relative flex-1">
-                                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>$</span>
+                            {/* Stack on phones, side-by-side on sm+ */}
+                            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                                <div className="relative flex-1 group">
+                                    <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">$</span>
                                     <input
                                         type="number"
-                                        className="input-field pl-7"
+                                        className="glass-input pl-8"
                                         value={downDollar}
                                         onChange={e => syncFromDollar(parseFloat(e.target.value) || 0)}
                                         min={0} max={homePrice}
                                         aria-label="Down payment in dollars"
                                     />
                                 </div>
-                                <div className="relative w-24">
+                                <div className="relative w-full sm:w-28 group">
                                     <input
                                         type="number"
-                                        className="input-field pr-6 text-center"
+                                        className="glass-input pr-8 text-center"
                                         value={downPct}
                                         onChange={e => syncFromPct(parseFloat(e.target.value) || 0)}
                                         min={0} max={100} step={0.5}
                                         aria-label="Down payment as percentage"
                                     />
-                                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>%</span>
+                                    <span className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">%</span>
                                 </div>
                             </div>
                             {ltv > 0.80 && (
-                                <p className="text-xs mt-1.5 text-amber-600 dark:text-amber-400 flex items-center gap-1">
-                                    <Info size={12} />
-                                    LTV {formatPercent(ltv * 100, 1)} — PMI required below 20% down
+                                <p className="text-xs mt-2 text-amber-500 flex items-center gap-1.5 font-medium">
+                                    <Info size={14} />
+                                    LTV {formatPercent(ltv * 100, 1)} — PMI Required
                                 </p>
                             )}
                             {ltv <= 0 && downDollar > 0 && (
@@ -258,47 +271,44 @@ export default function MortgageCalculator() {
                         </div>
 
                         {/* Interest Rate */}
-                        <div className="mb-5">
+                        <div className="mb-6">
                             <label className="input-label">Annual Interest Rate</label>
-                            <div className="relative">
+                            <div className="relative group">
                                 <input
                                     type="number"
-                                    className="input-field pr-8"
+                                    className="glass-input pr-8"
                                     value={rate}
                                     onChange={e => setRate(parseFloat(e.target.value) || 0)}
                                     min={0.1} max={20} step={0.125}
                                     aria-label="Annual interest rate in percent"
                                 />
-                                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>%</span>
+                                <span className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">%</span>
                             </div>
                             <input
                                 type="range" min={1} max={15} step={0.125}
                                 value={rate}
                                 onChange={e => setRate(parseFloat(e.target.value))}
-                                className="slider w-full mt-2"
+                                className="glass-slider w-full mt-4"
                                 style={{ '--value': `${((rate - 1) / (15 - 1)) * 100}%` } as React.CSSProperties}
                             />
-                            <div className="flex justify-between text-xs mt-1" style={{ color: 'var(--color-text-muted)' }}>
+                            <div className="flex justify-between text-xs mt-2 text-gray-400 font-medium">
                                 <span>1%</span><span>15%</span>
                             </div>
                         </div>
 
                         {/* Loan Term */}
-                        <div className="mb-5">
+                        <div className="mb-6">
                             <label className="input-label">Loan Term</label>
-                            <div className="flex gap-2 flex-wrap">
+                            {/* 4 term buttons + custom — grid on mobile, flex on sm+ */}
+                            <div className="grid grid-cols-3 sm:flex gap-2 flex-wrap">
                                 {LOAN_TERMS.map(t => (
                                     <button
                                         key={t}
                                         onClick={() => { setTerm(t); setCustomTerm(''); }}
-                                        className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all border ${term === t && !customTerm
-                                            ? 'text-white border-transparent'
-                                            : 'border-current hover:border-green-600 hover:text-green-600'
+                                        className={`px-3 sm:px-4 py-2.5 rounded-xl text-sm font-semibold transition-all border-2 min-h-[44px] ${term === t && !customTerm
+                                            ? 'border-[#0da6f2] bg-[#0da6f2]/10 text-[#0da6f2] shadow-[0_0_15px_rgba(13,166,242,0.3)]'
+                                            : 'border-gray-200 text-gray-500 hover:border-[#0da6f2]/50 hover:text-[#0da6f2]'
                                             }`}
-                                        style={{
-                                            background: term === t && !customTerm ? 'var(--color-navy)' : 'transparent',
-                                            color: term === t && !customTerm ? 'white' : 'var(--color-text-muted)',
-                                        }}
                                     >
                                         {t} yr
                                     </button>
@@ -307,7 +317,7 @@ export default function MortgageCalculator() {
                                     <input
                                         type="number"
                                         placeholder="Custom"
-                                        className="input-field w-20 text-center py-2"
+                                        className="glass-input w-full sm:w-24 text-center py-2.5 text-sm min-h-[44px]"
                                         value={customTerm}
                                         onChange={e => setCustomTerm(e.target.value)}
                                         min={1} max={50}
@@ -319,10 +329,12 @@ export default function MortgageCalculator() {
 
                         {/* ZIP Code */}
                         <div className="mb-5">
-                            <label className="input-label">ZIP Code <span className="text-xs font-normal">(auto-fill taxes)</span></label>
+                            <label className="input-label flex items-center gap-2">
+                                <MapPin size={14} className="text-[#0da6f2]" /> ZIP Code
+                            </label>
                             <input
                                 type="text"
-                                className="input-field"
+                                className="glass-input"
                                 placeholder="e.g., 78701"
                                 value={zip}
                                 onChange={e => handleZipChange(e.target.value.replace(/\D/g, '').slice(0, 5))}
@@ -332,58 +344,59 @@ export default function MortgageCalculator() {
                         </div>
                     </div>
 
-                    {/* Monthly Costs */}
-                    <div className="card p-6">
-                        <h2 className="text-sm font-bold uppercase tracking-wide mb-5" style={{ color: 'var(--color-text-muted)' }}>
+                    {/* Monthly Costs Card */}
+                    <div className="glass-card p-4 sm:p-6 md:p-8">
+                        <h2 className="text-sm font-bold uppercase tracking-widest mb-5 sm:mb-6 flex items-center gap-2">
+                            <span className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
                             Monthly Costs
                         </h2>
 
                         {/* Property Tax */}
-                        <div className="mb-4">
+                        <div className="mb-5">
                             <label className="input-label">Annual Property Tax</label>
-                            <div className="relative">
-                                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>$</span>
+                            <div className="relative group">
+                                <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">$</span>
                                 <input
                                     type="number"
-                                    className="input-field pl-7"
+                                    className="glass-input pl-8"
                                     value={propTax}
                                     onChange={e => setPropTax(parseFloat(e.target.value) || 0)}
                                     min={0} step={100}
                                     aria-label="Annual property tax"
                                 />
                             </div>
-                            <p className="text-xs mt-1" style={{ color: 'var(--color-text-muted)' }}>
+                            <p className="text-xs mt-2 text-gray-400 font-medium">
                                 {formatCurrency(propTax / 12)}/month
                             </p>
                         </div>
 
                         {/* Insurance */}
-                        <div className="mb-4">
+                        <div className="mb-5">
                             <label className="input-label">Homeowners Insurance (Annual)</label>
-                            <div className="relative">
-                                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>$</span>
+                            <div className="relative group">
+                                <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">$</span>
                                 <input
                                     type="number"
-                                    className="input-field pl-7"
+                                    className="glass-input pl-8"
                                     value={insurance}
                                     onChange={e => setInsurance(parseFloat(e.target.value) || 0)}
                                     min={0} step={100}
                                     aria-label="Annual homeowners insurance"
                                 />
                             </div>
-                            <p className="text-xs mt-1" style={{ color: 'var(--color-text-muted)' }}>
+                            <p className="text-xs mt-2 text-gray-400 font-medium">
                                 {formatCurrency(insurance / 12)}/month
                             </p>
                         </div>
 
                         {/* HOA */}
-                        <div className="mb-4">
+                        <div className="mb-5">
                             <label className="input-label">HOA Fees (Monthly)</label>
-                            <div className="relative">
-                                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>$</span>
+                            <div className="relative group">
+                                <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">$</span>
                                 <input
                                     type="number"
-                                    className="input-field pl-7"
+                                    className="glass-input pl-8"
                                     value={hoa}
                                     onChange={e => setHoa(parseFloat(e.target.value) || 0)}
                                     min={0} step={50}
@@ -394,22 +407,22 @@ export default function MortgageCalculator() {
 
                         {/* PMI Override */}
                         {ltv > 0.80 && (
-                            <div className="mb-4">
+                            <div className="mb-5">
                                 <label className="input-label">PMI Rate Override (Annual %)</label>
-                                <div className="relative">
+                                <div className="relative group">
                                     <input
                                         type="number"
-                                        className="input-field pr-8"
+                                        className="glass-input pr-8"
                                         placeholder={`Auto: ${formatPercent(autoPMI * 100, 2)}`}
                                         value={pmiOverride ?? ''}
                                         onChange={e => setPmiOverride(e.target.value ? parseFloat(e.target.value) : null)}
                                         min={0} max={3} step={0.01}
                                         aria-label="PMI rate override"
                                     />
-                                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm" style={{ color: 'var(--color-text-muted)' }}>%</span>
+                                    <span className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">%</span>
                                 </div>
-                                <p className="text-xs mt-1 text-amber-600 dark:text-amber-400">
-                                    Auto: {formatPercent(autoPMI * 100, 2)}/yr based on LTV. PMI cancels at 78% LTV (Homeowners Protection Act).
+                                <p className="text-xs mt-2 text-amber-500 font-medium">
+                                    Auto: {formatPercent(autoPMI * 100, 2)}/yr based on LTV. PMI cancels at 78% LTV.
                                 </p>
                             </div>
                         )}
@@ -417,50 +430,54 @@ export default function MortgageCalculator() {
                 </div>
 
                 {/* ── RIGHT: Results ─────────────────────────────────────────────────── */}
-                <div className="xl:col-span-3 space-y-5">
+                <div className="lg:col-span-8 space-y-6 flex flex-col lg:self-start">
 
                     {/* Main Payment Card */}
                     {summary ? (
-                        <div className="card p-6 animate-slide-up">
-                            {/* Total Payment */}
-                            <div className="text-center mb-6">
-                                <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: 'var(--color-text-muted)' }}>
+                        <div suppressHydrationWarning className={`glass-card p-4 sm:p-6 md:p-8 animate-slide-up flex-1 flex flex-col transition-opacity duration-150 ${isCalculating ? 'opacity-60' : 'opacity-100'}`}>
+                            {/* Total Payment Giant Display */}
+                            <div className="text-center mb-8 pb-8 border-b border-gray-200 relative">
+                                <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#0da6f2]/50 to-transparent" />
+                                <p className="text-sm font-bold uppercase tracking-widest mb-3 text-gray-500">
                                     Total Monthly Payment
                                 </p>
-                                <div className="payment-amount">
-                                    {formatCurrency(summary.totalMonthly)}
+                                <div className="text-5xl sm:text-6xl md:text-7xl font-black tabular-nums tracking-tighter text-navy-900 transition-all duration-500 ease-out" style={{textShadow: '0 0 40px rgba(13, 166, 242, 0.15)'}}>
+                                    <span className="text-2xl sm:text-4xl align-top mr-1 font-bold text-gray-400">$</span>
+                                    {summary.totalMonthly.toFixed(0)}
                                 </div>
-                                <p className="text-sm mt-1" style={{ color: 'var(--color-text-muted)' }}>
-                                    Principal &amp; Interest: {formatCurrency(summary.principalAndInterest)} + Taxes/Ins/Other: {formatCurrency(summary.monthlyPropertyTax + summary.monthlyInsurance + summary.monthlyHOA + summary.monthlyPMI)}
+                                <p className="text-sm mt-4 font-medium text-gray-400">
+                                    P&I: <strong className="text-gray-700">{formatCurrency(summary.principalAndInterest)}</strong> 
+                                    <span className="mx-2 opacity-50">|</span> 
+                                    Taxes, Ins, & Fees: <strong className="text-gray-700">{formatCurrency(summary.monthlyPropertyTax + summary.monthlyInsurance + summary.monthlyHOA + summary.monthlyPMI)}</strong>
                                 </p>
                             </div>
 
                             {/* Quick Stats Row */}
-                            <div className="grid grid-cols-3 gap-4 mb-6">
+                            <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-6 sm:mb-8">
                                 {[
                                     { label: 'Loan Amount', value: formatCurrency(summary.loanAmount) },
                                     { label: 'Total Interest', value: formatCurrency(summary.totalInterest) },
                                     { label: 'Payoff Date', value: formatMonthYear(summary.payoffDate) },
                                 ].map(stat => (
-                                    <div key={stat.label} className="text-center p-3 rounded-xl" style={{ background: 'var(--color-bg-secondary)' }}>
-                                        <p className="text-xs font-semibold mb-1" style={{ color: 'var(--color-text-muted)' }}>{stat.label}</p>
-                                        <p className="text-sm font-bold tabular-nums" style={{ color: 'var(--color-text)' }}>{stat.value}</p>
+                                    <div key={stat.label} className="glass-panel p-2 sm:p-4 text-center">
+                                        <p className="text-xs font-bold uppercase tracking-wide text-gray-500 mb-1 leading-tight">{stat.label}</p>
+                                        <p className="text-xs sm:text-sm font-black text-navy-900 truncate">{stat.value}</p>
                                     </div>
                                 ))}
                             </div>
 
-                            {/* Tabs */}
-                            <div className="tab-list mb-6">
+                            {/* Tabs Navigation */}
+                            <div className="glass-tab-list flex-wrap justify-start sm:justify-center mb-6 sm:mb-8 mx-auto self-center overflow-x-auto scrollbar-hide w-full">
                                 {([
-                                    { key: 'breakdown', label: 'Breakdown' },
-                                    { key: 'amortization', label: 'Amortization' },
+                                    { key: 'breakdown', label: 'Payment Breakdown' },
+                                    { key: 'amortization', label: 'Amortization Table' },
                                     { key: 'extra', label: 'Extra Payments' },
-                                    { key: 'charts', label: 'Charts' },
+                                    { key: 'charts', label: 'Visual Charts' },
                                 ] as { key: TabKey; label: string }[]).map(t => (
                                     <button
                                         key={t.key}
                                         onClick={() => setTab(t.key)}
-                                        className={`tab-item ${tab === t.key ? 'active' : ''}`}
+                                        className={`glass-tab ${tab === t.key ? 'active' : ''}`}
                                         role="tab"
                                         aria-selected={tab === t.key}
                                     >
@@ -473,35 +490,35 @@ export default function MortgageCalculator() {
                             {tab === 'breakdown' && (
                                 <div className="animate-fade-in">
                                     {/* PITI breakdown rows */}
-                                    <div className="space-y-0">
+                                    <div className="space-y-1">
                                         {[
-                                            { label: 'Principal & Interest', value: summary.principalAndInterest, color: '#0A2540' },
-                                            { label: 'Property Tax', value: summary.monthlyPropertyTax, color: '#00C853' },
-                                            { label: 'Homeowners Insurance', value: summary.monthlyInsurance, color: '#1a4d9a' },
-                                            { label: 'HOA Fees', value: summary.monthlyHOA, color: '#f59e0b' },
-                                            { label: `PMI (${formatPercent(autoPMI * 100, 2)}/yr)`, value: summary.monthlyPMI, color: '#ef4444' },
+                                            { label: 'Principal & Interest', value: summary.principalAndInterest, color: '#0da6f2', glow: 'rgba(13,166,242,0.6)' },
+                                            { label: 'Property Tax', value: summary.monthlyPropertyTax, color: '#10b981', glow: 'rgba(16,185,129,0.6)' },
+                                            { label: 'Homeowners Insurance', value: summary.monthlyInsurance, color: '#6366f1', glow: 'rgba(99,102,241,0.6)' },
+                                            { label: 'HOA Fees', value: summary.monthlyHOA, color: '#f59e0b', glow: 'rgba(245,158,11,0.6)' },
+                                            { label: `PMI (${formatPercent(autoPMI * 100, 2)}/yr)`, value: summary.monthlyPMI, color: '#ef4444', glow: 'rgba(239,68,68,0.6)' },
                                         ]
                                             .filter(r => r.value > 0)
                                             .map(row => (
-                                                <div key={row.label} className="result-row">
-                                                    <span className="result-label flex items-center gap-2">
-                                                        <span className="w-3 h-3 rounded-full flex-shrink-0" style={{ background: row.color }} />
+                                                <div key={row.label} className="flex justify-between items-center py-2.5 px-3 rounded-lg hover:bg-white/5 transition-colors">
+                                                    <span className="flex items-center gap-3 text-sm font-medium text-gray-700">
+                                                        <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ background: row.color, boxShadow: `0 0 8px ${row.glow}` }} />
                                                         {row.label}
                                                     </span>
-                                                    <span className="result-value">{formatCurrency(row.value)}</span>
+                                                    <span className="font-bold tabular-nums text-navy-900">{formatCurrency(row.value)}</span>
                                                 </div>
                                             ))}
                                         {/* Total */}
-                                        <div className="flex justify-between items-center pt-3 mt-2 border-t-2 border-green-600">
-                                            <span className="font-black text-sm" style={{ color: 'var(--color-text)' }}>Total Monthly</span>
-                                            <span className="text-lg font-black" style={{ color: '#00C853' }}>{formatCurrency(summary.totalMonthly)}</span>
+                                        <div className="flex justify-between items-center pt-4 mt-3 border-t border-gray-200 px-3">
+                                            <span className="font-black text-sm uppercase tracking-wider text-gray-800">Total Monthly</span>
+                                            <span className="text-xl font-black text-[#0da6f2]" style={{textShadow: '0 0 15px rgba(13,166,242,0.3)'}}>{formatCurrency(summary.totalMonthly)}</span>
                                         </div>
                                     </div>
 
-                                    <div className="section-divider" />
+                                    <div className="my-8 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
 
                                     {/* Loan overview */}
-                                    <div className="grid grid-cols-2 gap-3">
+                                    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4">
                                         {[
                                             ['Home Price', formatCurrency(homePrice)],
                                             ['Down Payment', `${formatCurrency(downDollar)} (${formatPercent(summary.downPaymentPercent, 1)})`],
@@ -512,41 +529,41 @@ export default function MortgageCalculator() {
                                             ['Payoff Date', formatMonthYear(summary.payoffDate)],
                                             ['Loan Category', summary.loanType.replace('_', ' ').toUpperCase()],
                                         ].map(([label, value]) => (
-                                            <div key={String(label)} className="p-3 rounded-xl" style={{ background: 'var(--color-bg-secondary)' }}>
-                                                <p className="text-xs mb-0.5" style={{ color: 'var(--color-text-muted)' }}>{label}</p>
-                                                <p className="text-sm font-bold tabular-nums" style={{ color: 'var(--color-text)' }}>{value}</p>
+                                            <div key={String(label)} className="glass-panel p-3 text-center">
+                                                <p className="text-xs mb-1 text-gray-500 capitalize">{label}</p>
+                                                <p className="text-sm font-bold tabular-nums text-navy-900">{value}</p>
                                             </div>
                                         ))}
                                     </div>
 
                                     {/* Conforming limit notice */}
                                     {summary.loanAmount > US_MORTGAGE_CONSTANTS.CONFORMING_LOAN_LIMIT && (
-                                        <div className="mt-4 p-3 rounded-xl border border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
-                                            <p className="text-xs text-amber-800 dark:text-amber-300">
+                                        <div className="mt-4 p-3 rounded-xl border border-amber-200 bg-amber-50">
+                                            <p className="text-xs text-amber-800">
                                                 <strong>⚠️ Jumbo Loan:</strong> Loan amount {formatCurrency(summary.loanAmount)} exceeds the 2026 conforming loan limit of $832,750. Jumbo loans typically require higher credit scores and larger down payments.
                                             </p>
                                         </div>
                                     )}
 
                                     {/* Extended Badges Section */}
-                                    <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         {/* FHA Badge */}
-                                        <div className={`p-3 rounded-xl border ${summary.loanAmount <= US_MORTGAGE_CONSTANTS.FHA_FLOOR && summary.downPaymentPercent >= 3.5 ? 'border-green-300 bg-green-50 dark:bg-green-900/20 dark:border-green-700' : 'border-gray-200 bg-gray-50 dark:bg-navy-800 dark:border-navy-700'}`}>
+                                        <div className={`p-3 rounded-xl border ${summary.loanAmount <= US_MORTGAGE_CONSTANTS.FHA_FLOOR && summary.downPaymentPercent >= 3.5 ? 'border-green-300 bg-green-50' : 'border-gray-200 bg-gray-50'}`}>
                                             <h4 className="text-xs font-bold mb-1 flex items-center gap-1">
-                                                {summary.loanAmount <= US_MORTGAGE_CONSTANTS.FHA_FLOOR && summary.downPaymentPercent >= 3.5 ? <span className="text-green-600 dark:text-green-400">✅ FHA Eligible</span> : <span className="text-gray-500">❌ FHA Ineligible</span>}
+                                                {summary.loanAmount <= US_MORTGAGE_CONSTANTS.FHA_FLOOR && summary.downPaymentPercent >= 3.5 ? <span className="text-green-600 font-bold">✅ FHA Eligible</span> : <span className="text-gray-500 font-bold">❌ FHA Ineligible</span>}
                                             </h4>
-                                            <p className="text-[10px] text-gray-500 dark:text-gray-400">
-                                                FHA loans require 3.5% down and loan amounts under the $541,287 floor. {summary.downPaymentPercent < 3.5 ? 'Increase down payment to 3.5%.' : ''} {summary.loanAmount > US_MORTGAGE_CONSTANTS.FHA_FLOOR ? 'Loan exceeds FHA 2026 floor limit.' : ''}
+                                            <p className="text-xs text-gray-500">
+                                                FHA loans require 3.5% down and loan amounts under the floor. {summary.downPaymentPercent < 3.5 ? 'Increase down payment to 3.5%.' : ''}
                                             </p>
                                         </div>
 
                                         {/* VA Badge */}
-                                        <div className={`p-3 rounded-xl border ${summary.loanAmount <= US_MORTGAGE_CONSTANTS.VA_BASELINE ? 'border-blue-300 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700' : 'border-gray-200 bg-gray-50 dark:bg-navy-800 dark:border-navy-700'}`}>
+                                        <div className={`p-3 rounded-xl border ${summary.loanAmount <= US_MORTGAGE_CONSTANTS.VA_BASELINE ? 'border-blue-300 bg-blue-50' : 'border-gray-200 bg-gray-50'}`}>
                                             <h4 className="text-xs font-bold mb-1 flex items-center gap-1">
-                                                {summary.loanAmount <= US_MORTGAGE_CONSTANTS.VA_BASELINE ? <span className="text-blue-600 dark:text-blue-400">🎖️ VA Loan Eligible</span> : <span className="text-gray-500">❌ VA Loan Ineligible</span>}
+                                                {summary.loanAmount <= US_MORTGAGE_CONSTANTS.VA_BASELINE ? <span className="text-blue-600 font-bold">🎖️ VA Loan Eligible</span> : <span className="text-gray-500 font-bold">❌ VA Loan Ineligible</span>}
                                             </h4>
-                                            <p className="text-[10px] text-gray-500 dark:text-gray-400">
-                                                For eligible veterans, 0% down is allowed up to the $832,750 baseline. Watch out for the VA Funding Fee (1.24% - 3.3%).
+                                            <p className="text-xs text-gray-500">
+                                                For eligible veterans, 0% down is allowed up to baseline.
                                             </p>
                                         </div>
                                     </div>
@@ -554,127 +571,58 @@ export default function MortgageCalculator() {
                             )}
 
                             {tab === 'amortization' && (
-                                <div className="animate-fade-in">
-                                    <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
-                                        <div className="flex gap-2">
-                                            <button
-                                                onClick={() => setShowYearly(false)}
-                                                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${!showYearly ? 'text-white' : ''}`}
-                                                style={{ background: !showYearly ? 'var(--color-navy)' : 'var(--color-bg-secondary)', color: !showYearly ? 'white' : 'var(--color-text-muted)' }}
-                                            >
-                                                Monthly
-                                            </button>
-                                            <button
-                                                onClick={() => setShowYearly(true)}
-                                                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${showYearly ? 'text-white' : ''}`}
-                                                style={{ background: showYearly ? 'var(--color-navy)' : 'var(--color-bg-secondary)', color: showYearly ? 'white' : 'var(--color-text-muted)' }}
-                                            >
-                                                Yearly
-                                            </button>
-                                        </div>
-                                        {!showYearly && (
-                                            <select
-                                                value={amortFilter}
-                                                onChange={e => setAmortFilter(e.target.value)}
-                                                className="input-field py-1.5 text-xs w-auto"
-                                                aria-label="Filter amortization by year"
-                                            >
-                                                <option value="all">All Years</option>
-                                                {yearOptions.map(y => (
-                                                    <option key={y} value={y}>Year {y}</option>
-                                                ))}
-                                            </select>
-                                        )}
-                                    </div>
-
-                                    <div className="overflow-x-auto rounded-xl border" style={{ borderColor: 'var(--color-border)', maxHeight: '380px' }}>
-                                        <table className="data-table">
-                                            {showYearly ? (
-                                                <>
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Year</th>
-                                                            <th>Principal Paid</th>
-                                                            <th>Interest Paid</th>
-                                                            <th>Ending Balance</th>
-                                                            <th>Cumulative Interest</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        {yearlyAmort.map(r => (
-                                                            <tr key={r.year}>
-                                                                <td className="text-center font-bold">{r.year}</td>
-                                                                <td>{formatCurrency(r.principalPaid)}</td>
-                                                                <td className="text-red-500">{formatCurrency(r.interestPaid)}</td>
-                                                                <td>{formatCurrency(r.endingBalance)}</td>
-                                                                <td className="text-red-400">{formatCurrency(r.cumulativeInterest)}</td>
-                                                            </tr>
-                                                        ))}
-                                                    </tbody>
-                                                </>
-                                            ) : (
-                                                <>
-                                                    <thead>
-                                                        <tr>
-                                                            <th>#</th>
-                                                            <th>Date</th>
-                                                            <th>Payment</th>
-                                                            <th>Principal</th>
-                                                            <th>Interest</th>
-                                                            <th>Balance</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        {filteredAmort.map(r => (
-                                                            <tr key={r.month}>
-                                                                <td className="text-center text-xs">{r.month}</td>
-                                                                <td className="text-xs">{formatMonthYear(r.date)}</td>
-                                                                <td>{formatCurrency(r.payment)}</td>
-                                                                <td style={{ color: '#00C853' }}>{formatCurrency(r.principal)}</td>
-                                                                <td className="text-red-500">{formatCurrency(r.interest)}</td>
-                                                                <td>{formatCurrency(r.balance)}</td>
-                                                            </tr>
-                                                        ))}
-                                                    </tbody>
-                                                </>
-                                            )}
-                                        </table>
-                                    </div>
-                                </div>
+                                <MortgageAmortTable
+                                    showYearly={showYearly}
+                                    setShowYearly={setShowYearly}
+                                    amortFilter={amortFilter}
+                                    setAmortFilter={setAmortFilter}
+                                    yearOptions={yearOptions}
+                                    filteredAmort={filteredAmort}
+                                    yearlyAmort={yearlyAmort}
+                                />
                             )}
 
                             {tab === 'extra' && (
-                                <div className="animate-fade-in space-y-5">
-                                    <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>
-                                        Add extra payments to see how much interest you can save and how much sooner you&apos;ll pay off your loan.
-                                    </p>
+                                <div className="animate-fade-in space-y-8">
+                                    <div className="glass-panel p-6">
+                                        <div className="flex items-center gap-3 mb-6">
+                                            <TrendingDown className="text-[#0da6f2]" size={24} />
+                                            <div>
+                                                <h3 className="text-lg font-black text-navy-900">Extra Payment Strategy</h3>
+                                                <p className="text-sm text-gray-500">Accelerate your payoff and save thousands in interest.</p>
+                                            </div>
+                                        </div>
 
-                                    <div>
-                                        <label className="input-label">Extra Monthly Payment</label>
-                                        <div className="relative">
-                                            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-bold" style={{ color: 'var(--color-text-muted)' }}>$</span>
-                                            <input
-                                                type="number"
-                                                className="input-field pl-7"
-                                                value={extraMonthly}
-                                                onChange={e => setExtraMonthly(parseFloat(e.target.value) || 0)}
-                                                min={0} step={50}
-                                                aria-label="Extra monthly payment"
-                                            />
+                                        <div className="space-y-6">
+                                            <div>
+                                                <label className="input-label">Additional Monthly Payment</label>
+                                                <div className="relative group">
+                                                    <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">$</span>
+                                                    <input
+                                                        type="number"
+                                                        className="glass-input pl-8"
+                                                        value={extraMonthly}
+                                                        onChange={e => setExtraMonthly(parseFloat(e.target.value) || 0)}
+                                                        min={0} step={50}
+                                                        aria-label="Extra monthly payment"
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <label className="flex items-center gap-3 cursor-pointer p-4 glass-panel hover:bg-white/5 transition-colors rounded-xl group">
+                                                <input
+                                                    type="checkbox"
+                                                    checked={biWeekly}
+                                                    onChange={e => setBiWeekly(e.target.checked)}
+                                                    className="w-5 h-5 rounded border-gray-300 text-[#0da6f2] focus:ring-[#0da6f2] transition-colors cursor-pointer"
+                                                />
+                                                <div className="flex-1">
+                                                    <span className="block text-sm font-bold text-gray-700 group-hover:text-[#0da6f2] transition-colors">Bi-weekly payments</span>
+                                                    <span className="text-xs text-gray-400">Half payment every 2 weeks (13 full payments per year)</span>
+                                                </div>
+                                            </label>
                                         </div>
                                     </div>
-
-                                    <label className="flex items-center gap-3 cursor-pointer">
-                                        <input
-                                            type="checkbox"
-                                            checked={biWeekly}
-                                            onChange={e => setBiWeekly(e.target.checked)}
-                                            className="w-4 h-4 accent-green-600"
-                                        />
-                                        <span className="text-sm font-medium" style={{ color: 'var(--color-text)' }}>
-                                            Bi-weekly payments (half payment every 2 weeks = 13 payments/year)
-                                        </span>
-                                    </label>
 
                                     {extraMonthly > 0 && summary && (() => {
                                         const baseAmort = calcAmortization({ ...inputs, extraMonthly: 0 });
@@ -682,31 +630,36 @@ export default function MortgageCalculator() {
                                         const baseLast = baseAmort[baseAmort.length - 1];
                                         const extraLast = extraAmort[extraAmort.length - 1];
                                         const monthsSaved = baseAmort.length - extraAmort.length;
-                                        const interestSaved = baseLast.cumulativeInterest - extraLast.cumulativeInterest;
+                                        const interestSaved = (baseLast?.cumulativeInterest || 0) - (extraLast?.cumulativeInterest || 0);
+                                        
+                                        if (monthsSaved <= 0) return null;
+
                                         return (
-                                            <div className="p-4 rounded-xl border" style={{ borderColor: '#00C853', background: 'rgba(0,200,83,0.05)' }}>
-                                                <div className="flex items-center gap-2 mb-3">
-                                                    <TrendingDown size={16} style={{ color: '#00C853' }} />
-                                                    <p className="font-bold text-sm" style={{ color: '#00C853' }}>Extra Payment Impact</p>
+                                            <div className="p-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/5 shadow-[0_0_30px_rgba(16,185,129,0.1)] relative overflow-hidden">
+                                                <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none" />
+                                                
+                                                <div className="flex items-center gap-2 mb-6 z-10 relative">
+                                                    <TrendingDown size={20} className="text-emerald-500" />
+                                                    <p className="font-bold text-emerald-600 uppercase tracking-wider text-sm">Potential Savings Impact</p>
                                                 </div>
-                                                <div className="grid grid-cols-2 gap-3">
+                                                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 z-10 relative">
                                                     <div>
-                                                        <p className="text-xs mb-0.5" style={{ color: 'var(--color-text-muted)' }}>Interest Saved</p>
-                                                        <p className="text-lg font-black" style={{ color: '#00C853' }}>{formatCurrency(interestSaved)}</p>
+                                                        <p className="text-xs mb-1 text-emerald-700/70 font-medium uppercase">Interest Saved</p>
+                                                        <p className="text-2xl font-black text-emerald-600 drop-shadow-sm">{formatCurrency(interestSaved)}</p>
                                                     </div>
                                                     <div>
-                                                        <p className="text-xs mb-0.5" style={{ color: 'var(--color-text-muted)' }}>Time Saved</p>
-                                                        <p className="text-lg font-black text-navy-900 dark:text-white">
+                                                        <p className="text-xs mb-1 text-emerald-700/70 font-medium uppercase">Time Saved</p>
+                                                        <p className="text-2xl font-black text-navy-900">
                                                             {Math.floor(monthsSaved / 12)}y {monthsSaved % 12}m
                                                         </p>
                                                     </div>
-                                                    <div>
-                                                        <p className="text-xs mb-0.5" style={{ color: 'var(--color-text-muted)' }}>Original Payoff</p>
-                                                        <p className="text-sm font-bold">{formatMonthYear(baseLast?.date ?? summary.payoffDate)}</p>
+                                                    <div className="border-t lg:border-t-0 lg:border-l border-emerald-500/20 pt-4 lg:pt-0 lg:pl-6">
+                                                        <p className="text-xs mb-1 text-gray-500 font-medium uppercase">Original Payoff</p>
+                                                        <p className="text-base font-bold text-gray-700">{formatMonthYear(baseLast?.date ?? summary.payoffDate)}</p>
                                                     </div>
-                                                    <div>
-                                                        <p className="text-xs mb-0.5" style={{ color: 'var(--color-text-muted)' }}>New Payoff</p>
-                                                        <p className="text-sm font-bold" style={{ color: '#00C853' }}>{formatMonthYear(extraLast?.date ?? summary.payoffDate)}</p>
+                                                    <div className="border-t lg:border-t-0 border-emerald-500/20 pt-4 lg:pt-0">
+                                                        <p className="text-xs mb-1 text-emerald-700/70 font-medium uppercase">New Payoff</p>
+                                                        <p className="text-base font-bold text-emerald-600">{formatMonthYear(extraLast?.date ?? summary.payoffDate)}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -723,25 +676,28 @@ export default function MortgageCalculator() {
                         </div>
                     ) : (
                         /* Empty state */
-                        <div className="card p-12 text-center">
-                            <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: 'var(--color-bg-secondary)' }}>
-                                <span className="text-3xl">🏠</span>
+                        <div className="glass-card p-6 sm:p-12 text-center flex-1 flex flex-col items-center justify-center min-h-[280px] sm:min-h-[500px]">
+                            <div className="w-20 h-20 rounded-full flex items-center justify-center mb-6 bg-[#0da6f2]/10 border border-[#0da6f2]/20 shadow-[0_0_30px_rgba(13,166,242,0.15)] relative">
+                                <div className="absolute inset-0 rounded-full bg-[#0da6f2] animate-ping opacity-20 duration-1000"></div>
+                                <span className="text-4xl text-[#0da6f2]">🏠</span>
                             </div>
-                            <h3 className="text-lg font-bold mb-2" style={{ color: 'var(--color-text)' }}>Enter your loan details</h3>
-                            <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>
-                                Fill in the home price, interest rate, and down payment to see your complete mortgage breakdown.
+                            <h3 className="text-2xl font-black mb-3 text-navy-900">Ready for your details</h3>
+                            <p className="text-base text-gray-500 max-w-sm mx-auto">
+                                Fill in the home price, interest rate, and down payment to generate your premium mortgage breakdown.
                             </p>
                         </div>
                     )}
 
                     {/* Download (Bottom) */}
                     {summary && (
-                        <DownloadButtons
-                            summary={summary}
-                            amortization={amortization}
-                            formState={formState}
-                            calculatorName="Mortgage"
-                        />
+                        <div className="mt-6">
+                            <DownloadButtons
+                                summary={summary}
+                                amortization={amortization}
+                                formState={formState}
+                                calculatorName="Mortgage"
+                            />
+                        </div>
                     )}
 
                     <DisclaimerBanner calculatorName="the Mortgage Calculator" />

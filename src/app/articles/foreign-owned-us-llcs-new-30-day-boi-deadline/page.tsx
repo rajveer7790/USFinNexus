@@ -1,24 +1,49 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, Clock, AlertCircle, Calendar, Globe2 } from 'lucide-react';
+import { Clock, AlertCircle, Calendar, Globe2 } from 'lucide-react';
 import RelatedArticles from '@/components/RelatedArticles';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
     title: 'Foreign-Owned US LLCs: Your New 30-Day BOI Deadline in 2026',
     description: 'Foreign owners of US LLCs face new, strict deadlines in 2026. Learn why the 90-day grace period is gone and how to comply with FinCENs 30-day reporting window.',
+    openGraph: {
+        title: 'Foreign-Owned US LLCs: Your New 30-Day BOI Deadline in 2026',
+        description: 'Foreign owners of US LLCs face new, strict deadlines in 2026. Learn why the 90-day grace period is gone and how to comply with FinCENs 30-day reporting window.',
+        url: 'https://usfinnexus.com/articles/foreign-owned-us-llcs-new-30-day-boi-deadline',
+        type: 'article',
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/images/foreign_owned_deadline_hero_1772351616208.png', width: 1200, height: 630, alt: 'Clock and international currency representing strict 30-day FinCEN BOI reporting deadlines for foreign-owned US LLCs' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Foreign-Owned US LLCs: Your New 30-Day BOI Deadline in 2026',
+        description: 'Foreign owners of US LLCs face new, strict deadlines in 2026. Learn why the 90-day grace period is gone and how to comply with FinCENs 30-day reporting window.',
+        images: ['https://usfinnexus.com/images/foreign_owned_deadline_hero_1772351616208.png'],
+    },
+    alternates: {
+        canonical: 'https://usfinnexus.com/articles/foreign-owned-us-llcs-new-30-day-boi-deadline',
+    },
 };
 
 export default function ArticlePage() {
     return (
+        <>
+        <ArticleSchema
+            title="Foreign-Owned US LLCs: Your New 30-Day BOI Deadline in 2026"
+            description="Foreign owners of US LLCs face new, strict deadlines in 2026. Learn why the 90-day grace period is gone and how to comply with FinCENs 30-day reporting window."
+            url="https://usfinnexus.com/articles/foreign-owned-us-llcs-new-30-day-boi-deadline"
+            datePublished="2026-02-24"
+            dateModified="2026-02-24"
+            authorName="USFinNexus Compliance Team"
+        />
         <article className="max-w-4xl mx-auto px-4 py-12 md:py-20 lg:px-8">
-            <Link href="/articles" className="inline-flex items-center text-sm mb-8 hover:text-blue-600 transition-colors" style={{ color: 'var(--color-text-muted)' }}>
-                <ArrowLeft className="w-4 h-4 mr-2" /> Back to Articles
-            </Link>
+            <Breadcrumbs items={[{ name: 'Articles', item: '/articles' }, { name: 'Foreign Owner Deadline', item: '/articles/foreign-owned-us-llcs-new-30-day-boi-deadline' }]} />
 
             <header className="mb-12">
                 <div className="flex flex-wrap items-center gap-3 mb-6">
-                    <span className="inline-block px-3 py-1 rounded bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400 text-xs font-bold uppercase tracking-wider">
+                    <span className="inline-block px-3 py-1 rounded bg-red-100 text-red-800 text-xs font-bold uppercase tracking-wider">
                         BOI Deadline Alert
                     </span>
                     <span className="text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>Updated: February 24, 2026</span>
@@ -32,13 +57,13 @@ export default function ArticlePage() {
                     The &quot;grace period&quot; for international entrepreneurs operating in the United States is officially over. In 2026, FinCEN tightened its target scope specifically onto foreign nationals utilizing U.S. shell companies. If you are a non-resident alien launching a Wyoming or Delaware LLC, your margin for error has vanished to exactly 30 calendar days.
                 </p>
 
-                <div className="flex items-center gap-4 border-t border-b py-4 border-gray-200 dark:border-gray-800">
+                <div className="flex items-center gap-4 border-t border-b py-4 border-gray-200">
                     <div className="flex-1 flex gap-4 text-sm font-medium">
                         <div className="flex flex-col">
                             <span style={{ color: 'var(--color-text-muted)' }}>Written by</span>
                             <span style={{ color: 'var(--color-text)' }}>USFinNexus Compliance Team</span>
                         </div>
-                        <div className="flex flex-col border-l pl-4 border-gray-200 dark:border-gray-800">
+                        <div className="flex flex-col border-l pl-4 border-gray-200">
                             <span style={{ color: 'var(--color-text-muted)' }}>Reading Time</span>
                             <span style={{ color: 'var(--color-text)' }}>5 minutes</span>
                         </div>
@@ -46,18 +71,18 @@ export default function ArticlePage() {
                 </div>
             </header>
 
-            <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-blue-600 hover:prose-a:text-blue-500">
+            <div className="prose prose-lg max-w-none prose-headings:font-bold prose-a:text-blue-600 hover:prose-a:text-blue-500">
                 <figure className="my-10">
-                    <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-800">
+                    <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
                         <Image
-                            src="/images/boi-hero.png"
+                            src="/images/foreign_owned_deadline_hero_1772351616208.png"
                             alt="Clock and international currency representing strict FinCEN reporting deadlines"
                             fill
                             className="object-cover"
                             priority
                         />
                     </div>
-                    <figcaption className="text-center text-sm mt-3 text-gray-500 dark:text-gray-400">
+                    <figcaption className="text-center text-sm mt-3 text-gray-500">
                         While domestic LLCs receive exemptions, FinCEN has accelerated the timeline for foreign entities operating within US borders.
                     </figcaption>
                 </figure>
@@ -70,12 +95,12 @@ export default function ArticlePage() {
                     However, with the 2026 regulations abandoning domestic enforcement to solely prioritize entities with foreign ties, the Treasury Department implemented a fast-track compliance system.
                 </p>
 
-                <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-6 my-8">
+                <div className="bg-red-50 border-l-4 border-red-500 p-6 my-8">
                     <div className="flex items-start gap-4">
                         <Clock className="w-6 h-6 text-red-600 mt-1 shrink-0" />
                         <div>
-                            <p className="font-bold text-red-900 dark:text-red-300 m-0 mb-2">The New 30-Day Rule</p>
-                            <p className="text-red-800 dark:text-red-200 m-0">
+                            <p className="font-bold text-red-900 m-0 mb-2">The New 30-Day Rule</p>
+                            <p className="text-red-800 m-0">
                                 Any reporting company formed or registered to do business in the United States on or after January 1, 2026, MUST file its initial Beneficial Ownership Information (BOI) report within <strong>30 calendar days</strong>.
                             </p>
                         </div>
@@ -98,22 +123,22 @@ export default function ArticlePage() {
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
-                    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 rounded-xl shadow-sm">
+                    <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm">
                         <h4 className="font-bold text-lg mb-3 flex items-center gap-2" style={{ color: 'var(--color-navy)' }}>
                             <Globe2 className="w-5 h-5 text-indigo-600" />
                             Foreign ID Complexities
                         </h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                        <p className="text-sm text-gray-600">
                             Filing within 30 days means having your acceptable identification ready. Foreign citizens must supply an unexpired foreign passport (driver&apos;s licenses from other countries are NOT accepted by FinCEN).
                         </p>
                     </div>
 
-                    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 rounded-xl shadow-sm">
+                    <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm">
                         <h4 className="font-bold text-lg mb-3 flex items-center gap-2" style={{ color: 'var(--color-navy)' }}>
                             <AlertCircle className="w-5 h-5 text-orange-500" />
                             Company Applicant Data
                         </h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                        <p className="text-sm text-gray-600">
                             You must also report the &quot;Company Applicant&quot; (the person who directed the filing of your LLC). This is often your registered agent or attorney, and tracking down their FinCEN ID takes time.
                         </p>
                     </div>
@@ -145,11 +170,11 @@ export default function ArticlePage() {
                     FinCEN&apos;s 2026 stance is clear: you are welcome to utilize US entity structures, but you will be closely monitored, and you will comply promptly. Incorporate the BOI filing into the very first steps of your operational launch checklist—do not wait for the EIN to arrive, and do not try to file on day 29.
                 </p>
 
-                <hr className="my-10 border-gray-200 dark:border-gray-800" />
+                <hr className="my-10 border-gray-200" />
 
-                <div className="bg-gray-100 dark:bg-gray-900 p-8 rounded-2xl text-center not-prose">
+                <div className="bg-gray-100 p-8 rounded-2xl text-center not-prose">
                     <h3 className="text-2xl font-black mb-3" style={{ color: 'var(--color-navy)' }}>Facing the 30-Day Deadline?</h3>
-                    <p className="mb-6 text-gray-600 dark:text-gray-400">
+                    <p className="mb-6 text-gray-600">
                         Don&apos;t let foreign ID complications or confusing government portals result in daily $500 fines. We specialize in fast-tracking BOI compliance for non-U.S. residents.
                     </p>
                     <button className="btn-primary py-3 px-8 text-sm w-full sm:w-auto shadow-xl">
@@ -163,5 +188,6 @@ export default function ArticlePage() {
 
             <RelatedArticles currentSlug="foreign-owned-us-llcs-new-30-day-boi-deadline" />
         </article>
+        </>
     );
 }

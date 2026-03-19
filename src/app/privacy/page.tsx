@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'Privacy Policy | USFinNexus',
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
     return (
         <div className="max-w-3xl mx-auto px-4 py-12">
+            <Breadcrumbs items={[{ name: 'Privacy Policy', item: '/privacy' }]} />
             <h1 className="text-3xl font-black mb-2" style={{ color: 'var(--color-text)' }}>Privacy Policy</h1>
             <p className="text-sm mb-8" style={{ color: 'var(--color-text-muted)' }}>Last updated: February 2026</p>
 

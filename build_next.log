@@ -1,0 +1,26 @@
+npm warn Unknown user config "always-auth". This will stop working in the next major version of npm.
+
+> usfinnexus@1.0.0 build
+> next build
+
+   ▲ Next.js 15.5.12
+   - Experiments (use with caution):
+     · optimizePackageImports
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 5.4s
+   Skipping linting
+   Checking validity of types ...
+Failed to compile.
+
+./src/app/calculators/retirement/RetirementClient.tsx:38:42
+Type error: Object is possibly 'undefined'.
+
+[0m [90m 36 |[39m             } [36melse[39m {
+ [90m 37 |[39m                 [90m// Drawdown phase (assuming 4% rule of retirement balance)[39m
+[31m[1m>[22m[39m[90m 38 |[39m                 [36mconst[39m yearlyWithdrawal [33m=[39m data[33m.[39mfind(d [33m=>[39m d[33m.[39mage [33m===[39m retireAge)[33m?[39m[33m.[39mbalance [33m*[39m [35m0.04[39m [33m||[39m [35m0[39m[33m;[39m
+ [90m    |[39m                                          [31m[1m^[22m[39m
+ [90m 39 |[39m                 [36mfor[39m ([36mlet[39m m [33m=[39m [35m0[39m[33m;[39m m [33m<[39m [35m12[39m[33m;[39m m[33m++[39m) {
+ [90m 40 |[39m                     balance [33m=[39m balance [33m*[39m ([35m1[39m [33m+[39m monthlyRate) [33m-[39m (yearlyWithdrawal [33m/[39m [35m12[39m)[33m;[39m
+ [90m 41 |[39m                 }[0m
+Next.js build worker exited with code: 1 and signal: null

@@ -1,24 +1,49 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, CheckCircle2, TrendingUp, Users, DollarSign } from 'lucide-react';
+import { CheckCircle2, TrendingUp, Users, DollarSign } from 'lucide-react';
 import RelatedArticles from '@/components/RelatedArticles';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
     title: 'FinCEN BOI Exemption for US Companies: What LLC Owners Must Know 2026',
     description: 'The regulatory landscape has shifted dramatically in 2026. Find out how the new FinCEN domestic exemption kills BOI reporting for the vast majority of US businesses.',
+    openGraph: {
+        title: 'FinCEN BOI Exemption for US Companies: What LLC Owners Must Know 2026',
+        description: 'The regulatory landscape has shifted dramatically in 2026. Find out how the new FinCEN domestic exemption kills BOI reporting for the vast majority of US businesses.',
+        url: 'https://usfinnexus.com/articles/fincen-killed-boi-us-companies-what-llc-owners-must-know',
+        type: 'article',
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/images/fincen_killed_boi_hero_1772351566690.png', width: 1200, height: 630, alt: 'American business shield blocking burdensome federal BOI reporting requirements in 2026' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'FinCEN BOI Exemption for US Companies: What LLC Owners Must Know 2026',
+        description: 'The regulatory landscape has shifted dramatically in 2026. Find out how the new FinCEN domestic exemption kills BOI reporting for the vast majority of US businesses.',
+        images: ['https://usfinnexus.com/images/fincen_killed_boi_hero_1772351566690.png'],
+    },
+    alternates: {
+        canonical: 'https://usfinnexus.com/articles/fincen-killed-boi-us-companies-what-llc-owners-must-know',
+    },
 };
 
 export default function ArticlePage() {
     return (
+        <>
+        <ArticleSchema
+            title="FinCEN BOI Exemption for US Companies: What LLC Owners Must Know 2026"
+            description="The regulatory landscape has shifted dramatically in 2026. Find out how the new FinCEN domestic exemption kills BOI reporting for the vast majority of US businesses."
+            url="https://usfinnexus.com/articles/fincen-killed-boi-us-companies-what-llc-owners-must-know"
+            datePublished="2026-02-24"
+            dateModified="2026-02-24"
+            authorName="USFinNexus Compliance Team"
+        />
         <article className="max-w-4xl mx-auto px-4 py-12 md:py-20 lg:px-8">
-            <Link href="/articles" className="inline-flex items-center text-sm mb-8 hover:text-blue-600 transition-colors" style={{ color: 'var(--color-text-muted)' }}>
-                <ArrowLeft className="w-4 h-4 mr-2" /> Back to Articles
-            </Link>
+            <Breadcrumbs items={[{ name: 'Articles', item: '/articles' }, { name: 'BOI Dead', item: '/articles/fincen-killed-boi-us-companies-what-llc-owners-must-know' }]} />
 
             <header className="mb-12">
                 <div className="flex flex-wrap items-center gap-3 mb-6">
-                    <span className="inline-block px-3 py-1 rounded bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400 text-xs font-bold uppercase tracking-wider">
+                    <span className="inline-block px-3 py-1 rounded bg-green-100 text-green-800 text-xs font-bold uppercase tracking-wider">
                         BOI Exemption
                     </span>
                     <span className="text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>Updated: February 24, 2026</span>
@@ -32,13 +57,13 @@ export default function ArticlePage() {
                     After two years of widespread confusion, legal challenges, and threats of $500 daily penalties, the federal government has dramatically altered the playing field. In 2026, the Financial Crimes Enforcement Network (FinCEN) effectively killed the Beneficial Ownership Information (BOI) reporting requirement for most everyday American small businesses. Here is exactly what changed.
                 </p>
 
-                <div className="flex items-center gap-4 border-t border-b py-4 border-gray-200 dark:border-gray-800">
+                <div className="flex items-center gap-4 border-t border-b py-4 border-gray-200">
                     <div className="flex-1 flex gap-4 text-sm font-medium">
                         <div className="flex flex-col">
                             <span style={{ color: 'var(--color-text-muted)' }}>Written by</span>
                             <span style={{ color: 'var(--color-text)' }}>USFinNexus Compliance Team</span>
                         </div>
-                        <div className="flex flex-col border-l pl-4 border-gray-200 dark:border-gray-800">
+                        <div className="flex flex-col border-l pl-4 border-gray-200">
                             <span style={{ color: 'var(--color-text-muted)' }}>Reading Time</span>
                             <span style={{ color: 'var(--color-text)' }}>7 minutes</span>
                         </div>
@@ -46,18 +71,18 @@ export default function ArticlePage() {
                 </div>
             </header>
 
-            <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-blue-600 hover:prose-a:text-blue-500">
+            <div className="prose prose-lg max-w-none prose-headings:font-bold prose-a:text-blue-600 hover:prose-a:text-blue-500">
                 <figure className="my-10">
-                    <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-800">
+                    <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
                         <Image
-                            src="/images/boi-hero.png"
+                            src="/images/fincen_killed_boi_hero_1772351566690.png"
                             alt="American business shield, blocking burdensome federal reporting"
                             fill
                             className="object-cover"
                             priority
                         />
                     </div>
-                    <figcaption className="text-center text-sm mt-3 text-gray-500 dark:text-gray-400">
+                    <figcaption className="text-center text-sm mt-3 text-gray-500">
                         For 30+ million American small businesses, the threat of FinCEN BOI enforcement has been significantly neutralized.
                     </figcaption>
                 </figure>
@@ -71,26 +96,26 @@ export default function ArticlePage() {
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 not-prose">
-                    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 rounded-xl shadow-sm flex flex-col items-center text-center">
+                    <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm flex flex-col items-center text-center">
                         <TrendingUp className="w-8 h-8 text-blue-500 mb-3" />
                         <h4 className="font-bold text-lg mb-2" style={{ color: 'var(--color-navy)' }}>Prior to 2026</h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                        <p className="text-sm text-gray-600">
                             Over 32 million ordinary US businesses were classified as &quot;Reporting Entities&quot; and forced to comply.
                         </p>
                     </div>
 
-                    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 rounded-xl shadow-sm flex flex-col items-center text-center">
+                    <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm flex flex-col items-center text-center">
                         <Users className="w-8 h-8 text-green-500 mb-3" />
                         <h4 className="font-bold text-lg mb-2" style={{ color: 'var(--color-navy)' }}>The 2026 Shift</h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                        <p className="text-sm text-gray-600">
                             FinCEN pivoted to primarily target entities containing foreign ownership or complex trust structures.
                         </p>
                     </div>
 
-                    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 rounded-xl shadow-sm flex flex-col items-center text-center">
+                    <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm flex flex-col items-center text-center">
                         <DollarSign className="w-8 h-8 text-red-500 mb-3" />
                         <h4 className="font-bold text-lg mb-2" style={{ color: 'var(--color-navy)' }}>The Result</h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                        <p className="text-sm text-gray-600">
                             Millions of American entrepreneurs are saved from accumulating crippling $500 daily non-compliance penalties.
                         </p>
                     </div>
@@ -113,7 +138,7 @@ export default function ArticlePage() {
                 </ul>
 
                 <figure className="my-12">
-                    <div className="relative w-full h-[350px] md:h-[450px] rounded-xl overflow-hidden bg-gray-50 dark:bg-gray-900 flex items-center justify-center border border-gray-200 dark:border-gray-700 p-8">
+                    <div className="relative w-full h-[350px] md:h-[450px] rounded-xl overflow-hidden bg-gray-50 flex items-center justify-center border border-gray-200 p-8">
                         <Image
                             src="/images/boi-exempt.png"
                             alt="BOI Exempt rubber stamp indicating compliance relief"
@@ -153,11 +178,11 @@ export default function ArticlePage() {
                     The 2026 FinCEN updates return sanity to the American small business landscape. By eliminating the BOI burden for 100% U.S.-owned entities, entrepreneurs can go back to focusing on revenue rather than government paperwork. Just ensure you strictly meet the domestic requirements, and remember that selling equity to a foreign partner instantaneously brings the CTA nightmare rushing back.
                 </p>
 
-                <hr className="my-10 border-gray-200 dark:border-gray-800" />
+                <hr className="my-10 border-gray-200" />
 
-                <div className="bg-gray-100 dark:bg-gray-900 p-8 rounded-2xl text-center not-prose">
+                <div className="bg-gray-100 p-8 rounded-2xl text-center not-prose">
                     <h3 className="text-2xl font-black mb-3" style={{ color: 'var(--color-navy)' }}>Are You 100% Certain You Are Exempt?</h3>
-                    <p className="mb-6 text-gray-600 dark:text-gray-400">
+                    <p className="mb-6 text-gray-600">
                         Don&apos;t guess when $500-a-day penalties are on the line. Have our compliance attorneys audit your LLC&apos;s ownership structure to confirm your 2026 exemption status.
                     </p>
                     <button className="btn-primary py-3 px-8 text-sm w-full sm:w-auto shadow-xl">
@@ -171,5 +196,6 @@ export default function ArticlePage() {
 
             <RelatedArticles currentSlug="fincen-killed-boi-us-companies-what-llc-owners-must-know" />
         </article>
+        </>
     );
 }

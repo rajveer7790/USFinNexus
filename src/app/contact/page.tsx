@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Mail, MapPin } from 'lucide-react';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'Contact Us | USFinNexus',
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <div className="max-w-3xl mx-auto px-4 py-12">
+            <Breadcrumbs items={[{ name: 'Contact', item: '/contact' }]} />
             <h1 className="text-3xl font-black mb-6" style={{ color: 'var(--color-text)' }}>Contact Us</h1>
 
             <div className="card p-6 mb-6" style={{ borderLeft: '4px solid #00C853' }}>
