@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { calcClosingCosts, formatCurrency, formatPercent, STATE_TRANSFER_TAX, type ClosingCostLineItem } from '@/lib/formulas';
+import { calcClosingCosts, formatCurrency, formatPercent, type ClosingCostLineItem } from '@/lib/formulas';
 import { exportGenericCSV } from '@/lib/csvExporter';
 import DisclaimerBanner from '@/components/DisclaimerBanner';
 import { DollarSign, Table2 } from 'lucide-react';

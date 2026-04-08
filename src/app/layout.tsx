@@ -87,6 +87,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="en-US" suppressHydrationWarning data-scroll-behavior="smooth">
             <head>
                 <link rel="manifest" href="/manifest.json" />
+                <link rel="dns-prefetch" href="//pagead2.googlesyndication.com" />
+                <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
                 {/* Organization JSON-LD */}
                 <script
                     type="application/ld+json"
@@ -124,7 +126,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body className={`${inter.className} ${plexMono.variable}`} suppressHydrationWarning>
                 <Script
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1373076230922603"
-                    strategy="afterInteractive"
+                    strategy="lazyOnload"
                     crossOrigin="anonymous"
                 />
                 <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" disableTransitionOnChange>

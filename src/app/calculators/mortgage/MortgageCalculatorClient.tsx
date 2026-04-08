@@ -2,11 +2,7 @@
 
 import React, { useState, useCallback, useMemo, useDeferredValue, useTransition } from 'react';
 import dynamic from 'next/dynamic';
-import { 
-    Loader2, TrendingDown, Info, AlertCircle, CheckCircle, 
-    ChevronDown, ChevronUp, Plus, X, Share2, ArrowRight, 
-    Shield, Download, MapPin 
-} from 'lucide-react';
+import { Loader2, TrendingDown, Info, MapPin } from 'lucide-react';
 import { toast } from 'sonner';
 
 const MortgageAmortTable = dynamic(() => import('./MortgageAmortTable'), {
@@ -441,11 +437,11 @@ export default function MortgageCalculator({ initialTab = 'breakdown' }: { initi
                                 <p className="text-sm font-bold uppercase tracking-widest mb-3 text-gray-500">
                                     Total Monthly Payment
                                 </p>
-                                <div className="text-5xl sm:text-6xl md:text-7xl font-black tabular-nums tracking-tighter text-navy-900 transition-all duration-500 ease-out" style={{textShadow: '0 0 40px rgba(13, 166, 242, 0.15)'}}>
-                                    <span className="text-2xl sm:text-4xl align-top mr-1 font-bold text-gray-400">$</span>
+                                <div className="text-3xl sm:text-5xl md:text-7xl font-black tabular-nums tracking-tighter text-navy-900 transition-all duration-500 ease-out" style={{textShadow: '0 0 40px rgba(13, 166, 242, 0.15)'}}>
+                                    <span className="text-lg sm:text-2xl md:text-4xl align-top mr-1 font-bold text-gray-400">$</span>
                                     {summary.totalMonthly.toFixed(0)}
                                 </div>
-                                <p className="text-sm mt-4 font-medium text-gray-400">
+                                <p className="text-xs sm:text-sm mt-3 sm:mt-4 font-medium text-gray-400">
                                     P&I: <strong className="text-gray-700">{formatCurrency(summary.principalAndInterest)}</strong> 
                                     <span className="mx-2 opacity-50">|</span> 
                                     Taxes, Ins, & Fees: <strong className="text-gray-700">{formatCurrency(summary.monthlyPropertyTax + summary.monthlyInsurance + summary.monthlyHOA + summary.monthlyPMI)}</strong>
@@ -467,7 +463,7 @@ export default function MortgageCalculator({ initialTab = 'breakdown' }: { initi
                             </div>
 
                             {/* Tabs Navigation */}
-                            <div className="glass-tab-list flex-wrap justify-start sm:justify-center mb-6 sm:mb-8 mx-auto self-center overflow-x-auto scrollbar-hide w-full">
+                            <div className="glass-tab-list justify-start sm:justify-center mb-6 sm:mb-8 mx-auto self-center overflow-x-auto scrollbar-hide w-full flex-nowrap">
                                 {([
                                     { key: 'breakdown', label: 'Payment Breakdown' },
                                     { key: 'amortization', label: 'Amortization Table' },
@@ -476,7 +472,7 @@ export default function MortgageCalculator({ initialTab = 'breakdown' }: { initi
                                 ] as { key: TabKey; label: string }[]).map(t => (
                                     <button
                                         key={t.key}
-                                        onClick={() => setTab(t.key)}
+                                        onClick={() => switchTab(t.key)}
                                         className={`glass-tab ${tab === t.key ? 'active' : ''}`}
                                         role="tab"
                                         aria-selected={tab === t.key}

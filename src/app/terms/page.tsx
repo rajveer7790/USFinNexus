@@ -2,7 +2,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
-export const metadata: Metadata = { title: 'Terms of Service | USFinNexus', description: 'USFinNexus.com terms of service — calculator results are estimates only.' };
+export const metadata: Metadata = {
+    title: 'Terms of Service | USFinNexus',
+    description: 'USFinNexus.com terms of service — calculator results are estimates only.',
+    alternates: { canonical: 'https://usfinnexus.com/terms' },
+};
 
 export default function TermsPage() {
     return (

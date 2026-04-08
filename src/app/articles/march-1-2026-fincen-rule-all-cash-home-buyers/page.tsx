@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { AlertTriangle, CheckCircle2, FileText, Info, Home, Shield } from 'lucide-react';
+import { AlertTriangle, CheckCircle2, Info, Home, Shield } from 'lucide-react';
 import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';

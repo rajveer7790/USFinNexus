@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { CheckCircle2, TrendingUp, Users, DollarSign } from 'lucide-react';
+import { TrendingUp, Users, DollarSign } from 'lucide-react';
 import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';

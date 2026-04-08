@@ -5,7 +5,8 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'Contact Us | USFinNexus',
-    description: 'Get in touch with the team at USFinNexus.com for inquiries, feedback, and support regarding our mortgage and finance calculators.'
+    description: 'Get in touch with the team at USFinNexus.com for inquiries, feedback, and support regarding our mortgage and finance calculators.',
+    alternates: { canonical: 'https://usfinnexus.com/contact' },
 };
 
 export default function ContactPage() {

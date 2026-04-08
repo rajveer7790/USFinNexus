@@ -56,8 +56,10 @@ export default function RefinancePage() {
                 name="Mortgage Refinance Calculator 2026"
                 description="Compare your current mortgage to a new loan. Find your monthly savings, lifetime savings, and exact break-even point."
                 url="https://usfinnexus.com/calculators/refinance"
+                dateModified="2026-03-01"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Refinance Calculator', item: '/calculators/refinance' }]} />
+            <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026 &middot; 2026 average mortgage rates applied</p>
             <RefinanceClient />
             <RefinanceSeoContent />
             <CalculatorFAQ faqs={REFINANCE_FAQS} title="Mortgage Refinance — Frequently Asked Questions" />

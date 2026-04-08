@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { Edit3, XCircle, CheckCircle, ShieldAlert } from 'lucide-react';
+import { XCircle, CheckCircle, ShieldAlert } from 'lucide-react';
 import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
-import { CheckCircle2, AlertTriangle, TrendingUp, DollarSign, BookOpen } from 'lucide-react';
+import { AlertTriangle, DollarSign, BookOpen } from 'lucide-react';
 import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';

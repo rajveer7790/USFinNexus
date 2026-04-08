@@ -60,8 +60,10 @@ export default function MortgagePage() {
                 name="Free Mortgage Calculator 2026"
                 description="Calculate your full PITI mortgage payment instantly — principal, interest, taxes, insurance & PMI. Free PDF & CSV download."
                 url="https://usfinnexus.com/calculators/mortgage"
+                dateModified="2026-03-01"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Mortgage Calculator', item: '/calculators/mortgage' }]} />
+            <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026 &middot; 2026 FHFA conforming loan limits applied</p>
             <h1 className="sr-only">Free Mortgage Calculator 2026 with PDF Download</h1>
             <MortgageCalculatorClient />
             <MortgageSeoContent />

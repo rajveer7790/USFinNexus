@@ -14,7 +14,7 @@ import CustomSlider from '@/components/ui/CustomSlider';
 export default function RetirementClient() {
     const [currentAge, setCurrentAge] = useState(30);
     const [retireAge, setRetireAge] = useState(65);
-    const [lifeExpectancy, setLifeExpectancy] = useState(90);
+    const [lifeExpectancy, _setLifeExpectancy] = useState(90);
     const [currentSavings, setCurrentSavings] = useState(50000);
     const [monthlyContribution, setMonthlyContribution] = useState(500);
     const [annualReturn, setAnnualReturn] = useState(7);

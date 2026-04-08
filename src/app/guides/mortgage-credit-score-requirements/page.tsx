@@ -5,6 +5,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
     title: 'Credit Score Needed to Buy a House in 2026 | USFinNexus',
     description: 'Find out exactly what credit score you need for FHA, VA, USDA, and Conventional mortgages in 2026.',
+    alternates: { canonical: 'https://usfinnexus.com/guides/mortgage-credit-score-requirements' },
     openGraph: {
         title: 'Mortgage Credit Score Requirements 2026 | USFinNexus',
         description: 'See minimum credit score requirements by loan type and learn how lenders pull your FICO scores.',

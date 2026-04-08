@@ -3,7 +3,11 @@ import Link from 'next/link';
 import { Shield } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
-export const metadata: Metadata = { title: 'Disclaimer | USFinNexus', description: 'Important disclaimer for all USFinNexus.com calculator results.' };
+export const metadata: Metadata = {
+    title: 'Disclaimer | USFinNexus',
+    description: 'Important disclaimer for all USFinNexus.com calculator results.',
+    alternates: { canonical: 'https://usfinnexus.com/disclaimer' },
+};
 
 export default function DisclaimerPage() {
     return (

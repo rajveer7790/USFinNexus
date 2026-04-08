@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { calcGovLoan, formatCurrency, formatPercent, type GovLoanType, US_MORTGAGE_CONSTANTS } from '@/lib/formulas';
+import { calcGovLoan, formatCurrency, formatPercent, type GovLoanType } from '@/lib/formulas';
 import { exportGenericCSV } from '@/lib/csvExporter';
 import DisclaimerBanner from '@/components/DisclaimerBanner';
 import { Shield, Info, Table2, Zap } from 'lucide-react';

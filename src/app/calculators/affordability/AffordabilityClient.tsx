@@ -44,7 +44,7 @@ export default function AffordabilityClient() {
                 <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-[130px]" />
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 relative z-10">
                 <div className="mb-6 sm:mb-12">
                     <div className="flex items-center gap-3 mb-4">
                         <div className="p-2 rounded-xl bg-indigo-500/10 border border-indigo-500/20">
@@ -55,7 +55,7 @@ export default function AffordabilityClient() {
                     <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight leading-none bg-gradient-to-r from-navy-900 via-indigo-500 to-navy-900 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-flow">
                         How Much House Can You Afford?
                     </h1>
-                    <p className="text-gray-500 max-w-2xl font-medium text-lg">
+                    <p className="text-gray-500 max-w-2xl font-medium text-sm sm:text-lg">
                         Smart affordability analysis based on CFPB guidelines and 2026 FHFA loan limits.
                     </p>
                 </div>
@@ -191,13 +191,13 @@ export default function AffordabilityClient() {
                         {result ? (
                             <div className="space-y-5 sm:space-y-8 animate-slide-up">
                                 {/* Comparison Hero Cards */}
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                                     <div className="glass-card p-5 sm:p-10 relative overflow-hidden group border-emerald-500/20">
                                         <div className="absolute top-0 right-0 p-6">
                                             <TrendingUp className="text-emerald-500/20 group-hover:text-emerald-500 group-hover:scale-125 transition-all" size={32} />
                                         </div>
                                         <p className="text-xs font-black uppercase tracking-[0.3em] text-emerald-500 mb-4">Conservative Estimate</p>
-                                        <div className="text-3xl sm:text-5xl font-black tracking-tighter text-glow tabular-nums transition-all group-hover:scale-105 duration-500">
+                                        <div className="text-2xl sm:text-3xl md:text-5xl font-black tracking-tighter text-glow tabular-nums transition-all group-hover:scale-105 duration-500">
                                             {formatCurrency(result.conservativeHomePrice, 0)}
                                         </div>
                                         <p className="text-xs mt-4 sm:mt-6 font-bold uppercase tracking-widest text-gray-500 border-t border-white/5 pt-4 sm:pt-6">
@@ -210,7 +210,7 @@ export default function AffordabilityClient() {
                                             <Zap className="text-indigo-500/20 group-hover:text-indigo-500 group-hover:scale-125 transition-all" size={32} />
                                         </div>
                                         <p className="text-xs font-black uppercase tracking-[0.3em] text-indigo-500 mb-4">Maximum (Stretch)</p>
-                                        <div className="text-3xl sm:text-5xl font-black tracking-tighter tabular-nums transition-all group-hover:scale-105 duration-500">
+                                        <div className="text-2xl sm:text-3xl md:text-5xl font-black tracking-tighter tabular-nums transition-all group-hover:scale-105 duration-500">
                                             {formatCurrency(result.maxHomePrice, 0)}
                                         </div>
                                         <p className="text-xs mt-6 font-bold uppercase tracking-widest text-gray-500 border-t border-white/5 pt-6">

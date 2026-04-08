@@ -3,7 +3,11 @@ import Link from 'next/link';
 import { Linkedin } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
-export const metadata: Metadata = { title: 'About USFinNexus | Free Mortgage Calculators', description: 'About USFinNexus.com — our mission to provide free, spam-free mortgage and finance calculators for Americans.' };
+export const metadata: Metadata = {
+    title: 'About USFinNexus | Free Mortgage Calculators',
+    description: 'About USFinNexus.com — our mission to provide free, spam-free mortgage and finance calculators for Americans.',
+    alternates: { canonical: 'https://usfinnexus.com/about' },
+};
 
 export default function AboutPage() {
     return (
@@ -20,7 +24,7 @@ export default function AboutPage() {
             <div className="space-y-6 text-sm leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>
                 <section>
                     <h2 className="text-lg font-bold mb-2" style={{ color: 'var(--color-text)' }}>Why We Built This</h2>
-                    <p>Every major mortgage calculator site — Bankrate, Zillow, NerdWallet — forces you through a funnel that ends with a lender calling you. They earn commissions from lender referrals. We don&apos;t. We earn through Google AdSense, which means our only incentive is to help you get accurate information quickly.</p>
+                    <p>Every major mortgage calculator site — Bankrate, Zillow, NerdWallet — forces you through a funnel that ends with a lender calling you. They earn commissions from lender referrals. We don&apos;t. Our only incentive is to give you the most accurate, unbiased financial calculations possible — with no strings attached.</p>
                 </section>
 
                 <section>

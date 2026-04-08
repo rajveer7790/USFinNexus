@@ -32,8 +32,10 @@ export default function AmortizationPage() {
                 name="Mortgage Amortization Schedule Calculator 2026"
                 description="Generate a full month-by-month amortization schedule showing principal vs. interest and extra payment impacts."
                 url="https://usfinnexus.com/calculators/amortization"
+                dateModified="2026-03-01"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Amortization Calculator', item: '/calculators/amortization' }]} />
+            <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026 &middot; Standard US mortgage amortization formula</p>
                             <MortgageCalculator initialTab="amortization" />
             <AmortizationSeoContent />
         </main>

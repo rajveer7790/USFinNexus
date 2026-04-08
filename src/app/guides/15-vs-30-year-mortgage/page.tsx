@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 export const metadata: Metadata = {
     title: '15-Year vs. 30-Year Mortgage: Full Breakdown & Math | USFinNexus',
     description: 'Compare a 15-year vs 30-year mortgage. See the exact math on monthly payments, total interest saved, and investment opportunity costs.',
+    alternates: { canonical: 'https://usfinnexus.com/guides/15-vs-30-year-mortgage' },
     openGraph: {
         title: '15-Year vs 30-Year Mortgage Comparison | USFinNexus',
         description: 'Should you take the massive monthly savings of a 30-year, or the massive lifetime interest savings of a 15-year?',

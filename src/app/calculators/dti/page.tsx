@@ -56,8 +56,10 @@ export default function DtiPage() {
                 name="Debt-to-Income (DTI) Calculator 2026"
                 description="Free DTI calculator showing front-end and back-end ratios to check your mortgage readiness."
                 url="https://usfinnexus.com/calculators/dti"
+                dateModified="2026-03-01"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'DTI Calculator', item: '/calculators/dti' }]} />
+            <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026 &middot; CFPB Qualified Mortgage standards applied</p>
                             <div className="pt-8">
                     <DtiClient />
                 </div>

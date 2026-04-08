@@ -41,7 +41,11 @@
       "Bash(ls e:/UsFinNexus/public/images/*.png)",
       "Bash(xargs -I{} basename {})",
       "Bash(head -5 grep -n \"btn-primary\\\\|Free Calculator\\\\|calculators/\" e:/UsFinNexus/src/app/articles/end-of-anonymous-all-cash-home-buying-fincen-march-2026/page.tsx)",
-      "Bash(head -5 grep -n \"btn-primary\\\\|Free Calculator\\\\|calculators/\" e:/UsFinNexus/src/app/articles/fincen-saves-us-small-businesses-500-penalties-2026/page.tsx)"
+      "Bash(head -5 grep -n \"btn-primary\\\\|Free Calculator\\\\|calculators/\" e:/UsFinNexus/src/app/articles/fincen-saves-us-small-businesses-500-penalties-2026/page.tsx)",
+      "Bash(wc -l /e/UsFinNexus/src/lib/*.ts)",
+      "Bash(./node_modules/.bin/tsc --noEmit)",
+      "Bash(./node_modules/.bin/next build:*)",
+      "Bash(./node_modules/.bin/next lint:*)"
     ]
   }
 }

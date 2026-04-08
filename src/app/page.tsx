@@ -2,20 +2,22 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import AdUnit from '@/components/AdUnit';
 import { AD_SLOTS } from '@/lib/adConfig';
+import HomeHeroWidget from '@/components/HomeHeroWidget';
 import {
     Home, DollarSign, TrendingUp, Car, Calculator,
     Scale, ArrowLeftRight, BarChart2, Table2,
     Landmark, FileText, Target, PiggyBank,
     Activity, Percent, LineChart, Map, ChevronRight,
-    BookOpen, Star, CheckCircle, Users, Lock,
-    Shield, Zap, TrendingDown, ArrowRight, Sparkles,
-    Eye, Download, Clock,
+    BookOpen, Star, Lock,
+    Shield, Zap, ArrowRight,
+    Eye, Download,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: 'Free Mortgage & Finance Calculators 2026 | USFinNexus',
     description:
         'Free mortgage, affordability, refinance, auto & personal loan calculators. Instant PDF + CSV downloads — no signup, no email, no lead-gen spam. Built for Americans.',
+    alternates: { canonical: 'https://usfinnexus.com' },
 };
 
 /* ═══ DATA ═══ */
@@ -68,11 +70,24 @@ const TOOLS = [
     { href: '/calculators/closing-costs', icon: FileText, title: 'General Closing', desc: 'National average estimate.', cat: 'regional' },
 ];
 
+const QUICK_TOOLS = [
+    { href: '/calculators/mortgage', icon: Home, title: 'Mortgage', hot: true },
+    { href: '/calculators/affordability', icon: DollarSign, title: 'Affordability', hot: true },
+    { href: '/calculators/dti', icon: Scale, title: 'DTI Ratio' },
+    { href: '/calculators/refinance', icon: TrendingUp, title: 'Refinance' },
+    { href: '/calculators/auto-loan', icon: Car, title: 'Auto Loan' },
+    { href: '/calculators/retirement', icon: LineChart, title: 'Retirement' },
+    { href: '/calculators/income-tax', icon: FileText, title: 'Income Tax' },
+    { href: '/calculators/debt-payoff', icon: Target, title: 'Debt Payoff' },
+    { href: '/calculators/amortization', icon: Table2, title: 'Amortization' },
+    { href: '/calculators/closing-costs', icon: Calculator, title: 'Closing Costs' },
+];
+
 const STATS = [
-    { val: '50,000+', label: 'Monthly Users', src: 'Analytics' },
     { val: '28+', label: 'Free Calculators', src: 'Platform' },
     { val: '$0', label: 'Cost to You', src: 'Always' },
     { val: '0 bytes', label: 'Data Collected', src: 'Privacy' },
+    { val: '100%', label: 'Free, Forever', src: 'Promise' },
 ];
 
 const DIFFS = [
@@ -88,6 +103,21 @@ export default function HomePage() {
     return (
         <div className="neo-root">
 
+            {/* ═══ ANNOUNCEMENT BAR ═══ */}
+            <div className="ph-announce">
+                <div className="ph-announce-inner neo-container">
+                    <span className="ph-ann-dot" />
+                    <span>30-Yr Fixed <strong>6.84%</strong></span>
+                    <span className="ph-ann-sep">·</span>
+                    <span>15-Yr Fixed <strong>6.12%</strong></span>
+                    <span className="ph-ann-sep">·</span>
+                    <span>FHA <strong>6.53%</strong></span>
+                    <span className="ph-ann-sep">·</span>
+                    <span>Conforming <strong>$832,750</strong></span>
+                    <span className="ph-ann-tag">March 2026 · CFPB Compliant</span>
+                </div>
+            </div>
+
             {/* ═══ HERO ═══ */}
             <section className="neo-hero">
                 <div className="neo-orb neo-orb-a" />
@@ -101,7 +131,7 @@ export default function HomePage() {
                             <span className="neo-status-pulse" />
                             CFPB Compliant · March 2026
                         </div>
-                        <h1 className="neo-h1 neo-reveal neo-reveal--d1">
+                        <h1 className="neo-h1">
                             <span className="neo-h1-w1">Smart Financial</span>
                             <span className="neo-h1-w2">Tools. Built for</span>
                             <span className="neo-h1-w3">Americans.</span>
@@ -120,50 +150,45 @@ export default function HomePage() {
                         </div>
                         <div className="neo-hero-trust neo-reveal neo-reveal--d4">
                             {[
-                                { i: Users, t: '50K+ Users' },
                                 { i: Lock, t: 'Zero Data' },
                                 { i: Shield, t: 'CFPB Verified' },
+                                { i: Download, t: 'Free PDF Export' },
                             ].map(x => (
                                 <span key={x.t} className="neo-trust-pill"><x.i size={12} /> {x.t}</span>
                             ))}
                         </div>
+                        {/* Mini stats row */}
+                        <div className="ph-hero-stats neo-reveal neo-reveal--d4">
+                            <div className="ph-hero-stat"><span className="ph-hs-val">28+</span><span className="ph-hs-lbl">Free Tools</span></div>
+                            <div className="ph-hero-stat-div" />
+                            <div className="ph-hero-stat"><span className="ph-hs-val">$0</span><span className="ph-hs-lbl">Cost Forever</span></div>
+                            <div className="ph-hero-stat-div" />
+                            <div className="ph-hero-stat"><span className="ph-hs-val">0 bytes</span><span className="ph-hs-lbl">Data Stored</span></div>
+                        </div>
                     </div>
 
-                    {/* Right — Dashboard Preview */}
+                    {/* Right — Live Interactive Widget */}
                     <div className="neo-hero-right neo-reveal neo-reveal--d3">
-                        <div className="neo-dash">
-                            <div className="neo-dash-top">
-                                <div className="neo-dash-dots">
-                                    <span className="dd-red" /><span className="dd-yel" /><span className="dd-grn" />
-                                </div>
-                                <span className="neo-dash-title">MORTGAGE CALCULATOR</span>
-                            </div>
-                            <div className="neo-dash-amount">$2,847<span>/mo</span></div>
-                            <div className="neo-dash-sub">$450,000 loan · 30yr fixed · 6.84% APR</div>
-                            <div className="neo-dash-bars">
-                                {[
-                                    { l: 'Principal', w: '72', c: 'bar-neo' },
-                                    { l: 'Interest', w: '18', c: 'bar-mag' },
-                                    { l: 'Tax', w: '6', c: 'bar-vio' },
-                                    { l: 'Insurance', w: '4', c: 'bar-amb' },
-                                ].map(b => (
-                                    <div key={b.l} className="neo-bar-row">
-                                        <span className="neo-bar-label">{b.l}</span>
-                                        <div className="neo-bar-track">
-                                            <div className={`neo-bar-fill ${b.c}`} style={{ width: `${b.w}%` }} />
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                            <div className="neo-dash-chips">
-                                <div className="neo-chip"><span className="neo-chip-val">$574K</span><span className="neo-chip-lbl">Total Paid</span></div>
-                                <div className="neo-chip"><span className="neo-chip-val">$124K</span><span className="neo-chip-lbl">Interest</span></div>
-                                <div className="neo-chip"><span className="neo-chip-val">78%</span><span className="neo-chip-lbl">PMI Drop</span></div>
-                            </div>
-                        </div>
+                        <HomeHeroWidget />
                     </div>
                 </div>
             </section>
+
+            {/* ═══ QUICK ACCESS TOOLS ═══ */}
+            <div className="ph-quick-zone">
+                <div className="neo-container">
+                    <div className="ph-quick-label">Popular Calculators</div>
+                    <div className="ph-quick-row">
+                        {QUICK_TOOLS.map(t => (
+                            <Link key={t.href} href={t.href} className="ph-quick-item">
+                                <t.icon size={15} />
+                                <span>{t.title}</span>
+                                {t.hot && <span className="ph-hot">HOT</span>}
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </div>
 
             {/* ═══ TICKER ═══ */}
             <div className="neo-ticker">
@@ -298,7 +323,7 @@ export default function HomePage() {
                 <div className="neo-container neo-cta-inner">
                     <div className="neo-sec-tag neo-sec-tag--dark"><span className="neo-sec-dot" /> Get Started</div>
                     <h2 className="neo-sec-h2 neo-sec-h2--light">Your financial clarity <em>starts here.</em></h2>
-                    <p className="neo-cta-p">Join 50,000+ monthly users making smarter decisions. Always free. Always private.</p>
+                    <p className="neo-cta-p">28+ professional tools. Free PDF exports. Zero lead-gen. Always private.</p>
                     <div className="neo-cta-btns">
                         <Link href="/calculators/mortgage" className="neo-btn-main">
                             <Home size={16} /> Start Mortgage Calculator <ArrowRight size={14} />

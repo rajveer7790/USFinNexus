@@ -5,6 +5,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
     title: 'Best First-Time Homebuyer Programs (2026 Updated) | USFinNexus',
     description: 'A comprehensive guide to local and federal first-time homebuyer programs, grants, and down payment assistance options available in 2026.',
+    alternates: { canonical: 'https://usfinnexus.com/guides/first-time-homebuyer-programs' },
     openGraph: {
         title: 'First-Time Homebuyer Programs 2026 | USFinNexus',
         description: 'Discover grants, tax credits, and 0% down loans designed specifically for first-time buyers.',

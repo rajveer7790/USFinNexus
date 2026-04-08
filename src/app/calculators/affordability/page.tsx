@@ -56,8 +56,10 @@ export default function AffordabilityPage() {
                 name="Home Affordability Calculator 2026"
                 description="Free CFPB-compliant home affordability calculator. Know your max home price, monthly payment, and DTI ratios instantly."
                 url="https://usfinnexus.com/calculators/affordability"
+                dateModified="2026-03-01"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Affordability Calculator', item: '/calculators/affordability' }]} />
+            <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026 &middot; CFPB 28/43 DTI guidelines applied</p>
             <AffordabilityClient />
             <AffordabilitySeoContent />
             <CalculatorFAQ faqs={AFFORDABILITY_FAQS} title="Home Affordability — Frequently Asked Questions" />

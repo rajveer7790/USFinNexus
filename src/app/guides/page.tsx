@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { BookOpen, Globe, Home, Star, Shield, TrendingUp, DollarSign } from 'lucide-react';
+import { BookOpen, Globe, Home } from 'lucide-react';
 import { ALL_GUIDES } from '@/lib/guides';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'Financial Guides 2026 — Mortgage & Cross-Border | USFinNexus',
     description: 'Expert guides on US & Canadian real estate, cross-border mortgages, first-time home buying, and credit requirements.',
+    alternates: { canonical: 'https://usfinnexus.com/guides' },
 };
 
 const CATEGORY_ICONS: Record<string, React.ReactNode> = {

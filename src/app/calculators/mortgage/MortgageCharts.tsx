@@ -2,7 +2,7 @@
 
 import {
     PieChart, Pie, Cell, LineChart, Line, XAxis, YAxis,
-    CartesianGrid, Tooltip, Legend, ResponsiveContainer,
+    CartesianGrid, Tooltip, ResponsiveContainer,
 } from 'recharts';
 import { formatCurrency, formatMonthYear, type AmortizationRow } from '@/lib/formulas';
 

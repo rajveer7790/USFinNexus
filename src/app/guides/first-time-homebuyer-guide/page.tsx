@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 export const metadata: Metadata = {
     title: 'First-Time Homebuyer Guide: Ultimate Step-by-Step Walkthrough | USFinNexus',
     description: 'A massive 2026 step-by-step guide to buying your first home. Includes hidden closing costs, pre-approval pitfalls, making offers, and the exact escrow timeline.',
+    alternates: { canonical: 'https://usfinnexus.com/guides/first-time-homebuyer-guide' },
     openGraph: {
         title: 'Step-by-Step First-Time Homebuyer Guide | USFinNexus',
         description: 'Navigate the complex 2026 housing market with our comprehensive, chronological walkthrough.',

@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 export const metadata: Metadata = {
     title: 'Privacy Policy | USFinNexus',
     description: 'USFinNexus.com privacy policy — we collect minimal data and never sell your information.',
+    alternates: { canonical: 'https://usfinnexus.com/privacy' },
 };
 
 export default function PrivacyPage() {

@@ -29,7 +29,7 @@ export default function DebtPayoffClient() {
     // Defer heavy dual-simulation calculations so inputs stay responsive
     const deferredDebts = useDeferredValue(debts);
     const deferredExtra = useDeferredValue(extra);
-    const isCalculating = deferredDebts !== debts || deferredExtra !== extra;
+    const _isCalculating = deferredDebts !== debts || deferredExtra !== extra;
 
     const snowball = useMemo(() => calcDebtPayoff({ debts: deferredDebts, extraMonthly: deferredExtra }, 'snowball'), [deferredDebts, deferredExtra]);
     const avalanche = useMemo(() => calcDebtPayoff({ debts: deferredDebts, extraMonthly: deferredExtra }, 'avalanche'), [deferredDebts, deferredExtra]);

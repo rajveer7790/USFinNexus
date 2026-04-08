@@ -65,12 +65,12 @@ export default function DownloadButtons({
     };
 
     return (
-        <div className={`flex flex-wrap gap-3 ${className}`}>
+        <div className={`flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 ${className}`}>
             {/* PDF Download */}
             <button
                 onClick={handlePDF}
                 disabled={pdfLoading || !summary}
-                className="btn-green flex-1 min-w-[180px] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:transform-none"
+                className="btn-green flex-1 min-w-0 sm:min-w-[160px] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:transform-none text-sm"
             >
                 {pdfLoading ? (
                     <>
@@ -89,7 +89,7 @@ export default function DownloadButtons({
             <button
                 onClick={handleCSV}
                 disabled={!amortization.length}
-                className="btn-outline flex-1 min-w-[160px] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="btn-outline flex-1 min-w-0 sm:min-w-[140px] disabled:opacity-50 disabled:cursor-not-allowed text-sm"
             >
                 <Table2 size={16} />
                 Download CSV / Excel
@@ -98,7 +98,7 @@ export default function DownloadButtons({
             {/* Share Link */}
             <button
                 onClick={handleShare}
-                className="btn-outline flex-1 min-w-[140px]"
+                className="btn-outline flex-1 min-w-0 sm:min-w-[120px] text-sm"
             >
                 {copied ? <Check size={16} style={{ color: '#00C853' }} /> : <Link2 size={16} />}
                 {copied ? 'Copied!' : 'Copy Share Link'}

@@ -3,6 +3,7 @@ interface WebApplicationSchemaProps {
     description: string;
     url: string;
     category?: string;
+    dateModified?: string;
 }
 
 export default function WebApplicationSchema({
@@ -10,13 +11,15 @@ export default function WebApplicationSchema({
     description,
     url,
     category = 'FinanceApplication',
+    dateModified,
 }: WebApplicationSchemaProps) {
-    const schema = {
+    const schema: Record<string, unknown> = {
         '@context': 'https://schema.org',
         '@type': 'WebApplication',
         name,
         description,
         url,
+        ...(dateModified && { dateModified }),
         applicationCategory: category,
         operatingSystem: 'Any',
         browserRequirements: 'Requires JavaScript',
