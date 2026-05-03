@@ -2,7 +2,8 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-export async function GET(request: Request, { params }: { params: { name: string } }) {
+export async function GET(request: Request, props: { params: Promise<{ name: string }> }) {
+    const params = await props.params;
     const artifactDir = 'C:\\Users\\xiaomi\\.gemini\\antigravity\\brain\\a3011a73-4e73-4708-a44a-fcad3e2aed15';
     try {
         const files = fs.readdirSync(artifactDir);
