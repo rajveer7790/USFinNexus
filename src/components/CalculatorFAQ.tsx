@@ -37,8 +37,8 @@ export default function CalculatorFAQ({ faqs, title = 'Frequently Asked Question
                 }}
             />
 
-            <div className="glass-card p-8">
-                <h2 className="text-2xl font-black mb-8 tracking-tight" style={{ color: 'var(--color-text)' }}>
+            <div className="glass-card p-5">
+                <h2 className="text-xl font-black mb-5 tracking-tight" style={{ color: 'var(--color-text)' }}>
                     {title}
                 </h2>
                 <div className="space-y-3">

@@ -41,7 +41,7 @@ export default function FirstTimeBuyerProgramsBlog() {
             authorName="USFinNexus Editorial Team"
             keywords={['first time home buyer programs 2026', 'down payment assistance', 'FHA loan 2026', 'VA loan zero down', 'USDA loan', 'first time buyer grants', 'home buyer education']}
         />
-        <div className="max-w-4xl mx-auto px-4 py-12">
+        <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
             <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'First-Time Home Buyer Programs 2026', item: '/blog/first-time-home-buyer-programs-2026' }]} />
             <article className="prose prose-slate max-w-none">
 
@@ -238,7 +238,7 @@ export default function FirstTimeBuyerProgramsBlog() {
 
                 <hr className="my-10 border-gray-200" />
 
-                <div className="card p-8 text-center">
+                <div className="card p-4 sm:p-6 text-center">
                     <h3 className="text-xl font-bold mb-3">How Much Home Can You Afford?</h3>
                     <p className="text-sm mb-6" style={{ color: 'var(--color-text-muted)' }}>
                         Plug in your income, debts, and down payment (including DPA funds) to see your realistic home price range.

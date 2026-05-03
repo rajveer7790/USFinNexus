@@ -30,7 +30,7 @@ export default function FirstTimeHomebuyerGuidePage() {
                 </header>
 
                 <div className="flex gap-4 p-6 bg-blue-50 rounded-2xl mb-12">
-                    <h2 className="text-6xl font-black text-blue-200 mt-0">1</h2>
+                    <h2 className="text-4xl sm:text-5xl font-black text-blue-200 mt-0">1</h2>
                     <div>
                         <h3 className="text-2xl font-bold text-navy-900 mt-0 mb-2">Check Your Credit & Stop Using It</h3>
                         <p className="mb-0">
@@ -41,7 +41,7 @@ export default function FirstTimeHomebuyerGuidePage() {
                 </div>
 
                 <div className="flex gap-4 p-6 bg-blue-50 rounded-2xl mb-12">
-                    <h2 className="text-6xl font-black text-blue-200 mt-0">2</h2>
+                    <h2 className="text-4xl sm:text-5xl font-black text-blue-200 mt-0">2</h2>
                     <div>
                         <h3 className="text-2xl font-bold text-navy-900 mt-0 mb-2">Save for the Down Payment AND Closing Costs</h3>
                         <p className="mb-0">
@@ -52,7 +52,7 @@ export default function FirstTimeHomebuyerGuidePage() {
                 </div>
 
                 <div className="flex gap-4 p-6 bg-blue-50 rounded-2xl mb-12">
-                    <h2 className="text-6xl font-black text-blue-200 mt-0">3</h2>
+                    <h2 className="text-4xl sm:text-5xl font-black text-blue-200 mt-0">3</h2>
                     <div>
                         <h3 className="text-2xl font-bold text-navy-900 mt-0 mb-2">Get Fully Pre-Approved</h3>
                         <p className="mb-0">
@@ -62,7 +62,7 @@ export default function FirstTimeHomebuyerGuidePage() {
                 </div>
 
                 <div className="flex gap-4 p-6 bg-blue-50 rounded-2xl mb-12">
-                    <h2 className="text-6xl font-black text-blue-200 mt-0">4</h2>
+                    <h2 className="text-4xl sm:text-5xl font-black text-blue-200 mt-0">4</h2>
                     <div>
                         <h3 className="text-2xl font-bold text-navy-900 mt-0 mb-2">Hire a Buyer&apos;s Real Estate Agent</h3>
                         <p className="mb-0">
@@ -72,7 +72,7 @@ export default function FirstTimeHomebuyerGuidePage() {
                 </div>
 
                 <div className="flex gap-4 p-6 bg-blue-50 rounded-2xl mb-12">
-                    <h2 className="text-6xl font-black text-blue-200 mt-0">5</h2>
+                    <h2 className="text-4xl sm:text-5xl font-black text-blue-200 mt-0">5</h2>
                     <div>
                         <h3 className="text-2xl font-bold text-navy-900 mt-0 mb-2">House Hunting and Making an Offer</h3>
                         <p className="mb-0">
@@ -83,7 +83,7 @@ export default function FirstTimeHomebuyerGuidePage() {
                 </div>
 
                 <div className="flex gap-4 p-6 bg-blue-50 rounded-2xl mb-12">
-                    <h2 className="text-6xl font-black text-blue-200 mt-0">6</h2>
+                    <h2 className="text-4xl sm:text-5xl font-black text-blue-200 mt-0">6</h2>
                     <div>
                         <h3 className="text-2xl font-bold text-navy-900 mt-0 mb-2">Earnest Money and Escrow (The 30-45 Day Sprint)</h3>
                         <p className="mb-0">
@@ -101,7 +101,7 @@ export default function FirstTimeHomebuyerGuidePage() {
                 </div>
 
                 <div className="flex gap-4 p-6 bg-blue-50 rounded-2xl mb-12">
-                    <h2 className="text-6xl font-black text-blue-200 mt-0">7</h2>
+                    <h2 className="text-4xl sm:text-5xl font-black text-blue-200 mt-0">7</h2>
                     <div>
                         <h3 className="text-2xl font-bold text-navy-900 mt-0 mb-2">Clear to Close (CTC) & Closing Day</h3>
                         <p className="mb-0">

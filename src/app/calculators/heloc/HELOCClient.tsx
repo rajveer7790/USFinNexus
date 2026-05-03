@@ -58,7 +58,7 @@ export default function HELOCClient() {
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#0da6f2]/6 rounded-full blur-[130px]" />
                 <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-500/6 rounded-full blur-[120px]" />
             </div>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 sm:pt-7 lg:pt-8 pb-8 sm:pb-12 relative z-10">
             <div className="mb-6 sm:mb-12">
                 <div className="flex items-center gap-3 mb-4">
                     <div className="p-2 rounded-xl bg-[#0da6f2]/10 border border-[#0da6f2]/20">
@@ -77,7 +77,7 @@ export default function HELOCClient() {
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
                 {/* LEFT: Inputs */}
                 <div className="lg:col-span-2 space-y-6">
-                    <div className="glass-card p-4 sm:p-8">
+                    <div className="glass-card p-4 sm:p-6">
                         <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-5 sm:mb-8">
                             Home & Equity
                         </h2>
@@ -136,7 +136,7 @@ export default function HELOCClient() {
                         </div>
                     </div>
 
-                    <div className="glass-card p-4 sm:p-8">
+                    <div className="glass-card p-4 sm:p-6">
                         <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-5 sm:mb-8">
                             HELOC Terms
                         </h2>
@@ -180,7 +180,7 @@ export default function HELOCClient() {
                 {/* RIGHT: Results */}
                 <div className="lg:col-span-3 space-y-6 lg:self-start">
                     {result ? (
-                        <div className="glass-card p-4 sm:p-8 animate-slide-up">
+                        <div className="glass-card p-4 sm:p-6 animate-slide-up">
                             {/* Hero stats */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-5 sm:mb-8">
                                 <div className="text-center glass-panel p-6 bg-emerald-500/5 border-emerald-500/20">
@@ -252,7 +252,7 @@ export default function HELOCClient() {
                             </div>
                         </div>
                     ) : (
-                        <div className="card p-6 sm:p-12 text-center">
+                        <div className="card p-4 sm:p-6 text-center">
                             <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: 'var(--color-bg-secondary)' }}>
                                 <Home size={28} style={{ color: 'var(--color-text-muted)' }} />
                             </div>

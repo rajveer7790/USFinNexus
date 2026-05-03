@@ -38,7 +38,7 @@ export default function ArticlePage() {
                 dateModified="2026-02-24"
                 authorName="USFinNexus Compliance Team"
             />
-        <article className="max-w-4xl mx-auto px-4 py-12 md:py-20 lg:px-8">
+        <article className="max-w-4xl mx-auto px-4 py-7 sm:py-9 lg:px-8">
             <Breadcrumbs items={[{ name: 'Articles', item: '/articles' }, { name: 'BOI Checklist', item: '/articles/boi-exemption-confirmed-2026-free-checklist' }]} />
 
             <header className="mb-12">

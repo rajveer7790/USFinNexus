@@ -36,15 +36,15 @@ export default function ArticlesPage() {
     const rest = ALL_ARTICLES.slice(1);
 
     return (
-        <div className="max-w-6xl mx-auto px-4 py-10 md:py-16">
+        <div className="max-w-6xl mx-auto px-4 py-7 sm:py-9">
             <Breadcrumbs items={[{ name: 'Articles', item: '/articles' }]} />
 
             {/* Header */}
-            <header className="mb-10 md:mb-14">
+            <header className="mb-6 sm:mb-10">
                 <span className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 bg-blue-100 text-blue-700 uppercase tracking-wider">
                     Compliance &amp; Tax Guides
                 </span>
-                <h1 className="text-3xl md:text-5xl font-black mb-3 tracking-tight" style={{ color: 'var(--color-text)' }}>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-black mb-3 tracking-tight" style={{ color: 'var(--color-text)' }}>
                     FinCEN &amp; BOI Compliance Articles
                 </h1>
                 <p className="text-base md:text-lg max-w-2xl" style={{ color: 'var(--color-text-muted)' }}>

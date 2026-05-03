@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
     return (
-        <div className="max-w-3xl mx-auto px-4 py-12">
+        <div className="max-w-3xl mx-auto px-4 py-7 sm:py-9">
             <Breadcrumbs items={[{ name: 'Terms of Service', item: '/terms' }]} />
             <h1 className="text-3xl font-black mb-2" style={{ color: 'var(--color-text)' }}>Terms of Service</h1>
             <p className="text-sm mb-8" style={{ color: 'var(--color-text-muted)' }}>Last updated: February 2026</p>

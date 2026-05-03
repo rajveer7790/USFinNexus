@@ -71,7 +71,7 @@ export default function ClosingCostsClient() {
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#0da6f2]/6 rounded-full blur-[130px]" />
                 <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-500/6 rounded-full blur-[120px]" />
             </div>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 sm:pt-7 lg:pt-8 pb-8 sm:pb-12 relative z-10">
             <div className="mb-6 sm:mb-12">
                 <div className="flex items-center gap-3 mb-4">
                     <div className="p-2 rounded-xl bg-[#0da6f2]/10 border border-[#0da6f2]/20">
@@ -90,7 +90,7 @@ export default function ClosingCostsClient() {
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
                 {/* LEFT: Inputs */}
                 <div className="lg:col-span-2 space-y-6">
-                    <div className="glass-card p-4 sm:p-8">
+                    <div className="glass-card p-4 sm:p-6">
                         <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-5 sm:mb-8">
                             Purchase Details
                         </h2>
@@ -145,12 +145,12 @@ export default function ClosingCostsClient() {
                         <>
                             {/* Summary cards */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                                <div className="glass-card p-5 sm:p-8 text-center animate-slide-up">
+                                <div className="glass-card p-4 sm:p-6 text-center animate-slide-up">
                                     <p className="text-xs font-black uppercase tracking-[0.3em] text-[#0da6f2] mb-4">Buyer Closing Costs</p>
                                     <div className="text-2xl sm:text-4xl font-black text-[#0da6f2]">{formatCurrency(result.buyerTotal)}</div>
                                     <p className="text-xs mt-4 font-bold uppercase tracking-widest text-gray-500">{formatPercent(result.buyerPercent, 1)} of home price</p>
                                 </div>
-                                <div className="glass-card p-5 sm:p-8 text-center animate-slide-up">
+                                <div className="glass-card p-4 sm:p-6 text-center animate-slide-up">
                                     <p className="text-xs font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Seller Closing Costs</p>
                                     <div className="text-2xl sm:text-4xl font-black text-rose-400">{formatCurrency(result.sellerTotal)}</div>
                                     <p className="text-xs mt-4 font-bold uppercase tracking-widest text-gray-500">{formatPercent(result.sellerPercent, 1)} of home price</p>
@@ -230,7 +230,7 @@ export default function ClosingCostsClient() {
                             </button>
                         </>
                     ) : (
-                        <div className="card p-6 sm:p-12 text-center">
+                        <div className="card p-4 sm:p-6 text-center">
                             <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: 'var(--color-bg-secondary)' }}>
                                 <DollarSign size={28} style={{ color: 'var(--color-text-muted)' }} />
                             </div>

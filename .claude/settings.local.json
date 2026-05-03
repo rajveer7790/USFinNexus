@@ -45,7 +45,12 @@
       "Bash(wc -l /e/UsFinNexus/src/lib/*.ts)",
       "Bash(./node_modules/.bin/tsc --noEmit)",
       "Bash(./node_modules/.bin/next build:*)",
-      "Bash(./node_modules/.bin/next lint:*)"
+      "Bash(./node_modules/.bin/next lint:*)",
+      "Bash(find src/app/calculators -name \"*Client.tsx\" -exec sed -i 's/pt-8 sm:pt-16 lg:pt-24/pt-5 sm:pt-7 lg:pt-8/g' {} \\\\;)",
+      "Bash(find src/app/calculators -name \"*Client.tsx\" -exec sed -i 's/pt-6 sm:pt-16 lg:pt-24/pt-5 sm:pt-7 lg:pt-8/g' {} \\\\;)",
+      "Read(//e/UsFinNexus/**)",
+      "Bash(find src/app/calculators -name \"*SeoContent.tsx\" -exec sed -i 's/py-16 mt-8/py-10 mt-6/g' {} \\\\;)",
+      "Bash(find src/app/blog -name \"page.tsx\" -exec sed -i 's/max-w-4xl mx-auto px-4 py-12/max-w-4xl mx-auto px-4 py-7 sm:py-9/g; s/max-w-5xl mx-auto px-4 py-12/max-w-5xl mx-auto px-4 py-7 sm:py-9/g; s/max-w-7xl mx-auto px-4 py-12/max-w-7xl mx-auto px-4 py-7 sm:py-9/g' {} \\\\;)"
     ]
   }
 }

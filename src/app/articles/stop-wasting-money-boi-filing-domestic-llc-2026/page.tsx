@@ -38,7 +38,7 @@ export default function ArticlePage() {
             dateModified="2026-02-25"
             authorName="USFinNexus Compliance Team"
         />
-        <article className="max-w-4xl mx-auto px-4 py-12 md:py-20 lg:px-8">
+        <article className="max-w-4xl mx-auto px-4 py-7 sm:py-9 lg:px-8">
             <Breadcrumbs items={[{ name: 'Articles', item: '/articles' }, { name: 'Domestic LLC Exemption', item: '/articles/stop-wasting-money-boi-filing-domestic-llc-2026' }]} />
 
             <header className="mb-12">

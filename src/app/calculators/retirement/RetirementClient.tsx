@@ -62,7 +62,7 @@ export default function RetirementClient() {
     const finalBalance = chartData[chartData.length - 1]?.balance || 0;
 
     const InputSection = (
-        <div className="glass-card p-6 sm:p-8 space-y-6">
+        <div className="glass-card p-4 sm:p-6 space-y-6">
             <LabeledInput
                 label="Current Age"
                 type="number"

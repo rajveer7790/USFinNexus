@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5 {
 
   /* Premium Inputs — text-base (16px) prevents iOS Safari auto-zoom on focus */
   .glass-input {
-    @apply w-full rounded-xl border-2 px-4 py-3 text-base sm:text-lg font-semibold transition-all duration-300 outline-none;
+    @apply w-full rounded-xl border-2 px-4 py-2.5 text-base font-semibold transition-all duration-300 outline-none;
     background-color: #ffffff;
     border-color: #e2e8f0;
     color: var(--color-text);
@@ -587,9 +587,9 @@ input[type=number] { -moz-appearance: textfield; }
 
 /* ═══ HERO ═══ */
 /* Mobile: auto height prevents giant blank space; min-height only on desktop */
-.neo-hero { position: relative; overflow: hidden; display: flex; align-items: center; padding: 4rem 0 2.5rem; }
-@media (min-width: 1024px) { .neo-hero { min-height: 100vh; padding: 6rem 0 3rem; } }
-.neo-hero-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; position: relative; z-index: 2; }
+.neo-hero { position: relative; overflow: hidden; display: flex; align-items: center; padding: 2.5rem 0 2rem; }
+@media (min-width: 1024px) { .neo-hero { min-height: 80vh; padding: 4rem 0 3rem; } }
+.neo-hero-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: center; position: relative; z-index: 2; }
 @media (min-width: 1024px) { .neo-hero-grid { grid-template-columns: 1fr 1fr; gap: 3rem; } }
 
 /* Status badge */
@@ -653,12 +653,13 @@ input[type=number] { -moz-appearance: textfield; }
 .neo-hero-right { perspective: 900px; }
 .neo-dash {
   width: 100%; max-width: 520px; margin: 0 auto;
-  background: #111628; border: 1px solid rgba(255,255,255,.07); border-radius: 20px;
-  padding: 1.8rem;
+  background: #111628; border: 1px solid rgba(255,255,255,.07); border-radius: 16px;
+  padding: 1.2rem;
   transform: rotateY(-5deg) rotateX(2deg);
   transition: transform .6s ease;
   box-shadow: 0 40px 80px rgba(0,0,0,.4), 0 0 60px rgba(0,232,252,.05);
 }
+@media (min-width: 640px) { .neo-dash { padding: 1.8rem; border-radius: 20px; } }
 .neo-dash:hover { transform: rotateY(0) rotateX(0); }
 .neo-dash-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
 .neo-dash-dots { display: flex; gap: 5px; }
@@ -667,7 +668,8 @@ input[type=number] { -moz-appearance: textfield; }
 .dd-yel { background: #FFBD2E; }
 .dd-grn { background: #28CA41; }
 .neo-dash-title { font-family: var(--font-mono, monospace); font-size: .6rem; color: rgba(255,255,255,.25); letter-spacing: 1.5px; text-transform: uppercase; }
-.neo-dash-amount { font-weight: 800; font-size: 2.6rem; color: #fff; margin-bottom: .3rem; }
+.neo-dash-amount { font-weight: 800; font-size: 2rem; color: #fff; margin-bottom: .3rem; }
+@media (min-width: 640px) { .neo-dash-amount { font-size: 2.6rem; } }
 .neo-dash-amount span { font-size: 1.2rem; color: #00E8FC; font-weight: 600; }
 .neo-dash-sub { font-size: .75rem; color: rgba(255,255,255,.35); margin-bottom: 1.5rem; }
 
@@ -732,8 +734,8 @@ input[type=number] { -moz-appearance: textfield; }
 .neo-sec-p { font-size: .95rem; color: #6C7186; max-width: 500px; line-height: 1.7; }
 
 /* ═══ STEPS ═══ */
-.neo-steps-section { padding: 5rem 0 2rem; }
-@media (min-width: 768px) { .neo-steps-section { padding: 5.5rem 0 2rem; } }
+.neo-steps-section { padding: 3rem 0 1.5rem; }
+@media (min-width: 768px) { .neo-steps-section { padding: 3.5rem 0 1.5rem; } }
 .neo-steps-grid {
   display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2.5rem;
   position: relative;
@@ -756,8 +758,8 @@ input[type=number] { -moz-appearance: textfield; }
 .neo-step-card p { font-size: .78rem; color: #6C7186; line-height: 1.6; }
 
 /* ═══ TOOLS SECTION ═══ */
-.neo-tools-section { padding: 2rem 0 5rem; }
-@media (min-width: 768px) { .neo-tools-section { padding: 2rem 0 5.5rem; } }
+.neo-tools-section { padding: 1.5rem 0 3rem; }
+@media (min-width: 768px) { .neo-tools-section { padding: 1.5rem 0 3.5rem; } }
 
 /* Spotlight hero tool */
 .neo-tool-hero {
@@ -811,7 +813,7 @@ input[type=number] { -moz-appearance: textfield; }
 }
 
 /* ═══ STATS BAND ═══ */
-.neo-stats-band { background: #050810; padding: 5rem 0; position: relative; z-index: 2; overflow: hidden; content-visibility: auto; contain-intrinsic-size: 0 400px; }
+.neo-stats-band { background: #050810; padding: 3rem 0; position: relative; z-index: 2; overflow: hidden; content-visibility: auto; contain-intrinsic-size: 0 400px; }
 .neo-stats-bg {
   position: absolute; inset: 0;
   background:
@@ -838,8 +840,8 @@ input[type=number] { -moz-appearance: textfield; }
 .neo-stat-src { font-family: var(--font-mono, monospace); font-size: .5rem; color: rgba(255,255,255,.2); letter-spacing: 1.5px; text-transform: uppercase; margin-top: .5rem; }
 
 /* ═══ DIFFERENTIATORS ═══ */
-.neo-diff-section { padding: 5rem 0; content-visibility: auto; contain-intrinsic-size: 0 500px; }
-@media (min-width: 768px) { .neo-diff-section { padding: 5.5rem 0; } }
+.neo-diff-section { padding: 3rem 0; content-visibility: auto; contain-intrinsic-size: 0 500px; }
+@media (min-width: 768px) { .neo-diff-section { padding: 3.5rem 0; } }
 .neo-diff-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; margin-top: 2.5rem; }
 @media (min-width: 1024px) { .neo-diff-grid { grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; } }
 .neo-diff-list { display: flex; flex-direction: column; gap: .8rem; }
@@ -896,7 +898,7 @@ input[type=number] { -moz-appearance: textfield; }
 /* ═══ CTA ═══ */
 .neo-cta {
   background: linear-gradient(135deg, #080C18, #151D2E);
-  padding: 5rem 0; text-align: center; position: relative; overflow: hidden;
+  padding: 3rem 0; text-align: center; position: relative; overflow: hidden;
 }
 .neo-cta-glow-a { position: absolute; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(0,232,252,.06), transparent 70%); top: -100px; left: -80px; pointer-events: none; }
 .neo-cta-glow-b { position: absolute; width: 250px; height: 250px; border-radius: 50%; background: radial-gradient(circle, rgba(255,59,139,.05), transparent 70%); bottom: -80px; right: -60px; pointer-events: none; }

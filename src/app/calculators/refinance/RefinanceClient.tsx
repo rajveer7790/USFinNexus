@@ -35,7 +35,7 @@ export default function RefinanceClient() {
                 <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#0da6f2]/10 rounded-full blur-[120px]" />
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 sm:pt-7 lg:pt-8 pb-8 sm:pb-12 relative z-10">
                 <div className="mb-6 sm:mb-12">
                     <div className="flex items-center gap-3 mb-4">
                         <div className="p-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
@@ -55,7 +55,7 @@ export default function RefinanceClient() {
                     {/* LEFT: Inputs */}
                     <div className="lg:col-span-2 space-y-6">
                         {/* Current Mortgage */}
-                        <div className="glass-card p-4 sm:p-8">
+                        <div className="glass-card p-4 sm:p-6">
                             <div className="flex justify-between items-center mb-5 sm:mb-8">
                                 <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-500">Current Mortgage</h2>
                                 <TrendingUp size={16} className="text-rose-400" />
@@ -88,7 +88,7 @@ export default function RefinanceClient() {
                         </div>
 
                         {/* New Loan Terms */}
-                        <div className="glass-card p-4 sm:p-8">
+                        <div className="glass-card p-4 sm:p-6">
                             <div className="flex justify-between items-center mb-5 sm:mb-8">
                                 <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-500">New Loan Terms</h2>
                                 <TrendingDown size={16} className="text-emerald-400" />
@@ -131,14 +131,14 @@ export default function RefinanceClient() {
                     </div>
 
                     {/* RIGHT: Results */}
-                    <div className="lg:col-span-3 space-y-8 lg:self-start">
+                    <div className="lg:col-span-3 space-y-5 lg:self-start">
                         {result ? (
-                            <div className="space-y-8 animate-slide-up">
+                            <div className="space-y-5 animate-slide-up">
                                 {/* Verdict Banner */}
-                                <div className={`glass-card p-8 border-2 ${isWorthIt ? 'border-emerald-500/40' : 'border-amber-500/40'}`}>
-                                    <div className="flex items-start gap-6">
-                                        <div className={`p-4 rounded-2xl flex-shrink-0 ${isWorthIt ? 'bg-emerald-500/10' : 'bg-amber-500/10'}`}>
-                                            {isWorthIt ? <CheckCircle className="text-emerald-500" size={32} /> : <AlertCircle className="text-amber-500" size={32} />}
+                                <div className={`glass-card p-4 sm:p-5 border-2 ${isWorthIt ? 'border-emerald-500/40' : 'border-amber-500/40'}`}>
+                                    <div className="flex items-start gap-4">
+                                        <div className={`p-3 rounded-xl flex-shrink-0 ${isWorthIt ? 'bg-emerald-500/10' : 'bg-amber-500/10'}`}>
+                                            {isWorthIt ? <CheckCircle className="text-emerald-500" size={24} /> : <AlertCircle className="text-amber-500" size={24} />}
                                         </div>
                                         <div>
                                             <p className={`text-xl font-black mb-2 ${isWorthIt ? 'text-emerald-500' : 'text-amber-500'}`}>
@@ -155,32 +155,32 @@ export default function RefinanceClient() {
 
                                 {/* Key Metrics */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                                    <div className="glass-card p-5 sm:p-10 text-center border-emerald-500/20 group">
+                                    <div className="glass-card p-4 sm:p-6 text-center border-emerald-500/20 group">
                                         <p className="text-xs font-black uppercase tracking-[0.3em] text-emerald-500 mb-4">Monthly Savings</p>
-                                        <div className={`text-3xl sm:text-5xl font-black tracking-tighter tabular-nums transition-all group-hover:scale-105 duration-500 ${result.monthlySavings > 0 ? 'text-emerald-500' : 'text-rose-500'}`}>
+                                        <div className={`text-3xl sm:text-4xl font-black tracking-tighter tabular-nums transition-all group-hover:scale-105 duration-500 ${result.monthlySavings > 0 ? 'text-emerald-500' : 'text-rose-500'}`}>
                                             {formatCurrency(Math.abs(result.monthlySavings))}
                                         </div>
-                                        <p className="text-xs mt-4 sm:mt-6 font-bold uppercase tracking-widest text-gray-500 border-t border-white/5 pt-4 sm:pt-6">
+                                        <p className="text-xs mt-3 font-bold uppercase tracking-widest text-gray-500 border-t border-white/5 pt-3">
                                             {result.monthlySavings > 0 ? 'Saved every month' : 'Additional cost/mo'}
                                         </p>
                                     </div>
-                                    <div className="glass-card p-5 sm:p-10 text-center group">
+                                    <div className="glass-card p-4 sm:p-6 text-center group">
                                         <p className="text-xs font-black uppercase tracking-[0.3em] text-[#0da6f2] mb-4">Break-Even</p>
-                                        <div className="text-3xl sm:text-5xl font-black tracking-tighter tabular-nums transition-all group-hover:scale-105 duration-500">
+                                        <div className="text-3xl sm:text-4xl font-black tracking-tighter tabular-nums transition-all group-hover:scale-105 duration-500">
                                             {result.breakEvenMonths === Infinity ? '∞' : result.breakEvenMonths}
                                         </div>
-                                        <p className="text-xs mt-4 sm:mt-6 font-bold uppercase tracking-widest text-gray-500 border-t border-white/5 pt-4 sm:pt-6">
+                                        <p className="text-xs mt-3 font-bold uppercase tracking-widest text-gray-500 border-t border-white/5 pt-3">
                                             {result.breakEvenMonths === Infinity ? 'Never breaks even' : `Months to recover closing costs`}
                                         </p>
                                     </div>
                                 </div>
 
                                 {/* Side-by-Side Comparison */}
-                                <div className="glass-card p-5 sm:p-10">
-                                    <h3 className="text-xs font-black uppercase tracking-[0.2em] mb-6 sm:mb-10 text-gray-500">Old vs. New Comparison</h3>
+                                <div className="glass-card p-4 sm:p-6">
+                                    <h3 className="text-xs font-black uppercase tracking-[0.2em] mb-4 sm:mb-5 text-gray-500">Old vs. New Comparison</h3>
                                     <div className="space-y-0">
                                         {/* Header */}
-                                        <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6">
+                                        <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-3 sm:mb-4">
                                             <div />
                                             <div className="text-xs font-black uppercase tracking-widest text-rose-400 text-center">CURRENT</div>
                                             <div className="text-xs font-black uppercase tracking-widest text-emerald-400 text-center">NEW</div>
@@ -191,7 +191,7 @@ export default function RefinanceClient() {
                                             { label: 'Break-Even Date', current: '—', newVal: result.breakEvenMonths !== Infinity ? formatMonthYear(result.breakEvenDate) : 'Never' },
                                             { label: 'Net Savings (lifetime)', current: '—', newVal: formatCurrency(result.netSavings) },
                                         ].map(row => (
-                                            <div key={row.label} className="grid grid-cols-3 gap-2 sm:gap-4 py-3 sm:py-5 border-b border-white/5 last:border-0 hover:bg-white/5 px-2 rounded-lg transition-colors group">
+                                            <div key={row.label} className="grid grid-cols-3 gap-2 sm:gap-4 py-2 sm:py-3 border-b border-white/5 last:border-0 hover:bg-white/5 px-2 rounded-lg transition-colors group">
                                                 <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">{row.label}</span>
                                                 <span className="text-sm font-black text-center tabular-nums text-rose-400 line-through opacity-70">{row.current}</span>
                                                 <span className="text-sm font-black text-center tabular-nums text-emerald-400">{row.newVal}</span>
@@ -210,7 +210,7 @@ export default function RefinanceClient() {
                                 </div>
                             </div>
                         ) : (
-                            <div className="glass-card p-8 sm:p-24 text-center">
+                            <div className="glass-card p-4 sm:p-6 text-center">
                                 <TrendingDown size={48} className="mx-auto mb-6 text-gray-400 opacity-20" />
                                 <h3 className="text-2xl font-black mb-4">See Your Savings</h3>
                                 <p className="text-gray-500 max-w-md mx-auto font-medium">

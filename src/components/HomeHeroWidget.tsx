@@ -47,13 +47,13 @@ export default function HomeHeroWidget() {
                     <span className="dd-red" /><span className="dd-yel" /><span className="dd-grn" />
                 </div>
                 <span className="neo-dash-title">QUICK CALCULATOR</span>
-                <span style={{ fontSize: 9, color: '#4ade80', fontWeight: 700, letterSpacing: '0.05em' }}>
+                <span className="text-[10px] font-bold tracking-wide" style={{ color: '#4ade80' }}>
                     ● LIVE
                 </span>
             </div>
 
             {/* Live monthly payment */}
-            <div className="neo-dash-amount" style={{ fontSize: '2.2rem', transition: 'all 0.2s ease' }}>
+            <div className="neo-dash-amount transition-all duration-200">
                 ${fmt(monthly)}<span>/mo</span>
             </div>
             <div className="neo-dash-sub" style={{ marginBottom: 0 }}>
@@ -65,71 +65,73 @@ export default function HomeHeroWidget() {
             </div>
 
             {/* Sliders */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10, margin: '14px 0' }}>
+            <div className="flex flex-col gap-2.5 my-3">
                 {/* Home Price */}
                 <div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-                        <span style={{ fontSize: 9, color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase', letterSpacing: '0.07em', fontWeight: 700 }}>
+                    <div className="flex justify-between mb-1">
+                        <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.3)' }}>
                             Home Price
                         </span>
-                        <span style={{ fontSize: 11, color: '#00E8FC', fontWeight: 800 }}>
+                        <span className="text-xs font-extrabold" style={{ color: '#00E8FC' }}>
                             ${(price / 1000).toFixed(0)}K
                         </span>
                     </div>
                     <input
                         type="range" min={100000} max={1500000} step={10000} value={price}
                         onChange={e => setPrice(+e.target.value)}
-                        style={{ width: '100%', accentColor: '#00E8FC', cursor: 'pointer' }}
+                        className="w-full cursor-pointer"
+                        style={{ accentColor: '#00E8FC' }}
                     />
                 </div>
 
                 {/* Down Payment */}
                 <div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-                        <span style={{ fontSize: 9, color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase', letterSpacing: '0.07em', fontWeight: 700 }}>
+                    <div className="flex justify-between mb-1">
+                        <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.3)' }}>
                             Down Payment
                         </span>
-                        <span style={{ fontSize: 11, color: dp >= 20 ? '#4ade80' : '#FFC23E', fontWeight: 800 }}>
+                        <span className="text-xs font-extrabold" style={{ color: dp >= 20 ? '#4ade80' : '#FFC23E' }}>
                             {dp}%{dp >= 20 ? ' ✓' : ' (PMI)'}
                         </span>
                     </div>
                     <input
                         type="range" min={3} max={40} step={1} value={dp}
                         onChange={e => setDp(+e.target.value)}
-                        style={{ width: '100%', accentColor: dp >= 20 ? '#28CA41' : '#FFC23E', cursor: 'pointer' }}
+                        className="w-full cursor-pointer"
+                        style={{ accentColor: dp >= 20 ? '#28CA41' : '#FFC23E' }}
                     />
                 </div>
 
                 {/* Interest Rate */}
                 <div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-                        <span style={{ fontSize: 9, color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase', letterSpacing: '0.07em', fontWeight: 700 }}>
+                    <div className="flex justify-between mb-1">
+                        <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.3)' }}>
                             Interest Rate
                         </span>
-                        <span style={{ fontSize: 11, color: '#B88AFF', fontWeight: 800 }}>
+                        <span className="text-xs font-extrabold" style={{ color: '#B88AFF' }}>
                             {rate.toFixed(2)}%
                         </span>
                     </div>
                     <input
                         type="range" min={3} max={12} step={0.05} value={rate}
                         onChange={e => setRate(+e.target.value)}
-                        style={{ width: '100%', accentColor: '#9B5CFF', cursor: 'pointer' }}
+                        className="w-full cursor-pointer"
+                        style={{ accentColor: '#9B5CFF' }}
                     />
                 </div>
 
                 {/* Loan Term */}
-                <div style={{ display: 'flex', gap: 6 }}>
+                <div className="flex gap-1.5">
                     {[15, 20, 30].map(t => (
                         <button
                             key={t}
                             onClick={() => setTerm(t)}
+                            className="flex-1 min-h-[44px] sm:min-h-[36px] rounded-lg text-xs font-bold transition-all duration-150"
                             style={{
-                                flex: 1, padding: '5px 0', borderRadius: 8,
-                                fontSize: 12, fontWeight: 700,
                                 border: `1px solid ${term === t ? '#00E8FC' : 'rgba(255,255,255,0.06)'}`,
                                 background: term === t ? 'rgba(0,232,252,0.1)' : 'rgba(255,255,255,0.02)',
                                 color: term === t ? '#00E8FC' : 'rgba(255,255,255,0.25)',
-                                cursor: 'pointer', transition: 'all 0.15s',
+                                cursor: 'pointer',
                             }}
                         >
                             {t}yr
@@ -138,8 +140,8 @@ export default function HomeHeroWidget() {
                 </div>
             </div>
 
-            {/* Dynamic PITI breakdown bars (animation:none to allow live updates) */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 12 }}>
+            {/* Dynamic PITI breakdown bars */}
+            <div className="flex flex-col gap-1.5 mb-3">
                 {[
                     { l: 'P & I', w: piW, c: 'bar-neo' },
                     { l: 'Taxes', w: txW, c: 'bar-mag' },
@@ -177,12 +179,10 @@ export default function HomeHeroWidget() {
             {/* CTA */}
             <Link
                 href="/calculators/mortgage"
+                className="flex items-center justify-center gap-1.5 mt-3 min-h-[44px] rounded-xl font-extrabold text-[13px] tracking-wide transition-opacity hover:opacity-90 no-underline"
                 style={{
-                    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
-                    marginTop: 14, padding: '11px 16px', borderRadius: 10,
                     background: 'linear-gradient(135deg, #00E8FC 0%, #0da6f2 55%, #1a4d9a 100%)',
-                    color: '#050810', fontWeight: 800, fontSize: 13, textDecoration: 'none',
-                    letterSpacing: '0.01em', transition: 'opacity 0.2s',
+                    color: '#050810',
                 }}
             >
                 Full Analysis + PDF Report <ArrowRight size={14} />

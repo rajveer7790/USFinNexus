@@ -91,7 +91,7 @@ export default function IncomeTaxClient() {
     }, [income, status, useItemized, itemizedAmount]);
 
     const InputSection = (
-        <div className="glass-card p-6 sm:p-8 space-y-8">
+        <div className="glass-card p-4 sm:p-6 space-y-5">
             <div className="space-y-4">
                 <span className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2 block">Gross Income</span>
                 <LabeledInput
@@ -145,12 +145,12 @@ export default function IncomeTaxClient() {
 
     const ResultsSection = (
         <div className="space-y-6">
-            <div className="glass-panel p-8 border-l-4 border-l-[#00C853] relative overflow-hidden">
+            <div className="glass-panel p-4 sm:p-6 border-l-4 border-l-[#00C853] relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-4 opacity-10">
-                    <span className="text-8xl">💰</span>
+                    <span className="text-5xl sm:text-6xl">💰</span>
                 </div>
                 <p className="text-sm font-bold uppercase tracking-wider text-gray-500 mb-2">Estimated Take-Home Pay</p>
-                <p className="text-5xl sm:text-6xl font-black text-navy-900 tabular-nums tracking-tighter shadow-sm">
+                <p className="text-3xl sm:text-4xl md:text-5xl font-black text-navy-900 tabular-nums tracking-tighter shadow-sm">
                     ${taxCalculation.takeHomePay.toLocaleString(undefined, { maximumFractionDigits: 0 })}
                 </p>
                 <p className="text-sm font-medium text-gray-500 mt-2">After Federal & FICA taxes</p>

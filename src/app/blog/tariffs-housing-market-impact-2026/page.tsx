@@ -41,7 +41,7 @@ export default function TariffsHousingMarketBlog() {
             authorName="USFinNexus Editorial Team"
             keywords={['tariffs housing market', 'tariffs home prices 2026', 'steel tariff construction cost', 'lumber tariff new homes', 'mortgage rates tariffs', 'housing affordability 2026']}
         />
-        <div className="max-w-4xl mx-auto px-4 py-12">
+        <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
             <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Tariffs & Housing Market 2026', item: '/blog/tariffs-housing-market-impact-2026' }]} />
             <article className="prose prose-slate max-w-none">
 
@@ -194,7 +194,7 @@ export default function TariffsHousingMarketBlog() {
 
                 <hr className="my-10 border-gray-200" />
 
-                <div className="card p-8 text-center">
+                <div className="card p-4 sm:p-6 text-center">
                     <h3 className="text-xl font-bold mb-3">See How Tariff-Driven Prices Affect Your Payment</h3>
                     <p className="text-sm mb-6" style={{ color: 'var(--color-text-muted)' }}>
                         Plug in the actual home price and current mortgage rate to see your monthly payment, total interest, and break-even analysis.

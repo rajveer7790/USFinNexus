@@ -68,7 +68,7 @@ export default function RelatedCalculators({
 
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
-            <div className="glass-card p-8">
+            <div className="glass-card p-5">
                 <div className="flex items-center gap-3 mb-6">
                     <div className="p-2 rounded-xl bg-[#0da6f2]/10 border border-[#0da6f2]/20">
                         <Calculator size={18} className="text-[#0da6f2]" />

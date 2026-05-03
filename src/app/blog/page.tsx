@@ -9,6 +9,16 @@ export const metadata: Metadata = {
 };
 
 const POSTS = [
+    { slug: 'investing-during-geopolitical-conflict-2026', title: 'Investing During Geopolitical Conflict: Safe Havens in 2026', date: 'May 2026', category: 'Market Analysis', readTime: '8 min' },
+    { slug: 'defense-cybersecurity-stocks-2026', title: 'The Rise of Defense and Cybersecurity Stocks in a Volatile World', date: 'May 2026', category: 'Investing', readTime: '7 min' },
+    { slug: 'global-conflict-real-estate-impact-2026', title: 'How Global Conflicts Are Impacting US Real Estate in 2026', date: 'May 2026', category: 'Housing Market', readTime: '8 min' },
+    { slug: 'energy-market-investing-crisis-2026', title: 'Energy Markets 2026: Investing in Oil, Gas, and Renewables Amidst Crisis', date: 'May 2026', category: 'Commodities & Energy', readTime: '7 min' },
+    { slug: 'safe-yields-bonds-treasuries-2026', title: 'Safe Yields: US Treasuries vs. Emerging Market Bonds in 2026', date: 'May 2026', category: 'Bonds & Fixed Income', readTime: '6 min' },
+    { slug: 'dividend-vs-growth-investing-2026', title: 'Dividend Investing vs. Growth Stocks: Which Wins in 2026?', date: 'May 2026', category: 'Investing', readTime: '7 min' },
+    { slug: 'ai-personal-finance-investing-2026', title: 'The AI Revolution in Personal Finance: Top 5 Tools for Smart Investors', date: 'May 2026', category: 'FinTech', readTime: '6 min' },
+    { slug: 'house-hacking-guide-2026', title: 'House Hacking in 2026: The Ultimate Guide to Living for Free', date: 'May 2026', category: 'Real Estate Investment', readTime: '9 min' },
+    { slug: 'high-yield-savings-vs-index-funds-2026', title: 'High-Yield Savings vs. Index Funds: Where to Park Your Cash in 2026', date: 'May 2026', category: 'Investing', readTime: '7 min' },
+    { slug: 'top-sunbelt-real-estate-markets-2026', title: 'Top 5 Sunbelt Cities for Real Estate Investment in 2026', date: 'May 2026', category: 'Real Estate Investment', readTime: '8 min' },
     { slug: 'spring-2026-housing-market-forecast', title: 'Spring 2026 Housing Market Forecast: Rates, Prices & What Buyers Should Expect', date: 'Apr 2026', category: 'Market Analysis', readTime: '10 min' },
     { slug: 'tariffs-housing-market-impact-2026', title: 'How Tariffs Are Raising Home Prices in 2026 (And What You Can Do)', date: 'Apr 2026', category: 'Housing Market', readTime: '9 min' },
     { slug: 'homeowner-tax-deductions-2026', title: 'Every Homeowner Tax Deduction You Can Claim in 2026', date: 'Apr 2026', category: 'Taxes', readTime: '10 min' },
@@ -22,11 +32,11 @@ const POSTS = [
     { slug: 'mortgage-amortization-schedule-guide', title: 'How to Read a Mortgage Amortization Schedule', date: 'Feb 2026', category: 'Education', readTime: '6 min' },
 ];
 
-const CATEGORIES = ['All', 'Market Analysis', 'Housing Market', 'Taxes', 'Home Buying', 'Mortgage', 'Affordability', 'Refinance', 'Education', 'Personal Finance'];
+const CATEGORIES = ['All', 'Investing', 'FinTech', 'Real Estate Investment', 'Market Analysis', 'Housing Market', 'Commodities & Energy', 'Bonds & Fixed Income', 'Taxes', 'Home Buying', 'Mortgage', 'Affordability', 'Refinance', 'Education', 'Personal Finance'];
 
 export default function BlogPage() {
     return (
-        <div className="max-w-5xl mx-auto px-4 py-12">
+        <div className="max-w-5xl mx-auto px-4 py-7 sm:py-9">
             <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }]} />
             <div className="mb-6 sm:mb-10">
                 <h1 className="text-2xl sm:text-3xl font-black mb-2 sm:mb-3" style={{ color: 'var(--color-text)' }}>Mortgage & Finance Resources</h1>
@@ -37,7 +47,7 @@ export default function BlogPage() {
 
             <div className="flex gap-2 mb-6 sm:mb-8 overflow-x-auto pb-2 scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap">
                 {CATEGORIES.map(c => (
-                    <button key={c} className={`px-3 sm:px-4 py-1.5 sm:py-2 min-h-[32px] sm:min-h-[36px] rounded-lg text-xs font-semibold border transition-all whitespace-nowrap flex-shrink-0 ${c === 'All' ? 'text-white border-transparent' : 'border-current'}`}
+                    <button key={c} className={`px-3 sm:px-4 py-2.5 sm:py-2 min-h-[44px] sm:min-h-[36px] rounded-lg text-xs font-semibold border transition-all whitespace-nowrap flex-shrink-0 ${c === 'All' ? 'text-white border-transparent' : 'border-current'}`}
                         style={{ background: c === 'All' ? 'var(--color-navy)' : 'transparent', color: c === 'All' ? 'white' : 'var(--color-text-muted)' }}>
                         {c}
                     </button>

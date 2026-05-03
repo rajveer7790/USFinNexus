@@ -90,7 +90,7 @@ export default function StudentLoanClient() {
     }, [dBalance, dRate, dYears, dExtra]);
 
     const InputSection = (
-        <div className="glass-card p-6 sm:p-8 space-y-6">
+        <div className="glass-card p-4 sm:p-6 space-y-6">
             <LabeledInput
                 label="Current Loan Balance"
                 prefix="$"

@@ -41,7 +41,7 @@ export default function SpringHousingMarketBlog() {
             authorName="USFinNexus Editorial Team"
             keywords={['housing market forecast 2026', 'spring housing market', 'mortgage rate forecast 2026', 'home prices 2026', 'housing inventory 2026', 'should I buy a house 2026', 'real estate market prediction']}
         />
-        <div className="max-w-4xl mx-auto px-4 py-12">
+        <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
             <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Spring 2026 Housing Market Forecast', item: '/blog/spring-2026-housing-market-forecast' }]} />
             <article className="prose prose-slate max-w-none">
 
@@ -251,7 +251,7 @@ export default function SpringHousingMarketBlog() {
 
                 <hr className="my-10 border-gray-200" />
 
-                <div className="card p-8 text-center">
+                <div className="card p-4 sm:p-6 text-center">
                     <h3 className="text-xl font-bold mb-3">Run the Numbers for Your Situation</h3>
                     <p className="text-sm mb-6" style={{ color: 'var(--color-text-muted)' }}>
                         See exactly what you can afford at today&apos;s rates and prices. Our free calculators use real data to give you honest answers — no lender referral funnel, no sales pitch.

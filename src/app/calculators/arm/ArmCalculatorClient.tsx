@@ -42,7 +42,7 @@ export default function ArmCalculatorClient() {
                 <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#0da6f2]/8 rounded-full blur-[120px]" />
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 sm:pt-7 lg:pt-8 pb-8 sm:pb-12 relative z-10">
                 <div className="mb-6 sm:mb-12">
                     <div className="flex items-center gap-3 mb-4">
                         <div className="p-2 rounded-xl bg-amber-500/10 border border-amber-500/20">
@@ -61,7 +61,7 @@ export default function ArmCalculatorClient() {
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
                     {/* Left Col - Inputs */}
                     <div className="lg:col-span-2 space-y-6">
-                        <div className="glass-card p-4 sm:p-8">
+                        <div className="glass-card p-4 sm:p-6">
                             <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-5 sm:mb-8">Loan & Initial Terms</h2>
                             <div className="space-y-5 sm:space-y-6">
                                 <div>
@@ -111,7 +111,7 @@ export default function ArmCalculatorClient() {
                             </div>
                         </div>
 
-                        <div className="glass-card p-4 sm:p-8">
+                        <div className="glass-card p-4 sm:p-6">
                             <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-5 sm:mb-8">Adjustment Rules (Caps & Index)</h2>
                             <div className="space-y-6">
                                 {[
@@ -133,15 +133,15 @@ export default function ArmCalculatorClient() {
                     </div>
 
                     {/* Right Col - Results */}
-                    <div className="lg:col-span-3 space-y-8 flex flex-col lg:self-start">
+                    <div className="lg:col-span-3 space-y-5 flex flex-col lg:self-start">
                         {result ? (
                             <>
                                 {/* Initial Payment Hero */}
-                                <div className="glass-card p-5 sm:p-10 animate-slide-up relative overflow-hidden border-amber-500/20">
+                                <div className="glass-card p-4 sm:p-6 animate-slide-up relative overflow-hidden border-amber-500/20">
                                     <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/5 rounded-full blur-2xl pointer-events-none" />
                                     <p className="text-xs font-black uppercase tracking-[0.3em] text-amber-500 mb-4 sm:mb-6">Initial Monthly Payment (P&I)</p>
                                     <div className="flex items-baseline gap-3 mb-4">
-                                        <span className="text-4xl sm:text-6xl font-black tracking-tighter tabular-nums text-amber-400">{formatCurrency(result.initialPayment)}</span>
+                                        <span className="text-3xl sm:text-4xl font-black tracking-tighter tabular-nums text-amber-400">{formatCurrency(result.initialPayment)}</span>
                                         <span className="text-gray-500 text-xl">/mo</span>
                                     </div>
                                     <p className="text-sm text-emerald-500 font-black mb-5 sm:mb-8">
@@ -211,7 +211,7 @@ export default function ArmCalculatorClient() {
                                 </div>
                             </>
                         ) : (
-                            <div className="glass-card p-8 sm:p-24 text-center flex-1 flex flex-col justify-center">
+                            <div className="glass-card p-4 sm:p-6 text-center flex-1 flex flex-col justify-center">
                                 <Activity size={48} className="mx-auto mb-6 text-gray-400 opacity-20" />
                                 <p className="text-2xl font-black mb-4">Enter ARM Details</p>
                                 <p className="text-gray-500 font-medium">Fill in your loan and cap structure to see your full risk analysis.</p>

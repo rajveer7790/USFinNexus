@@ -40,7 +40,7 @@ export default function BlogPost() {
             dateModified="2026-03-12"
             authorName="USFinNexus Editorial Team"
         />
-        <div className="max-w-4xl mx-auto px-4 py-12">
+        <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
             <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Should I Refinance in 2026?', item: '/blog/should-i-refinance-2026' }]} />
             <article className="prose prose-slate max-w-none">
 
@@ -153,7 +153,7 @@ export default function BlogPost() {
 
                 <hr className="my-10 border-gray-200" />
 
-                <div className="card p-8 text-center">
+                <div className="card p-4 sm:p-6 text-center">
                     <h3 className="text-xl font-bold mb-3">Run Your Refinance Numbers</h3>
                     <p className="text-sm mb-6" style={{ color: 'var(--color-text-muted)' }}>
                         Compare your current mortgage to a refinanced scenario and see your exact break-even point.

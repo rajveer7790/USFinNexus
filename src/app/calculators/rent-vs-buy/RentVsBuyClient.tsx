@@ -45,7 +45,7 @@ export default function RentVsBuyClient() {
                 <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-500/6 rounded-full blur-[120px]" />
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 sm:pt-7 lg:pt-8 pb-8 sm:pb-12 relative z-10">
                 <div className="mb-6 sm:mb-12">
                     <div className="flex items-center gap-3 mb-4">
                         <div className="p-2 rounded-xl bg-[#0da6f2]/10 border border-[#0da6f2]/20">
@@ -63,7 +63,7 @@ export default function RentVsBuyClient() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
                     <div className="lg:col-span-2 space-y-6">
-                        <div className="glass-card p-4 sm:p-8">
+                        <div className="glass-card p-4 sm:p-6">
                             <div className="flex items-center gap-2 mb-5 sm:mb-8">
                                 <Home size={16} className="text-emerald-500" />
                                 <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-500">Buying Costs</h2>
@@ -112,12 +112,12 @@ export default function RentVsBuyClient() {
                         </div>
                     </div>
 
-                    <div className="lg:col-span-3 space-y-8 lg:self-start">
+                    <div className="lg:col-span-3 space-y-5 lg:self-start">
                         {result ? (
                             <>
                                 {/* Winner Banner */}
-                                <div className={`glass-card p-5 sm:p-10 animate-slide-up text-center border-2 ${result.winner === 'buy' ? 'border-emerald-500/40' : 'border-[#0da6f2]/40'}`}>
-                                    <div className="text-6xl mb-6">{result.winner === 'buy' ? '🏠' : '🏢'}</div>
+                                <div className={`glass-card p-4 sm:p-6 animate-slide-up text-center border-2 ${result.winner === 'buy' ? 'border-emerald-500/40' : 'border-[#0da6f2]/40'}`}>
+                                    <div className="text-4xl mb-4">{result.winner === 'buy' ? '🏠' : '🏢'}</div>
                                     <p className={`text-3xl font-black mb-3 ${result.winner === 'buy' ? 'text-emerald-500' : 'text-[#0da6f2]'}`}>
                                         {result.winner === 'buy' ? 'Buying Wins!' : 'Renting Wins!'}
                                     </p>
@@ -132,7 +132,7 @@ export default function RentVsBuyClient() {
                                         { label: 'Home Equity Built', value: formatCurrency(result.homeEquity), color: 'text-emerald-500' },
                                         { label: 'Break-Even Year', value: `Year ${result.breakEvenYear}`, color: 'text-amber-500' },
                                     ].map(s => (
-                                        <div key={s.label} className="glass-card p-4 sm:p-8 text-center group">
+                                        <div key={s.label} className="glass-card p-4 sm:p-6 text-center group">
                                             <p className="text-xs font-black uppercase tracking-[0.3em] text-gray-500 mb-4">{s.label}</p>
                                             <p className={`text-3xl font-black tabular-nums transition-all group-hover:scale-105 duration-300 ${s.color}`}>{s.value}</p>
                                         </div>
@@ -155,7 +155,7 @@ export default function RentVsBuyClient() {
                                 </div>
                             </>
                         ) : (
-                            <div className="glass-card p-8 sm:p-24 text-center">
+                            <div className="glass-card p-4 sm:p-6 text-center">
                                 <ArrowLeftRight size={48} className="mx-auto mb-6 text-gray-400 opacity-20" />
                                 <p className="text-2xl font-black mb-4">Enter your details</p>
                                 <p className="text-gray-500 font-medium">Fill in both tabs to see a comprehensive rent vs. buy analysis.</p>

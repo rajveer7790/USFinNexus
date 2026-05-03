@@ -66,7 +66,7 @@ export default function ComparisonClient() {
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#0da6f2]/6 rounded-full blur-[130px]" />
                 <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-500/6 rounded-full blur-[120px]" />
             </div>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 sm:pt-7 lg:pt-8 pb-8 sm:pb-12 relative z-10">
             <div className="mb-6 sm:mb-12">
                 <div className="flex items-center gap-3 mb-4">
                     <div className="p-2 rounded-xl bg-[#0da6f2]/10 border border-[#0da6f2]/20">

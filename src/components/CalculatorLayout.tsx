@@ -36,7 +36,7 @@ export default function CalculatorLayout({
         <div className="bg-[#fcfdfd] min-h-screen font-sans selection:bg-[#0da6f2]/20 text-slate-900">
             {/* ── HEADER AREA ── */}
             <header className="bg-white border-b border-slate-100">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 lg:py-16">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
                     <div className="max-w-4xl">
                         <div className="flex items-center gap-2 mb-4">
                             <Link href="/" className="text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-[#0da6f2] transition-colors">USFinNexus</Link>
@@ -51,7 +51,7 @@ export default function CalculatorLayout({
                             {description}
                         </p>
 
-                        <div className="flex flex-wrap items-center gap-3 sm:gap-6 mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-slate-50">
+                        <div className="flex flex-wrap items-center gap-3 sm:gap-4 mt-4 sm:mt-5 pt-3 sm:pt-4 border-t border-slate-50">
                             <div className="flex items-center gap-2 text-xs font-bold text-slate-400">
                                 <Clock size={14} />
                                 Updated: {lastUpdated}
@@ -77,15 +77,15 @@ export default function CalculatorLayout({
             </header>
 
             {/* ── MAIN GRID ── */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
-                <div className="flex flex-col lg:flex-row gap-10 lg:gap-14">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
+                <div className="flex flex-col lg:flex-row gap-6 lg:gap-10">
                     
                     {/* LEFT: Calculator Engine */}
                     <main className="flex-1 min-w-0">
                         
                         {/* EXPERT SUMMARY (ABOVE THE FOLD SEO) */}
                         {expertSummary && (
-                            <div className="mb-10 p-6 bg-blue-50/50 border border-blue-100 rounded-2xl flex items-start gap-4">
+                            <div className="mb-6 p-4 bg-blue-50/50 border border-blue-100 rounded-xl flex items-start gap-3">
                                 <div className="p-2 bg-white rounded-xl shadow-sm border border-blue-100 shrink-0">
                                     <Info size={20} className="text-[#0da6f2]" />
                                 </div>
@@ -101,7 +101,7 @@ export default function CalculatorLayout({
                         </div>
 
                         {/* ── IN-CONTENT AD SLOT ── */}
-                        <div className="mt-10 sm:mt-16 w-full bg-slate-50 border border-dashed border-slate-200 rounded-xl flex flex-col items-center justify-center py-6 sm:py-10">
+                        <div className="mt-8 sm:mt-10 w-full bg-slate-50 border border-dashed border-slate-200 rounded-xl flex flex-col items-center justify-center py-5 sm:py-7">
                             <p className="text-xs font-black text-slate-300 uppercase tracking-[0.2em] mb-4">Advertisement</p>
                             <div className="w-full max-w-[728px] h-[90px] bg-slate-100/50 rounded flex items-center justify-center text-slate-300 text-xs font-medium">
                                 AdSense Leaderboard (Responsive)
@@ -110,7 +110,7 @@ export default function CalculatorLayout({
                     </main>
 
                     {/* RIGHT: Sidebar (Sticky) */}
-                    <aside className="w-full lg:w-[320px] flex-shrink-0 space-y-8">
+                    <aside className="w-full lg:w-[300px] flex-shrink-0 space-y-5">
                         
                         {/* ── TOP SIDEBAR AD SLOT (hidden on mobile) ── */}
                         <div className="hidden lg:flex bg-slate-50 border border-slate-200 rounded-2xl flex-col items-center justify-center p-4 min-h-[280px]">
@@ -124,12 +124,12 @@ export default function CalculatorLayout({
                         <RelatedCalculators exclude={[pathname]} variant="sidebar" limit={5} />
 
                         {/* 2026 MARKET BENCHMARKS */}
-                        <div className="bg-white border border-slate-200 rounded-2xl p-6">
-                            <div className="flex items-center gap-2 mb-6">
-                                <AlertCircle size={18} className="text-[#0da6f2]" />
+                        <div className="bg-white border border-slate-200 rounded-2xl p-4">
+                            <div className="flex items-center gap-2 mb-4">
+                                <AlertCircle size={16} className="text-[#0da6f2]" />
                                 <h3 className="font-black text-slate-900 text-sm">Market Benchmarks</h3>
                             </div>
-                            <div className="space-y-4">
+                            <div className="space-y-3">
                                 {[
                                     { k: 'Avg 30-Yr Fixed', v: '6.84%' },
                                     { k: 'Avg 15-Yr Fixed', v: '6.12%' },
@@ -156,10 +156,10 @@ export default function CalculatorLayout({
 
                         {/* MARKET INSIGHTS */}
                         <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden">
-                            <div className="bg-slate-900 px-6 py-4">
+                            <div className="bg-slate-900 px-4 py-3">
                                 <h3 className="font-bold text-white text-sm">Expert Insights</h3>
                             </div>
-                            <div className="p-6 space-y-5">
+                            <div className="p-4 space-y-4">
                                 {LATEST_INSIGHTS.map(article => (
                                     <Link key={article.href} href={article.href} className="group block space-y-1">
                                         <p className="text-xs font-black uppercase text-slate-400 group-hover:text-[#0da6f2] transition-colors">{article.tag}</p>

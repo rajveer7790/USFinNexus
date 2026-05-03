@@ -38,7 +38,7 @@ export default function ArticlePage() {
                 dateModified="2026-03-01"
                 authorName="USFinNexus CPA Advisory Board"
             />
-        <article className="max-w-4xl mx-auto px-4 py-12 md:py-20 lg:px-8">
+        <article className="max-w-4xl mx-auto px-4 py-7 sm:py-9 lg:px-8">
             <Breadcrumbs items={[{ name: 'Articles', item: '/articles' }, { name: 'Tax Brackets', item: '/articles/2026-income-tax-brackets-how-the-tcja-sunset-affects-you' }]} />
 
             <header className="mb-12">

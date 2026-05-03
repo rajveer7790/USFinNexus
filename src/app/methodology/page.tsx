@@ -78,7 +78,7 @@ const FORMULAS = [
 
 export default function MethodologyPage() {
     return (
-        <div className="max-w-4xl mx-auto px-4 py-12 md:py-20">
+        <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
             <Breadcrumbs items={[{ name: 'Methodology', item: '/methodology' }]} />
 
             <header className="mb-12">

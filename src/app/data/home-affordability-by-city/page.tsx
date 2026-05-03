@@ -13,13 +13,13 @@ export const metadata: Metadata = {
 
 export default function AffordabilityByCityPage() {
     return (
-        <main className="bg-white min-h-screen py-16">
+        <main className="bg-white min-h-screen py-8 sm:py-10">
             <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-blue">
-                <header className="mb-12 text-center">
-                    <h1 className="text-4xl md:text-5xl font-black text-navy-900 mb-4">
+                <header className="mb-6 sm:mb-10 text-center">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy-900 mb-4">
                         2026 Home Affordability Index by Major US City
                     </h1>
-                    <p className="text-xl text-gray-500">
+                    <p className="text-base sm:text-lg text-gray-500">
                         The true measure of affordability isn&apos;t just the price of the house—it&apos;s the price of the house compared to what local companies pay their workers.
                     </p>
                 </header>
@@ -37,36 +37,36 @@ export default function AffordabilityByCityPage() {
                     <table className="min-w-full text-left border-collapse">
                         <thead>
                             <tr className="bg-red-50">
-                                <th className="p-4 border">Metro Area</th>
-                                <th className="p-4 border">Median Income</th>
-                                <th className="p-4 border">Median Home</th>
-                                <th className="p-4 border">Affordability Ratio</th>
+                                <th className="p-2 sm:p-4 border text-xs sm:text-sm font-semibold">Metro Area</th>
+                                <th className="p-2 sm:p-4 border text-xs sm:text-sm font-semibold">Median Income</th>
+                                <th className="p-2 sm:p-4 border text-xs sm:text-sm font-semibold">Median Home</th>
+                                <th className="p-2 sm:p-4 border text-xs sm:text-sm font-semibold">Affordability Ratio</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td className="p-4 border font-bold">San Jose, CA</td>
-                                <td className="p-4 border">$150,000</td>
-                                <td className="p-4 border">$1,450,000</td>
-                                <td className="p-4 border font-bold text-red-600">9.6x</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold">San Jose, CA</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$150,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$1,450,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold text-red-600">9.6x</td>
                             </tr>
                             <tr>
-                                <td className="p-4 border font-bold">Los Angeles, CA</td>
-                                <td className="p-4 border">$85,000</td>
-                                <td className="p-4 border">$820,000</td>
-                                <td className="p-4 border font-bold text-red-600">9.6x</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold">Los Angeles, CA</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$85,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$820,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold text-red-600">9.6x</td>
                             </tr>
                             <tr>
-                                <td className="p-4 border font-bold">San Diego, CA</td>
-                                <td className="p-4 border">$95,000</td>
-                                <td className="p-4 border">$890,000</td>
-                                <td className="p-4 border font-bold text-red-600">9.3x</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold">San Diego, CA</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$95,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$890,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold text-red-600">9.3x</td>
                             </tr>
                             <tr>
-                                <td className="p-4 border font-bold">Miami, FL</td>
-                                <td className="p-4 border">$68,000</td>
-                                <td className="p-4 border">$590,000</td>
-                                <td className="p-4 border font-bold text-red-600">8.6x</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold">Miami, FL</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$68,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$590,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold text-red-600">8.6x</td>
                             </tr>
                         </tbody>
                     </table>
@@ -81,36 +81,36 @@ export default function AffordabilityByCityPage() {
                     <table className="min-w-full text-left border-collapse">
                         <thead>
                             <tr className="bg-green-50">
-                                <th className="p-4 border">Metro Area</th>
-                                <th className="p-4 border">Median Income</th>
-                                <th className="p-4 border">Median Home</th>
-                                <th className="p-4 border">Affordability Ratio</th>
+                                <th className="p-2 sm:p-4 border text-xs sm:text-sm font-semibold">Metro Area</th>
+                                <th className="p-2 sm:p-4 border text-xs sm:text-sm font-semibold">Median Income</th>
+                                <th className="p-2 sm:p-4 border text-xs sm:text-sm font-semibold">Median Home</th>
+                                <th className="p-2 sm:p-4 border text-xs sm:text-sm font-semibold">Affordability Ratio</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td className="p-4 border font-bold">Cleveland, OH</td>
-                                <td className="p-4 border">$63,000</td>
-                                <td className="p-4 border">$195,000</td>
-                                <td className="p-4 border font-bold text-green-600">3.1x</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold">Cleveland, OH</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$63,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$195,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold text-green-600">3.1x</td>
                             </tr>
                             <tr>
-                                <td className="p-4 border font-bold">Pittsburgh, PA</td>
-                                <td className="p-4 border">$68,000</td>
-                                <td className="p-4 border">$215,000</td>
-                                <td className="p-4 border font-bold text-green-600">3.1x</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold">Pittsburgh, PA</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$68,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$215,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold text-green-600">3.1x</td>
                             </tr>
                             <tr>
-                                <td className="p-4 border font-bold">St. Louis, MO</td>
-                                <td className="p-4 border">$72,000</td>
-                                <td className="p-4 border">$240,000</td>
-                                <td className="p-4 border font-bold text-green-600">3.3x</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold">St. Louis, MO</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$72,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$240,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold text-green-600">3.3x</td>
                             </tr>
                             <tr>
-                                <td className="p-4 border font-bold">Detroit, MI</td>
-                                <td className="p-4 border">$70,000</td>
-                                <td className="p-4 border">$235,000</td>
-                                <td className="p-4 border font-bold text-green-600">3.3x</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold">Detroit, MI</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$70,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$235,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold text-green-600">3.3x</td>
                             </tr>
                         </tbody>
                     </table>

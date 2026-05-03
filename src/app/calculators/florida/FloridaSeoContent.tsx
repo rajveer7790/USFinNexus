@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function FloridaSeoContent() {
     return (
-        <section className="bg-white border-t border-gray-100 py-16 mt-8">
+        <section className="bg-white border-t border-gray-100 py-10 mt-6">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-blue">
                 <h2 className="text-3xl font-black text-navy-900 mb-6">
                     Buying in Florida: The Insurance Crisis and HOAs

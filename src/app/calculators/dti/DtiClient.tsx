@@ -35,7 +35,7 @@ export default function DtiClient() {
                 <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-500/8 rounded-full blur-[120px]" />
             </div>
 
-            <div className="max-w-2xl mx-auto px-4 pt-8 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 relative z-10">
+            <div className="max-w-2xl mx-auto px-4 pt-5 sm:pt-7 lg:pt-8 pb-8 sm:pb-12 relative z-10">
                 <div className="mb-6 sm:mb-12">
                     <div className="flex items-center gap-3 mb-4">
                         <div className="p-2 rounded-xl bg-[#0da6f2]/10 border border-[#0da6f2]/20">
@@ -84,13 +84,13 @@ export default function DtiClient() {
                     </div>
 
                     {/* Result Card */}
-                    <div className={`glass-card p-5 sm:p-10 text-center border-2 ${status.border}`}>
+                    <div className={`glass-card p-4 sm:p-6 text-center border-2 ${status.border}`}>
                         <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-8 ${status.bg} ${status.color}`}>
                             <StatusIcon size={12} />
                             {status.label}
                         </div>
 
-                        <div className={`text-5xl sm:text-8xl font-black tracking-tighter mb-2 tabular-nums ${status.color}`}>
+                        <div className={`text-4xl sm:text-5xl font-black tracking-tighter mb-2 tabular-nums ${status.color}`}>
                             {dti.toFixed(1)}%
                         </div>
                         <p className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-10">Your DTI Ratio</p>

@@ -13,13 +13,13 @@ export const metadata: Metadata = {
 
 export default function AffordabilityByStatePage() {
     return (
-        <main className="bg-white min-h-screen py-16">
+        <main className="bg-white min-h-screen py-8 sm:py-10">
             <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-blue">
-                <header className="mb-12 text-center">
-                    <h1 className="text-4xl md:text-5xl font-black text-navy-900 mb-4">
+                <header className="mb-6 sm:mb-10 text-center">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy-900 mb-4">
                         How Much Income Do You Need to Buy a House in Every US State? (2026 Data)
                     </h1>
-                    <p className="text-xl text-gray-500">
+                    <p className="text-base sm:text-lg text-gray-500">
                         Based on the latest 2026 median home prices, state-specific property taxes, and a 6.5% interest rate, here is the exact salary you need to comfortably afford a home.
                     </p>
                 </header>
@@ -40,36 +40,36 @@ export default function AffordabilityByStatePage() {
                     <table className="min-w-full text-left border-collapse">
                         <thead>
                             <tr className="bg-red-50">
-                                <th className="p-4 border">State</th>
-                                <th className="p-4 border">Median Home Price</th>
-                                <th className="p-4 border">Required Salary</th>
+                                <th className="p-2 sm:p-4 border text-xs sm:text-sm font-semibold">State</th>
+                                <th className="p-2 sm:p-4 border text-xs sm:text-sm font-semibold">Median Home Price</th>
+                                <th className="p-2 sm:p-4 border text-xs sm:text-sm font-semibold">Required Salary</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td className="p-4 border font-bold">1. Hawaii</td>
-                                <td className="p-4 border">$850,000</td>
-                                <td className="p-4 border font-bold text-red-600">$215,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold">1. Hawaii</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$850,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold text-red-600">$215,000</td>
                             </tr>
                             <tr>
-                                <td className="p-4 border font-bold">2. California</td>
-                                <td className="p-4 border">$780,000</td>
-                                <td className="p-4 border font-bold text-red-600">$195,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold">2. California</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$780,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold text-red-600">$195,000</td>
                             </tr>
                             <tr>
-                                <td className="p-4 border font-bold">3. Massachusetts</td>
-                                <td className="p-4 border">$630,000</td>
-                                <td className="p-4 border font-bold text-red-600">$165,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold">3. Massachusetts</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$630,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold text-red-600">$165,000</td>
                             </tr>
                             <tr>
-                                <td className="p-4 border font-bold">4. Washington</td>
-                                <td className="p-4 border">$610,000</td>
-                                <td className="p-4 border font-bold text-red-600">$158,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold">4. Washington</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$610,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold text-red-600">$158,000</td>
                             </tr>
                             <tr>
-                                <td className="p-4 border font-bold">5. Colorado</td>
-                                <td className="p-4 border">$590,000</td>
-                                <td className="p-4 border font-bold text-red-600">$152,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold">5. Colorado</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$590,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold text-red-600">$152,000</td>
                             </tr>
                         </tbody>
                     </table>
@@ -80,36 +80,36 @@ export default function AffordabilityByStatePage() {
                     <table className="min-w-full text-left border-collapse">
                         <thead>
                             <tr className="bg-green-50">
-                                <th className="p-4 border">State</th>
-                                <th className="p-4 border">Median Home Price</th>
-                                <th className="p-4 border">Required Salary</th>
+                                <th className="p-2 sm:p-4 border text-xs sm:text-sm font-semibold">State</th>
+                                <th className="p-2 sm:p-4 border text-xs sm:text-sm font-semibold">Median Home Price</th>
+                                <th className="p-2 sm:p-4 border text-xs sm:text-sm font-semibold">Required Salary</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td className="p-4 border font-bold">1. West Virginia</td>
-                                <td className="p-4 border">$165,000</td>
-                                <td className="p-4 border font-bold text-green-600">$48,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold">1. West Virginia</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$165,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold text-green-600">$48,000</td>
                             </tr>
                             <tr>
-                                <td className="p-4 border font-bold">2. Mississippi</td>
-                                <td className="p-4 border">$180,000</td>
-                                <td className="p-4 border font-bold text-green-600">$52,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold">2. Mississippi</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$180,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold text-green-600">$52,000</td>
                             </tr>
                             <tr>
-                                <td className="p-4 border font-bold">3. Arkansas</td>
-                                <td className="p-4 border">$195,000</td>
-                                <td className="p-4 border font-bold text-green-600">$56,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold">3. Arkansas</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$195,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold text-green-600">$56,000</td>
                             </tr>
                             <tr>
-                                <td className="p-4 border font-bold">4. Oklahoma</td>
-                                <td className="p-4 border">$205,000</td>
-                                <td className="p-4 border font-bold text-green-600">$59,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold">4. Oklahoma</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$205,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold text-green-600">$59,000</td>
                             </tr>
                             <tr>
-                                <td className="p-4 border font-bold">5. Kentucky</td>
-                                <td className="p-4 border">$215,000</td>
-                                <td className="p-4 border font-bold text-green-600">$61,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold">5. Kentucky</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm">$215,000</td>
+                                <td className="p-2 sm:p-4 border text-xs sm:text-sm font-bold text-green-600">$61,000</td>
                             </tr>
                         </tbody>
                     </table>

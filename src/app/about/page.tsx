@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
     return (
-        <div className="max-w-3xl mx-auto px-4 py-12">
+        <div className="max-w-3xl mx-auto px-4 py-7 sm:py-9">
             <Breadcrumbs items={[{ name: 'About', item: '/about' }]} />
             <h1 className="text-3xl font-black mb-6" style={{ color: 'var(--color-text)' }}>About USFinNexus</h1>
 

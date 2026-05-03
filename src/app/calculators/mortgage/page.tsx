@@ -55,7 +55,7 @@ const MORTGAGE_FAQS = [
 
 export default function MortgagePage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <WebApplicationSchema
                 name="Free Mortgage Calculator 2026"
                 description="Calculate your full PITI mortgage payment instantly — principal, interest, taxes, insurance & PMI. Free PDF & CSV download."

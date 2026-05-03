@@ -44,7 +44,7 @@ export default function InvestmentClient() {
     const finalData = chartData[chartData.length - 1];
 
     const InputSection = (
-        <div className="glass-card p-6 sm:p-8 space-y-6">
+        <div className="glass-card p-4 sm:p-6 space-y-6">
             <div className="space-y-4">
                 <LabeledInput
                     label="Initial Deposit"

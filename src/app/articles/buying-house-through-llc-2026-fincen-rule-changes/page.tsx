@@ -39,7 +39,7 @@ export default function ArticlePage() {
                 dateModified="2026-02-24"
                 authorName="USFinNexus Real Estate Team"
             />
-        <article className="max-w-4xl mx-auto px-4 py-12 md:py-20 lg:px-8">
+        <article className="max-w-4xl mx-auto px-4 py-7 sm:py-9 lg:px-8">
             <Breadcrumbs items={[{ name: 'Articles', item: '/articles' }, { name: 'Buying through LLC', item: '/articles/buying-house-through-llc-2026-fincen-rule-changes' }]} />
 
             <header className="mb-12">

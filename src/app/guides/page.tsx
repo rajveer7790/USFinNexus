@@ -18,7 +18,7 @@ const CATEGORY_ICONS: Record<string, React.ReactNode> = {
 
 export default function GuidesPage() {
     return (
-        <div className="max-w-6xl mx-auto px-4 py-12 md:py-20">
+        <div className="max-w-6xl mx-auto px-4 py-7 sm:py-9">
             <Breadcrumbs items={[{ name: 'Guides', item: '/guides' }]} />
             
             <header className="mb-12 text-center md:text-left">

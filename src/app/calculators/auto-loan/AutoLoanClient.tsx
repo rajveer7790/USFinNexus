@@ -31,7 +31,7 @@ export default function AutoLoanClient() {
     };
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fade-in">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 animate-fade-in">
             <div className="mb-8">
                 <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-navy-900 mb-4">Auto Loan Calculator 2026</h1>
                 <p className="text-gray-600 max-w-2xl font-medium text-lg">
@@ -117,7 +117,7 @@ export default function AutoLoanClient() {
                             </div>
                         </div>
                     ) : (
-                        <div className="card p-6 sm:p-12 text-center">
+                        <div className="card p-4 sm:p-6 text-center">
                             <p className="text-lg font-bold">Enter vehicle details to calculate</p>
                         </div>
                     )}

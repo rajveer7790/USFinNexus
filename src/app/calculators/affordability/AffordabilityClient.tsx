@@ -44,7 +44,7 @@ export default function AffordabilityClient() {
                 <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-[130px]" />
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 sm:pt-7 lg:pt-8 pb-8 sm:pb-12 relative z-10">
                 <div className="mb-6 sm:mb-12">
                     <div className="flex items-center gap-3 mb-4">
                         <div className="p-2 rounded-xl bg-indigo-500/10 border border-indigo-500/20">
@@ -63,13 +63,13 @@ export default function AffordabilityClient() {
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
                     {/* LEFT: Inputs */}
                     <div className="lg:col-span-2 space-y-6">
-                        <div className="glass-card p-4 sm:p-8">
+                        <div className="glass-card p-4 sm:p-6">
                             <div className="flex justify-between items-center mb-5 sm:mb-8">
                                 <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400">Financial Profile</h2>
                                 <Info size={16} className="text-gray-400" />
                             </div>
 
-                            <div className="space-y-5 sm:space-y-8">
+                            <div className="space-y-4 sm:space-y-5">
                                 <div>
                                     <label className="input-label">Gross Monthly Income</label>
                                     <div className="relative group">
@@ -187,12 +187,12 @@ export default function AffordabilityClient() {
                     </div>
 
                     {/* RIGHT: Results */}
-                    <div className="lg:col-span-3 space-y-5 sm:space-y-8 lg:self-start">
+                    <div className="lg:col-span-3 space-y-4 sm:space-y-5 lg:self-start">
                         {result ? (
-                            <div className="space-y-5 sm:space-y-8 animate-slide-up">
+                            <div className="space-y-4 sm:space-y-5 animate-slide-up">
                                 {/* Comparison Hero Cards */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                                    <div className="glass-card p-5 sm:p-10 relative overflow-hidden group border-emerald-500/20">
+                                    <div className="glass-card p-4 sm:p-6 relative overflow-hidden group border-emerald-500/20">
                                         <div className="absolute top-0 right-0 p-6">
                                             <TrendingUp className="text-emerald-500/20 group-hover:text-emerald-500 group-hover:scale-125 transition-all" size={32} />
                                         </div>
@@ -205,7 +205,7 @@ export default function AffordabilityClient() {
                                         </p>
                                     </div>
 
-                                    <div className="glass-card p-5 sm:p-10 border-indigo-500/20 relative group">
+                                    <div className="glass-card p-4 sm:p-6 border-indigo-500/20 relative group">
                                         <div className="absolute top-0 right-0 p-6">
                                             <Zap className="text-indigo-500/20 group-hover:text-indigo-500 group-hover:scale-125 transition-all" size={32} />
                                         </div>
@@ -220,7 +220,7 @@ export default function AffordabilityClient() {
                                 </div>
 
                                 {/* DTI Meters Panel */}
-                                <div className="glass-card p-4 sm:p-8">
+                                <div className="glass-card p-4 sm:p-6">
                                     <h3 className="text-xs font-black uppercase tracking-[0.2em] mb-6 sm:mb-10 text-gray-400">Debt-to-Income Analysis</h3>
                                     
                                     <div className="space-y-12">
@@ -283,7 +283,7 @@ export default function AffordabilityClient() {
                                 </div>
 
                                 {/* Statistics Table */}
-                                <div className="glass-card p-5 sm:p-10">
+                                <div className="glass-card p-4 sm:p-6">
                                     <h3 className="text-xs font-black uppercase tracking-[0.2em] mb-5 sm:mb-8 text-gray-400">Detailed Metric Breakdown</h3>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
                                         {[
@@ -312,7 +312,7 @@ export default function AffordabilityClient() {
                                 </div>
                             </div>
                         ) : (
-                            <div className="glass-card p-8 sm:p-24 text-center">
+                            <div className="glass-card p-4 sm:p-6 text-center">
                                 <TrendingUp size={48} className="mx-auto mb-6 text-gray-400 opacity-20" />
                                 <h3 className="text-2xl font-black mb-4">Calculate Your Power</h3>
                                 <p className="text-gray-500 max-w-md mx-auto font-medium">

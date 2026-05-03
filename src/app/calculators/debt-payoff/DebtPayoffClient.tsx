@@ -48,7 +48,7 @@ export default function DebtPayoffClient() {
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-rose-500/6 rounded-full blur-[130px]" />
                 <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#0da6f2]/8 rounded-full blur-[120px]" />
             </div>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 sm:pt-7 lg:pt-8 pb-8 sm:pb-12 relative z-10">
             <div className="mb-6 sm:mb-12">
                 <div className="flex items-center gap-3 mb-4">
                     <div className="p-2 rounded-xl bg-rose-500/10 border border-rose-500/20">
@@ -67,7 +67,7 @@ export default function DebtPayoffClient() {
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
                 {/* LEFT: Inputs */}
                 <div className="lg:col-span-2 space-y-6">
-                    <div className="glass-card p-4 sm:p-8">
+                    <div className="glass-card p-4 sm:p-6">
                         <div className="flex justify-between items-center mb-5 sm:mb-8">
                             <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400">
                                 Your Debts
@@ -116,7 +116,7 @@ export default function DebtPayoffClient() {
                         </div>
                     </div>
 
-                    <div className="glass-card p-4 sm:p-8">
+                    <div className="glass-card p-4 sm:p-6">
                         <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-4 sm:mb-6">
                             Extra Monthly Payment
                         </h2>
@@ -160,7 +160,7 @@ export default function DebtPayoffClient() {
                     </div>
 
                     {/* Results comparison */}
-                    <div className="glass-card p-4 sm:p-8 animate-slide-up">
+                    <div className="glass-card p-4 sm:p-6 animate-slide-up">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-5 sm:mb-8">
                             <div className="text-center glass-panel p-6 bg-rose-500/5 border-rose-500/20">
                                 <p className="text-xs font-black uppercase tracking-[0.3em] text-rose-500 mb-3">Avalanche</p>

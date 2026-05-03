@@ -24,7 +24,7 @@ export default function DownPaymentClient() {
                 <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#0da6f2]/8 rounded-full blur-[120px]" />
             </div>
 
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 relative z-10">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 sm:pt-7 lg:pt-8 pb-8 sm:pb-12 relative z-10">
                 <div className="mb-6 sm:mb-12">
                     <div className="flex items-center gap-3 mb-4">
                         <div className="p-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
@@ -42,7 +42,7 @@ export default function DownPaymentClient() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Inputs */}
-                    <div className="glass-card p-5 sm:p-10 space-y-6">
+                    <div className="glass-card p-4 sm:p-6 space-y-6">
                         <div>
                             <label className="input-label">Target Home Price</label>
                             <div className="relative group">
@@ -89,11 +89,11 @@ export default function DownPaymentClient() {
 
                     {/* Results */}
                     <div className="space-y-6">
-                        <div className="glass-card p-5 sm:p-10 flex flex-col justify-center min-h-[240px] sm:min-h-[260px]">
+                        <div className="glass-card p-4 sm:p-6 flex flex-col justify-center min-h-[240px] sm:min-h-[260px]">
                             <h3 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-8 text-center">Time to Reach Your Goal</h3>
                             {remainingToSave <= 0 ? (
                                 <div className="text-center">
-                                    <span className="text-6xl block mb-4">🎉</span>
+                                    <span className="text-5xl block mb-3">🎉</span>
                                     <h4 className="text-2xl font-black text-emerald-500 mb-3">You hit your goal!</h4>
                                     <p className="text-gray-500 font-medium">
                                         You have enough saved for a {downPct}% down payment on a {formatCurrency(homePrice)} home.
@@ -101,7 +101,7 @@ export default function DownPaymentClient() {
                                 </div>
                             ) : (
                                 <div className="text-center">
-                                    <div className="text-4xl sm:text-6xl font-black mb-2 tabular-nums tracking-tighter">
+                                    <div className="text-3xl sm:text-4xl font-black mb-2 tabular-nums tracking-tighter">
                                         {years > 0 && <span>{years} <span className="text-3xl text-gray-400 font-bold">yrs </span></span>}
                                         <span>{months} <span className="text-3xl text-gray-400 font-bold">mo</span></span>
                                     </div>

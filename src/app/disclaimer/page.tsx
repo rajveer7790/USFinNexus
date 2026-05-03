@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function DisclaimerPage() {
     return (
-        <div className="max-w-3xl mx-auto px-4 py-12">
+        <div className="max-w-3xl mx-auto px-4 py-7 sm:py-9">
             <Breadcrumbs items={[{ name: 'Disclaimer', item: '/disclaimer' }]} />
             <div className="flex items-center gap-3 mb-2">
                 <Shield style={{ color: '#f59e0b' }} size={28} />

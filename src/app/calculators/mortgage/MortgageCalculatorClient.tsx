@@ -165,17 +165,17 @@ export default function MortgageCalculator({ initialTab = 'breakdown' }: { initi
     };
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in relative z-10">
+        <div className="py-6 animate-fade-in relative z-10">
             {/* Background ambient glow matching Stitch design */}
             <div className="absolute top-[-100px] left-[-100px] w-96 h-96 bg-[#0da6f2] rounded-full mix-blend-screen filter blur-[128px] opacity-20 pointer-events-none hidden" />
             <div className="absolute bottom-[-100px] right-[-100px] w-[500px] h-[500px] bg-green-500 rounded-full mix-blend-screen filter blur-[128px] opacity-10 pointer-events-none hidden" />
 
             {/* Page Header */}
-            <div className="mb-6 sm:mb-12 text-center relative">
-                <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-navy-900 mb-3 sm:mb-4 tracking-tight leading-tight">
+            <div className="mb-5 sm:mb-7 text-center relative">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy-900 mb-2 sm:mb-3 tracking-tight leading-tight">
                     Premium Mortgage Calculator
                 </h1>
-                <p className="text-sm sm:text-lg text-gray-500 max-w-2xl mx-auto">
+                <p className="text-sm text-gray-500 max-w-2xl mx-auto">
                     Calculate your full PITI mortgage payment instantly with our high-end, responsive tool.
                 </p>
             </div>
@@ -195,7 +195,7 @@ export default function MortgageCalculator({ initialTab = 'breakdown' }: { initi
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 relative">
                 {/* ── LEFT: Inputs ──────────────────────────────────────────────────── */}
                 <div className="lg:col-span-4 space-y-6">
-                    <div className="glass-card p-4 sm:p-6 md:p-8">
+                    <div className="glass-card p-4 sm:p-5">
                         <h2 className="text-sm font-bold uppercase tracking-widest mb-5 sm:mb-6 flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-[#0da6f2] shadow-[0_0_8px_rgba(13,166,242,0.8)]" />
                             Loan Details
@@ -341,7 +341,7 @@ export default function MortgageCalculator({ initialTab = 'breakdown' }: { initi
                     </div>
 
                     {/* Monthly Costs Card */}
-                    <div className="glass-card p-4 sm:p-6 md:p-8">
+                    <div className="glass-card p-4 sm:p-5">
                         <h2 className="text-sm font-bold uppercase tracking-widest mb-5 sm:mb-6 flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
                             Monthly Costs
@@ -430,15 +430,15 @@ export default function MortgageCalculator({ initialTab = 'breakdown' }: { initi
 
                     {/* Main Payment Card */}
                     {summary ? (
-                        <div suppressHydrationWarning className={`glass-card p-4 sm:p-6 md:p-8 animate-slide-up flex-1 flex flex-col transition-opacity duration-150 ${isCalculating ? 'opacity-60' : 'opacity-100'}`}>
+                        <div suppressHydrationWarning className={`glass-card p-4 sm:p-5 animate-slide-up flex-1 flex flex-col transition-opacity duration-150 ${isCalculating ? 'opacity-60' : 'opacity-100'}`}>
                             {/* Total Payment Giant Display */}
                             <div className="text-center mb-8 pb-8 border-b border-gray-200 relative">
                                 <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#0da6f2]/50 to-transparent" />
                                 <p className="text-sm font-bold uppercase tracking-widest mb-3 text-gray-500">
                                     Total Monthly Payment
                                 </p>
-                                <div className="text-3xl sm:text-5xl md:text-7xl font-black tabular-nums tracking-tighter text-navy-900 transition-all duration-500 ease-out" style={{textShadow: '0 0 40px rgba(13, 166, 242, 0.15)'}}>
-                                    <span className="text-lg sm:text-2xl md:text-4xl align-top mr-1 font-bold text-gray-400">$</span>
+                                <div className="text-3xl sm:text-4xl md:text-5xl font-black tabular-nums tracking-tighter text-navy-900 transition-all duration-500 ease-out" style={{textShadow: '0 0 40px rgba(13, 166, 242, 0.15)'}}>
+                                    <span className="text-lg sm:text-xl md:text-2xl align-top mr-1 font-bold text-gray-400">$</span>
                                     {summary.totalMonthly.toFixed(0)}
                                 </div>
                                 <p className="text-xs sm:text-sm mt-3 sm:mt-4 font-medium text-gray-400">
@@ -449,7 +449,7 @@ export default function MortgageCalculator({ initialTab = 'breakdown' }: { initi
                             </div>
 
                             {/* Quick Stats Row */}
-                            <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-6 sm:mb-8">
+                            <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-5">
                                 {[
                                     { label: 'Loan Amount', value: formatCurrency(summary.loanAmount) },
                                     { label: 'Total Interest', value: formatCurrency(summary.totalInterest) },
@@ -463,7 +463,7 @@ export default function MortgageCalculator({ initialTab = 'breakdown' }: { initi
                             </div>
 
                             {/* Tabs Navigation */}
-                            <div className="glass-tab-list justify-start sm:justify-center mb-6 sm:mb-8 mx-auto self-center overflow-x-auto scrollbar-hide w-full flex-nowrap">
+                            <div className="glass-tab-list justify-start sm:justify-center mb-4 sm:mb-5 mx-auto self-center overflow-x-auto scrollbar-hide w-full flex-nowrap">
                                 {([
                                     { key: 'breakdown', label: 'Payment Breakdown' },
                                     { key: 'amortization', label: 'Amortization Table' },
@@ -579,7 +579,7 @@ export default function MortgageCalculator({ initialTab = 'breakdown' }: { initi
                             )}
 
                             {tab === 'extra' && (
-                                <div className="animate-fade-in space-y-8">
+                                <div className="animate-fade-in space-y-5">
                                     <div className="glass-panel p-6">
                                         <div className="flex items-center gap-3 mb-6">
                                             <TrendingDown className="text-[#0da6f2]" size={24} />
@@ -665,14 +665,14 @@ export default function MortgageCalculator({ initialTab = 'breakdown' }: { initi
                             )}
 
                             {tab === 'charts' && (
-                                <div className="animate-fade-in space-y-8">
+                                <div className="animate-fade-in space-y-5">
                                     <MortgageCharts pieData={pieData} amortization={amortization} />
                                 </div>
                             )}
                         </div>
                     ) : (
                         /* Empty state */
-                        <div className="glass-card p-6 sm:p-12 text-center flex-1 flex flex-col items-center justify-center min-h-[280px] sm:min-h-[500px]">
+                        <div className="glass-card p-4 sm:p-6 text-center flex-1 flex flex-col items-center justify-center min-h-[280px] sm:min-h-[500px]">
                             <div className="w-20 h-20 rounded-full flex items-center justify-center mb-6 bg-[#0da6f2]/10 border border-[#0da6f2]/20 shadow-[0_0_30px_rgba(13,166,242,0.15)] relative">
                                 <div className="absolute inset-0 rounded-full bg-[#0da6f2] animate-ping opacity-20 duration-1000"></div>
                                 <span className="text-4xl text-[#0da6f2]">🏠</span>

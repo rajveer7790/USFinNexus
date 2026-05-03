@@ -41,7 +41,7 @@ export default function MortgageTermComparisonBlog() {
             authorName="USFinNexus Editorial Team"
             keywords={['30 year vs 15 year mortgage', 'mortgage term comparison 2026', '15 year mortgage rates', '30 year mortgage rates', 'mortgage interest savings', 'shorter mortgage term']}
         />
-        <div className="max-w-4xl mx-auto px-4 py-12">
+        <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
             <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: '30-Year vs 15-Year Mortgage 2026', item: '/blog/30-year-vs-15-year-mortgage-2026' }]} />
             <article className="prose prose-slate max-w-none">
 
@@ -202,7 +202,7 @@ export default function MortgageTermComparisonBlog() {
 
                 <hr className="my-10 border-gray-200" />
 
-                <div className="card p-8 text-center">
+                <div className="card p-4 sm:p-6 text-center">
                     <h3 className="text-xl font-bold mb-3">Compare Both Terms with Real Numbers</h3>
                     <p className="text-sm mb-6" style={{ color: 'var(--color-text-muted)' }}>
                         Plug in your actual loan amount and rate to see the exact monthly payment, amortization schedule, and total interest for both 30-year and 15-year terms.

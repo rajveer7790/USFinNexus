@@ -35,7 +35,7 @@ export default function PersonalLoanClient() {
     const TERM_OPTIONS = [12, 24, 36, 48, 60, 84];
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fade-in">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 animate-fade-in">
             <div className="mb-8">
                 <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-navy-900 mb-4">Personal Loan Calculator 2026</h1>
                 <p className="text-gray-600 max-w-2xl font-medium text-lg">

@@ -31,7 +31,7 @@ export default function InterestOnlyClient() {
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#0da6f2]/6 rounded-full blur-[130px]" />
                 <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-amber-500/6 rounded-full blur-[120px]" />
             </div>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 sm:pt-7 lg:pt-8 pb-8 sm:pb-12 relative z-10">
             <div className="mb-6 sm:mb-12">
                 <div className="flex items-center gap-3 mb-4">
                     <div className="p-2 rounded-xl bg-amber-500/10 border border-amber-500/20">
@@ -50,7 +50,7 @@ export default function InterestOnlyClient() {
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
                 {/* Left Column - Inputs */}
                 <div className="lg:col-span-2 space-y-6">
-                    <div className="glass-card p-4 sm:p-8">
+                    <div className="glass-card p-4 sm:p-6">
                         <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-5 sm:mb-8">Loan Details</h2>
 
                         {[
@@ -116,18 +116,18 @@ export default function InterestOnlyClient() {
                             {/* Payment Timeline Visual */}
                             <div className="glass-card p-0 overflow-hidden shadow-lg animate-slide-up border-emerald-500/20">
                                 {/* Top Half: IO Period */}
-                                <div className="p-5 sm:p-10 bg-emerald-500/5 border-b border-emerald-500/20 relative">
+                                <div className="p-4 sm:p-6 bg-emerald-500/5 border-b border-emerald-500/20 relative">
                                     <span className="absolute top-5 right-5 px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs font-black uppercase tracking-widest">Years 1-{ioTerm}</span>
                                     <h3 className="text-xs font-black uppercase tracking-[0.3em] text-emerald-500 mb-2">Phase 1: Interest Only</h3>
                                     <p className="text-xs text-gray-500 mb-6">You pay zero principal. Loan balance remains {formatCurrency(loanAmount)}.</p>
                                     <div className="flex items-baseline gap-2">
-                                        <span className="text-4xl sm:text-6xl font-black text-emerald-400 tabular-nums tracking-tighter">{formatCurrency(result.ioMonthlyPayment)}</span>
+                                        <span className="text-3xl sm:text-4xl font-black text-emerald-400 tabular-nums tracking-tighter">{formatCurrency(result.ioMonthlyPayment)}</span>
                                         <span className="text-emerald-500/70 font-black">/mo</span>
                                     </div>
                                 </div>
 
                                 {/* Bottom Half: Amortization Jump */}
-                                <div className="p-5 sm:p-10 relative">
+                                <div className="p-4 sm:p-6 relative">
                                     <span className="absolute top-5 right-5 px-3 py-1 bg-rose-500/20 text-rose-400 rounded-full text-xs font-black uppercase tracking-widest">Years {ioTerm + 1}-{loanTerm}</span>
                                     <h3 className="text-xs font-black uppercase tracking-[0.3em] text-rose-500 mb-2">Phase 2: Fully Amortizing</h3>
                                     <p className="text-xs text-gray-500 mb-6">
@@ -136,7 +136,7 @@ export default function InterestOnlyClient() {
 
                                     <div className="flex justify-between items-end">
                                         <div className="flex items-baseline gap-2">
-                                            <span className="text-4xl sm:text-6xl font-black tabular-nums tracking-tighter">{formatCurrency(result.amortizedMonthlyPayment)}</span>
+                                            <span className="text-3xl sm:text-4xl font-black tabular-nums tracking-tighter">{formatCurrency(result.amortizedMonthlyPayment)}</span>
                                             <span className="text-gray-500 font-black">/mo</span>
                                         </div>
 
@@ -151,11 +151,11 @@ export default function InterestOnlyClient() {
 
                             {/* Summary Stats */}
                             <div className="grid grid-cols-2 gap-4 sm:gap-6">
-                                <div className="glass-card p-4 sm:p-8 text-center">
+                                <div className="glass-card p-4 sm:p-6 text-center">
                                     <p className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-4">Total Payments</p>
                                     <p className="text-3xl font-black tabular-nums">{formatCurrency(result.totalPayments)}</p>
                                 </div>
-                                <div className="glass-card p-4 sm:p-8 text-center">
+                                <div className="glass-card p-4 sm:p-6 text-center">
                                     <p className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-4">Total Interest Paid</p>
                                     <p className="text-3xl font-black tabular-nums text-amber-500">{formatCurrency(result.totalInterest)}</p>
                                 </div>
@@ -171,7 +171,7 @@ export default function InterestOnlyClient() {
                             </div>
                         </>
                     ) : (
-                        <div className="card p-6 sm:p-12 text-center flex-1 flex flex-col justify-center">
+                        <div className="card p-4 sm:p-6 text-center flex-1 flex flex-col justify-center">
                             <p className="text-lg font-bold">Enter loan details to see the payment timeline</p>
                         </div>
                     )}

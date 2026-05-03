@@ -49,7 +49,7 @@ export default function GovLoanClient({ initialTab = 'fha' }: { initialTab?: Gov
                 <div className="absolute top-1/4 left-0 w-[400px] h-[400px] bg-green-500/5 rounded-full blur-[100px]" />
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 lg:pt-24 pb-8 sm:pb-12 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 sm:pt-7 lg:pt-8 pb-8 sm:pb-12 relative z-10">
                 <div className="mb-6 sm:mb-12">
                     <div className="flex items-center gap-3 mb-4">
                         <div className="p-2 rounded-xl bg-[#0da6f2]/10 border border-[#0da6f2]/20">
@@ -85,7 +85,7 @@ export default function GovLoanClient({ initialTab = 'fha' }: { initialTab?: Gov
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
                     {/* LEFT: Inputs */}
                     <div className="lg:col-span-2 space-y-6">
-                        <div className="glass-card p-4 sm:p-8">
+                        <div className="glass-card p-4 sm:p-6">
                             <div className="flex justify-between items-center mb-5 sm:mb-8">
                                 <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400">
                                     {activeTab.label} Parameters
@@ -93,7 +93,7 @@ export default function GovLoanClient({ initialTab = 'fha' }: { initialTab?: Gov
                                 <Info size={16} className="text-gray-400" />
                             </div>
 
-                            <div className="space-y-8">
+                            <div className="space-y-5">
                                 <div>
                                     <label className="input-label">Home Price</label>
                                     <div className="relative group">
@@ -225,11 +225,11 @@ export default function GovLoanClient({ initialTab = 'fha' }: { initialTab?: Gov
                     </div>
 
                     {/* RIGHT: Results */}
-                    <div className="lg:col-span-3 space-y-8 lg:self-start">
+                    <div className="lg:col-span-3 space-y-5 lg:self-start">
                         {result ? (
-                            <div className="space-y-8 animate-slide-up">
+                            <div className="space-y-5 animate-slide-up">
                                 {/* Total payment hero panel */}
-                                <div className="glass-card p-5 sm:p-12 relative overflow-hidden group">
+                                <div className="glass-card p-4 sm:p-6 relative overflow-hidden group">
                                     <div className="absolute top-0 right-0 p-8 flex flex-col items-end opacity-20 group-hover:opacity-100 transition-opacity">
                                         <span className="text-xs font-black uppercase tracking-widest text-[#0da6f2] mb-1">Status</span>
                                         <span className="text-lg font-black text-[#00C853] flex items-center gap-2">READY <Zap size={16} /></span>
@@ -237,7 +237,7 @@ export default function GovLoanClient({ initialTab = 'fha' }: { initialTab?: Gov
                                     
                                     <div className="text-center relative z-10">
                                         <p className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-4">Projected Monthly Payment</p>
-                                        <div className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tighter text-glow tabular-nums transition-all hover:scale-105 duration-500">
+                                        <div className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter text-glow tabular-nums transition-all hover:scale-105 duration-500">
                                             {formatCurrency(result.totalMonthly)}
                                         </div>
                                         <div className="w-16 h-1 bg-gradient-to-r from-[#0da6f2] to-[#00C853] mx-auto mt-8 rounded-full" />
@@ -261,7 +261,7 @@ export default function GovLoanClient({ initialTab = 'fha' }: { initialTab?: Gov
 
                                 {/* Detailed Breakdown Grid */}
                                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                                    <div className="glass-card p-4 sm:p-8">
+                                    <div className="glass-card p-4 sm:p-6">
                                         <h3 className="text-xs font-black uppercase tracking-[0.2em] mb-5 sm:mb-8 text-gray-400">Payment Composition</h3>
                                         <div className="space-y-4">
                                             {[
@@ -281,7 +281,7 @@ export default function GovLoanClient({ initialTab = 'fha' }: { initialTab?: Gov
                                         </div>
                                     </div>
 
-                                    <div className="glass-card p-4 sm:p-8">
+                                    <div className="glass-card p-4 sm:p-6">
                                         <h3 className="text-xs font-black uppercase tracking-[0.2em] mb-5 sm:mb-8 text-gray-400">Loan Lifecycle</h3>
                                         <div className="space-y-4">
                                             {[
@@ -358,7 +358,7 @@ export default function GovLoanClient({ initialTab = 'fha' }: { initialTab?: Gov
                                 </div>
                             </div>
                         ) : (
-                            <div className="glass-card p-8 sm:p-24 text-center">
+                            <div className="glass-card p-4 sm:p-6 text-center">
                                 <Shield size={48} className="mx-auto mb-6 text-gray-400 opacity-20" />
                                 <h3 className="text-2xl font-black mb-4">Complete Your Parameters</h3>
                                 <p className="text-gray-500 max-w-md mx-auto font-medium">
