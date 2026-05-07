@@ -9,6 +9,15 @@ export const metadata: Metadata = {
 };
 
 const POSTS = [
+    { slug: 'commercial-real-estate-reset-2026', title: 'Navigating the 2026 Commercial Real Estate Reset', date: 'May 2026', category: 'Real Estate Investment', readTime: '7 min' },
+    { slug: 'crypto-tax-guide-2026', title: 'The 2026 Crypto Tax Guide: What the IRS New Rules Mean for You', date: 'May 2026', category: 'Taxes', readTime: '6 min' },
+    { slug: 'fractional-real-estate-investing-2026', title: 'Fractional Real Estate Investing: The Best Platforms in 2026', date: 'May 2026', category: 'Real Estate Investment', readTime: '5 min' },
+    { slug: 'high-yield-checking-accounts-2026', title: 'High-Yield Checking Accounts: Beating Inflation', date: 'May 2026', category: 'Banking', readTime: '4 min' },
+    { slug: 'silver-tsunami-housing-shift-2026', title: 'The Silver Tsunami Housing Shift: Aging Boomers in 2026', date: 'May 2026', category: 'Housing Market', readTime: '6 min' },
+    { slug: 'coast-fire-vs-barista-fire-2026', title: 'Coast FIRE vs. Barista FIRE: Choosing Your Semi-Retirement', date: 'May 2026', category: 'Retirement', readTime: '5 min' },
+    { slug: 'direct-indexing-tax-loss-harvesting-2026', title: 'Direct Indexing: The Advanced Tax Strategy for Retail Investors', date: 'May 2026', category: 'Investing', readTime: '7 min' },
+    { slug: 'short-term-rental-regulations-2026', title: 'Short-Term Rental Regulations in 2026: End of the Arbitrage?', date: 'May 2026', category: 'Real Estate Investment', readTime: '6 min' },
+    { slug: 'mega-backdoor-roth-ira-guide-2026', title: 'The Mega Backdoor Roth IRA Guide for 2026', date: 'May 2026', category: 'Retirement', readTime: '8 min' },
     { slug: 'investing-during-geopolitical-conflict-2026', title: 'Investing During Geopolitical Conflict: Safe Havens in 2026', date: 'May 2026', category: 'Market Analysis', readTime: '8 min' },
     { slug: 'defense-cybersecurity-stocks-2026', title: 'The Rise of Defense and Cybersecurity Stocks in a Volatile World', date: 'May 2026', category: 'Investing', readTime: '7 min' },
     { slug: 'global-conflict-real-estate-impact-2026', title: 'How Global Conflicts Are Impacting US Real Estate in 2026', date: 'May 2026', category: 'Housing Market', readTime: '8 min' },
@@ -32,7 +41,7 @@ const POSTS = [
     { slug: 'mortgage-amortization-schedule-guide', title: 'How to Read a Mortgage Amortization Schedule', date: 'Feb 2026', category: 'Education', readTime: '6 min' },
 ];
 
-const CATEGORIES = ['All', 'Investing', 'FinTech', 'Real Estate Investment', 'Market Analysis', 'Housing Market', 'Commodities & Energy', 'Bonds & Fixed Income', 'Taxes', 'Home Buying', 'Mortgage', 'Affordability', 'Refinance', 'Education', 'Personal Finance'];
+const CATEGORIES = ['All', 'Investing', 'Banking', 'Retirement', 'FinTech', 'Real Estate Investment', 'Market Analysis', 'Housing Market', 'Commodities & Energy', 'Bonds & Fixed Income', 'Taxes', 'Home Buying', 'Mortgage', 'Affordability', 'Refinance', 'Education', 'Personal Finance'];
 
 export default function BlogPage() {
     return (

@@ -21,6 +21,11 @@ const ALL_CALCS: RelatedCalc[] = [
     { label: 'HELOC Calculator', href: '/calculators/heloc', description: 'Home equity line of credit', emoji: '🏦' },
     { label: 'ARM Calculator', href: '/calculators/arm', description: 'Adjustable rate scenarios', emoji: '📈' },
     { label: 'FHA / VA / USDA', href: '/calculators/fha-va-usda', description: 'Government loan calculator', emoji: '🏛️' },
+    { label: 'Rental Property ROI', href: '/calculators/rental-property', description: 'Cash flow & Cap Rate', emoji: '🏢' },
+    { label: 'FIRE Planner', href: '/calculators/fire-planner', description: 'Early retirement timeline', emoji: '🔥' },
+    { label: 'DRIP Forecaster', href: '/calculators/drip', description: 'Dividend reinvestment plan', emoji: '💧' },
+    { label: 'Crypto Tax', href: '/calculators/crypto-tax', description: 'Capital gains estimator', emoji: '₿' },
+    { label: 'Options Profit', href: '/calculators/options-profit', description: 'Visualizer for Calls/Puts', emoji: '📉' },
 ];
 
 interface RelatedCalculatorsProps {

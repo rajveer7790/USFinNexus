@@ -20,6 +20,7 @@ const NAV_CALCULATORS = [
             { href: '/calculators/affordability', label: 'Affordability', icon: DollarSign, desc: 'How much can I afford?' },
             { href: '/calculators/refinance', label: 'Refinance', icon: TrendingUp, desc: 'Savings & break-even' },
             { href: '/calculators/rent-vs-buy', label: 'Rent vs. Buy', icon: ArrowLeftRight, desc: 'True cost comparison' },
+            { href: '/calculators/rental-property', label: 'Rental Property ROI', icon: Home, desc: 'Cash flow & Cap Rate' },
             { href: '/calculators/fha-va-usda', label: 'FHA / VA / USDA', icon: Landmark, desc: 'Government loan options' },
             { href: '/calculators/heloc', label: 'HELOC', icon: Home, desc: 'Home equity credit line' },
             { href: '/calculators/arm', label: 'ARM Calculator', icon: Activity, desc: 'Adjustable rate analysis' },
@@ -48,9 +49,13 @@ const NAV_CALCULATORS = [
         color: '#f59e0b',
         items: [
             { href: '/calculators/retirement', label: 'Retirement Planner', icon: PiggyBank, desc: 'Future nest egg goal' },
+            { href: '/calculators/fire-planner', label: 'FIRE Planner', icon: TrendingUp, desc: 'Early retirement timeline' },
             { href: '/calculators/investment', label: 'Compound Interest', icon: LineChart, desc: 'Investment growth' },
+            { href: '/calculators/drip', label: 'DRIP Forecaster', icon: LineChart, desc: 'Dividend reinvestment' },
             { href: '/calculators/income-tax', label: 'Income Tax 2026', icon: FileText, desc: 'Federal & state taxes' },
+            { href: '/calculators/crypto-tax', label: 'Crypto Tax Estimator', icon: FileText, desc: 'Capital gains calculator' },
             { href: '/calculators/budget', label: 'Budget 50/30/20', icon: PiggyBank, desc: 'Monthly budget rule' },
+            { href: '/calculators/options-profit', label: 'Options Profit/Loss', icon: BarChart2, desc: 'Visualizer for Calls/Puts' },
         ],
     },
     {
