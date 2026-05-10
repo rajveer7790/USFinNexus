@@ -55,10 +55,6 @@ export default function AboutPage() {
             <div className="mt-10 flex flex-wrap items-center gap-4">
                 <Link href="/calculators/mortgage" className="btn-green text-sm">Start Mortgage Calculator</Link>
                 <Link href="/disclaimer" className="btn-outline text-sm">View Full Disclaimer</Link>
-                <a href="https://linkedin.com/in/rajveer7790" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-[#0da6f2] transition-colors text-sm font-semibold ml-auto">
-                    <Linkedin size={18} />
-                    Follow on LinkedIn
-                </a>
             </div>
         </div>
     );

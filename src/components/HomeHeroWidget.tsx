@@ -23,7 +23,7 @@ function fmt(n: number): string {
 export default function HomeHeroWidget() {
     const [price, setPrice] = useState(450000);
     const [dp, setDp] = useState(20);
-    const [rate, setRate] = useState(6.84);
+    const [rate, setRate] = useState(6.37);
     const [term, setTerm] = useState(30);
 
     const loanAmt = price * (1 - dp / 100);

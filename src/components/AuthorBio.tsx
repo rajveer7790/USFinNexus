@@ -68,7 +68,7 @@ export default function AuthorBio({ author = USFinNexusEditorialTeam, updatedDat
                             className="px-2 py-0.5 rounded text-xs font-black uppercase tracking-widest"
                             style={{ background: `${author.accentColor || '#0da6f2'}15`, color: author.accentColor || '#0da6f2' }}
                         >
-                            Verified
+                            Fact-Checked
                         </span>
                     </div>
                     <p className="text-xs font-semibold mb-1" style={{ color: author.accentColor || '#0da6f2' }}>{author.title}</p>

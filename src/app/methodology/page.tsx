@@ -19,13 +19,13 @@ const SOURCES = [
     {
         org: 'Federal Housing Finance Agency (FHFA)',
         url: 'https://www.fhfa.gov/',
-        description: '2026 conforming loan limits: $806,500 baseline / $1,209,750 high-cost areas. Used in our mortgage and affordability calculators to flag jumbo loan thresholds.',
+        description: '2026 conforming loan limits: $832,750 baseline / $1,249,125 high-cost areas. Used in our mortgage and affordability calculators to flag jumbo loan thresholds.',
         icon: '🏦',
     },
     {
         org: 'U.S. Department of Housing and Urban Development (HUD)',
         url: 'https://www.hud.gov/',
-        description: '2026 FHA loan limits: $524,225 floor / $1,209,750 ceiling. FHA mortgage insurance premium (MIP) rates and USDA income guidelines used in our government loan calculator.',
+        description: '2026 FHA loan limits: $541,287 floor / $1,249,125 ceiling. FHA mortgage insurance premium (MIP) rates and USDA income guidelines used in our government loan calculator.',
         icon: '🏠',
     },
     {
@@ -95,7 +95,7 @@ export default function MethodologyPage() {
                     Every number on USFinNexus comes from a verifiable, official government or industry source. Here is exactly how our calculators work and where our data comes from.
                 </p>
                 <p className="text-xs mt-3 font-bold uppercase tracking-widest" style={{ color: 'var(--color-text-muted)' }}>
-                    Last Updated: March 12, 2026
+                    Last Updated: May 10, 2026
                 </p>
             </header>
 

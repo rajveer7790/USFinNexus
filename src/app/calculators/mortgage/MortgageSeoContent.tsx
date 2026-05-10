@@ -12,7 +12,7 @@ export default function MortgageSeoContent() {
                     How to Use Our US Mortgage Calculator (2026 Guide)
                 </h2>
                 <p className="lead text-xl text-gray-600">
-                    Buying a home is one of the most significant financial decisions you&apos;ll ever make. Knowing exactly how much house you can afford — and what your monthly payments will actually look like — is the crucial first step. Our free, CFPB-verified 2026 mortgage calculator goes beyond a simple principal-and-interest estimate. It delivers a complete <strong>PITI breakdown</strong> (Principal, Interest, Taxes, and Insurance) so you see the true, all-in monthly cost of homeownership before you step into a lender&apos;s office.
+                    Buying a home is one of the most significant financial decisions you&apos;ll ever make. Knowing exactly how much house you can afford — and what your monthly payments will actually look like — is the crucial first step. Our free, CFPB-compliant 2026 mortgage calculator goes beyond a simple principal-and-interest estimate. It delivers a complete <strong>PITI breakdown</strong> (Principal, Interest, Taxes, and Insurance) so you see the true, all-in monthly cost of homeownership before you step into a lender&apos;s office.
                 </p>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
@@ -126,8 +126,8 @@ export default function MortgageSeoContent() {
                             </tr>
                             <tr className="border-t">
                                 <td className="px-4 py-2 text-gray-600">Interest rate (typical)</td>
-                                <td className="px-4 py-2 text-center">~6.84%</td>
-                                <td className="px-4 py-2 text-center">~6.12%</td>
+                                <td className="px-4 py-2 text-center">~6.37%</td>
+                                <td className="px-4 py-2 text-center">~5.72%</td>
                             </tr>
                             <tr className="border-t bg-gray-50">
                                 <td className="px-4 py-2 text-gray-600">Best for</td>
@@ -149,7 +149,7 @@ export default function MortgageSeoContent() {
                     You are not locked into your original schedule. Our calculator shows the dramatic impact of extra principal payments through a full amortization table:
                 </p>
                 <ul>
-                    <li><strong>Extra Monthly Payment:</strong> Even $100/month extra on a $400,000 loan at 6.84% saves over $58,000 in interest and pays the loan off 3 years early.</li>
+                    <li><strong>Extra Monthly Payment:</strong> Even $100/month extra on a $400,000 loan at 6.37% saves over $50,000 in interest and pays the loan off 3 years early.</li>
                     <li><strong>Bi-Weekly Payments:</strong> Switching to bi-weekly (half your payment every two weeks) results in 26 half-payments per year — the equivalent of one extra full monthly payment annually. This alone can cut 4–5 years off a 30-year loan.</li>
                     <li><strong>Lump-Sum Payments:</strong> Tax refunds, bonuses, or inheritance applied to your principal can have an outsized impact because they immediately reduce the balance on which interest compounds.</li>
                 </ul>

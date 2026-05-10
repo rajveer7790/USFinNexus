@@ -58,7 +58,7 @@ export default function CalculatorLayout({
                             </div>
                             <div className="flex items-center gap-2 text-xs font-bold text-slate-400">
                                 <Shield size={14} className="text-[#0da6f2]" />
-                                Verified Accuracy
+                                CFPB Compliant
                             </div>
                             <div className="flex items-center gap-4 ml-auto">
                                 <button className="p-2 text-slate-400 hover:text-[#0da6f2] transition-colors" title="Print Report">
@@ -131,8 +131,8 @@ export default function CalculatorLayout({
                             </div>
                             <div className="space-y-3">
                                 {[
-                                    { k: 'Avg 30-Yr Fixed', v: '6.84%' },
-                                    { k: 'Avg 15-Yr Fixed', v: '6.12%' },
+                                    { k: 'Avg 30-Yr Fixed', v: '6.37%' },
+                                    { k: 'Avg 15-Yr Fixed', v: '5.72%' },
                                     { k: 'Primary Residence DTI', v: '43%' },
                                     { k: 'PMI Required below', v: '20% Down' },
                                 ].map(bench => (

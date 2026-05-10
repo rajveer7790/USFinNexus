@@ -49,7 +49,7 @@ const MORTGAGE_FAQS = [
     },
     {
         question: 'What is the 2026 conforming loan limit?',
-        answer: 'The 2026 FHFA conforming loan limit is $806,500 for most US counties (baseline), increasing from $766,550 in 2025. In high-cost areas (like parts of California, New York, and Hawaii), the ceiling is $1,209,750. Loans above these limits are "jumbo" loans.',
+        answer: 'The 2026 FHFA conforming loan limit is $832,750 for most US counties (baseline). In high-cost areas (like parts of California, New York, and Hawaii), the ceiling is $1,249,125. Loans above these limits are "jumbo" loans.',
     },
 ];
 
@@ -60,10 +60,10 @@ export default function MortgagePage() {
                 name="Free Mortgage Calculator 2026"
                 description="Calculate your full PITI mortgage payment instantly — principal, interest, taxes, insurance & PMI. Free PDF & CSV download."
                 url="https://usfinnexus.com/calculators/mortgage"
-                dateModified="2026-03-01"
+                dateModified="2026-05-10"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Mortgage Calculator', item: '/calculators/mortgage' }]} />
-            <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026 &middot; 2026 FHFA conforming loan limits applied</p>
+            <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: May 2026 &middot; 2026 FHFA conforming loan limits applied</p>
             <h1 className="sr-only">Free Mortgage Calculator 2026 with PDF Download</h1>
             <MortgageCalculatorClient />
             <MortgageSeoContent />

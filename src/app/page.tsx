@@ -22,8 +22,8 @@ export const metadata: Metadata = {
 
 /* ═══ DATA ═══ */
 const RATES = [
-    { l: '30-Yr Fixed', v: '6.84%' }, { l: '15-Yr Fixed', v: '6.12%' },
-    { l: 'FHA', v: '6.53%' }, { l: 'VA', v: '6.28%' },
+    { l: '30-Yr Fixed', v: '6.37%' }, { l: '15-Yr Fixed', v: '5.72%' },
+    { l: 'FHA', v: '6.06%' }, { l: 'VA', v: '5.95%' },
     { l: 'CONFORMING', v: '$832,750' }, { l: 'FHA FLOOR', v: '$541,287' },
     { l: 'MAX DTI', v: '43%' }, { l: 'PMI @', v: '78% LTV' },
 ];
@@ -112,14 +112,14 @@ export default function HomePage() {
             <div className="ph-announce">
                 <div className="ph-announce-inner neo-container">
                     <span className="ph-ann-dot" />
-                    <span>30-Yr Fixed <strong>6.84%</strong></span>
+                    <span>30-Yr Fixed <strong>6.37%</strong></span>
                     <span className="ph-ann-sep">·</span>
-                    <span>15-Yr Fixed <strong>6.12%</strong></span>
+                    <span>15-Yr Fixed <strong>5.72%</strong></span>
                     <span className="ph-ann-sep">·</span>
-                    <span>FHA <strong>6.53%</strong></span>
+                    <span>FHA <strong>6.06%</strong></span>
                     <span className="ph-ann-sep">·</span>
                     <span>Conforming <strong>$832,750</strong></span>
-                    <span className="ph-ann-tag">March 2026 · CFPB Compliant</span>
+                    <span className="ph-ann-tag">May 2026 · CFPB Compliant</span>
                 </div>
             </div>
 
@@ -134,7 +134,7 @@ export default function HomePage() {
                     <div className="neo-hero-left">
                         <div className="neo-status neo-reveal">
                             <span className="neo-status-pulse" />
-                            CFPB Compliant · March 2026
+                            CFPB Compliant · May 2026
                         </div>
                         <h1 className="neo-h1">
                             <span className="neo-h1-w1">Smart Financial</span>
