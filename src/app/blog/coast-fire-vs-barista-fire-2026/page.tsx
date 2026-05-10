@@ -31,7 +31,7 @@ export default function CoastFireBlog() {
                     <h1 className="text-2xl md:text-4xl font-black mb-6 leading-tight text-slate-900">Coast FIRE vs. Barista FIRE: Choosing Your Perfect Semi-Retirement Path</h1>
                 </header>
                 <div className="mb-10 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-slate-900 min-h-[400px]">
-                    <img src="/images/coast_fire_vs_barista.png" alt="Coast vs Barista" className="w-full h-auto object-cover max-h-[450px]" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement?.classList.add('bg-gradient-to-r', 'from-emerald-500', 'to-teal-500'); }} />
+                    <img src="/images/coast_fire_vs_barista.png" alt="Coast vs Barista" className="w-full h-auto object-cover max-h-[450px]" />
                 </div>
                 <div className="prose max-w-none text-slate-800">
                     <p className="lead text-lg font-medium mb-8 text-slate-600">You don't need $3 million to quit your high-stress job. The modern FIRE movement has evolved to include realistic, achievable milestones like Coast FIRE and Barista FIRE.</p>

@@ -57,7 +57,7 @@ export default function CREBlog() {
 
             <div className="mb-10 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-slate-100 flex items-center justify-center min-h-[400px]">
                 {/* Fallback image display if actual image fails to load */}
-                <img src="/images/commercial-real-estate-2026.png" alt="Office to residential conversion illustration" className="w-full h-auto object-cover max-h-[450px]" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement?.classList.add('bg-gradient-to-r', 'from-blue-600', 'to-orange-500'); }} />
+                <img src="/images/commercial-real-estate-2026.png" alt="Office to residential conversion illustration" className="w-full h-auto object-cover max-h-[450px]" />
             </div>
 
             <div className="prose max-w-none text-slate-800">

@@ -126,17 +126,6 @@ export default function Footer() {
                             Free Mortgage Calculator
                         </Link>
 
-                        <div className="mt-6 flex items-center gap-3">
-                            <a
-                                href="https://linkedin.com/in/rajveer7790"
-                                target="_blank"
-                                rel="noopener noreferrer nofollow"
-                                className="w-8 h-8 rounded-lg border border-white/10 flex items-center justify-center text-white/30 hover:text-[#0da6f2] hover:border-[#0da6f2]/30 transition-colors text-[11px] font-black"
-                                aria-label="LinkedIn"
-                            >
-                                in
-                            </a>
-                        </div>
                     </div>
 
                     {/* Mortgage calculators */}

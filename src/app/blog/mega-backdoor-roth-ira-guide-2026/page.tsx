@@ -30,7 +30,7 @@ export default function MegaBackdoorBlog() {
                     <h1 className="text-2xl md:text-4xl font-black mb-6 leading-tight text-slate-900">The Mega Backdoor Roth IRA Guide for 2026</h1>
                 </header>
                 <div className="mb-10 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-slate-900 min-h-[400px]">
-                    <img src="/images/mega_backdoor_roth.png" alt="Mega Backdoor Roth" className="w-full h-auto object-cover max-h-[450px]" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement?.classList.add('bg-gradient-to-r', 'from-yellow-500', 'to-amber-600'); }} />
+                    <img src="/images/mega_backdoor_roth.png" alt="Mega Backdoor Roth" className="w-full h-auto object-cover max-h-[450px]" />
                 </div>
                 <div className="prose max-w-none text-slate-800">
                     <p className="lead text-lg font-medium mb-8 text-slate-600">If you make over $161,000 as a single filer, you are legally banned from contributing directly to a Roth IRA. But you can still get your money in through the back door.</p>

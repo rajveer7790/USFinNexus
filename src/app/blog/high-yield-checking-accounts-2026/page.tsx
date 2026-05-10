@@ -56,7 +56,7 @@ export default function CheckingBlog() {
             </header>
 
             <div className="mb-10 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-slate-900 flex items-center justify-center min-h-[400px]">
-                <img src="/images/high_yield_checking.png" alt="Glowing ATM with coins" className="w-full h-auto object-cover max-h-[450px]" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement?.classList.add('bg-gradient-to-r', 'from-emerald-500', 'to-teal-400'); }} />
+                <img src="/images/high_yield_checking.png" alt="Glowing ATM with coins" className="w-full h-auto object-cover max-h-[450px]" />
             </div>
 
             <div className="prose max-w-none text-slate-800">

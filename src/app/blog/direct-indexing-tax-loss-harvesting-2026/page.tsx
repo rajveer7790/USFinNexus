@@ -30,7 +30,7 @@ export default function DirectIndexingBlog() {
                     <h1 className="text-2xl md:text-4xl font-black mb-6 leading-tight text-slate-900">Direct Indexing: The Advanced Tax-Loss Harvesting Strategy for Retail Investors</h1>
                 </header>
                 <div className="mb-10 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-slate-900 min-h-[400px]">
-                    <img src="/images/direct_indexing.png" alt="Direct Indexing" className="w-full h-auto object-cover max-h-[450px]" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement?.classList.add('bg-gradient-to-r', 'from-indigo-600', 'to-purple-500'); }} />
+                    <img src="/images/direct_indexing.png" alt="Direct Indexing" className="w-full h-auto object-cover max-h-[450px]" />
                 </div>
                 <div className="prose max-w-none text-slate-800">
                     <p className="lead text-lg font-medium mb-8 text-slate-600">ETFs and Mutual funds are great, but they have a flaw: you can't sell the individual losing stocks inside of them to offset your personal taxes. Direct Indexing solves this.</p>

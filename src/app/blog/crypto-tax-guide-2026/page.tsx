@@ -57,7 +57,7 @@ export default function CryptoTaxBlog() {
 
             <div className="mb-10 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-slate-900 flex items-center justify-center min-h-[400px]">
                 {/* Fallback image display if actual image fails to load */}
-                <img src="/images/crypto_tax_2026.png" alt="3D Bitcoin on IRS Tax Form" className="w-full h-auto object-cover max-h-[450px]" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement?.classList.add('bg-gradient-to-r', 'from-gray-900', 'to-red-900'); }} />
+                <img src="/images/crypto_tax_2026.png" alt="3D Bitcoin on IRS Tax Form" className="w-full h-auto object-cover max-h-[450px]" />
             </div>
 
             <div className="prose max-w-none text-slate-800">

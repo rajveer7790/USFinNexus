@@ -30,7 +30,7 @@ export default function STRBlog() {
                     <h1 className="text-2xl md:text-4xl font-black mb-6 leading-tight text-slate-900">Short-Term Rental Regulations in 2026: The End of the Airbnb Arbitrage?</h1>
                 </header>
                 <div className="mb-10 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-slate-900 min-h-[400px]">
-                    <img src="/images/short_term_rental_2026.png" alt="Short Term Rentals" className="w-full h-auto object-cover max-h-[450px]" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement?.classList.add('bg-gradient-to-r', 'from-orange-500', 'to-red-500'); }} />
+                    <img src="/images/short_term_rental_2026.png" alt="Short Term Rentals" className="w-full h-auto object-cover max-h-[450px]" />
                 </div>
                 <div className="prose max-w-none text-slate-800">
                     <p className="lead text-lg font-medium mb-8 text-slate-600">The "Airbnb Arbitrage" model (renting a long-term apartment and subleasing it on Airbnb) was a gold mine. In 2026, it is a legal minefield.</p>

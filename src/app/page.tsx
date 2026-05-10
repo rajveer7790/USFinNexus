@@ -29,7 +29,7 @@ const RATES = [
 ];
 
 const STEPS = [
-    { n: '01', h: 'Pick a Calculator', p: 'Choose from 28+ CFPB-verified tools.' },
+    { n: '01', h: 'Pick a Calculator', p: 'Choose from 28+ CFPB-compliant tools.' },
     { n: '02', h: 'Enter Numbers', p: 'Simple inputs — no signup or email.' },
     { n: '03', h: 'Get Results', p: 'Instant breakdown with charts & tables.' },
     { n: '04', h: 'Download PDF', p: 'One-click PDF report. Zero server contact.' },
@@ -96,7 +96,7 @@ const STATS = [
 ];
 
 const DIFFS = [
-    { icon: Shield, h: 'CFPB-Verified Math', p: 'Every formula follows Consumer Financial Protection Bureau guidelines.', c: 'di-cyan' },
+    { icon: Shield, h: 'CFPB-Compliant Math', p: 'Every formula follows Consumer Financial Protection Bureau guidelines.', c: 'di-cyan' },
     { icon: Lock, h: 'Zero Data Collection', p: 'All calculations run client-side — nothing hits our servers.', c: 'di-mag' },
     { icon: Download, h: 'Instant PDF Reports', p: 'One-click professional PDF. Generated in your browser.', c: 'di-vio' },
     { icon: Eye, h: 'No Paywalls or Signup', p: 'Every tool is free forever. No email walls. No lead-gen.', c: 'di-lime' },
@@ -156,7 +156,7 @@ export default function HomePage() {
                         <div className="neo-hero-trust neo-reveal neo-reveal--d4">
                             {[
                                 { i: Lock, t: 'Zero Data' },
-                                { i: Shield, t: 'CFPB Verified' },
+                                { i: Shield, t: 'CFPB Compliant' },
                                 { i: Download, t: 'Free PDF Export' },
                             ].map(x => (
                                 <span key={x.t} className="neo-trust-pill"><x.i size={12} /> {x.t}</span>
@@ -227,7 +227,7 @@ export default function HomePage() {
                 <div className="neo-container neo-tools-section" id="tools">
                     <div className="neo-sec-tag"><span className="neo-sec-dot" /> Calculator Suite</div>
                     <h2 className="neo-sec-h2">28+ <em>free tools,</em> one platform.</h2>
-                    <p className="neo-sec-p">Every calculator is CFPB-verified with instant PDF export.</p>
+                    <p className="neo-sec-p">Every calculator is CFPB-compliant with instant PDF export.</p>
 
                     {/* Spotlight hero card */}
                     <Link href="/calculators/mortgage" className="neo-tool-hero">
@@ -261,7 +261,7 @@ export default function HomePage() {
                 <div className="neo-stats-bg" />
                 <div className="neo-container neo-stats-inner">
                     <div className="neo-sec-tag neo-sec-tag--dark"><span className="neo-sec-dot" /> By The Numbers</div>
-                    <h2 className="neo-sec-h2 neo-sec-h2--light">Trusted by <em>thousands.</em></h2>
+                    <h2 className="neo-sec-h2 neo-sec-h2--light">Used by homebuyers <em>nationwide.</em></h2>
                     <div className="neo-stats-row">
                         {STATS.map(s => (
                             <div key={s.label} className="neo-stat-block">
@@ -308,7 +308,7 @@ export default function HomePage() {
                                 { l: 'Email Required', them: 'Yes', us: 'Never' },
                                 { l: 'Data Collected', them: 'Everything', us: '0 bytes' },
                                 { l: 'PDF Export', them: 'Premium Only', us: 'Always Free' },
-                                { l: 'CFPB Verified', them: '✕', us: '✓' },
+                                { l: 'CFPB Compliant', them: '✕', us: '✓' },
                             ].map(r => (
                                 <div key={r.l} className="neo-dv-row">
                                     <span className="neo-dv-label">{r.l}</span>

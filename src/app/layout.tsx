@@ -27,6 +27,11 @@ const plexMono = IBM_Plex_Mono({
 
 
 export const metadata: Metadata = {
+    alternates: {
+        languages: {
+            'en-US': '/en-US',
+        },
+    },
     title: {
         template: '%s | USFinNexus',
         default: 'Free Mortgage Calculator 2026 with PDF Download | USFinNexus',

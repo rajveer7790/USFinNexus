@@ -31,7 +31,7 @@ export default function BlogPage() {
                     <h1 className="text-2xl md:text-4xl font-black mb-6 leading-tight text-slate-900">The "Silver Tsunami" Housing Shift: How Aging Boomers Affect 2026 Inventory</h1>
                 </header>
                 <div className="mb-10 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-slate-900 min-h-[400px]">
-                    <img src="/images/silver_tsunami_housing.png" alt="Silver Tsunami" className="w-full h-auto object-cover max-h-[450px]" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement?.classList.add('bg-gradient-to-r', 'from-blue-600', 'to-cyan-500'); }} />
+                    <img src="/images/silver_tsunami_housing.png" alt="Silver Tsunami" className="w-full h-auto object-cover max-h-[450px]" />
                 </div>
                 <div className="prose max-w-none text-slate-800">
                     <p className="lead text-lg font-medium mb-8 text-slate-600">The "Silver Tsunami" refers to the massive wave of Baby Boomers reaching retirement age and subsequently downsizing or moving to assisted living. In 2026, we are finally seeing the beginnings of this demographic shift impact housing inventory.</p>
