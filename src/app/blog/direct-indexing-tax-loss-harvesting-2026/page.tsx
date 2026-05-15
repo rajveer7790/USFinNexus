@@ -8,7 +8,7 @@ import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
     title: 'Direct Indexing & Tax-Loss Harvesting 2026 — The Strategy ETFs Cannot Beat | USFinNexus',
-    description: 'Direct indexing lets retail investors own individual index stocks for better tax-loss harvesting than any ETF. See how it works, top platforms, minimums, and if it\'s right for you in 2026.',
+    description: "Direct indexing lets retail investors own individual index stocks for better tax-loss harvesting than any ETF. See how it works, top platforms, minimums, and if it\'s right for you in 2026.",
     keywords: [
         'direct indexing', 'tax-loss harvesting 2026', 'direct indexing vs ETF',
         'personalized index investing', 'tax alpha investing', 'custom index fund',

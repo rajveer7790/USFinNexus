@@ -6,10 +6,10 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Mortgage Calculator Comparison: 5 Key Numbers You're Missing - USFinNexus 2026',
+    title: "Mortgage Calculator Comparison: 5 Key Numbers You're Missing - USFinNexus 2026",
     description: 'Compare mortgage calculators and understand the 5 key metrics every calculator should provide.',
     openGraph: {
-        title: 'Mortgage Calculator Comparison: 5 Key Numbers You're Missing',
+        title: "Mortgage Calculator Comparison: 5 Key Numbers You're Missing",
         description: 'Compare mortgage calculators and understand the 5 key metrics every calculator should provide.',
         url: 'https://usfinnexus.com/blog/mortgage-calculator-comparison-2026',
         type: 'article',
@@ -23,7 +23,7 @@ export default function PostComponent() {
         <>
         <ArticleSchema title="Mortgage Calculator Comparison: 5 Key Numbers You're Missing" description="Compare mortgage calculators and understand the 5 key metrics every calculator should provide." url="https://usfinnexus.com/blog/mortgage-calculator-comparison-2026" datePublished="2026-05-15" dateModified="2026-05-15" authorName="USFinNexus Editorial Team" keywords={['finance', 'calculator']} />
         <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
-            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Mortgage Calculator Comparison: 5 Key Numbers You're Missing', item: '/blog/mortgage-calculator-comparison-2026' }]} />
+            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: "Mortgage Calculator Comparison: 5 Key Numbers You're Missing", item: '/blog/mortgage-calculator-comparison-2026' }]} />
             <article className="prose prose-slate max-w-none">
             <header className="mb-10">
                 <h1 className="text-3xl md:text-5xl font-black mb-6">Mortgage Calculator Comparison: 5 Key Numbers You're Missing</h1>
@@ -42,7 +42,7 @@ export default function PostComponent() {
             </div>
             </article>
             <div className="mt-12">
-                <RelatedCalculators calculators={['mortgage', 'refinance']} />
+                <RelatedCalculators />
                 <AuthorBio author={USFinNexusEditorialTeam} />
             </div>
         </div>

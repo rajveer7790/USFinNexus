@@ -7,10 +7,10 @@ import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
     title: 'Piggyback Mortgages (80/10/10): A Strategy to Avoid PMI - USFinNexus 2026',
-    description: 'Learn how piggyback loans work and when they're a better alternative to PMI.',
+    description: "Learn how piggyback loans work and when they're a better alternative to PMI.",
     openGraph: {
         title: 'Piggyback Mortgages (80/10/10): A Strategy to Avoid PMI',
-        description: 'Learn how piggyback loans work and when they're a better alternative to PMI.',
+        description: "Learn how piggyback loans work and when they're a better alternative to PMI.",
         url: 'https://usfinnexus.com/blog/piggyback-mortgage-80-10-10-strategy',
         type: 'article',
         siteName: 'USFinNexus',
@@ -42,7 +42,7 @@ export default function PostComponent() {
             </div>
             </article>
             <div className="mt-12">
-                <RelatedCalculators calculators={['mortgage', 'refinance']} />
+                <RelatedCalculators />
                 <AuthorBio author={USFinNexusEditorialTeam} />
             </div>
         </div>

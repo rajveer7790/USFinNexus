@@ -6,10 +6,10 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Assumable Mortgages in 2026: A Home Seller's Secret Weapon - USFinNexus 2026',
+    title: "Assumable Mortgages in 2026: A Home Seller's Secret Weapon - USFinNexus 2026",
     description: 'Assumable mortgages let buyers take over your low rate. See how this rare advantage works.',
     openGraph: {
-        title: 'Assumable Mortgages in 2026: A Home Seller's Secret Weapon',
+        title: "Assumable Mortgages in 2026: A Home Seller's Secret Weapon",
         description: 'Assumable mortgages let buyers take over your low rate. See how this rare advantage works.',
         url: 'https://usfinnexus.com/blog/assumable-mortgages-2026-strategy',
         type: 'article',
@@ -23,7 +23,7 @@ export default function PostComponent() {
         <>
         <ArticleSchema title="Assumable Mortgages in 2026: A Home Seller's Secret Weapon" description="Assumable mortgages let buyers take over your low rate. See how this rare advantage works." url="https://usfinnexus.com/blog/assumable-mortgages-2026-strategy" datePublished="2026-05-15" dateModified="2026-05-15" authorName="USFinNexus Editorial Team" keywords={['finance', 'calculator']} />
         <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
-            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Assumable Mortgages in 2026: A Home Seller's Secret Weapon', item: '/blog/assumable-mortgages-2026-strategy' }]} />
+            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: "Assumable Mortgages in 2026: A Home Seller's Secret Weapon", item: '/blog/assumable-mortgages-2026-strategy' }]} />
             <article className="prose prose-slate max-w-none">
             <header className="mb-10">
                 <h1 className="text-3xl md:text-5xl font-black mb-6">Assumable Mortgages in 2026: A Home Seller's Secret Weapon</h1>
@@ -42,7 +42,7 @@ export default function PostComponent() {
             </div>
             </article>
             <div className="mt-12">
-                <RelatedCalculators calculators={['mortgage', 'refinance']} />
+                <RelatedCalculators />
                 <AuthorBio author={USFinNexusEditorialTeam} />
             </div>
         </div>

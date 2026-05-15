@@ -42,7 +42,7 @@ export default function PostComponent() {
             </div>
             </article>
             <div className="mt-12">
-                <RelatedCalculators calculators={['mortgage', 'refinance']} />
+                <RelatedCalculators />
                 <AuthorBio author={USFinNexusEditorialTeam} />
             </div>
         </div>

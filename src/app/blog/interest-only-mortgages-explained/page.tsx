@@ -8,10 +8,10 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Interest-Only Mortgages: When They Make Sense (and Usually Don't) - USFinNexus 2026',
+    title: "Interest-Only Mortgages: When They Make Sense (and Usually Don't) - USFinNexus 2026",
     description: 'Interest-only loans lower payments early but carry hidden risks. Understand the tradeoffs.',
     openGraph: {
-        title: 'Interest-Only Mortgages: When They Make Sense (and Usually Don't)',
+        title: "Interest-Only Mortgages: When They Make Sense (and Usually Don't)",
         description: 'Interest-only loans lower payments early but carry hidden risks. Understand the tradeoffs.',
         url: 'https://usfinnexus.com/blog/interest-only-mortgages-explained',
         type: 'article',
@@ -35,7 +35,7 @@ export default function PostComponent() {
             keywords={['finance', 'calculator', '2026']}
         />
         <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
-            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Interest-Only Mortgages: When They Make Sense (and Usually Don't)', item: '/blog/interest-only-mortgages-explained' }]} />
+            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: "Interest-Only Mortgages: When They Make Sense (and Usually Don't)", item: '/blog/interest-only-mortgages-explained' }]} />
             <article className="prose prose-slate max-w-none">
             <header className="mb-10">
                 <span className="inline-block px-3 py-1 rounded text-xs font-bold mb-4" style={{ background: 'rgba(0, 102, 204, 0.12)', color: '#0066CC' }}>
@@ -65,7 +65,7 @@ export default function PostComponent() {
             </div>
             </article>
             <div className="mt-12">
-                <RelatedCalculators calculators={['mortgage', 'refinance', 'dti']} />
+                <RelatedCalculators />
                 <AuthorBio author={USFinNexusEditorialTeam} />
             </div>
         </div>

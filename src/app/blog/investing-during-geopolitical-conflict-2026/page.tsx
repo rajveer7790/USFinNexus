@@ -50,7 +50,7 @@ export default function GeopoliticalConflictBlog() {
                     name: 'What are the best safe haven assets during geopolitical crisis?',
                     acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'The most reliable safe haven assets during geopolitical crises are US Treasury bonds, gold and precious metals, the US dollar, and Swiss franc. US Treasuries benefit from a global flight-to-safety as foreign capital floods into them, driving prices up. Gold serves as a store of value immune to currency debasement, while the USD strengthens as the world\'s reserve currency during periods of global stress.'
+                        text: "The most reliable safe haven assets during geopolitical crises are US Treasury bonds, gold and precious metals, the US dollar, and Swiss franc. US Treasuries benefit from a global flight-to-safety as foreign capital floods into them, driving prices up. Gold serves as a store of value immune to currency debasement, while the USD strengthens as the world\'s reserve currency during periods of global stress."
                     }
                 },
                 {

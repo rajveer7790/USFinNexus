@@ -6,10 +6,10 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Why Your Lender's Mortgage Quote Differs from Online Calculators - USFinNexus 2026',
+    title: "Why Your Lender's Mortgage Quote Differs from Online Calculators - USFinNexus 2026",
     description: 'Understand why lender quotes differ from online calculators and what factors cause the variance.',
     openGraph: {
-        title: 'Why Your Lender's Mortgage Quote Differs from Online Calculators',
+        title: "Why Your Lender's Mortgage Quote Differs from Online Calculators",
         description: 'Understand why lender quotes differ from online calculators and what factors cause the variance.',
         url: 'https://usfinnexus.com/blog/lender-quote-vs-online-calculator',
         type: 'article',
@@ -23,7 +23,7 @@ export default function PostComponent() {
         <>
         <ArticleSchema title="Why Your Lender's Mortgage Quote Differs from Online Calculators" description="Understand why lender quotes differ from online calculators and what factors cause the variance." url="https://usfinnexus.com/blog/lender-quote-vs-online-calculator" datePublished="2026-05-15" dateModified="2026-05-15" authorName="USFinNexus Editorial Team" keywords={['finance', 'calculator']} />
         <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
-            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Why Your Lender's Mortgage Quote Differs from Online Calculators', item: '/blog/lender-quote-vs-online-calculator' }]} />
+            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: "Why Your Lender's Mortgage Quote Differs from Online Calculators", item: '/blog/lender-quote-vs-online-calculator' }]} />
             <article className="prose prose-slate max-w-none">
             <header className="mb-10">
                 <h1 className="text-3xl md:text-5xl font-black mb-6">Why Your Lender's Mortgage Quote Differs from Online Calculators</h1>
@@ -42,7 +42,7 @@ export default function PostComponent() {
             </div>
             </article>
             <div className="mt-12">
-                <RelatedCalculators calculators={['mortgage', 'refinance']} />
+                <RelatedCalculators />
                 <AuthorBio author={USFinNexusEditorialTeam} />
             </div>
         </div>

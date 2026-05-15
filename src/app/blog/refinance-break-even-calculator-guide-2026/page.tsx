@@ -280,8 +280,8 @@ export default function RefinanceBreakEvenBlog() {
             </article>
 
             <div className="mt-12">
-                <RelatedCalculators calculators={['refinance', 'heloc', 'mortgage']} />
-                <RelatedArticles articles={['30-year-vs-15-year-mortgage-2026', 'fha-va-usda-loan-comparison-2026']} />
+                <RelatedCalculators />
+                <RelatedArticles />
                 <AuthorBio author={USFinNexusEditorialTeam} />
             </div>
 

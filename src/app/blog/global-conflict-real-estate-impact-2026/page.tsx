@@ -9,7 +9,7 @@ import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
     title: 'How Global Conflicts Are Impacting US Real Estate in 2026 | USFinNexus',
-    description: 'Think a war across the globe doesn\'t affect your local housing market? Think again. Here is how supply chains and foreign capital alter US real estate.',
+    description: "Think a war across the globe doesn\'t affect your local housing market? Think again. Here is how supply chains and foreign capital alter US real estate.",
     keywords: [
         'global conflict real estate impact',
         'how war affects housing market',

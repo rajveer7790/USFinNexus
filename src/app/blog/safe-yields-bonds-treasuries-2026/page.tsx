@@ -79,7 +79,7 @@ export default function SafeYieldsBondsBlog() {
                     name: 'How do rising interest rates affect bond prices?',
                     acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Bond prices and interest rates move in opposite directions—this is one of the most fundamental principles of fixed income investing. When interest rates rise, newly issued bonds offer higher yields, making existing lower-yield bonds less attractive and driving their market prices down. Conversely, when rates fall, existing bonds with higher yields become more valuable. The magnitude of this effect is measured by "duration"—a bond\'s sensitivity to rate changes. A 10-year Treasury with a duration of ~8 will fall roughly 8% in price for every 1% rise in rates. This is why short-term bonds (low duration) are preferred in rising or uncertain rate environments, as they have far less price volatility.',
+                        text: "Bond prices and interest rates move in opposite directions—this is one of the most fundamental principles of fixed income investing. When interest rates rise, newly issued bonds offer higher yields, making existing lower-yield bonds less attractive and driving their market prices down. Conversely, when rates fall, existing bonds with higher yields become more valuable. The magnitude of this effect is measured by \"duration\"—a bond\'s sensitivity to rate changes. A 10-year Treasury with a duration of ~8 will fall roughly 8% in price for every 1% rise in rates. This is why short-term bonds (low duration) are preferred in rising or uncertain rate environments, as they have far less price volatility.",
                     },
                 },
             ],

@@ -58,7 +58,7 @@ export default function HighYieldVsIndexBlog() {
                     name: 'What is the average annual return of the S&P 500 vs high-yield savings?',
                     acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'The S&P 500 has historically returned an average of 7-10% annually after inflation over long periods, compared to 4-5% from today\'s best high-yield savings accounts. However, the stock market is volatile year-to-year, while HYSA rates are guaranteed for the short term but will decline when the Fed cuts interest rates.'
+                        text: "The S&P 500 has historically returned an average of 7-10% annually after inflation over long periods, compared to 4-5% from today\'s best high-yield savings accounts. However, the stock market is volatile year-to-year, while HYSA rates are guaranteed for the short term but will decline when the Fed cuts interest rates."
                     }
                 },
                 {

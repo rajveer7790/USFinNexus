@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Mortgage Help Guide 2026: What To Do If You Can\'t Pay | USFinNexus',
+    title: "Mortgage Help Guide 2026: What To Do If You Can\'t Pay | USFinNexus",
     description: 'A comprehensive, factual guide on what to do if you are struggling to make your mortgage payments in 2026. Covers forbearance, loan modifications, hardship letters, and free HUD counseling.',
     keywords: [
         'mortgage help 2026',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         'housing counselor free help',
     ],
     openGraph: {
-        title: 'Mortgage Help Guide 2026: What To Do If You Can\'t Pay',
+        title: "Mortgage Help Guide 2026: What To Do If You Can\'t Pay",
         description: 'Actionable steps if you are struggling to make your mortgage payments in 2026. Forbearance, loan modification, HUD counselors, and foreclosure prevention.',
         url: 'https://usfinnexus.com/blog/mortgage-help-guide-2026',
         type: 'article',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mortgage Help Guide 2026: What To Do If You Can\'t Pay',
+        title: "Mortgage Help Guide 2026: What To Do If You Can\'t Pay",
         description: 'Forbearance, loan modifications, HUD counselors, and foreclosure prevention — your complete 2026 action plan.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -47,7 +47,7 @@ export default function MortgageHelpBlog() {
                 mainEntity: [
                     {
                         '@type': 'Question',
-                        name: 'What should I do if I can\'t afford my mortgage payment?',
+                        name: "What should I do if I can\'t afford my mortgage payment?",
                         acceptedAnswer: {
                             '@type': 'Answer',
                             text: 'Contact your mortgage servicer immediately — before you miss a payment. Ask about "loss mitigation options." Then call a free HUD-approved housing counselor at 1-800-569-4287. Do not ignore the problem. Options include forbearance (temporary payment pause), loan modification (permanent term change), and repayment plans. The earlier you act, the more options you have.',

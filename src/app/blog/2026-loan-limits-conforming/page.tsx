@@ -9,10 +9,10 @@ import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
     title: '2026 Loan Limits: What Changed for Conventional, FHA, and VA Loans - USFinNexus 2026',
-    description: 'Annual loan limits changed for 2026. See what's new for conventional, FHA, and VA loans.',
+    description: "Annual loan limits changed for 2026. See what's new for conventional, FHA, and VA loans.",
     openGraph: {
         title: '2026 Loan Limits: What Changed for Conventional, FHA, and VA Loans',
-        description: 'Annual loan limits changed for 2026. See what's new for conventional, FHA, and VA loans.',
+        description: "Annual loan limits changed for 2026. See what's new for conventional, FHA, and VA loans.",
         url: 'https://usfinnexus.com/blog/2026-loan-limits-conforming',
         type: 'article',
         siteName: 'USFinNexus',
@@ -65,7 +65,7 @@ export default function PostComponent() {
             </div>
             </article>
             <div className="mt-12">
-                <RelatedCalculators calculators={['mortgage', 'refinance', 'dti']} />
+                <RelatedCalculators />
                 <AuthorBio author={USFinNexusEditorialTeam} />
             </div>
         </div>

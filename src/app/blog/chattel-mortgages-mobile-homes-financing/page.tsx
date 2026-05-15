@@ -7,10 +7,10 @@ import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
     title: 'Chattel Mortgages and Mobile Homes: How Financing Works - USFinNexus 2026',
-    description: 'Mobile homes use chattel mortgages instead of traditional mortgages. Here's how they work.',
+    description: "Mobile homes use chattel mortgages instead of traditional mortgages. Here's how they work.",
     openGraph: {
         title: 'Chattel Mortgages and Mobile Homes: How Financing Works',
-        description: 'Mobile homes use chattel mortgages instead of traditional mortgages. Here's how they work.',
+        description: "Mobile homes use chattel mortgages instead of traditional mortgages. Here's how they work.",
         url: 'https://usfinnexus.com/blog/chattel-mortgages-mobile-homes-financing',
         type: 'article',
         siteName: 'USFinNexus',
@@ -42,7 +42,7 @@ export default function PostComponent() {
             </div>
             </article>
             <div className="mt-12">
-                <RelatedCalculators calculators={['mortgage', 'refinance']} />
+                <RelatedCalculators />
                 <AuthorBio author={USFinNexusEditorialTeam} />
             </div>
         </div>

@@ -9,10 +9,10 @@ import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
     title: 'Should You Buy Down Your Mortgage Rate? (The Math on Points) - USFinNexus 2026',
-    description: 'Buying points lowers your rate but costs money upfront. Here's the break-even math.',
+    description: "Buying points lowers your rate but costs money upfront. Here's the break-even math.",
     openGraph: {
         title: 'Should You Buy Down Your Mortgage Rate? (The Math on Points)',
-        description: 'Buying points lowers your rate but costs money upfront. Here's the break-even math.',
+        description: "Buying points lowers your rate but costs money upfront. Here's the break-even math.",
         url: 'https://usfinnexus.com/blog/mortgage-points-buydown-calculator',
         type: 'article',
         siteName: 'USFinNexus',
@@ -65,7 +65,7 @@ export default function PostComponent() {
             </div>
             </article>
             <div className="mt-12">
-                <RelatedCalculators calculators={['mortgage', 'refinance', 'dti']} />
+                <RelatedCalculators />
                 <AuthorBio author={USFinNexusEditorialTeam} />
             </div>
         </div>

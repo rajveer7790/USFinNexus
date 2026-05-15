@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Calculator, DollarSign, TrendingDown } from 'lucide-react';
+import { Calculator, DollarSign } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
 import RelatedCalculators from '@/components/RelatedCalculators';
 import RelatedArticles from '@/components/RelatedArticles';
@@ -222,7 +222,7 @@ export default function MortgagePaymentCalculationBlog() {
                         ['Forgetting taxes and insurance', 'The P&I payment is only part of what you pay. Budget for property taxes, insurance, and possibly PMI.'],
                         ['Using annual interest rate instead of monthly', 'The formula requires your monthly rate (annual rate ÷ 12). Using the annual rate will give you a wildly wrong answer.'],
                         ['Confusing loan term with amortization', 'An interest-only loan might have a 30-year amortization but a 7-year term. After 7 years, the remaining balance is due.'],
-                        ['Ignoring rate lock periods', 'When rates are quoted, they're locked for 30, 45, or 60 days. If closing is delayed, your rate might change.'],
+                        ['Ignoring rate lock periods', "When rates are quoted, they're locked for 30, 45, or 60 days. If closing is delayed, your rate might change."],
                     ].map(([title, desc]) => (
                         <div key={String(title)} className="flex items-start gap-3">
                             <DollarSign className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#0066CC' }} />
@@ -252,8 +252,8 @@ export default function MortgagePaymentCalculationBlog() {
             </article>
 
             <div className="mt-12">
-                <RelatedCalculators calculators={['mortgage', 'dti', 'down-payment']} />
-                <RelatedArticles articles={['30-year-vs-15-year-mortgage-complete-math', 'mortgage-affordability-28-36-rule']} />
+                <RelatedCalculators />
+                <RelatedArticles currentSlug="how-to-calculate-monthly-mortgage-payment" />
                 <AuthorBio author={USFinNexusEditorialTeam} />
             </div>
 

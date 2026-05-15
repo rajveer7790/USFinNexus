@@ -6,10 +6,10 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Mortgage Pre-Approval vs Pre-Qualification: What's the Difference? - USFinNexus 2026',
+    title: "Mortgage Pre-Approval vs Pre-Qualification: What's the Difference? - USFinNexus 2026",
     description: 'Understand the difference between pre-qualification and pre-approval, and why it matters when shopping for homes.',
     openGraph: {
-        title: 'Mortgage Pre-Approval vs Pre-Qualification: What's the Difference?',
+        title: "Mortgage Pre-Approval vs Pre-Qualification: What's the Difference?",
         description: 'Understand the difference between pre-qualification and pre-approval, and why it matters when shopping for homes.',
         url: 'https://usfinnexus.com/blog/mortgage-preapproval-prequalification',
         type: 'article',
@@ -23,7 +23,7 @@ export default function PostComponent() {
         <>
         <ArticleSchema title="Mortgage Pre-Approval vs Pre-Qualification: What's the Difference?" description="Understand the difference between pre-qualification and pre-approval, and why it matters when shopping for homes." url="https://usfinnexus.com/blog/mortgage-preapproval-prequalification" datePublished="2026-05-15" dateModified="2026-05-15" authorName="USFinNexus Editorial Team" keywords={['finance', 'calculator']} />
         <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
-            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Mortgage Pre-Approval vs Pre-Qualification: What's the Difference?', item: '/blog/mortgage-preapproval-prequalification' }]} />
+            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: "Mortgage Pre-Approval vs Pre-Qualification: What's the Difference?", item: '/blog/mortgage-preapproval-prequalification' }]} />
             <article className="prose prose-slate max-w-none">
             <header className="mb-10">
                 <h1 className="text-3xl md:text-5xl font-black mb-6">Mortgage Pre-Approval vs Pre-Qualification: What's the Difference?</h1>
@@ -42,7 +42,7 @@ export default function PostComponent() {
             </div>
             </article>
             <div className="mt-12">
-                <RelatedCalculators calculators={['mortgage', 'refinance']} />
+                <RelatedCalculators />
                 <AuthorBio author={USFinNexusEditorialTeam} />
             </div>
         </div>

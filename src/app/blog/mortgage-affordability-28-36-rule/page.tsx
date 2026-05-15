@@ -8,10 +8,10 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'What's Your Real Mortgage Affordability? (Use the 28/36 Rule) - USFinNexus 2026',
+    title: "What's Your Real Mortgage Affordability? (Use the 28/36 Rule) - USFinNexus 2026",
     description: 'Learn how the 28/36 rule works and what it means for your mortgage affordability.',
     openGraph: {
-        title: 'What's Your Real Mortgage Affordability? (Use the 28/36 Rule)',
+        title: "What's Your Real Mortgage Affordability? (Use the 28/36 Rule)",
         description: 'Learn how the 28/36 rule works and what it means for your mortgage affordability.',
         url: 'https://usfinnexus.com/blog/mortgage-affordability-28-36-rule',
         type: 'article',
@@ -35,7 +35,7 @@ export default function PostComponent() {
             keywords={['finance', 'calculator', '2026']}
         />
         <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
-            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'What's Your Real Mortgage Affordability? (Use the 28/36 Rule)', item: '/blog/mortgage-affordability-28-36-rule' }]} />
+            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: "What's Your Real Mortgage Affordability? (Use the 28/36 Rule)", item: '/blog/mortgage-affordability-28-36-rule' }]} />
             <article className="prose prose-slate max-w-none">
             <header className="mb-10">
                 <span className="inline-block px-3 py-1 rounded text-xs font-bold mb-4" style={{ background: 'rgba(0, 102, 204, 0.12)', color: '#0066CC' }}>
@@ -65,7 +65,7 @@ export default function PostComponent() {
             </div>
             </article>
             <div className="mt-12">
-                <RelatedCalculators calculators={['mortgage', 'refinance', 'dti']} />
+                <RelatedCalculators />
                 <AuthorBio author={USFinNexusEditorialTeam} />
             </div>
         </div>
