@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'Mortgage, Housing Market & Finance Blog | USFinNexus',
-    description: 'Free guides on mortgage rates, housing market trends, homeowner tax deductions, home buying programs, and personal finance — written for everyday Americans in 2026.',
+    description: 'Free guides on mortgage rates, housing market trends, homeowner tax deductions, home buying programs, and personal finance - written for everyday Americans in 2026.',
     alternates: { canonical: 'https://usfinnexus.com/blog' },
 };
 
@@ -50,7 +50,7 @@ export default function BlogPage() {
             <div className="mb-6 sm:mb-10">
                 <h1 className="text-2xl sm:text-3xl font-black mb-2 sm:mb-3" style={{ color: 'var(--color-text)' }}>Mortgage & Finance Resources</h1>
                 <p className="text-sm sm:text-base" style={{ color: 'var(--color-text-muted)' }}>
-                    Free guides on home buying, mortgage calculations, refinancing, and personal finance — written for everyday Americans.
+                    Free guides on home buying, mortgage calculations, refinancing, and personal finance - written for everyday Americans.
                 </p>
             </div>
 
