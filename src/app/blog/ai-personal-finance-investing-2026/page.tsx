@@ -70,7 +70,7 @@ export default function AIFinanceBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">1. Hyper-Personalized Robo-Advising</h2>
                 <p className="mb-4">
-                    Modern robo-advisors no longer just ask you for your "risk tolerance" on a scale of 1 to 10. They use conversational AI to ingest your entire financial picture—your student loans, your mortgage rate, your career trajectory, and your incoming RSUs (Restricted Stock Units). 
+                    Modern robo-advisors no longer just ask you for your "risk tolerance" on a scale of 1 to 10. They use conversational AI to ingest your entire financial picture-your student loans, your mortgage rate, your career trajectory, and your incoming RSUs (Restricted Stock Units). 
                 </p>
                 <p className="mb-4">
                     The AI dynamically shifts your asset allocation not just based on age, but based on real-time macroeconomic indicators and your personal cash flow.
@@ -95,7 +95,7 @@ export default function AIFinanceBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">3. Automated Subscription & Bill Negotiation</h2>
                 <p className="mb-4">
-                    We all suffer from subscription fatigue. AI assistants in 2026 don't just "show" you what you are paying for—they actively email and call service providers on your behalf. These bots can negotiate your internet bill, cancel forgotten gym memberships, and switch your car insurance to a cheaper provider without you lifting a finger.
+                    We all suffer from subscription fatigue. AI assistants in 2026 don't just "show" you what you are paying for-they actively email and call service providers on your behalf. These bots can negotiate your internet bill, cancel forgotten gym memberships, and switch your car insurance to a cheaper provider without you lifting a finger.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">4. Behavioral Nudging & Budgeting</h2>
@@ -111,7 +111,7 @@ export default function AIFinanceBlog() {
                     While AI is incredible at processing data and executing optimization strategies, it lacks emotional intelligence. When the market drops 15% in a week, an AI might mathematically advise you to hold, but a human financial planner understands the panic you are feeling and can talk you off the ledge.
                 </p>
                 <p className="mb-8">
-                    The smartest approach in 2026? Use AI for the math, the taxes, and the optimization, but consult a human for the big life decisions—like when to buy a house, start a business, or retire.
+                    The smartest approach in 2026? Use AI for the math, the taxes, and the optimization, but consult a human for the big life decisions-like when to buy a house, start a business, or retire.
                 </p>
 
                 <hr className="my-10 border-gray-200" />

@@ -45,7 +45,7 @@ export default function MortgageHelpBlog() {
                         </p>
 
                         <h2 className="text-2xl font-bold mt-12 mb-4">Step 1: Contact Your Servicer Immediately</h2>
-                        <p>Your mortgage servicer is the company you send your monthly payments to. They do not want to foreclose on your house—it is expensive and time-consuming for them. Call them before you miss a payment. Explain your situation clearly and ask about "loss mitigation options."</p>
+                        <p>Your mortgage servicer is the company you send your monthly payments to. They do not want to foreclose on your house-it is expensive and time-consuming for them. Call them before you miss a payment. Explain your situation clearly and ask about "loss mitigation options."</p>
 
                         <h2 className="text-2xl font-bold mt-12 mb-4">Understanding Your Core Options</h2>
                         

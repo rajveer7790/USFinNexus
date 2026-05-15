@@ -65,7 +65,7 @@ export default function GeopoliticalConflictBlog() {
                 </p>
 
                 <p className="mb-4">
-                    Instead of reacting to the headlines with fear, it's crucial to understand the underlying mechanics of how capital flows during a crisis. By studying historical precedents and current macroeconomic conditions, you can position your portfolio to weather the storm—and potentially profit from the volatility.
+                    Instead of reacting to the headlines with fear, it's crucial to understand the underlying mechanics of how capital flows during a crisis. By studying historical precedents and current macroeconomic conditions, you can position your portfolio to weather the storm-and potentially profit from the volatility.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">The Psychology of Market Shocks</h2>

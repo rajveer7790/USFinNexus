@@ -70,7 +70,7 @@ export default function DefenseCybersecurityBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">The Convergence of Defense and Tech</h2>
                 <p className="mb-4">
-                    Historically, the "Defense Sector" meant tanks, fighter jets, and munitions—built by massive, slow-moving industrial giants. Today, the most valuable defense contracts involve artificial intelligence, drone swarms, satellite communications, and autonomous systems. 
+                    Historically, the "Defense Sector" meant tanks, fighter jets, and munitions-built by massive, slow-moving industrial giants. Today, the most valuable defense contracts involve artificial intelligence, drone swarms, satellite communications, and autonomous systems. 
                 </p>
                 <p className="mb-4">
                     Because of this, traditional tech companies and specialized defense startups are capturing massive federal contracts. The lines between "Big Tech" and "Defense" have blurred entirely.

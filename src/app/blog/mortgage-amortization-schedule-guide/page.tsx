@@ -64,7 +64,7 @@ export default function BlogPost() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    An amortization schedule is the single most important document in your mortgage. It tells you exactly where every dollar of your monthly payment goes—month by month, for the entire life of your loan. Here&apos;s how to read it like a pro.
+                    An amortization schedule is the single most important document in your mortgage. It tells you exactly where every dollar of your monthly payment goes-month by month, for the entire life of your loan. Here&apos;s how to read it like a pro.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Is an Amortization Schedule?</h2>
@@ -77,7 +77,7 @@ export default function BlogPost() {
                         <Info className="w-6 h-6 shrink-0" style={{ color: 'var(--color-navy)' }} />
                         <div>
                             <h3 className="font-bold mb-2">Key Insight</h3>
-                            <p className="text-sm m-0">In the early years of a 30-year mortgage, roughly <strong>70–80% of your payment goes to interest</strong>. It&apos;s only in the final decade that the majority shifts to principal. This is why understanding your schedule is critical.</p>
+                            <p className="text-sm m-0">In the early years of a 30-year mortgage, roughly <strong>70-80% of your payment goes to interest</strong>. It&apos;s only in the final decade that the majority shifts to principal. This is why understanding your schedule is critical.</p>
                         </div>
                     </div>
                 </div>
@@ -161,7 +161,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Why Extra Payments Are So Powerful</h2>
                 <p className="mb-6">
-                    Making just <strong>one extra payment per year</strong> on a 30-year mortgage can shave off approximately 4–5 years from your loan term and save tens of thousands in interest. When you make an extra payment, 100% of that extra amount goes directly to principal reduction.
+                    Making just <strong>one extra payment per year</strong> on a 30-year mortgage can shave off approximately 4-5 years from your loan term and save tens of thousands in interest. When you make an extra payment, 100% of that extra amount goes directly to principal reduction.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Generate Your Own Schedule</h2>

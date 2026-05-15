@@ -9,7 +9,7 @@ import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
     title: 'Refinance Break-Even Calculator Guide: When Does Refinancing Actually Make Sense? 2026',
-    description: 'Master the refinance break-even formula. See real scenarios, closing costs, and when refinancing saves money—plus a free calculator to run your numbers.',
+    description: 'Master the refinance break-even formula. See real scenarios, closing costs, and when refinancing saves money-plus a free calculator to run your numbers.',
     openGraph: {
         title: 'Refinance Break-Even Calculator: When Does It Make Sense? 2026 Guide',
         description: 'Learn the break-even formula that decides if refinancing saves money or costs you. Real scenarios, closing costs, time horizons, and the calculator that gets you there.',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Refinance Break-Even Calculator: When Does Refinancing Make Sense?',
-        description: 'The single formula that decides if refinancing saves you money or wastes it—with real 2026 scenarios.',
+        description: 'The single formula that decides if refinancing saves you money or wastes it-with real 2026 scenarios.',
         images: ['https://usfinnexus.com/images/refinance-break-even-hero-2026.png'],
     },
     alternates: {
@@ -34,7 +34,7 @@ export default function RefinanceBreakEvenBlog() {
         <>
         <ArticleSchema
             title="Refinance Break-Even Calculator Guide: When Does Refinancing Actually Make Sense?"
-            description="Master the refinance break-even formula. See real scenarios, closing costs, and when refinancing saves money—plus a free calculator to run your numbers."
+            description="Master the refinance break-even formula. See real scenarios, closing costs, and when refinancing saves money-plus a free calculator to run your numbers."
             url="https://usfinnexus.com/blog/refinance-break-even-calculator-guide-2026"
             datePublished="2026-05-15"
             dateModified="2026-05-15"
@@ -63,7 +63,7 @@ export default function RefinanceBreakEvenBlog() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    Refinancing a mortgage sounds simple: get a lower rate, save money. But there&apos;s a catch. Every refinance costs money upfront—appraisal, origination fees, title work, recording, underwriting. Those <strong>closing costs can run $3,000 to $18,000</strong>, depending on your loan size. The question isn&apos;t "Is the rate lower?" It&apos;s "Are my monthly savings enough to justify the upfront costs—and do I stay in the home long enough to collect those savings?" That&apos;s where the <strong>break-even point</strong> comes in. It&apos;s a single number that decides whether refinancing makes sense or wastes your money.
+                    Refinancing a mortgage sounds simple: get a lower rate, save money. But there&apos;s a catch. Every refinance costs money upfront-appraisal, origination fees, title work, recording, underwriting. Those <strong>closing costs can run $3,000 to $18,000</strong>, depending on your loan size. The question isn&apos;t "Is the rate lower?" It&apos;s "Are my monthly savings enough to justify the upfront costs-and do I stay in the home long enough to collect those savings?" That&apos;s where the <strong>break-even point</strong> comes in. It&apos;s a single number that decides whether refinancing makes sense or wastes your money.
                 </p>
 
                 <div className="card p-6 mb-8 border-l-4" style={{ borderLeftColor: '#0066CC' }}>
@@ -90,7 +90,7 @@ export default function RefinanceBreakEvenBlog() {
                     <li><strong>Break-even:</strong> $5,000 ÷ $200 = 25 months (just over 2 years)</li>
                 </ul>
                 <p className="mb-4">
-                    If you stay in the home for 5 years, you collect 3 extra years of savings—roughly $7,200 in profit. If you move in 1.5 years, refinancing costs you about $2,000.
+                    If you stay in the home for 5 years, you collect 3 extra years of savings-roughly $7,200 in profit. If you move in 1.5 years, refinancing costs you about $2,000.
                 </p>
 
                 <img src="https://cdn-public.eesel.ai/fa6b09cb-4b8b-466c-a637-372637edece7/dc2d6d10-d1c4-4f16-a467-158c271ed3ff/27b3924d5351427491a1cc85f37352ac.png" alt="Break-even formula and worked example infographic" className="w-full mb-8 rounded" />
@@ -108,23 +108,23 @@ export default function RefinanceBreakEvenBlog() {
                     With typical closing costs of 3% (about $9,000), the break-even is: $9,000 ÷ $149 = 60 months (5 years).
                 </p>
                 <p className="mb-4">
-                    <strong>The decision:</strong> If they&apos;re staying 7+ years, refinancing saves them real money—likely $10,000+. If they might move in 4 years, it&apos;s marginal. If they&apos;re job hunting and might leave in 2 years, skip it.
+                    <strong>The decision:</strong> If they&apos;re staying 7+ years, refinancing saves them real money-likely $10,000+. If they might move in 4 years, it&apos;s marginal. If they&apos;re job hunting and might leave in 2 years, skip it.
                 </p>
 
                 <h3 className="text-xl font-bold mt-8 mb-4">Scenario 2: Rate drop with short break-even</h3>
                 <p className="mb-4">
-                    Refinancing from 6.875% to 5.75% on a $250,000 mortgage. The payment drops from $1,656 to $1,457—a $199/month win. Closing costs: $4,000 (negotiated).
+                    Refinancing from 6.875% to 5.75% on a $250,000 mortgage. The payment drops from $1,656 to $1,457-a $199/month win. Closing costs: $4,000 (negotiated).
                 </p>
                 <p className="mb-4">
                     Break-even: $4,000 ÷ $199 = 20 months (less than 2 years).
                 </p>
                 <p className="mb-4">
-                    <strong>The decision:</strong> This is a strong candidate. Even if life throws curveballs and you move in 3–4 years, you still profit.
+                    <strong>The decision:</strong> This is a strong candidate. Even if life throws curveballs and you move in 3-4 years, you still profit.
                 </p>
 
-                <h3 className="text-xl font-bold mt-8 mb-4">Scenario 3: The trap—dropping your rate but extending your loan</h3>
+                <h3 className="text-xl font-bold mt-8 mb-4">Scenario 3: The trap-dropping your rate but extending your loan</h3>
                 <p className="mb-4">
-                    You&apos;ve paid for 10 years on a 30-year mortgage. Your balance is now $250,000 on what started as a $400,000 loan. You can refinance to a lower rate—6.0%—but here&apos;s the catch: the new loan would also be 30 years, resetting your payoff clock.
+                    You&apos;ve paid for 10 years on a 30-year mortgage. Your balance is now $250,000 on what started as a $400,000 loan. You can refinance to a lower rate-6.0%-but here&apos;s the catch: the new loan would also be 30 years, resetting your payoff clock.
                 </p>
                 <p className="mb-4">
                     Monthly payment looks great: it drops by $1,299. But you&apos;ve extended your payoff from 20 years to 30 years. You&apos;ll pay significantly more in total interest, even though the monthly payment feels like a win.
@@ -133,9 +133,9 @@ export default function RefinanceBreakEvenBlog() {
                     <strong>The decision:</strong> Refinance to match your remaining term (a 20-year loan, in this case), not a 30-year. Your payment won&apos;t drop as much, but your total cost stays on track.
                 </p>
 
-                <h3 className="text-xl font-bold mt-8 mb-4">Scenario 4: PMI removal—a hidden game-changer</h3>
+                <h3 className="text-xl font-bold mt-8 mb-4">Scenario 4: PMI removal-a hidden game-changer</h3>
                 <p className="mb-4">
-                    A first-time homebuyer put 10% down and has been paying PMI ($250/month) for 3 years. Home values appreciated; they now have 15% equity. They can refinance to conventional financing and eliminate PMI entirely—a $250/month savings.
+                    A first-time homebuyer put 10% down and has been paying PMI ($250/month) for 3 years. Home values appreciated; they now have 15% equity. They can refinance to conventional financing and eliminate PMI entirely-a $250/month savings.
                 </p>
                 <p className="mb-4">
                     Closing costs: $3,000.
@@ -149,22 +149,22 @@ export default function RefinanceBreakEvenBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Closing costs: the upfront bill you can negotiate</h2>
                 <p className="mb-4">
-                    Closing costs are the first barrier to refinancing. Typical range: 2–6% of the loan amount. On a $300,000 loan, that&apos;s $6,000–$18,000. But these costs are itemized—and many are negotiable.
+                    Closing costs are the first barrier to refinancing. Typical range: 2-6% of the loan amount. On a $300,000 loan, that&apos;s $6,000-$18,000. But these costs are itemized-and many are negotiable.
                 </p>
 
                 <h3 className="text-xl font-bold mt-8 mb-4">What you&apos;ll pay</h3>
                 <ul className="list-disc pl-6 mb-8">
-                    <li><strong>Origination fee:</strong> 0.5–1% of loan (lender&apos;s cut)</li>
-                    <li><strong>Appraisal:</strong> $300–$600</li>
-                    <li><strong>Title search and insurance:</strong> $500–$1,000</li>
-                    <li><strong>Recording and transfer taxes:</strong> $100–$500+ (varies by state)</li>
-                    <li><strong>Underwriting and processing:</strong> $500–$1,000</li>
-                    <li><strong>Escrow/closing agent:</strong> $500–$1,500</li>
+                    <li><strong>Origination fee:</strong> 0.5-1% of loan (lender&apos;s cut)</li>
+                    <li><strong>Appraisal:</strong> $300-$600</li>
+                    <li><strong>Title search and insurance:</strong> $500-$1,000</li>
+                    <li><strong>Recording and transfer taxes:</strong> $100-$500+ (varies by state)</li>
+                    <li><strong>Underwriting and processing:</strong> $500-$1,000</li>
+                    <li><strong>Escrow/closing agent:</strong> $500-$1,500</li>
                 </ul>
 
                 <h3 className="text-xl font-bold mt-8 mb-4">Ways to lower closing costs</h3>
                 <ol className="list-decimal pl-6 mb-8 space-y-3">
-                    <li><strong>Shop lenders.</strong> Your first lender won&apos;t be your best. Get quotes from 3–5 lenders; fees vary significantly.</li>
+                    <li><strong>Shop lenders.</strong> Your first lender won&apos;t be your best. Get quotes from 3-5 lenders; fees vary significantly.</li>
                     <li><strong>Negotiate origination fees.</strong> Tell the lender you have competing offers. Many will waive or reduce this fee to win your business.</li>
                     <li><strong>Ask for lender credits.</strong> Some lenders will absorb fees in exchange for a slightly higher rate. Sometimes this trade-off makes sense.</li>
                     <li><strong>Request an appraisal waiver.</strong> If your home hasn&apos;t dropped in value, many lenders waive appraisals on refinances, saving $500+.</li>
@@ -177,15 +177,15 @@ export default function RefinanceBreakEvenBlog() {
                 <img src="https://cdn-public.eesel.ai/fa6b09cb-4b8b-466c-a637-372637edece7/dc2d6d10-d1c4-4f16-a467-158c271ed3ff/c16570478d044bbba617dae99321720f.png" alt="Pie chart breakdown of typical refinance closing costs" className="w-full mb-8 rounded" />
 
                 <p className="mb-4">
-                    Negotiating hard can save $2,000–$4,000, which dramatically shortens your break-even point.
+                    Negotiating hard can save $2,000-$4,000, which dramatically shortens your break-even point.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Time horizon: the real decision gate</h2>
                 <p className="mb-4">
-                    The break-even formula is clean math. But the decision isn&apos;t mathematical—it&apos;s about your life. How long will you stay in the home?
+                    The break-even formula is clean math. But the decision isn&apos;t mathematical-it&apos;s about your life. How long will you stay in the home?
                 </p>
                 <ul className="list-disc pl-6 mb-8">
-                    <li><strong>Staying 2–3 years:</strong> Break-even must be under 18 months. Any longer and you&apos;re gambling.</li>
+                    <li><strong>Staying 2-3 years:</strong> Break-even must be under 18 months. Any longer and you&apos;re gambling.</li>
                     <li><strong>Staying 5 years:</strong> Break-even up to 36 months is reasonable; you&apos;ll collect 2+ years of savings.</li>
                     <li><strong>Staying 10+ years:</strong> Break-even up to 60 months is acceptable; you&apos;ll collect 5+ years of savings.</li>
                     <li><strong>Unsure:</strong> Be conservative. If you can&apos;t confidently say you&apos;ll stay 5 years, make your break-even target under 24 months.</li>
@@ -194,12 +194,12 @@ export default function RefinanceBreakEvenBlog() {
                 <img src="https://cdn-public.eesel.ai/fa6b09cb-4b8b-466c-a637-372637edece7/dc2d6d10-d1c4-4f16-a467-158c271ed3ff/1f65f27fca954d0e9a3a724ee0a230b0.png" alt="Time horizon decision matrix showing when refinancing makes sense" className="w-full mb-8 rounded" />
 
                 <p className="mb-4">
-                    Life changes—jobs, family, health. Many homeowners thought they&apos;d stay 10 years and moved in 4. Being conservative with your time horizon is usually smarter than gambling on a longer break-even point.
+                    Life changes-jobs, family, health. Many homeowners thought they&apos;d stay 10 years and moved in 4. Being conservative with your time horizon is usually smarter than gambling on a longer break-even point.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Cash-out refinance vs. HELOC: which tool for your goal?</h2>
                 <p className="mb-4">
-                    If you need to access your home&apos;s equity—for renovations, debt payoff, or major expenses—refinancing isn&apos;t your only option. You can also use a <Link href="https://usfinnexus.com/calculators/heloc" className="text-[#0066CC] hover:underline">HELOC (Home Equity Line of Credit)</Link>.
+                    If you need to access your home&apos;s equity-for renovations, debt payoff, or major expenses-refinancing isn&apos;t your only option. You can also use a <Link href="https://usfinnexus.com/calculators/heloc" className="text-[#0066CC] hover:underline">HELOC (Home Equity Line of Credit)</Link>.
                 </p>
 
                 <div className="card p-6 mb-8">
@@ -237,10 +237,10 @@ export default function RefinanceBreakEvenBlog() {
                     <a href="https://www.freddiemac.com/pmms" target="_blank" rel="noopener noreferrer" className="text-[#0066CC] hover:underline">30-year fixed rates are hovering around 6.36%, with 15-year rates at 5.71%</a>. That&apos;s down from last year&apos;s peaks (6.81% / 5.92%), but still elevated compared to pandemic lows.
                 </p>
                 <p className="mb-4">
-                    Forecasters expect rates to stay in the 6.0%–6.5% range through late 2026 into 2027. Translation: if your current rate is 7%+ (common for 2023–2024 borrowers), there&apos;s a refinance opportunity. If you&apos;re at 6.0%–6.25%, the potential savings are slimmer and break-even points stretch longer.
+                    Forecasters expect rates to stay in the 6.0%-6.5% range through late 2026 into 2027. Translation: if your current rate is 7%+ (common for 2023-2024 borrowers), there&apos;s a refinance opportunity. If you&apos;re at 6.0%-6.25%, the potential savings are slimmer and break-even points stretch longer.
                 </p>
                 <p className="mb-4">
-                    Don&apos;t wait for a perfect rate. The cost of waiting—staying at a higher rate for months—often exceeds the benefit of a slightly lower rate later.
+                    Don&apos;t wait for a perfect rate. The cost of waiting-staying at a higher rate for months-often exceeds the benefit of a slightly lower rate later.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Avoiding the big mistakes</h2>
@@ -248,7 +248,7 @@ export default function RefinanceBreakEvenBlog() {
                     {[
                         ['Mistake 1: Extending your loan term', 'A rate drop that stretches your payoff from 20 to 30 years increases total interest, even if the payment drops. Match your remaining term or go shorter, not longer.'],
                         ['Mistake 2: Ignoring the break-even date', 'Without this number, you&apos;re making a feeling-based decision with real dollars at stake. Calculate it.'],
-                        ['Mistake 3: Not shopping lenders', 'Your bank&apos;s first offer won&apos;t be your best. Get 3–5 quotes. Differences of 0.25% or $1,500 in fees are common.'],
+                        ['Mistake 3: Not shopping lenders', 'Your bank&apos;s first offer won&apos;t be your best. Get 3-5 quotes. Differences of 0.25% or $1,500 in fees are common.'],
                         ['Mistake 4: Forgetting PMI removal', 'If PMI is a big part of your payment, even a modest rate drop plus PMI removal can create a strong refinance case. Run the math.'],
                         ['Mistake 5: Waiting for perfect rates', 'There&apos;s no crystal ball. If your break-even math works today and you&apos;re confident in your time horizon, acting beats waiting.'],
                     ].map(([title, desc]) => (
@@ -265,7 +265,7 @@ export default function RefinanceBreakEvenBlog() {
                 <h2 className="text-2xl font-bold mt-12 mb-4">Try USFinNexus</h2>
                 <div className="card p-6 mb-8 border-l-4" style={{ borderLeftColor: '#0066CC' }}>
                     <p className="mb-4">
-                        <Link href="https://usfinnexus.com/calculators/refinance" className="font-bold text-[#0066CC] hover:underline">USFinNexus&apos;s refinance calculator</Link> does the break-even math for you instantly. Input your current loan, the new rate you&apos;re being offered, and your estimated closing costs. The calculator outputs your break-even date, monthly savings, and lifetime savings—all in seconds, with no email required and zero data collection.
+                        <Link href="https://usfinnexus.com/calculators/refinance" className="font-bold text-[#0066CC] hover:underline">USFinNexus&apos;s refinance calculator</Link> does the break-even math for you instantly. Input your current loan, the new rate you&apos;re being offered, and your estimated closing costs. The calculator outputs your break-even date, monthly savings, and lifetime savings-all in seconds, with no email required and zero data collection.
                     </p>
                     <p className="mb-4">
                         No signup. No ads. No lender referral bias. Just the math. It works client-side (nothing leaves your browser), exports to a professional PDF in one click, and updates rates monthly from <a href="https://www.freddiemac.com/pmms" target="_blank" rel="noopener noreferrer" className="text-[#0066CC] hover:underline">Freddie Mac&apos;s Primary Mortgage Market Survey</a>.

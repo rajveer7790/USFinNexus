@@ -63,7 +63,7 @@ export default function MortgagePaymentCalculationBlog() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    Your mortgage payment isn't a mystery. It's a calculation. If you're shopping for a home, refinancing, or just trying to understand your loan, knowing how your payment is calculated—and what pieces make it up—gives you real leverage. Most homebuyers see the payment number and accept it. But that number has a formula behind it, and understanding it means you can stress-test scenarios, shop lenders intelligently, and spot mistakes.
+                    Your mortgage payment isn't a mystery. It's a calculation. If you're shopping for a home, refinancing, or just trying to understand your loan, knowing how your payment is calculated-and what pieces make it up-gives you real leverage. Most homebuyers see the payment number and accept it. But that number has a formula behind it, and understanding it means you can stress-test scenarios, shop lenders intelligently, and spot mistakes.
                 </p>
 
                 <div className="card p-6 mb-8 border-l-4" style={{ borderLeftColor: '#0066CC' }}>
@@ -100,7 +100,7 @@ export default function MortgagePaymentCalculationBlog() {
                 </ul>
 
                 <p className="mb-4">
-                    That's your principal and interest payment—the core of your mortgage. But your full monthly payment usually includes more.
+                    That's your principal and interest payment-the core of your mortgage. But your full monthly payment usually includes more.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What's in your full monthly mortgage payment</h2>
@@ -112,8 +112,8 @@ export default function MortgagePaymentCalculationBlog() {
                 <ul className="list-disc pl-6 mb-8">
                     <li><strong>Principal (P):</strong> The portion of your payment that pays down the loan balance. Early on, this is small; later, it grows.</li>
                     <li><strong>Interest (I):</strong> The lender's cut. In your first payment, almost all of your payment is interest; by year 30, almost all is principal.</li>
-                    <li><strong>Property Taxes (T):</strong> State and local taxes on your home. Varies wildly by location—from under 0.3% in Hawaii to over 2% in New Jersey. Averaged nationwide: about 0.8% of home value per year.</li>
-                    <li><strong>Homeowners Insurance (I):</strong> Required by lenders. Average cost: $1,200–$2,000/year, depending on home value and location.</li>
+                    <li><strong>Property Taxes (T):</strong> State and local taxes on your home. Varies wildly by location-from under 0.3% in Hawaii to over 2% in New Jersey. Averaged nationwide: about 0.8% of home value per year.</li>
+                    <li><strong>Homeowners Insurance (I):</strong> Required by lenders. Average cost: $1,200-$2,000/year, depending on home value and location.</li>
                 </ul>
 
                 <p className="mb-4">
@@ -157,7 +157,7 @@ export default function MortgagePaymentCalculationBlog() {
 
                 <h3 className="text-xl font-bold mt-8 mb-4">Why? Math.</h3>
                 <p className="mb-4">
-                    Interest is calculated on your remaining balance. When you owe $400,000, the interest charge is huge. As you pay it down to $390,000, then $380,000, the interest charge drops—and more of your payment goes toward principal.
+                    Interest is calculated on your remaining balance. When you owe $400,000, the interest charge is huge. As you pay it down to $390,000, then $380,000, the interest charge drops-and more of your payment goes toward principal.
                 </p>
 
                 <div className="card p-6 mb-8 bg-blue-50">
@@ -184,7 +184,7 @@ export default function MortgagePaymentCalculationBlog() {
                 </div>
 
                 <p className="mb-4">
-                    The difference between 5.0% and 7.5% is $652/month—that's $235,000 more in interest over 30 years on the same loan size.
+                    The difference between 5.0% and 7.5% is $652/month-that's $235,000 more in interest over 30 years on the same loan size.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">How loan term affects your payment</h2>
@@ -204,12 +204,12 @@ export default function MortgagePaymentCalculationBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Using a mortgage payment calculator vs. doing the math yourself</h2>
                 <p className="mb-4">
-                    You don't need to memorize the formula or punch numbers into a calculator. But understanding what the formula does—and what your payment includes—makes you a smarter borrower.
+                    You don't need to memorize the formula or punch numbers into a calculator. But understanding what the formula does-and what your payment includes-makes you a smarter borrower.
                 </p>
 
                 <h3 className="text-xl font-bold mt-8 mb-4">Why use our calculator?</h3>
                 <p className="mb-4">
-                    <Link href="https://usfinnexus.com/calculators/mortgage" className="text-[#0066CC] hover:underline">USFinNexus's mortgage calculator</Link> does the formula work instantly. Input your loan amount, interest rate, and loan term—and it returns your monthly payment, total interest paid, and an amortization schedule that shows you exactly how much principal and interest you pay each month.
+                    <Link href="https://usfinnexus.com/calculators/mortgage" className="text-[#0066CC] hover:underline">USFinNexus's mortgage calculator</Link> does the formula work instantly. Input your loan amount, interest rate, and loan term-and it returns your monthly payment, total interest paid, and an amortization schedule that shows you exactly how much principal and interest you pay each month.
                 </p>
 
                 <p className="mb-4">
@@ -237,7 +237,7 @@ export default function MortgagePaymentCalculationBlog() {
                 <h2 className="text-2xl font-bold mt-12 mb-4">Try USFinNexus</h2>
                 <div className="card p-6 mb-8 border-l-4" style={{ borderLeftColor: '#0066CC' }}>
                     <p className="mb-4">
-                        <Link href="https://usfinnexus.com/calculators/mortgage" className="font-bold text-[#0066CC] hover:underline">USFinNexus's mortgage payment calculator</Link> lets you plug in any loan amount, rate, and term—and instantly see your monthly payment, total interest, and a month-by-month breakdown of how much principal and interest you're paying.
+                        <Link href="https://usfinnexus.com/calculators/mortgage" className="font-bold text-[#0066CC] hover:underline">USFinNexus's mortgage payment calculator</Link> lets you plug in any loan amount, rate, and term-and instantly see your monthly payment, total interest, and a month-by-month breakdown of how much principal and interest you're paying.
                     </p>
                     <p className="mb-4">
                         Run scenarios: what if rates dropped to 6%? What if you chose a 15-year term instead of 30? What if you put down 25% instead of 20%? See the real-world impact on your payment and total cost.

@@ -63,7 +63,7 @@ export default function SpringHousingMarketBlog() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    Spring is traditionally the hottest season in American real estate, and 2026 is no exception — though &ldquo;hot&rdquo; may describe the complexity of this market more than the pace of sales. We are looking at <strong>mortgage rates hovering around 6.45%</strong>, a moderate but meaningful uptick in existing-home inventory, tariff-driven construction cost increases, and ongoing uncertainty about the Federal Reserve&apos;s next moves. This is not a market that rewards guessing. It rewards preparation, data, and strategy. Here is what the numbers actually say about spring 2026 — and what it means for your decision to buy, sell, or wait.
+                    Spring is traditionally the hottest season in American real estate, and 2026 is no exception - though &ldquo;hot&rdquo; may describe the complexity of this market more than the pace of sales. We are looking at <strong>mortgage rates hovering around 6.45%</strong>, a moderate but meaningful uptick in existing-home inventory, tariff-driven construction cost increases, and ongoing uncertainty about the Federal Reserve&apos;s next moves. This is not a market that rewards guessing. It rewards preparation, data, and strategy. Here is what the numbers actually say about spring 2026 - and what it means for your decision to buy, sell, or wait.
                 </p>
 
                 <div className="card p-6 mb-8 border-l-4" style={{ borderLeftColor: '#0da6f2' }}>
@@ -95,7 +95,7 @@ export default function SpringHousingMarketBlog() {
                         <strong>Geopolitical uncertainty.</strong> Ongoing tensions in the Middle East and trade disputes have injected volatility into bond markets. Mortgage rates track the 10-year Treasury yield, which spikes during periods of geopolitical stress.
                     </li>
                     <li>
-                        <strong>The Fed is in wait-and-see mode.</strong> After cutting rates three times in late 2025, the Federal Reserve has paused. Officials have repeatedly signaled they need to see more data before committing to further cuts. Most economists now expect at most 1–2 additional cuts in 2026, which would bring rates down modestly — perhaps to the 5.9%–6.2% range by year-end — but not dramatically.
+                        <strong>The Fed is in wait-and-see mode.</strong> After cutting rates three times in late 2025, the Federal Reserve has paused. Officials have repeatedly signaled they need to see more data before committing to further cuts. Most economists now expect at most 1-2 additional cuts in 2026, which would bring rates down modestly - perhaps to the 5.9%-6.2% range by year-end - but not dramatically.
                     </li>
                 </ul>
                 <p className="mb-4">
@@ -104,10 +104,10 @@ export default function SpringHousingMarketBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Home Prices: Stable but Stubbornly High</h2>
                 <p className="mb-4">
-                    The national median existing-home price hit approximately <strong>$408,000</strong> in February 2026, according to NAR data — up about 3.8% year over year. Price growth has moderated significantly compared to the 15–20% annual jumps of 2021–2022, but prices are not falling in most markets.
+                    The national median existing-home price hit approximately <strong>$408,000</strong> in February 2026, according to NAR data - up about 3.8% year over year. Price growth has moderated significantly compared to the 15-20% annual jumps of 2021-2022, but prices are not falling in most markets.
                 </p>
                 <p className="mb-4">
-                    The reason is straightforward: supply has not kept up with demand. Even though existing-home inventory is up roughly 12% compared to last spring, we are still well below the pre-pandemic norm of 2.5–3.0 million active listings. Current inventory sits around <strong>1.3 million</strong>, which translates to about 3.5 months of supply. A balanced market typically has 5–6 months. Until we reach that level, prices have a floor underneath them.
+                    The reason is straightforward: supply has not kept up with demand. Even though existing-home inventory is up roughly 12% compared to last spring, we are still well below the pre-pandemic norm of 2.5-3.0 million active listings. Current inventory sits around <strong>1.3 million</strong>, which translates to about 3.5 months of supply. A balanced market typically has 5-6 months. Until we reach that level, prices have a floor underneath them.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Inventory: Slowly Improving, Not Yet Abundant</h2>
@@ -116,13 +116,13 @@ export default function SpringHousingMarketBlog() {
                 </p>
                 <ul className="list-disc pl-6 mb-8 space-y-3">
                     <li>
-                        <strong>The &ldquo;lock-in effect&rdquo; is weakening.</strong> Many homeowners refinanced to rates below 4% during 2020–2021 and have been reluctant to sell because they would lose that low rate. But after 4+ years, life events — job changes, divorces, growing families, downsizing — are forcing more of these homeowners to move regardless of rate considerations.
+                        <strong>The &ldquo;lock-in effect&rdquo; is weakening.</strong> Many homeowners refinanced to rates below 4% during 2020-2021 and have been reluctant to sell because they would lose that low rate. But after 4+ years, life events - job changes, divorces, growing families, downsizing - are forcing more of these homeowners to move regardless of rate considerations.
                     </li>
                     <li>
                         <strong>New construction is contributing, but slowly.</strong> Single-family housing starts have recovered from their 2023 trough, but tariff-driven material costs are holding back the pace of new builds. Single-family permits dropped roughly 6% in Q1 2026 compared to late 2025.
                     </li>
                     <li>
-                        <strong>Days on market are increasing.</strong> The average home now sits listed for about 38 days before going under contract — up from 27 days at this point last year. This gives buyers more negotiating room and less pressure to waive inspections or escalate offers.
+                        <strong>Days on market are increasing.</strong> The average home now sits listed for about 38 days before going under contract - up from 27 days at this point last year. This gives buyers more negotiating room and less pressure to waive inspections or escalate offers.
                     </li>
                 </ul>
 
@@ -161,17 +161,17 @@ export default function SpringHousingMarketBlog() {
                     </p>
                 </div>
                 <p className="mb-4">
-                    Sun Belt markets like Austin, Phoenix, Tampa, and parts of Florida have seen the most inventory growth — in some cases, returning to or exceeding pre-pandemic levels. These markets are where buyers are finding the most negotiating power. Conversely, low-inventory Midwest and Northeast markets remain intensely competitive, with multiple offer situations still common in desirable school districts.
+                    Sun Belt markets like Austin, Phoenix, Tampa, and parts of Florida have seen the most inventory growth - in some cases, returning to or exceeding pre-pandemic levels. These markets are where buyers are finding the most negotiating power. Conversely, low-inventory Midwest and Northeast markets remain intensely competitive, with multiple offer situations still common in desirable school districts.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Advice for Spring 2026 Buyers</h2>
                 <div className="card p-6 mb-8">
                     <ul className="space-y-4">
                         {[
-                            ['Get pre-approved before you start looking', 'In a competitive market, a pre-approval letter signals to sellers that you are a serious, qualified buyer. Get pre-approved by at least 2–3 lenders to also compare rate offers.'],
+                            ['Get pre-approved before you start looking', 'In a competitive market, a pre-approval letter signals to sellers that you are a serious, qualified buyer. Get pre-approved by at least 2-3 lenders to also compare rate offers.'],
                             ['Budget at today\'s rates, not tomorrow\'s hopes', 'Build your monthly payment around a 6.45% rate. If rates drop later, refinancing is always an option. If rates rise, you are protected.'],
                             ['Do not waive inspections', 'With more days on market than last year, you have leverage to keep inspection contingencies. A $500 inspection can save you from a $15,000 foundation or roof problem.'],
-                            ['Negotiate closing cost credits', 'Sellers in many markets are now willing to offer 1–3% closing cost credits or mortgage rate buydowns. Ask your agent to request these — especially on homes that have been listed for 30+ days.'],
+                            ['Negotiate closing cost credits', 'Sellers in many markets are now willing to offer 1-3% closing cost credits or mortgage rate buydowns. Ask your agent to request these - especially on homes that have been listed for 30+ days.'],
                             ['Explore down payment assistance', 'Over 2,600 DPA programs exist nationwide. Even in competitive markets, free grant money gives you an edge. Check your state HFA website.'],
                         ].map(([title, desc]) => (
                             <li key={String(title)} className="flex items-start gap-3">
@@ -191,10 +191,10 @@ export default function SpringHousingMarketBlog() {
                         <strong>Price accurately from day one.</strong> The days of listing high and waiting for a bidding war are mostly over. Overpriced homes sit on the market, collect &ldquo;days on market&rdquo; stigma, and eventually sell for less than if they had been priced right initially. Work with your agent to analyze recent comparable sales, not wishful aspirational pricing.
                     </li>
                     <li>
-                        <strong>Offer concessions proactively.</strong> Buyers are strapped by high rates. Offering a seller-paid rate buydown (where you pay points to reduce the buyer&apos;s rate for the first 1–2 years) can make your listing far more attractive than a competitor at the same price.
+                        <strong>Offer concessions proactively.</strong> Buyers are strapped by high rates. Offering a seller-paid rate buydown (where you pay points to reduce the buyer&apos;s rate for the first 1-2 years) can make your listing far more attractive than a competitor at the same price.
                     </li>
                     <li>
-                        <strong>Stage and photograph professionally.</strong> In a market with rising inventory, first impressions matter more. Professional staging and photography are no longer optional — they are table stakes for attracting serious offers.
+                        <strong>Stage and photograph professionally.</strong> In a market with rising inventory, first impressions matter more. Professional staging and photography are no longer optional - they are table stakes for attracting serious offers.
                     </li>
                     <li>
                         <strong>Be flexible on timelines.</strong> Some buyers need extended closing periods while they sell their current home. Flexibility on move-in dates can be a meaningful negotiation chip that does not cost you a cent.
@@ -211,7 +211,7 @@ export default function SpringHousingMarketBlog() {
                         {[
                             'You can afford the monthly payment at current rates without financial stress',
                             'You plan to stay in the home at least 5 years (the typical break-even period)',
-                            'You have a stable income and an emergency fund covering 3–6 months of expenses',
+                            'You have a stable income and an emergency fund covering 3-6 months of expenses',
                             'You have found a home you genuinely want to live in',
                         ].map(item => (
                             <li key={item} className="flex items-start gap-3">
@@ -224,7 +224,7 @@ export default function SpringHousingMarketBlog() {
                     <ul className="space-y-2">
                         {[
                             'Buying at current prices and rates would stretch your budget beyond 35% of gross income for housing',
-                            'You may need to relocate for work within the next 2–3 years',
+                            'You may need to relocate for work within the next 2-3 years',
                             'You have high-interest debt (credit cards, personal loans) that should be paid down first',
                             'Your emergency fund is less than 3 months of expenses',
                         ].map(item => (
@@ -254,7 +254,7 @@ export default function SpringHousingMarketBlog() {
                 <div className="card p-4 sm:p-6 text-center">
                     <h3 className="text-xl font-bold mb-3">Run the Numbers for Your Situation</h3>
                     <p className="text-sm mb-6" style={{ color: 'var(--color-text-muted)' }}>
-                        See exactly what you can afford at today&apos;s rates and prices. Our free calculators use real data to give you honest answers — no lender referral funnel, no sales pitch.
+                        See exactly what you can afford at today&apos;s rates and prices. Our free calculators use real data to give you honest answers - no lender referral funnel, no sales pitch.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <Link href="/calculators/affordability" className="btn-primary py-3 px-6 text-sm">

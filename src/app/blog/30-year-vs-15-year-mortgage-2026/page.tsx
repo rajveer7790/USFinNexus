@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: '30-Year vs 15-Year Mortgage: Which Saves More in 2026?',
-        description: 'The 15-year option can save you nearly $200K in interest — but the higher payment is not for everyone.',
+        description: 'The 15-year option can save you nearly $200K in interest - but the higher payment is not for everyone.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
     alternates: {
@@ -63,7 +63,7 @@ export default function MortgageTermComparisonBlog() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    With mortgage rates stubbornly sitting in the mid-6% range for 30-year loans, more buyers are asking a question that deserves serious attention: would a <strong>15-year mortgage</strong> save them enough to justify the higher monthly payment? The answer, when you run the numbers, might surprise you. On a typical $350,000 loan, the difference in total interest paid between a 30-year and 15-year term is roughly <strong>$198,000</strong>. That is not a rounding error — it is the price of a second home in many markets. Let us break down when each term makes sense and how to decide.
+                    With mortgage rates stubbornly sitting in the mid-6% range for 30-year loans, more buyers are asking a question that deserves serious attention: would a <strong>15-year mortgage</strong> save them enough to justify the higher monthly payment? The answer, when you run the numbers, might surprise you. On a typical $350,000 loan, the difference in total interest paid between a 30-year and 15-year term is roughly <strong>$198,000</strong>. That is not a rounding error - it is the price of a second home in many markets. Let us break down when each term makes sense and how to decide.
                 </p>
 
                 <div className="card p-6 mb-8 border-l-4" style={{ borderLeftColor: '#0da6f2' }}>
@@ -80,7 +80,7 @@ export default function MortgageTermComparisonBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">The Numbers Side by Side</h2>
                 <p className="mb-4">
-                    Let us use a real-world example: a $350,000 loan amount with current average rates. No PMI, no escrow — just principal and interest so the comparison is clean.
+                    Let us use a real-world example: a $350,000 loan amount with current average rates. No PMI, no escrow - just principal and interest so the comparison is clean.
                 </p>
                 <div className="card p-6 mb-8">
                     <div className="overflow-x-auto">
@@ -97,8 +97,8 @@ export default function MortgageTermComparisonBlog() {
                                     ['Monthly Payment (P&I)', '$2,197', '$2,875'],
                                     ['Total Paid Over Life', '$791,066', '$517,496'],
                                     ['Total Interest Paid', '$441,066', '$167,496'],
-                                    ['Interest Savings', '—', '$273,570'],
-                                    ['Monthly Difference', '—', '+$678/mo'],
+                                    ['Interest Savings', '-', '$273,570'],
+                                    ['Monthly Difference', '-', '+$678/mo'],
                                 ].map(([label, col30, col15]) => (
                                     <tr key={String(label)} className="border-b" style={{ borderColor: 'var(--color-border)' }}>
                                         <td className="py-3 pr-4 font-semibold">{label}</td>
@@ -115,7 +115,7 @@ export default function MortgageTermComparisonBlog() {
                 </div>
 
                 <p className="mb-4">
-                    The 15-year mortgage costs $678 more per month — that is real money. But over the life of the loan, you pay <strong>$273,570 less in total interest</strong>. In other words, each dollar of that extra monthly payment saves you roughly $33 over the loan&apos;s lifetime. That is a return on investment most savings accounts or CDs cannot match.
+                    The 15-year mortgage costs $678 more per month - that is real money. But over the life of the loan, you pay <strong>$273,570 less in total interest</strong>. In other words, each dollar of that extra monthly payment saves you roughly $33 over the loan&apos;s lifetime. That is a return on investment most savings accounts or CDs cannot match.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">When the 30-Year Makes More Sense</h2>
@@ -124,19 +124,19 @@ export default function MortgageTermComparisonBlog() {
                 </p>
                 <ul className="list-disc pl-6 mb-8 space-y-3">
                     <li>
-                        <strong>You need the lower payment to qualify.</strong> Lenders use your debt-to-income ratio (DTI) to approve you. If the 15-year payment pushes your DTI above 43–45%, you will not get approved. The 30-year term expands your buying power significantly.
+                        <strong>You need the lower payment to qualify.</strong> Lenders use your debt-to-income ratio (DTI) to approve you. If the 15-year payment pushes your DTI above 43-45%, you will not get approved. The 30-year term expands your buying power significantly.
                     </li>
                     <li>
                         <strong>You want a bigger emergency cushion.</strong> The $678/month difference is money you can direct toward an emergency fund, retirement contributions, or paying off high-interest debt. Financial flexibility matters, especially early in homeownership when surprise repairs crop up.
                     </li>
                     <li>
-                        <strong>You invest the difference wisely.</strong> If you take the 30-year loan and invest that $678/month in a diversified index fund earning a long-term average of 8–10% annually, the compounded returns could theoretically exceed the interest savings of the 15-year over 30 years. However, market returns are not guaranteed — mortgage interest is.
+                        <strong>You invest the difference wisely.</strong> If you take the 30-year loan and invest that $678/month in a diversified index fund earning a long-term average of 8-10% annually, the compounded returns could theoretically exceed the interest savings of the 15-year over 30 years. However, market returns are not guaranteed - mortgage interest is.
                     </li>
                     <li>
                         <strong>Your income may fluctuate.</strong> Freelancers, commission-based workers, and small business owners benefit from the lower required payment of a 30-year loan. You can always make extra principal payments in good months, but you cannot reduce a 15-year payment when cash is tight.
                     </li>
                     <li>
-                        <strong>You plan to refinance or sell within 5–7 years.</strong> If you are not staying in the home long-term, the interest savings of the 15-year term are minimal because most interest is front-loaded in both terms. Go with the 30-year for flexibility.
+                        <strong>You plan to refinance or sell within 5-7 years.</strong> If you are not staying in the home long-term, the interest savings of the 15-year term are minimal because most interest is front-loaded in both terms. Go with the 30-year for flexibility.
                     </li>
                 </ul>
 
@@ -152,10 +152,10 @@ export default function MortgageTermComparisonBlog() {
                         <strong>You are a conservative investor.</strong> The 15-year loan gives you a <em>guaranteed</em> return equal to your interest rate (5.60% in our example). Unlike market investments, this return has zero volatility and zero risk.
                     </li>
                     <li>
-                        <strong>You want to own your home outright before retirement.</strong> If you are 45–50 and want to enter retirement mortgage-free, a 15-year term achieves that goal by age 60–65. That dramatically reduces your fixed expenses in retirement.
+                        <strong>You want to own your home outright before retirement.</strong> If you are 45-50 and want to enter retirement mortgage-free, a 15-year term achieves that goal by age 60-65. That dramatically reduces your fixed expenses in retirement.
                     </li>
                     <li>
-                        <strong>You are refinancing from a higher rate.</strong> If you bought in 2023–2024 at rates above 7% and can now refinance to a 15-year at 5.6%, you simultaneously cut your rate <em>and</em> your total cost.
+                        <strong>You are refinancing from a higher rate.</strong> If you bought in 2023-2024 at rates above 7% and can now refinance to a 15-year at 5.6%, you simultaneously cut your rate <em>and</em> your total cost.
                     </li>
                 </ul>
 
@@ -164,7 +164,7 @@ export default function MortgageTermComparisonBlog() {
                     There is a middle-ground approach that many savvy homeowners use: take the 30-year loan for its lower required payment, but make extra payments toward principal whenever you can. This gives you the flexibility of a 30-year term with the interest savings potential of a shorter payoff.
                 </p>
                 <p className="mb-4">
-                    For example, if you take our $350,000 loan at 6.45% on a 30-year term and consistently add $400/month in extra principal payments, you would pay off the loan in approximately <strong>19 years</strong> and save roughly <strong>$168,000</strong> in interest — without being locked into the 15-year obligation.
+                    For example, if you take our $350,000 loan at 6.45% on a 30-year term and consistently add $400/month in extra principal payments, you would pay off the loan in approximately <strong>19 years</strong> and save roughly <strong>$168,000</strong> in interest - without being locked into the 15-year obligation.
                 </p>
                 <p className="mb-4">
                     The catch? This strategy requires discipline. If you are the type who will actually make those extra payments month after month for 19 years, it works beautifully. If extra money tends to get spent on other things, the enforced discipline of a 15-year payment schedule may serve you better.
@@ -176,7 +176,7 @@ export default function MortgageTermComparisonBlog() {
                         {[
                             ['Choose 30-year if:', 'You need maximum buying power, have variable income, plan to sell within 7 years, or want to invest the payment difference in the market.'],
                             ['Choose 15-year if:', 'You can comfortably afford the higher payment, are debt-free, want guaranteed interest savings, or need to be mortgage-free by retirement.'],
-                            ['Choose the hybrid approach if:', 'You want 30-year flexibility but have the discipline to make consistent extra payments. Best of both worlds — but only works if you follow through.'],
+                            ['Choose the hybrid approach if:', 'You want 30-year flexibility but have the discipline to make consistent extra payments. Best of both worlds - but only works if you follow through.'],
                         ].map(([title, desc]) => (
                             <li key={String(title)} className="flex items-start gap-3">
                                 <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#00C853' }} />

@@ -9,7 +9,7 @@ import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
     title: 'How Tariffs Are Raising Home Prices in 2026 (And What You Can Do) | USFinNexus',
-    description: 'Tariffs on steel, lumber, and aluminum are adding $9,200–$10,900 to new home costs in 2026. Learn how trade policy impacts your mortgage rate, home price, and buying power.',
+    description: 'Tariffs on steel, lumber, and aluminum are adding $9,200-$10,900 to new home costs in 2026. Learn how trade policy impacts your mortgage rate, home price, and buying power.',
     openGraph: {
         title: 'How Tariffs Are Raising Home Prices in 2026',
         description: 'Trade tariffs on construction materials are driving up building costs, squeezing affordability, and keeping mortgage rates elevated. Here is what homebuyers need to know.',
@@ -34,7 +34,7 @@ export default function TariffsHousingMarketBlog() {
         <>
         <ArticleSchema
             title="How Tariffs Are Raising Home Prices in 2026 (And What You Can Do)"
-            description="Tariffs on steel, lumber, and aluminum are adding $9,200–$10,900 to new home costs in 2026. Learn how trade policy impacts your mortgage rate, home price, and buying power."
+            description="Tariffs on steel, lumber, and aluminum are adding $9,200-$10,900 to new home costs in 2026. Learn how trade policy impacts your mortgage rate, home price, and buying power."
             url="https://usfinnexus.com/blog/tariffs-housing-market-impact-2026"
             datePublished="2026-04-08"
             dateModified="2026-04-08"
@@ -63,7 +63,7 @@ export default function TariffsHousingMarketBlog() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    If you have been shopping for a newly built home this spring, you have probably noticed the sticker shock. A big part of the reason comes down to something most homebuyers never think about: <strong>tariffs on construction materials</strong>. According to the National Association of Home Builders (NAHB), current trade tariffs on steel, aluminum, copper, and softwood lumber are adding roughly <strong>$9,200 to $10,900</strong> to the construction cost of an average single-family home in 2026. That extra cost gets passed straight to buyers — and it is reshaping the housing market in ways that affect everyone, not just new-construction shoppers.
+                    If you have been shopping for a newly built home this spring, you have probably noticed the sticker shock. A big part of the reason comes down to something most homebuyers never think about: <strong>tariffs on construction materials</strong>. According to the National Association of Home Builders (NAHB), current trade tariffs on steel, aluminum, copper, and softwood lumber are adding roughly <strong>$9,200 to $10,900</strong> to the construction cost of an average single-family home in 2026. That extra cost gets passed straight to buyers - and it is reshaping the housing market in ways that affect everyone, not just new-construction shoppers.
                 </p>
 
                 <div className="card p-6 mb-8 border-l-4" style={{ borderLeftColor: '#ff6b35' }}>
@@ -80,7 +80,7 @@ export default function TariffsHousingMarketBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Which Tariffs Are Hitting Housing the Hardest?</h2>
                 <p className="mb-4">
-                    The United States currently imposes tariffs on several categories of materials that go directly into residential construction. These are not theoretical policy debates — they translate into real dollars on closing day. Here is the breakdown of the materials under tariff that matter most for homebuilders and buyers:
+                    The United States currently imposes tariffs on several categories of materials that go directly into residential construction. These are not theoretical policy debates - they translate into real dollars on closing day. Here is the breakdown of the materials under tariff that matter most for homebuilders and buyers:
                 </p>
                 <div className="card p-6 mb-8">
                     <div className="overflow-x-auto">
@@ -94,10 +94,10 @@ export default function TariffsHousingMarketBlog() {
                             </thead>
                             <tbody>
                                 {[
-                                    ['Steel', '25% on imports', '+$3,100–$3,800'],
-                                    ['Aluminum', '25% on imports', '+$1,200–$1,600'],
-                                    ['Softwood Lumber', '14.5% (anti-dumping)', '+$3,600–$4,200'],
-                                    ['Copper & Wiring', '25% proposed', '+$800–$1,300'],
+                                    ['Steel', '25% on imports', '+$3,100-$3,800'],
+                                    ['Aluminum', '25% on imports', '+$1,200-$1,600'],
+                                    ['Softwood Lumber', '14.5% (anti-dumping)', '+$3,600-$4,200'],
+                                    ['Copper & Wiring', '25% proposed', '+$800-$1,300'],
                                 ].map(([material, rate, impact]) => (
                                     <tr key={String(material)} className="border-b" style={{ borderColor: 'var(--color-border)' }}>
                                         <td className="py-3 pr-4 font-semibold">{material}</td>
@@ -115,7 +115,7 @@ export default function TariffsHousingMarketBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Why Does This Affect Mortgage Rates?</h2>
                 <p className="mb-4">
-                    You might wonder what tariffs on steel have to do with the interest rate on your mortgage. The connection runs through the bond market and inflation expectations. When tariffs raise the price of goods — whether that is appliances, cars, or building materials — consumer prices tend to climb. Higher inflation makes bond investors demand higher yields to protect their purchasing power. Since mortgage rates track the 10-year Treasury yield, a run-up in inflation expectations pushes mortgage rates upward.
+                    You might wonder what tariffs on steel have to do with the interest rate on your mortgage. The connection runs through the bond market and inflation expectations. When tariffs raise the price of goods - whether that is appliances, cars, or building materials - consumer prices tend to climb. Higher inflation makes bond investors demand higher yields to protect their purchasing power. Since mortgage rates track the 10-year Treasury yield, a run-up in inflation expectations pushes mortgage rates upward.
                 </p>
                 <p className="mb-4">
                     That is exactly what has been playing out in early 2026. The average 30-year fixed mortgage rate has hovered between <strong>6.2% and 6.5%</strong> throughout March and April, partly because bond markets are pricing in tariff-driven inflation. Federal Reserve officials have noted that tariff uncertainty makes it harder to justify further rate cuts, which means borrowers are stuck with elevated financing costs for longer than many had hoped.
@@ -123,7 +123,7 @@ export default function TariffsHousingMarketBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">The Supply Squeeze: Fewer Homes Being Built</h2>
                 <p className="mb-4">
-                    Higher construction costs do not just raise prices — they kill projects outright. When a builder runs the numbers on a planned subdivision and the material cost increase wipes out the profit margin, that project gets shelved or downsized. The result is fewer new homes entering the market at a time when the US already faces a <strong>housing shortage estimated at 3.7 million units</strong> by Freddie Mac.
+                    Higher construction costs do not just raise prices - they kill projects outright. When a builder runs the numbers on a planned subdivision and the material cost increase wipes out the profit margin, that project gets shelved or downsized. The result is fewer new homes entering the market at a time when the US already faces a <strong>housing shortage estimated at 3.7 million units</strong> by Freddie Mac.
                 </p>
                 <p className="mb-4">
                     Single-family housing permits dropped by roughly 6% in Q1 2026 compared to Q4 2025, according to Census Bureau data. That slowdown means the inventory crunch that has frustrated buyers since the pandemic era continues to worsen. And when new-construction supply dries up, buyers compete more aggressively for existing homes, driving those prices higher, too.
@@ -135,16 +135,16 @@ export default function TariffsHousingMarketBlog() {
                 </p>
                 <ul className="list-disc pl-6 mb-8 space-y-3">
                     <li>
-                        <strong>New-construction buyers</strong> — You are paying the tariff cost directly. A home that would have listed at $380,000 last year may now be priced at $390,000 or more with the same floor plan and finishes. Ask your builder for a detailed cost breakdown so you understand what you are paying for.
+                        <strong>New-construction buyers</strong> - You are paying the tariff cost directly. A home that would have listed at $380,000 last year may now be priced at $390,000 or more with the same floor plan and finishes. Ask your builder for a detailed cost breakdown so you understand what you are paying for.
                     </li>
                     <li>
-                        <strong>Existing-home buyers</strong> — You benefit from not paying tariff-inflated material costs, but you face reduced inventory because fewer new homes are being built. That competition keeps existing-home prices firm and limits your negotiating power.
+                        <strong>Existing-home buyers</strong> - You benefit from not paying tariff-inflated material costs, but you face reduced inventory because fewer new homes are being built. That competition keeps existing-home prices firm and limits your negotiating power.
                     </li>
                     <li>
-                        <strong>Renovation and remodel buyers</strong> — If you are buying a fixer-upper, the cost of steel, copper wiring, and lumber for your renovation is higher than last year. Budget at least 8–12% more for materials compared to 2024 estimates.
+                        <strong>Renovation and remodel buyers</strong> - If you are buying a fixer-upper, the cost of steel, copper wiring, and lumber for your renovation is higher than last year. Budget at least 8-12% more for materials compared to 2024 estimates.
                     </li>
                     <li>
-                        <strong>Refinancers and current homeowners</strong> — Your home equity is likely stable or growing because supply constraints support home values. However, refinancing at current rates only makes sense if your existing rate is above 7%.
+                        <strong>Refinancers and current homeowners</strong> - Your home equity is likely stable or growing because supply constraints support home values. However, refinancing at current rates only makes sense if your existing rate is above 7%.
                     </li>
                 </ul>
 
@@ -152,10 +152,10 @@ export default function TariffsHousingMarketBlog() {
                 <div className="card p-6 mb-8">
                     <ul className="space-y-4">
                         {[
-                            ['Shop multiple lenders aggressively', 'In a volatile rate environment, individual lender pricing can vary by 0.25–0.50%. Getting 3–5 quotes is more important now than ever. Use our mortgage calculator to compare scenarios.'],
+                            ['Shop multiple lenders aggressively', 'In a volatile rate environment, individual lender pricing can vary by 0.25-0.50%. Getting 3-5 quotes is more important now than ever. Use our mortgage calculator to compare scenarios.'],
                             ['Consider existing homes over new construction', 'Existing homes are not directly impacted by tariff-inflated material costs. You may find better value in a resale home that needs cosmetic updates rather than a brand-new build.'],
                             ['Lock your rate strategically', 'When rates dip on a good economic data day, be ready to lock. Talk to your lender about a float-down option that lets you lock now but take advantage of any future decrease.'],
-                            ['Negotiate builder concessions', 'Builders are feeling the squeeze, too. Many are offering closing cost credits, rate buydowns, or free upgrades to move inventory. Do not be shy about asking — the worst they can say is no.'],
+                            ['Negotiate builder concessions', 'Builders are feeling the squeeze, too. Many are offering closing cost credits, rate buydowns, or free upgrades to move inventory. Do not be shy about asking - the worst they can say is no.'],
                             ['Run the numbers with a calculator', 'Use our affordability calculator to see exactly how tariff-driven price increases and rate changes affect your monthly payment and total cost of ownership.'],
                         ].map(([title, desc]) => (
                             <li key={String(title)} className="flex items-start gap-3">

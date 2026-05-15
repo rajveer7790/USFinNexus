@@ -45,7 +45,7 @@ export default function FedRatesBlog() {
                         </p>
 
                         <h2 className="text-2xl font-bold mt-12 mb-4">Direct Impact on Mortgage Rates</h2>
-                        <p>It's crucial to remember that the Federal Reserve doesn't set mortgage rates directly. However, their policy dictates the cost of short-term borrowing, which influences the 10-year Treasury yield—the primary benchmark for 30-year fixed mortgages.</p>
+                        <p>It's crucial to remember that the Federal Reserve doesn't set mortgage rates directly. However, their policy dictates the cost of short-term borrowing, which influences the 10-year Treasury yield-the primary benchmark for 30-year fixed mortgages.</p>
                         
                         <p><strong>For 30-Year Fixed Rates:</strong> Since the market had already priced in a "pause," 30-year fixed rates are remaining relatively stable in the high 6% range. Volatility will likely remain low in the short term unless inflation data heavily surprises the market in upcoming reports.</p>
                         

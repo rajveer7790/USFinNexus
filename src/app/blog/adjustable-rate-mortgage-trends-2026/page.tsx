@@ -41,7 +41,7 @@ export default function ArmTrendsBlog() {
                     </div>
                     <div className="prose max-w-none text-slate-800">
                         <p className="lead text-lg font-medium mb-8 text-slate-600">
-                            Adjustable-Rate Mortgages (ARMs) are making a major comeback. With volume at its highest level since 2023—accounting for up to 10% of current mortgage applications—homebuyers are increasingly turning to ARMs to lower their initial monthly payments in a high-rate environment.
+                            Adjustable-Rate Mortgages (ARMs) are making a major comeback. With volume at its highest level since 2023-accounting for up to 10% of current mortgage applications-homebuyers are increasingly turning to ARMs to lower their initial monthly payments in a high-rate environment.
                         </p>
 
                         <h2 className="text-2xl font-bold mt-12 mb-4">Why Are ARMs Surging?</h2>

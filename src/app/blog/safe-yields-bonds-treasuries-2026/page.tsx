@@ -83,7 +83,7 @@ export default function SafeYieldsBondsBlog() {
                         <div>
                             <h3 className="font-bold mb-1 text-base">The Wildcard: Emerging Market Bonds</h3>
                             <p className="text-sm m-0">
-                                Emerging Market (EM) bonds are issued by developing nations (think Brazil, India, or Mexico) to fund their infrastructure and growth. To attract investors, they have to offer significantly higher interest rates—sometimes double or triple what the US offers.
+                                Emerging Market (EM) bonds are issued by developing nations (think Brazil, India, or Mexico) to fund their infrastructure and growth. To attract investors, they have to offer significantly higher interest rates-sometimes double or triple what the US offers.
                             </p>
                         </div>
                     </div>

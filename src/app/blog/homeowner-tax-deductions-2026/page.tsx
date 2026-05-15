@@ -9,7 +9,7 @@ import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
     title: 'Homeowner Tax Deductions 2026: SALT, PMI, Mortgage Interest & More | USFinNexus',
-    description: 'Complete guide to every homeowner tax deduction in 2026 — the new $40,000 SALT cap, PMI deduction return, senior homeowner deduction, and mortgage interest rules. File smarter this year.',
+    description: 'Complete guide to every homeowner tax deduction in 2026 - the new $40,000 SALT cap, PMI deduction return, senior homeowner deduction, and mortgage interest rules. File smarter this year.',
     openGraph: {
         title: 'Every Homeowner Tax Deduction You Can Claim in 2026',
         description: 'The SALT cap jumped to $40,000, PMI is deductible again, and seniors get a new break. Here is the full list of homeowner deductions for the 2025 tax year.',
@@ -34,7 +34,7 @@ export default function HomeownerTaxDeductionsBlog() {
         <>
         <ArticleSchema
             title="Every Homeowner Tax Deduction You Can Claim in 2026"
-            description="Complete guide to every homeowner tax deduction in 2026 — the new $40,000 SALT cap, PMI deduction return, senior homeowner deduction, and mortgage interest rules."
+            description="Complete guide to every homeowner tax deduction in 2026 - the new $40,000 SALT cap, PMI deduction return, senior homeowner deduction, and mortgage interest rules."
             url="https://usfinnexus.com/blog/homeowner-tax-deductions-2026"
             datePublished="2026-04-08"
             dateModified="2026-04-08"
@@ -63,7 +63,7 @@ export default function HomeownerTaxDeductionsBlog() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    Tax season is here, and if you own a home, you are sitting on deductions that could save you hundreds — or even thousands — of dollars. The 2025 tax year (filing in 2026) brought several meaningful changes that directly benefit homeowners. The SALT deduction cap increased to <strong>$40,000</strong>, private mortgage insurance premiums became <strong>deductible again</strong>, and a brand-new deduction was introduced for <strong>homeowners 65 and older</strong>. This guide walks you through every deduction available, who qualifies, and how to make sure you are not leaving money on the table.
+                    Tax season is here, and if you own a home, you are sitting on deductions that could save you hundreds - or even thousands - of dollars. The 2025 tax year (filing in 2026) brought several meaningful changes that directly benefit homeowners. The SALT deduction cap increased to <strong>$40,000</strong>, private mortgage insurance premiums became <strong>deductible again</strong>, and a brand-new deduction was introduced for <strong>homeowners 65 and older</strong>. This guide walks you through every deduction available, who qualifies, and how to make sure you are not leaving money on the table.
                 </p>
 
                 <div className="card p-6 mb-8 border-l-4" style={{ borderLeftColor: '#00C853' }}>
@@ -72,7 +72,7 @@ export default function HomeownerTaxDeductionsBlog() {
                         <div>
                             <h3 className="font-bold mb-1 text-base">April 15 Deadline Reminder</h3>
                             <p className="text-sm m-0">
-                                The federal tax filing deadline for the 2025 tax year is <strong>April 15, 2026</strong>. If you need more time, you can file Form 4868 for an automatic six-month extension — but any taxes owed must still be paid by April 15 to avoid penalties and interest.
+                                The federal tax filing deadline for the 2025 tax year is <strong>April 15, 2026</strong>. If you need more time, you can file Form 4868 for an automatic six-month extension - but any taxes owed must still be paid by April 15 to avoid penalties and interest.
                             </p>
                         </div>
                     </div>
@@ -119,7 +119,7 @@ export default function HomeownerTaxDeductionsBlog() {
                     In practical terms, if you have a $400,000 mortgage at 6.5%, you are paying roughly $25,800 in interest during the first full year. That entire amount is deductible, which could reduce your taxable income significantly. Your lender sends you Form 1098 each January showing exactly how much mortgage interest you paid during the prior year.
                 </p>
 
-                <h2 className="text-2xl font-bold mt-12 mb-4">2. State and Local Tax (SALT) Deduction — Now $40,000</h2>
+                <h2 className="text-2xl font-bold mt-12 mb-4">2. State and Local Tax (SALT) Deduction - Now $40,000</h2>
                 <p className="mb-4">
                     The SALT deduction covers your state income tax (or state sales tax, if you prefer) plus local property taxes. For years, this deduction was capped at <strong>$10,000</strong>, which was a painful limit for homeowners in high-tax states who routinely paid $15,000 or more in property taxes alone.
                 </p>
@@ -134,7 +134,7 @@ export default function HomeownerTaxDeductionsBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">3. PMI Is Tax-Deductible Again</h2>
                 <p className="mb-4">
-                    This one is a big deal for homeowners who put down less than 20%. Starting in 2026, private mortgage insurance (PMI) premiums — along with FHA mortgage insurance premiums (MIP), VA funding fees, and USDA guarantee fees — are once again treated as <strong>deductible mortgage interest</strong>.
+                    This one is a big deal for homeowners who put down less than 20%. Starting in 2026, private mortgage insurance (PMI) premiums - along with FHA mortgage insurance premiums (MIP), VA funding fees, and USDA guarantee fees - are once again treated as <strong>deductible mortgage interest</strong>.
                 </p>
                 <p className="mb-4">
                     If you are paying $150 per month in PMI on a conventional loan, that is $1,800 per year you can now add to your mortgage interest deduction when you itemize. The deduction was available on and off for years but had expired. Its return in 2026 is welcome news for millions of homeowners still carrying mortgage insurance.
@@ -145,7 +145,7 @@ export default function HomeownerTaxDeductionsBlog() {
                     Beginning with the 2025 tax year, homeowners aged 65 and older may qualify for an additional federal deduction. This is designed to help seniors who own their homes outright (or have low mortgage balances) and might not otherwise have enough deductions to justify itemizing.
                 </p>
                 <p className="mb-4">
-                    The specifics of the deduction amount and income thresholds vary, so check with your tax preparer or use the IRS Free File tools to determine your eligibility. If you are a senior homeowner, this is worth investigating — it could put real money back in your pocket even if your mortgage is paid off.
+                    The specifics of the deduction amount and income thresholds vary, so check with your tax preparer or use the IRS Free File tools to determine your eligibility. If you are a senior homeowner, this is worth investigating - it could put real money back in your pocket even if your mortgage is paid off.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">5. Property Tax Deduction</h2>
@@ -155,7 +155,7 @@ export default function HomeownerTaxDeductionsBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">6. Home Office Deduction (Self-Employed Only)</h2>
                 <p className="mb-4">
-                    If you are self-employed and use a dedicated space in your home exclusively for business, you can deduct a portion of your housing costs. The simplified method allows <strong>$5 per square foot</strong> up to 300 square feet ($1,500 maximum). The regular method lets you deduct the actual percentage of your home used for business, including mortgage interest, utilities, insurance, and depreciation — but requires more detailed record-keeping.
+                    If you are self-employed and use a dedicated space in your home exclusively for business, you can deduct a portion of your housing costs. The simplified method allows <strong>$5 per square foot</strong> up to 300 square feet ($1,500 maximum). The regular method lets you deduct the actual percentage of your home used for business, including mortgage interest, utilities, insurance, and depreciation - but requires more detailed record-keeping.
                 </p>
                 <p className="mb-4">
                     Note: W-2 employees working from home cannot claim this deduction under current federal tax law, even if your employer requires remote work.
@@ -166,7 +166,7 @@ export default function HomeownerTaxDeductionsBlog() {
                     If you installed energy-efficient upgrades in 2025, you may qualify for the Residential Clean Energy Credit (up to 30% of costs for solar panels, solar water heaters, and geothermal heat pumps) or the Energy Efficient Home Improvement Credit (up to $3,200 per year for qualifying improvements like insulation, windows, doors, and heat pumps).
                 </p>
                 <p className="mb-4">
-                    These are tax credits — not deductions — which means they reduce your tax bill dollar for dollar. A $2,000 credit saves you $2,000 in taxes, regardless of your tax bracket. That makes them far more valuable per dollar than deductions.
+                    These are tax credits - not deductions - which means they reduce your tax bill dollar for dollar. A $2,000 credit saves you $2,000 in taxes, regardless of your tax bracket. That makes them far more valuable per dollar than deductions.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Your Homeowner Tax Deduction Checklist</h2>
@@ -178,7 +178,7 @@ export default function HomeownerTaxDeductionsBlog() {
                             'Add up property taxes actually paid (check escrow statements)',
                             'Calculate state income tax or sales tax total for SALT deduction',
                             'Confirm if your total SALT is under the new $40,000 cap',
-                            'Gather PMI/MIP statements — these are deductible in 2026',
+                            'Gather PMI/MIP statements - these are deductible in 2026',
                             'Check if you qualify for the senior homeowner deduction (65+)',
                             'Collect receipts for energy-efficient home improvements',
                             'Compare total itemized deductions to the standard deduction',

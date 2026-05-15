@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: 'Geopolitical instability is rewriting the rules of the energy sector. Discover how to balance traditional oil and gas with the massive surge in renewables.',
     openGraph: {
         title: 'Energy Markets 2026: Investing Amidst Crisis',
-        description: 'From supply shocks in oil to government mandates in solar, the energy sector is the most volatile—and profitable—space in 2026.',
+        description: 'From supply shocks in oil to government mandates in solar, the energy sector is the most volatile-and profitable-space in 2026.',
         url: 'https://usfinnexus.com/blog/energy-market-investing-crisis-2026',
         type: 'article',
         siteName: 'USFinNexus',
@@ -70,7 +70,7 @@ export default function EnergyMarketCrisisBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">The Short-Term Reality: Oil and Gas Are Still King</h2>
                 <p className="mb-4">
-                    When international conflict breaks out—especially in regions involving major oil producers or crucial shipping straits—the price of crude oil skyrockets.
+                    When international conflict breaks out-especially in regions involving major oil producers or crucial shipping straits-the price of crude oil skyrockets.
                 </p>
                 <p className="mb-4">
                     While the world is moving toward EVs and solar, the infrastructure isn't fully there yet. A military conflict requires massive amounts of diesel and jet fuel. When supply is threatened, major oil conglomerates (like ExxonMobil or Chevron) print money. For a retail investor, holding a broad Energy ETF (like XLE) acts as a fantastic hedge against inflation. If gas prices at the pump go up hurting your wallet, your energy stocks go up, softening the blow.
