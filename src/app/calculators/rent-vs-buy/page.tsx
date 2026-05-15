@@ -13,15 +13,28 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Rent vs Buy Calculator 2026 — Should I Rent or Buy a Home?',
-    description: 'Free rent vs. buy calculator. Compare total costs, home equity, and break-even year over your planned time horizon. Uses real 2026 appreciation, tax, and investment data.',
+    title: 'Rent vs Buy Calculator 2026 — Should I Rent or Buy a Home? | USFinNexus',
+    description: 'Free rent vs buy calculator. Compare total 5-year costs, home equity, and break-even year. Uses real 2026 appreciation, tax benefits, and investment return data.',
+    keywords: [
+        'rent vs buy calculator', 'should I rent or buy', 'rent vs buy 2026',
+        'renting vs buying a home calculator', 'is it better to rent or buy',
+        'rent or buy calculator 2026', 'home buying break even calculator',
+        'rent vs mortgage calculator', 'buy vs rent comparison',
+        'cost of renting vs buying', 'renting vs buying comparison',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/calculators/rent-vs-buy' },
     openGraph: {
         type: 'website',
-        title: 'Rent vs. Buy Calculator 2026 | USFinNexus',
-        description: 'Compare total renting vs. buying costs over any time horizon. Includes home appreciation, tax savings, and investment opportunity cost. Free, no signup.',
+        title: 'Rent vs Buy Calculator 2026 | USFinNexus',
+        description: 'Should you rent or buy? Compare 5-year total costs, equity growth, and break-even point with real 2026 data.',
         url: 'https://usfinnexus.com/calculators/rent-vs-buy',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Rent vs Buy Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Rent vs Buy Calculator 2026 — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Rent vs Buy Calculator 2026 | Should I Rent or Buy?',
+        description: 'Compare total 5-year costs, equity growth, and break-even year. Find out if buying makes sense for you.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

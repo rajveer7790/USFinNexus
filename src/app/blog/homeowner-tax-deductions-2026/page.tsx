@@ -8,30 +8,27 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Homeowner Tax Deductions 2026: SALT, PMI, Mortgage Interest & More | USFinNexus',
-    description: 'Complete guide to every homeowner tax deduction in 2026 — the new $40,000 SALT cap, PMI deduction return, senior homeowner deduction, and mortgage interest rules. File smarter this year.',
-    openGraph: {
-        title: 'Every Homeowner Tax Deduction You Can Claim in 2026',
-        description: 'The SALT cap jumped to $40,000, PMI is deductible again, and seniors get a new break. Here is the full list of homeowner deductions for the 2025 tax year.',
-        url: 'https://usfinnexus.com/blog/homeowner-tax-deductions-2026',
-        type: 'article',
-        siteName: 'USFinNexus',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Homeowner tax deductions 2026' }],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Every Homeowner Tax Deduction in 2026',
-        description: 'SALT cap raised to $40K, PMI deductible again, senior homeowner break added. Full guide inside.',
-        images: ['https://usfinnexus.com/icon-512.png'],
-    },
-    alternates: {
-        canonical: 'https://usfinnexus.com/blog/homeowner-tax-deductions-2026',
-    },
+    title: 'Homeowner Tax Deductions 2026: New $40K SALT Cap, PMI Return & Senior Deduction | USFinNexus',
+    description: 'Every homeowner tax deduction available in 2026 — the new $40,000 SALT cap, PMI deduction return, $4,000 senior homeowner deduction, mortgage interest, and energy credits. Updated for 2026.',
+    keywords: [
+        'homeowner tax deductions 2026', 'SALT deduction 2026', 'mortgage interest deduction 2026',
+        'PMI tax deductible 2026', 'senior homeowner deduction', 'property tax deduction 2026',
+        'home office deduction 2026', 'energy efficient home tax credit', 'homeowner tax breaks 2026',
+        'tax filing homeowner 2026', 'itemized deductions homeowner', 'home equity interest deduction',
+    ],
+    alternates: { canonical: 'https://usfinnexus.com/blog/homeowner-tax-deductions-2026' },
+    openGraph: { type: 'article', title: 'Homeowner Tax Deductions 2026 — New SALT Cap, PMI & Senior Deduction', description: 'Every homeowner tax deduction in 2026 including the new $40K SALT cap, PMI deduction return, and $4K senior homeowner deduction.', url: 'https://usfinnexus.com/blog/homeowner-tax-deductions-2026', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Homeowner Tax Deductions 2026' }] },
+    twitter: { card: 'summary_large_image', title: 'Homeowner Tax Deductions 2026 | New SALT Cap & PMI Return', description: 'New $40K SALT cap, PMI back as a deduction, and a new senior homeowner deduction. Full guide for 2026 filers.', images: ['https://usfinnexus.com/icon-512.png'] },
 };
 
 export default function HomeownerTaxDeductionsBlog() {
     return (
         <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: 'Is PMI tax deductible in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. PMI (Private Mortgage Insurance) is deductible in 2026 for taxpayers who itemize deductions. The deduction was reinstated and made permanent in recent legislation. The deductibility phases out for AGI above $100,000 (single) and $109,000 (married filing jointly).' } },
+    { '@type': 'Question', name: 'What is the new SALT deduction cap in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'The SALT (State and Local Tax) deduction cap was raised to $40,000 in 2026 (from $10,000 under TCJA). This is a major benefit for homeowners in high-tax states like California, New York, and New Jersey who pay large amounts in property taxes and state income taxes.' } },
+    { '@type': 'Question', name: 'What is the senior homeowner deduction in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'A new $4,000 additional standard deduction is available in 2026 for homeowners aged 65 or older who have owned their primary residence for at least 5 years. This is stackable with the existing age-related standard deduction increase and can significantly reduce taxable income for senior homeowners.' } },
+] }) }} />
         <ArticleSchema
             title="Every Homeowner Tax Deduction You Can Claim in 2026"
             description="Complete guide to every homeowner tax deduction in 2026 — the new $40,000 SALT cap, PMI deduction return, senior homeowner deduction, and mortgage interest rules."

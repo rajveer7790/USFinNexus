@@ -3,13 +3,28 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-    title: '15-Year vs. 30-Year Mortgage: Full Breakdown & Math | USFinNexus',
-    description: 'Compare a 15-year vs 30-year mortgage. See the exact math on monthly payments, total interest saved, and investment opportunity costs.',
+    title: '15-Year vs 30-Year Mortgage 2026 — Full Payment & Interest Comparison | USFinNexus',
+    description: 'Compare 15-year vs 30-year mortgage with exact math on monthly payments, total interest saved, and opportunity cost of the extra cash flow. Updated for 2026 rates.',
+    keywords: [
+        '15 year vs 30 year mortgage', '15 vs 30 year mortgage calculator',
+        'is 15 year mortgage worth it', '15 year mortgage payment',
+        '30 year mortgage total interest', 'pay off mortgage faster',
+        '15 year mortgage savings', 'which mortgage term is better',
+        '15 vs 30 year mortgage comparison 2026', 'shorter mortgage term savings',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/guides/15-vs-30-year-mortgage' },
     openGraph: {
-        title: '15-Year vs 30-Year Mortgage Comparison | USFinNexus',
-        description: 'Should you take the massive monthly savings of a 30-year, or the massive lifetime interest savings of a 15-year?',
+        type: 'article',
+        title: '15-Year vs 30-Year Mortgage 2026 | Full Comparison | USFinNexus',
+        description: 'Exact math on monthly payments, total interest, and opportunity cost. Which mortgage term wins in 2026?',
         url: 'https://usfinnexus.com/guides/15-vs-30-year-mortgage',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: '15 vs 30 Year Mortgage Comparison — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: '15-Year vs 30-Year Mortgage 2026 | Which Is Better? | USFinNexus',
+        description: 'How much do you really save with a 15-year mortgage? Full payment and interest comparison.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

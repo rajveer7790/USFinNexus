@@ -3,13 +3,29 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: 'Best First-Time Homebuyer Programs (2026 Updated) | USFinNexus',
-    description: 'A comprehensive guide to local and federal first-time homebuyer programs, grants, and down payment assistance options available in 2026.',
+    title: 'First-Time Homebuyer Programs 2026 — Grants, Down Payment Assistance & Loans | USFinNexus',
+    description: 'Complete guide to first-time homebuyer programs in 2026. Federal grants, state down payment assistance, FHA loans, and local programs available to first-time buyers.',
+    keywords: [
+        'first time homebuyer programs 2026', 'down payment assistance programs',
+        'first time homebuyer grants', 'FHA first time buyer',
+        'first time homebuyer loan programs', 'homebuyer assistance programs',
+        'down payment assistance 2026', 'first time buyer programs by state',
+        'HUD homebuyer programs', 'first time homebuyer benefits',
+        'zero down payment first time buyer', 'first home purchase programs',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/guides/first-time-homebuyer-programs' },
     openGraph: {
-        title: 'First-Time Homebuyer Programs 2026 | USFinNexus',
-        description: 'Discover grants, tax credits, and 0% down loans designed specifically for first-time buyers.',
+        type: 'article',
+        title: 'First-Time Homebuyer Programs 2026 | Down Payment Assistance | USFinNexus',
+        description: 'Every grant, loan, and assistance program available to first-time buyers in 2026. Federal, state, and local options.',
         url: 'https://usfinnexus.com/guides/first-time-homebuyer-programs',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'First-Time Homebuyer Programs 2026 — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'First-Time Homebuyer Programs 2026 | Down Payment Help | USFinNexus',
+        description: 'Grants, down payment assistance, and loan programs for first-time buyers in 2026. Full guide.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

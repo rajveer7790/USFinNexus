@@ -14,16 +14,29 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Debt to Income Ratio Calculator (DTI) 2026 | USFinNexus',
-    description: 'Free DTI Calculator. See if your Debt-to-Income ratio meets the 36% or 43% guidelines for mortgage approval.',
+    title: 'Debt-to-Income Ratio Calculator (DTI) 2026 | USFinNexus',
+    description: 'Free DTI calculator. Check if your debt-to-income ratio qualifies for a mortgage. See front-end and back-end DTI vs CFPB 28/43 guidelines instantly.',
+    keywords: [
+        'debt to income ratio calculator', 'DTI calculator', 'debt to income calculator',
+        'mortgage DTI calculator', 'DTI ratio 2026', 'front end DTI calculator',
+        'back end DTI calculator', 'CFPB DTI guidelines', 'mortgage qualifying DTI',
+        'how to calculate debt to income ratio', 'DTI for mortgage approval',
+        'maximum debt to income ratio mortgage',
+    ],
+    alternates: { canonical: 'https://usfinnexus.com/calculators/dti' },
     openGraph: {
         type: 'website',
-        title: 'Debt-to-Income (DTI) Calculator 2026 | USFinNexus',
-        description: 'Free DTI calculator. See if your debt-to-income ratio meets the 28%/43% CFPB guidelines for mortgage approval. Works for front-end and back-end DTI. No signup.',
+        title: 'Debt-to-Income Ratio Calculator (DTI) 2026 | USFinNexus',
+        description: 'Check your front-end and back-end DTI against CFPB 28/43 mortgage guidelines instantly. Free DTI calculator.',
         url: 'https://usfinnexus.com/calculators/dti',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Debt to Income DTI Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'DTI Ratio Calculator 2026 — USFinNexus' }],
     },
-    alternates: { canonical: 'https://usfinnexus.com/calculators/dti' },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Debt-to-Income Ratio Calculator 2026 | USFinNexus',
+        description: 'Check your DTI against CFPB mortgage guidelines. Front-end and back-end ratios calculated instantly.',
+        images: ['https://usfinnexus.com/icon-512.png'],
+    },
 };
 
 const DTI_FAQS = [

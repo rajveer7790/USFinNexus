@@ -14,14 +14,28 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Florida Mortgage Calculator 2026 — Hurricane Insurance & Property Taxes | USFinNexus',
-    description: 'Free Florida Mortgage Calculator for 2026. Explicitly factor in Florida\'s rapidly rising homeowners and flood insurance premiums alongside property taxes.',
+    description: 'Free Florida mortgage calculator. Factors in rapidly rising FL homeowners and flood insurance, no state income tax benefit, and 2026 Florida property tax rates.',
+    keywords: [
+        'Florida mortgage calculator', 'FL mortgage calculator 2026',
+        'Florida home loan calculator', 'Florida homeowners insurance calculator',
+        'Florida flood insurance mortgage', 'Miami mortgage calculator',
+        'Tampa mortgage calculator', 'Florida property tax rate',
+        'no state income tax Florida', 'Florida home buying calculator',
+        'Florida hurricane insurance cost mortgage',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/calculators/florida' },
     openGraph: {
         type: 'website',
-        title: 'Florida Mortgage Calculator 2026 | USFinNexus',
-        description: 'Free Florida mortgage calculator for 2026. Factor in Florida\'s rising hurricane and flood insurance costs alongside property taxes to get your true PITI payment.',
+        title: 'Florida Mortgage Calculator 2026 — Hurricane Insurance & Taxes | USFinNexus',
+        description: 'FL mortgage calculator with rising homeowners and flood insurance, property taxes, and no income tax benefit.',
         url: 'https://usfinnexus.com/calculators/florida',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Florida Mortgage Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Florida Mortgage Calculator 2026 — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Florida Mortgage Calculator 2026 | USFinNexus',
+        description: 'FL mortgage with hurricane insurance, flood insurance, and property taxes. Built for Florida buyers.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

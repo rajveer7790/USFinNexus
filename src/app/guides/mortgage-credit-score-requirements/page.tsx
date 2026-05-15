@@ -3,13 +3,29 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: 'Credit Score Needed to Buy a House in 2026 | USFinNexus',
-    description: 'Find out exactly what credit score you need for FHA, VA, USDA, and Conventional mortgages in 2026.',
+    title: 'Credit Score Needed to Buy a House in 2026 — FHA, VA, Conventional | USFinNexus',
+    description: 'Exact credit score requirements for every mortgage type in 2026: FHA (580+), VA (620+), USDA (640+), Conventional (620+). See how your score affects your rate.',
+    keywords: [
+        'credit score needed to buy a house', 'minimum credit score for mortgage',
+        'credit score mortgage requirements 2026', 'FHA credit score requirement',
+        'VA loan credit score', 'conventional loan credit score',
+        'mortgage credit score 2026', 'what credit score for home loan',
+        'credit score for FHA loan 2026', 'USDA loan credit score requirement',
+        'minimum credit score first time homebuyer', 'how credit score affects mortgage rate',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/guides/mortgage-credit-score-requirements' },
     openGraph: {
-        title: 'Mortgage Credit Score Requirements 2026 | USFinNexus',
-        description: 'See minimum credit score requirements by loan type and learn how lenders pull your FICO scores.',
+        type: 'article',
+        title: 'Credit Score Requirements for a Mortgage 2026 | USFinNexus',
+        description: 'FHA, VA, USDA, and conventional mortgage credit score minimums for 2026. How your score affects your rate.',
         url: 'https://usfinnexus.com/guides/mortgage-credit-score-requirements',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Mortgage Credit Score Requirements 2026 — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Credit Score to Buy a House 2026 | FHA, VA, Conventional | USFinNexus',
+        description: 'What credit score do you need for a mortgage? See requirements for every loan type in 2026.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

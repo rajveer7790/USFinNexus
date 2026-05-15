@@ -14,15 +14,29 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Crypto Tax Calculator: Estimate Capital Gains 2026 | USFinNexus',
-    description: 'Estimate your cryptocurrency taxes instantly. Free US federal capital gains tax calculator for Bitcoin, Ethereum, and crypto trading.',
+    title: 'Crypto Tax Calculator 2026 — Capital Gains on Bitcoin & Crypto | USFinNexus',
+    description: 'Estimate your 2026 cryptocurrency capital gains taxes. Calculate short-term vs long-term gains for Bitcoin, Ethereum, and altcoins under IRS rules. Free crypto tax estimator.',
+    keywords: [
+        'crypto tax calculator', 'cryptocurrency tax calculator 2026',
+        'bitcoin capital gains tax calculator', 'crypto capital gains calculator',
+        'how to calculate crypto taxes', 'IRS crypto tax rules 2026',
+        'short term crypto gains calculator', 'long term crypto gains calculator',
+        'crypto tax estimator', 'cryptocurrency tax estimator',
+        'bitcoin tax calculator', 'ethereum tax calculator',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/calculators/crypto-tax' },
     openGraph: {
         type: 'website',
-        title: 'Crypto Capital Gains Tax Estimator 2026',
-        description: 'Calculate your short-term and long-term crypto tax liability. Free federal tax estimator.',
+        title: 'Crypto Tax Calculator 2026 — Bitcoin & Crypto Capital Gains | USFinNexus',
+        description: 'Estimate your 2026 crypto capital gains taxes. Short-term vs long-term rates under current IRS rules.',
         url: 'https://usfinnexus.com/calculators/crypto-tax',
-        images: [{ url: 'https://usfinnexus.com/images/calculators-hero.png', width: 1200, height: 630, alt: 'Crypto Tax Calculator — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Crypto Tax Calculator 2026 — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Crypto Tax Calculator 2026 | Bitcoin Capital Gains | USFinNexus',
+        description: 'How much tax do you owe on your crypto gains? Short vs long-term capital gains estimated instantly.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

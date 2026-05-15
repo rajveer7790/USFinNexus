@@ -10,6 +10,12 @@ import ArticleSchema from '@/components/ArticleSchema';
 export const metadata: Metadata = {
     title: 'Best Free Mortgage Calculator 2026 with PDF Download | USFinNexus',
     description: 'Compare the best free mortgage calculators in 2026. Get instant PDF and CSV amortization schedules with no signup required.',
+    keywords: [
+        'free mortgage calculator 2026', 'mortgage calculator PDF download',
+        'best mortgage calculator', 'mortgage calculator with amortization',
+        'free PITI calculator', 'no signup mortgage calculator',
+        'mortgage calculator with PDF export',
+    ],
     openGraph: {
         title: 'Best Free Mortgage Calculator 2026 with PDF Download',
         description: 'Compare the best free mortgage calculators in 2026. Get instant PDF and CSV amortization schedules with no signup required.',

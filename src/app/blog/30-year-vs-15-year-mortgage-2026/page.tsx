@@ -8,30 +8,27 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: '30-Year vs 15-Year Mortgage in 2026: Which Saves You More? | USFinNexus',
-    description: 'Compare 30-year vs 15-year mortgages side by side with real 2026 rates. See monthly payments, total interest, and which term makes financial sense for your situation.',
-    openGraph: {
-        title: '30-Year vs 15-Year Mortgage Comparison (2026 Rates)',
-        description: 'With 30-year rates at 6.45% and 15-year rates at 5.6%, the interest difference on a $350K loan is $198,000. Full breakdown inside.',
-        url: 'https://usfinnexus.com/blog/30-year-vs-15-year-mortgage-2026',
-        type: 'article',
-        siteName: 'USFinNexus',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: '30 year vs 15 year mortgage comparison 2026' }],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: '30-Year vs 15-Year Mortgage: Which Saves More in 2026?',
-        description: 'The 15-year option can save you nearly $200K in interest — but the higher payment is not for everyone.',
-        images: ['https://usfinnexus.com/icon-512.png'],
-    },
-    alternates: {
-        canonical: 'https://usfinnexus.com/blog/30-year-vs-15-year-mortgage-2026',
-    },
+    title: '30-Year vs 15-Year Mortgage 2026: Which Saves More? Real Numbers | USFinNexus',
+    description: 'Side-by-side comparison of 30-year vs 15-year mortgage with real 2026 rates. See exact monthly payments, total interest saved, opportunity cost, and which term wins for your situation.',
+    keywords: [
+        '30 year vs 15 year mortgage', '15 year mortgage vs 30 year', '15 year mortgage savings',
+        'is 15 year mortgage worth it', '15 year mortgage payment 2026', '30 year mortgage total interest',
+        'pay off mortgage faster', 'shorter mortgage term savings', 'mortgage term comparison 2026',
+        '15 year vs 30 year interest savings', '30 year fixed mortgage 2026', 'which mortgage term is better',
+    ],
+    alternates: { canonical: 'https://usfinnexus.com/blog/30-year-vs-15-year-mortgage-2026' },
+    openGraph: { type: 'article', title: '30-Year vs 15-Year Mortgage 2026: Which Saves More?', description: 'Real numbers on monthly payments, total interest, and opportunity cost for both mortgage terms in 2026.', url: 'https://usfinnexus.com/blog/30-year-vs-15-year-mortgage-2026', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: '30 vs 15 Year Mortgage 2026' }] },
+    twitter: { card: 'summary_large_image', title: '30-Year vs 15-Year Mortgage 2026 | Which Wins?', description: 'Real math on monthly payments, total interest, and opportunity cost. Which mortgage term is right for you?', images: ['https://usfinnexus.com/icon-512.png'] },
 };
 
 export default function MortgageTermComparisonBlog() {
     return (
         <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: 'How much more do I pay monthly for a 15-year vs 30-year mortgage?', acceptedAnswer: { '@type': 'Answer', text: 'On a $400,000 mortgage at 2026 rates (roughly 6.37% for 30-year, 5.72% for 15-year), the 30-year payment is approximately $2,499/month (P&I) and the 15-year is approximately $3,324/month — a difference of $825/month. However, the 15-year saves approximately $198,000 in total interest over the life of the loan.' } },
+    { '@type': 'Question', name: 'Is a 15-year mortgage always the better financial choice?', acceptedAnswer: { '@type': 'Answer', text: 'Not always. If you invest the $825/month payment difference in an index fund earning 8%+ annually over 30 years, you can end up with MORE wealth than the 15-year borrower saved in interest. The 15-year wins definitively on total interest paid. The 30-year can win on net worth if you have strong investment discipline.' } },
+    { '@type': 'Question', name: 'What is the hybrid strategy for 30 vs 15 year mortgages?', acceptedAnswer: { '@type': 'Answer', text: 'Take the 30-year mortgage for payment flexibility, but make extra principal payments equivalent to the 15-year payment amount when you can afford it. This gives you the payoff speed of a 15-year in good months, with the protection of the lower required payment in emergencies. Use an amortization calculator with extra payments to model this.' } },
+] }) }} />
         <ArticleSchema
             title="30-Year vs 15-Year Mortgage in 2026: Which Saves You More?"
             description="Compare 30-year vs 15-year mortgages side by side with real 2026 rates. See monthly payments, total interest, and which term makes financial sense for your situation."

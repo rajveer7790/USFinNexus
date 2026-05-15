@@ -12,15 +12,28 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Mortgage Loan Comparison Calculator 2026 — Side-by-Side | USFinNexus',
-    description: 'Compare up to 3 mortgage scenarios side by side in 2026. Instantly compare monthly payments, total interest, and loan costs with different rates, terms, and down payments.',
+    title: 'Mortgage Loan Comparison Calculator 2026 — Side-by-Side Analysis | USFinNexus',
+    description: 'Compare up to 3 mortgage loan scenarios side by side. Instantly see total interest, monthly payments, and lifetime costs across different rates, terms, and down payments.',
+    keywords: [
+        'mortgage comparison calculator', 'loan comparison calculator',
+        'compare mortgage rates calculator', 'mortgage side by side comparison',
+        'loan comparison tool 2026', '15 vs 30 year mortgage comparison',
+        'mortgage rate comparison', 'compare loan scenarios',
+        'best mortgage comparison calculator', 'mortgage deal comparison',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/calculators/comparison' },
     openGraph: {
         type: 'website',
         title: 'Mortgage Loan Comparison Calculator 2026 | USFinNexus',
-        description: 'Compare up to 3 mortgage scenarios side by side — different rates, terms, and down payments — to find the best loan for your 2026 home purchase.',
+        description: 'Compare up to 3 mortgage scenarios side by side. Monthly payments, total interest, and lifetime costs.',
         url: 'https://usfinnexus.com/calculators/comparison',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Mortgage Loan Comparison Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Mortgage Comparison Calculator 2026 — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Mortgage Comparison Calculator 2026 | USFinNexus',
+        description: 'Compare up to 3 mortgage scenarios side by side. Find the best loan for your budget.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

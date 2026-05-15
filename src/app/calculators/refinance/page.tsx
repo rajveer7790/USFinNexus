@@ -14,16 +14,28 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Refinance Calculator 2026 — Break-Even Analysis | USFinNexus',
+    title: 'Refinance Calculator 2026 — Break-Even & Monthly Savings | USFinNexus',
     description: 'Free mortgage refinance calculator. See your monthly savings, break-even point, and lifetime savings instantly. No signup needed. Updated for 2026 rates.',
+    keywords: [
+        'refinance calculator', 'mortgage refinance calculator', 'refinance break-even calculator',
+        'should I refinance 2026', 'refinance savings calculator', 'refinance calculator 2026',
+        'cash-out refinance calculator', 'rate and term refinance', 'refinance break even point',
+        'mortgage refinance break even months', 'lower my mortgage payment calculator',
+    ],
+    alternates: { canonical: 'https://usfinnexus.com/calculators/refinance' },
     openGraph: {
         type: 'website',
-        title: 'Refinance Calculator 2026 | USFinNexus',
-        description: 'Compare your current mortgage to a new loan. Find your monthly savings, lifetime savings, and exact break-even point in seconds. Free, no signup.',
+        title: 'Refinance Calculator 2026 — Break-Even & Monthly Savings | USFinNexus',
+        description: 'See your monthly savings, break-even point, and lifetime interest savings. Free mortgage refinance calculator. No signup.',
         url: 'https://usfinnexus.com/calculators/refinance',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Mortgage Refinance Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Mortgage Refinance Calculator 2026 — USFinNexus' }],
     },
-    alternates: { canonical: 'https://usfinnexus.com/calculators/refinance' },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Refinance Calculator 2026 | Break-Even & Monthly Savings',
+        description: 'Is refinancing worth it? Get your break-even point and monthly savings instantly.',
+        images: ['https://usfinnexus.com/icon-512.png'],
+    },
 };
 
 const REFINANCE_FAQS = [

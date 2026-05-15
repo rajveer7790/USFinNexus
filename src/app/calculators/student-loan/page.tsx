@@ -12,15 +12,28 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Free Student Loan Payoff Calculator | Extra Payments Estimator',
-    description: 'Calculate your student loan payoff schedule and see how much time and interest you can save by making extra monthly payments. Free PDF export.',
+    title: 'Student Loan Payoff Calculator 2026 — Extra Payment Estimator | USFinNexus',
+    description: 'Calculate your student loan payoff date and see how extra monthly payments save years and thousands in interest. Free student loan calculator with PDF export.',
+    keywords: [
+        'student loan calculator', 'student loan payoff calculator',
+        'student loan extra payment calculator', 'student loan interest calculator',
+        'how to pay off student loans faster', 'student loan repayment calculator',
+        'student loan amortization', 'student debt payoff calculator',
+        'federal student loan calculator', 'student loan payment estimator',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/calculators/student-loan' },
     openGraph: {
         type: 'website',
-        title: 'Free Student Loan Payoff Calculator 2026 | USFinNexus',
-        description: 'Calculate your student loan payoff schedule and see exactly how much time and interest you save with extra monthly payments. Free PDF export, no signup needed.',
+        title: 'Student Loan Payoff Calculator 2026 | USFinNexus',
+        description: 'See your exact student loan payoff date and how much extra payments save. Free calculator with PDF export.',
         url: 'https://usfinnexus.com/calculators/student-loan',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Student Loan Payoff Calculator — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Student Loan Calculator 2026 — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Student Loan Payoff Calculator 2026 | USFinNexus',
+        description: 'When will your student loans be paid off? See how extra payments cut years off your debt.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

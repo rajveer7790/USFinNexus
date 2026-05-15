@@ -8,30 +8,27 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'PMI Explained: How to Avoid, Calculate, and Cancel It | USFinNexus',
-    description: 'Everything you need to know about Private Mortgage Insurance (PMI) in 2026. Learn how to avoid it, calculate the cost, and cancel it once you hit 20% equity.',
-    openGraph: {
-        title: 'PMI Explained: How to Avoid, Calculate, and Cancel It',
-        description: 'Everything you need to know about Private Mortgage Insurance (PMI) in 2026. Learn how to avoid it, calculate the cost, and cancel it once you hit 20% equity.',
-        url: 'https://usfinnexus.com/blog/pmi-explained-avoid-cancel',
-        type: 'article',
-        siteName: 'USFinNexus',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Guide to understanding, avoiding, and canceling Private Mortgage Insurance (PMI)' }],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'PMI Explained: How to Avoid, Calculate, and Cancel It',
-        description: 'Everything you need to know about Private Mortgage Insurance (PMI) in 2026. Learn how to avoid it, calculate the cost, and cancel it once you hit 20% equity.',
-        images: ['https://usfinnexus.com/images/home-hero-v2.png'],
-    },
-    alternates: {
-        canonical: 'https://usfinnexus.com/blog/pmi-explained-avoid-cancel',
-    },
+    title: 'PMI Explained 2026: What It Is, How to Avoid It, and How to Cancel It | USFinNexus',
+    description: 'Everything about Private Mortgage Insurance (PMI) in 2026. How much it costs, 5 ways to avoid it, how to cancel at 80% LTV, and the automatic cancellation rule at 78% LTV.',
+    keywords: [
+        'what is PMI', 'PMI explained', 'how to cancel PMI', 'remove PMI from mortgage',
+        'PMI cost 2026', 'how to avoid PMI', 'private mortgage insurance explained',
+        'PMI at 80 percent LTV', 'automatic PMI cancellation 78 percent', 'how much is PMI',
+        'PMI vs no PMI', 'piggyback loan avoid PMI', 'lender paid PMI',
+    ],
+    alternates: { canonical: 'https://usfinnexus.com/blog/pmi-explained-avoid-cancel' },
+    openGraph: { type: 'article', title: 'PMI Explained 2026: Costs, Avoidance & Cancellation | USFinNexus', description: 'How PMI is calculated, 5 ways to avoid it, how to cancel at 80% LTV, and the automatic cancellation rule at 78% LTV under the Homeowners Protection Act.', url: 'https://usfinnexus.com/blog/pmi-explained-avoid-cancel', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'PMI Explained 2026 — USFinNexus' }] },
+    twitter: { card: 'summary_large_image', title: 'PMI Explained 2026: Costs, Avoidance & How to Cancel | USFinNexus', description: 'PMI can cost $100–$300/month. Here is how to avoid it, calculate it, and get rid of it.', images: ['https://usfinnexus.com/icon-512.png'] },
 };
 
 export default function BlogPost() {
     return (
         <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: 'How much does PMI cost per month?', acceptedAnswer: { '@type': 'Answer', text: 'PMI typically costs 0.5%–1.5% of the loan amount per year, divided into monthly payments. On a $350,000 loan, that is $145–$437/month. The exact rate depends on your credit score, LTV ratio, and loan type. Higher credit scores and lower LTVs get lower PMI rates. On average, buyers pay approximately $100–$200/month in PMI.' } },
+    { '@type': 'Question', name: 'When can I cancel PMI?', acceptedAnswer: { '@type': 'Answer', text: 'Under the Homeowners Protection Act (HPA), you can REQUEST cancellation when your loan balance reaches 80% of the original home value (based on appraised value at time of purchase). Your lender must AUTOMATICALLY cancel PMI when your balance reaches 78% of original value based on your amortization schedule. You can also request cancellation early based on an appraisal showing improved home value.' } },
+    { '@type': 'Question', name: 'What is the best way to avoid paying PMI?', acceptedAnswer: { '@type': 'Answer', text: 'The five main ways to avoid PMI: (1) Make a 20% down payment — the definitive solution; (2) Piggyback loan structure (80/10/10) — 10% down, 10% second mortgage, no PMI; (3) Lender-paid PMI — higher interest rate in exchange for no monthly PMI payment; (4) VA loan — zero PMI ever for eligible veterans; (5) Physician loans and other special programs — 0%–10% down without PMI for specific professions.' } },
+] }) }} />
         <ArticleSchema
             title="PMI Explained: How to Avoid, Calculate, and Cancel It | USFinNexus"
             description="Everything you need to know about Private Mortgage Insurance (PMI) in 2026. Learn how to avoid it, calculate the cost, and cancel it once you hit 20% equity."

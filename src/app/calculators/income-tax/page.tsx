@@ -12,15 +12,29 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Free 2026 Income Tax Calculator | TCJA Sunset Brackets',
-    description: 'Estimate your 2026 federal income taxes under the new post-TCJA sunset tax brackets. Calculate your effective and marginal tax rates instantly.',
+    title: '2026 Federal Income Tax Calculator — Post-TCJA Brackets | USFinNexus',
+    description: 'Estimate your 2026 federal income taxes under new post-TCJA sunset brackets. Calculate effective and marginal tax rates, standard deduction, and take-home pay.',
+    keywords: [
+        'income tax calculator 2026', 'federal income tax calculator',
+        'TCJA sunset tax brackets 2026', 'tax calculator 2026',
+        'effective tax rate calculator', 'marginal tax rate calculator',
+        'federal tax estimator 2026', 'how much federal tax do I owe',
+        'income tax estimator', 'tax bracket calculator 2026',
+        'IRS tax calculator 2026', 'take home pay calculator',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/calculators/income-tax' },
     openGraph: {
         type: 'website',
-        title: 'Free 2026 Federal Income Tax Calculator | TCJA Sunset | USFinNexus',
-        description: 'Estimate your 2026 federal income taxes under new post-TCJA sunset tax brackets. See your effective rate, marginal rate, and take-home pay instantly. Free, no signup.',
+        title: '2026 Federal Income Tax Calculator — Post-TCJA Sunset Brackets | USFinNexus',
+        description: 'Calculate your 2026 federal income tax under new post-TCJA brackets. Effective rate, marginal rate, and take-home pay.',
         url: 'https://usfinnexus.com/calculators/income-tax',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Free 2026 Income Tax Calculator — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: '2026 Income Tax Calculator — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: '2026 Income Tax Calculator | Post-TCJA Brackets | USFinNexus',
+        description: 'What will you owe in 2026? Calculate your federal taxes under the new post-TCJA brackets.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

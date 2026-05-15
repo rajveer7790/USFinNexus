@@ -4,9 +4,26 @@ import { ExternalLink, Shield, Calculator, FileText } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-    title: 'Our Methodology & Data Sources | USFinNexus',
-    description: 'How USFinNexus calculates mortgage payments, DTI ratios, and affordability metrics. All formulas sourced from CFPB, HUD, FHFA, and the Tax Foundation.',
+    title: 'Calculation Methodology & Data Sources | USFinNexus',
+    description: 'How USFinNexus calculates mortgage payments, DTI, affordability, and refinance break-even. Formulas sourced from CFPB, FHFA, HUD, Tax Foundation, and Freddie Mac PMMS.',
+    keywords: [
+        'mortgage calculation methodology', 'CFPB mortgage formula', 'PITI calculation explained',
+        'DTI ratio formula', 'mortgage amortization formula', 'FHFA conforming loan limits 2026',
+        'FHA loan limits 2026', 'PMI calculation formula', 'refinance break-even calculation',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/methodology' },
+    openGraph: {
+        type: 'article',
+        url: 'https://usfinnexus.com/methodology',
+        title: 'Mortgage Calculation Methodology & Data Sources | USFinNexus',
+        description: 'CFPB-compliant mortgage formulas, FHFA/HUD loan limits, and all data sources explained. Full transparency on how every calculator works.',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Mortgage Calculation Methodology | USFinNexus',
+        description: 'CFPB-compliant formulas, FHFA/HUD data sources, and full calculation transparency.',
+        images: ['https://usfinnexus.com/icon-512.png'],
+    },
 };
 
 const SOURCES = [
@@ -78,6 +95,51 @@ const FORMULAS = [
 
 export default function MethodologyPage() {
     return (
+        <>
+        {/* TechArticle + BreadcrumbList JSON-LD for E-E-A-T */}
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'TechArticle',
+                '@id': 'https://usfinnexus.com/methodology',
+                headline: 'USFinNexus Calculation Methodology & Data Sources',
+                description: 'How USFinNexus calculates mortgage payments, DTI ratios, and affordability metrics. All formulas sourced from CFPB, HUD, FHFA, and the Tax Foundation.',
+                url: 'https://usfinnexus.com/methodology',
+                datePublished: '2025-12-01',
+                dateModified: '2026-05-10',
+                inLanguage: 'en-US',
+                isAccessibleForFree: true,
+                author: {
+                    '@type': 'Organization',
+                    name: 'USFinNexus',
+                    url: 'https://usfinnexus.com',
+                },
+                publisher: { '@id': 'https://usfinnexus.com/#organization' },
+                about: [
+                    { '@type': 'Thing', name: 'Mortgage calculation formulas' },
+                    { '@type': 'Thing', name: 'CFPB Qualified Mortgage guidelines' },
+                    { '@type': 'Thing', name: 'FHFA conforming loan limits 2026' },
+                    { '@type': 'Thing', name: 'FHA loan limits 2026' },
+                    { '@type': 'Thing', name: 'Debt-to-income ratio calculation' },
+                    { '@type': 'Thing', name: 'PMI calculation and cancellation' },
+                ],
+                citation: [
+                    { '@type': 'WebSite', name: 'Consumer Financial Protection Bureau', url: 'https://www.consumerfinance.gov/' },
+                    { '@type': 'WebSite', name: 'Federal Housing Finance Agency', url: 'https://www.fhfa.gov/' },
+                    { '@type': 'WebSite', name: 'U.S. Department of Housing and Urban Development', url: 'https://www.hud.gov/' },
+                    { '@type': 'WebSite', name: 'Tax Foundation', url: 'https://taxfoundation.org/' },
+                    { '@type': 'WebSite', name: 'Freddie Mac PMMS', url: 'https://www.freddiemac.com/pmms' },
+                ],
+                breadcrumb: {
+                    '@type': 'BreadcrumbList',
+                    itemListElement: [
+                        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://usfinnexus.com' },
+                        { '@type': 'ListItem', position: 2, name: 'Methodology', item: 'https://usfinnexus.com/methodology' },
+                    ],
+                },
+            }) }}
+        />
         <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
             <Breadcrumbs items={[{ name: 'Methodology', item: '/methodology' }]} />
 
@@ -187,5 +249,6 @@ export default function MethodologyPage() {
                 <Link href="/disclaimer" className="btn-outline text-sm">Full Disclaimer</Link>
             </div>
         </div>
+        </>
     );
 }

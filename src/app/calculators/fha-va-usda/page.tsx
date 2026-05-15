@@ -13,14 +13,27 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'FHA vs VA vs USDA Loan Calculator 2026 — Compare Government Loans | USFinNexus',
-    description: 'Side-by-side comparison of FHA, VA, and USDA loans. See which mortgage program fits your budget with lowest down payment and interest costs.',
+    description: 'Side-by-side comparison of FHA, VA, and USDA loan programs. See which government mortgage fits your budget with the lowest down payment and total cost.',
+    keywords: [
+        'FHA vs VA vs USDA loan calculator', 'government loan comparison',
+        'FHA VA USDA comparison calculator', 'best government mortgage program',
+        'FHA loan requirements 2026', 'VA loan eligibility calculator',
+        'USDA loan calculator', 'zero down payment mortgage calculator',
+        'low down payment mortgage comparison', 'government backed mortgage calculator',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/calculators/fha-va-usda' },
     openGraph: {
         type: 'website',
         title: 'FHA vs VA vs USDA Loan Calculator 2026 | USFinNexus',
-        description: 'Side-by-side comparison of FHA, VA, and USDA government loan programs. See down payments, MIP/funding fees, and monthly costs for each. Free, no signup.',
+        description: 'Compare FHA, VA, and USDA government loans side by side. Find which program gives you the lowest payment.',
         url: 'https://usfinnexus.com/calculators/fha-va-usda',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'FHA VA USDA Government Loan Comparison 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'FHA VA USDA Loan Comparison Calculator — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'FHA vs VA vs USDA Loan Calculator 2026 | USFinNexus',
+        description: 'Which government loan saves you more? Compare FHA, VA, and USDA side by side.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

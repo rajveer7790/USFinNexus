@@ -14,15 +14,29 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Free Rental Property ROI & Cash Flow Calculator 2026 | USFinNexus',
-    description: 'Analyze rental property investments instantly. Calculate Cash Flow, Cap Rate, Cash-on-Cash Return, and NOI. Free advanced real estate calculator for 2026.',
+    title: 'Rental Property ROI & Cash Flow Calculator 2026 | USFinNexus',
+    description: 'Analyze rental property investments instantly. Calculate cash flow, cap rate, cash-on-cash return, and NOI for any US rental property. Free real estate investment calculator.',
+    keywords: [
+        'rental property calculator', 'rental property ROI calculator',
+        'cash flow rental property calculator', 'cap rate calculator',
+        'cash on cash return calculator', 'NOI calculator real estate',
+        'real estate investment calculator 2026', 'rental property analysis tool',
+        'investment property calculator', 'rental income calculator',
+        'rental property profit calculator', 'buy to rent calculator',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/calculators/rental-property' },
     openGraph: {
         type: 'website',
-        title: 'Free Rental Property ROI & Cash Flow Calculator 2026',
-        description: 'Advanced real estate investment analysis tool. Calculate cap rate, cash on cash return, and monthly cash flow. No signup required.',
+        title: 'Rental Property ROI & Cash Flow Calculator 2026 | USFinNexus',
+        description: 'Calculate cash flow, cap rate, and cash-on-cash return for any rental property instantly. Free real estate investment analyzer.',
         url: 'https://usfinnexus.com/calculators/rental-property',
-        images: [{ url: 'https://usfinnexus.com/images/calculators-hero.png', width: 1200, height: 630, alt: 'Rental Property Calculator — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Rental Property ROI Calculator 2026 — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Rental Property ROI Calculator 2026 | USFinNexus',
+        description: 'Cash flow, cap rate, and cash-on-cash return for any rental property. Free real estate investment calculator.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

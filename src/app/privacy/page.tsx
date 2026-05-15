@@ -3,9 +3,21 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-    title: 'Privacy Policy | USFinNexus',
-    description: 'USFinNexus.com privacy policy — we collect minimal data and never sell your information.',
+    title: 'Privacy Policy | USFinNexus — Zero Data Collection',
+    description: 'USFinNexus privacy policy. All calculations run client-side — we collect zero personally identifiable information and never sell data to lenders.',
+    keywords: ['USFinNexus privacy policy', 'mortgage calculator privacy', 'no data collection calculator'],
     alternates: { canonical: 'https://usfinnexus.com/privacy' },
+    openGraph: {
+        type: 'website',
+        url: 'https://usfinnexus.com/privacy',
+        title: 'Privacy Policy | USFinNexus',
+        description: 'Zero data collection. All calculations run in your browser. We never sell your information.',
+    },
+    twitter: {
+        card: 'summary',
+        title: 'Privacy Policy | USFinNexus',
+        description: 'Zero data collection. All calculations run in your browser.',
+    },
 };
 
 export default function PrivacyPage() {

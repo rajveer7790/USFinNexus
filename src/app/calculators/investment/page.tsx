@@ -12,15 +12,29 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Free Compound Interest & Investment Calculator 2026',
-    description: 'Calculate your investment growth with our free compound interest calculator. Visualize total interest earned vs principal deposits over time.',
+    title: 'Compound Interest & Investment Growth Calculator 2026 | USFinNexus',
+    description: 'Calculate investment growth with compound interest. See how regular contributions grow over time with interactive charts. Free investment calculator with PDF export.',
+    keywords: [
+        'compound interest calculator', 'investment calculator', 'investment growth calculator',
+        'compound interest calculator 2026', 'savings growth calculator',
+        'compound interest with monthly contributions', 'investment return calculator',
+        'how does compound interest work', 'compound growth calculator',
+        'interest on investment calculator', 'future value calculator',
+        'stock market return calculator',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/calculators/investment' },
     openGraph: {
         type: 'website',
-        title: 'Free Compound Interest & Investment Calculator 2026 | USFinNexus',
-        description: 'Visualize how your investments grow with compound interest. Compare total interest earned vs. principal deposits over any time period. Free interactive charts.',
+        title: 'Compound Interest & Investment Growth Calculator 2026 | USFinNexus',
+        description: 'See how your investments compound over time. Interactive charts with monthly contributions. Free calculator.',
         url: 'https://usfinnexus.com/calculators/investment',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Compound Interest Investment Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Investment Compound Interest Calculator 2026 — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Compound Interest Calculator 2026 | USFinNexus',
+        description: 'Watch your investments grow with the power of compounding. Free investment growth calculator.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

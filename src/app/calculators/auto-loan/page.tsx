@@ -12,17 +12,29 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Auto Loan Calculator 2026 — Monthly Car Payment & Taxes | USFinNexus',
-    description: 'Free auto loan calculator for 2026. Calculate monthly car payments, estimate sales tax, trade-in value, and download a full amortization schedule.',
-    keywords: ['auto loan calculator', 'car payment calculator', 'car loan with taxes', 'amortization car loan', 'vehicle finance calculator'],
+    title: 'Auto Loan Calculator 2026 — Monthly Car Payment & Total Cost | USFinNexus',
+    description: 'Free auto loan calculator for 2026. Calculate monthly car payments, total interest paid, sales tax estimate, and download a full amortization schedule.',
+    keywords: [
+        'auto loan calculator', 'car payment calculator', 'auto loan calculator 2026',
+        'monthly car payment calculator', 'car loan interest calculator',
+        'vehicle loan calculator', 'auto financing calculator',
+        'car loan amortization', 'car payment with tax and fees',
+        'used car loan calculator', 'auto loan payment estimator',
+    ],
+    alternates: { canonical: 'https://usfinnexus.com/calculators/auto-loan' },
     openGraph: {
         type: 'website',
-        title: 'Auto Loan Calculator 2026 | USFinNexus',
-        description: 'Calculate your monthly car payment with sales tax, trade-in value, and fees. Get a full amortization schedule instantly. Free auto loan calculator, no signup.',
+        title: 'Auto Loan Calculator 2026 — Monthly Car Payment | USFinNexus',
+        description: 'Calculate your monthly car payment, total interest, and full amortization schedule. Free auto loan calculator.',
         url: 'https://usfinnexus.com/calculators/auto-loan',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Auto Loan Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Auto Loan Calculator 2026 — USFinNexus' }],
     },
-    alternates: { canonical: 'https://usfinnexus.com/calculators/auto-loan' },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Auto Loan Calculator 2026 | Monthly Car Payment | USFinNexus',
+        description: 'Monthly car payment, total interest, and full amortization. Free auto loan calculator.',
+        images: ['https://usfinnexus.com/icon-512.png'],
+    },
 };
 
 export default function AutoLoanPage() {

@@ -14,15 +14,28 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'DRIP Calculator: Dividend Reinvestment Forecaster 2026 | USFinNexus',
-    description: 'Calculate the compound growth of your dividend investing portfolio over time. Free DRIP forecaster with dividend growth and tax modeling.',
+    title: 'DRIP Calculator 2026 — Dividend Reinvestment Forecaster | USFinNexus',
+    description: 'Calculate the compound growth of dividend reinvestment over time. Model dividend growth rates, yield on cost, and tax-adjusted returns. Free DRIP forecaster.',
+    keywords: [
+        'DRIP calculator', 'dividend reinvestment calculator', 'dividend reinvestment plan calculator',
+        'DRIP forecaster', 'dividend compounding calculator', 'dividend growth calculator',
+        'yield on cost calculator', 'dividend income calculator 2026',
+        'passive income dividend calculator', 'reinvest dividends calculator',
+        'how much dividends to retire', 'dividend portfolio calculator',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/calculators/drip' },
     openGraph: {
         type: 'website',
-        title: 'Dividend Reinvestment (DRIP) Calculator 2026',
-        description: 'Visualize the snowball effect of compounding dividends. Free DRIP forecaster for dividend growth investors.',
+        title: 'DRIP Dividend Reinvestment Calculator 2026 | USFinNexus',
+        description: 'Model dividend reinvestment compounding over decades. Dividend growth, yield on cost, and tax modeling.',
         url: 'https://usfinnexus.com/calculators/drip',
-        images: [{ url: 'https://usfinnexus.com/images/calculators-hero.png', width: 1200, height: 630, alt: 'DRIP Calculator — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'DRIP Dividend Reinvestment Calculator 2026 — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'DRIP Dividend Reinvestment Calculator 2026 | USFinNexus',
+        description: 'How powerful is dividend reinvestment? Model your DRIP portfolio growth over decades.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

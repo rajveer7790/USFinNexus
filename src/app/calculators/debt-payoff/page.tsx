@@ -12,18 +12,29 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Debt Payoff Calculator 2026 — Snowball vs Avalanche | USFinNexus',
-    description:
-        'Compare debt snowball and avalanche payoff strategies. See which method saves more interest and gets you debt-free faster. Free, no signup required.',
-    keywords: ['debt payoff calculator', 'snowball vs avalanche', 'debt free calculator', 'debt snowball', 'debt avalanche method'],
+    title: 'Debt Payoff Calculator 2026 — Snowball vs Avalanche Strategy | USFinNexus',
+    description: 'Compare debt snowball vs avalanche payoff methods across all your debts. See which strategy gets you debt-free fastest and saves the most interest. Free, no signup.',
+    keywords: [
+        'debt payoff calculator', 'debt snowball calculator', 'debt avalanche calculator',
+        'debt payoff planner', 'get out of debt calculator', 'debt free calculator',
+        'snowball vs avalanche debt', 'debt payoff plan calculator',
+        'multiple debt payoff calculator', 'debt repayment calculator 2026',
+        'how to pay off debt faster', 'debt reduction calculator',
+    ],
+    alternates: { canonical: 'https://usfinnexus.com/calculators/debt-payoff' },
     openGraph: {
         type: 'website',
         title: 'Debt Payoff Calculator 2026 — Snowball vs Avalanche | USFinNexus',
-        description: 'Compare debt snowball vs. avalanche payoff strategies. See which method saves more interest and gets you debt-free faster. Free interactive calculator, no signup.',
+        description: 'Compare snowball vs avalanche across all your debts. Find your debt-free date and total interest savings.',
         url: 'https://usfinnexus.com/calculators/debt-payoff',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Debt Payoff Snowball vs Avalanche Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Debt Payoff Calculator 2026 — USFinNexus' }],
     },
-    alternates: { canonical: 'https://usfinnexus.com/calculators/debt-payoff' },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Debt Payoff Calculator 2026 | Snowball vs Avalanche | USFinNexus',
+        description: 'Snowball or avalanche — which gets you debt-free faster? Compare strategies across all your debts.',
+        images: ['https://usfinnexus.com/icon-512.png'],
+    },
 };
 
 export default function DebtPayoffPage() {

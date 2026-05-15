@@ -14,14 +14,28 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Down Payment Calculator 2026 — Savings Goal Tracker | USFinNexus',
-    description: 'Free calculator to map out how long it will take to save your down payment. See exact timeframes based on 3.5%, 10%, or 20% down on your target home price.',
+    description: 'Free down payment savings calculator. See how long to save 3.5%, 10%, or 20% down on your target home price. Set a monthly savings goal and track your timeline.',
+    keywords: [
+        'down payment calculator', 'how much down payment for a house',
+        'down payment savings calculator', 'down payment calculator 2026',
+        '20 percent down payment calculator', '3.5 percent down FHA',
+        'how long to save for down payment', 'first time homebuyer down payment',
+        'minimum down payment calculator', 'down payment savings goal',
+        'house down payment calculator',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/calculators/down-payment' },
     openGraph: {
         type: 'website',
         title: 'Down Payment Savings Calculator 2026 | USFinNexus',
-        description: 'Set your target home price, choose 3.5%, 10%, or 20% down, and see exactly how many months you need to reach your savings goal. Free, no signup.',
+        description: 'How long to save for a down payment? Set your savings goal and see your exact timeline to 3.5%, 10%, or 20% down.',
         url: 'https://usfinnexus.com/calculators/down-payment',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Down Payment Savings Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Down Payment Calculator 2026 — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Down Payment Savings Calculator 2026 | USFinNexus',
+        description: 'How long until you can buy? Set your down payment goal and see your exact savings timeline.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

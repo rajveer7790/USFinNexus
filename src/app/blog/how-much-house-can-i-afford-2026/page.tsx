@@ -8,30 +8,27 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'How Much House Can I Afford in 2026? | USFinNexus',
-    description: 'Use the 28/36 rule, factor in 2026 interest rates, and calculate exactly how much house you can afford with our free affordability guide.',
-    openGraph: {
-        title: 'How Much House Can I Afford in 2026?',
-        description: 'Use the 28/36 rule, factor in 2026 interest rates, and calculate exactly how much house you can afford with our free affordability guide.',
-        url: 'https://usfinnexus.com/blog/how-much-house-can-i-afford-2026',
-        type: 'article',
-        siteName: 'USFinNexus',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Guide to calculating how much house you can afford in 2026 using the 28/36 rule' }],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'How Much House Can I Afford in 2026?',
-        description: 'Use the 28/36 rule, factor in 2026 interest rates, and calculate exactly how much house you can afford with our free affordability guide.',
-        images: ['https://usfinnexus.com/images/home-hero-v2.png'],
-    },
-    alternates: {
-        canonical: 'https://usfinnexus.com/blog/how-much-house-can-i-afford-2026',
-    },
+    title: 'How Much House Can I Afford in 2026? The 28/36 Rule with Real Numbers | USFinNexus',
+    description: 'Calculate exactly how much house you can afford in 2026 using the 28/36 rule with current mortgage rates. Includes hidden costs most buyers forget and CFPB-compliant DTI guidelines.',
+    keywords: [
+        'how much house can I afford 2026', 'home affordability calculator 2026', '28/36 rule mortgage',
+        'how much mortgage on salary', 'house affordability income ratio', 'CFPB 28 43 DTI rule',
+        'how much can I borrow for a house', 'mortgage income requirements', 'home buying budget 2026',
+        'maximum mortgage I can afford', 'debt to income ratio home buying', 'salary to home price ratio',
+    ],
+    alternates: { canonical: 'https://usfinnexus.com/blog/how-much-house-can-i-afford-2026' },
+    openGraph: { type: 'article', title: 'How Much House Can I Afford in 2026? | USFinNexus', description: 'The 28/36 rule with real 2026 rate examples. What salary do you need for a $400K house? Hidden costs most buyers miss.', url: 'https://usfinnexus.com/blog/how-much-house-can-i-afford-2026', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'How Much House Can I Afford 2026' }] },
+    twitter: { card: 'summary_large_image', title: 'How Much House Can I Afford in 2026?', description: 'The 28/36 rule with real 2026 numbers. What salary do you need for a $400K home?', images: ['https://usfinnexus.com/icon-512.png'] },
 };
 
 export default function BlogPost() {
     return (
         <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: 'What salary do I need to afford a $400,000 house in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'At 2026 rates (~6.37% for a 30-year fixed) with 20% down ($80,000), the P&I payment on a $320,000 loan is approximately $1,999/month. Adding taxes ($400/mo), insurance ($150/mo), and PMI (n/a with 20% down), total PITI is roughly $2,550/month. Using the 28% front-end DTI rule, you need gross income of $2,550 ÷ 0.28 = ~$9,107/month or approximately $109,000/year.' } },
+    { '@type': 'Question', name: 'What is the 28/36 rule for buying a house?', acceptedAnswer: { '@type': 'Answer', text: 'The 28/36 rule is a CFPB-endorsed guideline: spend no more than 28% of gross monthly income on housing costs (front-end DTI) and no more than 36% on all debt (back-end DTI). Many lenders will approve up to 43% back-end DTI (the Qualified Mortgage limit), but financial planners generally recommend staying within 36% for a comfortable financial cushion.' } },
+    { '@type': 'Question', name: 'What hidden costs do first-time buyers forget when calculating affordability?', acceptedAnswer: { '@type': 'Answer', text: 'Beyond the mortgage payment (PITI), buyers commonly forget: HOA fees ($200–$600/month in many communities), maintenance reserve (1%–2% of home value annually), utilities increase from apartment to house, lawn/landscaping, property insurance deductibles, and closing costs (2%–5% of loan amount upfront).' } },
+] }) }} />
         <ArticleSchema
             title="How Much House Can I Afford in 2026? | USFinNexus"
             description="Use the 28/36 rule, factor in 2026 interest rates, and calculate exactly how much house you can afford with our free affordability guide."

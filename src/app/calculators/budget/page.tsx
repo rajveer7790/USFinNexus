@@ -24,6 +24,12 @@ export const metadata: Metadata = {
         images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: '50/30/20 Budget Calculator 2026 — USFinNexus' }],
     },
     alternates: { canonical: 'https://usfinnexus.com/calculators/budget' },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Budget Calculator 2026 — 50/30/20 Rule Planner | USFinNexus',
+        description: 'Plan your monthly budget with the 50/30/20 rule. See needs, wants, and savings split instantly. Free budget planner.',
+        images: ['https://usfinnexus.com/icon-512.png'],
+    },
 };
 
 export default function BudgetPage() {

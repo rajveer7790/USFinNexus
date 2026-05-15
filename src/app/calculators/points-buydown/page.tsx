@@ -23,6 +23,12 @@ export const metadata: Metadata = {
         images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Mortgage Points Buy-Down Calculator 2026 — USFinNexus' }],
     },
     alternates: { canonical: 'https://usfinnexus.com/calculators/points-buydown' },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Mortgage Points Buy-Down Calculator 2026 | USFinNexus',
+        description: 'Is paying points worth it? Find your break-even month and total interest savings. Free mortgage points calculator.',
+        images: ['https://usfinnexus.com/icon-512.png'],
+    },
 };
 
 export default function PointsBuyDownPage() {

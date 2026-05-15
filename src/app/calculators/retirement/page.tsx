@@ -12,15 +12,28 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Free Retirement Calculator 2026 | Plan Your Nest Egg',
-    description: 'Calculate how much you need to retire and see if your current savings are on track. Free instant PDF and CSV exports. No signup required.',
+    title: 'Free Retirement Calculator 2026 — Plan Your Nest Egg | USFinNexus',
+    description: 'Calculate how much you need to retire comfortably and see if your savings are on track. Free retirement planner with compound growth projections and PDF export.',
+    keywords: [
+        'retirement calculator', 'retirement savings calculator', 'how much to retire',
+        'retirement planner 2026', 'nest egg calculator', 'retirement income calculator',
+        'retire at 65 calculator', '401k retirement calculator',
+        'retirement fund calculator', 'how much do I need to retire',
+        'retirement projection calculator', 'compound growth retirement calculator',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/calculators/retirement' },
     openGraph: {
         type: 'website',
-        title: 'Free Retirement Calculator 2026 | Plan Your Nest Egg | USFinNexus',
-        description: 'Calculate how much you need to retire and whether your savings are on track. See projected nest egg growth and find out your retirement age. Free PDF export.',
+        title: 'Retirement Calculator 2026 — Plan Your Nest Egg | USFinNexus',
+        description: 'How much do you need to retire? See if your savings are on track with free compound growth projections.',
         url: 'https://usfinnexus.com/calculators/retirement',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Free Retirement Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Retirement Calculator 2026 — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Retirement Calculator 2026 | Plan Your Nest Egg | USFinNexus',
+        description: 'Are your retirement savings on track? See how much you need and when you can retire.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

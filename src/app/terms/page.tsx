@@ -4,8 +4,20 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'Terms of Service | USFinNexus',
-    description: 'USFinNexus.com terms of service — calculator results are estimates only.',
+    description: 'USFinNexus terms of service. Free mortgage and finance calculators provided for educational and informational purposes only.',
+    keywords: ['USFinNexus terms of service', 'mortgage calculator terms'],
     alternates: { canonical: 'https://usfinnexus.com/terms' },
+    openGraph: {
+        type: 'website',
+        url: 'https://usfinnexus.com/terms',
+        title: 'Terms of Service | USFinNexus',
+        description: 'USFinNexus terms of service for free mortgage and finance calculators.',
+    },
+    twitter: {
+        card: 'summary',
+        title: 'Terms of Service | USFinNexus',
+        description: 'Terms of service for USFinNexus free mortgage calculators.',
+    },
 };
 
 export default function TermsPage() {

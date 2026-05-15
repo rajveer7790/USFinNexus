@@ -4,9 +4,21 @@ import { Mail, MapPin } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-    title: 'Contact Us | USFinNexus',
-    description: 'Get in touch with the team at USFinNexus.com for inquiries, feedback, and support regarding our mortgage and finance calculators.',
+    title: 'Contact USFinNexus | Feedback & Support',
+    description: 'Contact the USFinNexus team with questions, feedback, or support requests about our free mortgage and finance calculators.',
+    keywords: ['contact USFinNexus', 'USFinNexus support', 'mortgage calculator feedback', 'USFinNexus contact'],
     alternates: { canonical: 'https://usfinnexus.com/contact' },
+    openGraph: {
+        type: 'website',
+        url: 'https://usfinnexus.com/contact',
+        title: 'Contact USFinNexus | Feedback & Support',
+        description: 'Get in touch with the USFinNexus team for feedback or support on our free mortgage and finance calculators.',
+    },
+    twitter: {
+        card: 'summary',
+        title: 'Contact USFinNexus',
+        description: 'Get in touch with the USFinNexus team.',
+    },
 };
 
 export default function ContactPage() {

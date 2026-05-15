@@ -10,13 +10,20 @@ import ArticleSchema from '@/components/ArticleSchema';
 export const metadata: Metadata = {
     title: 'High-Yield Savings vs. Index Funds: Where to Park Your Cash in 2026 | USFinNexus',
     description: 'Interest rates are shifting in 2026. Should you keep your money in a safe 5% HYSA or invest in the S&P 500? We break down the math for modern investors.',
+    keywords: ['high yield savings account 2026', 'HYSA vs index funds', 'best place to park cash 2026', 'high yield savings account rate', 'S&P 500 vs savings account', 'index fund returns vs HYSA', 'where to invest cash 2026', 'emergency fund vs investing', 'risk free return 2026', 'money market vs index fund', 'cash vs stocks 2026', 'personal finance strategy 2026'],
     openGraph: {
         title: 'High-Yield Savings vs. Index Funds in 2026',
         description: 'With inflation cooling and rates fluctuating, the classic debate of cash vs. stocks has never been more relevant. See the numbers for 2026.',
         url: 'https://usfinnexus.com/blog/high-yield-savings-vs-index-funds-2026',
         type: 'article',
         siteName: 'USFinNexus',
-        images: [{ url: 'https://usfinnexus.com/api/images/high_yield_vs_index', width: 1200, height: 630, alt: 'High Yield Savings vs Index Funds' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'High Yield Savings vs Index Funds 2026' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'High-Yield Savings vs. Index Funds in 2026',
+        description: 'With inflation cooling and rates fluctuating, the classic debate of cash vs. stocks has never been more relevant. See the numbers for 2026.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
     alternates: {
         canonical: 'https://usfinnexus.com/blog/high-yield-savings-vs-index-funds-2026',
@@ -26,6 +33,44 @@ export const metadata: Metadata = {
 export default function HighYieldVsIndexBlog() {
     return (
         <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+                {
+                    '@type': 'Question',
+                    name: 'Should I put money in a high-yield savings account or index funds in 2026?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'The right choice depends on your time horizon and goals. High-yield savings accounts are ideal for emergency funds and money you need within 1-3 years, while index funds are better for long-term wealth building over 5+ years. Most financial experts recommend fully funding your emergency account first, then directing additional savings into index funds.'
+                    }
+                },
+                {
+                    '@type': 'Question',
+                    name: 'What interest rate can I get on a high-yield savings account in 2026?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'In 2026, competitive high-yield savings accounts are offering rates between 4.0% and 5.0% APY, depending on the institution and Federal Reserve policy. Online banks and fintech platforms typically offer the highest rates because they have lower overhead than traditional brick-and-mortar banks.'
+                    }
+                },
+                {
+                    '@type': 'Question',
+                    name: 'What is the average annual return of the S&P 500 vs high-yield savings?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'The S&P 500 has historically returned an average of 7-10% annually after inflation over long periods, compared to 4-5% from today\'s best high-yield savings accounts. However, the stock market is volatile year-to-year, while HYSA rates are guaranteed for the short term but will decline when the Fed cuts interest rates.'
+                    }
+                },
+                {
+                    '@type': 'Question',
+                    name: 'How much should I keep in savings before investing in index funds?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Financial planners generally recommend keeping 3-6 months of living expenses in a high-yield savings account as your emergency fund before investing in index funds. Once that baseline is established, any additional cash beyond near-term goals (down payments, large purchases within 3 years) should typically be directed into the market for long-term growth.'
+                    }
+                }
+            ]
+        }) }} />
         <ArticleSchema
             title="High-Yield Savings vs. Index Funds: Where to Park Your Cash in 2026"
             description="Interest rates are shifting in 2026. Should you keep your money in a safe 5% HYSA or invest in the S&P 500? We break down the math for modern investors."
@@ -107,7 +152,7 @@ export default function HighYieldVsIndexBlog() {
                     </div>
                 </div>
 
-                <h2 className="text-2xl font-bold mt-12 mb-4">The "Cash Trap" Risk</h2>
+                <h2 className="text-2xl font-bold mt-12 mb-4">The &quot;Cash Trap&quot; Risk</h2>
                 <p className="mb-4">
                     One of the biggest mistakes investors make is getting "anchored" to high interest rates. When you see a guaranteed 5% return, it feels incredible. But remember two things:
                 </p>

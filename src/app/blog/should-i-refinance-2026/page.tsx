@@ -8,30 +8,27 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Should You Refinance in 2026? Calculator + Break-Even Guide',
-    description: 'Use our break-even analysis to determine if refinancing your mortgage in 2026 makes financial sense. Free calculator included.',
-    openGraph: {
-        title: 'Should You Refinance in 2026? Calculator + Break-Even Guide',
-        description: 'Use our break-even analysis to determine if refinancing your mortgage in 2026 makes financial sense. Free calculator included.',
-        url: 'https://usfinnexus.com/blog/should-i-refinance-2026',
-        type: 'article',
-        siteName: 'USFinNexus',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Guide to deciding whether to refinance your mortgage in 2026 with break-even analysis' }],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Should You Refinance in 2026? Calculator + Break-Even Guide',
-        description: 'Use our break-even analysis to determine if refinancing your mortgage in 2026 makes financial sense. Free calculator included.',
-        images: ['https://usfinnexus.com/images/home-hero-v2.png'],
-    },
-    alternates: {
-        canonical: 'https://usfinnexus.com/blog/should-i-refinance-2026',
-    },
+    title: 'Should You Refinance in 2026? Break-Even Calculator + Complete Guide | USFinNexus',
+    description: 'Is refinancing worth it in 2026? Calculate your break-even month, monthly savings, and lifetime interest reduction. Includes when NOT to refinance and current rate guidance.',
+    keywords: [
+        'should I refinance 2026', 'refinance break even calculator', 'is refinancing worth it 2026',
+        'mortgage refinance 2026', 'when to refinance your mortgage', 'refinance savings calculator',
+        'refinance break even point', 'lower mortgage payment 2026', 'cash out refinance 2026',
+        'rate and term refinance', 'refinance vs stay in house', 'current refinance rates 2026',
+    ],
+    alternates: { canonical: 'https://usfinnexus.com/blog/should-i-refinance-2026' },
+    openGraph: { type: 'article', title: 'Should You Refinance in 2026? Break-Even Guide | USFinNexus', description: 'Break-even calculator, monthly savings, and the complete guide to whether refinancing makes sense at current 2026 rates.', url: 'https://usfinnexus.com/blog/should-i-refinance-2026', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Should I Refinance 2026 — USFinNexus' }] },
+    twitter: { card: 'summary_large_image', title: 'Should You Refinance in 2026? Break-Even Guide | USFinNexus', description: 'Calculate your break-even month and monthly savings before refinancing at 2026 rates.', images: ['https://usfinnexus.com/icon-512.png'] },
 };
 
 export default function BlogPost() {
     return (
         <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: 'What is the break-even point for refinancing?', acceptedAnswer: { '@type': 'Answer', text: 'The refinance break-even point is calculated by dividing total closing costs by your monthly payment savings. Example: $6,000 in closing costs ÷ $200 monthly savings = 30 months (2.5 years) to break even. If you plan to stay in the home longer than 30 months, refinancing makes financial sense.' } },
+    { '@type': 'Question', name: 'How much does refinancing cost in closing costs?', acceptedAnswer: { '@type': 'Answer', text: 'Refinancing typically costs 2%–5% of the loan amount in closing costs, including origination fees, appraisal ($400–$700), title insurance, recording fees, and prepaid items. On a $350,000 refinance, expect $7,000–$17,500 in total closing costs. Some lenders offer no-closing-cost refinances by rolling fees into the rate.' } },
+    { '@type': 'Question', name: 'When does refinancing NOT make sense in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Refinancing is generally not worth it when: (1) Your new rate is less than 0.75%–1% lower than your current rate; (2) You plan to move within 2–3 years (before the break-even point); (3) You are more than 15 years into a 30-year loan (the interest-heavy years are behind you); (4) You would extend your payoff date significantly by starting a new 30-year term.' } },
+] }) }} />
         <ArticleSchema
             title="Should You Refinance in 2026? Calculator + Break-Even Guide"
             description="Use our break-even analysis to determine if refinancing your mortgage in 2026 makes financial sense. Free calculator included."

@@ -10,13 +10,33 @@ import ArticleSchema from '@/components/ArticleSchema';
 export const metadata: Metadata = {
     title: 'How Global Conflicts Are Impacting US Real Estate in 2026 | USFinNexus',
     description: 'Think a war across the globe doesn\'t affect your local housing market? Think again. Here is how supply chains and foreign capital alter US real estate.',
+    keywords: [
+        'global conflict real estate impact',
+        'how war affects housing market',
+        'geopolitical risk real estate 2026',
+        'housing market during war',
+        'real estate safe haven',
+        'inflation real estate hedge',
+        'housing prices war impact',
+        'real estate investing geopolitical risk',
+        'property values conflict zones',
+        'US housing market geopolitical',
+        'real estate vs inflation 2026',
+        'foreign buyer real estate US',
+    ],
     openGraph: {
         title: 'How Global Conflicts Impact US Real Estate in 2026',
         description: 'From surging material costs to the influx of foreign safe-haven capital, explore the hidden links between global war and local housing.',
         url: 'https://usfinnexus.com/blog/global-conflict-real-estate-impact-2026',
         type: 'article',
         siteName: 'USFinNexus',
-        images: [{ url: 'https://usfinnexus.com/api/images/global_conflict_real_estate', width: 1200, height: 630, alt: 'Global Conflict Real Estate Impact' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Global Conflict Real Estate Impact 2026 – USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'How Global Conflicts Are Impacting US Real Estate in 2026',
+        description: 'From surging material costs to the influx of foreign safe-haven capital, explore the hidden links between global war and local housing.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
     alternates: {
         canonical: 'https://usfinnexus.com/blog/global-conflict-real-estate-impact-2026',
@@ -26,6 +46,44 @@ export const metadata: Metadata = {
 export default function GlobalConflictRealEstateBlog() {
     return (
         <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+                {
+                    '@type': 'Question',
+                    name: 'How does global conflict affect the US real estate market?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Global conflict affects the US real estate market through three main channels: supply chain disruptions that raise building material costs (lumber, steel, copper, semiconductors), "safe haven" capital flight where wealthy foreign investors park money in US property driving up prices in luxury markets, and interest rate paradoxes where short-term Treasury demand can initially push mortgage rates down before sustained conflict-driven inflation forces the Fed to raise rates. The net effect tends to be higher home prices over the medium term.',
+                    },
+                },
+                {
+                    '@type': 'Question',
+                    name: 'Is real estate a safe haven during geopolitical crises?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'US real estate is widely considered one of the premier safe-haven assets during geopolitical crises. Unlike stocks or bonds that can lose value rapidly, real estate provides a tangible, income-generating asset whose value is underpinned by housing demand. Historically, US home prices have appreciated during and after major global conflicts. The key caveat is that liquidity is limited—you cannot sell a property overnight like a stock—making it a better store of value than a crisis hedge for most individual investors.',
+                    },
+                },
+                {
+                    '@type': 'Question',
+                    name: 'Do housing prices rise or fall during periods of conflict?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'In the United States, housing prices have historically risen during periods of international conflict. The primary drivers are supply chain disruptions that increase the cost of new construction (reducing new supply), foreign capital inflows seeking a safe haven, and inflation that increases the nominal value of hard assets like real estate. However, if a conflict triggers a severe domestic recession, local job losses can temporarily depress prices in affected metropolitan areas.',
+                    },
+                },
+                {
+                    '@type': 'Question',
+                    name: 'How does foreign buyer activity change during global conflicts?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'During global conflicts, foreign buyer activity in US real estate typically increases as wealthy individuals and institutional investors from affected or proximate regions seek to preserve wealth in stable assets. Cities like Miami, New York, and Los Angeles historically see the largest influxes. This cash-heavy demand—often all-cash purchases at or above asking price—disproportionately impacts luxury and upper-mid-tier markets, which can eventually cascade down to more affordable housing segments as sellers at higher price points trade up.',
+                    },
+                },
+            ],
+        }) }} />
         <ArticleSchema
             title="How Global Conflicts Are Impacting US Real Estate in 2026"
             description="Think a war across the globe doesn't affect your local housing market? Think again. Here is how supply chains and foreign capital alter US real estate."
@@ -61,7 +119,7 @@ export default function GlobalConflictRealEstateBlog() {
 
             <div className="prose max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-lg font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    When a crisis erupts across the globe, it's easy to assume your local suburban housing market is immune. But real estate is inherently tied to the global economy. In 2026, international conflicts are quietly shaping everything from the cost of your kitchen remodel to the mortgage rate you qualify for.
+                    When a crisis erupts across the globe, it&apos;s easy to assume your local suburban housing market is immune. But real estate is inherently tied to the global economy. In 2026, international conflicts are quietly shaping everything from the cost of your kitchen remodel to the mortgage rate you qualify for.
                 </p>
 
                 <p className="mb-4">
@@ -84,7 +142,7 @@ export default function GlobalConflictRealEstateBlog() {
                     <div className="flex gap-4">
                         <DollarSign className="w-6 h-6 shrink-0 mt-1" style={{ color: '#FF3B8B' }} />
                         <div>
-                            <h3 className="font-bold mb-1 text-base">2. The "Safe Haven" Capital Flight</h3>
+                            <h3 className="font-bold mb-1 text-base">2. The &quot;Safe Haven&quot; Capital Flight</h3>
                             <p className="text-sm m-0">
                                 When international markets destabilize, wealthy foreign investors look for the safest place to park their cash. Historically, there is no safer asset than US Real Estate. We see massive influxes of foreign cash buying up luxury properties in major cities (like New York, Miami, and Los Angeles). This cash influx artificially inflates property values at the top of the market, which eventually cascades down to middle-market housing.
                             </p>
@@ -97,7 +155,7 @@ export default function GlobalConflictRealEstateBlog() {
                     You might expect that war causes interest rates to skyrocket. Paradoxically, the opposite often happens in the short term.
                 </p>
                 <p className="mb-4">
-                    When conflict creates global panic, investors dump risky assets (like stocks) and buy safe assets (like US Treasury Bonds). When massive demand hits the bond market, bond yields drop. Since US mortgage rates closely track the 10-Year Treasury Yield, mortgage rates can actually <em>fall</em> sharply during a geopolitical crisis. 
+                    When conflict creates global panic, investors dump risky assets (like stocks) and buy safe assets (like US Treasury Bonds). When massive demand hits the bond market, bond yields drop. Since US mortgage rates closely track the 10-Year Treasury Yield, mortgage rates can actually <em>fall</em> sharply during a geopolitical crisis.
                 </p>
                 <p className="mb-8">
                     However, if the conflict drags on and causes massive supply chain disruptions (leading to inflation), the Federal Reserve is eventually forced to step in and raise base rates to cool the economy, pushing mortgage rates back up in the long run.

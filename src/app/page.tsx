@@ -15,9 +15,30 @@ import {
 
 export const metadata: Metadata = {
     title: 'Free Mortgage & Finance Calculators 2026 | USFinNexus',
-    description:
-        'Free mortgage, affordability, refinance, auto & personal loan calculators. Instant PDF + CSV downloads — no signup, no email, no lead-gen spam. Built for Americans.',
+    description: 'Free mortgage, affordability, refinance, auto & personal loan calculators. Instant PDF + CSV downloads — no signup, no email, no lead-gen spam. Built for Americans.',
+    keywords: [
+        'free mortgage calculator', 'mortgage calculator 2026', 'home affordability calculator',
+        'refinance calculator', 'DTI calculator', 'amortization schedule calculator',
+        'free financial calculators', 'PITI calculator', 'mortgage calculator with PDF',
+        'no signup mortgage calculator', 'CFPB mortgage calculator', 'FHA loan calculator',
+        'VA loan calculator', 'debt payoff calculator', 'retirement calculator',
+    ],
     alternates: { canonical: 'https://usfinnexus.com' },
+    openGraph: {
+        type: 'website',
+        locale: 'en_US',
+        url: 'https://usfinnexus.com',
+        siteName: 'USFinNexus',
+        title: 'Free Mortgage & Finance Calculators 2026 | USFinNexus',
+        description: '28+ free CFPB-compliant mortgage and finance calculators. Instant PDF + CSV reports. No signup, no email, no lead-gen. Built for Americans.',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus — Free Mortgage & Finance Calculators for Americans' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Free Mortgage & Finance Calculators 2026 | USFinNexus',
+        description: '28+ free CFPB-compliant calculators. Instant PDF reports. Zero data collection. No signup ever.',
+        images: ['https://usfinnexus.com/icon-512.png'],
+    },
 };
 
 /* ═══ DATA ═══ */
@@ -103,10 +124,124 @@ const DIFFS = [
     { icon: Zap, h: '2026 Limits Updated', p: '$832,750 conforming · $541,287 FHA floor · Updated monthly.', c: 'di-amb' },
 ];
 
+const HOME_FAQS = [
+    {
+        question: 'Are all USFinNexus calculators really free?',
+        answer: 'Yes — every calculator on USFinNexus is 100% free, forever. There are no premium tiers, no email walls, and no lead-gen forms. PDF and CSV exports are also always free. The site is supported by non-intrusive display ads, not lender referral commissions.',
+    },
+    {
+        question: 'Does USFinNexus sell my data to mortgage lenders?',
+        answer: 'No. All calculations run entirely in your browser (client-side). Nothing you type into any calculator is sent to our servers. We do not collect, store, or sell any personally identifiable information. Zero bytes of your financial data leave your device.',
+    },
+    {
+        question: 'What is the 2026 conforming loan limit?',
+        answer: 'The 2026 FHFA conforming loan limit is $832,750 for most U.S. counties. In high-cost areas (parts of California, New York, Hawaii, and other high-cost metros), the ceiling rises to $1,249,125. Loans above these limits are classified as jumbo loans and carry different qualification requirements.',
+    },
+    {
+        question: 'How accurate are the mortgage calculators?',
+        answer: 'All formulas follow CFPB (Consumer Financial Protection Bureau) guidelines and standard U.S. amortization math. Results are accurate estimates based on the inputs you provide. Actual lender quotes will vary based on your credit score, income, property appraisal, and lender-specific fees. Always confirm final numbers with a licensed mortgage professional.',
+    },
+    {
+        question: 'What is a good debt-to-income ratio for buying a home?',
+        answer: 'Conventional lenders generally require a back-end DTI (total monthly debts ÷ gross income) of 43% or lower. The CFPB\'s Qualified Mortgage rule caps back-end DTI at 43%. For the best rates, aim for a front-end DTI (housing costs only) under 28% and a back-end DTI under 36%.',
+    },
+    {
+        question: 'Can I download my mortgage calculation results?',
+        answer: 'Yes. Every calculator on USFinNexus includes a free one-click PDF export and CSV download. The PDF includes your full amortization schedule, monthly payment breakdown (principal, interest, taxes, insurance, PMI), and total cost summary — generated entirely in your browser with no server contact.',
+    },
+];
+
 /* ═══ PAGE ═══ */
 export default function HomePage() {
     return (
         <div className="neo-root">
+            {/* FAQPage JSON-LD for rich snippets */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    '@context': 'https://schema.org',
+                    '@type': 'FAQPage',
+                    mainEntity: HOME_FAQS.map(faq => ({
+                        '@type': 'Question',
+                        name: faq.question,
+                        acceptedAnswer: {
+                            '@type': 'Answer',
+                            text: faq.answer,
+                        },
+                    })),
+                }) }}
+            />
+            {/* ItemList JSON-LD — calculator collection (helps Google understand tool breadth) */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    '@context': 'https://schema.org',
+                    '@type': 'ItemList',
+                    name: 'Free Mortgage & Finance Calculators',
+                    description: '28+ free, CFPB-compliant mortgage and finance calculators for Americans.',
+                    url: 'https://usfinnexus.com',
+                    numberOfItems: 28,
+                    itemListElement: [
+                        { '@type': 'ListItem', position: 1, name: 'Mortgage Calculator', url: 'https://usfinnexus.com/calculators/mortgage' },
+                        { '@type': 'ListItem', position: 2, name: 'Home Affordability Calculator', url: 'https://usfinnexus.com/calculators/affordability' },
+                        { '@type': 'ListItem', position: 3, name: 'Refinance Calculator', url: 'https://usfinnexus.com/calculators/refinance' },
+                        { '@type': 'ListItem', position: 4, name: 'Debt-to-Income (DTI) Calculator', url: 'https://usfinnexus.com/calculators/dti' },
+                        { '@type': 'ListItem', position: 5, name: 'Amortization Schedule Calculator', url: 'https://usfinnexus.com/calculators/amortization' },
+                        { '@type': 'ListItem', position: 6, name: 'Rent vs. Buy Calculator', url: 'https://usfinnexus.com/calculators/rent-vs-buy' },
+                        { '@type': 'ListItem', position: 7, name: 'FHA Loan Calculator', url: 'https://usfinnexus.com/calculators/fha' },
+                        { '@type': 'ListItem', position: 8, name: 'VA Loan Calculator', url: 'https://usfinnexus.com/calculators/va' },
+                        { '@type': 'ListItem', position: 9, name: 'Closing Costs Calculator', url: 'https://usfinnexus.com/calculators/closing-costs' },
+                        { '@type': 'ListItem', position: 10, name: 'Auto Loan Calculator', url: 'https://usfinnexus.com/calculators/auto-loan' },
+                        { '@type': 'ListItem', position: 11, name: 'Debt Payoff Planner', url: 'https://usfinnexus.com/calculators/debt-payoff' },
+                        { '@type': 'ListItem', position: 12, name: 'Retirement Planner', url: 'https://usfinnexus.com/calculators/retirement' },
+                        { '@type': 'ListItem', position: 13, name: 'Income Tax Calculator 2026', url: 'https://usfinnexus.com/calculators/income-tax' },
+                        { '@type': 'ListItem', position: 14, name: 'HELOC Calculator', url: 'https://usfinnexus.com/calculators/heloc' },
+                        { '@type': 'ListItem', position: 15, name: 'Down Payment Savings Calculator', url: 'https://usfinnexus.com/calculators/down-payment' },
+                    ],
+                }) }}
+            />
+            {/* HowTo JSON-LD for How It Works steps */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    '@context': 'https://schema.org',
+                    '@type': 'HowTo',
+                    name: 'How to Use USFinNexus Financial Calculators',
+                    description: 'Get a professional PDF mortgage or finance calculation in four simple steps — no signup, no email required.',
+                    totalTime: 'PT1M',
+                    tool: [{ '@type': 'HowToTool', name: 'Web browser' }],
+                    step: [
+                        {
+                            '@type': 'HowToStep',
+                            position: 1,
+                            name: 'Pick a Calculator',
+                            text: 'Choose from 28+ CFPB-compliant mortgage and finance calculators covering home buying, refinancing, debt payoff, retirement, and more.',
+                            url: 'https://usfinnexus.com/#tools',
+                        },
+                        {
+                            '@type': 'HowToStep',
+                            position: 2,
+                            name: 'Enter Your Numbers',
+                            text: 'Fill in simple inputs like home price, down payment, and interest rate. No signup or email address required — ever.',
+                            url: 'https://usfinnexus.com/calculators/mortgage',
+                        },
+                        {
+                            '@type': 'HowToStep',
+                            position: 3,
+                            name: 'Get Instant Results',
+                            text: 'See a full breakdown of your mortgage payment with charts and amortization tables, calculated instantly in your browser.',
+                            url: 'https://usfinnexus.com/calculators/mortgage',
+                        },
+                        {
+                            '@type': 'HowToStep',
+                            position: 4,
+                            name: 'Download Free PDF Report',
+                            text: 'Click the PDF button to download a professional report with your full amortization schedule. Generated in your browser — zero server contact.',
+                            url: 'https://usfinnexus.com/calculators/mortgage',
+                        },
+                    ],
+                }) }}
+            />
 
             {/* ═══ ANNOUNCEMENT BAR ═══ */}
             <div className="ph-announce">
@@ -335,6 +470,51 @@ export default function HomePage() {
                         </Link>
                         <Link href="/guides" className="neo-btn-alt">Financial Guides</Link>
                     </div>
+                </div>
+            </section>
+
+            {/* ═══ FAQ (LIGHT ZONE — rich snippets) ═══ */}
+            <section className="neo-light-zone" aria-labelledby="faq-heading">
+                <div className="neo-container" style={{ maxWidth: '800px', paddingTop: '3.5rem', paddingBottom: '3.5rem' }}>
+                    <div className="neo-sec-tag"><span className="neo-sec-dot" /> FAQ</div>
+                    <h2 className="neo-sec-h2" id="faq-heading">Frequently Asked <em>Questions</em></h2>
+                    <p className="neo-sec-p">Quick answers about our free mortgage and finance calculators.</p>
+                    <div style={{ marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '0' }}>
+                        {HOME_FAQS.map((faq, i) => (
+                            <details key={i} style={{
+                                borderTop: i === 0 ? '1px solid var(--color-border)' : undefined,
+                                borderBottom: '1px solid var(--color-border)',
+                            }}>
+                                <summary style={{
+                                    padding: '1rem 0',
+                                    fontWeight: 700,
+                                    fontSize: '0.9375rem',
+                                    color: 'var(--color-text)',
+                                    cursor: 'pointer',
+                                    listStyle: 'none',
+                                    display: 'flex',
+                                    justifyContent: 'space-between',
+                                    alignItems: 'center',
+                                    gap: '1rem',
+                                }}>
+                                    {faq.question}
+                                    <ChevronRight size={16} style={{ flexShrink: 0, color: 'var(--color-text-muted)', transform: 'rotate(90deg)' }} />
+                                </summary>
+                                <p style={{
+                                    padding: '0 0 1rem',
+                                    fontSize: '0.875rem',
+                                    lineHeight: '1.7',
+                                    color: 'var(--color-text-muted)',
+                                    margin: 0,
+                                }}>
+                                    {faq.answer}
+                                </p>
+                            </details>
+                        ))}
+                    </div>
+                    <p style={{ marginTop: '1.5rem', fontSize: '0.8125rem', color: 'var(--color-text-muted)' }}>
+                        Have more questions? Visit our <Link href="/methodology" style={{ color: '#0da6f2', fontWeight: 600 }}>Methodology page</Link> or <Link href="/contact" style={{ color: '#0da6f2', fontWeight: 600 }}>Contact us</Link>.
+                    </p>
                 </div>
             </section>
         </div>

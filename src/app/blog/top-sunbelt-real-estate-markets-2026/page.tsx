@@ -10,13 +10,20 @@ import ArticleSchema from '@/components/ArticleSchema';
 export const metadata: Metadata = {
     title: 'Top 5 Sunbelt Cities for Real Estate Investment in 2026 | USFinNexus',
     description: 'Looking to invest in real estate this year? We analyze the top 5 emerging Sunbelt cities offering high rental yields, job growth, and affordability in 2026.',
+    keywords: ['top sunbelt real estate markets 2026', 'best cities to buy rental property 2026', 'sunbelt housing market', 'real estate investment 2026', 'high rental yield cities', 'population growth cities 2026', 'phoenix real estate investment', 'austin housing market 2026', 'florida real estate investment', 'emerging real estate markets', 'best places to buy investment property', 'sunbelt migration trends'],
     openGraph: {
         title: 'Top 5 Sunbelt Cities for Real Estate Investment in 2026',
         description: 'Discover the hottest real estate markets in the Sunbelt. Learn where smart investors are buying in 2026 for the best ROI and population growth.',
         url: 'https://usfinnexus.com/blog/top-sunbelt-real-estate-markets-2026',
         type: 'article',
         siteName: 'USFinNexus',
-        images: [{ url: 'https://usfinnexus.com/api/images/sunbelt_real_estate', width: 1200, height: 630, alt: 'Sunbelt Real Estate Investment' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Top Sunbelt Real Estate Markets 2026' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Top 5 Sunbelt Cities for Real Estate Investment in 2026',
+        description: 'Discover the hottest real estate markets in the Sunbelt. Learn where smart investors are buying in 2026 for the best ROI and population growth.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
     alternates: {
         canonical: 'https://usfinnexus.com/blog/top-sunbelt-real-estate-markets-2026',
@@ -26,6 +33,44 @@ export const metadata: Metadata = {
 export default function SunbeltRealEstateBlog() {
     return (
         <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+                {
+                    '@type': 'Question',
+                    name: 'What are the best Sunbelt cities to invest in real estate in 2026?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'The top Sunbelt cities for real estate investment in 2026 include Huntsville, AL, Greenville, SC, Northwest Arkansas, Winston-Salem, NC, and Tucson, AZ. These markets offer strong job growth, inbound population migration, and relatively affordable home prices that support positive cash flow even in a high-mortgage-rate environment.'
+                    }
+                },
+                {
+                    '@type': 'Question',
+                    name: 'Why is the Sunbelt a good place for real estate investment?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'The Sunbelt benefits from sustained population migration driven by lower costs of living, favorable tax climates, and growing job markets in tech, healthcare, and manufacturing. This consistent inflow of residents creates persistent rental demand and supports property value appreciation over the long term.'
+                    }
+                },
+                {
+                    '@type': 'Question',
+                    name: 'What rental yields can I expect in Sunbelt cities?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Rental yields in emerging Sunbelt markets typically range from 6% to 10% gross yield, depending on the city and property type. Secondary markets like Huntsville and Winston-Salem often offer higher yields than gateway cities like Miami or Phoenix, because acquisition prices are lower relative to local rent levels.'
+                    }
+                },
+                {
+                    '@type': 'Question',
+                    name: 'How does population growth affect real estate investment returns?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Population growth is one of the strongest predictors of long-term real estate appreciation. When more people move into an area than housing supply can accommodate, vacancy rates fall, rents rise, and property values increase. Investors who enter high-growth markets early capture both cash flow and equity gains simultaneously.'
+                    }
+                }
+            ]
+        }) }} />
         <ArticleSchema
             title="Top 5 Sunbelt Cities for Real Estate Investment in 2026"
             description="Looking to invest in real estate this year? We analyze the top 5 emerging Sunbelt cities offering high rental yields, job growth, and affordability in 2026."

@@ -94,32 +94,63 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <link rel="manifest" href="/manifest.json" />
                 <link rel="dns-prefetch" href="//pagead2.googlesyndication.com" />
                 <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
-                {/* Organization JSON-LD */}
+                {/* Organization JSON-LD — E-E-A-T brand entity */}
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify({
                         '@context': 'https://schema.org',
                         '@type': 'Organization',
+                        '@id': 'https://usfinnexus.com/#organization',
                         name: 'USFinNexus',
+                        alternateName: 'US Financial Nexus',
                         url: 'https://usfinnexus.com',
-                        logo: 'https://usfinnexus.com/icon-512.png',
-                        description: 'Free mortgage, affordability, refinance and finance calculators. No signup, no spam. Built for Americans.',
-                        sameAs: ['https://usfinnexus.com'],
+                        logo: {
+                            '@type': 'ImageObject',
+                            url: 'https://usfinnexus.com/icon-512.png',
+                            width: 512,
+                            height: 512,
+                        },
+                        description: 'USFinNexus provides free, CFPB-compliant mortgage, home affordability, refinance, and personal finance calculators for Americans. No signup, no data collection, no lender referrals.',
+                        foundingDate: '2025',
+                        inLanguage: 'en-US',
+                        areaServed: {
+                            '@type': 'Country',
+                            name: 'United States',
+                        },
+                        knowsAbout: [
+                            'Mortgage calculations',
+                            'Home affordability',
+                            'Refinance break-even analysis',
+                            'CFPB mortgage guidelines',
+                            'Personal finance',
+                            'Debt payoff strategies',
+                            'Retirement planning',
+                            'Income tax estimation',
+                        ],
+                        sameAs: [
+                            'https://usfinnexus.com',
+                            'https://usfinnexus.com/about',
+                        ],
                         contactPoint: {
                             '@type': 'ContactPoint',
                             contactType: 'customer support',
                             url: 'https://usfinnexus.com/contact',
+                            availableLanguage: 'English',
                         },
                     }) }}
                 />
-                {/* WebSite JSON-LD with SearchAction */}
+                {/* WebSite JSON-LD with SearchAction (sitelinks searchbox) */}
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify({
                         '@context': 'https://schema.org',
                         '@type': 'WebSite',
+                        '@id': 'https://usfinnexus.com/#website',
                         name: 'USFinNexus',
                         url: 'https://usfinnexus.com',
+                        description: 'Free mortgage and finance calculators for Americans — CFPB-compliant, no signup required.',
+                        publisher: { '@id': 'https://usfinnexus.com/#organization' },
+                        inLanguage: 'en-US',
                         potentialAction: {
                             '@type': 'SearchAction',
                             target: { '@type': 'EntryPoint', urlTemplate: 'https://usfinnexus.com/blog?q={search_term_string}' },

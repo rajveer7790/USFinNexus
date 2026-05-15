@@ -4,9 +4,21 @@ import { Shield } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-    title: 'Disclaimer | USFinNexus',
-    description: 'Important disclaimer for all USFinNexus.com calculator results.',
+    title: 'Disclaimer | USFinNexus — Calculator Results Are Estimates Only',
+    description: 'Important disclaimer: USFinNexus calculator results are estimates for educational purposes only and do not constitute financial, mortgage, tax, or legal advice.',
+    keywords: ['USFinNexus disclaimer', 'mortgage calculator disclaimer', 'financial calculator disclaimer', 'not financial advice'],
     alternates: { canonical: 'https://usfinnexus.com/disclaimer' },
+    openGraph: {
+        type: 'website',
+        url: 'https://usfinnexus.com/disclaimer',
+        title: 'Disclaimer | USFinNexus',
+        description: 'Calculator results are estimates only. Not financial, mortgage, tax, or legal advice.',
+    },
+    twitter: {
+        card: 'summary',
+        title: 'Disclaimer | USFinNexus',
+        description: 'Calculator results are estimates only — not financial advice.',
+    },
 };
 
 export default function DisclaimerPage() {

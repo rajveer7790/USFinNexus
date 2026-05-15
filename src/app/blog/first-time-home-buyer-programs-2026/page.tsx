@@ -8,30 +8,27 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'First-Time Home Buyer Programs 2026: Down Payment Assistance, Grants & Loans | USFinNexus',
-    description: 'Over 2,600 down payment assistance programs exist in the US. Learn about FHA, VA, USDA loans, state grants, forgivable loans, and how to qualify as a first-time buyer in 2026.',
-    openGraph: {
-        title: 'First-Time Home Buyer Programs & Down Payment Assistance in 2026',
-        description: 'Complete guide to FHA, VA, USDA loans, state grants, and over 2,600 down payment assistance programs available to first-time buyers in 2026.',
-        url: 'https://usfinnexus.com/blog/first-time-home-buyer-programs-2026',
-        type: 'article',
-        siteName: 'USFinNexus',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'First time home buyer programs 2026' }],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'First-Time Buyer Programs 2026: Every Grant, Loan & Assistance Available',
-        description: '2,600+ down payment assistance programs exist nationwide. FHA (3.5% down), VA (0% down), USDA (0% down), plus state grants.',
-        images: ['https://usfinnexus.com/icon-512.png'],
-    },
-    alternates: {
-        canonical: 'https://usfinnexus.com/blog/first-time-home-buyer-programs-2026',
-    },
+    title: 'First-Time Home Buyer Programs 2026: Every Grant, Loan & Down Payment Assistance | USFinNexus',
+    description: 'Complete guide to 2,600+ first-time homebuyer programs in 2026. FHA loans, VA zero-down, USDA rural, state grants, and forgivable DPA loans — qualification requirements and how to apply.',
+    keywords: [
+        'first time home buyer programs 2026', 'down payment assistance 2026', 'first time buyer grants',
+        'FHA loan first time buyer', 'zero down payment mortgage', 'USDA loan requirements',
+        'state homebuyer assistance programs', 'forgivable down payment loan', 'HUD homebuyer programs',
+        'first time homebuyer tax credit 2026', 'low income home buyer programs', 'first home purchase assistance',
+    ],
+    alternates: { canonical: 'https://usfinnexus.com/blog/first-time-home-buyer-programs-2026' },
+    openGraph: { type: 'article', title: 'First-Time Home Buyer Programs 2026 | Every Grant & Loan', description: '2,600+ down payment assistance programs, FHA, VA, USDA, and state grants for first-time buyers in 2026.', url: 'https://usfinnexus.com/blog/first-time-home-buyer-programs-2026', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'First Time Homebuyer Programs 2026' }] },
+    twitter: { card: 'summary_large_image', title: 'First-Time Homebuyer Programs 2026 | Grants & Down Payment Help', description: 'Every grant, loan, and assistance program for first-time buyers in 2026. Federal, state, and local options.', images: ['https://usfinnexus.com/icon-512.png'] },
 };
 
 export default function FirstTimeBuyerProgramsBlog() {
     return (
         <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: 'What is the minimum down payment for a first-time home buyer in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'The minimum down payments in 2026 are: FHA loan — 3.5% (with 580+ credit score) or 10% (with 500–579); Conventional 97 loan — 3%; VA loan — 0% (for eligible veterans); USDA loan — 0% (rural areas, income limits apply). With down payment assistance programs, many buyers qualify for $0 out of pocket.' } },
+    { '@type': 'Question', name: 'Who qualifies as a first-time home buyer?', acceptedAnswer: { '@type': 'Answer', text: 'HUD defines a first-time home buyer as someone who has not owned a primary residence in the past 3 years. This means even if you owned a home previously, you may qualify again after a 3-year gap. Some programs also apply to displaced homemakers and single parents who previously owned with a spouse.' } },
+    { '@type': 'Question', name: 'How do I find down payment assistance programs in my state?', acceptedAnswer: { '@type': 'Answer', text: 'The best resources are: HUD.gov/housingcounseling (find approved counselors), your state Housing Finance Agency (HFA) website, and Down Payment Resource (downpaymentresource.com). You can also ask any FHA-approved lender — they are required to inform you of available DPA programs.' } },
+] }) }} />
         <ArticleSchema
             title="First-Time Home Buyer Programs 2026: Down Payment Assistance, Grants & Loans"
             description="Over 2,600 down payment assistance programs exist in the US. Learn about FHA, VA, USDA loans, state grants, forgivable loans, and how to qualify in 2026."

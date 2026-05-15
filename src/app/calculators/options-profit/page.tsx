@@ -14,15 +14,29 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Options Profit Calculator & Payoff Visualizer | USFinNexus',
-    description: 'Visualize your options trades before you make them. Calculate max profit, max loss, and break-even points for Calls and Puts.',
+    title: 'Options Profit & Loss Calculator — Call & Put Payoff Visualizer | USFinNexus',
+    description: 'Visualize your options trade before placing it. Calculate max profit, max loss, and break-even prices for calls, puts, and spreads. Free options profit calculator.',
+    keywords: [
+        'options profit calculator', 'options payoff diagram', 'call option calculator',
+        'put option calculator', 'options break even calculator',
+        'options profit loss visualizer', 'max profit options calculator',
+        'options trading calculator', 'stock options calculator',
+        'options strategy calculator', 'options P&L calculator',
+        'covered call calculator', 'options spread calculator',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/calculators/options-profit' },
     openGraph: {
         type: 'website',
-        title: 'Options Trading Profit & Loss Calculator',
-        description: 'Free tool to visualize options strategies. Calculate returns for Long Calls, Short Calls, Long Puts, and Short Puts.',
+        title: 'Options Profit & Loss Calculator — Payoff Visualizer | USFinNexus',
+        description: 'Visualize max profit, max loss, and break-even for calls and puts before you trade. Free options calculator.',
         url: 'https://usfinnexus.com/calculators/options-profit',
-        images: [{ url: 'https://usfinnexus.com/images/calculators-hero.png', width: 1200, height: 630, alt: 'Options Profit Calculator — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Options Profit Calculator — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Options Profit & Loss Calculator | Payoff Visualizer | USFinNexus',
+        description: 'Know your max profit, max loss, and break-even before you trade. Free options P&L visualizer.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

@@ -24,6 +24,12 @@ export const metadata: Metadata = {
         images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'ARM Adjustable Rate Mortgage Calculator 2026 — USFinNexus' }],
     },
     alternates: { canonical: 'https://usfinnexus.com/calculators/arm' },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'ARM Calculator 2026 — Adjustable Rate Mortgage Worst-Case | USFinNexus',
+        description: 'See your worst-case ARM payment, fully-indexed rate, and rate cap scenarios for 5/1, 7/1 ARMs. Free calculator.',
+        images: ['https://usfinnexus.com/icon-512.png'],
+    },
 };
 
 export default function ArmCalculatorPage() {

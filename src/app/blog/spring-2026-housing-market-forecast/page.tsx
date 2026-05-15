@@ -8,30 +8,27 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Spring 2026 Housing Market Forecast: Rates, Prices & What Buyers Should Expect | USFinNexus',
-    description: 'Spring 2026 housing market forecast with mortgage rate predictions, home price trends, inventory outlook, and expert-backed advice for buyers and sellers navigating this market.',
-    openGraph: {
-        title: 'Spring 2026 Housing Market Forecast: What Buyers & Sellers Need to Know',
-        description: 'Mortgage rates stuck at 6.45%, inventory slowly rising, tariff pressure on new builds. Full spring 2026 market breakdown with data-driven advice.',
-        url: 'https://usfinnexus.com/blog/spring-2026-housing-market-forecast',
-        type: 'article',
-        siteName: 'USFinNexus',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Spring 2026 housing market forecast' }],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Spring 2026 Housing Market: Rates, Prices & Forecast',
-        description: 'Inventory up 12%, rates at 6.45%, new construction slowing. Full spring 2026 outlook inside.',
-        images: ['https://usfinnexus.com/icon-512.png'],
-    },
-    alternates: {
-        canonical: 'https://usfinnexus.com/blog/spring-2026-housing-market-forecast',
-    },
+    title: 'Spring 2026 Housing Market Forecast: Rates, Prices & Buyer Strategy | USFinNexus',
+    description: 'Spring 2026 housing market analysis: mortgage rate outlook, home price trends, inventory data by region, and expert strategy for buyers and sellers navigating this market.',
+    keywords: [
+        'housing market forecast 2026', 'spring 2026 housing market', 'mortgage rate forecast 2026',
+        'home prices spring 2026', 'housing inventory 2026', 'should I buy a house 2026',
+        'real estate market prediction 2026', 'housing market outlook 2026', 'home values 2026',
+        'buyer strategy 2026 housing', 'when will housing market cool', 'Fed rate impact housing 2026',
+    ],
+    alternates: { canonical: 'https://usfinnexus.com/blog/spring-2026-housing-market-forecast' },
+    openGraph: { type: 'article', title: 'Spring 2026 Housing Market Forecast | USFinNexus', description: 'Mortgage rates, home prices, inventory, and the best buyer/seller strategy for spring 2026.', url: 'https://usfinnexus.com/blog/spring-2026-housing-market-forecast', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Spring 2026 Housing Market Forecast' }] },
+    twitter: { card: 'summary_large_image', title: 'Spring 2026 Housing Market Forecast | USFinNexus', description: 'Mortgage rates, home prices, and the best strategy for buyers and sellers this spring.', images: ['https://usfinnexus.com/icon-512.png'] },
 };
 
 export default function SpringHousingMarketBlog() {
     return (
         <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: 'Will home prices drop in spring 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Most market analysts do not expect significant national home price declines in spring 2026. Limited inventory, continued millennial demand, and sticky inflation supporting existing homeowners suggest prices will remain elevated or see modest 0%–3% annual appreciation nationally. Regional variations are significant — some Sun Belt markets are seeing softer prices while Northeast and Pacific Coast metros remain tight.' } },
+    { '@type': 'Question', name: 'Where are mortgage rates headed in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'As of spring 2026, 30-year fixed mortgage rates are approximately 6.37% (Freddie Mac PMMS). The Federal Reserve\'s higher-for-longer stance means rates are unlikely to return to 3%–4% levels in the near term. Most forecasters project rates in the 6%–7% range through 2026, with potential easing to 5.5%–6% in 2027 if inflation continues to moderate.' } },
+    { '@type': 'Question', name: 'Is spring 2026 a good time to buy a house?', acceptedAnswer: { '@type': 'Answer', text: 'The best time to buy a house is when you are financially ready — have a stable income, 3–6 months emergency fund, reasonable DTI, and plan to stay 5+ years. Spring 2026 offers more inventory than 2024–2025 but rates remain elevated. If you can afford today\'s payment, waiting for rates to drop is speculative. Use our affordability calculator to check your current situation.' } },
+] }) }} />
         <ArticleSchema
             title="Spring 2026 Housing Market Forecast: Rates, Prices & What Buyers Should Expect"
             description="Spring 2026 housing market forecast with mortgage rate predictions, home price trends, inventory outlook, and expert-backed advice for buyers and sellers."

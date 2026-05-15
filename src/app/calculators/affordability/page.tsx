@@ -14,15 +14,28 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Home Affordability Calculator 2026 — How Much House Can I Afford?',
+    title: 'Home Affordability Calculator 2026 — How Much House Can I Afford? | USFinNexus',
     description: 'Free CFPB-compliant home affordability calculator. Know your max home price, monthly payment, front-end & back-end DTI in seconds. No signup, no spam.',
+    keywords: [
+        'home affordability calculator', 'how much house can I afford',
+        'mortgage affordability calculator', 'affordability calculator 2026',
+        'CFPB affordability', 'house affordability calculator', 'mortgage qualifying calculator',
+        'how much mortgage can I afford', 'home buying budget calculator',
+        'maximum mortgage calculator', 'income to mortgage ratio calculator',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/calculators/affordability' },
     openGraph: {
         type: 'website',
-        title: 'Home Affordability Calculator 2026 | USFinNexus',
-        description: 'Free CFPB-compliant home affordability calculator. Know your max home price, monthly payment, and DTI ratios in seconds. No signup, no spam.',
+        title: 'Home Affordability Calculator 2026 — How Much House Can I Afford?',
+        description: 'CFPB-compliant affordability calculator. Know your max home price, DTI ratios, and monthly payment instantly.',
         url: 'https://usfinnexus.com/calculators/affordability',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Home Affordability Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Home Affordability Calculator 2026 — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Home Affordability Calculator 2026 | USFinNexus',
+        description: 'How much house can you afford? Get your CFPB-compliant max home price instantly.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

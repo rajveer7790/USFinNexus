@@ -10,13 +10,20 @@ import ArticleSchema from '@/components/ArticleSchema';
 export const metadata: Metadata = {
     title: 'House Hacking in 2026: The Ultimate Guide to Living for Free | USFinNexus',
     description: 'Learn how to offset your mortgage or live for free in 2026 using house hacking strategies like duplexes, ADUs, and roommate renting.',
+    keywords: ['house hacking 2026', 'how to live for free with real estate', 'buy duplex live in one unit', 'house hacking strategies', 'ADU house hacking', 'multi-family house hacking', 'house hacking with FHA loan', 'first time homebuyer investment property', 'reduce mortgage payment with rental income', 'house hack for beginners', 'live rent free real estate', 'house hacking tax benefits'],
     openGraph: {
         title: 'House Hacking in 2026: Live for Free While Building Wealth',
         description: 'With mortgage rates where they are, house hacking is the best way for first-time buyers to enter the real estate market. Read our ultimate 2026 guide.',
         url: 'https://usfinnexus.com/blog/house-hacking-guide-2026',
         type: 'article',
         siteName: 'USFinNexus',
-        images: [{ url: 'https://usfinnexus.com/api/images/house_hacking', width: 1200, height: 630, alt: 'House Hacking Real Estate' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'House Hacking Guide 2026' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'House Hacking in 2026: Live for Free While Building Wealth',
+        description: 'With mortgage rates where they are, house hacking is the best way for first-time buyers to enter the real estate market. Read our ultimate 2026 guide.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
     alternates: {
         canonical: 'https://usfinnexus.com/blog/house-hacking-guide-2026',
@@ -26,6 +33,44 @@ export const metadata: Metadata = {
 export default function HouseHackingBlog() {
     return (
         <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+                {
+                    '@type': 'Question',
+                    name: 'What is house hacking and how does it work?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'House hacking is a real estate strategy where you purchase a property, live in one portion of it, and rent out the remaining units or rooms to generate income that offsets your mortgage and housing costs. Common approaches include buying a duplex or triplex and renting the other units, adding an ADU (accessory dwelling unit), or renting out spare bedrooms in a single-family home.'
+                    }
+                },
+                {
+                    '@type': 'Question',
+                    name: 'Can I use an FHA loan for house hacking?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Yes, FHA loans are one of the best financing tools for house hacking. The FHA allows you to purchase a property with up to 4 units with as little as 3.5% down, as long as you occupy one of the units as your primary residence. This low down payment requirement makes it much easier for first-time buyers to enter the multi-family market.'
+                    }
+                },
+                {
+                    '@type': 'Question',
+                    name: 'How much money can I save by house hacking?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'The savings from house hacking vary widely, but many investors reduce their out-of-pocket housing costs by 50% to 100%. For example, if your mortgage payment is $2,800 per month and you collect $2,000 in rent from tenants, your net housing cost drops to just $800. In strong rental markets with multi-family properties, some house hackers live completely free.'
+                    }
+                },
+                {
+                    '@type': 'Question',
+                    name: 'What are the best house hacking strategies for 2026?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'The three most effective house hacking strategies in 2026 are: buying a duplex or small multi-family property and renting the other units, purchasing or building an ADU (accessory dwelling unit) to rent separately, and renting out individual rooms in a large single-family home. With Fannie Mae now allowing 5% down on 2-4 unit properties, the multi-family duplex strategy has become especially accessible for first-time buyers.'
+                    }
+                }
+            ]
+        }) }} />
         <ArticleSchema
             title="House Hacking in 2026: The Ultimate Guide to Living for Free"
             description="Learn how to offset your mortgage or live for free in 2026 using house hacking strategies like duplexes, ADUs, and roommate renting."
@@ -80,7 +125,7 @@ export default function HouseHackingBlog() {
 
                 <h3 className="text-xl font-semibold mt-8 mb-3">1. The Classic Multi-Family (Duplex/Triplex/Quad)</h3>
                 <p className="mb-4">
-                    This is the holy grail. You buy a 2, 3, or 4-unit property, live in one unit, and rent out the others. 
+                    This is the holy grail. You buy a 2, 3, or 4-unit property, live in one unit, and rent out the others.
                 </p>
                 <ul className="list-disc pl-6 mb-6">
                     <li><strong>Pros:</strong> Maximum privacy (separate walls, kitchens, and entrances). Often completely covers the mortgage.</li>
@@ -119,7 +164,7 @@ export default function HouseHackingBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">The Reality of Being a Live-in Landlord</h2>
                 <p className="mb-4">
-                    House hacking isn't passive income; it's a part-time job. You are the one who gets the text at 2 AM when the toilet is leaking. 
+                    House hacking isn't passive income; it's a part-time job. You are the one who gets the text at 2 AM when the toilet is leaking.
                 </p>
                 <p className="mb-4">
                     Before you take the plunge, ensure you have strong boundaries. Use property management software (like Avail or Buildium) to handle rent collection and maintenance requests—even if you are living next door. Never let tenants knock on your door to pay rent or complain about a leaky faucet. Treat it like a business from Day 1.

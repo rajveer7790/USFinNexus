@@ -23,6 +23,12 @@ export const metadata: Metadata = {
         images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Interest-Only Mortgage Calculator 2026 — USFinNexus' }],
     },
     alternates: { canonical: 'https://usfinnexus.com/calculators/interest-only' },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Interest-Only Mortgage Calculator 2026 | USFinNexus',
+        description: 'Calculate interest-only payments and see exactly how much your payment jumps when full amortization kicks in.',
+        images: ['https://usfinnexus.com/icon-512.png'],
+    },
 };
 
 export default function InterestOnlyPage() {

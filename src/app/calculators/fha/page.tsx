@@ -25,6 +25,12 @@ export const metadata: Metadata = {
         images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'FHA Loan Calculator 2026 with MIP — USFinNexus' }],
     },
     alternates: { canonical: 'https://usfinnexus.com/calculators/fha' },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'FHA Loan Calculator 2026 — MIP & Payment Breakdown | USFinNexus',
+        description: 'Exact FHA payment with upfront and annual MIP. 3.5% down options. Free FHA mortgage calculator.',
+        images: ['https://usfinnexus.com/icon-512.png'],
+    },
 };
 
 export default function FhaLoanPage() {

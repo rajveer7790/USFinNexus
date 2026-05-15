@@ -25,6 +25,12 @@ export const metadata: Metadata = {
         images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'VA Loan Calculator 2026 Zero Down — USFinNexus' }],
     },
     alternates: { canonical: 'https://usfinnexus.com/calculators/va' },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'VA Loan Calculator 2026 — 0% Down VA Funding Fee | USFinNexus',
+        description: 'VA loan monthly payment with 0% down. Includes 2026 VA Funding Fee. Free VA mortgage calculator.',
+        images: ['https://usfinnexus.com/icon-512.png'],
+    },
 };
 
 export default function VaLoanPage() {

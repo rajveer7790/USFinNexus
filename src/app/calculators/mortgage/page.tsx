@@ -16,13 +16,27 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
     title: 'Free Mortgage Calculator 2026 with PDF Download | USFinNexus',
     description: 'Calculate your full PITI mortgage payment instantly — principal, interest, taxes, insurance & PMI. Free PDF & CSV download. No signup, no email required.',
+    keywords: [
+        'mortgage calculator', 'free mortgage calculator', 'mortgage payment calculator',
+        'PITI calculator', 'mortgage calculator 2026', 'monthly mortgage payment calculator',
+        'home loan calculator', 'mortgage calculator with amortization',
+        'mortgage calculator with taxes and insurance', 'PMI calculator',
+        'mortgage calculator PDF download', '30 year mortgage calculator',
+        'mortgage amortization calculator', 'CFPB mortgage calculator',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/calculators/mortgage' },
     openGraph: {
         type: 'website',
         title: 'Free Mortgage Calculator 2026 with PDF Download | USFinNexus',
         description: 'Full PITI breakdown, amortization schedule, extra payments, and instant free PDF + CSV exports. No signup needed. Updated for 2026 conforming loan limits.',
         url: 'https://usfinnexus.com/calculators/mortgage',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Free Mortgage Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Free Mortgage Calculator 2026 — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Free Mortgage Calculator 2026 with PDF Download | USFinNexus',
+        description: 'Full PITI breakdown + amortization schedule. Free PDF export. No signup needed.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

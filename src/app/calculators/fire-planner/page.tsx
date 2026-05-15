@@ -14,15 +14,29 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'FIRE Calculator 2026: Financial Independence Retire Early | USFinNexus',
-    description: 'Calculate your FIRE number and early retirement timeline. Free advanced financial independence calculator with Monte Carlo-style modeling for 2026.',
+    title: 'FIRE Calculator 2026 — Financial Independence Retire Early | USFinNexus',
+    description: 'Calculate your FIRE number and early retirement timeline. Free financial independence calculator with safe withdrawal rate modeling and Coast FIRE analysis.',
+    keywords: [
+        'FIRE calculator', 'financial independence retire early calculator',
+        'FIRE number calculator', 'early retirement calculator',
+        'how much to retire early', 'FIRE retirement planner 2026',
+        'coast FIRE calculator', 'lean FIRE calculator', 'fat FIRE calculator',
+        'safe withdrawal rate calculator', '4 percent rule calculator',
+        'financial independence calculator', 'FIRE savings calculator',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/calculators/fire-planner' },
     openGraph: {
         type: 'website',
-        title: 'FIRE Timeline Calculator: Financial Independence Retire Early',
-        description: 'See exactly how many years until you can retire early. Free FIRE calculator with interactive charts.',
+        title: 'FIRE Calculator 2026 — Financial Independence Retire Early | USFinNexus',
+        description: 'Calculate your FIRE number and how many years to early retirement. Free financial independence planner.',
         url: 'https://usfinnexus.com/calculators/fire-planner',
-        images: [{ url: 'https://usfinnexus.com/images/calculators-hero.png', width: 1200, height: 630, alt: 'FIRE Planner Calculator — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'FIRE Calculator 2026 — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'FIRE Calculator 2026 | Financial Independence | USFinNexus',
+        description: 'What is your FIRE number? Calculate how many years to financial independence and early retirement.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

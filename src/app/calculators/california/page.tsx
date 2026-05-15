@@ -13,15 +13,28 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'California Mortgage Calculator 2026 — Prop 13 Taxes & Jumbo Loans | USFinNexus',
-    description: 'Free California Mortgage Calculator tailored for 2026. Learn how Prop 13 protects your property taxes and see current CA Jumbo loan limits.',
+    title: 'California Mortgage Calculator 2026 — Prop 13, Jumbo Loans & Taxes | USFinNexus',
+    description: 'Free California mortgage calculator. Includes Proposition 13 property tax protection, CA jumbo loan limits, and 2026 conforming limits for high-cost CA counties.',
+    keywords: [
+        'California mortgage calculator', 'CA mortgage calculator 2026',
+        'California home loan calculator', 'Proposition 13 property tax calculator',
+        'California jumbo loan calculator', 'Los Angeles mortgage calculator',
+        'San Francisco mortgage calculator', 'California conforming loan limits 2026',
+        'California property tax rate', 'California home buying calculator',
+    ],
     alternates: { canonical: 'https://usfinnexus.com/calculators/california' },
     openGraph: {
         type: 'website',
-        title: 'California Mortgage Calculator 2026 | USFinNexus',
-        description: 'Free California mortgage calculator tailored for 2026. Factors in Prop 13 property tax limits, jumbo loan thresholds, and CA-specific insurance costs.',
+        title: 'California Mortgage Calculator 2026 — Prop 13 & Jumbo Loans | USFinNexus',
+        description: 'CA-specific mortgage calculator with Prop 13 property tax protection and high-cost county jumbo loan limits.',
         url: 'https://usfinnexus.com/calculators/california',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'California Mortgage Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'California Mortgage Calculator 2026 — USFinNexus' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'California Mortgage Calculator 2026 | USFinNexus',
+        description: 'CA mortgage calculator with Prop 13 taxes, jumbo loan limits, and 2026 high-cost county limits.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

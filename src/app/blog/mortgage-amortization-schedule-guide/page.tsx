@@ -8,30 +8,27 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'How to Read a Mortgage Amortization Schedule | USFinNexus',
-    description: 'Learn how to read and understand a mortgage amortization schedule, including how principal and interest change over time.',
-    openGraph: {
-        title: 'How to Read a Mortgage Amortization Schedule',
-        description: 'Learn how to read and understand a mortgage amortization schedule, including how principal and interest change over time.',
-        url: 'https://usfinnexus.com/blog/mortgage-amortization-schedule-guide',
-        type: 'article',
-        siteName: 'USFinNexus',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Guide to reading and understanding a mortgage amortization schedule' }],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'How to Read a Mortgage Amortization Schedule',
-        description: 'Learn how to read and understand a mortgage amortization schedule, including how principal and interest change over time.',
-        images: ['https://usfinnexus.com/images/home-hero-v2.png'],
-    },
-    alternates: {
-        canonical: 'https://usfinnexus.com/blog/mortgage-amortization-schedule-guide',
-    },
+    title: 'How to Read a Mortgage Amortization Schedule — Complete 2026 Guide | USFinNexus',
+    description: 'Learn how a mortgage amortization schedule works, why most payments go to interest early, how extra payments save tens of thousands, and how to generate your own free schedule.',
+    keywords: [
+        'how to read amortization schedule', 'mortgage amortization schedule', 'amortization table explained',
+        'principal vs interest breakdown', 'front loaded mortgage interest', 'amortization schedule guide 2026',
+        'how mortgage amortization works', 'extra payment mortgage savings', 'amortization calculator guide',
+        'mortgage payment breakdown over time', 'early vs late mortgage payments', 'amortization schedule PDF',
+    ],
+    alternates: { canonical: 'https://usfinnexus.com/blog/mortgage-amortization-schedule-guide' },
+    openGraph: { type: 'article', title: 'How to Read a Mortgage Amortization Schedule | USFinNexus', description: 'Why early payments go mostly to interest, how extra payments save thousands, and how to generate your own free amortization schedule.', url: 'https://usfinnexus.com/blog/mortgage-amortization-schedule-guide', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Mortgage Amortization Schedule Guide' }] },
+    twitter: { card: 'summary_large_image', title: 'How to Read a Mortgage Amortization Schedule | USFinNexus', description: 'Why 80% of early payments go to interest — and how to fight back with extra payments.', images: ['https://usfinnexus.com/icon-512.png'] },
 };
 
 export default function BlogPost() {
     return (
         <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: 'Why does most of my mortgage payment go to interest at first?', acceptedAnswer: { '@type': 'Answer', text: 'This is called front-loading, and it is how all standard US mortgage amortization works. Your interest is calculated as (current loan balance × monthly rate). In year 1, your balance is near the full loan amount, so interest is highest. As you pay down principal, the interest portion shrinks each month. On a 30-year $400,000 mortgage at 6.37%, your first payment is approximately $1,999 — about $1,682 of that is interest and only $317 is principal.' } },
+    { '@type': 'Question', name: 'How much does one extra mortgage payment per year save?', acceptedAnswer: { '@type': 'Answer', text: 'Making one extra principal payment per year (i.e., 13 payments instead of 12) on a $400,000, 30-year mortgage at 6.37% saves approximately $67,000 in interest and cuts about 4 years off the loan. The savings are higher the earlier in the loan you start making extra payments.' } },
+    { '@type': 'Question', name: 'How do I get a free amortization schedule for my mortgage?', acceptedAnswer: { '@type': 'Answer', text: 'USFinNexus offers a free amortization schedule calculator that generates a full month-by-month table with extra payment modeling. Enter your loan amount, interest rate, term, and any extra monthly payments, and download a free PDF or CSV. No signup or email required.' } },
+] }) }} />
         <ArticleSchema
             title="How to Read a Mortgage Amortization Schedule | USFinNexus"
             description="Learn how to read and understand a mortgage amortization schedule, including how principal and interest change over time."
