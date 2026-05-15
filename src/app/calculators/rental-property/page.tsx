@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         title: 'Free Rental Property ROI & Cash Flow Calculator 2026',
         description: 'Advanced real estate investment analysis tool. Calculate cap rate, cash on cash return, and monthly cash flow. No signup required.',
         url: 'https://usfinnexus.com/calculators/rental-property',
-        images: [{ url: 'https://usfinnexus.com/images/calculators-hero.png', width: 1200, height: 630, alt: 'Rental Property Calculator — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/calculators-hero.png', width: 1200, height: 630, alt: 'Rental Property Calculator - USFinNexus' }],
     },
 };
 
@@ -59,7 +59,7 @@ export default function RentalPropertyPage() {
             <h1 className="sr-only">Free Rental Property ROI & Cash Flow Calculator 2026</h1>
             <RentalPropertyClient />
             <RentalPropertySeoContent />
-            <CalculatorFAQ faqs={RENTAL_FAQS} title="Rental Property Investment — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={RENTAL_FAQS} title="Rental Property Investment - Frequently Asked Questions" />
         </main>
     );
 }

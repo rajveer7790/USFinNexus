@@ -13,7 +13,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Down Payment Calculator 2026 — Savings Goal Tracker | USFinNexus',
+    title: 'Down Payment Calculator 2026 - Savings Goal Tracker | USFinNexus',
     description: 'Free calculator to map out how long it will take to save your down payment. See exact timeframes based on 3.5%, 10%, or 20% down on your target home price.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/down-payment' },
     openGraph: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         title: 'Down Payment Savings Calculator 2026 | USFinNexus',
         description: 'Set your target home price, choose 3.5%, 10%, or 20% down, and see exactly how many months you need to reach your savings goal. Free, no signup.',
         url: 'https://usfinnexus.com/calculators/down-payment',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Down Payment Savings Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Down Payment Savings Calculator 2026 - USFinNexus' }],
     },
 };
 

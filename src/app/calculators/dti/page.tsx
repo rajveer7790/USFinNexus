@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         title: 'Debt-to-Income (DTI) Calculator 2026 | USFinNexus',
         description: 'Free DTI calculator. See if your debt-to-income ratio meets the 28%/43% CFPB guidelines for mortgage approval. Works for front-end and back-end DTI. No signup.',
         url: 'https://usfinnexus.com/calculators/dti',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Debt to Income DTI Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Debt to Income DTI Calculator 2026 - USFinNexus' }],
     },
     alternates: { canonical: 'https://usfinnexus.com/calculators/dti' },
 };
@@ -37,7 +37,7 @@ const DTI_FAQS = [
     },
     {
         question: 'How can I lower my DTI before applying for a mortgage?',
-        answer: 'The two ways to lower DTI are: (1) Pay off or pay down existing debts — even eliminating a small monthly car payment can move your DTI significantly. (2) Increase your income — a documented pay raise, side income, or added co-borrower income all reduce DTI. Avoid taking on new debt (car loans, credit cards) in the 6 months before applying for a mortgage.',
+        answer: 'The two ways to lower DTI are: (1) Pay off or pay down existing debts - even eliminating a small monthly car payment can move your DTI significantly. (2) Increase your income - a documented pay raise, side income, or added co-borrower income all reduce DTI. Avoid taking on new debt (car loans, credit cards) in the 6 months before applying for a mortgage.',
     },
     {
         question: 'Does student loan debt hurt my DTI for a mortgage?',
@@ -45,7 +45,7 @@ const DTI_FAQS = [
     },
     {
         question: 'What is a good DTI ratio for financial health?',
-        answer: 'As a general rule: under 20% DTI is excellent, 20–35% is good, 36–43% is manageable but watch for new debt, over 43% signals financial stress and limits loan options. The 2026 Consumer Financial Protection Bureau standard for Qualified Mortgages caps back-end DTI at 43%.',
+        answer: 'As a general rule: under 20% DTI is excellent, 20-35% is good, 36-43% is manageable but watch for new debt, over 43% signals financial stress and limits loan options. The 2026 Consumer Financial Protection Bureau standard for Qualified Mortgages caps back-end DTI at 43%.',
     },
 ];
 
@@ -64,7 +64,7 @@ export default function DtiPage() {
                     <DtiClient />
                 </div>
             <DtiSeoContent />
-            <CalculatorFAQ faqs={DTI_FAQS} title="DTI Ratio — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={DTI_FAQS} title="DTI Ratio - Frequently Asked Questions" />
         </main>
     );
 }

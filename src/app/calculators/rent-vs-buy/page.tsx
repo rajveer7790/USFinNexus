@@ -13,7 +13,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Rent vs Buy Calculator 2026 — Should I Rent or Buy a Home?',
+    title: 'Rent vs Buy Calculator 2026 - Should I Rent or Buy a Home?',
     description: 'Free rent vs. buy calculator. Compare total costs, home equity, and break-even year over your planned time horizon. Uses real 2026 appreciation, tax, and investment data.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/rent-vs-buy' },
     openGraph: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         title: 'Rent vs. Buy Calculator 2026 | USFinNexus',
         description: 'Compare total renting vs. buying costs over any time horizon. Includes home appreciation, tax savings, and investment opportunity cost. Free, no signup.',
         url: 'https://usfinnexus.com/calculators/rent-vs-buy',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Rent vs Buy Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Rent vs Buy Calculator 2026 - USFinNexus' }],
     },
 };
 

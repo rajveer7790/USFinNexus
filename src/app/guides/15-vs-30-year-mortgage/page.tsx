@@ -80,7 +80,7 @@ export default function FifteenVsThirtyPage() {
                             </tr>
                             <tr>
                                 <td className="p-4 border font-bold">Interest Savings</td>
-                                <td className="p-4 border">—</td>
+                                <td className="p-4 border">-</td>
                                 <td className="p-4 border font-bold text-green-600">+$310,764</td>
                             </tr>
                         </tbody>

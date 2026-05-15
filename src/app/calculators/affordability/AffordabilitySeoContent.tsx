@@ -13,7 +13,7 @@ export default function AffordabilitySeoContent() {
                     <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-en-1791/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                         Consumer Financial Protection Bureau (CFPB) Debt-to-Income guidelines
                     </a>{' '}
-                    to determine your true maximum budget — without making you &quot;house poor.&quot; Enter your gross income, monthly debts, and down payment to see your conservative and maximum home price in seconds.
+                    to determine your true maximum budget - without making you &quot;house poor.&quot; Enter your gross income, monthly debts, and down payment to see your conservative and maximum home price in seconds.
                 </p>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
@@ -24,7 +24,7 @@ export default function AffordabilitySeoContent() {
                 </p>
                 <ul>
                     <li>
-                        <strong>Front-End DTI (the &quot;28% Rule&quot;):</strong> Your total monthly housing costs — principal, interest, property taxes, homeowners insurance, HOA fees, and PMI — should not exceed <strong>28% of your gross monthly income</strong> (before taxes). This is the classic housing ratio used by conventional lenders.
+                        <strong>Front-End DTI (the &quot;28% Rule&quot;):</strong> Your total monthly housing costs - principal, interest, property taxes, homeowners insurance, HOA fees, and PMI - should not exceed <strong>28% of your gross monthly income</strong> (before taxes). This is the classic housing ratio used by conventional lenders.
                     </li>
                     <li>
                         <strong>Back-End DTI (the &quot;43% Rule&quot;):</strong> Your housing payment <em>plus</em> all other monthly debt obligations (car loans, student loans, credit card minimums, alimony, child support) should not exceed <strong>43% of gross income</strong>. Per the CFPB, 43% is generally the maximum back-end DTI allowed for a{' '}
@@ -36,7 +36,7 @@ export default function AffordabilitySeoContent() {
                 </ul>
                 <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 my-6">
                     <p className="mb-0 text-navy-900 font-medium">
-                        <strong>Conservative vs. Aggressive Budget:</strong> Using the maximum 43% back-end DTI means nearly half of your pre-tax income goes immediately to debt and housing — before groceries, childcare, retirement, or emergencies. Our calculator shows both scenarios: a conservative budget (closer to 28% front-end) and an aggressive budget (up to 43% back-end) so you can decide where you are comfortable.
+                        <strong>Conservative vs. Aggressive Budget:</strong> Using the maximum 43% back-end DTI means nearly half of your pre-tax income goes immediately to debt and housing - before groceries, childcare, retirement, or emergencies. Our calculator shows both scenarios: a conservative budget (closer to 28% front-end) and an aggressive budget (up to 43% back-end) so you can decide where you are comfortable.
                     </p>
                 </div>
 
@@ -75,7 +75,7 @@ export default function AffordabilitySeoContent() {
                     </table>
                 </div>
                 <p>
-                    Note that the aggressive scenario assumes your existing $500/month in debts leaves $3,083/month available for housing (43% × $8,333 − $500). This table is illustrative — use our calculator for your exact numbers based on your local property taxes and insurance rates.
+                    Note that the aggressive scenario assumes your existing $500/month in debts leaves $3,083/month available for housing (43% × $8,333 − $500). This table is illustrative - use our calculator for your exact numbers based on your local property taxes and insurance rates.
                 </p>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
@@ -89,16 +89,16 @@ export default function AffordabilitySeoContent() {
                         <strong>Interest Rate:</strong> Every 1% increase in the mortgage rate reduces how much you can borrow by roughly 10%. At 6%, a $2,333/month P&amp;I payment supports a ~$390,000 loan. At 7.5%, the same payment only supports ~$330,000.
                     </li>
                     <li>
-                        <strong>Existing Monthly Debts:</strong> Eliminating a $400/month car loan instantly frees up that cash for housing — which translates to roughly $50,000–$60,000 more in purchasing power at 7%.
+                        <strong>Existing Monthly Debts:</strong> Eliminating a $400/month car loan instantly frees up that cash for housing - which translates to roughly $50,000-$60,000 more in purchasing power at 7%.
                     </li>
                     <li>
                         <strong>Down Payment Amount:</strong> A larger down payment shrinks the loan, reduces or eliminates PMI (if 20%+), and can push you into a better rate tier. Going from 5% down to 20% down on a $350,000 home saves ~$150/month in PMI and lowers the loan amount by $52,500.
                     </li>
                     <li>
-                        <strong>Property Tax Rate:</strong> Property taxes vary enormously by location. New Jersey averages over 2% of home value annually, while Hawaii averages under 0.3%. On a $400,000 home, that&apos;s the difference between $667/month and $100/month in taxes — a $567/month swing that directly affects how much loan you can carry.
+                        <strong>Property Tax Rate:</strong> Property taxes vary enormously by location. New Jersey averages over 2% of home value annually, while Hawaii averages under 0.3%. On a $400,000 home, that&apos;s the difference between $667/month and $100/month in taxes - a $567/month swing that directly affects how much loan you can carry.
                     </li>
                     <li>
-                        <strong>HOA Fees:</strong> Condos and planned communities often charge $200–$600/month in HOA dues. These are included in your front-end DTI calculation, which directly reduces the loan amount you can support.
+                        <strong>HOA Fees:</strong> Condos and planned communities often charge $200-$600/month in HOA dues. These are included in your front-end DTI calculation, which directly reduces the loan amount you can support.
                     </li>
                 </ul>
 
@@ -127,7 +127,7 @@ export default function AffordabilitySeoContent() {
                         <strong>High-Cost Conforming (up to $1,249,125):</strong> Parts of California, New York, Hawaii, and Alaska qualify for higher conforming limits. Check the FHFA county-level lookup tool for your specific area.
                     </li>
                     <li>
-                        <strong>Jumbo Loan (above conforming limit):</strong> If your calculated max home price pushes the loan above the conforming ceiling, you enter jumbo territory. Jumbo loans require excellent credit (typically 720+), 10–20% down, and significant cash reserves — often 12 months of payments.
+                        <strong>Jumbo Loan (above conforming limit):</strong> If your calculated max home price pushes the loan above the conforming ceiling, you enter jumbo territory. Jumbo loans require excellent credit (typically 720+), 10-20% down, and significant cash reserves - often 12 months of payments.
                     </li>
                 </ul>
 
@@ -135,7 +135,7 @@ export default function AffordabilitySeoContent() {
                     How Your Credit Score Affects Affordability
                 </h3>
                 <p>
-                    Your credit score does not just determine whether you qualify for a loan — it directly controls the interest rate you receive, which controls how much house you can afford. Here is how FICO tiers map to typical conventional mortgage rates and monthly payments on a $350,000 loan:
+                    Your credit score does not just determine whether you qualify for a loan - it directly controls the interest rate you receive, which controls how much house you can afford. Here is how FICO tiers map to typical conventional mortgage rates and monthly payments on a $350,000 loan:
                 </p>
                 <div className="overflow-x-auto my-6">
                     <table className="w-full text-sm border border-gray-200 rounded-lg">
@@ -148,22 +148,22 @@ export default function AffordabilitySeoContent() {
                         </thead>
                         <tbody>
                             <tr className="border-t">
-                                <td className="px-4 py-2 text-gray-600">760–850 (Exceptional)</td>
+                                <td className="px-4 py-2 text-gray-600">760-850 (Exceptional)</td>
                                 <td className="px-4 py-2 text-center">~6.50%</td>
                                 <td className="px-4 py-2 text-center">~$2,213</td>
                             </tr>
                             <tr className="border-t bg-gray-50">
-                                <td className="px-4 py-2 text-gray-600">700–759 (Good)</td>
+                                <td className="px-4 py-2 text-gray-600">700-759 (Good)</td>
                                 <td className="px-4 py-2 text-center">~6.85%</td>
                                 <td className="px-4 py-2 text-center">~$2,296</td>
                             </tr>
                             <tr className="border-t">
-                                <td className="px-4 py-2 text-gray-600">660–699 (Fair)</td>
+                                <td className="px-4 py-2 text-gray-600">660-699 (Fair)</td>
                                 <td className="px-4 py-2 text-center">~7.25%</td>
                                 <td className="px-4 py-2 text-center">~$2,388</td>
                             </tr>
                             <tr className="border-t bg-gray-50">
-                                <td className="px-4 py-2 text-gray-600">620–659 (Minimum conventional)</td>
+                                <td className="px-4 py-2 text-gray-600">620-659 (Minimum conventional)</td>
                                 <td className="px-4 py-2 text-center">~7.75%</td>
                                 <td className="px-4 py-2 text-center">~$2,506</td>
                             </tr>
@@ -171,7 +171,7 @@ export default function AffordabilitySeoContent() {
                     </table>
                 </div>
                 <p>
-                    A 760+ score versus a 620–659 score on a $350,000 loan saves <strong>~$293/month</strong> — over <strong>$105,000</strong> over the life of a 30-year mortgage. You can check your credit score for free at{' '}
+                    A 760+ score versus a 620-659 score on a $350,000 loan saves <strong>~$293/month</strong> - over <strong>$105,000</strong> over the life of a 30-year mortgage. You can check your credit score for free at{' '}
                     <a href="https://www.annualcreditreport.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                         AnnualCreditReport.com
                     </a>{' '}
@@ -194,7 +194,7 @@ export default function AffordabilitySeoContent() {
                         to compare.
                     </li>
                     <li>
-                        <strong>VA Loan (0% down, no PMI):</strong> For eligible veterans, active-duty service members, and surviving spouses. No down payment required and no monthly PMI — the most powerful affordability tool for those who qualify.
+                        <strong>VA Loan (0% down, no PMI):</strong> For eligible veterans, active-duty service members, and surviving spouses. No down payment required and no monthly PMI - the most powerful affordability tool for those who qualify.
                     </li>
                     <li>
                         <strong>USDA Rural Development Loan (0% down):</strong> For buyers in eligible rural and suburban areas. No down payment, competitive rates, and an annual guarantee fee that is much lower than FHA MIP. Check eligibility at{' '}
@@ -217,7 +217,7 @@ export default function AffordabilitySeoContent() {
                 </h3>
                 <ol>
                     <li>
-                        <strong>Get a mortgage pre-approval.</strong> Once you know your target price range, a lender pre-approval confirms what a real institution will actually lend you, locks in a rate for 60–90 days, and strengthens your offer in competitive markets.
+                        <strong>Get a mortgage pre-approval.</strong> Once you know your target price range, a lender pre-approval confirms what a real institution will actually lend you, locks in a rate for 60-90 days, and strengthens your offer in competitive markets.
                     </li>
                     <li>
                         <strong>Calculate your full monthly payment.</strong> Run your specific home price, down payment, and ZIP code through our{' '}
@@ -230,7 +230,7 @@ export default function AffordabilitySeoContent() {
                         shows exactly how many months it will take to reach 3%, 10%, or 20% down given your current monthly savings rate.
                     </li>
                     <li>
-                        <strong>Estimate closing costs.</strong> Closing costs typically add 2%–5% on top of your down payment. Use our{' '}
+                        <strong>Estimate closing costs.</strong> Closing costs typically add 2%-5% on top of your down payment. Use our{' '}
                         <Link href="/calculators/closing-costs" className="text-blue-600 hover:underline">Closing Costs Calculator</Link>{' '}
                         to budget every fee by state before you make an offer.
                     </li>
@@ -247,7 +247,7 @@ export default function AffordabilitySeoContent() {
                 <ul>
                     <li>
                         <a href="https://www.consumerfinance.gov/owning-a-home/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                            Consumer Financial Protection Bureau (CFPB) — Owning a Home
+                            Consumer Financial Protection Bureau (CFPB) - Owning a Home
                         </a>
                     </li>
                     <li>
@@ -261,12 +261,12 @@ export default function AffordabilitySeoContent() {
                         </a>
                     </li>
                     <li>Standard US mortgage amortization math: monthly compounding on outstanding principal balance</li>
-                    <li>PMI estimates based on Freddie Mac published ranges (0.5%–1.5% annually depending on LTV and credit score)</li>
+                    <li>PMI estimates based on Freddie Mac published ranges (0.5%-1.5% annually depending on LTV and credit score)</li>
                 </ul>
 
                 <div className="mt-12 p-6 bg-gradient-to-r from-navy-900 to-blue-900 rounded-2xl text-white text-center shadow-lg" style={{ background: 'linear-gradient(135deg, #0A192F, #1a4d9a)' }}>
                     <h3 className="text-2xl font-bold mb-3 text-white">Know your budget. Run your full payment.</h3>
-                    <p className="mb-6 opacity-90">Once you have your max home price, plug it into our full PITI mortgage calculator to see the exact monthly cost — taxes, insurance, and PMI included.</p>
+                    <p className="mb-6 opacity-90">Once you have your max home price, plug it into our full PITI mortgage calculator to see the exact monthly cost - taxes, insurance, and PMI included.</p>
                     <Link
                         href="/calculators/mortgage"
                         className="bg-white text-navy-900 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors inline-flex items-center gap-2"

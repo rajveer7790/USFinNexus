@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         title: 'Interest-Only Mortgage Calculator 2026 | USFinNexus',
         description: 'Calculate interest-only mortgage payments and see exactly how much your payment jumps when the loan fully amortizes. Compare IO vs standard payments side by side.',
         url: 'https://usfinnexus.com/calculators/interest-only',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Interest-Only Mortgage Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Interest-Only Mortgage Calculator 2026 - USFinNexus' }],
     },
     alternates: { canonical: 'https://usfinnexus.com/calculators/interest-only' },
 };

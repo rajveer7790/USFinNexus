@@ -12,7 +12,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Auto Loan Calculator 2026 — Monthly Car Payment & Taxes | USFinNexus',
+    title: 'Auto Loan Calculator 2026 - Monthly Car Payment & Taxes | USFinNexus',
     description: 'Free auto loan calculator for 2026. Calculate monthly car payments, estimate sales tax, trade-in value, and download a full amortization schedule.',
     keywords: ['auto loan calculator', 'car payment calculator', 'car loan with taxes', 'amortization car loan', 'vehicle finance calculator'],
     openGraph: {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         title: 'Auto Loan Calculator 2026 | USFinNexus',
         description: 'Calculate your monthly car payment with sales tax, trade-in value, and fees. Get a full amortization schedule instantly. Free auto loan calculator, no signup.',
         url: 'https://usfinnexus.com/calculators/auto-loan',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Auto Loan Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Auto Loan Calculator 2026 - USFinNexus' }],
     },
     alternates: { canonical: 'https://usfinnexus.com/calculators/auto-loan' },
 };

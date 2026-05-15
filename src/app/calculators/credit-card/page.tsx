@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         title: 'Free Credit Card Payoff Calculator 2026 | USFinNexus',
         description: 'Calculate how long it takes to pay off your credit card balance. See total interest paid and how much you save by increasing monthly payments. Free, no signup.',
         url: 'https://usfinnexus.com/calculators/credit-card',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Credit Card Payoff Calculator — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Credit Card Payoff Calculator - USFinNexus' }],
     },
 };
 

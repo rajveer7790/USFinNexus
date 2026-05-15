@@ -175,7 +175,7 @@ export default function ArticlePage() {
                     While domestic businesses celebrate, FinCEN has severely tightened the screws on foreign-owned entities. The 2026 rules represent a massive crackdown on international money laundering utilizing U.S. shell companies.
                 </p>
                 <p>
-                    If your LLC or Corporation involves foreign ownership—whether a Canadian citizen investing in Florida real estate, a European holding company, or a non-resident alien launching a SaaS startup in Delaware—you are under extreme scrutiny.
+                    If your LLC or Corporation involves foreign ownership-whether a Canadian citizen investing in Florida real estate, a European holding company, or a non-resident alien launching a SaaS startup in Delaware-you are under extreme scrutiny.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">

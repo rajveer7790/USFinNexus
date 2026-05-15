@@ -13,7 +13,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Amortization Schedule Calculator 2026 — See Your Principal and Interest | USFinNexus',
+    title: 'Amortization Schedule Calculator 2026 - See Your Principal and Interest | USFinNexus',
     description: 'Free mortgage amortization schedule calculator. See exact month-by-month breakdown of principal vs interest over 15 or 30 years.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/amortization' },
     openGraph: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         title: 'Amortization Schedule Calculator 2026 | USFinNexus',
         description: 'Generate a full month-by-month mortgage amortization schedule. See principal vs. interest breakdown and the impact of extra payments over 15 or 30 years.',
         url: 'https://usfinnexus.com/calculators/amortization',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Mortgage Amortization Schedule Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Mortgage Amortization Schedule Calculator 2026 - USFinNexus' }],
     },
 };
 

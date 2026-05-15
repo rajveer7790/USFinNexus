@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         title: 'Free Retirement Calculator 2026 | Plan Your Nest Egg | USFinNexus',
         description: 'Calculate how much you need to retire and whether your savings are on track. See projected nest egg growth and find out your retirement age. Free PDF export.',
         url: 'https://usfinnexus.com/calculators/retirement',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Free Retirement Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Free Retirement Calculator 2026 - USFinNexus' }],
     },
 };
 

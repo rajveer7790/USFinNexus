@@ -14,7 +14,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Home Affordability Calculator 2026 — How Much House Can I Afford?',
+    title: 'Home Affordability Calculator 2026 - How Much House Can I Afford?',
     description: 'Free CFPB-compliant home affordability calculator. Know your max home price, monthly payment, front-end & back-end DTI in seconds. No signup, no spam.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/affordability' },
     openGraph: {
@@ -22,14 +22,14 @@ export const metadata: Metadata = {
         title: 'Home Affordability Calculator 2026 | USFinNexus',
         description: 'Free CFPB-compliant home affordability calculator. Know your max home price, monthly payment, and DTI ratios in seconds. No signup, no spam.',
         url: 'https://usfinnexus.com/calculators/affordability',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Home Affordability Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Home Affordability Calculator 2026 - USFinNexus' }],
     },
 };
 
 const AFFORDABILITY_FAQS = [
     {
         question: 'How much house can I afford on a $100,000 salary?',
-        answer: 'On a $100,000 annual salary (roughly $8,333/month gross), the CFPB\'s 28% front-end DTI guideline allows up to $2,333/month for housing (PITI). At a 7% rate on a 30-year mortgage, that supports a home price of roughly $290,000–$320,000 depending on taxes and insurance in your area. Use our affordability calculator for your exact situation.',
+        answer: 'On a $100,000 annual salary (roughly $8,333/month gross), the CFPB\'s 28% front-end DTI guideline allows up to $2,333/month for housing (PITI). At a 7% rate on a 30-year mortgage, that supports a home price of roughly $290,000-$320,000 depending on taxes and insurance in your area. Use our affordability calculator for your exact situation.',
     },
     {
         question: 'What is the CFPB 28/43 rule for mortgage qualification?',
@@ -37,7 +37,7 @@ const AFFORDABILITY_FAQS = [
     },
     {
         question: 'Does my down payment affect how much house I can afford?',
-        answer: 'Yes — a larger down payment reduces your loan amount, which lowers your monthly payment and may eliminate PMI (if 20%+). A $50,000 larger down payment on a 30-year 7% loan reduces monthly payments by about $333/month and could increase your affordable home price by $50,000–$60,000.',
+        answer: 'Yes - a larger down payment reduces your loan amount, which lowers your monthly payment and may eliminate PMI (if 20%+). A $50,000 larger down payment on a 30-year 7% loan reduces monthly payments by about $333/month and could increase your affordable home price by $50,000-$60,000.',
     },
     {
         question: 'What debts count toward my back-end DTI?',
@@ -62,7 +62,7 @@ export default function AffordabilityPage() {
             <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026 &middot; CFPB 28/43 DTI guidelines applied</p>
             <AffordabilityClient />
             <AffordabilitySeoContent />
-            <CalculatorFAQ faqs={AFFORDABILITY_FAQS} title="Home Affordability — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={AFFORDABILITY_FAQS} title="Home Affordability - Frequently Asked Questions" />
         </main>
     );
 }

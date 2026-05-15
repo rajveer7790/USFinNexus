@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         title: 'Crypto Capital Gains Tax Estimator 2026',
         description: 'Calculate your short-term and long-term crypto tax liability. Free federal tax estimator.',
         url: 'https://usfinnexus.com/calculators/crypto-tax',
-        images: [{ url: 'https://usfinnexus.com/images/calculators-hero.png', width: 1200, height: 630, alt: 'Crypto Tax Calculator — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/calculators-hero.png', width: 1200, height: 630, alt: 'Crypto Tax Calculator - USFinNexus' }],
     },
 };
 
@@ -59,7 +59,7 @@ export default function CryptoTaxPage() {
             <h1 className="sr-only">Crypto Tax Calculator: Estimate Capital Gains</h1>
             <CryptoTaxClient />
             <CryptoTaxSeoContent />
-            <CalculatorFAQ faqs={CRYPTO_FAQS} title="Cryptocurrency Taxes — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={CRYPTO_FAQS} title="Cryptocurrency Taxes - Frequently Asked Questions" />
         </main>
     );
 }

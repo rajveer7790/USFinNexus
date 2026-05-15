@@ -12,7 +12,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'FHA vs VA vs USDA Loan Calculator 2026 — Compare Government Loans | USFinNexus',
+    title: 'FHA vs VA vs USDA Loan Calculator 2026 - Compare Government Loans | USFinNexus',
     description: 'Side-by-side comparison of FHA, VA, and USDA loans. See which mortgage program fits your budget with lowest down payment and interest costs.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/fha-va-usda' },
     openGraph: {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         title: 'FHA vs VA vs USDA Loan Calculator 2026 | USFinNexus',
         description: 'Side-by-side comparison of FHA, VA, and USDA government loan programs. See down payments, MIP/funding fees, and monthly costs for each. Free, no signup.',
         url: 'https://usfinnexus.com/calculators/fha-va-usda',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'FHA VA USDA Government Loan Comparison 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'FHA VA USDA Government Loan Comparison 2026 - USFinNexus' }],
     },
 };
 

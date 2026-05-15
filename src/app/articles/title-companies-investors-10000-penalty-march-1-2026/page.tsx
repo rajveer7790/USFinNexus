@@ -91,7 +91,7 @@ export default function ArticlePage() {
                 <div className="not-prose my-8 p-5 rounded-2xl border border-[#0da6f2]/30 bg-blue-50 flex flex-col sm:flex-row items-start sm:items-center gap-4">
                     <div className="flex-1">
                         <p className="font-bold text-[#0A192F] text-base mb-1">Estimate your closing costs before March 1</p>
-                        <p className="text-sm text-gray-600">Use our free closing costs calculator to see every fee — title, transfer tax, prepaid — for any US state.</p>
+                        <p className="text-sm text-gray-600">Use our free closing costs calculator to see every fee - title, transfer tax, prepaid - for any US state.</p>
                     </div>
                     <Link href="/calculators/closing-costs" className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#0A192F] hover:bg-[#0d2640] text-white text-sm font-bold rounded-xl transition-colors whitespace-nowrap flex-shrink-0">
                         <Scale size={15} /> Closing Costs Calculator
@@ -173,7 +173,7 @@ export default function ArticlePage() {
 
                 <h2>The Reliance &quot;Safe Harbor&quot; (Why Investors Must Tell the Truth)</h2>
                 <p>
-                    While title agents carry the filing burden, they are offered a critical &quot;safe harbor.&quot; If a settlement agent relies on the information provided by the purchasing LLC, they are generally protected against penalties if that information turns out to be false—<strong>provided the agent did not have actual knowledge that it was incorrect.</strong>
+                    While title agents carry the filing burden, they are offered a critical &quot;safe harbor.&quot; If a settlement agent relies on the information provided by the purchasing LLC, they are generally protected against penalties if that information turns out to be false-<strong>provided the agent did not have actual knowledge that it was incorrect.</strong>
                 </p>
                 <p>
                     FinCEN requires the purchasing LLC to sign a legally binding certification verifying that they have accurately identified every single beneficial owner. If an investor lies on this certification form, FinCEN will bypass the title agent and pursue federal criminal fraud and evasion charges directly against the investor.

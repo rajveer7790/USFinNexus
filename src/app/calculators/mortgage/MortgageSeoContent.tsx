@@ -12,7 +12,7 @@ export default function MortgageSeoContent() {
                     How to Use Our US Mortgage Calculator (2026 Guide)
                 </h2>
                 <p className="lead text-xl text-gray-600">
-                    Buying a home is one of the most significant financial decisions you&apos;ll ever make. Knowing exactly how much house you can afford — and what your monthly payments will actually look like — is the crucial first step. Our free, CFPB-compliant 2026 mortgage calculator goes beyond a simple principal-and-interest estimate. It delivers a complete <strong>PITI breakdown</strong> (Principal, Interest, Taxes, and Insurance) so you see the true, all-in monthly cost of homeownership before you step into a lender&apos;s office.
+                    Buying a home is one of the most significant financial decisions you&apos;ll ever make. Knowing exactly how much house you can afford - and what your monthly payments will actually look like - is the crucial first step. Our free, CFPB-compliant 2026 mortgage calculator goes beyond a simple principal-and-interest estimate. It delivers a complete <strong>PITI breakdown</strong> (Principal, Interest, Taxes, and Insurance) so you see the true, all-in monthly cost of homeownership before you step into a lender&apos;s office.
                 </p>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
@@ -35,7 +35,7 @@ export default function MortgageSeoContent() {
                         <strong>Loan Term:</strong> How long you have to repay the loan. The 30-year fixed-rate mortgage is most common in the US, offering lower monthly payments. A 15-year term carries higher payments but saves you substantial interest over the life of the loan.
                     </li>
                     <li>
-                        <strong>ZIP Code (Auto-Tax):</strong> Property taxes vary dramatically by location — even between neighboring ZIP codes. Entering your target ZIP lets our calculator pull an estimated local tax rate for a more accurate monthly cost.
+                        <strong>ZIP Code (Auto-Tax):</strong> Property taxes vary dramatically by location - even between neighboring ZIP codes. Entering your target ZIP lets our calculator pull an estimated local tax rate for a more accurate monthly cost.
                     </li>
                     <li>
                         <strong>HOA Fees:</strong> Condos, townhouses, and many planned communities charge monthly Homeowners Association dues that cover exterior maintenance, amenities, and community insurance.
@@ -46,14 +46,14 @@ export default function MortgageSeoContent() {
                     The True Cost of a Mortgage: What Is PITI?
                 </h3>
                 <p>
-                    Many simplified calculators only show Principal and Interest. But your lender actually collects your taxes and insurance monthly through an escrow account. The combined total is called <strong>PITI</strong> — and it is the number that matters for your budget and your loan approval.
+                    Many simplified calculators only show Principal and Interest. But your lender actually collects your taxes and insurance monthly through an escrow account. The combined total is called <strong>PITI</strong> - and it is the number that matters for your budget and your loan approval.
                 </p>
                 <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 my-6">
                     <ul className="mb-0 space-y-2">
-                        <li><strong>P — Principal:</strong> The portion of your payment that reduces the actual loan balance. Early in your mortgage, this is a small slice of the total payment.</li>
-                        <li><strong>I — Interest:</strong> What the lender charges for borrowing their money. In the early years, interest can represent 80–90% of each payment.</li>
-                        <li><strong>T — Taxes:</strong> Your local property taxes divided into 12 monthly installments and held in escrow.</li>
-                        <li><strong>I — Insurance:</strong> Your annual homeowners insurance premium divided into 12 monthly installments, also held in escrow.</li>
+                        <li><strong>P - Principal:</strong> The portion of your payment that reduces the actual loan balance. Early in your mortgage, this is a small slice of the total payment.</li>
+                        <li><strong>I - Interest:</strong> What the lender charges for borrowing their money. In the early years, interest can represent 80-90% of each payment.</li>
+                        <li><strong>T - Taxes:</strong> Your local property taxes divided into 12 monthly installments and held in escrow.</li>
+                        <li><strong>I - Insurance:</strong> Your annual homeowners insurance premium divided into 12 monthly installments, also held in escrow.</li>
                     </ul>
                 </div>
                 <p>
@@ -72,7 +72,7 @@ export default function MortgageSeoContent() {
                     <a href="https://www.fhfa.gov/data/conforming-loan-limit" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                         Federal Housing Finance Agency (FHFA)
                     </a>{' '}
-                    sets conforming loan limits — the maximum mortgage size that Fannie Mae and Freddie Mac will purchase. For 2026:
+                    sets conforming loan limits - the maximum mortgage size that Fannie Mae and Freddie Mac will purchase. For 2026:
                 </p>
                 <ul>
                     <li><strong>Baseline (most US counties):</strong> $832,750 for a single-family home</li>
@@ -88,7 +88,7 @@ export default function MortgageSeoContent() {
                     What Is PMI and When Can You Cancel It?
                 </h3>
                 <p>
-                    Private Mortgage Insurance (PMI) is required when your down payment is less than 20% of the purchase price. PMI protects the <em>lender</em> if you default — but you pay the premium. Typical PMI costs range from 0.5% to 1.5% of the original loan amount per year, added to your monthly payment.
+                    Private Mortgage Insurance (PMI) is required when your down payment is less than 20% of the purchase price. PMI protects the <em>lender</em> if you default - but you pay the premium. Typical PMI costs range from 0.5% to 1.5% of the original loan amount per year, added to your monthly payment.
                 </p>
                 <p>
                     The good news: PMI is not permanent. Under the{' '}
@@ -138,7 +138,7 @@ export default function MortgageSeoContent() {
                     </table>
                 </div>
                 <p>
-                    The 30-year mortgage&apos;s lower monthly payment provides flexibility — the difference can go to retirement savings, investments, or an emergency fund. The 15-year saves roughly <strong>$331,000 in interest</strong> on this example loan. Use the loan term toggle in our calculator to compare both scenarios side by side for your exact numbers. You can also run a detailed side-by-side with our{' '}
+                    The 30-year mortgage&apos;s lower monthly payment provides flexibility - the difference can go to retirement savings, investments, or an emergency fund. The 15-year saves roughly <strong>$331,000 in interest</strong> on this example loan. Use the loan term toggle in our calculator to compare both scenarios side by side for your exact numbers. You can also run a detailed side-by-side with our{' '}
                     <Link href="/calculators/comparison" className="text-blue-600 hover:underline">Loan Comparison Calculator</Link>.
                 </p>
 
@@ -150,7 +150,7 @@ export default function MortgageSeoContent() {
                 </p>
                 <ul>
                     <li><strong>Extra Monthly Payment:</strong> Even $100/month extra on a $400,000 loan at 6.37% saves over $50,000 in interest and pays the loan off 3 years early.</li>
-                    <li><strong>Bi-Weekly Payments:</strong> Switching to bi-weekly (half your payment every two weeks) results in 26 half-payments per year — the equivalent of one extra full monthly payment annually. This alone can cut 4–5 years off a 30-year loan.</li>
+                    <li><strong>Bi-Weekly Payments:</strong> Switching to bi-weekly (half your payment every two weeks) results in 26 half-payments per year - the equivalent of one extra full monthly payment annually. This alone can cut 4-5 years off a 30-year loan.</li>
                     <li><strong>Lump-Sum Payments:</strong> Tax refunds, bonuses, or inheritance applied to your principal can have an outsized impact because they immediately reduce the balance on which interest compounds.</li>
                 </ul>
                 <p>
@@ -168,7 +168,7 @@ export default function MortgageSeoContent() {
                     <li><strong>Loan-to-Value (LTV) Ratio:</strong> The larger your down payment, the lower your LTV and the lower your rate. A 20%+ down payment unlocks the best conventional rates and eliminates PMI.</li>
                     <li><strong>Loan Type:</strong> VA loans typically offer the lowest rates (no PMI, no down payment required for eligible veterans). FHA rates are competitive for lower credit scores. Conventional rates are best for borrowers with strong credit.</li>
                     <li><strong>Debt-to-Income Ratio:</strong> Reducing your existing debt load before applying can move you into a better rate tier.</li>
-                    <li><strong>Rate Lock:</strong> Once you are under contract, consider locking your rate. Mortgage rates can change daily — even hourly during volatile markets.</li>
+                    <li><strong>Rate Lock:</strong> Once you are under contract, consider locking your rate. Mortgage rates can change daily - even hourly during volatile markets.</li>
                     <li><strong>Mortgage Points:</strong> Paying points (1 point = 1% of loan) upfront permanently lowers your rate. Use our{' '}
                         <Link href="/calculators/points-buydown" className="text-blue-600 hover:underline">Points Buy-Down Calculator</Link>{' '}
                         to find the break-even point for your situation.
@@ -207,7 +207,7 @@ export default function MortgageSeoContent() {
                     </li>
                     <li>
                         <strong>Export your report.</strong>{' '}
-                        Use the PDF or CSV button above to save a professional copy of your calculation — no email required.
+                        Use the PDF or CSV button above to save a professional copy of your calculation - no email required.
                     </li>
                 </ol>
 
@@ -220,7 +220,7 @@ export default function MortgageSeoContent() {
                 <ul>
                     <li>
                         <a href="https://www.consumerfinance.gov/owning-a-home/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                            Consumer Financial Protection Bureau (CFPB) — Owning a Home
+                            Consumer Financial Protection Bureau (CFPB) - Owning a Home
                         </a>
                     </li>
                     <li>
@@ -234,12 +234,12 @@ export default function MortgageSeoContent() {
                         </a>
                     </li>
                     <li>Standard US mortgage amortization math: monthly compounding on outstanding principal balance</li>
-                    <li>PMI estimates based on Freddie Mac published ranges (0.5%–1.5% annually depending on LTV and credit score)</li>
+                    <li>PMI estimates based on Freddie Mac published ranges (0.5%-1.5% annually depending on LTV and credit score)</li>
                 </ul>
 
                 <div className="mt-12 p-6 bg-gradient-to-r from-navy-900 to-blue-900 rounded-2xl text-white text-center shadow-lg" style={{ background: 'linear-gradient(135deg, #0A192F, #1a4d9a)' }}>
                     <h3 className="text-2xl font-bold mb-3 text-white">Ready to save or share your calculation?</h3>
-                    <p className="mb-6 opacity-90">Generate a professional PDF report or export your full amortization schedule to CSV — no email required, no signup, completely free.</p>
+                    <p className="mb-6 opacity-90">Generate a professional PDF report or export your full amortization schedule to CSV - no email required, no signup, completely free.</p>
                     <button
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                         className="bg-white text-navy-900 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors inline-flex items-center gap-2"

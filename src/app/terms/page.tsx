@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'Terms of Service | USFinNexus',
-    description: 'USFinNexus.com terms of service — calculator results are estimates only.',
+    description: 'USFinNexus.com terms of service - calculator results are estimates only.',
     alternates: { canonical: 'https://usfinnexus.com/terms' },
 };
 

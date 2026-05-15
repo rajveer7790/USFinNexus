@@ -61,7 +61,7 @@ export default function TexasSeoContent() {
                     <div>
                         <h4 className="text-lg font-bold text-navy-900 mb-2">Why are Texas closing costs slightly different?</h4>
                         <p className="text-gray-600">
-                            Texas is one of the few states that does strictly regulate title insurance premiums. Meaning, you cannot &quot;shop around&quot; for a cheaper title insurance rate—the state sets the exact price algorithmically based on the purchase price of the home.
+                            Texas is one of the few states that does strictly regulate title insurance premiums. Meaning, you cannot &quot;shop around&quot; for a cheaper title insurance rate-the state sets the exact price algorithmically based on the purchase price of the home.
                         </p>
                     </div>
                 </div>

@@ -186,7 +186,7 @@ export default function ArticlePage() {
                     The burden of actually filing the report with the federal government falls on the &quot;Reporting Person&quot; (your settlement agent or title company), who has 30 days post-closing to submit the data to the FinCEN database.
                 </p>
                 <p>
-                    As the buyer, your responsibility is essentially over once the closing is complete—<strong>provided you did not lie or purposely obscure ownership.</strong> Submitting fraudulent documents or intentionally misrepresenting the beneficial owners to the title agent is a direct violation of the Bank Secrecy Act and carries federal criminal penalties.
+                    As the buyer, your responsibility is essentially over once the closing is complete-<strong>provided you did not lie or purposely obscure ownership.</strong> Submitting fraudulent documents or intentionally misrepresenting the beneficial owners to the title agent is a direct violation of the Bank Secrecy Act and carries federal criminal penalties.
                 </p>
 
                 <h2>A Note on &quot;Financing&quot; Loopholes</h2>

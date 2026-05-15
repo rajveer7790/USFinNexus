@@ -136,7 +136,7 @@ export default function ArticlePage() {
                             Public Searchability Concerns
                         </h4>
                         <p className="text-sm text-gray-600">
-                            Initially, NY lawmakers pushed for a publicly searchable database of LLC owners. Following pushback, the 2026 law restricts database access to government agencies and law enforcement—though real estate watchdogs continue to push for public access in the future.
+                            Initially, NY lawmakers pushed for a publicly searchable database of LLC owners. Following pushback, the 2026 law restricts database access to government agencies and law enforcement-though real estate watchdogs continue to push for public access in the future.
                         </p>
                     </div>
                 </div>

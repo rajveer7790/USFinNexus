@@ -258,7 +258,7 @@ export default function MortgageCalculator({ initialTab = 'breakdown' }: { initi
                             {ltv > 0.80 && (
                                 <p className="text-xs mt-2 text-amber-500 flex items-center gap-1.5 font-medium">
                                     <Info size={14} />
-                                    LTV {formatPercent(ltv * 100, 1)} — PMI Required
+                                    LTV {formatPercent(ltv * 100, 1)} - PMI Required
                                 </p>
                             )}
                             {ltv <= 0 && downDollar > 0 && (
@@ -295,7 +295,7 @@ export default function MortgageCalculator({ initialTab = 'breakdown' }: { initi
                         {/* Loan Term */}
                         <div className="mb-6">
                             <label className="input-label">Loan Term</label>
-                            {/* 4 term buttons + custom — grid on mobile, flex on sm+ */}
+                            {/* 4 term buttons + custom - grid on mobile, flex on sm+ */}
                             <div className="grid grid-cols-3 sm:flex gap-2 flex-wrap">
                                 {LOAN_TERMS.map(t => (
                                     <button

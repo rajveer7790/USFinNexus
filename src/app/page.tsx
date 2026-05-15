@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = {
     title: 'Free Mortgage & Finance Calculators 2026 | USFinNexus',
     description:
-        'Free mortgage, affordability, refinance, auto & personal loan calculators. Instant PDF + CSV downloads — no signup, no email, no lead-gen spam. Built for Americans.',
+        'Free mortgage, affordability, refinance, auto & personal loan calculators. Instant PDF + CSV downloads - no signup, no email, no lead-gen spam. Built for Americans.',
     alternates: { canonical: 'https://usfinnexus.com' },
 };
 
@@ -30,7 +30,7 @@ const RATES = [
 
 const STEPS = [
     { n: '01', h: 'Pick a Calculator', p: 'Choose from 28+ CFPB-compliant tools.' },
-    { n: '02', h: 'Enter Numbers', p: 'Simple inputs — no signup or email.' },
+    { n: '02', h: 'Enter Numbers', p: 'Simple inputs - no signup or email.' },
     { n: '03', h: 'Get Results', p: 'Instant breakdown with charts & tables.' },
     { n: '04', h: 'Download PDF', p: 'One-click PDF report. Zero server contact.' },
 ];
@@ -97,7 +97,7 @@ const STATS = [
 
 const DIFFS = [
     { icon: Shield, h: 'CFPB-Compliant Math', p: 'Every formula follows Consumer Financial Protection Bureau guidelines.', c: 'di-cyan' },
-    { icon: Lock, h: 'Zero Data Collection', p: 'All calculations run client-side — nothing hits our servers.', c: 'di-mag' },
+    { icon: Lock, h: 'Zero Data Collection', p: 'All calculations run client-side - nothing hits our servers.', c: 'di-mag' },
     { icon: Download, h: 'Instant PDF Reports', p: 'One-click professional PDF. Generated in your browser.', c: 'di-vio' },
     { icon: Eye, h: 'No Paywalls or Signup', p: 'Every tool is free forever. No email walls. No lead-gen.', c: 'di-lime' },
     { icon: Zap, h: '2026 Limits Updated', p: '$832,750 conforming · $541,287 FHA floor · Updated monthly.', c: 'di-amb' },
@@ -143,7 +143,7 @@ export default function HomePage() {
                         </h1>
                         <p className="neo-hero-p neo-reveal neo-reveal--d2">
                             28+ professional calculators with instant <strong>PDF reports</strong>.
-                            No signup, no email, no hidden fees — <strong>100% free, forever.</strong>
+                            No signup, no email, no hidden fees - <strong>100% free, forever.</strong>
                         </p>
                         <div className="neo-hero-actions neo-reveal neo-reveal--d3">
                             <Link href="/calculators/mortgage" className="neo-btn-main">
@@ -172,7 +172,7 @@ export default function HomePage() {
                         </div>
                     </div>
 
-                    {/* Right — Live Interactive Widget */}
+                    {/* Right - Live Interactive Widget */}
                     <div className="neo-hero-right neo-reveal neo-reveal--d3">
                         <HomeHeroWidget />
                     </div>

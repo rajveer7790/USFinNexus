@@ -54,7 +54,7 @@ export default function ArticlePage() {
                 </h1>
 
                 <p className="text-xl leading-relaxed mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    For years, financial advisors and taxpayers have been anxiously eyeing the horizon, waiting for the &quot;TCJA Sunset&quot;—the expiration of the 2017 Tax Cuts and Jobs Act scheduled for the end of 2025. However, recent dramatic legislative actions in late 2025 have fundamentally altered the tax landscape for 2026 and beyond. This comprehensive 2,000-word guide breaks down exactly what you need to know about your 2026 income tax brackets, deductions, and financial planning.
+                    For years, financial advisors and taxpayers have been anxiously eyeing the horizon, waiting for the &quot;TCJA Sunset&quot;-the expiration of the 2017 Tax Cuts and Jobs Act scheduled for the end of 2025. However, recent dramatic legislative actions in late 2025 have fundamentally altered the tax landscape for 2026 and beyond. This comprehensive 2,000-word guide breaks down exactly what you need to know about your 2026 income tax brackets, deductions, and financial planning.
                 </p>
 
                 <div className="flex items-center gap-4 border-t border-b py-4 border-gray-200">
@@ -270,7 +270,7 @@ export default function ArticlePage() {
                     Under the new permanent rules for 2026, the Child Tax Credit has been solidified and even slightly expanded to accommodate inflation. Families can claim a robust credit (projected around $2,200 per qualifying child under age 17). 
                 </p>
                 <p>
-                    Furthermore, the &quot;refundability&quot; portion of the credit—the amount you can receive back from the IRS even if you owe $0 in income tax—has been structurally enhanced, providing a vital safety net for lower-income working families.
+                    Furthermore, the &quot;refundability&quot; portion of the credit-the amount you can receive back from the IRS even if you owe $0 in income tax-has been structurally enhanced, providing a vital safety net for lower-income working families.
                 </p>
 
                 <h2>6. The State and Local Tax (SALT) Deduction Ceiling Rises</h2>
@@ -299,7 +299,7 @@ export default function ArticlePage() {
                     Because the standard deduction is so massive ($30,800 for MFJ), itemizing is mathematically useless for most people. To get a tax benefit for charitable contributions or medical expenses, you must exceed that $30,800 hurdle.
                 </p>
                 <p>
-                    The strategy for 2026 is &quot;bunching.&quot; Instead of donating $10,000 to charity every year for three years (which gives you zero tax benefit if you don&apos;t itemize), you donate $30,000 in a single year—often utilizing a Donor-Advised Fund (DAF). Combined with your $10,000 (or up to $40,000) SALT deduction, you blow past the standard deduction threshold, get a massive tax break in Year 1, and take the standard deduction in Years 2 and 3.
+                    The strategy for 2026 is &quot;bunching.&quot; Instead of donating $10,000 to charity every year for three years (which gives you zero tax benefit if you don&apos;t itemize), you donate $30,000 in a single year-often utilizing a Donor-Advised Fund (DAF). Combined with your $10,000 (or up to $40,000) SALT deduction, you blow past the standard deduction threshold, get a massive tax break in Year 1, and take the standard deduction in Years 2 and 3.
                 </p>
 
                 <h3>Small Business Owners and the QBI Deduction</h3>

@@ -50,7 +50,7 @@ export default function ArticlePage() {
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight tracking-tight" style={{ color: 'var(--color-text)' }}>
-                    Stop Wasting Money on BOI Filing If You Are a Domestic LLC — 2026 Update
+                    Stop Wasting Money on BOI Filing If You Are a Domestic LLC - 2026 Update
                 </h1>
 
                 <p className="text-xl leading-relaxed mb-8" style={{ color: 'var(--color-text-muted)' }}>

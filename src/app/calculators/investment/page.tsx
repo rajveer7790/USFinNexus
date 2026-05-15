@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         title: 'Free Compound Interest & Investment Calculator 2026 | USFinNexus',
         description: 'Visualize how your investments grow with compound interest. Compare total interest earned vs. principal deposits over any time period. Free interactive charts.',
         url: 'https://usfinnexus.com/calculators/investment',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Compound Interest Investment Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Compound Interest Investment Calculator 2026 - USFinNexus' }],
     },
 };
 

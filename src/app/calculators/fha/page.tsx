@@ -13,7 +13,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'FHA Loan Calculator 2026 — MIP, PMI, and Payment Breakdown | USFinNexus',
+    title: 'FHA Loan Calculator 2026 - MIP, PMI, and Payment Breakdown | USFinNexus',
     description:
         'Calculate your exact FHA mortgage payment including the upfront and annual Mortgage Insurance Premium (MIP). Free FHA calculator with 3.5% down payment options.',
     keywords: ['fha loan calculator', 'fha mortgage calculator', 'fha mip calculator', 'fha monthly payment', 'fha loans 2026'],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         title: 'FHA Loan Calculator 2026 with MIP | USFinNexus',
         description: 'Calculate your exact FHA loan monthly payment including upfront MIP (1.75%) and annual MIP fees. See the true cost of FHA financing with 3.5% down in 2026.',
         url: 'https://usfinnexus.com/calculators/fha',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'FHA Loan Calculator 2026 with MIP — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'FHA Loan Calculator 2026 with MIP - USFinNexus' }],
     },
     alternates: { canonical: 'https://usfinnexus.com/calculators/fha' },
 };

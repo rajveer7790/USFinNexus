@@ -123,7 +123,7 @@ export default function RefinanceClient() {
                                         <input type="number" className="glass-input pl-8" value={closingCosts} onChange={e => setClosingCosts(+e.target.value)} step={500} min={0} />
                                     </div>
                                     <p className="text-xs mt-2 font-bold text-gray-400 uppercase tracking-tighter italic">
-                                        Typically $3,000–$6,000 (1–3% of loan amount)
+                                        Typically $3,000-$6,000 (1-3% of loan amount)
                                     </p>
                                 </div>
                             </div>
@@ -188,8 +188,8 @@ export default function RefinanceClient() {
                                         {[
                                             { label: 'Monthly Payment', current: formatCurrency(currentMonthlyPayment), newVal: formatCurrency(result.newMonthlyPayment) },
                                             { label: 'Total Cost', current: formatCurrency(result.totalCurrentCost), newVal: formatCurrency(result.totalNewCost) },
-                                            { label: 'Break-Even Date', current: '—', newVal: result.breakEvenMonths !== Infinity ? formatMonthYear(result.breakEvenDate) : 'Never' },
-                                            { label: 'Net Savings (lifetime)', current: '—', newVal: formatCurrency(result.netSavings) },
+                                            { label: 'Break-Even Date', current: '-', newVal: result.breakEvenMonths !== Infinity ? formatMonthYear(result.breakEvenDate) : 'Never' },
+                                            { label: 'Net Savings (lifetime)', current: '-', newVal: formatCurrency(result.netSavings) },
                                         ].map(row => (
                                             <div key={row.label} className="grid grid-cols-3 gap-2 sm:gap-4 py-2 sm:py-3 border-b border-white/5 last:border-0 hover:bg-white/5 px-2 rounded-lg transition-colors group">
                                                 <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">{row.label}</span>

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         title: 'Free Student Loan Payoff Calculator 2026 | USFinNexus',
         description: 'Calculate your student loan payoff schedule and see exactly how much time and interest you save with extra monthly payments. Free PDF export, no signup needed.',
         url: 'https://usfinnexus.com/calculators/student-loan',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Student Loan Payoff Calculator — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Student Loan Payoff Calculator - USFinNexus' }],
     },
 };
 

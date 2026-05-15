@@ -127,7 +127,7 @@ export default function BudgetClient() {
                         {diff >= 0 ? <CheckCircle size={12} /> : <AlertTriangle size={12} />}
                         {diff >= 0
                             ? (group === 'savings'
-                                ? `${formatCurrency(Math.abs(diff))} below target — try to increase savings!`
+                                ? `${formatCurrency(Math.abs(diff))} below target - try to increase savings!`
                                 : `${formatCurrency(diff)} under budget ✓`)
                             : `${formatCurrency(Math.abs(diff))} over budget`}
                     </p>

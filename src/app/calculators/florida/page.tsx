@@ -13,7 +13,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Florida Mortgage Calculator 2026 — Hurricane Insurance & Property Taxes | USFinNexus',
+    title: 'Florida Mortgage Calculator 2026 - Hurricane Insurance & Property Taxes | USFinNexus',
     description: 'Free Florida Mortgage Calculator for 2026. Explicitly factor in Florida\'s rapidly rising homeowners and flood insurance premiums alongside property taxes.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/florida' },
     openGraph: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         title: 'Florida Mortgage Calculator 2026 | USFinNexus',
         description: 'Free Florida mortgage calculator for 2026. Factor in Florida\'s rising hurricane and flood insurance costs alongside property taxes to get your true PITI payment.',
         url: 'https://usfinnexus.com/calculators/florida',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Florida Mortgage Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Florida Mortgage Calculator 2026 - USFinNexus' }],
     },
 };
 

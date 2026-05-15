@@ -83,7 +83,7 @@ export default function ArticlePage() {
                 <div className="not-prose my-8 p-5 rounded-2xl border border-[#0da6f2]/30 bg-blue-50 flex flex-col sm:flex-row items-start sm:items-center gap-4">
                     <div className="flex-1">
                         <p className="font-bold text-[#0A192F] text-base mb-1">Buying a home with cash or through an LLC?</p>
-                        <p className="text-sm text-gray-600">See your full closing costs breakdown — including transfer taxes, title fees, and FinCEN reporting obligations.</p>
+                        <p className="text-sm text-gray-600">See your full closing costs breakdown - including transfer taxes, title fees, and FinCEN reporting obligations.</p>
                     </div>
                     <Link href="/calculators/closing-costs" className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#0A192F] hover:bg-[#0d2640] text-white text-sm font-bold rounded-xl transition-colors whitespace-nowrap flex-shrink-0">
                         <Home size={15} /> Closing Costs Calculator

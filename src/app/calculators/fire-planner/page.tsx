@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         title: 'FIRE Timeline Calculator: Financial Independence Retire Early',
         description: 'See exactly how many years until you can retire early. Free FIRE calculator with interactive charts.',
         url: 'https://usfinnexus.com/calculators/fire-planner',
-        images: [{ url: 'https://usfinnexus.com/images/calculators-hero.png', width: 1200, height: 630, alt: 'FIRE Planner Calculator — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/calculators-hero.png', width: 1200, height: 630, alt: 'FIRE Planner Calculator - USFinNexus' }],
     },
 };
 
@@ -59,7 +59,7 @@ export default function FirePlannerPage() {
             <h1 className="sr-only">FIRE Calculator: Financial Independence Retire Early</h1>
             <FirePlannerClient />
             <FirePlannerSeoContent />
-            <CalculatorFAQ faqs={FIRE_FAQS} title="FIRE Movement — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={FIRE_FAQS} title="FIRE Movement - Frequently Asked Questions" />
         </main>
     );
 }

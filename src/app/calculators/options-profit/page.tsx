@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         title: 'Options Trading Profit & Loss Calculator',
         description: 'Free tool to visualize options strategies. Calculate returns for Long Calls, Short Calls, Long Puts, and Short Puts.',
         url: 'https://usfinnexus.com/calculators/options-profit',
-        images: [{ url: 'https://usfinnexus.com/images/calculators-hero.png', width: 1200, height: 630, alt: 'Options Profit Calculator — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/calculators-hero.png', width: 1200, height: 630, alt: 'Options Profit Calculator - USFinNexus' }],
     },
 };
 
@@ -55,7 +55,7 @@ export default function OptionsProfitPage() {
             <h1 className="sr-only">Options Profit Calculator & Payoff Visualizer</h1>
             <OptionsProfitClient />
             <OptionsProfitSeoContent />
-            <CalculatorFAQ faqs={OPTIONS_FAQS} title="Options Trading — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={OPTIONS_FAQS} title="Options Trading - Frequently Asked Questions" />
         </main>
     );
 }

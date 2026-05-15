@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         title: 'Dividend Reinvestment (DRIP) Calculator 2026',
         description: 'Visualize the snowball effect of compounding dividends. Free DRIP forecaster for dividend growth investors.',
         url: 'https://usfinnexus.com/calculators/drip',
-        images: [{ url: 'https://usfinnexus.com/images/calculators-hero.png', width: 1200, height: 630, alt: 'DRIP Calculator — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/calculators-hero.png', width: 1200, height: 630, alt: 'DRIP Calculator - USFinNexus' }],
     },
 };
 
@@ -59,7 +59,7 @@ export default function DripPage() {
             <h1 className="sr-only">DRIP Calculator: Dividend Reinvestment Forecaster</h1>
             <DripClient />
             <DripSeoContent />
-            <CalculatorFAQ faqs={DRIP_FAQS} title="Dividend Investing — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={DRIP_FAQS} title="Dividend Investing - Frequently Asked Questions" />
         </main>
     );
 }

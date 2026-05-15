@@ -219,7 +219,7 @@ export default function HELOCClient() {
                                     <p className="font-bold text-sm" style={{ color: '#00C853' }}>Payment Jump Warning</p>
                                 </div>
                                 <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>
-                                    When the draw period ends, your payment increases from <strong style={{ color: 'var(--color-text)' }}>{formatCurrency(result.drawMonthlyPayment)}</strong> (interest-only) to <strong style={{ color: 'var(--color-text)' }}>{formatCurrency(result.repaymentMonthlyPayment)}</strong> (full P&amp;I) — a {formatPercent(result.repaymentMonthlyPayment > 0 ? ((result.repaymentMonthlyPayment - result.drawMonthlyPayment) / result.drawMonthlyPayment) * 100 : 0, 0)} increase. Plan accordingly.
+                                    When the draw period ends, your payment increases from <strong style={{ color: 'var(--color-text)' }}>{formatCurrency(result.drawMonthlyPayment)}</strong> (interest-only) to <strong style={{ color: 'var(--color-text)' }}>{formatCurrency(result.repaymentMonthlyPayment)}</strong> (full P&amp;I) - a {formatPercent(result.repaymentMonthlyPayment > 0 ? ((result.repaymentMonthlyPayment - result.drawMonthlyPayment) / result.drawMonthlyPayment) * 100 : 0, 0)} increase. Plan accordingly.
                                 </p>
                             </div>
 

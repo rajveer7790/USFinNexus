@@ -48,12 +48,12 @@ export default function ArticlesPage() {
                     FinCEN &amp; BOI Compliance Articles
                 </h1>
                 <p className="text-base md:text-lg max-w-2xl" style={{ color: 'var(--color-text-muted)' }}>
-                    Stay ahead of 2026 updates — March 1 Real Estate Reporting Rule, domestic BOI exemptions, NY Transparency Act, and TCJA tax changes.
+                    Stay ahead of 2026 updates - March 1 Real Estate Reporting Rule, domestic BOI exemptions, NY Transparency Act, and TCJA tax changes.
                 </p>
                 <p className="mt-2 text-sm font-medium text-gray-400">{ALL_ARTICLES.length} articles</p>
             </header>
 
-            {/* Featured Article — full-width hero card */}
+            {/* Featured Article - full-width hero card */}
             <Link
                 href={`/articles/${featured.slug}`}
                 className="group block mb-10 rounded-2xl overflow-hidden border border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all duration-200 bg-white"

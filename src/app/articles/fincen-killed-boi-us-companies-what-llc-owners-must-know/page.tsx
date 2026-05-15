@@ -50,7 +50,7 @@ export default function ArticlePage() {
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight tracking-tight" style={{ color: 'var(--color-text)' }}>
-                    FinCEN Just Killed BOI for Most US Companies — What Every LLC Owner Must Know in 2026
+                    FinCEN Just Killed BOI for Most US Companies - What Every LLC Owner Must Know in 2026
                 </h1>
 
                 <p className="text-xl leading-relaxed mb-8" style={{ color: 'var(--color-text-muted)' }}>

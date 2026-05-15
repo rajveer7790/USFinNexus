@@ -89,7 +89,7 @@ export default function ArticlePage() {
 
                 <h2>The Pre-2025 Chaos</h2>
                 <p>
-                    In 2024, the Financial Crimes Enforcement Network (FinCEN) mandated that virtually every small business—from local landscaping companies to multimillion-dollar real estate holding entities—upload the personal identification documents of their owners to a federal database.
+                    In 2024, the Financial Crimes Enforcement Network (FinCEN) mandated that virtually every small business-from local landscaping companies to multimillion-dollar real estate holding entities-upload the personal identification documents of their owners to a federal database.
                 </p>
                 <p>
                     The rollout was chaotic. The National Small Business Association (NSBA) successfully sued the Treasury in federal court, temporarily halting enforcement. However, subsequent appeals created a fractured landscape where identical businesses in different states faced different reporting requirements. Lawmakers from both sides of the aisle demanded FinCEN establish clear criteria that did not needlessly burden the American middle class.

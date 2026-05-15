@@ -36,7 +36,7 @@ export default function LabeledInput({
                     {label}
                 </label>
                 {helpText && (
-                    /* text-xs = 12px minimum — accessible */
+                    /* text-xs = 12px minimum - accessible */
                     <span className="text-xs text-gray-400 font-medium">{helpText}</span>
                 )}
             </div>

@@ -90,7 +90,7 @@ export default function ArticlePage() {
 
                 <h2>The 2026 Real Estate Bombshell</h2>
                 <p>
-                    For decades, the United States real estate market—particularly high-end residential luxury properties—has been an attractive haven for anonymous cash buyers. By utilizing shell companies, limited liability companies (LLCs), and complex trust structures, investors, celebrities, and foreign buyers could acquire American real estate without ever putting their actual names on a public deed or reporting form.
+                    For decades, the United States real estate market-particularly high-end residential luxury properties-has been an attractive haven for anonymous cash buyers. By utilizing shell companies, limited liability companies (LLCs), and complex trust structures, investors, celebrities, and foreign buyers could acquire American real estate without ever putting their actual names on a public deed or reporting form.
                 </p>
                 <p>
                     That all changes drastically on <strong>March 1, 2026</strong>. Following years of pilot programs via Geographic Targeting Orders (GTOs), the Treasury Department&apos;s Financial Crimes Enforcement Network (FinCEN) finalized a sweeping, nationwide reporting requirement. The new regulation aims to curb illicit finance, money laundering, and the parking of illicit funds in the U.S. housing market.
@@ -157,7 +157,7 @@ export default function ArticlePage() {
                     <li>The person that disburses the greatest amount of funds in connection with the transfer.</li>
                 </ol>
                 <p>
-                    For the real estate industry—title companies, escrow agents, and closing attorneys—this is a massive compliance headache. Not only must they collect highly sensitive data (passports, driver&apos;s licenses, home addresses) from high-net-worth clients, but they are also legally liable if they fail to report.
+                    For the real estate industry-title companies, escrow agents, and closing attorneys-this is a massive compliance headache. Not only must they collect highly sensitive data (passports, driver&apos;s licenses, home addresses) from high-net-worth clients, but they are also legally liable if they fail to report.
                 </p>
 
                 <h2>What Information Must Be Reported?</h2>
@@ -256,7 +256,7 @@ export default function ArticlePage() {
                     The days of walking into a title office with a cashier&apos;s check from a freshly minted, anonymous Delaware LLC and walking out with a deed and complete secrecy are over. The March 1, 2026 FinCEN Residential Real Estate Reporting Rule aligns the U.S. property market with global anti-money laundering standards.
                 </p>
                 <p>
-                    For legitimate real estate investors, this is merely an added layer of paperwork and a mild privacy intrusion. But failing to take it seriously, or working with a settlement agent who drops the ball, could result in catastrophic financial penalties. As we move into 2026, transparency is no longer optional—it is the law of the land.
+                    For legitimate real estate investors, this is merely an added layer of paperwork and a mild privacy intrusion. But failing to take it seriously, or working with a settlement agent who drops the ball, could result in catastrophic financial penalties. As we move into 2026, transparency is no longer optional-it is the law of the land.
                 </p>
 
                 <hr className="my-10 border-gray-200" />

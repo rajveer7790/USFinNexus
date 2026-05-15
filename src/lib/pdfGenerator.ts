@@ -53,7 +53,7 @@ export async function generateMortgagePDF(
     doc.setFontSize(13);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(greenR, greenG, greenB);
-    doc.text(`${calculatorName} Calculator — Full Report`, margin, 44);
+    doc.text(`${calculatorName} Calculator - Full Report`, margin, 44);
 
     // Date
     doc.setFontSize(8);
@@ -147,7 +147,7 @@ export async function generateMortgagePDF(
     doc.setFont('helvetica', 'normal');
     doc.text('usfinnexus.com', pageWidth - margin, 13, { align: 'right' });
 
-    // Show up to 360 rows (abbreviated for PDF readability — show yearly summary if >60 rows)
+    // Show up to 360 rows (abbreviated for PDF readability - show yearly summary if >60 rows)
     const showYearly = amortization.length > 120;
     let amortBody: string[][];
     let amortHead: string[];
@@ -204,7 +204,7 @@ export async function generateMortgagePDF(
     doc.setTextColor(50, 50, 70);
     doc.setFontSize(10);
     doc.setFont('helvetica', 'normal');
-    const disclaimerText = `DISCLAIMER — FOR ESTIMATION PURPOSES ONLY
+    const disclaimerText = `DISCLAIMER - FOR ESTIMATION PURPOSES ONLY
 
 The calculations and information provided in this report and on USFinNexus.com are for general informational and educational purposes only. They do NOT constitute financial, tax, mortgage, legal, or investment advice.
 
@@ -220,7 +220,7 @@ NO DATA COLLECTION: USFinNexus.com does not store, transmit, or sell any persona
 
 AFFILIATION: USFinNexus.com is not affiliated with, endorsed by, or sponsored by any government agency, financial institution, or lender.
 
-© ${new Date().getFullYear()} USFinNexus.com — Free Finance Calculators for Americans`;
+© ${new Date().getFullYear()} USFinNexus.com - Free Finance Calculators for Americans`;
 
     const lines = doc.splitTextToSize(disclaimerText, contentWidth);
     doc.text(lines, margin, 35);
@@ -238,7 +238,7 @@ AFFILIATION: USFinNexus.com is not affiliated with, endorsed by, or sponsored by
         doc.setFontSize(8);
         doc.setTextColor(100, 100, 110);
         doc.text(
-            `Page ${i} of ${totalPages} | USFinNexus.com — For estimation only`,
+            `Page ${i} of ${totalPages} | USFinNexus.com - For estimation only`,
             pageWidth / 2,
             pageHeight - 8,
             { align: 'center' }

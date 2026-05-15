@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'Privacy Policy | USFinNexus',
-    description: 'USFinNexus.com privacy policy — we collect minimal data and never sell your information.',
+    description: 'USFinNexus.com privacy policy - we collect minimal data and never sell your information.',
     alternates: { canonical: 'https://usfinnexus.com/privacy' },
 };
 
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
                 {[
                     {
                         title: '1. Information We Do Not Collect',
-                        body: "All calculator inputs you enter on USFinNexus.com are processed entirely within your web browser. We do not transmit, store, or have access to any financial data you enter into our calculators — home prices, income, debts, loan amounts, or any other personal financial information.",
+                        body: "All calculator inputs you enter on USFinNexus.com are processed entirely within your web browser. We do not transmit, store, or have access to any financial data you enter into our calculators - home prices, income, debts, loan amounts, or any other personal financial information.",
                     },
                     {
                         title: '2. Analytics (Anonymous)',
@@ -39,7 +39,7 @@ export default function PrivacyPage() {
                     },
                     {
                         title: '6. Third-Party Services',
-                        body: "Google Fonts (typography loading), Vercel (hosting infrastructure — no personal data logged). We do not share data with mortgage lenders, real estate companies, or lead-generation services.",
+                        body: "Google Fonts (typography loading), Vercel (hosting infrastructure - no personal data logged). We do not share data with mortgage lenders, real estate companies, or lead-generation services.",
                     },
                     {
                         title: '7. Children\'s Privacy',

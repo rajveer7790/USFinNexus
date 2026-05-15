@@ -1,8 +1,8 @@
 /**
  * US Property Tax Estimates by State + Popular ZIP Code Overrides
- * Source: Tax Foundation 2025–2026 State Property Tax Data
+ * Source: Tax Foundation 2025-2026 State Property Tax Data
  * Values are effective tax rates as percentage of home value.
- * These are ESTIMATES only — actual taxes vary by county and local assessment.
+ * These are ESTIMATES only - actual taxes vary by county and local assessment.
  */
 
 export interface TaxEstimate {
@@ -11,7 +11,7 @@ export interface TaxEstimate {
     source: 'state' | 'zip';
 }
 
-// State-level effective property tax rates (2025–2026)
+// State-level effective property tax rates (2025-2026)
 // Source: Tax Foundation, Lincoln Institute of Land Policy
 export const STATE_TAX_RATES: Record<string, TaxEstimate> = {
     AL: { rate: 0.41, insurance: 1800, source: 'state' },  // Alabama
@@ -125,7 +125,7 @@ export function getTaxEstimate(zip: string, stateCode?: string): TaxEstimate {
     const cleanZip = zip.replace(/\D/g, '').slice(0, 5);
     if (ZIP_TAX_OVERRIDES[cleanZip]) return ZIP_TAX_OVERRIDES[cleanZip];
 
-    // Map ZIP to state (simplified — use stateCode if provided)
+    // Map ZIP to state (simplified - use stateCode if provided)
     const state = stateCode?.toUpperCase() ?? zipToState(cleanZip);
     if (state && STATE_TAX_RATES[state]) return STATE_TAX_RATES[state];
 

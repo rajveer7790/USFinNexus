@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         default: 'Free Mortgage Calculator 2026 with PDF Download | USFinNexus',
     },
     description:
-        'Free mortgage, affordability, refinance & finance calculators. Get instant PDF & CSV reports — no signup, no email required. Built for Americans.',
+        'Free mortgage, affordability, refinance & finance calculators. Get instant PDF & CSV reports - no signup, no email required. Built for Americans.',
     keywords: [
         'free mortgage calculator', 'mortgage calculator with PDF download',
         'mortgage calculator 2026', 'affordability calculator', 'refinance calculator',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
                 url: 'https://usfinnexus.com/icon-512.png',
                 width: 512,
                 height: 512,
-                alt: 'USFinNexus — Free Mortgage & Finance Calculators',
+                alt: 'USFinNexus - Free Mortgage & Finance Calculators',
             },
         ],
     },
