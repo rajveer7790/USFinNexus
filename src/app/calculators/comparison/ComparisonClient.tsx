@@ -47,11 +47,11 @@ export default function ComparisonClient() {
         ['Down Payment', (s: Scenario) => `${formatCurrency(s.downPayment)} (${((s.downPayment / s.homePrice) * 100).toFixed(1)}%)`],
         ['Interest Rate', (s: Scenario) => `${s.rate}%`],
         ['Loan Term', (s: Scenario) => `${s.termYears} yr`],
-        ['Monthly P&I', (_: Scenario, r: typeof results[0]) => r ? formatCurrency(r.principalAndInterest) : '—'],
-        ['Monthly PITI', (_: Scenario, r: typeof results[0]) => r ? formatCurrency(r.totalMonthly) : '—'],
-        ['Loan Amount', (_: Scenario, r: typeof results[0]) => r ? formatCurrency(r.loanAmount) : '—'],
-        ['Total Interest', (_: Scenario, r: typeof results[0]) => r ? formatCurrency(r.totalInterest) : '—'],
-        ['Total Payments', (_: Scenario, r: typeof results[0]) => r ? formatCurrency(r.totalPayments) : '—'],
+        ['Monthly P&I', (_: Scenario, r: typeof results[0]) => r ? formatCurrency(r.principalAndInterest) : '-'],
+        ['Monthly PITI', (_: Scenario, r: typeof results[0]) => r ? formatCurrency(r.totalMonthly) : '-'],
+        ['Loan Amount', (_: Scenario, r: typeof results[0]) => r ? formatCurrency(r.loanAmount) : '-'],
+        ['Total Interest', (_: Scenario, r: typeof results[0]) => r ? formatCurrency(r.totalInterest) : '-'],
+        ['Total Payments', (_: Scenario, r: typeof results[0]) => r ? formatCurrency(r.totalPayments) : '-'],
     ] as [string, (s: Scenario, r: typeof results[0]) => string][];
 
     const bestPayment = results.reduce((best, r, i) => {

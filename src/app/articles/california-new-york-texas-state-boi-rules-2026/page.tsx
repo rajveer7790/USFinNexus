@@ -81,7 +81,7 @@ export default function ArticlePage() {
 
                 <h2>The Federal Exemption Gap</h2>
                 <p>
-                    In March 2025, when the Treasury Department carved out the expansive &quot;Domestic Ownership Exemption&quot; for BOI reporting, millions of American LLC owners breathed a collective sigh of relief. But what many business owners failed to realize is that the federal government&apos;s retreat created a vacuum—and several major states rushed to fill it.
+                    In March 2025, when the Treasury Department carved out the expansive &quot;Domestic Ownership Exemption&quot; for BOI reporting, millions of American LLC owners breathed a collective sigh of relief. But what many business owners failed to realize is that the federal government&apos;s retreat created a vacuum-and several major states rushed to fill it.
                 </p>
                 <p>
                     The reasoning is straightforward: state legislators argue that transparency at the state level remains critical for combating local corruption, real estate fraud, and tax evasion schemes that operate entirely within state borders.
@@ -103,7 +103,7 @@ export default function ArticlePage() {
                         <div>
                             <p className="font-bold text-red-900 m-0 mb-2">NY Penalties Are Severe</p>
                             <p className="text-red-800 m-0 text-sm">
-                                Failure to comply with the NYLLCTA can result in <strong>suspension or cancellation</strong> of your LLC&apos;s authority to do business in New York—effectively shutting you down.
+                                Failure to comply with the NYLLCTA can result in <strong>suspension or cancellation</strong> of your LLC&apos;s authority to do business in New York-effectively shutting you down.
                             </p>
                         </div>
                     </div>
@@ -159,7 +159,7 @@ export default function ArticlePage() {
 
                 <h2>Conclusion</h2>
                 <p>
-                    The 2026 compliance landscape is a patchwork. While the federal government has largely freed domestic LLCs from BOI reporting, individual states are filling in the gaps with their own transparency mandates. If you operate in California, New York, or Texas, make sure you understand your local obligations—federal exemption alone won&apos;t keep you safe.
+                    The 2026 compliance landscape is a patchwork. While the federal government has largely freed domestic LLCs from BOI reporting, individual states are filling in the gaps with their own transparency mandates. If you operate in California, New York, or Texas, make sure you understand your local obligations-federal exemption alone won&apos;t keep you safe.
                 </p>
 
                 <hr className="my-10 border-gray-200" />

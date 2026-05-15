@@ -12,7 +12,7 @@ export default function CryptoTaxSeoContent() {
             <p className="text-gray-600">You owe taxes on your cryptocurrency when you:</p>
             <ul className="list-disc pl-6 text-gray-600 mt-2 space-y-2">
                 <li><strong>Sell crypto for fiat currency</strong> (like USD).</li>
-                <li><strong>Trade one crypto for another crypto</strong> (e.g., trading Bitcoin for Ethereum). This is a common trap—you owe taxes on the gains of the Bitcoin you traded away, even if you never cashed out to a bank account!</li>
+                <li><strong>Trade one crypto for another crypto</strong> (e.g., trading Bitcoin for Ethereum). This is a common trap-you owe taxes on the gains of the Bitcoin you traded away, even if you never cashed out to a bank account!</li>
                 <li><strong>Use crypto to buy goods or services.</strong> If you buy a coffee with Bitcoin, you technically "sold" the Bitcoin to buy the coffee, triggering capital gains.</li>
             </ul>
 

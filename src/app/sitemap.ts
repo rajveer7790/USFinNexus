@@ -116,7 +116,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: CALC_PRIORITY[route],
     }));
 
-    // 3. Articles — use real publish dates from metadata
+    // 3. Articles - use real publish dates from metadata
     const articles = ALL_ARTICLES.map((article) => ({
         url: `${baseUrl}/articles/${article.slug}`,
         lastModified: parseArticleDate(article.date),

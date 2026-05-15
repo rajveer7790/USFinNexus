@@ -61,7 +61,7 @@ export default function BlogPost() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    With 2026 mortgage rates stabilizing around 6.5–7% and median home prices hovering near $420,000 nationally, the question &quot;How much house can I afford?&quot; has never been more important. Here&apos;s a clear, no-nonsense framework.
+                    With 2026 mortgage rates stabilizing around 6.5-7% and median home prices hovering near $420,000 nationally, the question &quot;How much house can I afford?&quot; has never been more important. Here&apos;s a clear, no-nonsense framework.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">The 28/36 Rule: Your Starting Point</h2>
@@ -95,11 +95,11 @@ export default function BlogPost() {
                         </li>
                         <li className="flex items-start gap-3">
                             <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#00C853' }} />
-                            <span><strong>At 6.75% rate, 30-year fixed:</strong> You can afford roughly a <strong>$285,000–$310,000</strong> home with 10% down</span>
+                            <span><strong>At 6.75% rate, 30-year fixed:</strong> You can afford roughly a <strong>$285,000-$310,000</strong> home with 10% down</span>
                         </li>
                         <li className="flex items-start gap-3">
                             <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#00C853' }} />
-                            <span><strong>With 20% down:</strong> You push that to <strong>$320,000–$350,000</strong> (and eliminate PMI)</span>
+                            <span><strong>With 20% down:</strong> You push that to <strong>$320,000-$350,000</strong> (and eliminate PMI)</span>
                         </li>
                     </ul>
                 </div>
@@ -111,11 +111,11 @@ export default function BlogPost() {
                         <div>
                             <h3 className="font-bold mb-2">Don&apos;t Forget These Expenses</h3>
                             <ul className="text-sm space-y-1 m-0 pl-4 list-disc">
-                                <li><strong>Property taxes:</strong> Varies wildly by state ($1,500–$15,000+ annually)</li>
-                                <li><strong>Homeowner&apos;s insurance:</strong> $1,200–$3,000/year on average</li>
-                                <li><strong>PMI:</strong> 0.5–1.5% of loan amount if under 20% down</li>
-                                <li><strong>HOA fees:</strong> $200–$600/month in many communities</li>
-                                <li><strong>Maintenance:</strong> Budget 1–2% of home value annually</li>
+                                <li><strong>Property taxes:</strong> Varies wildly by state ($1,500-$15,000+ annually)</li>
+                                <li><strong>Homeowner&apos;s insurance:</strong> $1,200-$3,000/year on average</li>
+                                <li><strong>PMI:</strong> 0.5-1.5% of loan amount if under 20% down</li>
+                                <li><strong>HOA fees:</strong> $200-$600/month in many communities</li>
+                                <li><strong>Maintenance:</strong> Budget 1-2% of home value annually</li>
                             </ul>
                         </div>
                     </div>
@@ -134,7 +134,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">The Conservative Approach</h2>
                 <p className="mb-6">
-                    Just because a lender approves you for $350,000 doesn&apos;t mean you should spend that much. Many financial advisors recommend the <strong>&quot;25% rule&quot;</strong>—keeping your total housing costs at or below 25% of your <em>take-home</em> (after-tax) pay, not your gross pay. This gives you a much larger cushion for emergencies, investments, and lifestyle.
+                    Just because a lender approves you for $350,000 doesn&apos;t mean you should spend that much. Many financial advisors recommend the <strong>&quot;25% rule&quot;</strong>-keeping your total housing costs at or below 25% of your <em>take-home</em> (after-tax) pay, not your gross pay. This gives you a much larger cushion for emergencies, investments, and lifestyle.
                 </p>
 
                 <hr className="my-10 border-gray-200" />

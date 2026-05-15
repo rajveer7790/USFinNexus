@@ -60,7 +60,7 @@ export default function FirstTimeBuyerProgramsBlog() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    The number one barrier to homeownership in America is not bad credit or high mortgage rates — it is the <strong>down payment</strong>. A survey by the National Association of Realtors found that 60% of non-homeowners say saving for a down payment is their biggest obstacle. What most people do not realize is that there are over <strong>2,600 down payment assistance programs</strong> operating across the US right now, along with federal loan programs that require as little as 0% down. This guide breaks down every major option available to first-time buyers in 2026 — the programs, the requirements, and how to actually get approved.
+                    The number one barrier to homeownership in America is not bad credit or high mortgage rates - it is the <strong>down payment</strong>. A survey by the National Association of Realtors found that 60% of non-homeowners say saving for a down payment is their biggest obstacle. What most people do not realize is that there are over <strong>2,600 down payment assistance programs</strong> operating across the US right now, along with federal loan programs that require as little as 0% down. This guide breaks down every major option available to first-time buyers in 2026 - the programs, the requirements, and how to actually get approved.
                 </p>
 
                 <div className="card p-6 mb-8 border-l-4" style={{ borderLeftColor: '#00C853' }}>
@@ -77,7 +77,7 @@ export default function FirstTimeBuyerProgramsBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Federal Loan Programs: Your Foundation</h2>
                 <p className="mb-4">
-                    Before looking at state and local assistance, make sure you understand the federal loan programs available. These are not grants — they are mortgage products with favorable terms designed specifically for lower-down-payment buyers.
+                    Before looking at state and local assistance, make sure you understand the federal loan programs available. These are not grants - they are mortgage products with favorable terms designed specifically for lower-down-payment buyers.
                 </p>
 
                 <div className="card p-6 mb-8">
@@ -114,7 +114,7 @@ export default function FirstTimeBuyerProgramsBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">FHA Loans: The Most Popular Choice for First-Time Buyers</h2>
                 <p className="mb-4">
-                    FHA loans are backed by the Federal Housing Administration and remain the go-to option for buyers with lower credit scores or smaller savings. With a credit score of 580 or above, you need just 3.5% down. On a $300,000 home, that is $10,500 — compared to $60,000 for a traditional 20% down payment.
+                    FHA loans are backed by the Federal Housing Administration and remain the go-to option for buyers with lower credit scores or smaller savings. With a credit score of 580 or above, you need just 3.5% down. On a $300,000 home, that is $10,500 - compared to $60,000 for a traditional 20% down payment.
                 </p>
                 <p className="mb-4">
                     The tradeoff is mortgage insurance. FHA loans require both an upfront mortgage insurance premium (1.75% of the loan amount, rolled into the loan) and monthly MIP that ranges from 0.45% to 1.05% annually depending on your loan-to-value ratio and loan term. The good news? Starting in 2026, FHA MIP is once again tax-deductible.
@@ -125,10 +125,10 @@ export default function FirstTimeBuyerProgramsBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">VA Loans: The Best Deal in American Lending</h2>
                 <p className="mb-4">
-                    If you are a veteran, active-duty service member, or surviving spouse, the VA loan is hands-down the most favorable mortgage product in the country. Zero down payment, no PMI, competitive rates, and limited closing costs. There is a VA funding fee (typically 1.25%–3.3% depending on usage), but many disabled veterans are exempt, and the fee can be rolled into the loan.
+                    If you are a veteran, active-duty service member, or surviving spouse, the VA loan is hands-down the most favorable mortgage product in the country. Zero down payment, no PMI, competitive rates, and limited closing costs. There is a VA funding fee (typically 1.25%-3.3% depending on usage), but many disabled veterans are exempt, and the fee can be rolled into the loan.
                 </p>
                 <p className="mb-4">
-                    VA loans have no official minimum credit score requirement, though most lenders set their own minimum around 580–620. There are also no maximum loan limits in most counties as of 2026 for borrowers with full entitlement. If you are eligible and not using a VA loan, you are likely overpaying for your mortgage.
+                    VA loans have no official minimum credit score requirement, though most lenders set their own minimum around 580-620. There are also no maximum loan limits in most counties as of 2026 for borrowers with full entitlement. If you are eligible and not using a VA loan, you are likely overpaying for your mortgage.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">USDA Loans: Zero Down in Qualifying Areas</h2>
@@ -136,7 +136,7 @@ export default function FirstTimeBuyerProgramsBlog() {
                     The USDA Rural Development loan is the other zero-down option, and the &ldquo;rural&rdquo; label is misleading. Qualifying areas include many suburban neighborhoods outside major metro areas. You can check property eligibility on the USDA&apos;s interactive map at rd.usda.gov.
                 </p>
                 <p className="mb-4">
-                    Income limits apply — generally your household income must be at or below 115% of the area median income. USDA loans carry a 1% upfront guarantee fee and 0.35% annual fee, both of which are lower than FHA insurance costs.
+                    Income limits apply - generally your household income must be at or below 115% of the area median income. USDA loans carry a 1% upfront guarantee fee and 0.35% annual fee, both of which are lower than FHA insurance costs.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Down Payment Assistance (DPA) Programs</h2>
@@ -145,19 +145,19 @@ export default function FirstTimeBuyerProgramsBlog() {
                 </p>
                 <ul className="list-disc pl-6 mb-8 space-y-3">
                     <li>
-                        <strong>Grants</strong> — Free money that never needs to be repaid. Many state HFAs offer grants of $5,000 to $25,000 for qualifying buyers.
+                        <strong>Grants</strong> - Free money that never needs to be repaid. Many state HFAs offer grants of $5,000 to $25,000 for qualifying buyers.
                     </li>
                     <li>
-                        <strong>Forgivable second mortgages</strong> — You receive a second loan for the down payment that is completely forgiven after you live in the home for a set period (usually 5–10 years).
+                        <strong>Forgivable second mortgages</strong> - You receive a second loan for the down payment that is completely forgiven after you live in the home for a set period (usually 5-10 years).
                     </li>
                     <li>
-                        <strong>Deferred-payment loans</strong> — A second mortgage with no interest and no monthly payments, due only when you sell, refinance, or pay off your primary mortgage.
+                        <strong>Deferred-payment loans</strong> - A second mortgage with no interest and no monthly payments, due only when you sell, refinance, or pay off your primary mortgage.
                     </li>
                     <li>
-                        <strong>Low-interest second loans</strong> — Below-market-rate financing for your down payment, repaid gradually alongside your primary mortgage.
+                        <strong>Low-interest second loans</strong> - Below-market-rate financing for your down payment, repaid gradually alongside your primary mortgage.
                     </li>
                     <li>
-                        <strong>Employer-sponsored assistance</strong> — Some hospitals, universities, and large employers offer housing benefits like matched savings or direct grants for employee home purchases.
+                        <strong>Employer-sponsored assistance</strong> - Some hospitals, universities, and large employers offer housing benefits like matched savings or direct grants for employee home purchases.
                     </li>
                 </ul>
 
@@ -168,10 +168,10 @@ export default function FirstTimeBuyerProgramsBlog() {
                 <div className="card p-6 mb-8">
                     <ul className="space-y-4">
                         {[
-                            ['Search your state HFA website', 'Every state has a Housing Finance Agency. Search "[Your State] Housing Finance Agency" — for example, CalHFA (California), TSAHC (Texas), SONYMA (New York). These agencies list all active down payment assistance programs.'],
+                            ['Search your state HFA website', 'Every state has a Housing Finance Agency. Search "[Your State] Housing Finance Agency" - for example, CalHFA (California), TSAHC (Texas), SONYMA (New York). These agencies list all active down payment assistance programs.'],
                             ['Check HUD\'s local resources page', 'Visit HUD.gov and search for housing counseling agencies and homebuyer assistance programs by ZIP code. HUD-approved counselors can walk you through all available programs for free.'],
                             ['Ask your lender specifically', 'Not all lenders participate in every DPA program. When shopping for a mortgage, ask each lender: "Which down payment assistance programs are you approved to offer?" If they only offer conventional products, find a lender who is DPA-approved.'],
-                            ['Complete homebuyer education', 'Most DPA programs require a HUD-approved homebuyer education course. Many are available online, take 4–8 hours, and cost $0–$99. Completing this before you apply speeds up your approval.'],
+                            ['Complete homebuyer education', 'Most DPA programs require a HUD-approved homebuyer education course. Many are available online, take 4-8 hours, and cost $0-$99. Completing this before you apply speeds up your approval.'],
                             ['Check employer benefits', 'Ask your HR department if your employer offers any housing assistance. Large hospital systems, universities, and government agencies sometimes offer this as an employee benefit.'],
                         ].map(([title, desc]) => (
                             <li key={String(title)} className="flex items-start gap-3">
@@ -190,12 +190,12 @@ export default function FirstTimeBuyerProgramsBlog() {
                     While every program is different, most share a common set of requirements. Meeting these upfront will save you time and frustration:
                 </p>
                 <ul className="list-disc pl-6 mb-8 space-y-2">
-                    <li><strong>Income limits</strong> — Most programs cap household income at 80–120% of the area median income (AMI). A family earning $90,000 in a metro area with $95,000 AMI would qualify for 100% AMI programs.</li>
-                    <li><strong>Purchase price limits</strong> — The home price must fall below a certain threshold, which varies by program and county.</li>
-                    <li><strong>Minimum credit score</strong> — Usually 620 or higher, though some programs accept 580 with FHA financing.</li>
-                    <li><strong>Primary residence</strong> — You must occupy the home as your primary residence (no investment properties).</li>
-                    <li><strong>Homebuyer education</strong> — A completed HUD-approved course is typically mandatory.</li>
-                    <li><strong>Residency period</strong> — Forgivable loans usually require you to stay in the home for 5–10 years to receive full forgiveness.</li>
+                    <li><strong>Income limits</strong> - Most programs cap household income at 80-120% of the area median income (AMI). A family earning $90,000 in a metro area with $95,000 AMI would qualify for 100% AMI programs.</li>
+                    <li><strong>Purchase price limits</strong> - The home price must fall below a certain threshold, which varies by program and county.</li>
+                    <li><strong>Minimum credit score</strong> - Usually 620 or higher, though some programs accept 580 with FHA financing.</li>
+                    <li><strong>Primary residence</strong> - You must occupy the home as your primary residence (no investment properties).</li>
+                    <li><strong>Homebuyer education</strong> - A completed HUD-approved course is typically mandatory.</li>
+                    <li><strong>Residency period</strong> - Forgivable loans usually require you to stay in the home for 5-10 years to receive full forgiveness.</li>
                 </ul>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Action Plan: Getting Approved Step by Step</h2>
@@ -206,11 +206,11 @@ export default function FirstTimeBuyerProgramsBlog() {
                             'Check your credit report at AnnualCreditReport.com (free) and dispute any errors',
                             'Complete a HUD-approved homebuyer education course (online options available)',
                             'Research DPA programs on your state HFA website and HUD.gov',
-                            'Get pre-approved with a DPA-participating lender (get 3–5 lender quotes)',
+                            'Get pre-approved with a DPA-participating lender (get 3-5 lender quotes)',
                             'Use our affordability calculator to set a realistic home price range',
                             'Partner with a buyer\'s agent experienced with DPA transactions',
                             'Begin house hunting within your pre-approved price range',
-                            'Apply for DPA concurrently with your mortgage application — timing matters',
+                            'Apply for DPA concurrently with your mortgage application - timing matters',
                         ].map(item => (
                             <li key={item} className="flex items-start gap-3">
                                 <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#00C853' }} />

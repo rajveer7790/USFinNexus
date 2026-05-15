@@ -18,7 +18,7 @@ export default function DripSeoContent() {
 
             <h3 className="text-xl font-semibold text-gray-800 mt-8">Taxes and DRIPs</h3>
             <p className="text-gray-600">
-                One crucial factor to consider when reinvesting dividends is taxes. Unless your investments are held in a tax-advantaged account like a Roth IRA or traditional 401(k), you will owe taxes on the dividends you receive every year—<strong>even if you automatically reinvest them</strong>.
+                One crucial factor to consider when reinvesting dividends is taxes. Unless your investments are held in a tax-advantaged account like a Roth IRA or traditional 401(k), you will owe taxes on the dividends you receive every year-<strong>even if you automatically reinvest them</strong>.
             </p>
             <div className="bg-purple-50 border-l-4 border-purple-500 p-4 mt-4 text-purple-900">
                 <p className="m-0 font-medium text-sm">

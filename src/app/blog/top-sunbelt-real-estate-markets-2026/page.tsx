@@ -106,7 +106,7 @@ export default function SunbeltRealEstateBlog() {
 
             <div className="prose max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-lg font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    The "Sunbelt migration" isn't just a pandemic-era fad—it's completely reshaping the US housing landscape. As we move deeper into 2026, smart real estate investors are looking beyond historically overheated markets like Austin and Miami. Instead, they are turning to emerging secondary cities that offer the perfect triad for investment: strong job growth, inbound population migration, and, crucially, housing affordability.
+                    The "Sunbelt migration" isn't just a pandemic-era fad-it's completely reshaping the US housing landscape. As we move deeper into 2026, smart real estate investors are looking beyond historically overheated markets like Austin and Miami. Instead, they are turning to emerging secondary cities that offer the perfect triad for investment: strong job growth, inbound population migration, and, crucially, housing affordability.
                 </p>
 
                 <p className="mb-4">

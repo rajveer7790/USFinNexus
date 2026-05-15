@@ -34,7 +34,7 @@ export default function ClosingCostsSeoContent() {
                     Seller Closing Costs (The Breakdown)
                 </h3>
                 <p>
-                    Sellers usually face a much larger closing cost burden—typically <strong>6% to 10%</strong> of the total home sale price. The massive majority of this is realtor commissions.
+                    Sellers usually face a much larger closing cost burden-typically <strong>6% to 10%</strong> of the total home sale price. The massive majority of this is realtor commissions.
                 </p>
                 <ul>
                     <li>

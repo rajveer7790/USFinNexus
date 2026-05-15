@@ -41,7 +41,7 @@ export default function DownPaymentSeoContent() {
                     Don&apos;t Forget About Closing Costs
                 </h3>
                 <p>
-                    Your down payment is not the only cash you need on closing day. You must also pay &quot;Closing Costs&quot;—the massive bundle of fees for appraisals, taxes, title insurance, and lender underwriting.
+                    Your down payment is not the only cash you need on closing day. You must also pay &quot;Closing Costs&quot;-the massive bundle of fees for appraisals, taxes, title insurance, and lender underwriting.
                 </p>
                 <p>
                     Closing costs typically run between <strong>2% to 5% of the home&apos;s purchase price</strong>. This means if you are buying a $400,000 home with a 5% down payment ($20,000), you realistically need to have $32,000 to $40,000 in your bank account to actually close the deal. Check our <Link href="/calculators/closing-costs" className="text-blue-600 hover:underline">Closing Costs Calculator</Link> for a state-specific breakdown.

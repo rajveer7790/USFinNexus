@@ -51,7 +51,7 @@ export default function ArticlePage() {
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight tracking-tight" style={{ color: 'var(--color-text)' }}>
-                    2026 Tax Changes: 20% QBI Deduction Made Permanent — Save Big on Your LLC
+                    2026 Tax Changes: 20% QBI Deduction Made Permanent - Save Big on Your LLC
                 </h1>
 
                 <p className="text-xl leading-relaxed mb-8" style={{ color: 'var(--color-text-muted)' }}>
@@ -92,7 +92,7 @@ export default function ArticlePage() {
 
                 <h2>What Is the QBI Deduction?</h2>
                 <p>
-                    The Qualified Business Income (QBI) deduction, also known as the Section 199A deduction, allows owners of pass-through entities—such as LLCs, S-corporations, sole proprietorships, and partnerships—to deduct up to <strong>20% of their qualified business income</strong> from their personal tax returns.
+                    The Qualified Business Income (QBI) deduction, also known as the Section 199A deduction, allows owners of pass-through entities-such as LLCs, S-corporations, sole proprietorships, and partnerships-to deduct up to <strong>20% of their qualified business income</strong> from their personal tax returns.
                 </p>
                 <p>
                     In practical terms, if your LLC generates $100,000 in qualified business income, you can deduct $20,000 before calculating your federal income tax. This can result in thousands of dollars in annual savings.
@@ -119,7 +119,7 @@ export default function ArticlePage() {
                     <li><strong>Sole proprietors</strong> and independent contractors.</li>
                 </ul>
                 <p>
-                    However, there are income thresholds and limitations for Specified Service Trades or Businesses (SSTBs)—such as doctors, lawyers, and consultants—once taxable income exceeds certain levels ($191,950 for single filers and $383,900 for joint filers in 2026).
+                    However, there are income thresholds and limitations for Specified Service Trades or Businesses (SSTBs)-such as doctors, lawyers, and consultants-once taxable income exceeds certain levels ($191,950 for single filers and $383,900 for joint filers in 2026).
                 </p>
 
                 <h2>How Much Can You Save?</h2>
@@ -168,7 +168,7 @@ export default function ArticlePage() {
 
                 <h2>Conclusion</h2>
                 <p>
-                    The permanent 20% QBI deduction is a landmark victory for small business owners. Whether you&apos;re a freelance developer, a real estate investor, or a local retail owner operating through an LLC, this deduction can save you thousands every year—forever. Make sure you&apos;re taking full advantage in 2026.
+                    The permanent 20% QBI deduction is a landmark victory for small business owners. Whether you&apos;re a freelance developer, a real estate investor, or a local retail owner operating through an LLC, this deduction can save you thousands every year-forever. Make sure you&apos;re taking full advantage in 2026.
                 </p>
 
                 <hr className="my-10 border-gray-200" />

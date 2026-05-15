@@ -63,7 +63,7 @@ export default function UnclaimedMoneyGuideBlog() {
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
                     According to the National Association of Unclaimed Property Administrators (NAUPA), more than{' '}
-                    <strong>$58 billion in unclaimed property</strong> is held by US state governments — with an average
+                    <strong>$58 billion in unclaimed property</strong> is held by US state governments - with an average
                     claim value exceeding $1,000. This guide shows you exactly how to search official government databases
                     to reclaim money that may be rightfully yours. Everything here is 100% free and uses only official
                     government resources.
@@ -76,7 +76,7 @@ export default function UnclaimedMoneyGuideBlog() {
                             <h3 className="font-bold mb-1 text-base">Quick Start: Search Right Now</h3>
                             <p className="text-sm m-0">
                                 Go to <strong>MissingMoney.com</strong> (official NAUPA database) and enter your full name
-                                and every state you have ever lived in. It searches most states simultaneously — takes
+                                and every state you have ever lived in. It searches most states simultaneously - takes
                                 under 2 minutes and costs nothing.
                             </p>
                         </div>
@@ -85,8 +85,8 @@ export default function UnclaimedMoneyGuideBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Counts as &ldquo;Unclaimed Property&rdquo;?</h2>
                 <p className="mb-4">
-                    Unclaimed property is any financial asset that has been abandoned by its owner — typically after
-                    3–5 years of inactivity. States are legally required to hold these funds indefinitely until the
+                    Unclaimed property is any financial asset that has been abandoned by its owner - typically after
+                    3-5 years of inactivity. States are legally required to hold these funds indefinitely until the
                     rightful owner (or their heirs) claims them. Common types include:
                 </p>
                 <ul className="list-disc pl-6 mb-8 space-y-2">
@@ -111,21 +111,21 @@ export default function UnclaimedMoneyGuideBlog() {
                         <li className="flex items-start gap-3">
                             <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#00C853' }} />
                             <span>
-                                <strong>MissingMoney.com</strong> — Official NAUPA database covering most states.
+                                <strong>MissingMoney.com</strong> - Official NAUPA database covering most states.
                                 Search by name and state simultaneously.
                             </span>
                         </li>
                         <li className="flex items-start gap-3">
                             <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#00C853' }} />
                             <span>
-                                <strong>Unclaimed.org</strong> — The NAUPA member directory links directly to every
+                                <strong>Unclaimed.org</strong> - The NAUPA member directory links directly to every
                                 state&apos;s official unclaimed property website.
                             </span>
                         </li>
                         <li className="flex items-start gap-3">
                             <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#00C853' }} />
                             <span>
-                                <strong>Your state&apos;s official controller or treasury website</strong> — California
+                                <strong>Your state&apos;s official controller or treasury website</strong> - California
                                 (sco.ca.gov), Texas (claimittexas.org), New York (osc.state.ny.us), Florida
                                 (myfloridacfo.com/division/unclaimed).
                             </span>
@@ -145,22 +145,22 @@ export default function UnclaimedMoneyGuideBlog() {
                 </p>
                 <ul className="list-disc pl-6 mb-6 space-y-3">
                     <li>
-                        <strong>DOL Abandoned Plan Search</strong> — The Department of Labor&apos;s abandoned plan
+                        <strong>DOL Abandoned Plan Search</strong> - The Department of Labor&apos;s abandoned plan
                         database (dol.gov) lists terminated employer plans with contact information for the
                         plan administrator.
                     </li>
                     <li>
-                        <strong>PBGC Pension Search</strong> — The Pension Benefit Guaranty Corporation (pbgc.gov)
+                        <strong>PBGC Pension Search</strong> - The Pension Benefit Guaranty Corporation (pbgc.gov)
                         holds pension benefits from terminated defined-benefit plans. Their &ldquo;Find an Unclaimed
                         Pension&rdquo; tool is free.
                     </li>
                     <li>
-                        <strong>National Registry of Unclaimed Retirement Benefits</strong> — A free registry
+                        <strong>National Registry of Unclaimed Retirement Benefits</strong> - A free registry
                         (unclaimedretirementbenefits.com) that former employees can search to find 401(k) funds
                         from old employers.
                     </li>
                     <li>
-                        <strong>Social Security Statement</strong> — Your SSA.gov &ldquo;My Social Security&rdquo;
+                        <strong>Social Security Statement</strong> - Your SSA.gov &ldquo;My Social Security&rdquo;
                         account shows your full earnings history. Cross-reference against employers to catch
                         years where a pension may have accrued.
                     </li>
@@ -198,8 +198,8 @@ export default function UnclaimedMoneyGuideBlog() {
                     Here is how to search:
                 </p>
                 <ul className="list-disc pl-6 mb-8 space-y-2">
-                    <li>Search the state unclaimed property database (Step 1) — insurance proceeds appear there</li>
-                    <li>Contact the NAIC (naic.org) Life Insurance Policy Locator — a free service that queries
+                    <li>Search the state unclaimed property database (Step 1) - insurance proceeds appear there</li>
+                    <li>Contact the NAIC (naic.org) Life Insurance Policy Locator - a free service that queries
                         member insurers on your behalf</li>
                     <li>If you know the insurer, contact them directly with the decedent&apos;s Social Security number</li>
                 </ul>
@@ -211,9 +211,9 @@ export default function UnclaimedMoneyGuideBlog() {
                             <h3 className="font-bold mb-2 text-base text-amber-900">Avoid Unclaimed Money Scams</h3>
                             <ul className="text-sm space-y-1 text-amber-800 m-0 list-disc pl-4">
                                 <li>Legitimate claim services are always free. Any site charging upfront fees is a scam.</li>
-                                <li>&ldquo;Heir hunter&rdquo; services that take a percentage are legal but unnecessary — claim directly yourself.</li>
+                                <li>&ldquo;Heir hunter&rdquo; services that take a percentage are legal but unnecessary - claim directly yourself.</li>
                                 <li>Never provide your bank account number or pay fees to &ldquo;release&rdquo; a claim.</li>
-                                <li>All official databases end in .gov — bookmark them directly.</li>
+                                <li>All official databases end in .gov - bookmark them directly.</li>
                             </ul>
                         </div>
                     </div>
@@ -260,7 +260,7 @@ export default function UnclaimedMoneyGuideBlog() {
                     <h3 className="text-xl font-bold mb-3">Found Money? Put It to Work</h3>
                     <p className="text-sm mb-6" style={{ color: 'var(--color-text-muted)' }}>
                         Once you reclaim unclaimed funds, use our free calculators to decide the smartest way
-                        to deploy them — toward your mortgage principal, debt payoff, or retirement savings.
+                        to deploy them - toward your mortgage principal, debt payoff, or retirement savings.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <Link href="/calculators/mortgage" className="btn-primary py-3 px-6 text-sm">

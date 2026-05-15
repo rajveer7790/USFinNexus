@@ -61,12 +61,12 @@ export default function BlogPost() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    With 2026 mortgage rates fluctuating between 6.25% and 7.25%, many homeowners who locked in at peak 2023–2024 rates (7.5%+) are wondering: is now the right time to refinance? The answer depends entirely on your <strong>break-even point</strong>.
+                    With 2026 mortgage rates fluctuating between 6.25% and 7.25%, many homeowners who locked in at peak 2023-2024 rates (7.5%+) are wondering: is now the right time to refinance? The answer depends entirely on your <strong>break-even point</strong>.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">The Break-Even Formula</h2>
                 <p className="mb-6">
-                    The single most important number in any refinance decision is your <strong>break-even point</strong>—the number of months it takes for your monthly savings to exceed the total cost of refinancing.
+                    The single most important number in any refinance decision is your <strong>break-even point</strong>-the number of months it takes for your monthly savings to exceed the total cost of refinancing.
                 </p>
 
                 <div className="card p-6 mb-8 border-l-4" style={{ borderLeftColor: 'var(--color-navy)' }}>
@@ -131,7 +131,7 @@ export default function BlogPost() {
                     </div>
                     <div className="card p-5">
                         <h4 className="font-bold mb-2" style={{ color: 'var(--color-navy)' }}>Cash-Out Refi</h4>
-                        <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>Borrow more than you owe and pocket the difference. Best for home improvements or debt consolidation—not vacations.</p>
+                        <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>Borrow more than you owe and pocket the difference. Best for home improvements or debt consolidation-not vacations.</p>
                     </div>
                     <div className="card p-5">
                         <h4 className="font-bold mb-2" style={{ color: 'var(--color-navy)' }}>Streamline Refi</h4>
@@ -145,7 +145,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Bottom Line</h2>
                 <p className="mb-6">
-                    Refinancing in 2026 can save you hundreds per month—but only if the numbers work. Always calculate your break-even point before committing. If the math checks out and you plan to stay in your home long enough, refinancing is one of the most financially impactful moves you can make.
+                    Refinancing in 2026 can save you hundreds per month-but only if the numbers work. Always calculate your break-even point before committing. If the math checks out and you plan to stay in your home long enough, refinancing is one of the most financially impactful moves you can make.
                 </p>
 
                 <hr className="my-10 border-gray-200" />

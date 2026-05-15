@@ -50,7 +50,7 @@ export default function ArticlePage() {
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight tracking-tight" style={{ color: 'var(--color-text)' }}>
-                    Foreign-Owned US LLCs: Your New 30-Day BOI Deadline in 2026 – Don&apos;t Miss It!
+                    Foreign-Owned US LLCs: Your New 30-Day BOI Deadline in 2026 - Don&apos;t Miss It!
                 </h1>
 
                 <p className="text-xl leading-relaxed mb-8" style={{ color: 'var(--color-text-muted)' }}>
@@ -167,7 +167,7 @@ export default function ArticlePage() {
                     For international entrepreneurs seeking access to the lucrative U.S. consumer market, forming an LLC in Delaware or Wyoming remains an excellent strategy. However, the regulatory toll for doing business has increased.
                 </p>
                 <p>
-                    FinCEN&apos;s 2026 stance is clear: you are welcome to utilize US entity structures, but you will be closely monitored, and you will comply promptly. Incorporate the BOI filing into the very first steps of your operational launch checklist—do not wait for the EIN to arrive, and do not try to file on day 29.
+                    FinCEN&apos;s 2026 stance is clear: you are welcome to utilize US entity structures, but you will be closely monitored, and you will comply promptly. Incorporate the BOI filing into the very first steps of your operational launch checklist-do not wait for the EIN to arrive, and do not try to file on day 29.
                 </p>
 
                 <hr className="my-10 border-gray-200" />

@@ -61,12 +61,12 @@ export default function BlogPost() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    Private Mortgage Insurance (PMI) is the extra monthly fee you pay when your down payment is less than 20% of the home&apos;s purchase price. It protects the <em>lender</em>—not you—but it costs <em>you</em> $100–$400+ per month. Here&apos;s everything you need to know to minimize and eventually eliminate this cost.
+                    Private Mortgage Insurance (PMI) is the extra monthly fee you pay when your down payment is less than 20% of the home&apos;s purchase price. It protects the <em>lender</em>-not you-but it costs <em>you</em> $100-$400+ per month. Here&apos;s everything you need to know to minimize and eventually eliminate this cost.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Is PMI?</h2>
                 <p className="mb-6">
-                    When you buy a home with less than 20% down, the lender considers you a higher-risk borrower. PMI is an insurance policy that protects the lender in case you default on the mortgage. The borrower pays the premium, but receives zero benefit from the coverage—it&apos;s purely for the lender&apos;s protection.
+                    When you buy a home with less than 20% down, the lender considers you a higher-risk borrower. PMI is an insurance policy that protects the lender in case you default on the mortgage. The borrower pays the premium, but receives zero benefit from the coverage-it&apos;s purely for the lender&apos;s protection.
                 </p>
 
                 <div className="card p-6 mb-8 border-l-4" style={{ borderLeftColor: 'var(--color-navy)' }}>
@@ -74,7 +74,7 @@ export default function BlogPost() {
                         <Info className="w-6 h-6 shrink-0" style={{ color: 'var(--color-navy)' }} />
                         <div>
                             <h3 className="font-bold mb-2">The Cost</h3>
-                            <p className="text-sm m-0">PMI typically costs between <strong>0.5% and 1.5%</strong> of your total loan amount per year. On a $300,000 loan, that&apos;s $1,500 to $4,500 per year—or $125 to $375 per month added to your payment.</p>
+                            <p className="text-sm m-0">PMI typically costs between <strong>0.5% and 1.5%</strong> of your total loan amount per year. On a $300,000 loan, that&apos;s $1,500 to $4,500 per year-or $125 to $375 per month added to your payment.</p>
                         </div>
                     </div>
                 </div>
@@ -156,7 +156,7 @@ export default function BlogPost() {
                 <ol className="list-decimal pl-6 mb-8 space-y-2">
                     <li>Check your amortization schedule to see when you&apos;ll hit 80% LTV based on regular payments.</li>
                     <li>Make extra principal payments to reach 80% LTV faster.</li>
-                    <li>Request a new home appraisal if your home has appreciated—rising home values can push you past the 80% threshold sooner.</li>
+                    <li>Request a new home appraisal if your home has appreciated-rising home values can push you past the 80% threshold sooner.</li>
                     <li>Contact your lender in writing to formally request PMI removal once you meet the criteria.</li>
                 </ol>
 

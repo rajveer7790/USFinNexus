@@ -71,7 +71,7 @@ export default function BlogPost() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    In 2026, dozens of online mortgage calculators promise free results—but most lock the detailed PDF amortization schedule behind email captures or paid tiers. Here&apos;s how to find truly free tools that deliver instant downloads with zero strings attached.
+                    In 2026, dozens of online mortgage calculators promise free results-but most lock the detailed PDF amortization schedule behind email captures or paid tiers. Here&apos;s how to find truly free tools that deliver instant downloads with zero strings attached.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Why PDF Downloads Matter</h2>
@@ -81,7 +81,7 @@ export default function BlogPost() {
                 <ul className="list-disc pl-6 mb-8 space-y-2">
                     <li>Share the breakdown with your spouse, financial advisor, or real estate agent.</li>
                     <li>Compare multiple loan scenarios side-by-side on paper.</li>
-                    <li>Keep a permanent record for your files—no need to revisit the website.</li>
+                    <li>Keep a permanent record for your files-no need to revisit the website.</li>
                     <li>Bring a printed copy to your mortgage lender meeting for informed negotiation.</li>
                 </ul>
 
@@ -94,7 +94,7 @@ export default function BlogPost() {
                         </li>
                         <li className="flex items-start gap-3">
                             <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#00C853' }} />
-                            <span><strong>Full PITI breakdown:</strong> Principal, Interest, Taxes, and Insurance—not just P&amp;I.</span>
+                            <span><strong>Full PITI breakdown:</strong> Principal, Interest, Taxes, and Insurance-not just P&amp;I.</span>
                         </li>
                         <li className="flex items-start gap-3">
                             <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#00C853' }} />
@@ -113,7 +113,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">USFinNexus: Free Calculator with Instant PDF</h2>
                 <p className="mb-6">
-                    Our mortgage calculator at USFinNexus was built specifically to solve this problem. You get a fully detailed amortization schedule, PITI breakdown, and PMI estimates—all exportable to PDF and CSV with a single click. No signup, no email, no hidden costs.
+                    Our mortgage calculator at USFinNexus was built specifically to solve this problem. You get a fully detailed amortization schedule, PITI breakdown, and PMI estimates-all exportable to PDF and CSV with a single click. No signup, no email, no hidden costs.
                 </p>
 
                 <div className="card p-6 mb-8 border-l-4" style={{ borderLeftColor: 'var(--color-navy)' }}>
@@ -140,7 +140,7 @@ export default function BlogPost() {
 
                 <div className="card p-4 sm:p-6 text-center">
                     <Calculator className="w-10 h-10 mx-auto mb-4" style={{ color: 'var(--color-navy)' }} />
-                    <h3 className="text-xl font-bold mb-3">Try It Now — 100% Free</h3>
+                    <h3 className="text-xl font-bold mb-3">Try It Now - 100% Free</h3>
                     <p className="text-sm mb-6" style={{ color: 'var(--color-text-muted)' }}>
                         Get your full mortgage breakdown with PDF download in under 30 seconds.
                     </p>

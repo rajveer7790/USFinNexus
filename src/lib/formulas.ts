@@ -1,5 +1,5 @@
 /**
- * USFinNexus.com — Core Finance Formulas
+ * USFinNexus.com - Core Finance Formulas
  * All calculations follow CFPB guidelines and standard US mortgage math.
  * CFPB Reference: consumerfinance.gov
  * FHFA 2026 Conforming Loan Limit: $832,750
@@ -233,14 +233,14 @@ export const US_MORTGAGE_CONSTANTS = {
     // Standard PMI range (annual % of original loan)
     PMI_RATE_MIN: 0.0046,
     PMI_RATE_MAX: 0.0185,
-    PMI_RATE_DEFAULT: 0.0085,   // ~0.85% — typical for 5-10% down, good credit
+    PMI_RATE_DEFAULT: 0.0085,   // ~0.85% - typical for 5-10% down, good credit
 };
 
 // ─── Core Functions ───────────────────────────────────────────────────────────
 
 /**
  * Standard US fixed-rate mortgage monthly payment (P&I only).
- * Formula: M = P[r(1+r)^n] / [(1+r)^n – 1]
+ * Formula: M = P[r(1+r)^n] / [(1+r)^n - 1]
  * Source: CFPB mortgage payment formula
  */
 export function calcMonthlyPI(
@@ -406,7 +406,7 @@ export function calcYearlyAmortization(rows: AmortizationRow[]): {
 }
 
 /**
- * Affordability calculator — CFPB standard 28%/43% DTI guidelines.
+ * Affordability calculator - CFPB standard 28%/43% DTI guidelines.
  */
 export function calcAffordability(inputs: AffordabilityInputs): AffordabilityResult {
     const { grossMonthlyIncome, monthlyDebts, downPayment, annualInterestRate, loanTermYears } = inputs;

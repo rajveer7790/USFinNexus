@@ -84,12 +84,12 @@ const FORMULAS = [
     {
         title: 'PMI Calculation',
         formula: 'Annual PMI = Loan Amount × PMI Rate',
-        explanation: 'PMI rates range from 0.5%–1.5% of the loan amount annually, varying by credit score, LTV, and loan type. PMI is automatically canceled at 78% LTV per the Homeowners Protection Act of 1998.',
+        explanation: 'PMI rates range from 0.5%-1.5% of the loan amount annually, varying by credit score, LTV, and loan type. PMI is automatically canceled at 78% LTV per the Homeowners Protection Act of 1998.',
     },
     {
         title: 'Refinance Break-Even',
         formula: 'Break-Even Months = Total Closing Costs ÷ Monthly Payment Savings',
-        explanation: 'If the break-even period is less than your planned remaining stay in the home, refinancing is financially beneficial. Closing costs typically range from 2%–5% of the new loan amount.',
+        explanation: 'If the break-even period is less than your planned remaining stay in the home, refinancing is financially beneficial. Closing costs typically range from 2%-5% of the new loan amount.',
     },
 ];
 

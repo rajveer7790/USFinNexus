@@ -60,7 +60,7 @@ export default function DebtPayoffClient() {
                     Debt Payoff Calculator
                 </h1>
                 <p className="text-gray-500 max-w-2xl font-medium text-lg">
-                    Add your debts and compare payoff strategies. Snowball vs Avalanche — see which method saves you the most.
+                    Add your debts and compare payoff strategies. Snowball vs Avalanche - see which method saves you the most.
                 </p>
             </div>
 

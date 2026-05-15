@@ -10,15 +10,15 @@
  */
 
 export const AD_SLOTS = {
-    /** Horizontal banner — used at bottom of calculator pages */
+    /** Horizontal banner - used at bottom of calculator pages */
     CALCULATOR_BOTTOM: '1234567890',
 
-    /** Rectangle — used inside article / blog content */
+    /** Rectangle - used inside article / blog content */
     ARTICLE_MID: '1234567891',
 
-    /** Auto-format — used between sections on homepage */
+    /** Auto-format - used between sections on homepage */
     HOMEPAGE_BANNER: '1234567892',
 
-    /** Auto-format — used above related articles/calculators sections */
+    /** Auto-format - used above related articles/calculators sections */
     RELATED_SECTION: '1234567893',
 };

@@ -6,10 +6,10 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'NY BOI Law Starts January 2026 — Even If Federal BOI Is Exempt',
+    title: 'NY BOI Law Starts January 2026 - Even If Federal BOI Is Exempt',
     description: 'New York marches ahead with its own transparency framework regardless of federal changes. Learn what the NY LLC Transparency Act means for your business.',
     openGraph: {
-        title: 'NY BOI Law Starts January 2026 — Even If Federal BOI Is Exempt',
+        title: 'NY BOI Law Starts January 2026 - Even If Federal BOI Is Exempt',
         description: 'New York marches ahead with its own transparency framework regardless of federal changes. Learn what the NY LLC Transparency Act means for your business.',
         url: 'https://usfinnexus.com/articles/ny-boi-law-starts-january-2026-even-if-federal-exempt',
         type: 'article',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'NY BOI Law Starts January 2026 — Even If Federal BOI Is Exempt',
+        title: 'NY BOI Law Starts January 2026 - Even If Federal BOI Is Exempt',
         description: 'New York marches ahead with its own transparency framework regardless of federal changes. Learn what the NY LLC Transparency Act means for your business.',
         images: ['https://usfinnexus.com/images/ny_llc_transparency_hero_1772351646909.png'],
     },
@@ -31,7 +31,7 @@ export default function ArticlePage() {
     return (
         <>
         <ArticleSchema
-            title="NY BOI Law Starts January 2026 — Even If Federal BOI Is Exempt"
+            title="NY BOI Law Starts January 2026 - Even If Federal BOI Is Exempt"
             description="New York marches ahead with its own transparency framework regardless of federal changes. Learn what the NY LLC Transparency Act means for your business."
             url="https://usfinnexus.com/articles/ny-boi-law-starts-january-2026-even-if-federal-exempt"
             datePublished="2026-02-25"
@@ -50,7 +50,7 @@ export default function ArticlePage() {
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight tracking-tight" style={{ color: 'var(--color-text)' }}>
-                    NY BOI Law Starts January 2026 — Even If Federal BOI Is Exempt
+                    NY BOI Law Starts January 2026 - Even If Federal BOI Is Exempt
                 </h1>
 
                 <p className="text-xl leading-relaxed mb-8" style={{ color: 'var(--color-text-muted)' }}>
@@ -81,7 +81,7 @@ export default function ArticlePage() {
 
                 <h2>Why New York Didn&apos;t Wait for Washington</h2>
                 <p>
-                    When the federal government rolled back BOI requirements for domestic companies in early 2025, New York legislators saw an opportunity—and a risk. The state, home to one of the world&apos;s largest financial centers, was not willing to let the federal retreat create a loophole for illicit capital flows through New York LLCs.
+                    When the federal government rolled back BOI requirements for domestic companies in early 2025, New York legislators saw an opportunity-and a risk. The state, home to one of the world&apos;s largest financial centers, was not willing to let the federal retreat create a loophole for illicit capital flows through New York LLCs.
                 </p>
                 <p>
                     Governor Kathy Hochul signed the <strong>New York LLC Transparency Act</strong> into law in late 2024, with an effective date of <strong>January 1, 2026</strong>. The law mirrors much of the original federal CTA framework but operates entirely under state jurisdiction.

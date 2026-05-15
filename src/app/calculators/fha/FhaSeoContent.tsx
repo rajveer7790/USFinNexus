@@ -26,7 +26,7 @@ export default function FhaSeoContent() {
                         <strong>FHA Loan Limits:</strong> The FHA limits how much you can borrow, based on the county you live in. In 2026, the baseline FHA loan limit &quot;floor&quot; in low-cost areas is $541,287, while high-cost &quot;ceiling&quot; areas go up to $1,249,125. Our calculator will alert you if you exceed these limits.
                     </li>
                     <li>
-                        <strong>Debt-to-Income (DTI) Ratios:</strong> FHA loans generally allow for higher debt-to-income ratios—often approving borrowers with DTI ratios up to 43%, and sometimes up to 50% with &quot;compensating factors.&quot;
+                        <strong>Debt-to-Income (DTI) Ratios:</strong> FHA loans generally allow for higher debt-to-income ratios-often approving borrowers with DTI ratios up to 43%, and sometimes up to 50% with &quot;compensating factors.&quot;
                     </li>
                 </ul>
 
@@ -77,7 +77,7 @@ export default function FhaSeoContent() {
                     <div>
                         <h4 className="text-lg font-bold text-navy-900 mb-2">Can I remove FHA Mortgage Insurance?</h4>
                         <p className="text-gray-600">
-                            If you made a down payment of less than 10%, the annual MIP cannot be removed—it lasts for the life of the loan. The only way to remove it is to refinance the mortgage into a non-FHA loan. If you made a down payment of 10% or more, the MIP will automatically fall off after 11 years.
+                            If you made a down payment of less than 10%, the annual MIP cannot be removed-it lasts for the life of the loan. The only way to remove it is to refinance the mortgage into a non-FHA loan. If you made a down payment of 10% or more, the MIP will automatically fall off after 11 years.
                         </p>
                     </div>
 

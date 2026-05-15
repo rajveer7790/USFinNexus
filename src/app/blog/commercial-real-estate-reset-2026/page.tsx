@@ -62,7 +62,7 @@ export default function CREBlog() {
 
             <div className="prose max-w-none text-slate-800">
                 <p className="lead text-lg font-medium mb-8 text-slate-600">
-                    The phrase "Commercial Real Estate (CRE) Apocalypse" has been thrown around since 2023. But as we navigate through 2026, it's clear that it isn't an apocalypse—it's a <strong>reset</strong>. And resets create generational buying opportunities.
+                    The phrase "Commercial Real Estate (CRE) Apocalypse" has been thrown around since 2023. But as we navigate through 2026, it's clear that it isn't an apocalypse-it's a <strong>reset</strong>. And resets create generational buying opportunities.
                 </p>
 
                 <p className="mb-4">
@@ -71,7 +71,7 @@ export default function CREBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">The Office-to-Residential Boom</h2>
                 <p className="mb-4">
-                    Converting a skyscraper from office cubicles to luxury apartments isn't cheap—it requires completely re-plumbing the building to add hundreds of bathrooms and kitchens. However, thanks to the 2025 federal tax incentives for urban revitalization, developers are making the math work.
+                    Converting a skyscraper from office cubicles to luxury apartments isn't cheap-it requires completely re-plumbing the building to add hundreds of bathrooms and kitchens. However, thanks to the 2025 federal tax incentives for urban revitalization, developers are making the math work.
                 </p>
                 <p className="mb-4">
                     Cities like San Francisco, Chicago, and New York are seeing their downtowns transformed from ghost towns into vibrant, 24/7 residential hubs.

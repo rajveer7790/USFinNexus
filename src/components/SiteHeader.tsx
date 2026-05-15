@@ -152,7 +152,7 @@ export default function SiteHeader() {
                         <Link
                             href="/"
                             className="flex items-center gap-2 sm:gap-2.5 flex-shrink-0 group"
-                            aria-label="USFinNexus — Home"
+                            aria-label="USFinNexus - Home"
                         >
                             <LogoIcon size={30} />
                             <div className="leading-none">
@@ -379,7 +379,7 @@ export default function SiteHeader() {
                                 Free Calculator
                             </Link>
 
-                            {/* Mobile hamburger — min 44×44 tap target */}
+                            {/* Mobile hamburger - min 44×44 tap target */}
                             <button
                                 onClick={() => setMobileOpen(prev => !prev)}
                                 className="lg:hidden flex items-center justify-center w-11 h-11 rounded-lg text-gray-600 hover:bg-gray-100 active:bg-gray-200 transition-colors"
@@ -477,7 +477,7 @@ export default function SiteHeader() {
                                     </div>
                                 </div>
 
-                                    {/* Mobile CTA — same navy as desktop */}
+                                    {/* Mobile CTA - same navy as desktop */}
                                     <Link
                                         href="/calculators/mortgage"
                                         onClick={() => setMobileOpen(false)}

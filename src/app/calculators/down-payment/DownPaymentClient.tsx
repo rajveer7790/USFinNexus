@@ -135,7 +135,7 @@ export default function DownPaymentClient() {
                             <div className="flex gap-3">
                                 <Shield className="flex-shrink-0 text-[#0da6f2]" size={18} />
                                 <p className="text-sm font-medium text-gray-600">
-                                    Remember closing costs (2–5% of home price) and emergency reserves, typically 3–6 months expenses.
+                                    Remember closing costs (2-5% of home price) and emergency reserves, typically 3-6 months expenses.
                                 </p>
                             </div>
                         </div>
@@ -147,8 +147,8 @@ export default function DownPaymentClient() {
                                 {[
                                     { pct: '3.5%', label: 'FHA Minimum', val: homePrice * 0.035 },
                                     { pct: '5%', label: 'Conventional Minimum', val: homePrice * 0.05 },
-                                    { pct: '10%', label: '10% — PMI Reduction', val: homePrice * 0.10 },
-                                    { pct: '20%', label: '20% — No PMI', val: homePrice * 0.20 },
+                                    { pct: '10%', label: '10% - PMI Reduction', val: homePrice * 0.10 },
+                                    { pct: '20%', label: '20% - No PMI', val: homePrice * 0.20 },
                                 ].map(m => (
                                     <div key={m.pct} className="flex items-center justify-between py-2 border-b border-white/5 last:border-0">
                                         <div className="flex items-center gap-2">

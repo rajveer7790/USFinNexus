@@ -115,7 +115,7 @@ export default function HouseHackingBlog() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Why House Hack Now?</h2>
                 <p className="mb-4">
-                    The math is simple. If your mortgage is $2,800 a month, but you can generate $2,000 a month by renting out the other side of a duplex, your out-of-pocket housing cost drops to $800. You get to build equity, benefit from appreciation, and enjoy the tax write-offs of homeownership—all while living cheaper than you would be renting an apartment.
+                    The math is simple. If your mortgage is $2,800 a month, but you can generate $2,000 a month by renting out the other side of a duplex, your out-of-pocket housing cost drops to $800. You get to build equity, benefit from appreciation, and enjoy the tax write-offs of homeownership-all while living cheaper than you would be renting an apartment.
                 </p>
                 <p className="mb-4">
                     Furthermore, as of late 2025 and 2026, Fannie Mae changed the rules allowing buyers to purchase 2-to-4 unit properties with just <strong>5% down</strong> instead of the traditional 15-25% required for multi-family homes. This was an absolute game-changer.
@@ -167,7 +167,7 @@ export default function HouseHackingBlog() {
                     House hacking isn't passive income; it's a part-time job. You are the one who gets the text at 2 AM when the toilet is leaking.
                 </p>
                 <p className="mb-4">
-                    Before you take the plunge, ensure you have strong boundaries. Use property management software (like Avail or Buildium) to handle rent collection and maintenance requests—even if you are living next door. Never let tenants knock on your door to pay rent or complain about a leaky faucet. Treat it like a business from Day 1.
+                    Before you take the plunge, ensure you have strong boundaries. Use property management software (like Avail or Buildium) to handle rent collection and maintenance requests-even if you are living next door. Never let tenants knock on your door to pay rent or complain about a leaky faucet. Treat it like a business from Day 1.
                 </p>
 
                 <hr className="my-10 border-gray-200" />

@@ -91,7 +91,7 @@ export default function ArticlePage() {
                 <div className="not-prose my-8 p-5 rounded-2xl border border-[#00C853]/30 bg-green-50 flex flex-col sm:flex-row items-start sm:items-center gap-4">
                     <div className="flex-1">
                         <p className="font-bold text-[#0A192F] text-base mb-1">Own a business property or LLC?</p>
-                        <p className="text-sm text-gray-600">Calculate your mortgage payment with our free PITI calculator — no signup, instant results.</p>
+                        <p className="text-sm text-gray-600">Calculate your mortgage payment with our free PITI calculator - no signup, instant results.</p>
                     </div>
                     <Link href="/calculators/mortgage" className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#00C853] hover:bg-[#00a844] text-white text-sm font-bold rounded-xl transition-colors whitespace-nowrap flex-shrink-0">
                         <TrendingUp size={15} /> Free Mortgage Calculator

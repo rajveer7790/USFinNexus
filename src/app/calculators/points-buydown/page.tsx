@@ -12,7 +12,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Mortgage Points Buy-Down Calculator 2026 — Break-Even Analysis | USFinNexus',
+    title: 'Mortgage Points Buy-Down Calculator 2026 - Break-Even Analysis | USFinNexus',
     description: 'Free mortgage points calculator for 2026. Calculate if paying discount points upfront is worth it. See monthly savings and find your break-even point.',
     keywords: ['mortgage points calculator', 'discount points calculator', 'points vs rate', 'buy down interest rate', 'mortgage rate calculator'],
     openGraph: {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         title: 'Mortgage Points Buy-Down Calculator 2026 | USFinNexus',
         description: 'Calculate if paying discount points upfront is worth it. Find your break-even point and total interest savings from buying down your mortgage rate. Free, no signup.',
         url: 'https://usfinnexus.com/calculators/points-buydown',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Mortgage Points Buy-Down Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Mortgage Points Buy-Down Calculator 2026 - USFinNexus' }],
     },
     alternates: { canonical: 'https://usfinnexus.com/calculators/points-buydown' },
     twitter: {

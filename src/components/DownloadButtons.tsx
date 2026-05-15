@@ -43,7 +43,7 @@ export default function DownloadButtons({
         try {
             const { generateMortgagePDF } = await import('@/lib/pdfGenerator');
             await generateMortgagePDF(summary, amortization, calculatorName);
-            toast.success('PDF report downloaded! Professional quality — totally free.');
+            toast.success('PDF report downloaded! Professional quality - totally free.');
         } catch (e) {
             console.error(e);
             toast.error('PDF generation failed. Try downloading CSV instead.');

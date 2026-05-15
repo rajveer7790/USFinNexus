@@ -149,7 +149,7 @@ export default function RentVsBuyClient() {
                                     <div className="flex gap-3">
                                         <CheckCircle className="flex-shrink-0 text-[#0da6f2]" size={18} />
                                         <p className="text-sm font-medium text-gray-600">
-                                            The chart tracks equity minus costs over time. Closing costs typically make ownership cheaper after 3–7 years. Results vary greatly by local market.
+                                            The chart tracks equity minus costs over time. Closing costs typically make ownership cheaper after 3-7 years. Results vary greatly by local market.
                                         </p>
                                     </div>
                                 </div>

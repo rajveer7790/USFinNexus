@@ -163,7 +163,7 @@ export default function ArticlePage() {
                 <div className="bg-gray-100 p-8 rounded-2xl text-center not-prose">
                     <h3 className="text-2xl font-black mb-3" style={{ color: 'var(--color-navy)' }}>Ready to Form Your Real Estate LLC?</h3>
                     <p className="mb-6 text-gray-600">
-                        We don&apos;t just form the entity—we ensure your LLC is instantly compliant with 2026 FinCEN BOI regulations and ready to purchase property cleanly and legally.
+                        We don&apos;t just form the entity-we ensure your LLC is instantly compliant with 2026 FinCEN BOI regulations and ready to purchase property cleanly and legally.
                     </p>
                     <button className="btn-primary py-3 px-8 text-sm w-full sm:w-auto shadow-xl">
                         View Our Real Estate Entity Packages

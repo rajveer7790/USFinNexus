@@ -98,7 +98,7 @@ export default function ArticlePage() {
                     <strong>The Reality:</strong> The Corporate Transparency Act (BOI reporting) and the Real Estate Reporting Rule are <em>two entirely separate, distinct federal laws.</em>
                 </p>
                 <p>
-                    Even if your 100% US-owned LLC is exempt from filing an annual BOI report with FinCEN, the title company <strong>must still file a Real Estate Report</strong> when that LLC buys a residential property without a mortgage. The real estate rule does not share the same domestic exemptions as the CTA. Do not argue with your closing attorney—they are legally obligated to report your transaction.
+                    Even if your 100% US-owned LLC is exempt from filing an annual BOI report with FinCEN, the title company <strong>must still file a Real Estate Report</strong> when that LLC buys a residential property without a mortgage. The real estate rule does not share the same domestic exemptions as the CTA. Do not argue with your closing attorney-they are legally obligated to report your transaction.
                 </p>
 
                 <p>

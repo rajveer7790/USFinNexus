@@ -20,7 +20,7 @@ export default function AffordabilityByCityPage() {
                         2026 Home Affordability Index by Major US City
                     </h1>
                     <p className="text-base sm:text-lg text-gray-500">
-                        The true measure of affordability isn&apos;t just the price of the house—it&apos;s the price of the house compared to what local companies pay their workers.
+                        The true measure of affordability isn&apos;t just the price of the house-it&apos;s the price of the house compared to what local companies pay their workers.
                     </p>
                 </header>
 

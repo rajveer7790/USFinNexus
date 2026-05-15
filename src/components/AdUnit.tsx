@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 
 interface AdUnitProps {
-    /** AdSense ad slot ID — get from your AdSense dashboard */
+    /** AdSense ad slot ID - get from your AdSense dashboard */
     slot: string;
     format?: 'auto' | 'rectangle' | 'vertical' | 'horizontal';
     className?: string;
@@ -32,7 +32,7 @@ export default function AdUnit({
             (window.adsbygoogle = window.adsbygoogle || []).push({});
             pushed.current = true;
         } catch {
-            // AdSense not loaded yet — safe to ignore
+            // AdSense not loaded yet - safe to ignore
         }
     }, []);
 
