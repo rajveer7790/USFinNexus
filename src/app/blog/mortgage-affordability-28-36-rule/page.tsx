@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         url: 'https://usfinnexus.com/blog/mortgage-affordability-28-36-rule',
         type: 'article',
         siteName: 'USFinNexus',
-    },
+    , images: [{ url: 'https://cdn-public.eesel.ai/fa6b09cb-4b8b-466c-a637-372637edece7/dc2d6d10-d1c4-4f16-a467-158c271ed3ff/1bd56367afa6433ca2906cd96380cc12.png', width: 1920, height: 1080, alt: 'USFinNexus calculator blog post hero image' }] },
     alternates: {
         canonical: 'https://usfinnexus.com/blog/mortgage-affordability-28-36-rule',
     },

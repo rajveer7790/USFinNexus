@@ -14,7 +14,7 @@ export const metadata: Metadata = {
         url: 'https://usfinnexus.com/blog/chattel-mortgages-mobile-homes-financing',
         type: 'article',
         siteName: 'USFinNexus',
-    },
+    , images: [{ url: 'https://cdn-public.eesel.ai/fa6b09cb-4b8b-466c-a637-372637edece7/dc2d6d10-d1c4-4f16-a467-158c271ed3ff/2dad7d5beac74058994360f8c63db65b.png', width: 1920, height: 1080, alt: 'USFinNexus calculator blog post hero image' }] },
     alternates: { canonical: 'https://usfinnexus.com/blog/chattel-mortgages-mobile-homes-financing' },
 };
 

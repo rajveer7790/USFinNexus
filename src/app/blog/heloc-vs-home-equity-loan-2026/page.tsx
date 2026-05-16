@@ -5,7 +5,7 @@ import RelatedCalculators from '@/components/RelatedCalculators';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = { title: 'HELOC vs Home Equity Loan: 2026 Rates and Comparison - USFinNexus 2026', description: "Compare HELOCs and home equity loans to find the right tool for accessing your home's equity.", openGraph: { title: 'HELOC vs Home Equity Loan: 2026 Rates and Comparison', description: "Compare HELOCs and home equity loans to find the right tool for accessing your home's equity.", url: 'https://usfinnexus.com/blog/heloc-vs-home-equity-loan-2026', type: 'article', siteName: 'USFinNexus' }, alternates: { canonical: 'https://usfinnexus.com/blog/heloc-vs-home-equity-loan-2026' } };
+export const metadata: Metadata = { title: 'HELOC vs Home Equity Loan: 2026 Rates and Comparison - USFinNexus 2026', description: "Compare HELOCs and home equity loans to find the right tool for accessing your home's equity.", openGraph: { title: 'HELOC vs Home Equity Loan: 2026 Rates and Comparison', description: "Compare HELOCs and home equity loans to find the right tool for accessing your home's equity.", url: 'https://usfinnexus.com/blog/heloc-vs-home-equity-loan-2026', type: 'article', siteName: 'USFinNexus' , images: [{ url: 'https://cdn-public.eesel.ai/fa6b09cb-4b8b-466c-a637-372637edece7/dc2d6d10-d1c4-4f16-a467-158c271ed3ff/2deabdcf2af74d4b8054adfc4297cf5a.png', width: 1920, height: 1080, alt: 'USFinNexus calculator blog post hero image' }] }, alternates: { canonical: 'https://usfinnexus.com/blog/heloc-vs-home-equity-loan-2026' } };
 
 export default function PostComponent() {
     return (<>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
         url: 'https://usfinnexus.com/blog/debt-consolidation-loan-when-worthwhile',
         type: 'article',
         siteName: 'USFinNexus',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Debt Consolidation Guide' }],
+        images: [{ url: 'https://cdn-public.eesel.ai/fa6b09cb-4b8b-466c-a637-372637edece7/dc2d6d10-d1c4-4f16-a467-158c271ed3ff/d838d5dda1a34bfea631c0d381b77269.png', width: 1920, height: 1080, alt: 'USFinNexus calculator blog post hero image' }],
     },
     twitter: { card: 'summary_large_image', title: "Debt Consolidation Loan: When It Works (and When It Doesn't)", description: 'Consolidation can simplify payments, but watch out for stretching your timeline and paying more interest.', images: ['https://usfinnexus.com/icon-512.png'] },
     keywords: ['debt consolidation loan', 'debt consolidation 2026', 'how to consolidate debt', 'personal loan debt payoff', 'balance transfer vs consolidation', 'debt consolidation pros cons', 'credit card debt consolidation', 'debt consolidation calculator', 'best debt consolidation loans', 'lower monthly payments debt', 'debt management strategy', 'consolidate student loans'],

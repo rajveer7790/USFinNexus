@@ -14,7 +14,7 @@ export const metadata: Metadata = {
         url: 'https://usfinnexus.com/blog/assumable-mortgages-2026-strategy',
         type: 'article',
         siteName: 'USFinNexus',
-    },
+    , images: [{ url: 'https://cdn-public.eesel.ai/fa6b09cb-4b8b-466c-a637-372637edece7/dc2d6d10-d1c4-4f16-a467-158c271ed3ff/f8f5979c6a1741f286c8e8794a6320c5.png', width: 1920, height: 1080, alt: 'USFinNexus calculator blog post hero image' }] },
     alternates: { canonical: 'https://usfinnexus.com/blog/assumable-mortgages-2026-strategy' },
 };
 
