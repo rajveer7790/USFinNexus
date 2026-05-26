@@ -2,7 +2,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import AdUnit from '@/components/AdUnit';
 import { AD_SLOTS } from '@/lib/adConfig';
-import HomeHeroWidget from '@/components/HomeHeroWidget';
+import dynamic from 'next/dynamic';
+const HomeHeroWidget = dynamic(() => import('@/components/HomeHeroWidget'));
 import {
     Home, DollarSign, TrendingUp, Car, Calculator,
     Scale, ArrowLeftRight, BarChart2, Table2,
@@ -127,7 +128,7 @@ const DIFFS = [
 const HOME_FAQS = [
     {
         question: 'Are all USFinNexus calculators really free?',
-        answer: 'Yes — every calculator on USFinNexus is 100% free, forever. There are no premium tiers, no email walls, and no lead-gen forms. PDF and CSV exports are also always free. The site is supported by non-intrusive display ads, not lender referral commissions.',
+        answer: 'Yes — every <strong>free mortgage calculator</strong> and <strong>financial calculator</strong> on USFinNexus is 100% <strong>free</strong>, forever. There are no premium tiers, no email walls, and no lead-gen forms. PDF and CSV exports are also always free. The site is supported by non-intrusive display ads, not lender referral commissions.',
     },
     {
         question: 'Does USFinNexus sell my data to mortgage lenders?',
@@ -155,93 +156,6 @@ const HOME_FAQS = [
 export default function HomePage() {
     return (
         <div className="neo-root">
-            {/* FAQPage JSON-LD for rich snippets */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify({
-                    '@context': 'https://schema.org',
-                    '@type': 'FAQPage',
-                    mainEntity: HOME_FAQS.map(faq => ({
-                        '@type': 'Question',
-                        name: faq.question,
-                        acceptedAnswer: {
-                            '@type': 'Answer',
-                            text: faq.answer,
-                        },
-                    })),
-                }) }}
-            />
-            {/* ItemList JSON-LD — calculator collection (helps Google understand tool breadth) */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify({
-                    '@context': 'https://schema.org',
-                    '@type': 'ItemList',
-                    name: 'Free Mortgage & Finance Calculators',
-                    description: '28+ free, CFPB-compliant mortgage and finance calculators for Americans.',
-                    url: 'https://usfinnexus.com',
-                    numberOfItems: 28,
-                    itemListElement: [
-                        { '@type': 'ListItem', position: 1, name: 'Mortgage Calculator', url: 'https://usfinnexus.com/calculators/mortgage' },
-                        { '@type': 'ListItem', position: 2, name: 'Home Affordability Calculator', url: 'https://usfinnexus.com/calculators/affordability' },
-                        { '@type': 'ListItem', position: 3, name: 'Refinance Calculator', url: 'https://usfinnexus.com/calculators/refinance' },
-                        { '@type': 'ListItem', position: 4, name: 'Debt-to-Income (DTI) Calculator', url: 'https://usfinnexus.com/calculators/dti' },
-                        { '@type': 'ListItem', position: 5, name: 'Amortization Schedule Calculator', url: 'https://usfinnexus.com/calculators/amortization' },
-                        { '@type': 'ListItem', position: 6, name: 'Rent vs. Buy Calculator', url: 'https://usfinnexus.com/calculators/rent-vs-buy' },
-                        { '@type': 'ListItem', position: 7, name: 'FHA Loan Calculator', url: 'https://usfinnexus.com/calculators/fha' },
-                        { '@type': 'ListItem', position: 8, name: 'VA Loan Calculator', url: 'https://usfinnexus.com/calculators/va' },
-                        { '@type': 'ListItem', position: 9, name: 'Closing Costs Calculator', url: 'https://usfinnexus.com/calculators/closing-costs' },
-                        { '@type': 'ListItem', position: 10, name: 'Auto Loan Calculator', url: 'https://usfinnexus.com/calculators/auto-loan' },
-                        { '@type': 'ListItem', position: 11, name: 'Debt Payoff Planner', url: 'https://usfinnexus.com/calculators/debt-payoff' },
-                        { '@type': 'ListItem', position: 12, name: 'Retirement Planner', url: 'https://usfinnexus.com/calculators/retirement' },
-                        { '@type': 'ListItem', position: 13, name: 'Income Tax Calculator 2026', url: 'https://usfinnexus.com/calculators/income-tax' },
-                        { '@type': 'ListItem', position: 14, name: 'HELOC Calculator', url: 'https://usfinnexus.com/calculators/heloc' },
-                        { '@type': 'ListItem', position: 15, name: 'Down Payment Savings Calculator', url: 'https://usfinnexus.com/calculators/down-payment' },
-                    ],
-                }) }}
-            />
-            {/* HowTo JSON-LD for How It Works steps */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify({
-                    '@context': 'https://schema.org',
-                    '@type': 'HowTo',
-                    name: 'How to Use USFinNexus Financial Calculators',
-                    description: 'Get a professional PDF mortgage or finance calculation in four simple steps — no signup, no email required.',
-                    totalTime: 'PT1M',
-                    tool: [{ '@type': 'HowToTool', name: 'Web browser' }],
-                    step: [
-                        {
-                            '@type': 'HowToStep',
-                            position: 1,
-                            name: 'Pick a Calculator',
-                            text: 'Choose from 28+ CFPB-compliant mortgage and finance calculators covering home buying, refinancing, debt payoff, retirement, and more.',
-                            url: 'https://usfinnexus.com/#tools',
-                        },
-                        {
-                            '@type': 'HowToStep',
-                            position: 2,
-                            name: 'Enter Your Numbers',
-                            text: 'Fill in simple inputs like home price, down payment, and interest rate. No signup or email address required — ever.',
-                            url: 'https://usfinnexus.com/calculators/mortgage',
-                        },
-                        {
-                            '@type': 'HowToStep',
-                            position: 3,
-                            name: 'Get Instant Results',
-                            text: 'See a full breakdown of your mortgage payment with charts and amortization tables, calculated instantly in your browser.',
-                            url: 'https://usfinnexus.com/calculators/mortgage',
-                        },
-                        {
-                            '@type': 'HowToStep',
-                            position: 4,
-                            name: 'Download Free PDF Report',
-                            text: 'Click the PDF button to download a professional report with your full amortization schedule. Generated in your browser — zero server contact.',
-                            url: 'https://usfinnexus.com/calculators/mortgage',
-                        },
-                    ],
-                }) }}
-            />
 
             {/* ═══ ANNOUNCEMENT BAR ═══ */}
             <div className="ph-announce">
@@ -272,9 +186,9 @@ export default function HomePage() {
                             CFPB Compliant · May 2026
                         </div>
                         <h1 className="neo-h1">
-                            <span className="neo-h1-w1">Smart Financial</span>
-                            <span className="neo-h1-w2">Tools. Built for</span>
-                            <span className="neo-h1-w3">Americans.</span>
+                            <span className="neo-h1-w1">Free Mortgage Calculator</span>
+                            <span className="neo-h1-w2">& Finance Tools 2026</span>
+                            <span className="neo-h1-w3">— No Signup Required</span>
                         </h1>
                         <p className="neo-hero-p neo-reveal neo-reveal--d2">
                             28+ professional calculators with instant <strong>PDF reports</strong>.
@@ -425,7 +339,7 @@ export default function HomePage() {
                                 <div key={d.h} className="neo-diff-item">
                                     <div className={`neo-diff-icon ${d.c}`}><d.icon size={18} /></div>
                                     <div>
-                                        <h4>{d.h}</h4>
+                                        <h3>{d.h}</h3>
                                         <p>{d.p}</p>
                                     </div>
                                 </div>
@@ -517,6 +431,93 @@ export default function HomePage() {
                     </p>
                 </div>
             </section>
+            {/* FAQPage JSON-LD for rich snippets */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    '@context': 'https://schema.org',
+                    '@type': 'FAQPage',
+                    mainEntity: HOME_FAQS.map(faq => ({
+                        '@type': 'Question',
+                        name: faq.question,
+                        acceptedAnswer: {
+                            '@type': 'Answer',
+                            text: faq.answer,
+                        },
+                    })),
+                }) }}
+            />
+            {/* ItemList JSON-LD — calculator collection (helps Google understand tool breadth) */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    '@context': 'https://schema.org',
+                    '@type': 'ItemList',
+                    name: 'Free Mortgage & Finance Calculators',
+                    description: '28+ free, CFPB-compliant mortgage and finance calculators for Americans.',
+                    url: 'https://usfinnexus.com',
+                    numberOfItems: 28,
+                    itemListElement: [
+                        { '@type': 'ListItem', position: 1, name: 'Mortgage Calculator', url: 'https://usfinnexus.com/calculators/mortgage' },
+                        { '@type': 'ListItem', position: 2, name: 'Home Affordability Calculator', url: 'https://usfinnexus.com/calculators/affordability' },
+                        { '@type': 'ListItem', position: 3, name: 'Refinance Calculator', url: 'https://usfinnexus.com/calculators/refinance' },
+                        { '@type': 'ListItem', position: 4, name: 'Debt-to-Income (DTI) Calculator', url: 'https://usfinnexus.com/calculators/dti' },
+                        { '@type': 'ListItem', position: 5, name: 'Amortization Schedule Calculator', url: 'https://usfinnexus.com/calculators/amortization' },
+                        { '@type': 'ListItem', position: 6, name: 'Rent vs. Buy Calculator', url: 'https://usfinnexus.com/calculators/rent-vs-buy' },
+                        { '@type': 'ListItem', position: 7, name: 'FHA Loan Calculator', url: 'https://usfinnexus.com/calculators/fha' },
+                        { '@type': 'ListItem', position: 8, name: 'VA Loan Calculator', url: 'https://usfinnexus.com/calculators/va' },
+                        { '@type': 'ListItem', position: 9, name: 'Closing Costs Calculator', url: 'https://usfinnexus.com/calculators/closing-costs' },
+                        { '@type': 'ListItem', position: 10, name: 'Auto Loan Calculator', url: 'https://usfinnexus.com/calculators/auto-loan' },
+                        { '@type': 'ListItem', position: 11, name: 'Debt Payoff Planner', url: 'https://usfinnexus.com/calculators/debt-payoff' },
+                        { '@type': 'ListItem', position: 12, name: 'Retirement Planner', url: 'https://usfinnexus.com/calculators/retirement' },
+                        { '@type': 'ListItem', position: 13, name: 'Income Tax Calculator 2026', url: 'https://usfinnexus.com/calculators/income-tax' },
+                        { '@type': 'ListItem', position: 14, name: 'HELOC Calculator', url: 'https://usfinnexus.com/calculators/heloc' },
+                        { '@type': 'ListItem', position: 15, name: 'Down Payment Savings Calculator', url: 'https://usfinnexus.com/calculators/down-payment' },
+                    ],
+                }) }}
+            />
+            {/* HowTo JSON-LD for How It Works steps */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    '@context': 'https://schema.org',
+                    '@type': 'HowTo',
+                    name: 'How to Use USFinNexus Financial Calculators',
+                    description: 'Get a professional PDF mortgage or finance calculation in four simple steps — no signup, no email required.',
+                    totalTime: 'PT1M',
+                    tool: [{ '@type': 'HowToTool', name: 'Web browser' }],
+                    step: [
+                        {
+                            '@type': 'HowToStep',
+                            position: 1,
+                            name: 'Pick a Calculator',
+                            text: 'Choose from 28+ CFPB-compliant mortgage and finance calculators covering home buying, refinancing, debt payoff, retirement, and more.',
+                            url: 'https://usfinnexus.com/#tools',
+                        },
+                        {
+                            '@type': 'HowToStep',
+                            position: 2,
+                            name: 'Enter Your Numbers',
+                            text: 'Fill in simple inputs like home price, down payment, and interest rate. No signup or email address required — ever.',
+                            url: 'https://usfinnexus.com/calculators/mortgage',
+                        },
+                        {
+                            '@type': 'HowToStep',
+                            position: 3,
+                            name: 'Get Instant Results',
+                            text: 'See a full breakdown of your mortgage payment with charts and amortization tables, calculated instantly in your browser.',
+                            url: 'https://usfinnexus.com/calculators/mortgage',
+                        },
+                        {
+                            '@type': 'HowToStep',
+                            position: 4,
+                            name: 'Download Free PDF Report',
+                            text: 'Click the PDF button to download a professional report with your full amortization schedule. Generated in your browser — zero server contact.',
+                            url: 'https://usfinnexus.com/calculators/mortgage',
+                        },
+                    ],
+                }) }}
+            />
         </div>
     );
 }

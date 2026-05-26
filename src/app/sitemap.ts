@@ -1,7 +1,10 @@
 import { MetadataRoute } from 'next';
 import { ALL_ARTICLES } from '@/lib/articles';
 import { ALL_GUIDES } from '@/lib/guides';
+import fs from 'fs';
+import path from 'path';
 
+export const dynamic = 'force-static';
 // Priority tiers for calculators
 const CALC_PRIORITY: Record<string, number> = {
     '/calculators/mortgage': 0.95,
@@ -39,47 +42,33 @@ const CALC_PRIORITY: Record<string, number> = {
     '/calculators/options-profit': 0.75,
 };
 
-// All blog posts with their publish dates
-const BLOG_POSTS: Array<{ slug: string; date: string }> = [
-    // May 2026
-    { slug: 'commercial-real-estate-reset-2026', date: '2026-05-05' },
-    { slug: 'crypto-tax-guide-2026', date: '2026-05-05' },
-    { slug: 'fractional-real-estate-investing-2026', date: '2026-05-04' },
-    { slug: 'high-yield-checking-accounts-2026', date: '2026-05-04' },
-    { slug: 'coast-fire-vs-barista-fire-2026', date: '2026-05-03' },
-    { slug: 'direct-indexing-tax-loss-harvesting-2026', date: '2026-05-03' },
-    { slug: 'silver-tsunami-housing-shift-2026', date: '2026-05-02' },
-    { slug: 'short-term-rental-regulations-2026', date: '2026-05-02' },
-    { slug: 'mega-backdoor-roth-ira-guide-2026', date: '2026-05-01' },
-    { slug: 'investing-during-geopolitical-conflict-2026', date: '2026-05-01' },
-    { slug: 'defense-cybersecurity-stocks-2026', date: '2026-05-01' },
-    { slug: 'global-conflict-real-estate-impact-2026', date: '2026-05-01' },
-    { slug: 'energy-market-investing-crisis-2026', date: '2026-05-01' },
-    { slug: 'safe-yields-bonds-treasuries-2026', date: '2026-05-01' },
-    { slug: 'dividend-vs-growth-investing-2026', date: '2026-05-01' },
-    { slug: 'ai-personal-finance-investing-2026', date: '2026-05-01' },
-    { slug: 'house-hacking-guide-2026', date: '2026-05-01' },
-    { slug: 'high-yield-savings-vs-index-funds-2026', date: '2026-05-01' },
-    { slug: 'top-sunbelt-real-estate-markets-2026', date: '2026-05-01' },
-    // April 2026
-    { slug: 'spring-2026-housing-market-forecast', date: '2026-04-20' },
-    { slug: 'tariffs-housing-market-impact-2026', date: '2026-04-18' },
-    { slug: 'homeowner-tax-deductions-2026', date: '2026-04-15' },
-    { slug: 'first-time-home-buyer-programs-2026', date: '2026-04-12' },
-    { slug: '30-year-vs-15-year-mortgage-2026', date: '2026-04-10' },
-    { slug: 'tcja-tax-sunset-2026-mortgage-impact', date: '2026-04-08' },
-    { slug: 'fed-rates-unchanged-april-2026', date: '2026-04-07' },
-    { slug: 'mortgage-help-guide-2026', date: '2026-04-05' },
-    { slug: 'adjustable-rate-mortgage-trends-2026', date: '2026-04-03' },
-    // March 2026
-    { slug: 'usa-people-search-finance', date: '2026-03-15' },
-    // February 2026
-    { slug: 'free-mortgage-calculator-2026-pdf', date: '2026-02-25' },
-    { slug: 'how-much-house-can-i-afford-2026', date: '2026-02-20' },
-    { slug: 'should-i-refinance-2026', date: '2026-02-18' },
-    { slug: 'pmi-explained-avoid-cancel', date: '2026-02-15' },
-    { slug: 'mortgage-amortization-schedule-guide', date: '2026-02-10' },
-];
+// Dynamically read all blog post folders
+function getBlogPosts() {
+    try {
+        const blogDir = path.join(process.cwd(), 'src', 'app', 'blog');
+        const entries = fs.readdirSync(blogDir, { withFileTypes: true });
+        
+        return entries
+            .filter(dirent => dirent.isDirectory())
+            .map(dirent => {
+                const pagePath = path.join(blogDir, dirent.name, 'page.tsx');
+                let lastMod = new Date('2026-05-18'); // Default to recent
+                if (fs.existsSync(pagePath)) {
+                    const stats = fs.statSync(pagePath);
+                    lastMod = stats.mtime;
+                }
+                return {
+                    slug: dirent.name,
+                    date: lastMod.toISOString().split('T')[0]
+                };
+            });
+    } catch (e) {
+        console.error('Error reading blog directory for sitemap:', e);
+        return [];
+    }
+}
+
+const BLOG_POSTS = getBlogPosts();
 
 function parseArticleDate(dateStr: string): Date {
     return new Date(dateStr);
@@ -109,12 +98,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
 
     // 2. Financial Calculators (priority from CALC_PRIORITY map)
-    const calculators = Object.keys(CALC_PRIORITY).map((route) => ({
-        url: `${baseUrl}${route}`,
-        lastModified: new Date('2026-05-01'),
-        changeFrequency: 'monthly' as const,
-        priority: CALC_PRIORITY[route],
-    }));
+    const calculators = Object.keys(CALC_PRIORITY).map((route) => {
+        let lastMod = new Date('2026-05-01');
+        try {
+            const pagePath = path.join(process.cwd(), 'src', 'app', route, 'page.tsx');
+            if (fs.existsSync(pagePath)) {
+                const stats = fs.statSync(pagePath);
+                lastMod = stats.mtime;
+            }
+        } catch (e) {
+            // Ignore errors
+        }
+        return {
+            url: `${baseUrl}${route}`,
+            lastModified: lastMod,
+            changeFrequency: 'weekly' as const,
+            priority: CALC_PRIORITY[route],
+        };
+    });
 
     // 3. Articles - use real publish dates from metadata
     const articles = ALL_ARTICLES.map((article) => ({
