@@ -40,6 +40,7 @@ const CALC_PRIORITY: Record<string, number> = {
     '/calculators/fha': 0.75,
     '/calculators/va': 0.75,
     '/calculators/options-profit': 0.75,
+    '/canada/mortgage-calculator': 0.90,
 };
 
 // Dynamically read all blog post folders
@@ -81,6 +82,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const corePages = [
         { route: '', priority: 1.0, lastMod: '2026-05-14' },
         { route: '/calculators', priority: 0.90, lastMod: '2026-05-01' },
+        { route: '/canada', priority: 0.90, lastMod: '2026-07-26' },
         { route: '/blog', priority: 0.85, lastMod: '2026-05-05' },
         { route: '/guides', priority: 0.80, lastMod: '2026-03-01' },
         { route: '/articles', priority: 0.75, lastMod: '2026-03-01' },
