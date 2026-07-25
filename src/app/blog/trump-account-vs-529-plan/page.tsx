@@ -91,7 +91,7 @@ export default function TrumpAccountVs529() {
                     </ol>
 
                     <h2>Example: a newborn eligible for the $1,000 seed</h2>
-                    <p>Suppose parents elect the account, receive the $1,000 pilot contribution and then add $1,000 per year. At a hypothetical 7% annual return, monthly contribution timing could produce a balance near $38,000 at age 18. The result is only an illustration: a lower return, market decline, fees or uneven deposits would reduce it, while higher contributions or returns would increase it.</p>
+                    <p>Suppose parents elect the account, receive the $1,000 pilot contribution and then add $1,000 per year. At a hypothetical 7% annual return, monthly contribution timing could produce a balance near $39,000 at age 18. The result is only an illustration: a lower return, market decline, fees or uneven deposits would reduce it, while higher contributions or returns would increase it.</p>
                     <p>The important insight is not the exact dollar estimate. It is that an early starting balance gets many years to compound. Use our calculator to test 4%, 7% and 10% scenarios, then build a plan around the conservative result rather than the most exciting one.</p>
 
                     <div className="not-prose my-10 rounded-3xl bg-blue-700 p-7 text-white">
