@@ -9,12 +9,12 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'All Free Mortgage & Finance Calculators | USFinNexus',
-    description: 'Browse our complete library of 34 free, CFPB-compliant mortgage and financial calculators. Instant PDF reports, no signup, and zero data collected.',
+    description: 'Browse our complete library of 35 free, CFPB-compliant mortgage and financial calculators. Instant PDF reports, no signup, and zero data collected.',
     alternates: { canonical: 'https://usfinnexus.com/calculators' },
     openGraph: {
         type: 'website',
         title: 'All Free Mortgage & Finance Calculators | USFinNexus',
-        description: 'Browse our complete library of 34 free, CFPB-compliant mortgage and financial calculators.',
+        description: 'Browse our complete library of 35 free, CFPB-compliant mortgage and financial calculators.',
         url: 'https://usfinnexus.com/calculators',
         siteName: 'USFinNexus',
     },
@@ -48,6 +48,7 @@ const TOOLS = [
     { href: '/calculators/retirement', icon: TrendingUp, title: 'Retirement Planner', desc: 'Compound growth projections.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/fire-planner', icon: TrendingUp, title: 'FIRE Planner', desc: 'Early retirement timeline.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/investment', icon: LineChart, title: 'Compound Interest', desc: 'Investment growth calculator.', badge: 'new', cat: 'wealth' },
+    { href: '/calculators/trump-account', icon: PiggyBank, title: 'Trump Account 2026', desc: '$1,000 seed + family contribution growth.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/drip', icon: LineChart, title: 'DRIP Forecaster', desc: 'Dividend reinvestment plan.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/income-tax', icon: FileText, title: 'Income Tax 2026', desc: '2026 brackets + TCJA sunset.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/crypto-tax', icon: FileText, title: 'Crypto Tax Estimator', desc: 'Capital gains tax estimator.', badge: 'new', cat: 'wealth' },
@@ -72,7 +73,7 @@ export default function CalculatorsPage() {
                         <div className="neo-sec-tag"><span className="neo-sec-dot" /> All Tools</div>
                         <h1 className="neo-sec-h2">The Complete <em>Calculator Library</em></h1>
                         <p className="neo-sec-p">
-                            Browse our complete library of 34 free, CFPB-compliant calculators.
+                            Browse our complete library of 35 free, CFPB-compliant calculators.
                             Zero signup, instant PDF reports, and zero data collection.
                         </p>
                     </header>

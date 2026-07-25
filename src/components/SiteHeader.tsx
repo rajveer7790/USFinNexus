@@ -51,6 +51,7 @@ const NAV_CALCULATORS = [
             { href: '/calculators/retirement', label: 'Retirement Planner', icon: PiggyBank, desc: 'Future nest egg goal' },
             { href: '/calculators/fire-planner', label: 'FIRE Planner', icon: TrendingUp, desc: 'Early retirement timeline' },
             { href: '/calculators/investment', label: 'Compound Interest', icon: LineChart, desc: 'Investment growth' },
+            { href: '/calculators/trump-account', label: 'Trump Account 2026', icon: PiggyBank, desc: '$1,000 child account projection' },
             { href: '/calculators/drip', label: 'DRIP Forecaster', icon: LineChart, desc: 'Dividend reinvestment' },
             { href: '/calculators/income-tax', label: 'Income Tax 2026', icon: FileText, desc: 'Federal & state taxes' },
             { href: '/calculators/crypto-tax', label: 'Crypto Tax Estimator', icon: FileText, desc: 'Capital gains calculator' },

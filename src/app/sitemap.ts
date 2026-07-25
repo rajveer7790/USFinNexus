@@ -27,6 +27,7 @@ const CALC_PRIORITY: Record<string, number> = {
     '/calculators/personal-loan': 0.80,
     '/calculators/retirement': 0.80,
     '/calculators/investment': 0.80,
+    '/calculators/trump-account': 0.90,
     '/calculators/fire-planner': 0.80,
     '/calculators/points-buydown': 0.78,
     '/calculators/interest-only': 0.78,
@@ -81,9 +82,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // 1. Core Static Pages
     const corePages = [
         { route: '', priority: 1.0, lastMod: '2026-05-14' },
-        { route: '/calculators', priority: 0.90, lastMod: '2026-05-01' },
+        { route: '/calculators', priority: 0.90, lastMod: '2026-07-26' },
         { route: '/canada', priority: 0.90, lastMod: '2026-07-26' },
-        { route: '/blog', priority: 0.85, lastMod: '2026-05-05' },
+        { route: '/blog', priority: 0.85, lastMod: '2026-07-26' },
         { route: '/guides', priority: 0.80, lastMod: '2026-03-01' },
         { route: '/articles', priority: 0.75, lastMod: '2026-03-01' },
         { route: '/about', priority: 0.65, lastMod: '2026-03-01' },
