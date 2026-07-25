@@ -25,6 +25,7 @@ const nextConfig: NextConfig = {
     },
     
     // ── Static Export ─────────────────────────────────────────────────────────
+    output: 'export',
 
     // ── Compression ───────────────────────────────────────────────────────────
     compress: true,
