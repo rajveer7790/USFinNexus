@@ -5,6 +5,7 @@ import fs from 'fs';
 import path from 'path';
 
 export const dynamic = 'force-static';
+// Updated automatically with every production content release.
 // Priority tiers for calculators
 const CALC_PRIORITY: Record<string, number> = {
     '/calculators/mortgage': 0.95,
