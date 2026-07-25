@@ -37,7 +37,10 @@ export default function AdUnit({
     }, []);
 
     return (
-        <div className={`flex flex-col items-center ${className}`}>
+        <div 
+            className={`flex flex-col items-center w-full ${className}`}
+            style={{ minHeight: format === 'rectangle' ? '250px' : '100px', ...style }}
+        >
             {label && (
                 <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-slate-300 mb-2">
                     Advertisement

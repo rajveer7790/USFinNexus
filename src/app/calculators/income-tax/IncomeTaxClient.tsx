@@ -121,7 +121,7 @@ export default function IncomeTaxClient() {
                 <span className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2 block">Deduction Type</span>
                 <SegmentedControl
                     options={[
-                        { label: `Standard ($${DEDUCTIONS_2026[status].toLocaleString()})`, value: 'standard' },
+                        { label: `Standard ($${DEDUCTIONS_2026[status].toLocaleString('en-US')})`, value: 'standard' },
                         { label: 'Itemized', value: 'itemized' },
                     ]}
                     selectedValue={useItemized}
@@ -151,7 +151,7 @@ export default function IncomeTaxClient() {
                 </div>
                 <p className="text-sm font-bold uppercase tracking-wider text-gray-500 mb-2">Estimated Take-Home Pay</p>
                 <p className="text-3xl sm:text-4xl md:text-5xl font-black text-navy-900 tabular-nums tracking-tighter shadow-sm">
-                    ${taxCalculation.takeHomePay.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+                    ${taxCalculation.takeHomePay.toLocaleString('en-US', { maximumFractionDigits: 0 })}
                 </p>
                 <p className="text-sm font-medium text-gray-500 mt-2">After Federal & FICA taxes</p>
             </div>
@@ -160,13 +160,13 @@ export default function IncomeTaxClient() {
                 <div className="glass-card p-5">
                     <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">Estimated Federal Tax</p>
                     <p className="text-2xl font-black text-[#dc2626] tabular-nums">
-                        ${taxCalculation.totalTax.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+                        ${taxCalculation.totalTax.toLocaleString('en-US', { maximumFractionDigits: 0 })}
                     </p>
                 </div>
                 <div className="glass-card p-5">
                     <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">Estimated FICA</p>
                     <p className="text-2xl font-black text-[#dc2626] tabular-nums">
-                        ${taxCalculation.totalFica.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+                        ${taxCalculation.totalFica.toLocaleString('en-US', { maximumFractionDigits: 0 })}
                     </p>
                 </div>
             </div>

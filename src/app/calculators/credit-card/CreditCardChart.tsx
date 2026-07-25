@@ -18,7 +18,7 @@ export default function CreditCardChart({ chartData }: { chartData: ChartRow[] }
                 <XAxis dataKey="yearStr" stroke="#94a3b8" />
                 <YAxis stroke="#94a3b8" tickFormatter={(val) => `$${val}`} width={60} />
                 <Tooltip
-                    formatter={(value: number) => [`$${value.toLocaleString()}`, 'Remaining Balance']}
+                    formatter={(value: number) => [`$${value.toLocaleString('en-US')}`, 'Remaining Balance']}
                     contentStyle={{ backgroundColor: 'rgba(6, 15, 30, 0.95)', borderColor: 'rgba(255, 255, 255, 0.1)', borderRadius: '12px', color: '#fff' }}
                 />
                 <Area type="monotone" dataKey="balance" stroke="#f59e0b" strokeWidth={3} fill="url(#colorCardBalance)" animationDuration={1000} />

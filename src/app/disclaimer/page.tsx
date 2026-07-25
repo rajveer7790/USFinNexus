@@ -5,8 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'Disclaimer | USFinNexus — Calculator Results Are Estimates Only',
-    description: 'Important disclaimer: USFinNexus calculator results are estimates for educational purposes only and do not constitute financial, mortgage, tax, or legal advice.',
-    keywords: ['USFinNexus disclaimer', 'mortgage calculator disclaimer', 'financial calculator disclaimer', 'not financial advice'],
+    description: 'Important disclaimer: USFinNexus calculator results are estimates for educational purposes only and do not constitute financial, mortgage, tax, or legal advice.',
     alternates: { canonical: 'https://usfinnexus.com/disclaimer' },
     openGraph: {
         type: 'website',

@@ -15,13 +15,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Refinance Calculator 2026 — Break-Even & Monthly Savings | USFinNexus',
-    description: 'Free mortgage refinance calculator. See your monthly savings, break-even point, and lifetime savings instantly. No signup needed. Updated for 2026 rates.',
-    keywords: [
-        'refinance calculator', 'mortgage refinance calculator', 'refinance break-even calculator',
-        'should I refinance 2026', 'refinance savings calculator', 'refinance calculator 2026',
-        'cash-out refinance calculator', 'rate and term refinance', 'refinance break even point',
-        'mortgage refinance break even months', 'lower my mortgage payment calculator',
-    ],
+    description: 'Free mortgage refinance calculator. See your monthly savings, break-even point, and lifetime savings instantly. No signup needed. Updated for 2026 rates.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/refinance' },
     openGraph: {
         type: 'website',

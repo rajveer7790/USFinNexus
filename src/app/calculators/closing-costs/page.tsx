@@ -15,15 +15,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Closing Costs Calculator 2026 — Buyer & Seller Breakdown | USFinNexus',
-    description: 'Estimate buyer and seller closing costs for any US home purchase. State-specific transfer taxes, title fees, prepaid items, and agent commissions. Free, no signup.',
-    keywords: [
-        'closing costs calculator', 'home closing costs', 'closing costs 2026',
-        'how much are closing costs', 'buyer closing costs calculator',
-        'seller closing costs calculator', 'title insurance cost calculator',
-        'mortgage closing costs breakdown', 'prepaid closing costs',
-        'closing costs by state', 'average closing costs USA',
-        'real estate closing costs estimate',
-    ],
+    description: 'Estimate buyer and seller closing costs for any US home purchase. State-specific transfer taxes, title fees, prepaid items, and agent commissions. Free, no signup.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/closing-costs' },
     openGraph: {
         type: 'website',

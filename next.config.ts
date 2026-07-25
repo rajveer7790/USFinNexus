@@ -21,58 +21,17 @@ const nextConfig: NextConfig = {
 
     // ── Image optimization ─────────────────────────────────────────────────────
     images: {
-        formats: ['image/avif', 'image/webp'],
-        minimumCacheTTL: 31536000, // 1 year cache for images
+        unoptimized: true,
     },
+    
+    // ── Static Export ─────────────────────────────────────────────────────────
+    output: 'export',
 
     // ── Compression ───────────────────────────────────────────────────────────
     compress: true,
-
-    // ── Aggressive cache headers for static assets ────────────────────────────
-    async headers() {
-        return [
-            {
-                // JS/CSS chunks — immutable (content-hashed filenames)
-                source: '/_next/static/:path*',
-                headers: [
-                    { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-                ],
-            },
-            {
-                // All pages — security + performance headers
-                source: '/:path*',
-                headers: [
-                    { key: 'X-DNS-Prefetch-Control', value: 'on' },
-                    { key: 'X-Content-Type-Options', value: 'nosniff' },
-                    { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-                    { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-                    // HSTS: 1 year, include subdomains
-                    { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains; preload' },
-                    // Permissions policy — restrict unneeded browser features
-                    { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()' },
-                ],
-            },
-            {
-                // Sitemap — 24h cache with revalidation
-                source: '/sitemap.xml',
-                headers: [
-                    { key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=3600' },
-                ],
-            },
-            {
-                // Static images — long-term cache
-                source: '/images/:path*',
-                headers: [
-                    { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-                ],
-            },
-        ];
-    },
 
     // ── Powered by header removal (tiny perf + security) ─────────────────────
     poweredByHeader: false,
 };
 
 export default nextConfig;
-
-import('@opennextjs/cloudflare').then(m => m.initOpenNextCloudflareForDev());

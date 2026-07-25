@@ -6,18 +6,14 @@ export default function AffordabilitySeoContent() {
         <section className="bg-white border-t border-gray-100 py-10 mt-6">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-blue">
                 <h2 className="text-3xl font-black text-navy-900 mb-6">
-                    How Much House Can I Afford? (2026 Complete Guide)
+                    How Much House Can I Afford in 2026?
                 </h2>
                 <p className="lead text-xl text-gray-600">
-                    A lender telling you what you qualify for is very different from what you can comfortably afford. Our 2026 Home Affordability Calculator uses the{' '}
-                    <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-en-1791/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                        Consumer Financial Protection Bureau (CFPB) Debt-to-Income guidelines
-                    </a>{' '}
-                    to determine your true maximum budget - without making you &quot;house poor.&quot; Enter your gross income, monthly debts, and down payment to see your conservative and maximum home price in seconds.
+                    On a $100,000 annual salary with $500/month in existing debts and a 10% down payment at 7%, you can afford a home priced between $285,000 (conservative, 28% front-end DTI) and $385,000 (aggressive, 43% back-end DTI). Enter your exact income, debts, and down payment above to calculate your personal maximum budget.
                 </p>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    The 28/43 Rule: How Lenders Measure Affordability
+                    How Do Lenders Calculate How Much House You Can Afford?
                 </h3>
                 <p>
                     Most mortgage lenders and the CFPB use two Debt-to-Income (DTI) ratios to evaluate how much house you can afford. Understanding both is essential before you start shopping:
@@ -41,7 +37,7 @@ export default function AffordabilitySeoContent() {
                 </div>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Home Affordability Example: $100,000 Income
+                    How Much House Can I Afford on a $100,000 Salary?
                 </h3>
                 <p>
                     Here is how the math works using a $100,000 annual salary ($8,333/month gross) at a 7% 30-year fixed rate with a 10% down payment and $500/month in existing debts:
@@ -79,7 +75,7 @@ export default function AffordabilitySeoContent() {
                 </p>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Key Factors That Shift Your Maximum Home Price
+                    What Factors Affect How Much House I Can Afford?
                 </h3>
                 <p>
                     Even small changes to any of these inputs can dramatically move your affordable price range up or down:
@@ -103,7 +99,7 @@ export default function AffordabilitySeoContent() {
                 </ul>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    2026 Loan Limits: FHA, Conforming, and Jumbo
+                    What Are the 2026 FHA, Conforming, and Jumbo Loan Limits?
                 </h3>
                 <p>
                     The loan category you fall into depends on your calculated home price and local limits set annually by the{' '}
@@ -132,7 +128,7 @@ export default function AffordabilitySeoContent() {
                 </ul>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    How Your Credit Score Affects Affordability
+                    How Does My Credit Score Affect How Much House I Can Afford?
                 </h3>
                 <p>
                     Your credit score does not just determine whether you qualify for a loan - it directly controls the interest rate you receive, which controls how much house you can afford. Here is how FICO tiers map to typical conventional mortgage rates and monthly payments on a $350,000 loan:
@@ -179,7 +175,7 @@ export default function AffordabilitySeoContent() {
                 </p>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    First-Time Buyer Programs That Improve Affordability
+                    What First-Time Buyer Programs Help with Home Affordability?
                 </h3>
                 <p>
                     If standard affordability limits feel out of reach, these programs can meaningfully change the math:
@@ -213,7 +209,7 @@ export default function AffordabilitySeoContent() {
                 </ul>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Next Steps After Calculating Affordability
+                    What Should I Do After Running the Affordability Calculator?
                 </h3>
                 <ol>
                     <li>

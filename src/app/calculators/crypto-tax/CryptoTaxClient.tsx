@@ -190,7 +190,7 @@ export default function CryptoTaxClient() {
                         <div className="p-4 bg-orange-50 rounded-lg border border-orange-200 shadow-sm col-span-2">
                             <p className="text-sm font-medium text-gray-600 mb-1">Est. Total Tax Liability</p>
                             <p className="text-4xl font-bold text-red-600">
-                                ${totalTaxLiability.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+                                ${totalTaxLiability.toLocaleString('en-US', { maximumFractionDigits: 0 })}
                             </p>
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg border border-gray-200 shadow-sm col-span-2 md:col-span-1">
@@ -200,7 +200,7 @@ export default function CryptoTaxClient() {
                         <div className="p-4 bg-gray-50 rounded-lg border border-gray-200 shadow-sm col-span-2 md:col-span-1">
                             <p className="text-sm font-medium text-gray-600 mb-1">Total Net Gains</p>
                             <p className="text-2xl font-bold text-green-600">
-                                ${totalNetGains.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+                                ${totalNetGains.toLocaleString('en-US', { maximumFractionDigits: 0 })}
                             </p>
                         </div>
                     </div>
@@ -222,7 +222,7 @@ export default function CryptoTaxClient() {
                                             <Cell key={`cell-${index}`} fill={totalNetGains > 0 ? COLORS[index % COLORS.length] : '#cbd5e1'} />
                                         ))}
                                     </Pie>
-                                    <RechartsTooltip formatter={(value: number) => `$${value.toLocaleString(undefined, { maximumFractionDigits: 0 })}`} />
+                                    <RechartsTooltip formatter={(value: number) => `$${value.toLocaleString('en-US', { maximumFractionDigits: 0 })}`} />
                                 </PieChart>
                             </ResponsiveContainer>
                         </div>
@@ -230,15 +230,15 @@ export default function CryptoTaxClient() {
                             <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Tax Breakdown</h3>
                             <div className="flex justify-between text-sm">
                                 <span className="text-gray-600">Short-Term Capital Gains Tax:</span>
-                                <span className="font-semibold text-red-600">${shortTermTax.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+                                <span className="font-semibold text-red-600">${shortTermTax.toLocaleString('en-US', { maximumFractionDigits: 0 })}</span>
                             </div>
                             <div className="flex justify-between text-sm">
                                 <span className="text-gray-600">Long-Term Capital Gains Tax:</span>
-                                <span className="font-semibold text-red-600">${longTermTax.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+                                <span className="font-semibold text-red-600">${longTermTax.toLocaleString('en-US', { maximumFractionDigits: 0 })}</span>
                             </div>
                             <div className="flex justify-between text-sm border-t pt-2 mt-2">
                                 <span className="text-gray-800 font-medium">Total Tax Owed:</span>
-                                <span className="font-bold text-red-600">${totalTaxLiability.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+                                <span className="font-bold text-red-600">${totalTaxLiability.toLocaleString('en-US', { maximumFractionDigits: 0 })}</span>
                             </div>
                             {netShortTerm + netLongTerm < 0 && (
                                 <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded text-sm text-green-800">

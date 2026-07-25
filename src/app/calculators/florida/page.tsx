@@ -14,15 +14,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Florida Mortgage Calculator 2026 — Hurricane Insurance & Property Taxes | USFinNexus',
-    description: 'Free Florida mortgage calculator. Factors in rapidly rising FL homeowners and flood insurance, no state income tax benefit, and 2026 Florida property tax rates.',
-    keywords: [
-        'Florida mortgage calculator', 'FL mortgage calculator 2026',
-        'Florida home loan calculator', 'Florida homeowners insurance calculator',
-        'Florida flood insurance mortgage', 'Miami mortgage calculator',
-        'Tampa mortgage calculator', 'Florida property tax rate',
-        'no state income tax Florida', 'Florida home buying calculator',
-        'Florida hurricane insurance cost mortgage',
-    ],
+    description: 'Free Florida mortgage calculator. Factors in rapidly rising FL homeowners and flood insurance, no state income tax benefit, and 2026 Florida property tax rates.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/florida' },
     openGraph: {
         type: 'website',

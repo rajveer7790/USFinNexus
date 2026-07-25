@@ -3,6 +3,8 @@ import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
+import FhaVaUsdaSeoContent from './FhaVaUsdaSeoContent';
+import CalculatorFAQ from '@/components/CalculatorFAQ';
 
 const GovLoanClient = nextDynamic(() => import('./GovLoanClient'), {
     loading: () => <CalculatorSkeleton />,
@@ -13,14 +15,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'FHA vs VA vs USDA Loan Calculator 2026 — Compare Government Loans | USFinNexus',
-    description: 'Side-by-side comparison of FHA, VA, and USDA loan programs. See which government mortgage fits your budget with the lowest down payment and total cost.',
-    keywords: [
-        'FHA vs VA vs USDA loan calculator', 'government loan comparison',
-        'FHA VA USDA comparison calculator', 'best government mortgage program',
-        'FHA loan requirements 2026', 'VA loan eligibility calculator',
-        'USDA loan calculator', 'zero down payment mortgage calculator',
-        'low down payment mortgage comparison', 'government backed mortgage calculator',
-    ],
+    description: 'Side-by-side comparison of FHA, VA, and USDA loan programs. See which government mortgage fits your budget with the lowest down payment and total cost.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/fha-va-usda' },
     openGraph: {
         type: 'website',
@@ -37,6 +32,21 @@ export const metadata: Metadata = {
     },
 };
 
+const GOV_LOAN_FAQS = [
+    {
+        question: 'What is the minimum down payment for an FHA loan?',
+        answer: 'In 2026, the minimum down payment for an FHA loan is 3.5%, provided you have a credit score of at least 580. If your credit score is between 500 and 579, you are required to put down 10%.',
+    },
+    {
+        question: 'Do VA loans require mortgage insurance?',
+        answer: 'No. VA loans do not require any monthly mortgage insurance (PMI or MIP), which drastically lowers your monthly payment. However, they do require a one-time upfront VA Funding Fee, which is typically rolled into the loan balance. Veterans receiving VA disability are exempt from this fee.',
+    },
+    {
+        question: 'Can anyone get a USDA loan?',
+        answer: 'No. USDA loans have two strict requirements: geographical and financial. The home must be located in an eligible rural or suburban area designated by the USDA. Additionally, your total household income cannot exceed 115% of the median income for that specific area.',
+    },
+];
+
 export default function GovLoanComparisonPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
@@ -46,7 +56,10 @@ export default function GovLoanComparisonPage() {
                 url="https://usfinnexus.com/calculators/fha-va-usda"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Gov Loan Comparison', item: '/calculators/fha-va-usda' }]} />
-                            <GovLoanClient />
+            <h1 className="sr-only">FHA vs VA vs USDA Loan Comparison Calculator</h1>
+            <GovLoanClient />
+            <FhaVaUsdaSeoContent />
+            <CalculatorFAQ faqs={GOV_LOAN_FAQS} title="Government Loans — Frequently Asked Questions" />
         </main>
     );
 }

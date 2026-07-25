@@ -133,7 +133,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.75,
     }));
 
-    // 5. Blog Posts — all 34 posts with real publish dates
+    // 5. Blog Posts
     const blogPosts = BLOG_POSTS.map(({ slug, date }) => ({
         url: `${baseUrl}/blog/${slug}`,
         lastModified: new Date(date),

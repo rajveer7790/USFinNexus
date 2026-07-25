@@ -15,14 +15,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'DRIP Calculator 2026 — Dividend Reinvestment Forecaster | USFinNexus',
-    description: 'Calculate the compound growth of dividend reinvestment over time. Model dividend growth rates, yield on cost, and tax-adjusted returns. Free DRIP forecaster.',
-    keywords: [
-        'DRIP calculator', 'dividend reinvestment calculator', 'dividend reinvestment plan calculator',
-        'DRIP forecaster', 'dividend compounding calculator', 'dividend growth calculator',
-        'yield on cost calculator', 'dividend income calculator 2026',
-        'passive income dividend calculator', 'reinvest dividends calculator',
-        'how much dividends to retire', 'dividend portfolio calculator',
-    ],
+    description: 'Calculate the compound growth of dividend reinvestment over time. Model dividend growth rates, yield on cost, and tax-adjusted returns. Free DRIP forecaster.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/drip' },
     openGraph: {
         type: 'website',

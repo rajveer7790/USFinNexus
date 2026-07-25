@@ -15,8 +15,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
     title: 'FHA Loan Calculator 2026 - MIP, PMI, and Payment Breakdown | USFinNexus',
     description:
-        'Calculate your exact FHA mortgage payment including the upfront and annual Mortgage Insurance Premium (MIP). Free FHA calculator with 3.5% down payment options.',
-    keywords: ['fha loan calculator', 'fha mortgage calculator', 'fha mip calculator', 'fha monthly payment', 'fha loans 2026'],
+        'Calculate your exact FHA mortgage payment including the upfront and annual Mortgage Insurance Premium (MIP). Free FHA calculator with 3.5% down payment options.',
     openGraph: {
         type: 'website',
         title: 'FHA Loan Calculator 2026 with MIP | USFinNexus',

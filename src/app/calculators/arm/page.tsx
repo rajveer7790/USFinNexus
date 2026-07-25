@@ -14,8 +14,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'ARM Calculator 2026 - Adjustable Rate Mortgage Worst-Case Analysis | USFinNexus',
-    description: 'Free ARM mortgage calculator. Instantly see your worst-case payment scenario, fully-indexed rate, and understand rate caps (5/1, 7/1 ARMs).',
-    keywords: ['arm calculator', 'adjustable rate mortgage', '5/1 arm', '7/1 arm', 'arm worst case payment', 'arm rate caps'],
+    description: 'Free ARM mortgage calculator. Instantly see your worst-case payment scenario, fully-indexed rate, and understand rate caps (5/1, 7/1 ARMs).',
     openGraph: {
         type: 'website',
         title: 'ARM Calculator 2026 | USFinNexus',

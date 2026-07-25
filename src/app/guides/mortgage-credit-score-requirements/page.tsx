@@ -5,14 +5,6 @@ import Link from 'next/link';
 export const metadata: Metadata = {
     title: 'Credit Score Needed to Buy a House in 2026 — FHA, VA, Conventional | USFinNexus',
     description: 'Exact credit score requirements for every mortgage type in 2026: FHA (580+), VA (620+), USDA (640+), Conventional (620+). See how your score affects your rate.',
-    keywords: [
-        'credit score needed to buy a house', 'minimum credit score for mortgage',
-        'credit score mortgage requirements 2026', 'FHA credit score requirement',
-        'VA loan credit score', 'conventional loan credit score',
-        'mortgage credit score 2026', 'what credit score for home loan',
-        'credit score for FHA loan 2026', 'USDA loan credit score requirement',
-        'minimum credit score first time homebuyer', 'how credit score affects mortgage rate',
-    ],
     alternates: { canonical: 'https://usfinnexus.com/guides/mortgage-credit-score-requirements' },
     openGraph: {
         type: 'article',

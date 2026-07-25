@@ -9,14 +9,14 @@ export default function MortgageSeoContent() {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-blue">
 
                 <h2 className="text-3xl font-black text-navy-900 mb-6">
-                    How to Use Our US Mortgage Calculator (2026 Guide)
+                    How Do I Calculate My Mortgage Payment?
                 </h2>
                 <p className="lead text-xl text-gray-600">
-                    Buying a home is one of the most significant financial decisions you&apos;ll ever make. Knowing exactly how much house you can afford - and what your monthly payments will actually look like - is the crucial first step. Our free, CFPB-compliant 2026 mortgage calculator goes beyond a simple principal-and-interest estimate. It delivers a complete <strong>PITI breakdown</strong> (Principal, Interest, Taxes, and Insurance) so you see the true, all-in monthly cost of homeownership before you step into a lender&apos;s office.
+                    A mortgage calculator estimates your monthly PITI payment—Principal, Interest, Taxes, and Insurance—by applying standard amortization math to your loan amount and rate. For a $400,000 loan at 6.37% for 30 years, the P&amp;I payment alone is $2,661/month before taxes and insurance. Enter your details above to get your exact all-in number in seconds.
                 </p>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Understanding the Inputs: Step-by-Step
+                    What Does Each Mortgage Calculator Input Mean?
                 </h3>
                 <p>
                     Don&apos;t let mortgage math intimidate you. Here is exactly what each input means and how to estimate it if you aren&apos;t sure yet:
@@ -43,7 +43,7 @@ export default function MortgageSeoContent() {
                 </ul>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    The True Cost of a Mortgage: What Is PITI?
+                    What Is PITI and Why Does It Matter for Your Budget?
                 </h3>
                 <p>
                     Many simplified calculators only show Principal and Interest. But your lender actually collects your taxes and insurance monthly through an escrow account. The combined total is called <strong>PITI</strong> - and it is the number that matters for your budget and your loan approval.
@@ -65,7 +65,7 @@ export default function MortgageSeoContent() {
                 </p>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    2026 Conforming Loan Limits (Updated)
+                    What Are the 2026 Conforming Loan Limits?
                 </h3>
                 <p>
                     Every year the{' '}
@@ -143,7 +143,7 @@ export default function MortgageSeoContent() {
                 </p>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    How Extra Payments Can Save You Thousands
+                    How Much Can Extra Mortgage Payments Save You?
                 </h3>
                 <p>
                     You are not locked into your original schedule. Our calculator shows the dramatic impact of extra principal payments through a full amortization table:
@@ -158,7 +158,7 @@ export default function MortgageSeoContent() {
                 </p>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    How to Get the Best Mortgage Rate in 2026
+                    How Do I Get the Best Mortgage Rate in 2026?
                 </h3>
                 <p>
                     Your interest rate is the single biggest lever you can pull to reduce your total loan cost. Here is what lenders look at when setting your rate:
@@ -176,7 +176,7 @@ export default function MortgageSeoContent() {
                 </ul>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    What to Do After Running Your Calculation
+                    What Are the Next Steps After Running the Calculator?
                 </h3>
                 <p>
                     Once you have your PITI estimate, here are the natural next steps:

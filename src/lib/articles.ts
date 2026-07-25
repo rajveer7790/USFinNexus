@@ -30,9 +30,34 @@ export const ALL_ARTICLES: ArticleEntry[] = [
     { slug: '2026-income-tax-brackets-how-the-tcja-sunset-affects-you', title: '2026 Income Tax Brackets: Navigating the TCJA Sunset and New Legislation', category: 'Tax', readTime: '9 min', excerpt: 'A comprehensive guide to the 2026 income tax bracket changes and how the TCJA sunset impacts your taxable income.', image: '/images/tax_deduction_hero_1772351400720.png', date: 'Feb 26, 2026' },
 ];
 
+function seededRandom(seed: number) {
+    const x = Math.sin(seed++) * 10000;
+    return x - Math.floor(x);
+}
+
+function shuffleArray<T>(array: T[], seedStr: string): T[] {
+    let seed = 0;
+    for (let i = 0; i < seedStr.length; i++) {
+        seed += seedStr.charCodeAt(i);
+    }
+    
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(seededRandom(seed++) * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
 export function getRelatedArticles(currentSlug: string, count = 4): ArticleEntry[] {
     const current = ALL_ARTICLES.find(a => a.slug === currentSlug);
-    if (!current) return ALL_ARTICLES.filter(a => a.slug !== currentSlug).slice(0, count);
+    
+    if (!current) {
+        // If current article is not in the list, deterministically shuffle the entire list
+        // based on the currentSlug so that every page gets a unique set of related articles.
+        const fallbackArticles = ALL_ARTICLES.filter(a => a.slug !== currentSlug);
+        return shuffleArray(fallbackArticles, currentSlug).slice(0, count);
+    }
 
     const sameCategory = ALL_ARTICLES.filter(a => a.slug !== currentSlug && a.category === current.category);
     const others = ALL_ARTICLES.filter(a => a.slug !== currentSlug && a.category !== current.category);

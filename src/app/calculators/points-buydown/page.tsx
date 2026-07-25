@@ -3,6 +3,8 @@ import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
+import PointsBuydownSeoContent from './PointsBuydownSeoContent';
+import CalculatorFAQ from '@/components/CalculatorFAQ';
 
 const PointsBuyDownClient = nextDynamic(() => import('./PointsBuyDownClient'), {
     loading: () => <CalculatorSkeleton />,
@@ -13,8 +15,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Mortgage Points Buy-Down Calculator 2026 - Break-Even Analysis | USFinNexus',
-    description: 'Free mortgage points calculator for 2026. Calculate if paying discount points upfront is worth it. See monthly savings and find your break-even point.',
-    keywords: ['mortgage points calculator', 'discount points calculator', 'points vs rate', 'buy down interest rate', 'mortgage rate calculator'],
+    description: 'Free mortgage points calculator for 2026. Calculate if paying discount points upfront is worth it. See monthly savings and find your break-even point.',
     openGraph: {
         type: 'website',
         title: 'Mortgage Points Buy-Down Calculator 2026 | USFinNexus',
@@ -31,6 +32,21 @@ export const metadata: Metadata = {
     },
 };
 
+const POINTS_FAQS = [
+    {
+        question: 'What is a mortgage discount point?',
+        answer: 'A discount point is an optional upfront fee you pay the bank at closing to permanently lower your interest rate. One point costs exactly 1% of your total loan amount (e.g., 1 point on a $300,000 loan costs $3,000).',
+    },
+    {
+        question: 'What is the Break-Even Point?',
+        answer: 'The Break-Even Point is the exact month where the accumulated monthly savings from the lower interest rate finally equal the upfront cash you paid to buy the points. If your break-even point is 5 years, you must stay in the house (without refinancing) for more than 5 years for the points to be a good investment.',
+    },
+    {
+        question: 'Should I buy points in a high interest rate environment?',
+        answer: 'Usually, no. If rates are currently high, most buyers plan to refinance within 2 to 3 years when rates inevitably drop. If you buy points today, but refinance in 2 years, you will not reach your break-even point, meaning you threw that upfront cash away.',
+    },
+];
+
 export default function PointsBuyDownPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
@@ -40,7 +56,10 @@ export default function PointsBuyDownPage() {
                 url="https://usfinnexus.com/calculators/points-buydown"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Points Buy-Down Calculator', item: '/calculators/points-buydown' }]} />
-                            <PointsBuyDownClient />
+            <h1 className="sr-only">Mortgage Points Calculator</h1>
+            <PointsBuyDownClient />
+            <PointsBuydownSeoContent />
+            <CalculatorFAQ faqs={POINTS_FAQS} title="Mortgage Points — Frequently Asked Questions" />
         </main>
     );
 }

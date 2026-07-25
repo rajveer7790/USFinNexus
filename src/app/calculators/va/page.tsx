@@ -15,8 +15,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
     title: 'VA Loan Calculator 2026 - VA Funding Fee and Payments | USFinNexus',
     description:
-        'Calculate your VA loan monthly payment with 0% down. Automatically calculates the 2026 VA Funding Fee based on your military service and down payment.',
-    keywords: ['va loan calculator', 'va mortgage calculator', 'va funding fee calculator', 'va loan limits 2026', '0 down mortgage'],
+        'Calculate your VA loan monthly payment with 0% down. Automatically calculates the 2026 VA Funding Fee based on your military service and down payment.',
     openGraph: {
         type: 'website',
         title: 'VA Loan Calculator 2026 - Zero Down Payment | USFinNexus',

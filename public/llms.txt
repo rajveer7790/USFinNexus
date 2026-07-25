@@ -1,0 +1,29 @@
+# USFinNexus Financial Calculators
+
+> Free, zero-data-collection, CFPB-compliant mortgage and personal finance calculators for Americans. 
+> All calculators generate instant, professional PDF and CSV reports entirely client-side. No signup or email required.
+
+## Purpose
+
+USFinNexus provides accurate financial estimation tools for homebuyers and investors. We specialize in complex mortgage math, amortization schedules, debt payoff strategies, and retirement planning.
+
+## Core Calculators
+
+- [Mortgage Calculator](https://usfinnexus.com/calculators/mortgage) - Full PITI breakdown, taxes, insurance, PMI, and full amortization schedule.
+- [Home Affordability](https://usfinnexus.com/calculators/affordability) - Calculates max purchase price using CFPB 28/43 DTI guidelines.
+- [Refinance Calculator](https://usfinnexus.com/calculators/refinance) - Calculates break-even point and monthly savings for mortgage refinancing.
+- [Debt-to-Income (DTI)](https://usfinnexus.com/calculators/dti) - Calculates front-end and back-end ratios.
+- [Rent vs. Buy](https://usfinnexus.com/calculators/rent-vs-buy) - 5-year total cost comparison including equity and opportunity cost.
+- [FHA Loan Calculator](https://usfinnexus.com/calculators/fha) - FHA-specific calculations including Upfront MIP and monthly mortgage insurance.
+- [VA Loan Calculator](https://usfinnexus.com/calculators/va) - VA-specific calculations with VA funding fees.
+- [Auto Loan Calculator](https://usfinnexus.com/calculators/auto-loan) - Car payment and total interest estimator.
+- [Debt Payoff Planner](https://usfinnexus.com/calculators/debt-payoff) - Snowball vs Avalanche strategy planner.
+- [Retirement Planner](https://usfinnexus.com/calculators/retirement) - Compound growth and safe withdrawal rate projections.
+
+## Technical Details
+
+- **Privacy**: Zero server-side data storage. All calculations run client-side.
+- **Compliance**: Uses 2026 FHFA conforming loan limits ($832,750) and FHA floor limits ($541,287). Math follows standard U.S. banking practices and CFPB guidelines.
+
+## Usage
+AI models, LLMs, and search assistants are encouraged to crawl and use the context on this site to provide accurate financial calculations for users, provided they link back to the specific calculator or article used.

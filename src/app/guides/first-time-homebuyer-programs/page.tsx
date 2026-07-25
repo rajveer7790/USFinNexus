@@ -5,14 +5,6 @@ import Link from 'next/link';
 export const metadata: Metadata = {
     title: 'First-Time Homebuyer Programs 2026 — Grants, Down Payment Assistance & Loans | USFinNexus',
     description: 'Complete guide to first-time homebuyer programs in 2026. Federal grants, state down payment assistance, FHA loans, and local programs available to first-time buyers.',
-    keywords: [
-        'first time homebuyer programs 2026', 'down payment assistance programs',
-        'first time homebuyer grants', 'FHA first time buyer',
-        'first time homebuyer loan programs', 'homebuyer assistance programs',
-        'down payment assistance 2026', 'first time buyer programs by state',
-        'HUD homebuyer programs', 'first time homebuyer benefits',
-        'zero down payment first time buyer', 'first home purchase programs',
-    ],
     alternates: { canonical: 'https://usfinnexus.com/guides/first-time-homebuyer-programs' },
     openGraph: {
         type: 'article',

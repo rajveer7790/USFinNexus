@@ -3,6 +3,7 @@
 import React, { useState, useMemo, useDeferredValue } from 'react';
 import dynamic from 'next/dynamic';
 import CalculatorLayout from '@/components/ui/CalculatorLayout';
+import { formatCurrency } from '@/lib/formulas';
 
 const RetirementChart = dynamic(() => import('./RetirementChart'), {
     ssr: false,
@@ -125,14 +126,14 @@ export default function RetirementClient() {
                 <div className="glass-panel p-4 sm:p-6 border-l-4 border-l-[#0da6f2]">
                     <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Nest Egg at Age {retireAge}</p>
                     <p className="text-2xl sm:text-4xl font-black text-navy-900 tabular-nums">
-                        ${nestEggAtRetirement.toLocaleString()}
+                        {formatCurrency(nestEggAtRetirement)}
                     </p>
                     <p className="text-xs text-gray-400 mt-1 uppercase">Adjusted for {inflationRate}% inflation</p>
                 </div>
                 <div className="glass-panel p-4 sm:p-6 border-l-4 border-l-[#00C853]">
                     <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Balance at Age {lifeExpectancy}</p>
                     <p className="text-2xl sm:text-3xl font-black text-navy-900 tabular-nums">
-                        ${finalBalance.toLocaleString()}
+                        {formatCurrency(finalBalance)}
                     </p>
                     <p className="text-xs text-gray-400 mt-1">4% Safe Withdrawal Rate</p>
                 </div>

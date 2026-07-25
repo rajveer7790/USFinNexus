@@ -3,6 +3,7 @@ import { Inter, IBM_Plex_Mono } from 'next/font/google';
 import Script from 'next/script';
 import SiteHeader from '@/components/SiteHeader';
 import Footer from '@/components/Footer';
+import InteractiveAdSense from '@/components/InteractiveAdSense';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { Toaster } from 'sonner';
 import './globals.css';
@@ -28,6 +29,7 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
     alternates: {
+        canonical: '/',
         languages: {
             'en-US': '/en-US',
         },
@@ -160,11 +162,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 />
             </head>
             <body className={`${inter.className} ${plexMono.variable}`} suppressHydrationWarning>
-                <Script
-                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1373076230922603"
-                    strategy="lazyOnload"
-                    crossOrigin="anonymous"
-                />
+                <InteractiveAdSense client="ca-pub-1373076230922603" />
                 <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" disableTransitionOnChange>
                     <SiteHeader />
                     <main id="main-content" className="min-h-screen">{children}</main>

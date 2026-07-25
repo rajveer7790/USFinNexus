@@ -4,8 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'Terms of Service | USFinNexus',
-    description: 'USFinNexus terms of service. Free mortgage and finance calculators provided for educational and informational purposes only.',
-    keywords: ['USFinNexus terms of service', 'mortgage calculator terms'],
+    description: 'USFinNexus terms of service. Free mortgage and finance calculators provided for educational and informational purposes only.',
     alternates: { canonical: 'https://usfinnexus.com/terms' },
     openGraph: {
         type: 'website',

@@ -157,9 +157,9 @@ export default function SiteHeader() {
                             <LogoIcon size={30} />
                             <div className="leading-none">
                                 <span className="font-black text-[#0A192F] text-sm sm:text-base tracking-tight">
-                                    <span className="text-[#0da6f2]">US</span>FinNexus
+                                    <span className="text-[#0369a1]">US</span>FinNexus
                                 </span>
-                                <p className="hidden sm:block text-[9px] text-gray-400 font-medium tracking-widest uppercase mt-0.5">
+                                <p className="hidden sm:block text-[9px] text-gray-500 font-medium tracking-widest uppercase mt-0.5">
                                     Free Finance Tools
                                 </p>
                             </div>

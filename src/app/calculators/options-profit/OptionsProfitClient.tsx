@@ -147,13 +147,13 @@ export default function OptionsProfitClient() {
                         <div className="p-4 bg-green-50 rounded-lg border border-green-200 shadow-sm">
                             <p className="text-sm font-medium text-gray-600 mb-1">Max Profit</p>
                             <p className="text-xl font-bold text-green-700">
-                                {typeof maxProfit === 'number' ? `$${maxProfit.toLocaleString()}` : maxProfit}
+                                {typeof maxProfit === 'number' ? `$${maxProfit.toLocaleString('en-US')}` : maxProfit}
                             </p>
                         </div>
                         <div className="p-4 bg-red-50 rounded-lg border border-red-200 shadow-sm">
                             <p className="text-sm font-medium text-gray-600 mb-1">Max Loss</p>
                             <p className="text-xl font-bold text-red-700">
-                                {typeof maxLoss === 'number' ? `$${maxLoss.toLocaleString()}` : maxLoss}
+                                {typeof maxLoss === 'number' ? `$${maxLoss.toLocaleString('en-US')}` : maxLoss}
                             </p>
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg border border-gray-200 shadow-sm">

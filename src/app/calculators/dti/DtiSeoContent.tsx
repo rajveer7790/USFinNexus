@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function DtiSeoContent() {
     return (
@@ -8,11 +9,11 @@ export default function DtiSeoContent() {
                     What is a Good Debt-to-Income (DTI) Ratio?
                 </h2>
                 <p className="lead text-xl text-gray-600">
-                    Your Debt-to-Income (DTI) ratio is the single most important metric a mortgage lender evaluates alongside your credit score. It measures the percentage of your gross monthly income that goes toward paying your recurring monthly debts.
+                    A good DTI ratio for a mortgage is 36% or below. Most lenders approve loans up to 43% back-end DTI—the CFPB&apos;s qualified mortgage ceiling. Your front-end DTI (housing costs only) should stay at or below 28%. Enter your income and monthly debts above to see exactly where you stand.
                 </p>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    The Magic Numbers: 36% and 43%
+                    What DTI Ratio Do Mortgage Lenders Require?
                 </h3>
                 <p>
                     Lenders generally adhere strictly to the &quot;28/36 Rule&quot;:
@@ -42,6 +43,24 @@ export default function DtiSeoContent() {
                         <li>Cell Phone Bills or Streaming Subscriptions</li>
                     </ul>
                 </div>
+
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
+                    What Is the Difference Between Front-End and Back-End DTI?
+                </h3>
+                <p>
+                    Lenders actually calculate two distinct DTI numbers when you apply for a mortgage:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Front-End DTI (The Housing Ratio):</strong> This is the percentage of your income dedicated solely to your new housing payment (PITI: Principal, Interest, Taxes, and Insurance). Most conventional lenders want this below 28%.
+                    </li>
+                    <li>
+                        <strong>Back-End DTI (The Total Debt Ratio):</strong> This is the percentage of your income dedicated to your housing payment <em>plus</em> all other recurring monthly debts (car loans, student loans, credit cards). This is the number that typically cannot exceed 43%.
+                    </li>
+                </ul>
+                <p className="mt-6 mb-8">
+                    To learn more about how these ratios impact your mortgage approval chances in 2026, read our comprehensive guide on <Link href="/blog/front-end-vs-back-end-dti-2026" className="text-blue-600 hover:underline font-bold">Front-End vs Back-End DTI (CFPB Guidelines)</Link>.
+                </p>
             </div>
         </section>
     );

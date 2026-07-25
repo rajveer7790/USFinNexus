@@ -14,14 +14,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Mortgage Amortization Schedule Calculator 2026 | USFinNexus',
-    description: 'Free mortgage amortization schedule calculator. See exact month-by-month breakdown of principal vs interest, extra payments impact, and total interest over 15 or 30 years.',
-    keywords: [
-        'amortization schedule calculator', 'mortgage amortization calculator',
-        'amortization table', 'loan amortization schedule', 'amortization calculator 2026',
-        'principal vs interest calculator', 'extra payment mortgage calculator',
-        'mortgage payoff calculator', 'amortization schedule with extra payments',
-        'monthly amortization breakdown', 'mortgage principal calculator',
-    ],
+    description: 'Free mortgage amortization schedule calculator. See exact month-by-month breakdown of principal vs interest, extra payments impact, and total interest over 15 or 30 years.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/amortization' },
     openGraph: {
         type: 'website',

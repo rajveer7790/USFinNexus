@@ -16,14 +16,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Free Mortgage & Finance Calculators 2026 | USFinNexus',
-    description: 'Free mortgage, affordability, refinance, auto & personal loan calculators. Instant PDF + CSV downloads — no signup, no email, no lead-gen spam. Built for Americans.',
-    keywords: [
-        'free mortgage calculator', 'mortgage calculator 2026', 'home affordability calculator',
-        'refinance calculator', 'DTI calculator', 'amortization schedule calculator',
-        'free financial calculators', 'PITI calculator', 'mortgage calculator with PDF',
-        'no signup mortgage calculator', 'CFPB mortgage calculator', 'FHA loan calculator',
-        'VA loan calculator', 'debt payoff calculator', 'retirement calculator',
-    ],
+    description: 'Free mortgage, affordability, refinance, auto & personal loan calculators. Instant PDF + CSV downloads — no signup, no email, no lead-gen spam. Built for Americans.',
     alternates: { canonical: 'https://usfinnexus.com' },
     openGraph: {
         type: 'website',
@@ -345,26 +338,33 @@ export default function HomePage() {
                                 </div>
                             ))}
                         </div>
-                        <div className="neo-diff-visual">
-                            <div className="neo-dv-glow" />
-                            <div className="neo-dv-title">Feature Comparison</div>
-                            <div className="neo-dv-header">
-                                <span>Others</span>
-                                <span>USFinNexus</span>
-                            </div>
-                            {[
-                                { l: 'Cost', them: '$9.99/mo', us: 'Free Forever' },
-                                { l: 'Email Required', them: 'Yes', us: 'Never' },
-                                { l: 'Data Collected', them: 'Everything', us: '0 bytes' },
-                                { l: 'PDF Export', them: 'Premium Only', us: 'Always Free' },
-                                { l: 'CFPB Compliant', them: '✕', us: '✓' },
-                            ].map(r => (
-                                <div key={r.l} className="neo-dv-row">
-                                    <span className="neo-dv-label">{r.l}</span>
-                                    <span className="neo-dv-them">{r.them}</span>
-                                    <span className="neo-dv-us">{r.us}</span>
+                        <div className="neo-diff-visual flex flex-col justify-between">
+                            <div>
+                                <div className="neo-dv-glow" />
+                                <div className="neo-dv-title">Feature Comparison</div>
+                                <div className="neo-dv-header">
+                                    <span>Others</span>
+                                    <span>USFinNexus</span>
                                 </div>
-                            ))}
+                                {[
+                                    { l: 'Cost', them: '$9.99/mo', us: 'Free Forever' },
+                                    { l: 'Email Required', them: 'Yes', us: 'Never' },
+                                    { l: 'Data Collected', them: 'Everything', us: '0 bytes' },
+                                    { l: 'PDF Export', them: 'Premium Only', us: 'Always Free' },
+                                    { l: 'CFPB Compliant', them: '✕', us: '✓' },
+                                ].map(r => (
+                                    <div key={r.l} className="neo-dv-row">
+                                        <span className="neo-dv-label">{r.l}</span>
+                                        <span className="neo-dv-them">{r.them}</span>
+                                        <span className="neo-dv-us">{r.us}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="mt-8 text-center">
+                                <Link href="/why-we-dont-collect-data" className="text-blue-600 hover:text-blue-800 font-bold text-sm inline-flex items-center gap-1 transition-colors">
+                                    Read our Zero-Data Promise <ArrowRight size={14} />
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

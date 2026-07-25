@@ -14,14 +14,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Texas Mortgage Calculator 2026 — Property Taxes & No Income Tax | USFinNexus',
-    description: 'Free Texas mortgage calculator. Accounts for high TX property taxes (1.6%–2.5%), no state income tax savings, and homestead exemption. Built for Texas homebuyers.',
-    keywords: [
-        'Texas mortgage calculator', 'TX mortgage calculator 2026',
-        'Texas home loan calculator', 'Texas property tax calculator',
-        'Texas homestead exemption calculator', 'Houston mortgage calculator',
-        'Dallas mortgage calculator', 'Texas mortgage with property tax',
-        'no state income tax Texas mortgage', 'Texas home buying calculator',
-    ],
+    description: 'Free Texas mortgage calculator. Accounts for high TX property taxes (1.6%–2.5%), no state income tax savings, and homestead exemption. Built for Texas homebuyers.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/texas' },
     openGraph: {
         type: 'website',

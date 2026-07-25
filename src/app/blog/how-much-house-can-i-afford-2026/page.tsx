@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { CheckCircle2, DollarSign, AlertTriangle } from 'lucide-react';
+import { Target, Calculator, AlertTriangle, Home, DollarSign, Activity, PieChart } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
 import RelatedCalculators from '@/components/RelatedCalculators';
 import RelatedArticles from '@/components/RelatedArticles';
@@ -8,152 +8,192 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'How Much House Can I Afford in 2026? The 28/36 Rule with Real Numbers | USFinNexus',
-    description: 'Calculate exactly how much house you can afford in 2026 using the 28/36 rule with current mortgage rates. Includes hidden costs most buyers forget and CFPB-compliant DTI guidelines.',
-    keywords: [
-        'how much house can I afford 2026', 'home affordability calculator 2026', '28/36 rule mortgage',
-        'how much mortgage on salary', 'house affordability income ratio', 'CFPB 28 43 DTI rule',
-        'how much can I borrow for a house', 'mortgage income requirements', 'home buying budget 2026',
-        'maximum mortgage I can afford', 'debt to income ratio home buying', 'salary to home price ratio',
-    ],
-    alternates: { canonical: 'https://usfinnexus.com/blog/how-much-house-can-i-afford-2026' },
-    openGraph: { type: 'article', title: 'How Much House Can I Afford in 2026? | USFinNexus', description: 'The 28/36 rule with real 2026 rate examples. What salary do you need for a $400K house? Hidden costs most buyers miss.', url: 'https://usfinnexus.com/blog/how-much-house-can-i-afford-2026', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'How Much House Can I Afford 2026' }] },
-    twitter: { card: 'summary_large_image', title: 'How Much House Can I Afford in 2026?', description: 'The 28/36 rule with real 2026 numbers. What salary do you need for a $400K home?', images: ['https://usfinnexus.com/icon-512.png'] },
+    title: 'The 28/36 Rule: How to Calculate Your Housing Budget in 2026 | USFinNexus',
+    description: 'Stop guessing your housing budget. Use the 28/36 rule to mathematically calculate exactly how much house you can afford without becoming "house poor".',
+    alternates: { canonical: 'https://usfinnexus.com/blog/how-much-house-can-afford-2026' },
+    openGraph: {
+        type: 'article',
+        title: 'How Much House Can You Actually Afford?',
+        description: 'Just because a bank approves you for a $600,000 mortgage does not mean you should take it. Here is the exact math to avoid becoming house poor.',
+        url: 'https://usfinnexus.com/blog/how-much-house-can-i-afford-2026',
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: 'Home Affordability' }]
+    }
 };
 
 export default function BlogPost() {
     return (
         <>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What salary do I need to afford a $400,000 house in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'At 2026 rates (~6.37% for a 30-year fixed) with 20% down ($80,000), the P&I payment on a $320,000 loan is approximately $1,999/month. Adding taxes ($400/mo), insurance ($150/mo), and PMI (n/a with 20% down), total PITI is roughly $2,550/month. Using the 28% front-end DTI rule, you need gross income of $2,550 ÷ 0.28 = ~$9,107/month or approximately $109,000/year.' } },
-    { '@type': 'Question', name: 'What is the 28/36 rule for buying a house?', acceptedAnswer: { '@type': 'Answer', text: 'The 28/36 rule is a CFPB-endorsed guideline: spend no more than 28% of gross monthly income on housing costs (front-end DTI) and no more than 36% on all debt (back-end DTI). Many lenders will approve up to 43% back-end DTI (the Qualified Mortgage limit), but financial planners generally recommend staying within 36% for a comfortable financial cushion.' } },
-    { '@type': 'Question', name: 'What hidden costs do first-time buyers forget when calculating affordability?', acceptedAnswer: { '@type': 'Answer', text: 'Beyond the mortgage payment (PITI), buyers commonly forget: HOA fees ($200–$600/month in many communities), maintenance reserve (1%–2% of home value annually), utilities increase from apartment to house, lawn/landscaping, property insurance deductibles, and closing costs (2%–5% of loan amount upfront).' } },
+    { '@type': 'Question', name: 'What is the 28/36 Rule?', acceptedAnswer: { '@type': 'Answer', text: 'The 28/36 Rule is a financial guideline stating that no more than 28% of your gross monthly income should go toward housing expenses (mortgage, taxes, insurance), and no more than 36% of your gross monthly income should go toward ALL debts combined (housing plus car loans, student loans, and credit cards).' } },
+    { '@type': 'Question', name: 'Why does the bank approve me for more house than I can afford?', acceptedAnswer: { '@type': 'Answer', text: 'Banks calculate your approval based on your GROSS income (before taxes). But you pay your mortgage with your NET income (after the IRS takes 25%). If you max out the bank\'s approval limit, you will likely become "house poor," meaning you have a beautiful home but no cash left over to travel, invest, or eat out.' } },
+    { '@type': 'Question', name: 'What hidden costs should I include in my home budget?', acceptedAnswer: { '@type': 'Answer', text: 'When budgeting for a house, you must include the full PITI (Principal, Interest, Taxes, Insurance), plus mandatory HOA fees, Private Mortgage Insurance (PMI) if you put less than 20% down, and an annual maintenance fund equal to roughly 1% of the home\'s total value.' } },
 ] }) }} />
         <ArticleSchema
-            title="How Much House Can I Afford in 2026? | USFinNexus"
-            description="Use the 28/36 rule, factor in 2026 interest rates, and calculate exactly how much house you can afford with our free affordability guide."
+            title="How Much House Can I Afford in 2026? The 28/36 Rule Explained"
+            description="Do not let a bank dictate your budget. Learn the 28/36 Rule and how to calculate exactly how much house you can afford without becoming house poor."
             url="https://usfinnexus.com/blog/how-much-house-can-i-afford-2026"
-            datePublished="2026-02-25"
-            dateModified="2026-03-12"
+            datePublished="2026-05-26"
+            dateModified="2026-05-26"
             authorName="USFinNexus Editorial Team"
+            keywords={['Home Buying', 'Budgeting', 'Mortgage', '2026']}
         />
         <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
-            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'How Much House Can I Afford?', item: '/blog/how-much-house-can-i-afford-2026' }]} />
+            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Home Affordability Guide', item: '/blog/how-much-house-can-i-afford-2026' }]} />
             <article className="prose prose-slate max-w-none">
 
             <header className="mb-10">
-                <span className="inline-block px-3 py-1 rounded text-xs font-bold mb-4" style={{ background: 'rgba(0,200,83,0.12)', color: '#00C853' }}>
-                    Affordability
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4" style={{ background: 'rgba(59, 130, 246, 0.12)', color: '#2563eb' }}>
+                    Home Buying Math
                 </span>
                 <h1 className="text-3xl md:text-5xl font-black mb-6 leading-tight" style={{ color: 'var(--color-text)' }}>
-                    How Much House Can I Afford in 2026?
+                    How Much House Can I Afford in 2026? The 28/36 Rule Explained
                 </h1>
                 <div className="flex flex-wrap items-center gap-3 text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>
                     <span>By {USFinNexusEditorialTeam.name}</span>
                     <span>·</span>
-                    <span>February 25, 2026</span>
+                    <span>May 26, 2026</span>
                     <span>·</span>
-                    <span>7 min read</span>
-                    <span>·</span>
-                    <span className="text-[#0da6f2] font-bold">Updated March 12, 2026</span>
+                    <span>10 min read</span>
                 </div>
             </header>
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    With 2026 mortgage rates stabilizing around 6.5-7% and median home prices hovering near $420,000 nationally, the question &quot;How much house can I afford?&quot; has never been more important. Here&apos;s a clear, no-nonsense framework.
+                    <em>Looking for our comprehensive 2026 home affordability guide? Read our <Link href="/blog/how-much-house-can-afford-2026" className="text-blue-600 underline">Main Affordability Guide</Link> instead.</em><br/><br/>
+                    The biggest mistake a first-time homebuyer can make is letting a bank decide their budget. 
                 </p>
 
-                <h2 className="text-2xl font-bold mt-12 mb-4">The 28/36 Rule: Your Starting Point</h2>
-                <p className="mb-6">
-                    Most lenders use the <strong>28/36 rule</strong> as a baseline for mortgage qualification:
+                <p>
+                    If you earn $100,000 a year and have zero debt, an aggressive lender in 2026 might approve you for a massive $550,000 mortgage. You will feel rich. You will immediately start browsing Zillow for houses with giant backyards and quartz countertops.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 not-prose">
-                    <div className="card p-6 text-center">
-                        <DollarSign className="w-8 h-8 mx-auto mb-2 text-green-500" />
-                        <h3 className="font-bold text-3xl mb-1" style={{ color: 'var(--color-navy)' }}>28%</h3>
-                        <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>of gross monthly income should be the <strong>maximum</strong> spent on housing (PITI)</p>
-                    </div>
-                    <div className="card p-6 text-center">
-                        <DollarSign className="w-8 h-8 mx-auto mb-2 text-blue-500" />
-                        <h3 className="font-bold text-3xl mb-1" style={{ color: 'var(--color-navy)' }}>36%</h3>
-                        <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>of gross monthly income should be the <strong>maximum</strong> for all debt (housing + car + student loans + credit cards)</p>
-                    </div>
-                </div>
+                <p>
+                    <strong>Do not do this.</strong> The bank's approval software does not care if you want to travel to Europe, contribute to your 401(k), or pay for childcare. If you accept the maximum loan amount the bank offers, you will become "House Poor." You will own a beautiful house, but you will spend the next 30 years eating ramen noodles on the couch because your mortgage consumes your entire paycheck.
+                </p>
 
-                <h2 className="text-2xl font-bold mt-12 mb-4">Example: $80,000 Annual Income</h2>
-                <p className="mb-6">Let&apos;s walk through a real example for someone earning $80,000 per year:</p>
-                <div className="bg-gray-50 rounded-xl p-6 mb-8">
-                    <ul className="space-y-3">
-                        <li className="flex items-start gap-3">
-                            <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#00C853' }} />
-                            <span><strong>Gross monthly income:</strong> $6,667</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#00C853' }} />
-                            <span><strong>Max housing payment (28%):</strong> $1,867/month</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#00C853' }} />
-                            <span><strong>At 6.75% rate, 30-year fixed:</strong> You can afford roughly a <strong>$285,000-$310,000</strong> home with 10% down</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#00C853' }} />
-                            <span><strong>With 20% down:</strong> You push that to <strong>$320,000-$350,000</strong> (and eliminate PMI)</span>
-                        </li>
-                    </ul>
-                </div>
+                <h2 className="text-2xl font-bold mt-12 mb-4">What Is the 28/36 Rule for Home Affordability?</h2>
+                <p>
+                    To guarantee you never become house poor, you must run your finances through the <strong>28/36 Rule</strong>. This is the mathematical framework utilized by conservative financial planners to ensure your housing costs do not suffocate your lifestyle.
+                </p>
 
-                <h2 className="text-2xl font-bold mt-12 mb-4">Hidden Costs Most Buyers Forget</h2>
-                <div className="card p-6 mb-8 bg-yellow-50 border-l-4 border-yellow-500">
+                <h3 className="text-xl font-bold mt-8 mb-3">The "28" (Front-End Ratio)</h3>
+                <p>
+                    The rule dictates that your absolute maximum housing payment should never exceed <strong>28% of your Gross Monthly Income</strong>.
+                </p>
+                <p>
+                    Let's assume you make $10,000 a month before taxes. 
+                    <br/>
+                    <em>$10,000 × 0.28 = $2,800.</em>
+                </p>
+                <p>
+                    Your entire housing bill (which must include Principal, Interest, Taxes, Insurance, and HOA fees) cannot exceed $2,800 a month.
+                </p>
+
+                <h3 className="text-xl font-bold mt-8 mb-3">The "36" (Back-End Ratio)</h3>
+                <p>
+                    The second half of the rule is even more critical. Your total debt obligations (your new $2,800 mortgage, plus your student loans, car payments, and minimum credit card bills) must never exceed <strong>36% of your Gross Monthly Income</strong>.
+                </p>
+                <p>
+                    If you make $10,000 a month, your maximum allowed debt is $3,600. 
+                    <br/>
+                    If your car payment is $700 and your student loan is $400, you are already spending $1,100 on debt. You only have $2,500 left over for housing ($3,600 - $1,100). The car loan literally forces you to buy a cheaper house.
+                </p>
+
+                <div className="card p-6 mb-8 border-l-4 border-red-500 bg-red-50">
                     <div className="flex gap-4">
-                        <AlertTriangle className="w-6 h-6 shrink-0 text-yellow-600" />
+                        <AlertTriangle className="w-6 h-6 shrink-0 text-red-600 mt-1" />
                         <div>
-                            <h3 className="font-bold mb-2">Don&apos;t Forget These Expenses</h3>
-                            <ul className="text-sm space-y-1 m-0 pl-4 list-disc">
-                                <li><strong>Property taxes:</strong> Varies wildly by state ($1,500-$15,000+ annually)</li>
-                                <li><strong>Homeowner&apos;s insurance:</strong> $1,200-$3,000/year on average</li>
-                                <li><strong>PMI:</strong> 0.5-1.5% of loan amount if under 20% down</li>
-                                <li><strong>HOA fees:</strong> $200-$600/month in many communities</li>
-                                <li><strong>Maintenance:</strong> Budget 1-2% of home value annually</li>
-                            </ul>
+                            <h3 className="font-bold mb-2">The Bank's Dangerous Math</h3>
+                            <p className="text-sm m-0 text-gray-700">
+                                Why does the 28/36 rule feel so restrictive? Because banks use the much more aggressive <strong>43% or 50% rule</strong>. An FHA lender will routinely approve you for a mortgage that consumes 50% of your gross income. But remember: Banks use <em>Gross Income</em> (before taxes). You pay the mortgage with <em>Net Income</em>. If taxes take 25% of your check, and the bank takes 50%, you literally only have 25% of your income left to pay for food, gas, and electricity.
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                <h2 className="text-2xl font-bold mt-12 mb-4">2026-Specific Factors</h2>
-                <p className="mb-6">
-                    Several 2026 dynamics affect affordability beyond just interest rates:
+                <h2 className="text-2xl font-bold mt-12 mb-4">What Are the Hidden Costs of Homeownership?</h2>
+                <p>
+                    When you rent an apartment, your monthly rent is the <em>maximum</em> amount you will pay for housing that month. If the AC unit breaks, the landlord pays the $5,000 replacement cost.
                 </p>
-                <ul className="list-disc pl-6 mb-8 space-y-2">
-                    <li><strong>Rate buydowns:</strong> Many builders are offering 2-1 buydowns that make the first two years significantly cheaper.</li>
-                    <li><strong>State first-time buyer programs:</strong> States like California, Texas, and Florida have expanded assistance in 2026.</li>
-                    <li><strong>Remote work premium:</strong> If you can work remotely, consider lower-cost markets where your dollar stretches further.</li>
-                    <li><strong>QBI deduction:</strong> If you&apos;re self-employed, the permanent 20% QBI deduction effectively increases your take-home pay.</li>
-                </ul>
+                <p>
+                    When you own a house, your mortgage is the <em>minimum</em> amount you will pay. If the AC unit breaks, you pay the $5,000. 
+                </p>
+                <p>
+                    To calculate true affordability, you must use the <strong>1% Maintenance Rule</strong>. You should save 1% of the home's total value every year for repairs. If you buy a $400,000 house, you must secretly add $4,000 a year (or $333 a month) to your true housing budget to ensure you can afford the inevitable broken pipes and roof leaks.
+                </p>
 
-                <h2 className="text-2xl font-bold mt-12 mb-4">The Conservative Approach</h2>
-                <p className="mb-6">
-                    Just because a lender approves you for $350,000 doesn&apos;t mean you should spend that much. Many financial advisors recommend the <strong>&quot;25% rule&quot;</strong>-keeping your total housing costs at or below 25% of your <em>take-home</em> (after-tax) pay, not your gross pay. This gives you a much larger cushion for emergencies, investments, and lifestyle.
+                <h2 className="text-2xl font-bold mt-12 mb-4">How Can I Afford More House Without Overextending?</h2>
+                <p>
+                    If the 28/36 rule restricts you to a $300,000 house, but you live in a market where starter homes cost $450,000, you only have three mathematical solutions:
                 </p>
+                <ul className="list-disc pl-6 space-y-4 mb-8">
+                    <li><strong>Eradicate Debt:</strong> Pay off your $700/month car loan. That immediately frees up $700 of cash flow, allowing you to afford roughly $100,000 more in mortgage principal.</li>
+                    <li><strong>Increase the Down Payment:</strong> Save an extra $50,000 in cash. A massive down payment drastically lowers the loan amount, forcing the monthly payment back down into your 28% budget.</li>
+                    <li><strong>House Hacking:</strong> Buy a duplex. If you live in one half and rent out the other half, the rental income officially offsets your debt-to-income ratio, allowing you to safely bypass the 28% rule.</li>
+                </ul>
 
                 <hr className="my-10 border-gray-200" />
 
-                <div className="card p-4 sm:p-6 text-center">
-                    <h3 className="text-xl font-bold mb-3">Calculate Your Exact Number</h3>
-                    <p className="text-sm mb-6" style={{ color: 'var(--color-text-muted)' }}>
-                        Plug in your income, debts, and down payment to see exactly what you can afford.
+                <div className="card p-6 sm:p-10 text-center bg-gradient-to-br from-blue-900 to-indigo-900 text-white rounded-3xl shadow-xl">
+                    <PieChart className="w-12 h-12 mx-auto text-blue-300 mb-4" />
+                    <h3 className="text-2xl font-bold mb-3 text-white">Find Your DTI Limit</h3>
+                    <p className="text-blue-100 mb-8 max-w-xl mx-auto">
+                        Do not guess how much house you can afford. Use our Debt-to-Income (DTI) Calculator. Input your gross salary and your current debts, and we will show you exactly what the bank sees when they evaluate your file.
                     </p>
-                    <Link href="/calculators/affordability" className="btn-primary py-3 px-6 text-sm inline-block">
-                        Open Affordability Calculator
+                    <Link href="/calculators/dti" className="inline-block bg-white text-navy-900 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
+                        Calculate Your DTI Ratio
                     </Link>
                 </div>
-                <AuthorBio author={USFinNexusEditorialTeam} updatedDate="March 12, 2026" />
+
+                
+                <hr className="my-12 border-gray-200" />
+                
+                <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
+                    <h2 className="text-3xl font-black mb-6 text-slate-900">Advanced Strategies: The Brutal Math of House Affordability</h2>
+                    <p className="text-lg text-slate-700 mb-6">
+                        The single biggest mistake prospective homebuyers make is confusing "what a bank will lend me" with "what I can actually afford." Banks use gross income and theoretical debt-to-income limits to approve loans; you use net income to buy groceries. Relying on a lender's maximum approval number is a fast track to being "house poor."
+                    </p>
+
+                    <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">1. The 28/36 Rule Is Dead in 2026</h3>
+                    <p className="text-slate-700 mb-4">
+                        For decades, financial planners preached the "28/36 Rule"—your housing payment should not exceed 28% of your gross income, and your total debt should not exceed 36%. In 2026, with elevated mortgage rates, almost no first-time buyer qualifies under the 28% front-end ratio. Lenders are actively approving borrowers with backend DTIs up to 50% on conventional loans and 55% on FHA loans. If you take a loan at a 50% DTI, literally half of your pre-tax income is going to debt service. Once taxes are withdrawn, you will have nearly nothing left for savings, emergencies, or living expenses.
+                    </p>
+
+                    <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">2. The "Stress Test" Strategy</h3>
+                    <p className="text-slate-700 mb-4">
+                        Before committing to a maximum mortgage, you must stress test your budget. If your current rent is $2,000, and your projected mortgage payment (PITI) is $3,500, you are facing a $1,500 gap. For the next six months, you must automatically transfer exactly $1,500 from your checking account to a savings account on the 1st of every month. If you find yourself pulling money back out of savings to cover groceries or gas, you mathematically cannot afford the house. Do not buy a house based on future hypothetical raises or bonuses.
+                    </p>
+
+                    <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">3. The Hidden Carrying Costs</h3>
+                    <p className="text-slate-700 mb-4">
+                        A mortgage calculator only gives you the PITI (Principal, Interest, Taxes, Insurance). It willfully ignores the massive hidden carrying costs of homeownership. You must budget an additional 1% to 2% of the home's value annually for maintenance. If you buy a $500,000 home, expect to spend $5,000 to $10,000 every single year fixing HVAC units, repairing roof leaks, and replacing appliances. Furthermore, you must factor in elevated utility costs, HOA fees, and increased transportation costs if you are moving further into the suburbs to find an affordable price point.
+                    </p>
+
+                    <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">Frequently Asked Questions (Affordability)</h3>
+                    <div className="space-y-6 mt-6">
+                        <div className="bg-white p-5 rounded-xl border border-slate-200">
+                            <h4 className="font-bold text-lg mb-2">Can I use my 401(k) to qualify for a larger mortgage?</h4>
+                            <p className="text-slate-600">While lenders will look at your retirement accounts to verify you have "reserves" (emergency funds) after closing, they do not count the balance toward your monthly qualifying income. You cannot use the size of your 401(k) to magically boost your Debt-to-Income ratio and borrow more money.</p>
+                        </div>
+                        <div className="bg-white p-5 rounded-xl border border-slate-200">
+                            <h4 className="font-bold text-lg mb-2">Should I pay off my car loan before buying a house?</h4>
+                            <p className="text-slate-600">It depends heavily on your DTI. If you have a massive $800/month car payment, that debt is actively suffocating your borrowing power; paying it off will drastically increase the size of the mortgage you qualify for. However, if paying off the car drains all your liquid cash, leaving you without a down payment or emergency fund, you are better off keeping the car loan and buying less house.</p>
+                        </div>
+                        <div className="bg-white p-5 rounded-xl border border-slate-200">
+                            <h4 className="font-bold text-lg mb-2">Does my credit score affect how much house I can afford?</h4>
+                            <p className="text-slate-600">Indirectly, yes, massively. Your credit score determines your interest rate. If a borrower with a 780 credit score gets a 6% rate, and a borrower with a 640 credit score gets a 7.5% rate, the monthly payment on the exact same $400,000 house will be hundreds of dollars higher for the 640 borrower. Because their payment is higher, their DTI is higher, meaning the bank will lend them significantly less total money.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 26, 2026" />
             </div>
             </article>
+            <div className="mt-16">
+                <RelatedCalculators exclude={['/calculators/dti']} limit={4} title="Related Calculators" />
+                <RelatedArticles currentSlug="how-much-house-can-i-afford-2026" category="Home Buying" />
+            </div>
         </div>
-        <RelatedCalculators exclude={['/calculators/affordability']} limit={4} title="Related Calculators" />
-        <RelatedArticles currentSlug="how-much-house-can-i-afford-2026" category="Affordability" />
         </>
     );
 }

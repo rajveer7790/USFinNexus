@@ -1,6 +1,7 @@
 'use client';
 
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { formatCurrency } from '@/lib/formulas';
 
 type ChartRow = { age: number; balance: number };
 
@@ -27,7 +28,7 @@ export default function RetirementChart({ chartData }: { chartData: ChartRow[] }
                     width={80}
                 />
                 <Tooltip
-                    formatter={(value: number) => [`$${value.toLocaleString()}`, 'Balance']}
+                    formatter={(value: number) => [formatCurrency(value), 'Balance']}
                     labelFormatter={(label) => `Age ${label}`}
                     contentStyle={{ backgroundColor: 'rgba(6, 15, 30, 0.9)', borderColor: 'rgba(13, 166, 242, 0.4)', borderRadius: '12px', color: '#fff' }}
                     itemStyle={{ color: '#0da6f2', fontWeight: 'bold' }}

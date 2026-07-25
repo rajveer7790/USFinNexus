@@ -3,6 +3,8 @@ import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
+import InterestOnlySeoContent from './InterestOnlySeoContent';
+import CalculatorFAQ from '@/components/CalculatorFAQ';
 
 const InterestOnlyClient = nextDynamic(() => import('./InterestOnlyClient'), {
     loading: () => <CalculatorSkeleton />,
@@ -13,8 +15,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Interest-Only Mortgage Calculator 2026 | USFinNexus',
-    description: 'Calculate your interest-only mortgage payments and see exactly how much your payment will jump when the loan fully amortizes.',
-    keywords: ['interest only mortgage calculator', 'interest only payment', 'io mortgage', 'interest only vs amortized'],
+    description: 'Calculate your interest-only mortgage payments and see exactly how much your payment will jump when the loan fully amortizes.',
     openGraph: {
         type: 'website',
         title: 'Interest-Only Mortgage Calculator 2026 | USFinNexus',
@@ -31,6 +32,21 @@ export const metadata: Metadata = {
     },
 };
 
+const INTEREST_ONLY_FAQS = [
+    {
+        question: 'Why does my principal balance never go down on an IO loan?',
+        answer: 'During the initial IO period (e.g., the first 10 years), the bank only requires you to pay the exact amount of interest the loan generates that month. Because you are not paying a single dollar extra toward the principal, the core balance of the debt remains completely frozen.',
+    },
+    {
+        question: 'What is payment shock?',
+        answer: 'Payment shock occurs at the end of the interest-only period. For a 30-year loan with a 10-year IO period, you suddenly have to pay off the entire principal balance in just 20 years. Your payment instantly spikes by hundreds or thousands of dollars a month, which catches many homeowners off guard and can lead to foreclosure.',
+    },
+    {
+        question: 'Are interest-only loans a good idea?',
+        answer: 'For the average homebuyer, they are a terrible idea. They are highly risky and rely on the hope that your income will dramatically increase or the home will rapidly appreciate. They are best used strategically by wealthy investors or individuals with variable, bonus-heavy compensation structures.',
+    },
+];
+
 export default function InterestOnlyPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
@@ -40,7 +56,10 @@ export default function InterestOnlyPage() {
                 url="https://usfinnexus.com/calculators/interest-only"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Interest-Only Calculator', item: '/calculators/interest-only' }]} />
-                            <InterestOnlyClient />
+            <h1 className="sr-only">Interest-Only Mortgage Calculator</h1>
+            <InterestOnlyClient />
+            <InterestOnlySeoContent />
+            <CalculatorFAQ faqs={INTEREST_ONLY_FAQS} title="Interest-Only Mortgages — Frequently Asked Questions" />
         </main>
     );
 }

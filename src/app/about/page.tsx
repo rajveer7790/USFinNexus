@@ -5,12 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'About USFinNexus | CFPB-Compliant Free Mortgage Calculators',
-    description: 'USFinNexus provides free, CFPB-compliant mortgage and finance calculators for Americans — no email required, no lender referrals, zero data collection. Learn about our methodology and commitment.',
-    keywords: [
-        'about USFinNexus', 'free mortgage calculator no signup', 'CFPB compliant calculator',
-        'no lender referrals mortgage calculator', 'privacy first mortgage calculator',
-        'USFinNexus mission', 'unbiased mortgage calculator',
-    ],
+    description: 'USFinNexus provides free, CFPB-compliant mortgage and finance calculators for Americans — no email required, no lender referrals, zero data collection. Learn about our methodology and commitment.',
     alternates: { canonical: 'https://usfinnexus.com/about' },
     openGraph: {
         type: 'website',

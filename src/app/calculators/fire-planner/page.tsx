@@ -15,15 +15,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'FIRE Calculator 2026 — Financial Independence Retire Early | USFinNexus',
-    description: 'Calculate your FIRE number and early retirement timeline. Free financial independence calculator with safe withdrawal rate modeling and Coast FIRE analysis.',
-    keywords: [
-        'FIRE calculator', 'financial independence retire early calculator',
-        'FIRE number calculator', 'early retirement calculator',
-        'how much to retire early', 'FIRE retirement planner 2026',
-        'coast FIRE calculator', 'lean FIRE calculator', 'fat FIRE calculator',
-        'safe withdrawal rate calculator', '4 percent rule calculator',
-        'financial independence calculator', 'FIRE savings calculator',
-    ],
+    description: 'Calculate your FIRE number and early retirement timeline. Free financial independence calculator with safe withdrawal rate modeling and Coast FIRE analysis.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/fire-planner' },
     openGraph: {
         type: 'website',

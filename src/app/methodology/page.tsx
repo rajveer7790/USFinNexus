@@ -5,12 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'Calculation Methodology & Data Sources | USFinNexus',
-    description: 'How USFinNexus calculates mortgage payments, DTI, affordability, and refinance break-even. Formulas sourced from CFPB, FHFA, HUD, Tax Foundation, and Freddie Mac PMMS.',
-    keywords: [
-        'mortgage calculation methodology', 'CFPB mortgage formula', 'PITI calculation explained',
-        'DTI ratio formula', 'mortgage amortization formula', 'FHFA conforming loan limits 2026',
-        'FHA loan limits 2026', 'PMI calculation formula', 'refinance break-even calculation',
-    ],
+    description: 'How USFinNexus calculates mortgage payments, DTI, affordability, and refinance break-even. Formulas sourced from CFPB, FHFA, HUD, Tax Foundation, and Freddie Mac PMMS.',
     alternates: { canonical: 'https://usfinnexus.com/methodology' },
     openGraph: {
         type: 'article',

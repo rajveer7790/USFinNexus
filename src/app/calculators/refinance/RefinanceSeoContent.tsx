@@ -9,11 +9,11 @@ export default function RefinanceSeoContent() {
                     When Does It Make Sense to Refinance?
                 </h2>
                 <p className="lead text-xl text-gray-600">
-                    Refinancing your mortgage involves completely replacing your existing loan with a new one. In 2026, many homeowners who bought during the peak rate periods are looking to refinance. However, jumping at a lower rate isn&apos;t always financially smart once closing costs are factored in. Our calculator determines exactly when you hit your &quot;Break-Even Point.&quot;
+                    Refinancing makes financial sense when your monthly savings exceed closing costs before you move or sell. A rate drop of 0.75%–1.0% or more typically clears the break-even hurdle within 24 months. Enter your current loan balance, existing rate, and new rate above to calculate your exact break-even date and lifetime savings.
                 </p>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    The Break-Even Analysis (The Most Critical Metric)
+                    How Do I Calculate My Refinance Break-Even Point?
                 </h3>
                 <p>
                     When you refinance, you have to pay closing costs all over again (typically 2% to 5% of the loan amount). To determine if refinancing is worth it, you must calculate how many months of savings it takes to recoup those upfront costs.
@@ -31,7 +31,17 @@ export default function RefinanceSeoContent() {
                 </p>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Top 3 Reasons to Refinance in 2026
+                    The 2026 Rate Environment: Is It Time to Refinance?
+                </h3>
+                <p>
+                    For homeowners who purchased or refinanced during the rate spikes of 2023 and 2024 (when rates routinely breached 7.5% and even 8%), the 2026 rate environment offers a crucial window of opportunity. With average 30-year fixed rates hovering in the mid-to-high 6% range, and 15-year rates dipping into the upper 5% range, many recent buyers can finally achieve the "1% rule" (dropping their interest rate by a full percentage point).
+                </p>
+                <p>
+                    However, the Federal Reserve's stance in 2026 remains data-dependent, meaning rates continue to exhibit volatility. If your break-even analysis shows a timeline of 24 months or less, locking in a lower rate now provides guaranteed savings rather than gambling on further rate drops that may not materialize.
+                </p>
+
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
+                    What Are the Best Reasons to Refinance in 2026?
                 </h3>
                 <ul>
                     <li>

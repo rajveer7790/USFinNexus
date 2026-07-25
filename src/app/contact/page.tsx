@@ -6,7 +6,6 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 export const metadata: Metadata = {
     title: 'Contact USFinNexus | Feedback & Support',
     description: 'Contact the USFinNexus team with questions, feedback, or support requests about our free mortgage and finance calculators.',
-    keywords: ['contact USFinNexus', 'USFinNexus support', 'mortgage calculator feedback', 'USFinNexus contact'],
     alternates: { canonical: 'https://usfinnexus.com/contact' },
     openGraph: {
         type: 'website',

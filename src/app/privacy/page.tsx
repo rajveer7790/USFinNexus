@@ -4,8 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'Privacy Policy | USFinNexus — Zero Data Collection',
-    description: 'USFinNexus privacy policy. All calculations run client-side — we collect zero personally identifiable information and never sell data to lenders.',
-    keywords: ['USFinNexus privacy policy', 'mortgage calculator privacy', 'no data collection calculator'],
+    description: 'USFinNexus privacy policy. All calculations run client-side — we collect zero personally identifiable information and never sell data to lenders.',
     alternates: { canonical: 'https://usfinnexus.com/privacy' },
     openGraph: {
         type: 'website',

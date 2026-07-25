@@ -15,14 +15,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Home Affordability Calculator 2026 — How Much House Can I Afford? | USFinNexus',
-    description: 'Free CFPB-compliant home affordability calculator. Know your max home price, monthly payment, front-end & back-end DTI in seconds. No signup, no spam.',
-    keywords: [
-        'home affordability calculator', 'how much house can I afford',
-        'mortgage affordability calculator', 'affordability calculator 2026',
-        'CFPB affordability', 'house affordability calculator', 'mortgage qualifying calculator',
-        'how much mortgage can I afford', 'home buying budget calculator',
-        'maximum mortgage calculator', 'income to mortgage ratio calculator',
-    ],
+    description: 'Free CFPB-compliant home affordability calculator. Know your max home price, monthly payment, front-end & back-end DTI in seconds. No signup, no spam.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/affordability' },
     openGraph: {
         type: 'website',

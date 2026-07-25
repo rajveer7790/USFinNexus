@@ -102,17 +102,17 @@ export default function InvestmentClient() {
                 <div className="glass-panel p-4 sm:p-6 border-l-4 border-l-[#0da6f2]">
                     <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Total Future Value</p>
                     <p className="text-3xl sm:text-5xl font-black text-navy-900 tabular-nums">
-                        ${finalData?.balance.toLocaleString()}
+                        ${finalData?.balance.toLocaleString('en-US')}
                     </p>
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                     <div className="glass-panel p-4 border-l-4 border-l-[#0a1628]">
                         <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Principal</p>
-                        <p className="text-lg sm:text-xl font-bold text-navy-900">${finalData?.principal.toLocaleString()}</p>
+                        <p className="text-lg sm:text-xl font-bold text-navy-900">${finalData?.principal.toLocaleString('en-US')}</p>
                     </div>
                     <div className="glass-panel p-4 border-l-4 border-l-[#00C853]">
                         <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Interest Earned</p>
-                        <p className="text-lg sm:text-2xl font-black text-[#00C853]">${finalData?.interest.toLocaleString()}</p>
+                        <p className="text-lg sm:text-2xl font-black text-[#00C853]">${finalData?.interest.toLocaleString('en-US')}</p>
                     </div>
                 </div>
             </div>

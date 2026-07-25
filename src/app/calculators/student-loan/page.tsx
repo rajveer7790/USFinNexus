@@ -3,6 +3,8 @@ import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
+import StudentLoanSeoContent from './StudentLoanSeoContent';
+import CalculatorFAQ from '@/components/CalculatorFAQ';
 
 const StudentLoanClient = nextDynamic(() => import('./StudentLoanClient'), {
     loading: () => <CalculatorSkeleton />,
@@ -13,14 +15,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Student Loan Payoff Calculator 2026 — Extra Payment Estimator | USFinNexus',
-    description: 'Calculate your student loan payoff date and see how extra monthly payments save years and thousands in interest. Free student loan calculator with PDF export.',
-    keywords: [
-        'student loan calculator', 'student loan payoff calculator',
-        'student loan extra payment calculator', 'student loan interest calculator',
-        'how to pay off student loans faster', 'student loan repayment calculator',
-        'student loan amortization', 'student debt payoff calculator',
-        'federal student loan calculator', 'student loan payment estimator',
-    ],
+    description: 'Calculate your student loan payoff date and see how extra monthly payments save years and thousands in interest. Free student loan calculator with PDF export.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/student-loan' },
     openGraph: {
         type: 'website',
@@ -37,6 +32,21 @@ export const metadata: Metadata = {
     },
 };
 
+const STUDENT_LOAN_FAQS = [
+    {
+        question: 'How exactly do extra payments work?',
+        answer: 'When you make an extra payment on a student loan, the entire extra amount goes directly to reducing the principal balance. This bypasses the interest schedule entirely, which means you will pay less total interest over the life of the loan and reach a $0 balance years ahead of schedule.',
+    },
+    {
+        question: 'What is the "advance due date" trap?',
+        answer: 'Many student loan servicers will automatically take your extra payment and use it to push your next due date into the future. This does NOT help you pay off the loan faster. You must explicitly tell the servicer to apply the extra funds directly to the principal balance.',
+    },
+    {
+        question: 'Should I refinance my Federal student loans?',
+        answer: 'Refinancing to a lower rate can mathematically save you money, but it is incredibly risky if you have Federal loans. By refinancing with a private lender, you permanently lose all federal protections, including Income-Driven Repayment (IDR), forbearance options, and Public Service Loan Forgiveness (PSLF).',
+    },
+];
+
 export default function StudentLoanPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
@@ -46,7 +56,10 @@ export default function StudentLoanPage() {
                 url="https://usfinnexus.com/calculators/student-loan"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Student Loan', item: '/calculators/student-loan' }]} />
+            <h1 className="sr-only">Student Loan Payoff Calculator</h1>
             <StudentLoanClient />
+            <StudentLoanSeoContent />
+            <CalculatorFAQ faqs={STUDENT_LOAN_FAQS} title="Student Loans — Frequently Asked Questions" />
         </main>
     );
 }

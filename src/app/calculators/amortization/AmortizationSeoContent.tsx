@@ -5,14 +5,14 @@ export default function AmortizationSeoContent() {
         <section className="bg-white border-t border-gray-100 py-10 mt-6">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-blue">
                 <h2 className="text-3xl font-black text-navy-900 mb-6">
-                    How an Amortization Schedule Works
+                    How Does a Mortgage Amortization Schedule Work?
                 </h2>
                 <p className="lead text-xl text-gray-600">
-                    When you take out a 30-year fixed mortgage, your monthly payment never changes, but <em>what that payment is applied to</em> changes drastically every single month. An amortization schedule reveals exactly how much of your hard-earned money is paying down the home (Principal) versus going to the bank (Interest).
+                    A mortgage amortization schedule shows how each payment splits between principal (balance reduction) and interest (lender profit). In Year 1 of a 30-year mortgage, over 80% of each payment is interest—not equity. The table above shows your exact principal-interest split for every month of your loan term.
                 </p>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    The Pain of the First 10 Years
+                    Why Do You Pay Mostly Interest in the First Years?
                 </h3>
                 <p>
                     Because interest is calculated based on your <strong>outstanding loan balance</strong>, your highest interest payments occur at the very beginning of the loan. 
@@ -24,7 +24,7 @@ export default function AmortizationSeoContent() {
                 </ul>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Why Making Extra Payments is a Cheat Code
+                    How Do Extra Mortgage Payments Speed Up Your Loan Payoff?
                 </h3>
                 <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 my-6">
                     <p className="mb-0 text-navy-900 font-medium">

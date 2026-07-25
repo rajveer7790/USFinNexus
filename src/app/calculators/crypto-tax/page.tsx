@@ -15,15 +15,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Crypto Tax Calculator 2026 — Capital Gains on Bitcoin & Crypto | USFinNexus',
-    description: 'Estimate your 2026 cryptocurrency capital gains taxes. Calculate short-term vs long-term gains for Bitcoin, Ethereum, and altcoins under IRS rules. Free crypto tax estimator.',
-    keywords: [
-        'crypto tax calculator', 'cryptocurrency tax calculator 2026',
-        'bitcoin capital gains tax calculator', 'crypto capital gains calculator',
-        'how to calculate crypto taxes', 'IRS crypto tax rules 2026',
-        'short term crypto gains calculator', 'long term crypto gains calculator',
-        'crypto tax estimator', 'cryptocurrency tax estimator',
-        'bitcoin tax calculator', 'ethereum tax calculator',
-    ],
+    description: 'Estimate your 2026 cryptocurrency capital gains taxes. Calculate short-term vs long-term gains for Bitcoin, Ethereum, and altcoins under IRS rules. Free crypto tax estimator.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/crypto-tax' },
     openGraph: {
         type: 'website',

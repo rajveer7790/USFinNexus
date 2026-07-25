@@ -133,7 +133,7 @@ export default function StudentLoanClient() {
             
             <div className="p-4 rounded-xl bg-navy-900/5 border border-navy-900/10">
                 <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Standard Min Payment</p>
-                <p className="text-xl font-bold text-navy-900">${Math.round(calculation.baseMonthlyPayment).toLocaleString()}/mo</p>
+                <p className="text-xl font-bold text-navy-900">${Math.round(calculation.baseMonthlyPayment).toLocaleString('en-US')}/mo</p>
             </div>
         </div>
     );
@@ -151,9 +151,9 @@ export default function StudentLoanClient() {
                 <div className="glass-panel p-6 border-l-4 border-l-[#00C853]">
                     <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Interest Saved</p>
                     <p className="text-4xl font-black text-navy-900 tabular-nums">
-                        ${Math.round(calculation.interestSaved).toLocaleString()}
+                        ${Math.round(calculation.interestSaved).toLocaleString('en-US')}
                     </p>
-                    <p className="text-xs text-gray-400 mt-2 uppercase">Total interest drops to ${Math.round(calculation.accelInterest).toLocaleString()}</p>
+                    <p className="text-xs text-gray-400 mt-2 uppercase">Total interest drops to ${Math.round(calculation.accelInterest).toLocaleString('en-US')}</p>
                 </div>
             </div>
 

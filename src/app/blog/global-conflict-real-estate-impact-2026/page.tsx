@@ -10,20 +10,6 @@ import ArticleSchema from '@/components/ArticleSchema';
 export const metadata: Metadata = {
     title: 'How Global Conflicts Are Impacting US Real Estate in 2026 | USFinNexus',
     description: "Think a war across the globe doesn\'t affect your local housing market? Think again. Here is how supply chains and foreign capital alter US real estate.",
-    keywords: [
-        'global conflict real estate impact',
-        'how war affects housing market',
-        'geopolitical risk real estate 2026',
-        'housing market during war',
-        'real estate safe haven',
-        'inflation real estate hedge',
-        'housing prices war impact',
-        'real estate investing geopolitical risk',
-        'property values conflict zones',
-        'US housing market geopolitical',
-        'real estate vs inflation 2026',
-        'foreign buyer real estate US',
-    ],
     openGraph: {
         title: 'How Global Conflicts Impact US Real Estate in 2026',
         description: 'From surging material costs to the influx of foreign safe-haven capital, explore the hidden links between global war and local housing.',
@@ -126,7 +112,7 @@ export default function GlobalConflictRealEstateBlog() {
                     Here are the three primary ways global geopolitical instability is impacting the US real estate market today.
                 </p>
 
-                <h2 className="text-2xl font-bold mt-12 mb-4">1. The Supply Chain Shock: Cost of Construction</h2>
+                <h2 className="text-2xl font-bold mt-12 mb-4">How Does the Supply Chain Shock Increase Construction Costs?</h2>
                 <p className="mb-4">
                     The US relies heavily on international trade for raw building materials. When shipping lanes are disrupted by conflict or trade embargoes, the cost of materials spikes immediately.
                 </p>
@@ -142,7 +128,7 @@ export default function GlobalConflictRealEstateBlog() {
                     <div className="flex gap-4">
                         <DollarSign className="w-6 h-6 shrink-0 mt-1" style={{ color: '#FF3B8B' }} />
                         <div>
-                            <h3 className="font-bold mb-1 text-base">2. The &quot;Safe Haven&quot; Capital Flight</h3>
+                            <h3 className="font-bold mb-1 text-base">What Is the &quot;Safe Haven&quot; Capital Flight Effect?</h3>
                             <p className="text-sm m-0">
                                 When international markets destabilize, wealthy foreign investors look for the safest place to park their cash. Historically, there is no safer asset than US Real Estate. We see massive influxes of foreign cash buying up luxury properties in major cities (like New York, Miami, and Los Angeles). This cash influx artificially inflates property values at the top of the market, which eventually cascades down to middle-market housing.
                             </p>
@@ -150,7 +136,7 @@ export default function GlobalConflictRealEstateBlog() {
                     </div>
                 </div>
 
-                <h2 className="text-2xl font-bold mt-12 mb-4">3. The Interest Rate Paradox</h2>
+                <h2 className="text-2xl font-bold mt-12 mb-4">What Is the Interest Rate Paradox During Global Conflict?</h2>
                 <p className="mb-4">
                     You might expect that war causes interest rates to skyrocket. Paradoxically, the opposite often happens in the short term.
                 </p>
@@ -172,6 +158,47 @@ export default function GlobalConflictRealEstateBlog() {
                         <Link href="/calculators/mortgage" className="btn-primary py-3 px-6 text-sm">
                             Mortgage Calculator
                         </Link>
+                    </div>
+                </div>
+
+                
+                <hr className="my-12 border-gray-200" />
+                
+                <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
+                    <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Strategies for Navigating Real Estate During Global Instability?</h2>
+                    <p className="text-lg text-slate-700 mb-6">
+                        Geopolitical conflict is no longer just a headline; it is a direct driver of domestic real estate dynamics. Investors and homebuyers must adapt their strategies to account for sudden supply chain shocks, shifting migration patterns, and the "flight to safety" effect on mortgage rates.
+                    </p>
+
+                    <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">What Is the "Flight to Safety" Mortgage Rate Phenomenon?</h3>
+                    <p className="text-slate-700 mb-4">
+                        When global conflicts erupt, international institutional investors panic and immediately seek the safest asset on earth: the U.S. 10-Year Treasury note. As trillions of dollars flood into Treasuries, the yield on those bonds plummets. Because 30-year fixed mortgage rates are highly correlated with the 10-Year Treasury, a major international crisis often triggers a sudden, sharp drop in domestic mortgage rates. Savvy homebuyers keep their paperwork ready to instantly lock in a rate drop triggered by overseas volatility.
+                    </p>
+
+                    <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">How Do Supply Chain Shocks Drive Up New Construction Costs?</h3>
+                    <p className="text-slate-700 mb-4">
+                        Global instability invariably disrupts the supply chains for raw materials like lumber, steel, and semiconductor chips (crucial for modern HVAC systems and smart appliances). When shipping lanes are compromised, the cost of new home construction spikes. If you are under contract for a new build during a period of conflict, ensure your contract has a firm price guarantee. Without it, builders may trigger "escalation clauses," forcing you to absorb the unexpected surges in material costs before closing.
+                    </p>
+
+                    <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">How Does Domestic Migration Create "Safe Haven" Real Estate Markets?</h3>
+                    <p className="text-slate-700 mb-4">
+                        Extended geopolitical conflict often drives foreign capital out of unstable regions and into hard assets in stable countries. We see a significant influx of foreign cash purchasing luxury real estate in major U.S. safe-haven markets like Miami, New York, and Southern California. This foreign demand artificially inflates prices at the top of the market, which eventually creates a cascading effect that pushes middle-class domestic buyers further out into the suburbs, exacerbating urban sprawl.
+                    </p>
+
+                    <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">What Are the Frequently Asked Questions About Geopolitical Impacts on Real Estate?</h3>
+                    <div className="space-y-6 mt-6">
+                        <div className="bg-white p-5 rounded-xl border border-slate-200">
+                            <h4 className="font-bold text-lg mb-2">How do energy conflicts affect my housing budget?</h4>
+                            <p className="text-slate-600">Conflicts in major oil or gas-producing regions immediately spike domestic energy prices. This doesn't just increase your cost to commute; it radically increases your monthly utility bills to heat and cool your home. When modeling your housing affordability, always stress-test your budget against a 30% to 50% temporary spike in energy costs.</p>
+                        </div>
+                        <div className="bg-white p-5 rounded-xl border border-slate-200">
+                            <h4 className="font-bold text-lg mb-2">Should I delay buying a house during a war?</h4>
+                            <p className="text-slate-600">Historically, U.S. real estate is highly resilient during international conflicts, often serving as a hedge against the inflation that accompanies wartime spending. If your job is secure and the local market fundamentals are strong, delaying a primary residence purchase due to overseas conflict is generally not recommended.</p>
+                        </div>
+                        <div className="bg-white p-5 rounded-xl border border-slate-200">
+                            <h4 className="font-bold text-lg mb-2">Does conflict increase the risk of a housing crash?</h4>
+                            <p className="text-slate-600">Typically, no. The primary risk of a housing crash is widespread domestic unemployment or a systemic banking failure. While global conflict can cause temporary economic slowdowns, the resulting drop in interest rates (as the Fed tries to stimulate the economy) often acts as a massive support pillar for domestic home prices.</p>
+                        </div>
                     </div>
                 </div>
 

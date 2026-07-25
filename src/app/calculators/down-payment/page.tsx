@@ -14,15 +14,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Down Payment Calculator 2026 — Savings Goal Tracker | USFinNexus',
-    description: 'Free down payment savings calculator. See how long to save 3.5%, 10%, or 20% down on your target home price. Set a monthly savings goal and track your timeline.',
-    keywords: [
-        'down payment calculator', 'how much down payment for a house',
-        'down payment savings calculator', 'down payment calculator 2026',
-        '20 percent down payment calculator', '3.5 percent down FHA',
-        'how long to save for down payment', 'first time homebuyer down payment',
-        'minimum down payment calculator', 'down payment savings goal',
-        'house down payment calculator',
-    ],
+    description: 'Free down payment savings calculator. See how long to save 3.5%, 10%, or 20% down on your target home price. Set a monthly savings goal and track your timeline.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/down-payment' },
     openGraph: {
         type: 'website',

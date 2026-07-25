@@ -15,14 +15,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Debt-to-Income Ratio Calculator (DTI) 2026 | USFinNexus',
-    description: 'Free DTI calculator. Check if your debt-to-income ratio qualifies for a mortgage. See front-end and back-end DTI vs CFPB 28/43 guidelines instantly.',
-    keywords: [
-        'debt to income ratio calculator', 'DTI calculator', 'debt to income calculator',
-        'mortgage DTI calculator', 'DTI ratio 2026', 'front end DTI calculator',
-        'back end DTI calculator', 'CFPB DTI guidelines', 'mortgage qualifying DTI',
-        'how to calculate debt to income ratio', 'DTI for mortgage approval',
-        'maximum debt to income ratio mortgage',
-    ],
+    description: 'Free DTI calculator. Check if your debt-to-income ratio qualifies for a mortgage. See front-end and back-end DTI vs CFPB 28/43 guidelines instantly.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/dti' },
     openGraph: {
         type: 'website',

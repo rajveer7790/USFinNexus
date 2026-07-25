@@ -124,7 +124,7 @@ export default function CreditCardClient() {
                 <div className="glass-panel p-6 border-l-4 border-l-[#dc2626]">
                     <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Total Interest Paid</p>
                     <p className="text-4xl font-black text-[#dc2626] tabular-nums">
-                        {calculation.totalInterest === Infinity ? 'Infinite' : `$${Math.round(calculation.totalInterest).toLocaleString()}`}
+                        {calculation.totalInterest === Infinity ? 'Infinite' : `$${Math.round(calculation.totalInterest).toLocaleString('en-US')}`}
                     </p>
                 </div>
             </div>

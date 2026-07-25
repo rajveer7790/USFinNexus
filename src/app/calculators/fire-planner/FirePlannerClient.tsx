@@ -125,7 +125,7 @@ export default function FirePlannerClient() {
                         <div className="p-4 bg-emerald-50 rounded-lg border border-emerald-200 shadow-sm">
                             <p className="text-sm font-medium text-gray-600 mb-1">Your FIRE Number</p>
                             <p className="text-3xl font-bold text-emerald-700">
-                                ${fireNumber.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+                                ${fireNumber.toLocaleString('en-US', { maximumFractionDigits: 0 })}
                             </p>
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg border border-gray-200 shadow-sm">
@@ -152,7 +152,7 @@ export default function FirePlannerClient() {
                                 <YAxis tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`} />
                                 <CartesianGrid strokeDasharray="3 3" vertical={false} />
                                 <RechartsTooltip 
-                                    formatter={(value: number) => `$${value.toLocaleString(undefined, { maximumFractionDigits: 0 })}`}
+                                    formatter={(value: number) => `$${value.toLocaleString('en-US', { maximumFractionDigits: 0 })}`}
                                     labelFormatter={(label) => `Age: ${label}`}
                                 />
                                 <ReferenceLine y={fireNumber} label="FIRE TARGET" stroke="#ef4444" strokeDasharray="3 3" />

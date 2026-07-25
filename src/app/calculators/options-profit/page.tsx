@@ -15,15 +15,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Options Profit & Loss Calculator — Call & Put Payoff Visualizer | USFinNexus',
-    description: 'Visualize your options trade before placing it. Calculate max profit, max loss, and break-even prices for calls, puts, and spreads. Free options profit calculator.',
-    keywords: [
-        'options profit calculator', 'options payoff diagram', 'call option calculator',
-        'put option calculator', 'options break even calculator',
-        'options profit loss visualizer', 'max profit options calculator',
-        'options trading calculator', 'stock options calculator',
-        'options strategy calculator', 'options P&L calculator',
-        'covered call calculator', 'options spread calculator',
-    ],
+    description: 'Visualize your options trade before placing it. Calculate max profit, max loss, and break-even prices for calls, puts, and spreads. Free options profit calculator.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/options-profit' },
     openGraph: {
         type: 'website',

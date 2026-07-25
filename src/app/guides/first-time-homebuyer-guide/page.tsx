@@ -5,15 +5,6 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 export const metadata: Metadata = {
     title: 'First-Time Homebuyer Guide 2026 — Complete Step-by-Step Walkthrough | USFinNexus',
     description: 'The complete 2026 first-time homebuyer guide. Pre-approval, home search, making offers, inspection, closing costs, escrow timeline — everything you need to buy your first home.',
-    keywords: [
-        'first time homebuyer guide', 'how to buy a house for the first time',
-        'first time homebuyer guide 2026', 'home buying process step by step',
-        'first home purchase guide', 'how to buy your first home',
-        'home buying checklist 2026', 'first time buyer process',
-        'mortgage pre-approval process', 'closing process first home',
-        'home inspection guide', 'escrow timeline guide',
-        'first time homebuyer tips', 'buying a house guide',
-    ],
     alternates: { canonical: 'https://usfinnexus.com/guides/first-time-homebuyer-guide' },
     openGraph: {
         type: 'article',

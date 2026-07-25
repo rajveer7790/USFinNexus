@@ -4,14 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
     title: '15-Year vs 30-Year Mortgage 2026 — Full Payment & Interest Comparison | USFinNexus',
-    description: 'Compare 15-year vs 30-year mortgage with exact math on monthly payments, total interest saved, and opportunity cost of the extra cash flow. Updated for 2026 rates.',
-    keywords: [
-        '15 year vs 30 year mortgage', '15 vs 30 year mortgage calculator',
-        'is 15 year mortgage worth it', '15 year mortgage payment',
-        '30 year mortgage total interest', 'pay off mortgage faster',
-        '15 year mortgage savings', 'which mortgage term is better',
-        '15 vs 30 year mortgage comparison 2026', 'shorter mortgage term savings',
-    ],
+    description: 'Compare 15-year vs 30-year mortgage with exact math on monthly payments, total interest saved, and opportunity cost of the extra cash flow. Updated for 2026 rates.',
     alternates: { canonical: 'https://usfinnexus.com/guides/15-vs-30-year-mortgage' },
     openGraph: {
         type: 'article',

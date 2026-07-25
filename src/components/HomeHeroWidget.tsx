@@ -69,7 +69,7 @@ export default function HomeHeroWidget() {
                 {/* Home Price */}
                 <div>
                     <div className="flex justify-between mb-1">
-                        <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.3)' }}>
+                        <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.6)' }}>
                             Home Price
                         </span>
                         <span className="text-xs font-extrabold" style={{ color: '#00E8FC' }}>
@@ -79,6 +79,7 @@ export default function HomeHeroWidget() {
                     <input
                         type="range" min={100000} max={1500000} step={10000} value={price}
                         onChange={e => setPrice(+e.target.value)}
+                        aria-label="Home Price"
                         className="w-full cursor-pointer"
                         style={{ accentColor: '#00E8FC' }}
                     />
@@ -87,7 +88,7 @@ export default function HomeHeroWidget() {
                 {/* Down Payment */}
                 <div>
                     <div className="flex justify-between mb-1">
-                        <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.3)' }}>
+                        <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.6)' }}>
                             Down Payment
                         </span>
                         <span className="text-xs font-extrabold" style={{ color: dp >= 20 ? '#4ade80' : '#FFC23E' }}>
@@ -97,6 +98,7 @@ export default function HomeHeroWidget() {
                     <input
                         type="range" min={3} max={40} step={1} value={dp}
                         onChange={e => setDp(+e.target.value)}
+                        aria-label="Down Payment Percentage"
                         className="w-full cursor-pointer"
                         style={{ accentColor: dp >= 20 ? '#28CA41' : '#FFC23E' }}
                     />
@@ -105,7 +107,7 @@ export default function HomeHeroWidget() {
                 {/* Interest Rate */}
                 <div>
                     <div className="flex justify-between mb-1">
-                        <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.3)' }}>
+                        <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.6)' }}>
                             Interest Rate
                         </span>
                         <span className="text-xs font-extrabold" style={{ color: '#B88AFF' }}>
@@ -115,6 +117,7 @@ export default function HomeHeroWidget() {
                     <input
                         type="range" min={3} max={12} step={0.05} value={rate}
                         onChange={e => setRate(+e.target.value)}
+                        aria-label="Interest Rate"
                         className="w-full cursor-pointer"
                         style={{ accentColor: '#9B5CFF' }}
                     />
@@ -126,11 +129,12 @@ export default function HomeHeroWidget() {
                         <button
                             key={t}
                             onClick={() => setTerm(t)}
+                            aria-label={`${t} Year Term`}
                             className="flex-1 min-h-[44px] sm:min-h-[36px] rounded-lg text-xs font-bold transition-all duration-150"
                             style={{
                                 border: `1px solid ${term === t ? '#00E8FC' : 'rgba(255,255,255,0.06)'}`,
                                 background: term === t ? 'rgba(0,232,252,0.1)' : 'rgba(255,255,255,0.02)',
-                                color: term === t ? '#00E8FC' : 'rgba(255,255,255,0.25)',
+                                color: term === t ? '#00E8FC' : 'rgba(255,255,255,0.6)',
                                 cursor: 'pointer',
                             }}
                         >

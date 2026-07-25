@@ -22,7 +22,7 @@ export default function InvestmentChart({ chartData }: { chartData: ChartRow[] }
                 <XAxis dataKey="year" stroke="#94a3b8" tickFormatter={(val) => `Yr ${val}`} />
                 <YAxis stroke="#94a3b8" tickFormatter={(val) => `$${(val / 1000).toFixed(0)}k`} width={60} />
                 <Tooltip
-                    formatter={(value: number, name: string) => [`$${value.toLocaleString()}`, name.charAt(0).toUpperCase() + name.slice(1)]}
+                    formatter={(value: number, name: string) => [`$${value.toLocaleString('en-US')}`, name.charAt(0).toUpperCase() + name.slice(1)]}
                     labelFormatter={(label) => `Year ${label}`}
                     contentStyle={{ backgroundColor: 'rgba(6, 15, 30, 0.95)', borderColor: 'rgba(255, 255, 255, 0.1)', borderRadius: '12px', color: '#fff' }}
                 />

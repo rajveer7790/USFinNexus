@@ -169,25 +169,25 @@ export default function DripClient() {
                         <div className="p-4 bg-purple-50 rounded-lg border border-purple-200 shadow-sm col-span-2 md:col-span-1">
                             <p className="text-sm font-medium text-gray-600 mb-1">Final Balance</p>
                             <p className="text-2xl font-bold text-purple-700">
-                                ${finalBalance.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+                                ${finalBalance.toLocaleString('en-US', { maximumFractionDigits: 0 })}
                             </p>
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg border border-gray-200 shadow-sm col-span-2 md:col-span-1">
                             <p className="text-sm font-medium text-gray-600 mb-1">Final Annual Divs</p>
                             <p className="text-2xl font-bold text-indigo-600">
-                                ${finalAnnualDividendIncome.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+                                ${finalAnnualDividendIncome.toLocaleString('en-US', { maximumFractionDigits: 0 })}
                             </p>
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg border border-gray-200 shadow-sm col-span-2 md:col-span-1">
                             <p className="text-sm font-medium text-gray-600 mb-1">Total Contributions</p>
                             <p className="text-2xl font-bold text-gray-900">
-                                ${totalContributions.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+                                ${totalContributions.toLocaleString('en-US', { maximumFractionDigits: 0 })}
                             </p>
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg border border-gray-200 shadow-sm col-span-2 md:col-span-1">
                             <p className="text-sm font-medium text-gray-600 mb-1">Total Divs Received</p>
                             <p className="text-2xl font-bold text-gray-900">
-                                ${totalDividendsPaid.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+                                ${totalDividendsPaid.toLocaleString('en-US', { maximumFractionDigits: 0 })}
                             </p>
                         </div>
                     </div>
@@ -200,7 +200,7 @@ export default function DripClient() {
                                 <XAxis dataKey="year" name="Year" tickFormatter={(v) => `Yr ${v}`} />
                                 <YAxis tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`} />
                                 <RechartsTooltip 
-                                    formatter={(value: number) => `$${value.toLocaleString(undefined, { maximumFractionDigits: 0 })}`}
+                                    formatter={(value: number) => `$${value.toLocaleString('en-US', { maximumFractionDigits: 0 })}`}
                                     labelFormatter={(label) => `Year: ${label}`}
                                 />
                                 <Legend />
