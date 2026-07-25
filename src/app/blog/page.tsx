@@ -72,11 +72,16 @@ function getBlogPosts() {
             else if (category === 'Auto Loans') image = IMG.auto;
             else if (category === 'Housing Market') image = IMG.housing;
             
-            // Generate a fake publish date based on file mod time or default
+            // Prefer the editorial publish date embedded in ArticleSchema.
             const stats = fs.statSync(pagePath);
-            const dateStr = stats.mtime.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
-            
-            posts.push({ slug, title, date: dateStr, category, readTime: '10 min', image });
+            const publishedMatch = content.match(/datePublished=["'](\d{4}-\d{2}-\d{2})["']/);
+            const dateISO = publishedMatch?.[1] || stats.mtime.toISOString().split('T')[0];
+            const dateStr = new Date(dateISO + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+
+            if (slug === 'trump-accounts-2026-guide') image = '/images/trump-accounts-2026.webp';
+            if (slug === 'trump-account-vs-529-plan') image = '/images/trump-account-vs-529.webp';
+
+            posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
 
         // Output audit results to the console for the dev team
@@ -92,7 +97,7 @@ function getBlogPosts() {
         }
         console.log(`\n\n`);
 
-        return posts.sort((a, b) => a.title.localeCompare(b.title));
+        return posts.sort((a, b) => b.dateISO.localeCompare(a.dateISO) || a.title.localeCompare(b.title));
     } catch (e) {
         console.error('Failed to dynamically load blog posts:', e);
         return [];
