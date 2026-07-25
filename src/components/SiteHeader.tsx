@@ -59,9 +59,10 @@ const NAV_CALCULATORS = [
         ],
     },
     {
-        category: 'State-Specific',
+        category: 'Regional & Canada',
         color: '#8b5cf6',
         items: [
+            { href: '/canada/mortgage-calculator', label: 'Canada Mortgage', icon: Map, desc: 'CAD payment & stress test' },
             { href: '/calculators/california', label: 'California', icon: Map, desc: 'CA transfer taxes & fees' },
             { href: '/calculators/texas', label: 'Texas', icon: Map, desc: 'TX property tax closing' },
             { href: '/calculators/florida', label: 'Florida', icon: Map, desc: 'FL documentary stamps' },
@@ -211,7 +212,7 @@ export default function SiteHeader() {
                                     >
                                         <div className="flex items-center justify-between px-5 py-3 border-b border-gray-100 bg-gray-50/70">
                                             <p className="text-xs font-bold text-gray-500 uppercase tracking-widest">
-                                                28+ Free Calculators
+                                                34 Free Calculators
                                             </p>
                                             <Link
                                                 href="/#tools"

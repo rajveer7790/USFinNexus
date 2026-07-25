@@ -9,12 +9,12 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'All Free Mortgage & Finance Calculators | USFinNexus',
-    description: 'Browse our complete library of 28+ free, CFPB-compliant mortgage and financial calculators. Instant PDF reports, no signup, and zero data collected.',
+    description: 'Browse our complete library of 34 free, CFPB-compliant mortgage and financial calculators. Instant PDF reports, no signup, and zero data collected.',
     alternates: { canonical: 'https://usfinnexus.com/calculators' },
     openGraph: {
         type: 'website',
         title: 'All Free Mortgage & Finance Calculators | USFinNexus',
-        description: 'Browse our complete library of 28+ free, CFPB-compliant mortgage and financial calculators.',
+        description: 'Browse our complete library of 34 free, CFPB-compliant mortgage and financial calculators.',
         url: 'https://usfinnexus.com/calculators',
         siteName: 'USFinNexus',
     },
@@ -53,7 +53,8 @@ const TOOLS = [
     { href: '/calculators/crypto-tax', icon: FileText, title: 'Crypto Tax Estimator', desc: 'Capital gains tax estimator.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/options-profit', icon: BarChart2, title: 'Options Profit/Loss', desc: 'Visualizer for Calls/Puts.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/budget', icon: PiggyBank, title: 'Budget 50/30/20', desc: 'Needs, wants, savings split.', cat: 'wealth' },
-    // Regional
+    // Canada & Regional
+    { href: '/canada/mortgage-calculator', icon: Map, title: 'Canada Mortgage', desc: 'CAD payment, insurance & stress test.', badge: 'new', cat: 'regional' },
     { href: '/calculators/california', icon: Map, title: 'California Closing', desc: 'CA-specific costs.', cat: 'regional' },
     { href: '/calculators/texas', icon: Map, title: 'Texas Closing', desc: 'TX-specific costs.', cat: 'regional' },
     { href: '/calculators/florida', icon: Map, title: 'Florida Closing', desc: 'FL-specific costs.', cat: 'regional' },
@@ -71,7 +72,7 @@ export default function CalculatorsPage() {
                         <div className="neo-sec-tag"><span className="neo-sec-dot" /> All Tools</div>
                         <h1 className="neo-sec-h2">The Complete <em>Calculator Library</em></h1>
                         <p className="neo-sec-p">
-                            Browse our complete library of 28+ free, CFPB-compliant calculators.
+                            Browse our complete library of 34 free, CFPB-compliant calculators.
                             Zero signup, instant PDF reports, and zero data collection.
                         </p>
                     </header>
