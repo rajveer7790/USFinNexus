@@ -80,6 +80,8 @@ function getBlogPosts() {
 
             if (slug === 'trump-accounts-2026-guide') image = '/images/trump-accounts-2026.webp';
             if (slug === 'trump-account-vs-529-plan') image = '/images/trump-account-vs-529.webp';
+            if (slug === 'car-loan-interest-tax-deduction-2026') image = '/images/car-loan-interest-tax-deduction-2026.webp';
+            if (slug === 'no-tax-on-overtime-deduction-2026') image = '/images/no-tax-on-overtime-2026.webp';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
