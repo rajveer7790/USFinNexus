@@ -85,7 +85,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { route: '', priority: 1.0, lastMod: '2026-05-14' },
         { route: '/calculators', priority: 0.90, lastMod: '2026-07-26' },
         { route: '/canada', priority: 0.90, lastMod: '2026-07-26' },
-        { route: '/blog', priority: 0.85, lastMod: '2026-07-26' },
+        { route: '/blog', priority: 0.85, lastMod: '2026-07-28' },
         { route: '/guides', priority: 0.80, lastMod: '2026-03-01' },
         { route: '/articles', priority: 0.75, lastMod: '2026-03-01' },
         { route: '/about', priority: 0.65, lastMod: '2026-03-01' },

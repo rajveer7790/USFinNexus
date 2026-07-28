@@ -57,7 +57,8 @@ function getBlogPosts() {
             }
             
             let category = 'Personal Finance';
-            if (slug.includes('mortgage') || slug.includes('refinance') || slug.includes('fha') || slug.includes('va') || slug.includes('loan')) category = 'Mortgage';
+            if (slug.includes('student-loan')) category = 'Education';
+            else if (slug.includes('mortgage') || slug.includes('refinance') || slug.includes('fha') || slug.includes('va') || slug.includes('loan')) category = 'Mortgage';
             else if (slug.includes('tax')) category = 'Taxes';
             else if (slug.includes('invest') || slug.includes('stock') || slug.includes('bond')) category = 'Investing';
             else if (slug.includes('retire') || slug.includes('401k') || slug.includes('ira') || slug.includes('fire')) category = 'Retirement';
@@ -82,6 +83,8 @@ function getBlogPosts() {
             if (slug === 'trump-account-vs-529-plan') image = '/images/trump-account-vs-529.webp';
             if (slug === 'car-loan-interest-tax-deduction-2026') image = '/images/car-loan-interest-tax-deduction-2026.webp';
             if (slug === 'no-tax-on-overtime-deduction-2026') image = '/images/no-tax-on-overtime-2026.webp';
+            if (slug === '401k-contribution-limits-2026') image = '/images/401k-contribution-limits-2026.webp';
+            if (slug === 'federal-student-loan-interest-rates-2026-27') image = '/images/federal-student-loan-interest-rates-2026-27.webp';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
