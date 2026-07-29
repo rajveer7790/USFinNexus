@@ -85,6 +85,8 @@ function getBlogPosts() {
             if (slug === 'no-tax-on-overtime-deduction-2026') image = '/images/no-tax-on-overtime-2026.webp';
             if (slug === '401k-contribution-limits-2026') image = '/images/401k-contribution-limits-2026.webp';
             if (slug === 'federal-student-loan-interest-rates-2026-27') image = '/images/federal-student-loan-interest-rates-2026-27.webp';
+            if (slug === 'roth-ira-income-limits-2026') image = '/images/roth-ira-income-limits-2026.webp';
+            if (slug === 'social-security-earnings-test-2026') image = '/images/social-security-earnings-test-2026.webp';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
