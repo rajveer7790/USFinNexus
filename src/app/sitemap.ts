@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 
 export const dynamic = 'force-static';
-// Updated automatically with every production content release (July 29, 2026).
+// Production content release: July 29, 2026.
 // Priority tiers for calculators
 const CALC_PRIORITY: Record<string, number> = {
     '/calculators/mortgage': 0.95,
