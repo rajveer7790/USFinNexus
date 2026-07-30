@@ -59,9 +59,9 @@ function getBlogPosts() {
             let category = 'Personal Finance';
             if (slug.includes('student-loan')) category = 'Education';
             else if (slug.includes('mortgage') || slug.includes('refinance') || slug.includes('fha') || slug.includes('va') || slug.includes('loan')) category = 'Mortgage';
-            else if (slug.includes('tax')) category = 'Taxes';
+            else if (slug.includes('tax') || slug.includes('mileage-rate')) category = 'Taxes';
             else if (slug.includes('invest') || slug.includes('stock') || slug.includes('bond')) category = 'Investing';
-            else if (slug.includes('retire') || slug.includes('401k') || slug.includes('ira') || slug.includes('fire')) category = 'Retirement';
+            else if (slug.includes('retire') || slug.includes('401k') || slug.includes('ira') || slug.includes('fire') || slug.includes('medicare')) category = 'Retirement';
             else if (slug.includes('auto') || slug.includes('car')) category = 'Auto Loans';
             else if (slug.includes('home') || slug.includes('housing') || slug.includes('real-estate')) category = 'Housing Market';
             
@@ -87,6 +87,8 @@ function getBlogPosts() {
             if (slug === 'federal-student-loan-interest-rates-2026-27') image = '/images/federal-student-loan-interest-rates-2026-27.webp';
             if (slug === 'roth-ira-income-limits-2026') image = '/images/roth-ira-income-limits-2026.webp';
             if (slug === 'social-security-earnings-test-2026') image = '/images/social-security-earnings-test-2026.webp';
+            if (slug === 'irs-standard-mileage-rate-2026') image = '/images/irs-standard-mileage-rate-2026.webp';
+            if (slug === 'medicare-irmaa-brackets-2026') image = '/images/medicare-irmaa-brackets-2026.webp';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
