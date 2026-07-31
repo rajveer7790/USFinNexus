@@ -89,6 +89,8 @@ function getBlogPosts() {
             if (slug === 'social-security-earnings-test-2026') image = '/images/social-security-earnings-test-2026.webp';
             if (slug === 'irs-standard-mileage-rate-2026') image = '/images/irs-standard-mileage-rate-2026.webp';
             if (slug === 'medicare-irmaa-brackets-2026') image = '/images/medicare-irmaa-brackets-2026.webp';
+            if (slug === 'no-tax-on-tips-deduction-2026') image = '/images/no-tax-on-tips-deduction-2026.webp';
+            if (slug === 'child-tax-credit-2026') image = '/images/child-tax-credit-2026.webp';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
