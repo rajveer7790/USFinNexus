@@ -91,6 +91,8 @@ function getBlogPosts() {
             if (slug === 'medicare-irmaa-brackets-2026') image = '/images/medicare-irmaa-brackets-2026.webp';
             if (slug === 'no-tax-on-tips-deduction-2026') image = '/images/no-tax-on-tips-deduction-2026.webp';
             if (slug === 'child-tax-credit-2026') image = '/images/child-tax-credit-2026.webp';
+            if (slug === '2026-federal-tax-brackets-standard-deduction') image = '/images/2026-federal-tax-brackets-standard-deduction.webp';
+            if (slug === 'hsa-contribution-limits-2026') image = '/images/hsa-contribution-limits-2026.webp';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
