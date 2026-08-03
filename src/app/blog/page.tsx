@@ -93,6 +93,8 @@ function getBlogPosts() {
             if (slug === 'child-tax-credit-2026') image = '/images/child-tax-credit-2026.webp';
             if (slug === '2026-federal-tax-brackets-standard-deduction') image = '/images/2026-federal-tax-brackets-standard-deduction.webp';
             if (slug === 'hsa-contribution-limits-2026') image = '/images/hsa-contribution-limits-2026.webp';
+            if (slug === 'salt-deduction-limit-2026') image = '/images/salt-deduction-limit-2026.webp';
+            if (slug === 'aca-premium-tax-credit-2026') image = '/images/aca-premium-tax-credit-2026.webp';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
