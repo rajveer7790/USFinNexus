@@ -4,19 +4,19 @@ import { ExternalLink, Shield, Calculator, FileText } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-    title: 'Calculation Methodology & Data Sources | USFinNexus',
-    description: 'How USFinNexus calculates mortgage payments, DTI, affordability, and refinance break-even. Formulas sourced from CFPB, FHFA, HUD, Tax Foundation, and Freddie Mac PMMS.',
-    alternates: { canonical: 'https://usfinnexus.com/methodology' },
+    title: 'Financial Calculator Methodology & Data Sources | USFinNexus',
+    description: 'See the formulas, assumptions, limitations and primary sources behind USFinNexus mortgage, DTI, affordability, refinance and tax calculators.',
+    alternates: { canonical: '/methodology' },
     openGraph: {
         type: 'article',
         url: 'https://usfinnexus.com/methodology',
-        title: 'Mortgage Calculation Methodology & Data Sources | USFinNexus',
-        description: 'CFPB-compliant mortgage formulas, FHFA/HUD loan limits, and all data sources explained. Full transparency on how every calculator works.',
+        title: 'Financial Calculator Methodology & Data Sources | USFinNexus',
+        description: 'Formulas, assumptions, limitations and primary sources used by USFinNexus financial calculators.',
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mortgage Calculation Methodology | USFinNexus',
-        description: 'CFPB-compliant formulas, FHFA/HUD data sources, and full calculation transparency.',
+        title: 'Financial Calculator Methodology | USFinNexus',
+        description: 'How USFinNexus calculates mortgage, DTI, affordability and related estimates.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
@@ -25,225 +25,184 @@ const SOURCES = [
     {
         org: 'Consumer Financial Protection Bureau (CFPB)',
         url: 'https://www.consumerfinance.gov/',
-        description: 'Mortgage payment formulas, Qualified Mortgage DTI guidelines (28% front-end / 43% back-end), ability-to-repay standards, and PMI cancellation rules under the Homeowners Protection Act.',
+        description: 'Consumer mortgage guidance, debt-to-income explanations, ability-to-repay and Qualified Mortgage rules, Loan Estimate education, and conventional PMI cancellation guidance.',
         icon: '🏛️',
     },
     {
         org: 'Federal Housing Finance Agency (FHFA)',
-        url: 'https://www.fhfa.gov/',
-        description: '2026 conforming loan limits: $832,750 baseline / $1,249,125 high-cost areas. Used in our mortgage and affordability calculators to flag jumbo loan thresholds.',
+        url: 'https://www.fhfa.gov/data/conforming-loan-limit',
+        description: 'Conforming loan limits. For 2026, the one-unit baseline is $832,750 and the one-unit high-cost ceiling can reach $1,249,125 depending on location.',
         icon: '🏦',
     },
     {
         org: 'U.S. Department of Housing and Urban Development (HUD)',
-        url: 'https://www.hud.gov/',
-        description: '2026 FHA loan limits: $541,287 floor / $1,249,125 ceiling. FHA mortgage insurance premium (MIP) rates and USDA income guidelines used in our government loan calculator.',
+        url: 'https://www.hud.gov/hud-partners/single-family-mortgage-limits',
+        description: 'FHA mortgage limits and FHA program information. For 2026, the one-unit national floor is $541,287 and the standard high-cost ceiling is $1,249,125, subject to location-specific limits.',
         icon: '🏠',
     },
     {
-        org: 'Tax Foundation',
-        url: 'https://taxfoundation.org/',
-        description: 'State-by-state effective property tax rates used in our mortgage, affordability, and Texas/California/Florida state calculators.',
-        icon: '📊',
+        org: 'Internal Revenue Service (IRS)',
+        url: 'https://www.irs.gov/',
+        description: 'Federal tax brackets, standard deductions and other tax-year-specific figures. The 2026 federal income-tax calculator uses IRS Revenue Procedure 2025-32 and related IRS 2026 guidance.',
+        icon: '🧾',
     },
     {
-        org: 'Freddie Mac Primary Mortgage Market Survey',
+        org: 'Social Security Administration (SSA)',
+        url: 'https://www.ssa.gov/',
+        description: 'Social Security contribution and benefit base. The 2026 employee FICA estimate uses the official $184,500 Social Security taxable wage base.',
+        icon: '📘',
+    },
+    {
+        org: 'Freddie Mac Primary Mortgage Market Survey (PMMS)',
         url: 'https://www.freddiemac.com/pmms',
-        description: 'Weekly average 30-year and 15-year fixed mortgage rates used as default pre-filled values in our calculators to reflect current market conditions.',
+        description: 'Weekly market context for average mortgage rates. A historical or example rate shown on USFinNexus should not be treated as a live lender quote unless it is explicitly labeled with its source date.',
         icon: '📈',
-    },
-    {
-        org: 'National Association of Realtors (NAR) / Redfin',
-        url: 'https://www.nar.realtor/',
-        description: 'Median home price data by state used in state-specific calculator defaults and blog post examples.',
-        icon: '🏡',
     },
 ];
 
 const FORMULAS = [
     {
-        title: 'Monthly Mortgage Payment (P&I)',
+        title: 'Fixed-Rate Monthly Principal & Interest',
         formula: 'M = P × [r(1+r)ⁿ] / [(1+r)ⁿ - 1]',
-        explanation: 'Where M = monthly payment, P = principal loan amount, r = monthly interest rate (annual rate ÷ 12), n = total number of payments (years × 12).',
+        explanation: 'M is the monthly principal-and-interest payment, P is principal, r is the monthly interest rate and n is the number of monthly payments. Taxes, insurance, PMI/MIP, HOA dues and other costs are added separately when applicable.',
     },
     {
         title: 'Debt-to-Income Ratio (DTI)',
-        formula: 'DTI = (Total Monthly Debt Payments ÷ Gross Monthly Income) × 100',
-        explanation: 'Front-end DTI includes only PITI (principal, interest, taxes, insurance). Back-end DTI includes all recurring monthly debt obligations per CFPB Qualified Mortgage guidelines.',
+        formula: 'DTI = (Recurring Monthly Debt ÷ Gross Monthly Income) × 100',
+        explanation: 'DTI is a ratio used in lending analysis. Which obligations and income sources count depends on the loan program and underwriting rules. The current CFPB General Qualified Mortgage definition does not impose a universal 43% DTI cap.',
     },
     {
         title: 'Loan-to-Value Ratio (LTV)',
-        formula: 'LTV = (Loan Amount ÷ Appraised Property Value) × 100',
-        explanation: 'LTV determines PMI requirement (required if LTV > 80%), eligibility for cash-out refinancing (max 80% LTV for most conventional loans), and jumbo loan classification.',
+        formula: 'LTV = (Loan Amount ÷ Property Value Used by Lender) × 100',
+        explanation: 'LTV compares the loan amount with the property value used for underwriting. Program definitions and treatment of purchase price versus appraised value can vary, so calculator LTV is a planning estimate.',
     },
     {
-        title: 'PMI Calculation',
-        formula: 'Annual PMI = Loan Amount × PMI Rate',
-        explanation: 'PMI rates range from 0.5%-1.5% of the loan amount annually, varying by credit score, LTV, and loan type. PMI is automatically canceled at 78% LTV per the Homeowners Protection Act of 1998.',
+        title: 'Illustrative PMI Estimate',
+        formula: 'Monthly PMI Estimate = Loan Amount × Assumed Annual PMI Rate ÷ 12',
+        explanation: 'Actual conventional PMI pricing depends on multiple borrower, loan and insurer factors. A calculator assumption is not an insurer quote. Conventional PMI cancellation rights under the Homeowners Protection Act also have eligibility and timing conditions.',
     },
     {
-        title: 'Refinance Break-Even',
-        formula: 'Break-Even Months = Total Closing Costs ÷ Monthly Payment Savings',
-        explanation: 'If the break-even period is less than your planned remaining stay in the home, refinancing is financially beneficial. Closing costs typically range from 2%-5% of the new loan amount.',
+        title: 'Simple Refinance Break-Even',
+        formula: 'Break-Even Months = Upfront Refinance Costs ÷ Monthly Payment Savings',
+        explanation: 'This simple payback calculation does not by itself measure total economic benefit. Loan term changes, interest already paid, cash-out, taxes, opportunity cost and how long you keep the new loan can materially affect a refinance decision.',
     },
 ];
 
 export default function MethodologyPage() {
+    const schema = {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        '@id': 'https://usfinnexus.com/methodology#article',
+        headline: 'USFinNexus Financial Calculator Methodology & Data Sources',
+        description: 'Formulas, assumptions, limitations and primary sources used by USFinNexus financial calculators.',
+        url: 'https://usfinnexus.com/methodology',
+        datePublished: '2025-12-01',
+        dateModified: '2026-08-07',
+        inLanguage: 'en-US',
+        isAccessibleForFree: true,
+        author: { '@type': 'Organization', name: 'USFinNexus', url: 'https://usfinnexus.com/' },
+        publisher: { '@id': 'https://usfinnexus.com/#organization' },
+        citation: SOURCES.map((source) => ({ '@type': 'WebSite', name: source.org, url: source.url })),
+        breadcrumb: {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://usfinnexus.com/' },
+                { '@type': 'ListItem', position: 2, name: 'Methodology', item: 'https://usfinnexus.com/methodology' },
+            ],
+        },
+    };
+
     return (
         <>
-        {/* TechArticle + BreadcrumbList JSON-LD for E-E-A-T */}
-        <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'TechArticle',
-                '@id': 'https://usfinnexus.com/methodology',
-                headline: 'USFinNexus Calculation Methodology & Data Sources',
-                description: 'How USFinNexus calculates mortgage payments, DTI ratios, and affordability metrics. All formulas sourced from CFPB, HUD, FHFA, and the Tax Foundation.',
-                url: 'https://usfinnexus.com/methodology',
-                datePublished: '2025-12-01',
-                dateModified: '2026-05-10',
-                inLanguage: 'en-US',
-                isAccessibleForFree: true,
-                author: {
-                    '@type': 'Organization',
-                    name: 'USFinNexus',
-                    url: 'https://usfinnexus.com',
-                },
-                publisher: { '@id': 'https://usfinnexus.com/#organization' },
-                about: [
-                    { '@type': 'Thing', name: 'Mortgage calculation formulas' },
-                    { '@type': 'Thing', name: 'CFPB Qualified Mortgage guidelines' },
-                    { '@type': 'Thing', name: 'FHFA conforming loan limits 2026' },
-                    { '@type': 'Thing', name: 'FHA loan limits 2026' },
-                    { '@type': 'Thing', name: 'Debt-to-income ratio calculation' },
-                    { '@type': 'Thing', name: 'PMI calculation and cancellation' },
-                ],
-                citation: [
-                    { '@type': 'WebSite', name: 'Consumer Financial Protection Bureau', url: 'https://www.consumerfinance.gov/' },
-                    { '@type': 'WebSite', name: 'Federal Housing Finance Agency', url: 'https://www.fhfa.gov/' },
-                    { '@type': 'WebSite', name: 'U.S. Department of Housing and Urban Development', url: 'https://www.hud.gov/' },
-                    { '@type': 'WebSite', name: 'Tax Foundation', url: 'https://taxfoundation.org/' },
-                    { '@type': 'WebSite', name: 'Freddie Mac PMMS', url: 'https://www.freddiemac.com/pmms' },
-                ],
-                breadcrumb: {
-                    '@type': 'BreadcrumbList',
-                    itemListElement: [
-                        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://usfinnexus.com' },
-                        { '@type': 'ListItem', position: 2, name: 'Methodology', item: 'https://usfinnexus.com/methodology' },
-                    ],
-                },
-            }) }}
-        />
-        <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
-            <Breadcrumbs items={[{ name: 'Methodology', item: '/methodology' }]} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+            <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
+                <Breadcrumbs items={[{ name: 'Methodology', item: '/methodology' }]} />
 
-            <header className="mb-12">
-                <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2.5 rounded-xl bg-[#0da6f2]/10 border border-[#0da6f2]/20">
-                        <Shield size={20} className="text-[#0da6f2]" />
+                <header className="mb-12">
+                    <div className="flex items-center gap-3 mb-4">
+                        <div className="p-2.5 rounded-xl bg-[#0da6f2]/10 border border-[#0da6f2]/20"><Shield size={20} className="text-[#0da6f2]" /></div>
+                        <span className="text-xs font-black uppercase tracking-widest text-[#0da6f2]">Transparency</span>
                     </div>
-                    <span className="text-xs font-black uppercase tracking-widest text-[#0da6f2]">Transparency</span>
-                </div>
-                <h1 className="text-3xl md:text-5xl font-black mb-4 leading-tight" style={{ color: 'var(--color-text)' }}>
-                    Our Methodology & Data Sources
-                </h1>
-                <p className="text-lg leading-relaxed max-w-2xl" style={{ color: 'var(--color-text-muted)' }}>
-                    Every number on USFinNexus comes from a verifiable, official government or industry source. Here is exactly how our calculators work and where our data comes from.
-                </p>
-                <p className="text-xs mt-3 font-bold uppercase tracking-widest" style={{ color: 'var(--color-text-muted)' }}>
-                    Last Updated: May 10, 2026
-                </p>
-            </header>
+                    <h1 className="text-3xl md:text-5xl font-black mb-4 leading-tight" style={{ color: 'var(--color-text)' }}>Financial Calculator Methodology &amp; Data Sources</h1>
+                    <p className="text-lg leading-relaxed max-w-2xl" style={{ color: 'var(--color-text-muted)' }}>
+                        We document the formulas, assumptions and year-specific data behind our calculators so you can understand what each result does — and does not — mean.
+                    </p>
+                    <p className="text-xs mt-3 font-bold uppercase tracking-widest" style={{ color: 'var(--color-text-muted)' }}>Last reviewed: August 7, 2026</p>
+                </header>
 
-            {/* Our Commitment */}
-            <div className="card p-6 mb-12 border-l-4 border-[#0da6f2]">
-                <div className="flex gap-4">
-                    <FileText size={22} className="text-[#0da6f2] shrink-0 mt-0.5" />
-                    <div>
-                        <h2 className="font-bold mb-2" style={{ color: 'var(--color-text)' }}>Calculation Principles</h2>
-                        <ul className="text-sm space-y-1 list-disc pl-4" style={{ color: 'var(--color-text-muted)' }}>
-                            <li>All formulas use standard US monthly compounding (not annual compounding)</li>
-                            <li>Loan limit thresholds are updated annually to reflect FHFA and HUD announcements</li>
-                            <li>Default rate values reflect the current Freddie Mac PMMS weekly average</li>
-                            <li>Property tax rates use the Tax Foundation effective rate, not statutory rates</li>
-                            <li>DTI guidelines follow CFPB Qualified Mortgage standards (effective 2021+)</li>
+                <div className="card p-6 mb-12 border-l-4 border-[#0da6f2]">
+                    <div className="flex gap-4">
+                        <FileText size={22} className="text-[#0da6f2] shrink-0 mt-0.5" />
+                        <div>
+                            <h2 className="font-bold mb-2" style={{ color: 'var(--color-text)' }}>Calculation Principles</h2>
+                            <ul className="text-sm space-y-1 list-disc pl-4" style={{ color: 'var(--color-text-muted)' }}>
+                                <li>Use standard financial mathematics for amortization and clearly separate P&amp;I from estimated housing costs.</li>
+                                <li>Use first-party government sources for regulatory limits and federal tax values whenever practical.</li>
+                                <li>Label year-specific figures with the applicable year and avoid presenting stale market rates as current.</li>
+                                <li>Treat DTI percentages as planning references unless a specific program rule is being described and sourced.</li>
+                                <li>State material omissions and assumptions instead of presenting calculator estimates as guaranteed outcomes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <section className="mb-12">
+                    <h2 className="text-2xl font-black mb-6" style={{ color: 'var(--color-text)' }}>Primary Data Sources</h2>
+                    <div className="space-y-4">
+                        {SOURCES.map((source) => (
+                            <div key={source.org} className="card p-5">
+                                <div className="flex items-start gap-3">
+                                    <span className="text-2xl shrink-0">{source.icon}</span>
+                                    <div>
+                                        <div className="flex flex-wrap items-center gap-2 mb-1">
+                                            <h3 className="font-bold text-sm" style={{ color: 'var(--color-text)' }}>{source.org}</h3>
+                                            <a href={source.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-[#0da6f2] hover:underline font-bold uppercase tracking-wider"><ExternalLink size={10} /> official source</a>
+                                        </div>
+                                        <p className="text-xs leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>{source.description}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                <section className="mb-12">
+                    <h2 className="text-2xl font-black mb-6" style={{ color: 'var(--color-text)' }}>Core Calculation Formulas</h2>
+                    <div className="space-y-5">
+                        {FORMULAS.map((formula) => (
+                            <div key={formula.title} className="card p-6">
+                                <div className="flex items-start gap-3">
+                                    <Calculator size={18} className="text-[#0da6f2] shrink-0 mt-0.5" />
+                                    <div>
+                                        <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-text)' }}>{formula.title}</h3>
+                                        <code className="block px-4 py-2 rounded-lg text-sm font-mono mb-3" style={{ background: 'rgba(13,166,242,0.08)', color: '#0da6f2' }}>{formula.formula}</code>
+                                        <p className="text-xs leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>{formula.explanation}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                <section className="mb-12">
+                    <div className="card p-6 border border-amber-500/30 bg-amber-500/5">
+                        <h2 className="font-bold mb-3 text-amber-500">Important Limitations</h2>
+                        <ul className="text-sm space-y-2 list-disc pl-4" style={{ color: 'var(--color-text-muted)' }}>
+                            <li>Calculator results are estimates for education and planning, not loan approvals, tax returns or professional advice.</li>
+                            <li>Actual loan terms, rates, fees and qualification depend on program rules, property, borrower information and lender underwriting.</li>
+                            <li>Taxes, insurance, PMI/MIP, HOA dues and closing costs can vary materially from assumptions or averages.</li>
+                            <li>A market-average mortgage rate is not the rate an individual borrower will receive.</li>
+                            <li>Tax calculators simplify complex rules and should be checked against current IRS guidance or a qualified tax professional for filing decisions.</li>
                         </ul>
                     </div>
+                </section>
+
+                <div className="flex flex-wrap gap-3">
+                    <Link href="/calculators/mortgage" className="btn-primary text-sm">Mortgage Calculator</Link>
+                    <Link href="/about" className="btn-outline text-sm">About USFinNexus</Link>
+                    <Link href="/disclaimer" className="btn-outline text-sm">Full Disclaimer</Link>
                 </div>
             </div>
-
-            {/* Primary Sources */}
-            <section className="mb-12">
-                <h2 className="text-2xl font-black mb-6" style={{ color: 'var(--color-text)' }}>Primary Data Sources</h2>
-                <div className="space-y-4">
-                    {SOURCES.map((source) => (
-                        <div key={source.org} className="card p-5">
-                            <div className="flex items-start gap-3">
-                                <span className="text-2xl shrink-0">{source.icon}</span>
-                                <div>
-                                    <div className="flex flex-wrap items-center gap-2 mb-1">
-                                        <h3 className="font-bold text-sm" style={{ color: 'var(--color-text)' }}>{source.org}</h3>
-                                        <a
-                                            href={source.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-1 text-xs text-[#0da6f2] hover:underline font-bold uppercase tracking-wider"
-                                        >
-                                            <ExternalLink size={10} />
-                                            official source
-                                        </a>
-                                    </div>
-                                    <p className="text-xs leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>{source.description}</p>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            {/* Core Formulas */}
-            <section className="mb-12">
-                <h2 className="text-2xl font-black mb-6" style={{ color: 'var(--color-text)' }}>Core Calculation Formulas</h2>
-                <div className="space-y-5">
-                    {FORMULAS.map((f) => (
-                        <div key={f.title} className="card p-6">
-                            <div className="flex items-start gap-3">
-                                <Calculator size={18} className="text-[#0da6f2] shrink-0 mt-0.5" />
-                                <div>
-                                    <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-text)' }}>{f.title}</h3>
-                                    <code className="block px-4 py-2 rounded-lg text-sm font-mono mb-3"
-                                        style={{ background: 'rgba(13,166,242,0.08)', color: '#0da6f2' }}>
-                                        {f.formula}
-                                    </code>
-                                    <p className="text-xs leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>{f.explanation}</p>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            {/* Limitation Disclaimer */}
-            <section className="mb-12">
-                <div className="card p-6 border border-amber-500/30 bg-amber-500/5">
-                    <h2 className="font-bold mb-3 text-amber-400">Important Limitations</h2>
-                    <ul className="text-sm space-y-2 list-disc pl-4" style={{ color: 'var(--color-text-muted)' }}>
-                        <li>Calculator results are estimates only and do not constitute financial or mortgage advice.</li>
-                        <li>Actual loan terms, rates, and qualification depend on your individual creditworthiness and lender policies.</li>
-                        <li>Property tax rates are effective averages and vary by specific county and municipality.</li>
-                        <li>Homeowners insurance estimates are national averages; your actual premium depends on location, coverage, and insurer.</li>
-                        <li>Always consult a licensed mortgage professional or financial advisor before making home purchase decisions.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <div className="flex flex-wrap gap-3">
-                <Link href="/calculators/mortgage" className="btn-primary text-sm">Try Mortgage Calculator</Link>
-                <Link href="/about" className="btn-outline text-sm">About USFinNexus</Link>
-                <Link href="/disclaimer" className="btn-outline text-sm">Full Disclaimer</Link>
-            </div>
-        </div>
         </>
     );
 }
