@@ -14,20 +14,21 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Compound Interest & Investment Growth Calculator 2026 | USFinNexus',
-    description: 'Calculate investment growth with compound interest. See how regular contributions grow over time with interactive charts. Free investment calculator with PDF export.',
+    title: 'Compound Interest Calculator | USFinNexus',
+    description: 'Calculate compound growth using an initial balance, recurring contributions, return assumption, compounding frequency and time horizon. Compare multiple scenarios.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/investment' },
     openGraph: {
         type: 'website',
-        title: 'Compound Interest & Investment Growth Calculator 2026 | USFinNexus',
-        description: 'See how your investments compound over time. Interactive charts with monthly contributions. Free calculator.',
+        title: 'Compound Interest Calculator | USFinNexus',
+        description: 'Project compound growth with recurring contributions and user-entered return assumptions.',
         url: 'https://usfinnexus.com/calculators/investment',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Investment Compound Interest Calculator 2026 — USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus Compound Interest Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Compound Interest Calculator 2026 | USFinNexus',
-        description: 'Watch your investments grow with the power of compounding. Free investment growth calculator.',
+        title: 'Compound Interest Calculator | USFinNexus',
+        description: 'Project compound growth using assumptions you control.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
@@ -35,15 +36,15 @@ export const metadata: Metadata = {
 const INVESTMENT_FAQS = [
     {
         question: 'What is compound interest?',
-        answer: 'Compound interest is the interest on your interest. Unlike simple interest (which only pays on your original deposit), compound interest pays you returns on both your initial principal AND the accumulated interest from previous years. This causes your wealth to grow exponentially over time.',
+        answer: 'Compounding means growth is calculated on the starting principal plus prior accumulated growth. With a positive rate, reinvesting prior earnings can make the balance grow faster over time than simple interest on the original principal alone.',
     },
     {
-        question: 'What is a realistic interest rate to use?',
-        answer: 'If you are investing in a broad US Stock Market index fund (like the S&P 500) over a 20+ year horizon, financial planners often use an inflation-adjusted return rate of 7% to 8%. If you are saving money in a High-Yield Savings Account or CDs, expect 4% to 5%.',
+        question: 'What rate of return should I use in a compound interest calculator?',
+        answer: 'Use a scenario assumption rather than treating a historical average or current savings rate as a guaranteed future return. The appropriate assumption depends on the asset, fees, taxes, inflation, risk and time horizon. Testing conservative, middle and optimistic scenarios is usually more informative than using one forecast.',
     },
     {
-        question: 'Is it better to invest a lump sum or monthly?',
-        answer: 'Mathematically, investing a lump sum immediately (Time in the Market) usually beats spreading it out. However, most people do not have massive lump sums laying around. Consistently investing a smaller amount every single month out of your paycheck (Dollar Cost Averaging) is the most reliable way to build massive wealth over 30 years.',
+        question: 'Is a lump-sum investment always better than investing monthly?',
+        answer: 'Not always. Investing available cash earlier gives it more time in the market, but actual outcomes depend on subsequent returns and risk. Recurring contributions can be appropriate for ongoing income and can reduce timing concentration. This calculator can model either approach; it does not predict which future market path will occur.',
     },
 ];
 
@@ -51,15 +52,16 @@ export default function InvestmentPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
-                name="Compound Interest & Investment Calculator 2026"
-                description="Visualize how your investments grow with compound interest over any time period."
+                name="Compound Interest Calculator"
+                description="Project compound growth using an initial balance, recurring contributions and user-entered return assumptions."
                 url="https://usfinnexus.com/calculators/investment"
+                dateModified="2026-08-07"
             />
-            <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Compound Interest', item: '/calculators/investment' }]} />
+            <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Compound Interest Calculator', item: '/calculators/investment' }]} />
             <h1 className="sr-only">Compound Interest Calculator</h1>
             <InvestmentClient />
             <InvestmentSeoContent />
-            <CalculatorFAQ faqs={INVESTMENT_FAQS} title="Compound Interest — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={INVESTMENT_FAQS} title="Compound Interest Calculator FAQ" />
         </main>
     );
 }
