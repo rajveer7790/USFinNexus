@@ -1,91 +1,66 @@
-import React from 'react';
 import Link from 'next/link';
 
 export default function ClosingCostsSeoContent() {
     return (
         <section className="bg-white border-t border-gray-100 py-10 mt-6">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-blue">
-                <h2 className="text-3xl font-black text-navy-900 mb-6">
-                    What Are Closing Costs and Who Pays Them?
-                </h2>
+                <h2 className="text-3xl font-black text-navy-900 mb-6">What Are Closing Costs?</h2>
                 <p className="lead text-xl text-gray-600">
-                    Closing costs are the massive bundle of fees, taxes, and prepaid expenses required to finalize a real estate transaction. Whether you are buying or selling a home, these costs can catch you entirely off guard if you haven&apos;t budgeted for them. Our calculator breaks down exact 2026 state transfer taxes, title fees, and typical agent commissions so you aren&apos;t surprised at the closing table.
+                    Closing costs are the lender, settlement, title, government, prepaid and other transaction charges associated with completing a home purchase or sale. The exact amount is transaction-specific, so a national percentage or automatic state lookup should be treated as a rough shortcut rather than a final estimate.
                 </p>
 
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Buyer Closing Costs (The Breakdown)
-                </h3>
-                <p>
-                    Buyers typically pay between <strong>2% to 5%</strong> of the the total loan amount in closing costs. These are generally split into three main categories:
-                </p>
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">Buyer Closing-Cost Categories</h3>
                 <ul>
-                    <li>
-                        <strong>Lender Fees:</strong> Origination fees, application fees, points, and underwriting fees. This is what you pay the bank to process and approve your loan.
-                    </li>
-                    <li>
-                        <strong>Third-Party Fees:</strong> Appraisal fees (to verify the home&apos;s value), home inspection fees, and Title fees (Title Search and Lender&apos;s Title Insurance) required to ensure no one else legally owns the property.
-                    </li>
-                    <li>
-                        <strong>Prepaids and Escrow:</strong> Your lender will usually require you to deposit several months&apos; worth of property taxes and homeowners insurance upfront into an escrow account. You also pre-pay setting up the daily interest from the day you close to the end of the month.
-                    </li>
+                    <li><strong>Lender charges:</strong> origination, underwriting, discount points and other lender fees shown in the mortgage disclosures.</li>
+                    <li><strong>Services:</strong> appraisal, credit-related services, title search, lender&apos;s title policy, settlement or escrow services and other required providers.</li>
+                    <li><strong>Government charges:</strong> recording, transfer, stamp or similar charges applicable to the property and transaction.</li>
+                    <li><strong>Prepaids:</strong> prepaid interest, homeowners insurance and other amounts due before or at closing.</li>
+                    <li><strong>Initial escrow funding:</strong> amounts collected for future property-tax and insurance payments when an escrow account is established.</li>
                 </ul>
 
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Seller Closing Costs (The Breakdown)
-                </h3>
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">Seller Closing-Cost Categories</h3>
                 <p>
-                    Sellers usually face a much larger closing cost burden-typically <strong>6% to 10%</strong> of the total home sale price. The massive majority of this is realtor commissions.
+                    Seller costs can include transfer charges, settlement or attorney fees, lien or payoff-related items, contract credits and any broker compensation the seller has agreed to pay. Since the 2024 real-estate commission practice changes, broker compensation should not be hard-coded as a universal percentage; it is negotiable and transaction-specific.
                 </p>
+
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">Use the Loan Estimate and Closing Disclosure</h3>
+                <p>
+                    For covered mortgage transactions, the CFPB&apos;s Loan Estimate is a standardized three-page form showing the expected loan terms and estimated costs. A lender generally must provide it within three business days after receiving the information that constitutes an application. The Closing Disclosure is a five-page form with final loan terms and closing costs, and the borrower must receive it at least three business days before closing.
+                </p>
+                <p>
+                    Compare the final Closing Disclosure with the most recent Loan Estimate and ask the lender or settlement professional about unexpected changes before signing.
+                </p>
+                <p>
+                    <a href="https://www.consumerfinance.gov/owning-a-home/compare/review-loan-estimates/" target="_blank" rel="noopener noreferrer">CFPB: Review Loan Estimates</a>{' · '}
+                    <a href="https://www.consumerfinance.gov/owning-a-home/close/review-documents-before-closing/" target="_blank" rel="noopener noreferrer">CFPB: Review Documents Before Closing</a>
+                </p>
+
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">Why Transfer Taxes Are Entered Manually</h3>
+                <p>
+                    Real-estate transfer and recording charges are not reliably represented by one percentage per state. State law can be only one layer; counties and municipalities can impose additional charges, and exemptions, property type, consideration, mortgage amount and contract allocation can affect the result. Enter the amount from the applicable local government source, title company, attorney or settlement provider.
+                </p>
+
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">Closing Costs and Federal Taxes</h3>
+                <p>
+                    IRS Publication 530 explains that closing costs can receive different tax treatment. Certain home mortgage interest and real estate taxes may be deductible when the applicable requirements are met. Some settlement costs can be included in the property&apos;s basis, while other mortgage-related fees are neither currently deductible nor added to basis. Do not assume that every prepaid amount or every point is automatically deductible.
+                </p>
+                <p><a href="https://www.irs.gov/publications/p530" target="_blank" rel="noopener noreferrer">IRS Publication 530: Tax Information for Homeowners</a></p>
+
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">Cash to Close vs. Closing Costs</h3>
+                <p>
+                    Closing costs and cash to close are not the same number. Cash to close can include the down payment plus closing costs, then reflect earnest-money deposits, lender or seller credits, prorations, financed charges and other transaction-specific adjustments. The final Closing Disclosure is the authoritative transaction document for a covered mortgage closing.
+                </p>
+
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">Related Tools</h3>
                 <ul>
-                    <li>
-                        <strong>Agent Commissions:</strong> Historically averaging 5% to 6% of the sale price, split between the buyer&apos;s agent and the seller&apos;s agent. *(Note: Post-2024 NAR settlement rules have made these commissions more negotiable, but sellers still frequently pay them to attract buyers).*
-                    </li>
-                    <li>
-                        <strong>State & Local Transfer Taxes:</strong> Some states (like New York or Washington) charge massive transfer or &quot;stamp&quot; taxes when property changes hands. Our calculator dynamically estimates these based on the state you select.
-                    </li>
-                    <li>
-                        <strong>Owner&apos;s Title Insurance & Escrow:</strong> In many markets, it is customary for the seller to pay for the new buyer&apos;s Owner&apos;s Title Insurance policy and split the physical escrow/closing fee with the buyer.
-                    </li>
+                    <li><Link href="/calculators/down-payment">Down Payment Calculator</Link></li>
+                    <li><Link href="/calculators/mortgage">Mortgage Calculator</Link></li>
+                    <li><Link href="/calculators/affordability">Home Affordability Calculator</Link></li>
                 </ul>
 
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Can You Negotiate Closing Costs?
-                </h3>
-                <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 my-6">
-                    <p className="mb-0 text-navy-900 font-medium">
-                        <strong>Yes!</strong> While you cannot negotiate government taxes or the appraisal fee, you absolutely <em>can</em> negotiate lender origination fees, title insurance providers, and realtor commissions. 
-                    </p>
-                </div>
-                <p>
-                    <strong>Seller Concessions:</strong> In a buyer&apos;s market, buyers often ask sellers to pay a portion of their closing costs (e.g., &quot;Seller to contribute $5,000 to buyer&apos;s closing costs&quot;). This helps cash-strapped buyers close on the home while allowing the seller to maintain the headline purchase price.
+                <p className="text-sm text-gray-500">
+                    Educational estimate only. Use your lender, title/settlement provider, attorney where applicable, contract and government fee schedules for the actual transaction.
                 </p>
-
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Frequently Asked Questions
-                </h3>
-                
-                <div className="space-y-6 mt-6">
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">Do closing costs include my down payment?</h4>
-                        <p className="text-gray-600">
-                            No. Your &quot;Cash to Close&quot; is the sum of your Down Payment + Your Closing Costs. If you buy a $400,000 home with a $80,000 down payment (20%), and your closing costs are $8,000, you must wire $88,000 cash to the title company on closing day. Check our <Link href="/calculators/down-payment" className="text-blue-600 hover:underline">Down Payment Calculator</Link> for savings goals.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">What is a Loan Estimate (LE)?</h4>
-                        <p className="text-gray-600">
-                            By law, within 3 days of applying for a mortgage, your lender must provide a standardized 3-page document called a Loan Estimate. This completely breaks down exactly what your closing costs will be. Three days before you physically close, they provide a &quot;Closing Disclosure&quot; (CD) with the final, locked-in numbers.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">Are closing costs tax deductible?</h4>
-                        <p className="text-gray-600">
-                            Mostly no. The majority of closing costs (like appraisals, title insurance, and lender fees) are not tax-deductible. However, the <em>prepaid</em> items like property taxes and prepaid mortgage interest can generally be deducted in the year you pay them. If you paid &quot;Points&quot; to buy down your interest rate, those are also fully deductible.
-                        </p>
-                    </div>
-                </div>
             </div>
         </section>
     );
