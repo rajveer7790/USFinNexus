@@ -1,105 +1,90 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Lock, Shield, EyeOff, Database, Target, ArrowRight } from 'lucide-react';
+import { ArrowRight, Database, Lock, Shield } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-    title: 'Why USFinNexus Collects Zero Data | The Privacy-First Calculator',
-    description: 'Most mortgage calculators sell your data to lenders. USFinNexus does not. We are the completely free, zero-data alternative for Americans. Learn why we don\'t sell your data.',
+    title: 'How USFinNexus Limits Calculator Data Collection',
+    description:
+        'Learn how USFinNexus keeps calculator inputs separate from lead forms, what website services still process, and how advertising and hosting affect privacy.',
     alternates: { canonical: 'https://usfinnexus.com/why-we-dont-collect-data' },
     openGraph: {
         type: 'website',
-        title: 'Why USFinNexus Collects Zero Data | The Privacy-First Calculator',
-        description: 'Most mortgage calculators sell your data to lenders as expensive "leads". We do not. Read our zero-data promise.',
+        title: 'How USFinNexus Limits Calculator Data Collection',
+        description: 'A precise explanation of browser-based calculator inputs, hosting data, ads and lender-data practices.',
         url: 'https://usfinnexus.com/why-we-dont-collect-data',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus Zero Data Promise' }],
+        siteName: 'USFinNexus',
     },
 };
 
-export default function WhyNoDataPage() {
+export default function CalculatorPrivacyPage() {
     return (
         <main className="neo-root bg-white">
             <section className="bg-gradient-to-b from-blue-50 to-white py-12 md:py-20 border-b border-gray-100">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <Breadcrumbs items={[{ name: 'Our Privacy Promise', item: '/why-we-dont-collect-data' }]} />
+                    <Breadcrumbs items={[{ name: 'Calculator Privacy', item: '/why-we-dont-collect-data' }]} />
                     <div className="inline-flex items-center gap-2 px-4 py-2 mt-6 rounded-full bg-blue-100 text-blue-800 text-sm font-bold tracking-wide">
-                        <Lock size={16} /> The USFinNexus Promise
+                        <Lock size={16} /> Calculator Privacy
                     </div>
                     <h1 className="text-4xl md:text-6xl font-black mt-6 mb-6 text-navy-900 leading-tight">
-                        Why We Don't <br className="hidden sm:block" /> Collect Your Data
+                        How We Limit Calculator Data Collection
                     </h1>
-                    <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        The internet is full of "free" mortgage calculators. What they don't tell you is that <em>you</em> are the product. We built USFinNexus to be different.
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        You should be able to estimate a payment without handing over an email address or phone number. USFinNexus separates ordinary calculator inputs from lead-generation forms while being clear that a public website still uses hosting and advertising services.
                     </p>
                 </div>
             </section>
 
-            <section className="py-16 md:py-24">
+            <section className="py-14 md:py-20">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-blue">
-                    
-                    <h2 className="text-3xl font-black text-navy-900 mb-6">The Hidden Cost of "Free" Calculators</h2>
+                    <h2>What Happens to Calculator Inputs?</h2>
                     <p>
-                        When you use a mortgage or personal loan calculator on one of the massive corporate finance websites, you are usually participating in a highly lucrative lead-generation funnel.
+                        Values such as home price, down payment, interest rate and income are designed to be used by calculator code in your browser. You do not need to submit an email address or phone number to receive ordinary calculator results, and USFinNexus does not sell calculator-input values to mortgage lenders as leads.
                     </p>
-                    <p>
-                        As you enter your target home price, your down payment savings, your ZIP code, and your email address to "save your results," that company packages your financial profile into a "lead." They then sell that lead to multiple mortgage brokers simultaneously.
-                    </p>
-                    <div className="bg-red-50 p-6 rounded-xl border border-red-100 my-8 flex items-start gap-4">
-                        <Target className="w-8 h-8 text-red-600 shrink-0 mt-1" />
-                        <div>
-                            <h3 className="text-xl font-bold text-red-900 mt-0 mb-2">The Result? Endless Spam.</h3>
-                            <p className="text-red-800 m-0">
-                                Within minutes of calculating your potential monthly payment, your phone starts ringing. You receive dozens of emails from lenders you've never heard of, all aggressively competing to originate your loan. You didn't want a mortgage today — you just wanted to do some math.
-                            </p>
+
+                    <div className="grid sm:grid-cols-2 gap-6 my-9 not-prose">
+                        <div className="bg-white p-6 rounded-2xl border border-gray-200">
+                            <Database className="w-9 h-9 text-blue-600 mb-3" />
+                            <h3 className="text-lg font-bold text-navy-900 mb-2">Browser-Based Inputs</h3>
+                            <p className="text-sm text-gray-600">Ordinary calculator values are designed to be processed in the browser rather than submitted to USFinNexus as a loan application.</p>
+                        </div>
+                        <div className="bg-white p-6 rounded-2xl border border-gray-200">
+                            <Shield className="w-9 h-9 text-blue-600 mb-3" />
+                            <h3 className="text-lg font-bold text-navy-900 mb-2">No Lender Lead Sale</h3>
+                            <p className="text-sm text-gray-600">We do not sell the numbers entered into our calculators to mortgage lenders or brokers as consumer leads.</p>
                         </div>
                     </div>
 
-                    <h2 className="text-3xl font-black text-navy-900 mt-12 mb-6">The USFinNexus Alternative: Zero Data Collection</h2>
+                    <h2>What Data Can Website Services Process?</h2>
                     <p>
-                        We fundamentally believe that everyday Americans should have access to professional-grade financial tools without sacrificing their privacy. We built USFinNexus on a modern web architecture called <strong>client-side processing</strong>.
+                        Loading any public website creates normal network requests. Cloudflare infrastructure can process technical request information used to deliver and secure USFinNexus. Google AdSense may use cookies or similar technologies for ad delivery, measurement, fraud prevention and, where applicable, personalization or consent-based advertising.
+                    </p>
+                    <p>
+                        Because those services exist, it would be inaccurate to promise that the entire website collects “zero data,” uses “zero cookies,” or is completely anonymous. Our <Link href="/privacy">Privacy Policy</Link> contains the current service-level disclosures.
                     </p>
 
-                    <div className="grid sm:grid-cols-2 gap-8 my-10 not-prose">
-                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
-                            <Database className="w-10 h-10 text-blue-600 mb-4" />
-                            <h3 className="text-xl font-bold text-navy-900 mb-2">No Databases</h3>
-                            <p className="text-gray-600">When you type numbers into our calculators, those numbers never leave your phone or computer. We literally do not possess a database to store your calculations.</p>
-                        </div>
-                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
-                            <EyeOff className="w-10 h-10 text-blue-600 mb-4" />
-                            <h3 className="text-xl font-bold text-navy-900 mb-2">No Tracking Profiles</h3>
-                            <p className="text-gray-600">We don't build shadow profiles of your estimated net worth or home-buying timeline. You remain entirely anonymous.</p>
-                        </div>
-                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
-                            <Shield className="w-10 h-10 text-blue-600 mb-4" />
-                            <h3 className="text-xl font-bold text-navy-900 mb-2">No Lender Sales</h3>
-                            <p className="text-gray-600">Because we don't have your data, we couldn't sell it even if we wanted to. You will never receive a phone call from a broker because of us.</p>
-                        </div>
-                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
-                            <Lock className="w-10 h-10 text-blue-600 mb-4" />
-                            <h3 className="text-xl font-bold text-navy-900 mb-2">Local PDF Generation</h3>
-                            <p className="text-gray-600">Even our PDF export feature runs locally in your browser. It doesn't ping a server to generate your amortization schedule.</p>
+                    <h2>Why No Email Is Required for Calculator Results</h2>
+                    <p>
+                        A payment estimate should not require a sales funnel. Standard calculator results are available without entering an email or phone number. If USFinNexus ever introduces a separate form, account or partner feature, that feature should explain what it collects before submission.
+                    </p>
+
+                    <h2>Advertising and Editorial Independence</h2>
+                    <p>
+                        USFinNexus may be supported by display advertising. Advertising does not make a calculator government approved, CFPB certified or professionally reviewed. Financial rules and annual limits are documented separately on our <Link href="/methodology">Methodology &amp; Data Sources</Link> page.
+                    </p>
+
+                    <div className="mt-12 p-8 bg-navy-900 rounded-3xl text-center text-white not-prose">
+                        <h2 className="text-2xl font-bold mb-3 text-white">Use the calculators without a lead form</h2>
+                        <p className="text-blue-100 mb-6">Start with the mortgage calculator or browse the calculator section on the homepage.</p>
+                        <div className="flex flex-wrap justify-center gap-3">
+                            <Link href="/calculators/mortgage" className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-400 text-white font-bold py-3 px-6 rounded-full transition-colors">
+                                Mortgage Calculator <ArrowRight size={18} />
+                            </Link>
+                            <Link href="/#calculators" className="inline-flex items-center gap-2 border border-white/30 text-white font-bold py-3 px-6 rounded-full hover:bg-white/10 transition-colors">
+                                Browse Calculators
+                            </Link>
                         </div>
                     </div>
-
-                    <h2 className="text-3xl font-black text-navy-900 mt-12 mb-6">How Do We Make Money?</h2>
-                    <p>
-                        Transparency is core to our mission. USFinNexus is supported entirely by standard, non-intrusive display advertisements (the banner ads you see on the site). 
-                    </p>
-                    <p>
-                        We do not accept "bounties" or commissions from lenders for referring you to them. This allows us to remain 100% objective and mathematically accurate, following strict <a href="https://www.consumerfinance.gov/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">CFPB (Consumer Financial Protection Bureau)</a> guidelines for all our formulas.
-                    </p>
-
-                    <div className="mt-16 p-8 bg-navy-900 rounded-3xl text-center text-white">
-                        <h3 className="text-3xl font-bold mb-4 text-white mt-0">Ready to do the math?</h3>
-                        <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-                            Experience the difference of a truly private, blazing-fast financial calculator.
-                        </p>
-                        <Link href="/calculators" className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-400 text-white font-bold py-4 px-8 rounded-full transition-colors no-underline">
-                            Explore Our Free Calculators <ArrowRight size={20} />
-                        </Link>
-                    </div>
-
                 </div>
             </section>
         </main>
