@@ -14,36 +14,37 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Debt Payoff Calculator 2026 — Snowball vs Avalanche Strategy | USFinNexus',
-    description: 'Compare debt snowball vs avalanche payoff methods across all your debts. See which strategy gets you debt-free fastest and saves the most interest. Free, no signup.',
+    title: 'Debt Payoff Calculator | USFinNexus',
+    description: 'Compare debt snowball and debt avalanche payoff scenarios using your balances, APRs, minimum payments and extra monthly payment amount.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/debt-payoff' },
     openGraph: {
         type: 'website',
-        title: 'Debt Payoff Calculator 2026 — Snowball vs Avalanche | USFinNexus',
-        description: 'Compare snowball vs avalanche across all your debts. Find your debt-free date and total interest savings.',
+        title: 'Debt Payoff Calculator | USFinNexus',
+        description: 'Compare modeled debt snowball and avalanche payoff timelines and interest.',
         url: 'https://usfinnexus.com/calculators/debt-payoff',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Debt Payoff Calculator 2026 — USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus Debt Payoff Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Debt Payoff Calculator 2026 | Snowball vs Avalanche | USFinNexus',
-        description: 'Snowball or avalanche — which gets you debt-free faster? Compare strategies across all your debts.',
+        title: 'Debt Payoff Calculator | USFinNexus',
+        description: 'Compare debt snowball and avalanche payoff scenarios.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 
 const DEBT_PAYOFF_FAQS = [
     {
-        question: 'What is the Debt Snowball method?',
-        answer: 'The Debt Snowball method focuses entirely on psychology. You list your debts from smallest balance to largest balance, regardless of interest rates. You pay the minimum on everything and throw all extra cash at the smallest debt. Once it is paid off, you take that payment and roll it into the next smallest debt, building momentum.',
+        question: 'What is the debt snowball method?',
+        answer: 'The debt snowball method generally directs extra money to the smallest balance while required payments continue on the other debts. After one balance is paid, the amount available for the next debt can increase. Its appeal is often behavioral because it can create earlier account payoffs.',
     },
     {
-        question: 'What is the Debt Avalanche method?',
-        answer: 'The Debt Avalanche method is the mathematically superior approach. You list your debts from highest interest rate to lowest interest rate, regardless of the balance. You attack the highest interest rate first, which saves you the most money and gets you out of debt the fastest.',
+        question: 'What is the debt avalanche method?',
+        answer: 'The debt avalanche method generally directs extra money to the debt with the highest interest rate while required payments continue on other debts. When balances, rates and payment timing are otherwise fixed, prioritizing the highest rate can reduce modeled interest compared with a lower-rate-first order.',
     },
     {
-        question: 'Should I use Snowball or Avalanche?',
-        answer: 'If you are motivated by quick wins and need psychological momentum, use the Snowball. If you are highly disciplined and want to save the absolute maximum amount of money on interest, use the Avalanche. Run your numbers in our calculator to see exactly how much money the Avalanche will save you.',
+        question: 'Should I use snowball or avalanche?',
+        answer: 'The better method depends on your goals and ability to follow the plan. Avalanche can reduce modeled interest in many scenarios, while snowball can create faster small-balance wins. Fees, promotional APR expirations, minimum-payment formulas and account terms can change the result, so compare your actual debts.',
     },
 ];
 
@@ -51,15 +52,16 @@ export default function DebtPayoffPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
-                name="Debt Payoff Calculator — Snowball vs Avalanche"
-                description="Compare debt snowball vs avalanche payoff strategies and find your fastest path to becoming debt-free."
+                name="Debt Payoff Calculator"
+                description="Compare debt snowball and avalanche payoff scenarios using user-entered balances, rates and payments."
                 url="https://usfinnexus.com/calculators/debt-payoff"
+                dateModified="2026-08-07"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Debt Payoff Calculator', item: '/calculators/debt-payoff' }]} />
             <h1 className="sr-only">Debt Payoff Calculator</h1>
             <DebtPayoffClient />
             <DebtPayoffSeoContent />
-            <CalculatorFAQ faqs={DEBT_PAYOFF_FAQS} title="Debt Payoff — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={DEBT_PAYOFF_FAQS} title="Debt Payoff Calculator FAQ" />
         </main>
     );
 }
