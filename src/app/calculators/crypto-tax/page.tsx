@@ -1,71 +1,75 @@
 import type { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import WebApplicationSchema from '@/components/WebApplicationSchema';
 import CryptoTaxSeoContent from './CryptoTaxSeoContent';
+import CalculatorFAQ from '@/components/CalculatorFAQ';
 
 const CryptoTaxClient = nextDynamic(() => import('./CryptoTaxClient'), {
     loading: () => <CalculatorSkeleton />,
 });
-import CalculatorFAQ from '@/components/CalculatorFAQ';
-import Breadcrumbs from '@/components/Breadcrumbs';
-import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Crypto Tax Calculator 2026 — Capital Gains on Bitcoin & Crypto | USFinNexus',
-    description: 'Estimate your 2026 cryptocurrency capital gains taxes. Calculate short-term vs long-term gains for Bitcoin, Ethereum, and altcoins under IRS rules. Free crypto tax estimator.',
+    title: 'Crypto Tax Calculator 2026 | USFinNexus',
+    description: 'Estimate 2026 U.S. federal tax attributable to net short-term and long-term cryptocurrency capital gains using current ordinary-income, capital-gain and NIIT thresholds.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/crypto-tax' },
     openGraph: {
         type: 'website',
-        title: 'Crypto Tax Calculator 2026 — Bitcoin & Crypto Capital Gains | USFinNexus',
-        description: 'Estimate your 2026 crypto capital gains taxes. Short-term vs long-term rates under current IRS rules.',
+        title: 'Crypto Tax Calculator 2026 | USFinNexus',
+        description: 'Estimate federal tax on modeled cryptocurrency capital gains using 2026 thresholds.',
         url: 'https://usfinnexus.com/calculators/crypto-tax',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Crypto Tax Calculator 2026 — USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus Crypto Tax Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Crypto Tax Calculator 2026 | Bitcoin Capital Gains | USFinNexus',
-        description: 'How much tax do you owe on your crypto gains? Short vs long-term capital gains estimated instantly.',
+        title: 'Crypto Tax Calculator 2026 | USFinNexus',
+        description: 'Estimate 2026 federal tax on modeled cryptocurrency capital gains.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 
 const CRYPTO_FAQS = [
     {
-        question: 'Do I have to pay taxes if I trade one crypto for another?',
-        answer: 'Yes. In the US, trading one cryptocurrency for another (e.g., trading Bitcoin for Ethereum) is considered a taxable event. You must calculate the fair market value in USD at the time of the trade, and you will owe capital gains tax on the profit made on the coin you gave up.',
+        question: 'Does the IRS treat cryptocurrency as property?',
+        answer: 'Yes. The IRS treats digital assets as property for U.S. federal tax purposes, so general tax principles for property transactions apply. Selling digital assets for dollars, exchanging one digital asset for another materially different digital asset, or otherwise disposing of a capital asset can create a reportable capital gain or loss.',
     },
     {
-        question: 'What if I just buy and hold crypto?',
-        answer: 'If you only buy cryptocurrency with USD and hold it in your wallet or exchange account, you do not owe any taxes. Taxes are only triggered when you sell, trade, or use the crypto.',
+        question: 'What are the 2026 long-term capital-gain thresholds used here?',
+        answer: 'This estimator uses the 2026 Qualified Dividends and Capital Gain Tax Worksheet thresholds published in IRS Publication 505. The 0% ceiling is $49,450 for Single and Married Filing Separately, $98,900 for Married Filing Jointly, and $66,200 for Head of Household. The 15% ceiling is $545,500, $306,850, $613,700, and $579,600 respectively.',
     },
     {
-        question: 'Is it better to hold crypto for over a year?',
-        answer: 'Yes, from a tax perspective. Holding a cryptocurrency for more than 365 days qualifies you for Long-Term Capital Gains tax rates (0%, 15%, or 20%), which are significantly lower than Short-Term rates (your ordinary income tax bracket).',
+        question: 'Are short-term cryptocurrency gains taxed as ordinary income?',
+        answer: 'Net short-term capital gains are generally subject to ordinary graduated income-tax rates. This estimator calculates the incremental ordinary federal income tax caused by the modeled net short-term gain after the other taxable-income amount you enter.',
     },
     {
-        question: 'How do crypto losses work?',
-        answer: 'Crypto losses can offset your crypto gains. If you have a net loss for the year, you can use up to $3,000 of it to reduce your ordinary income (like your W-2 salary). Any losses beyond $3,000 roll over to the next tax year indefinitely.',
-    }
+        question: 'Does swapping one cryptocurrency for another create a taxable event?',
+        answer: 'It can. Current IRS digital-asset FAQs state that exchanging a digital asset for other property, including materially different digital assets, can produce a recognized gain or loss measured using amount realized and adjusted basis.',
+    },
+    {
+        question: 'Does this calculator prepare Form 8949 or Schedule D?',
+        answer: 'No. It is a planning estimator, not tax-return software. Digital-asset basis identification, transaction costs, loss netting, qualified dividends, special capital-gain categories, NIIT adjustments and other rules can require the actual IRS forms and worksheets.',
+    },
 ];
 
 export default function CryptoTaxPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
-                name="Crypto Capital Gains Tax Estimator"
-                description="Estimate your cryptocurrency taxes instantly. Free US federal capital gains tax calculator."
+                name="Crypto Tax Calculator 2026"
+                description="Estimate 2026 federal tax attributable to modeled digital-asset capital gains using current federal thresholds."
                 url="https://usfinnexus.com/calculators/crypto-tax"
-                dateModified="2026-03-01"
+                dateModified="2026-08-07"
             />
-            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Crypto Tax Estimator', item: '/calculators/crypto-tax' }]} />
-            <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026</p>
-            <h1 className="sr-only">Crypto Tax Calculator: Estimate Capital Gains</h1>
+            <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Crypto Tax Calculator', item: '/calculators/crypto-tax' }]} />
+            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 7, 2026 · IRS digital-asset guidance and 2026 federal tax thresholds</p>
             <CryptoTaxClient />
             <CryptoTaxSeoContent />
-            <CalculatorFAQ faqs={CRYPTO_FAQS} title="Cryptocurrency Taxes — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={CRYPTO_FAQS} title="Crypto Tax Calculator FAQ" />
         </main>
     );
 }
