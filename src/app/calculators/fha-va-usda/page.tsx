@@ -14,36 +14,41 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'FHA vs VA vs USDA Loan Calculator 2026 — Compare Government Loans | USFinNexus',
-    description: 'Side-by-side comparison of FHA, VA, and USDA loan programs. See which government mortgage fits your budget with the lowest down payment and total cost.',
+    title: 'FHA vs. VA vs. USDA Loan Calculator | USFinNexus',
+    description: 'Compare modeled FHA, VA and USDA purchase-loan payments, down payments, mortgage-insurance or guarantee-fee assumptions, taxes and insurance.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/fha-va-usda' },
     openGraph: {
         type: 'website',
-        title: 'FHA vs VA vs USDA Loan Calculator 2026 | USFinNexus',
-        description: 'Compare FHA, VA, and USDA government loans side by side. Find which program gives you the lowest payment.',
+        title: 'FHA vs. VA vs. USDA Loan Calculator | USFinNexus',
+        description: 'Compare FHA, VA and USDA purchase-loan scenarios under the assumptions you enter.',
         url: 'https://usfinnexus.com/calculators/fha-va-usda',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'FHA VA USDA Loan Comparison Calculator — USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus FHA VA USDA Loan Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'FHA vs VA vs USDA Loan Calculator 2026 | USFinNexus',
-        description: 'Which government loan saves you more? Compare FHA, VA, and USDA side by side.',
+        title: 'FHA vs. VA vs. USDA Loan Calculator | USFinNexus',
+        description: 'Compare modeled government-backed home-loan payment scenarios.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 
 const GOV_LOAN_FAQS = [
     {
-        question: 'What is the minimum down payment for an FHA loan?',
-        answer: 'In 2026, the minimum down payment for an FHA loan is 3.5%, provided you have a credit score of at least 580. If your credit score is between 500 and 579, you are required to put down 10%.',
+        question: 'What is the minimum down payment for an FHA purchase loan?',
+        answer: 'FHA program rules permit a 3.5% minimum investment for borrowers meeting the applicable minimum decision credit-score requirement; a lower score band can require 10%. Meeting a score or down-payment threshold does not guarantee approval because lender underwriting and other FHA requirements still apply.',
     },
     {
-        question: 'Do VA loans require mortgage insurance?',
-        answer: 'No. VA loans do not require any monthly mortgage insurance (PMI or MIP), which drastically lowers your monthly payment. However, they do require a one-time upfront VA Funding Fee, which is typically rolled into the loan balance. Veterans receiving VA disability are exempt from this fee.',
+        question: 'Do VA-backed loans require monthly mortgage insurance?',
+        answer: 'VA-backed home loans do not require monthly private mortgage insurance. Many borrowers instead pay a one-time VA funding fee unless an exemption applies. The percentage depends on loan type, down payment and first or subsequent use of the benefit.',
     },
     {
-        question: 'Can anyone get a USDA loan?',
-        answer: 'No. USDA loans have two strict requirements: geographical and financial. The home must be located in an eligible rural or suburban area designated by the USDA. Additionally, your total household income cannot exceed 115% of the median income for that specific area.',
+        question: 'Who can use a USDA guaranteed home loan?',
+        answer: 'USDA Single Family Housing Guaranteed Loans have borrower, income, property-location and occupancy requirements. Eligibility is determined using USDA rules and the approved lender; an online payment comparison cannot determine program eligibility.',
+    },
+    {
+        question: 'Which program has the lowest total cost?',
+        answer: 'There is no universal winner. Compare the actual interest rate, upfront fees, ongoing mortgage-insurance or guarantee fees, taxes, insurance, down payment, closing costs and expected holding period for the programs you are eligible to use.',
     },
 ];
 
@@ -51,15 +56,17 @@ export default function GovLoanComparisonPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
-                name="FHA vs VA vs USDA Loan Calculator 2026"
-                description="Side-by-side comparison of FHA, VA, and USDA government loan programs. Compare down payments, fees, and monthly costs."
+                name="FHA vs. VA vs. USDA Loan Calculator"
+                description="Compare modeled FHA, VA and USDA purchase-loan costs under the assumptions entered."
                 url="https://usfinnexus.com/calculators/fha-va-usda"
+                dateModified="2026-08-07"
             />
-            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Gov Loan Comparison', item: '/calculators/fha-va-usda' }]} />
-            <h1 className="sr-only">FHA vs VA vs USDA Loan Comparison Calculator</h1>
+            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'FHA vs. VA vs. USDA', item: '/calculators/fha-va-usda' }]} />
+            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 7, 2026 · Program eligibility and exact fees must be confirmed with the responsible agency and lender</p>
+            <h1 className="sr-only">FHA vs. VA vs. USDA Loan Calculator</h1>
             <GovLoanClient />
             <FhaVaUsdaSeoContent />
-            <CalculatorFAQ faqs={GOV_LOAN_FAQS} title="Government Loans — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={GOV_LOAN_FAQS} title="FHA, VA & USDA Loan FAQ" />
         </main>
     );
 }
