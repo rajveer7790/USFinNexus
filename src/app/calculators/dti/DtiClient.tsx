@@ -10,10 +10,10 @@ export default function DtiClient() {
     const dti = grossIncome > 0 ? (monthlyDebt / grossIncome) * 100 : 0;
 
     const getStatus = () => {
-        if (dti <= 28) return { label: 'Excellent', color: 'text-emerald-500', border: 'border-emerald-500/30', bg: 'bg-emerald-500/5', icon: CheckCircle, advice: 'You are well below the 28% front-end limit. Most lenders will love your DTI.' };
-        if (dti <= 36) return { label: 'Good', color: 'text-[#0da6f2]', border: 'border-[#0da6f2]/30', bg: 'bg-[#0da6f2]/5', icon: TrendingUp, advice: 'You are within the acceptable range. Some lenders may ask for stronger compensating factors.' };
-        if (dti <= 43) return { label: 'Caution', color: 'text-amber-500', border: 'border-amber-500/30', bg: 'bg-amber-500/5', icon: AlertCircle, advice: 'Approaching the 43% Qualified Mortgage limit. Lenders may see you as higher risk.' };
-        return { label: 'High Risk', color: 'text-rose-500', border: 'border-rose-500/30', bg: 'bg-rose-500/5', icon: AlertCircle, advice: 'DTI exceeds 43%. You will likely struggle to qualify for a standard mortgage.' };
+        if (dti <= 28) return { label: 'Lower DTI', color: 'text-emerald-500', border: 'border-emerald-500/30', bg: 'bg-emerald-500/5', icon: CheckCircle, advice: 'Your ratio is below the traditional 28% housing-budget benchmark. Actual mortgage underwriting considers the type of DTI, loan program and full borrower profile.' };
+        if (dti <= 36) return { label: 'Moderate DTI', color: 'text-[#0da6f2]', border: 'border-[#0da6f2]/30', bg: 'bg-[#0da6f2]/5', icon: TrendingUp, advice: 'Your ratio is within a commonly used budgeting range. This is a planning reference, not an approval decision.' };
+        if (dti <= 43) return { label: 'Higher DTI', color: 'text-amber-500', border: 'border-amber-500/30', bg: 'bg-amber-500/5', icon: AlertCircle, advice: 'Your ratio is above more conservative budgeting benchmarks. A 43% ratio is not a universal current Qualified Mortgage cap; underwriting varies by program and lender.' };
+        return { label: 'High DTI', color: 'text-rose-500', border: 'border-rose-500/30', bg: 'bg-rose-500/5', icon: AlertCircle, advice: 'A higher DTI can reduce financial flexibility and may affect mortgage eligibility or pricing, but actual underwriting limits vary by loan program and borrower profile.' };
     };
 
     const status = getStatus();
@@ -29,7 +29,6 @@ export default function DtiClient() {
 
     return (
         <div className="relative min-h-screen bg-white text-navy-900 pb-20">
-            {/* Ambient Glows */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#0da6f2]/8 rounded-full blur-[120px]" />
                 <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-500/8 rounded-full blur-[120px]" />
@@ -44,10 +43,10 @@ export default function DtiClient() {
                         <span className="text-xs font-black uppercase tracking-[0.3em] text-[#0da6f2]">Debt Analysis</span>
                     </div>
                     <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight bg-gradient-to-r from-navy-900 via-[#0da6f2] to-navy-900 bg-clip-text text-transparent">
-                        DTI Calculator
+                        Debt-to-Income Ratio Calculator
                     </h1>
                     <p className="text-gray-500 font-medium text-lg">
-                        Calculate your Debt-to-Income Ratio instantly.
+                        Calculate DTI from gross monthly income and recurring monthly debt.
                     </p>
                 </div>
 
@@ -61,7 +60,7 @@ export default function DtiClient() {
                                     <input
                                         type="number"
                                         value={grossIncome || ''}
-                                        onChange={(e) => setGrossIncome(Number(e.target.value))}
+                                        onChange={(e) => setGrossIncome(Math.max(0, Number(e.target.value) || 0))}
                                         className="glass-input pl-8"
                                     />
                                 </div>
@@ -69,13 +68,13 @@ export default function DtiClient() {
 
                             <div>
                                 <label className="input-label">Total Monthly Debt Payments</label>
-                                <p className="text-xs text-gray-400 mb-3 font-medium">Include car loans, student loans, min. credit card payments, alimony, etc.</p>
+                                <p className="text-xs text-gray-400 mb-3 font-medium">Enter recurring monthly debt obligations relevant to the scenario you are testing.</p>
                                 <div className="relative group">
                                     <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">$</span>
                                     <input
                                         type="number"
                                         value={monthlyDebt || ''}
-                                        onChange={(e) => setMonthlyDebt(Number(e.target.value))}
+                                        onChange={(e) => setMonthlyDebt(Math.max(0, Number(e.target.value) || 0))}
                                         className="glass-input pl-8"
                                     />
                                 </div>
@@ -83,7 +82,6 @@ export default function DtiClient() {
                         </div>
                     </div>
 
-                    {/* Result Card */}
                     <div className={`glass-card p-4 sm:p-6 text-center border-2 ${status.border}`}>
                         <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-8 ${status.bg} ${status.color}`}>
                             <StatusIcon size={12} />
@@ -95,7 +93,6 @@ export default function DtiClient() {
                         </div>
                         <p className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-10">Your DTI Ratio</p>
 
-                        {/* DTI Bar */}
                         <div className="mb-8">
                             <div className="h-3 rounded-full bg-white/5 relative overflow-hidden">
                                 <div
@@ -115,22 +112,21 @@ export default function DtiClient() {
                         <p className={`text-sm font-semibold leading-relaxed ${status.color}`}>{status.advice}</p>
                     </div>
 
-                    {/* Benchmark Reference */}
                     <div className="glass-card p-8">
-                        <h3 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-6">Lender Benchmarks</h3>
+                        <h3 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-6">Planning Benchmarks</h3>
                         <div className="space-y-3">
                             {[
-                                { range: '< 28%', label: 'Front-End (Housing) Limit', color: 'text-emerald-500' },
-                                { range: '< 36%', label: 'Conventional Lending Sweet Spot', color: 'text-[#0da6f2]' },
-                                { range: '< 43%', label: 'Qualified Mortgage (QM) Maximum', color: 'text-amber-500' },
-                                { range: '< 50%', label: 'FHA / VA / USDA (with exceptions)', color: 'text-rose-400' },
+                                { range: '28%', label: 'Traditional housing-budget reference', color: 'text-emerald-500' },
+                                { range: '36%', label: 'Traditional total-debt budgeting reference', color: 'text-[#0da6f2]' },
+                                { range: '43%', label: 'Common higher-DTI planning reference — not a universal QM cap', color: 'text-amber-500' },
                             ].map(item => (
-                                <div key={item.range} className="flex items-center justify-between py-3 border-b border-white/5 last:border-0 hover:bg-white/5 px-2 rounded-lg transition-colors">
+                                <div key={item.range} className="flex items-center justify-between gap-4 py-3 border-b border-white/5 last:border-0 hover:bg-white/5 px-2 rounded-lg transition-colors">
                                     <span className="text-sm font-medium text-gray-500">{item.label}</span>
                                     <span className={`text-sm font-black tabular-nums ${item.color}`}>{item.range}</span>
                                 </div>
                             ))}
                         </div>
+                        <p className="text-xs text-gray-500 mt-5 leading-relaxed">These percentages are educational planning references. Mortgage underwriting may use different calculations, qualifying payments and thresholds depending on the program and lender.</p>
                     </div>
                 </div>
             </div>
