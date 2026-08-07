@@ -1,329 +1,259 @@
 'use client';
 
-import { useState, useMemo } from 'react';
-import { calcAffordability, formatCurrency, formatPercent, US_MORTGAGE_CONSTANTS } from '@/lib/formulas';
-import DisclaimerBanner from '@/components/DisclaimerBanner';
-import { CheckCircle, AlertCircle, Info, Shield, Zap, TrendingUp } from 'lucide-react';
+import { useMemo, useState } from 'react';
+import { AlertCircle, Home, Info, Scale } from 'lucide-react';
+import { calcMonthlyPI, formatCurrency } from '@/lib/formulas';
+
+function solveHomePrice({
+    monthlyHousingBudget,
+    downPayment,
+    annualRate,
+    termYears,
+    propertyTaxRate,
+    annualInsurance,
+    monthlyHOA,
+    monthlyMortgageInsurance,
+}: {
+    monthlyHousingBudget: number;
+    downPayment: number;
+    annualRate: number;
+    termYears: number;
+    propertyTaxRate: number;
+    annualInsurance: number;
+    monthlyHOA: number;
+    monthlyMortgageInsurance: number;
+}) {
+    if (monthlyHousingBudget <= 0) return 0;
+
+    const fixedMonthlyCosts = annualInsurance / 12 + monthlyHOA + monthlyMortgageInsurance;
+    if (fixedMonthlyCosts >= monthlyHousingBudget) return 0;
+
+    let low = Math.max(0, downPayment);
+    let high = Math.max(1_000_000, downPayment + monthlyHousingBudget * termYears * 20);
+
+    const monthlyCost = (homePrice: number) => {
+        const loanAmount = Math.max(0, homePrice - downPayment);
+        const principalAndInterest = loanAmount > 0 ? calcMonthlyPI(loanAmount, annualRate, termYears) : 0;
+        const propertyTax = homePrice * (propertyTaxRate / 100) / 12;
+        return principalAndInterest + propertyTax + fixedMonthlyCosts;
+    };
+
+    while (monthlyCost(high) < monthlyHousingBudget && high < 20_000_000) high *= 1.5;
+
+    for (let i = 0; i < 80; i += 1) {
+        const mid = (low + high) / 2;
+        if (monthlyCost(mid) <= monthlyHousingBudget) low = mid;
+        else high = mid;
+    }
+
+    return low;
+}
 
 export default function AffordabilityClient() {
-    const [income, setIncome] = useState(7500);
-    const [debts, setDebts] = useState(500);
+    const [grossMonthlyIncome, setGrossMonthlyIncome] = useState(7500);
+    const [monthlyDebts, setMonthlyDebts] = useState(500);
     const [downPayment, setDownPayment] = useState(50000);
-    const [rate, setRate] = useState(6.75);
-    const [term, setTerm] = useState(30);
-    const [propTaxRate, setPropTaxRate] = useState(1.2);
-    const [insurance] = useState(0);
-    const [hoa] = useState(0);
-    const [creditScore, setCreditScore] = useState<'excellent' | 'good' | 'fair' | 'poor'>('good');
+    const [interestRate, setInterestRate] = useState(6.75);
+    const [termYears, setTermYears] = useState(30);
+    const [propertyTaxRate, setPropertyTaxRate] = useState(1.2);
+    const [annualInsurance, setAnnualInsurance] = useState(1800);
+    const [monthlyHOA, setMonthlyHOA] = useState(0);
+    const [monthlyMortgageInsurance, setMonthlyMortgageInsurance] = useState(0);
+    const [targetDTI, setTargetDTI] = useState(36);
 
     const result = useMemo(() => {
-        if (income <= 0) return null;
-        try {
-            return calcAffordability({
-                grossMonthlyIncome: income,
-                monthlyDebts: debts,
-                downPayment,
-                annualInterestRate: rate,
-                loanTermYears: term,
-                annualPropertyTax: propTaxRate,
-                annualInsurance: insurance,
-                monthlyHOA: hoa,
-                creditScore,
-            });
-        } catch { return null; }
-    }, [income, debts, downPayment, rate, term, propTaxRate, insurance, hoa, creditScore]);
+        const maxTotalDebt = grossMonthlyIncome * (targetDTI / 100);
+        const monthlyHousingBudget = Math.max(0, maxTotalDebt - monthlyDebts);
+        const homePrice = solveHomePrice({
+            monthlyHousingBudget,
+            downPayment,
+            annualRate: interestRate,
+            termYears,
+            propertyTaxRate,
+            annualInsurance,
+            monthlyHOA,
+            monthlyMortgageInsurance,
+        });
 
-    const frontEndOk = result ? result.frontEndDTI <= 28 : null;
-    const backEndOk = result ? result.backEndDTI <= 43 : null;
+        const loanAmount = Math.max(0, homePrice - downPayment);
+        const principalAndInterest = loanAmount > 0 ? calcMonthlyPI(loanAmount, interestRate, termYears) : 0;
+        const monthlyPropertyTax = homePrice * (propertyTaxRate / 100) / 12;
+        const monthlyInsurance = annualInsurance / 12;
+        const totalHousing = principalAndInterest + monthlyPropertyTax + monthlyInsurance + monthlyHOA + monthlyMortgageInsurance;
+        const resultingDTI = grossMonthlyIncome > 0 ? ((totalHousing + monthlyDebts) / grossMonthlyIncome) * 100 : 0;
+
+        return {
+            homePrice,
+            loanAmount,
+            monthlyHousingBudget,
+            principalAndInterest,
+            monthlyPropertyTax,
+            monthlyInsurance,
+            totalHousing,
+            resultingDTI,
+        };
+    }, [
+        grossMonthlyIncome,
+        monthlyDebts,
+        downPayment,
+        interestRate,
+        termYears,
+        propertyTaxRate,
+        annualInsurance,
+        monthlyHOA,
+        monthlyMortgageInsurance,
+        targetDTI,
+    ]);
 
     return (
-        <div className="relative min-h-screen bg-white text-navy-900 pb-20">
-            {/* Ambient Background Glows */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#0da6f2]/10 rounded-full blur-[120px]" />
-                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-[130px]" />
-            </div>
-
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 sm:pt-7 lg:pt-8 pb-8 sm:pb-12 relative z-10">
-                <div className="mb-6 sm:mb-12">
+        <div className="relative bg-white text-navy-900 pb-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 sm:pt-7 lg:pt-8">
+                <header className="mb-8 sm:mb-10">
                     <div className="flex items-center gap-3 mb-4">
                         <div className="p-2 rounded-xl bg-indigo-500/10 border border-indigo-500/20">
-                            <Shield className="text-indigo-500" size={24} />
+                            <Home className="text-indigo-500" size={24} />
                         </div>
-                        <span className="text-xs font-black uppercase tracking-[0.3em] text-indigo-500">Qualification Analysis</span>
+                        <span className="text-xs font-black uppercase tracking-[0.25em] text-indigo-500">Home Buying Planner</span>
                     </div>
-                    <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight leading-none bg-gradient-to-r from-navy-900 via-indigo-500 to-navy-900 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-flow">
-                        How Much House Can You Afford?
-                    </h1>
-                    <p className="text-gray-500 max-w-2xl font-medium text-sm sm:text-lg">
-                        Smart affordability analysis based on CFPB guidelines and 2026 FHFA loan limits.
+                    <h1 className="text-3xl sm:text-5xl font-black mb-4 tracking-tight">Home Affordability Calculator</h1>
+                    <p className="text-gray-500 max-w-3xl text-sm sm:text-lg">
+                        Estimate a home-price range from your income, monthly debts and housing-cost assumptions. Choose your own planning DTI target instead of treating one percentage as a universal mortgage-approval rule.
                     </p>
-                </div>
+                </header>
 
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
-                    {/* LEFT: Inputs */}
-                    <div className="lg:col-span-2 space-y-6">
-                        <div className="glass-card p-4 sm:p-6">
-                            <div className="flex justify-between items-center mb-5 sm:mb-8">
-                                <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400">Financial Profile</h2>
-                                <Info size={16} className="text-gray-400" />
+                    <section className="lg:col-span-2 glass-card p-4 sm:p-6 space-y-5" aria-label="Affordability inputs">
+                        <h2 className="text-xs font-black uppercase tracking-[0.25em] text-gray-400">Your Planning Assumptions</h2>
+
+                        <NumberInput label="Gross Monthly Income" prefix="$" value={grossMonthlyIncome} onChange={setGrossMonthlyIncome} step={500} />
+                        <NumberInput label="Monthly Debt Payments" prefix="$" value={monthlyDebts} onChange={setMonthlyDebts} step={50} />
+                        <NumberInput label="Down Payment" prefix="$" value={downPayment} onChange={setDownPayment} step={5000} />
+
+                        <div className="grid grid-cols-2 gap-4">
+                            <NumberInput label="Interest Rate" suffix="%" value={interestRate} onChange={setInterestRate} step={0.125} />
+                            <div>
+                                <label className="input-label">Loan Term</label>
+                                <select className="glass-input" value={termYears} onChange={(event) => setTermYears(Number(event.target.value))}>
+                                    <option value={15}>15 years</option>
+                                    <option value={20}>20 years</option>
+                                    <option value={30}>30 years</option>
+                                </select>
                             </div>
+                        </div>
 
-                            <div className="space-y-4 sm:space-y-5">
+                        <NumberInput label="Property Tax Rate" suffix="% / year" value={propertyTaxRate} onChange={setPropertyTaxRate} step={0.1} />
+                        <NumberInput label="Homeowners Insurance" prefix="$" suffix="/ year" value={annualInsurance} onChange={setAnnualInsurance} step={100} />
+                        <NumberInput label="HOA Dues" prefix="$" suffix="/ month" value={monthlyHOA} onChange={setMonthlyHOA} step={25} />
+                        <NumberInput label="Mortgage Insurance Estimate" prefix="$" suffix="/ month" value={monthlyMortgageInsurance} onChange={setMonthlyMortgageInsurance} step={25} />
+
+                        <div>
+                            <div className="flex items-center justify-between gap-3 mb-2">
+                                <label className="input-label mb-0">Planning DTI Target</label>
+                                <span className="font-black text-indigo-600 tabular-nums">{targetDTI}%</span>
+                            </div>
+                            <input
+                                aria-label="Planning DTI target"
+                                type="range"
+                                min={20}
+                                max={50}
+                                step={1}
+                                value={targetDTI}
+                                onChange={(event) => setTargetDTI(Number(event.target.value))}
+                                className="w-full"
+                            />
+                            <p className="text-xs text-gray-500 mt-2">
+                                This is your scenario target, not a lender approval cutoff. Actual underwriting varies by lender, loan program and borrower profile.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section className="lg:col-span-3 space-y-5" aria-label="Affordability estimate">
+                        <div className="glass-card p-5 sm:p-8 border-indigo-500/20">
+                            <div className="flex items-center gap-2 mb-3 text-indigo-600">
+                                <Scale size={18} />
+                                <p className="text-xs font-black uppercase tracking-[0.25em]">Estimated Home Price at Selected DTI</p>
+                            </div>
+                            <p className="text-4xl sm:text-6xl font-black tracking-tight tabular-nums">{formatCurrency(result.homePrice, 0)}</p>
+                            <p className="text-sm text-gray-500 mt-3">
+                                Estimated loan amount: <strong>{formatCurrency(result.loanAmount, 0)}</strong>
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <Metric label="Monthly Housing Budget" value={formatCurrency(result.monthlyHousingBudget)} />
+                            <Metric label="Resulting Total DTI" value={`${result.resultingDTI.toFixed(1)}%`} />
+                            <Metric label="Principal & Interest" value={formatCurrency(result.principalAndInterest)} />
+                            <Metric label="Property Tax Estimate" value={formatCurrency(result.monthlyPropertyTax)} />
+                            <Metric label="Homeowners Insurance" value={formatCurrency(result.monthlyInsurance)} />
+                            <Metric label="Total Modeled Housing Cost" value={formatCurrency(result.totalHousing)} />
+                        </div>
+
+                        <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-900">
+                            <div className="flex items-start gap-3">
+                                <AlertCircle size={18} className="mt-0.5 shrink-0" />
                                 <div>
-                                    <label className="input-label">Gross Monthly Income</label>
-                                    <div className="relative group">
-                                        <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-indigo-500 transition-colors">$</span>
-                                        <input
-                                            type="number"
-                                            className="glass-input pl-8"
-                                            value={income}
-                                            onChange={e => setIncome(+e.target.value)}
-                                            min={0}
-                                            step={500}
-                                        />
-                                    </div>
-                                    <p className="text-xs mt-2 font-bold uppercase tracking-widest text-indigo-500">
-                                        Annual: {formatCurrency(income * 12)}
+                                    <p className="font-bold mb-1">Planning estimate, not prequalification</p>
+                                    <p>
+                                        This model uses the costs you enter. It does not model every underwriting item, credit adjustment, reserve requirement, loan-program rule, closing cost or lender overlay. General Qualified Mortgage rules no longer use a universal 43% DTI maximum.
                                     </p>
-                                </div>
-
-                                <div>
-                                    <label className="input-label">Monthly Debts</label>
-                                    <div className="relative group">
-                                        <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-indigo-500 transition-colors">$</span>
-                                        <input
-                                            type="number"
-                                            className="glass-input pl-8"
-                                            value={debts}
-                                            onChange={e => setDebts(+e.target.value)}
-                                            min={0}
-                                            step={50}
-                                        />
-                                    </div>
-                                    <p className="text-xs mt-2 font-bold text-gray-400 uppercase tracking-tighter italic">
-                                        Car loans, students, credit card minimums
-                                    </p>
-                                </div>
-
-                                <div>
-                                    <label className="input-label">Down Payment</label>
-                                    <div className="relative group">
-                                        <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-indigo-500 transition-colors">$</span>
-                                        <input
-                                            type="number"
-                                            className="glass-input pl-8"
-                                            value={downPayment}
-                                            onChange={e => setDownPayment(+e.target.value)}
-                                            min={0}
-                                            step={5000}
-                                        />
-                                    </div>
-                                </div>
-
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                                    <div>
-                                        <label className="input-label">Credit Score</label>
-                                        <select 
-                                            className="glass-input appearance-none" 
-                                            value={creditScore} 
-                                            onChange={e => setCreditScore(e.target.value as typeof creditScore)}
-                                        >
-                                            <option value="excellent">Excellent (750+)</option>
-                                            <option value="good">Good (700-749)</option>
-                                            <option value="fair">Fair (650-699)</option>
-                                            <option value="poor">Poor (&lt; 650)</option>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <label className="input-label">Interest Rate</label>
-                                        <div className="relative group">
-                                            <input 
-                                                type="number" 
-                                                className="glass-input pr-8"
-                                                value={rate} 
-                                                onChange={e => setRate(+e.target.value)} 
-                                                min={0.1} 
-                                                max={20} 
-                                                step={0.125} 
-                                            />
-                                            <span className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-indigo-500 transition-colors">%</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label className="input-label">Loan Term</label>
-                                    <div className="glass-tab-list p-1 flex gap-1">
-                                        {[15, 20, 30].map(t => (
-                                            <button
-                                                key={t}
-                                                onClick={() => setTerm(t)}
-                                                className={`flex-1 py-3 px-4 rounded-lg text-xs font-black transition-all ${term === t ? 'bg-indigo-500 text-white shadow-lg' : 'text-gray-500 hover:bg-white/5'}`}
-                                            >
-                                                {t} YR
-                                            </button>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label className="input-label">Property Tax Rate (%)</label>
-                                    <div className="relative group">
-                                        <input 
-                                            type="number" 
-                                            className="glass-input pr-8"
-                                            value={propTaxRate} 
-                                            onChange={e => setPropTaxRate(+e.target.value)} 
-                                            min={0} 
-                                            max={5} 
-                                            step={0.1} 
-                                        />
-                                        <span className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-indigo-500 transition-colors">%</span>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    {/* RIGHT: Results */}
-                    <div className="lg:col-span-3 space-y-4 sm:space-y-5 lg:self-start">
-                        {result ? (
-                            <div className="space-y-4 sm:space-y-5 animate-slide-up">
-                                {/* Comparison Hero Cards */}
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                                    <div className="glass-card p-4 sm:p-6 relative overflow-hidden group border-emerald-500/20">
-                                        <div className="absolute top-0 right-0 p-6">
-                                            <TrendingUp className="text-emerald-500/20 group-hover:text-emerald-500 group-hover:scale-125 transition-all" size={32} />
-                                        </div>
-                                        <p className="text-xs font-black uppercase tracking-[0.3em] text-emerald-500 mb-4">Conservative Estimate</p>
-                                        <div className="text-2xl sm:text-3xl md:text-5xl font-black tracking-tighter text-glow tabular-nums transition-all group-hover:scale-105 duration-500">
-                                            {formatCurrency(result.conservativeHomePrice, 0)}
-                                        </div>
-                                        <p className="text-xs mt-4 sm:mt-6 font-bold uppercase tracking-widest text-gray-500 border-t border-white/5 pt-4 sm:pt-6">
-                                            Based on 28% front-end DTI
-                                        </p>
-                                    </div>
-
-                                    <div className="glass-card p-4 sm:p-6 border-indigo-500/20 relative group">
-                                        <div className="absolute top-0 right-0 p-6">
-                                            <Zap className="text-indigo-500/20 group-hover:text-indigo-500 group-hover:scale-125 transition-all" size={32} />
-                                        </div>
-                                        <p className="text-xs font-black uppercase tracking-[0.3em] text-indigo-500 mb-4">Maximum (Stretch)</p>
-                                        <div className="text-2xl sm:text-3xl md:text-5xl font-black tracking-tighter tabular-nums transition-all group-hover:scale-105 duration-500">
-                                            {formatCurrency(result.maxHomePrice, 0)}
-                                        </div>
-                                        <p className="text-xs mt-6 font-bold uppercase tracking-widest text-gray-500 border-t border-white/5 pt-6">
-                                            Based on 43% back-end DTI
-                                        </p>
-                                    </div>
-                                </div>
-
-                                {/* DTI Meters Panel */}
-                                <div className="glass-card p-4 sm:p-6">
-                                    <h3 className="text-xs font-black uppercase tracking-[0.2em] mb-6 sm:mb-10 text-gray-400">Debt-to-Income Analysis</h3>
-                                    
-                                    <div className="space-y-12">
-                                        {/* Front End */}
-                                        <div className="relative">
-                                            <div className="flex justify-between items-end mb-4">
-                                                <div>
-                                                    <span className="text-xs font-black uppercase tracking-widest text-gray-400 block mb-1">Front-End DTI (Housing)</span>
-                                                    <span className={`text-sm font-black flex items-center gap-2 ${frontEndOk ? 'text-emerald-500' : 'text-amber-500'}`}>
-                                                        {frontEndOk ? <CheckCircle size={16} /> : <AlertCircle size={16} />}
-                                                        {frontEndOk ? 'Recommended' : 'High Burden'}
-                                                    </span>
-                                                </div>
-                                                <div className="text-right">
-                                                    <span className="text-2xl sm:text-4xl font-black tabular-nums">{formatPercent(result.frontEndDTI, 1)}</span>
-                                                    <span className="text-xs font-bold text-gray-500 uppercase ml-2">/ 28% limit</span>
-                                                </div>
-                                            </div>
-                                            <div className="h-4 bg-white/5 rounded-full overflow-hidden border border-white/10 p-0.5">
-                                                <div 
-                                                    className="h-full rounded-full transition-all duration-1000 ease-out relative group" 
-                                                    style={{ 
-                                                        width: `${Math.min(100, (result.frontEndDTI / 40) * 100)}%`, 
-                                                        background: result.frontEndDTI <= 28 ? 'linear-gradient(90deg, #10b981, #34d399)' : result.frontEndDTI <= 36 ? 'linear-gradient(90deg, #f59e0b, #fbbf24)' : 'linear-gradient(90deg, #ef4444, #f87171)' 
-                                                    }}
-                                                >
-                                                    <div className="absolute inset-0 bg-white/20 animate-pulse" />
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* Back End */}
-                                        <div className="relative">
-                                            <div className="flex justify-between items-end mb-4">
-                                                <div>
-                                                    <span className="text-xs font-black uppercase tracking-widest text-gray-400 block mb-1">Back-End DTI (Total Debt)</span>
-                                                    <span className={`text-sm font-black flex items-center gap-2 ${backEndOk ? 'text-emerald-500' : 'text-rose-500'}`}>
-                                                        {backEndOk ? <CheckCircle size={16} /> : <AlertCircle size={16} />}
-                                                        {backEndOk ? 'Within QM Limit' : 'Exceeds QM Limit'}
-                                                    </span>
-                                                </div>
-                                                <div className="text-right">
-                                                    <span className="text-2xl sm:text-4xl font-black tabular-nums">{formatPercent(result.backEndDTI, 1)}</span>
-                                                    <span className="text-xs font-bold text-gray-500 uppercase ml-2">/ 43% limit</span>
-                                                </div>
-                                            </div>
-                                            <div className="h-4 bg-white/5 rounded-full overflow-hidden border border-white/10 p-0.5">
-                                                <div 
-                                                    className="h-full rounded-full transition-all duration-1000 ease-out relative" 
-                                                    style={{ 
-                                                        width: `${Math.min(100, (result.backEndDTI / 60) * 100)}%`, 
-                                                        background: result.backEndDTI <= 36 ? 'linear-gradient(90deg, #10b981, #34d399)' : result.backEndDTI <= 43 ? 'linear-gradient(90deg, #f59e0b, #fbbf24)' : 'linear-gradient(90deg, #ef4444, #f87171)' 
-                                                    }}
-                                                >
-                                                    <div className="absolute inset-0 bg-white/20 animate-pulse" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Statistics Table */}
-                                <div className="glass-card p-4 sm:p-6">
-                                    <h3 className="text-xs font-black uppercase tracking-[0.2em] mb-5 sm:mb-8 text-gray-400">Detailed Metric Breakdown</h3>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
-                                        {[
-                                            { label: 'Max Loan Amount', value: formatCurrency(result.maxLoanAmount) },
-                                            { label: 'Loan Category', value: result.loanType, accent: true },
-                                            { label: 'Monthly Payment (Max)', value: formatCurrency(result.monthlyPaymentAtMax) },
-                                            { label: 'FHFA Conforming Limit', value: formatCurrency(US_MORTGAGE_CONSTANTS.CONFORMING_LOAN_LIMIT) },
-                                            { label: 'FHA Floor Limit', value: formatCurrency(US_MORTGAGE_CONSTANTS.FHA_FLOOR) },
-                                            { label: 'Qualifying Balance', value: formatCurrency(income - debts) },
-                                        ].map(row => (
-                                            <div key={row.label} className="flex justify-between items-center py-4 border-b border-white/5 last:border-0 group hover:bg-white/5 px-2 rounded-lg transition-colors">
-                                                <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">{row.label}</span>
-                                                <span className={`text-lg font-black tabular-nums ${row.accent ? 'text-indigo-400' : ''}`}>{row.value}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                <div className="glass-panel p-6 border-indigo-500/20 bg-indigo-500/5">
-                                    <div className="flex gap-4">
-                                        <Info className="flex-shrink-0 text-indigo-400" size={20} />
-                                        <p className="text-sm font-medium leading-relaxed text-gray-600">
-                                            <strong>QM Limitation:</strong> For a Qualified Mortgage (QM), your total debt-to-income must not exceed 43%. Lenders typically look for consistent income and a clear employment history. Calculated limits reflect national guidelines; local variations may apply.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        ) : (
-                            <div className="glass-card p-4 sm:p-6 text-center">
-                                <TrendingUp size={48} className="mx-auto mb-6 text-gray-400 opacity-20" />
-                                <h3 className="text-2xl font-black mb-4">Calculate Your Power</h3>
-                                <p className="text-gray-500 max-w-md mx-auto font-medium">
-                                    Enter your monthly income and current debts to see how much home a lender would realistically approve you for.
+                        <div className="rounded-2xl border border-blue-100 bg-blue-50 p-5 text-sm text-blue-900">
+                            <div className="flex items-start gap-3">
+                                <Info size={18} className="mt-0.5 shrink-0" />
+                                <p>
+                                    For a stronger estimate, replace every default with a property-specific tax rate, an insurance quote, actual HOA dues, a realistic mortgage-insurance amount if applicable, and the interest rate you expect to receive.
                                 </p>
                             </div>
-                        )}
-                        <DisclaimerBanner calculatorName="the Affordability Calculator" />
-                    </div>
+                        </div>
+                    </section>
                 </div>
             </div>
+        </div>
+    );
+}
+
+function NumberInput({
+    label,
+    value,
+    onChange,
+    prefix,
+    suffix,
+    step = 1,
+}: {
+    label: string;
+    value: number;
+    onChange: (value: number) => void;
+    prefix?: string;
+    suffix?: string;
+    step?: number;
+}) {
+    return (
+        <div>
+            <label className="input-label">{label}</label>
+            <div className="relative">
+                {prefix ? <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">{prefix}</span> : null}
+                <input
+                    type="number"
+                    min={0}
+                    step={step}
+                    value={Number.isFinite(value) ? value : 0}
+                    onChange={(event) => onChange(Math.max(0, Number(event.target.value) || 0))}
+                    className={`glass-input ${prefix ? 'pl-8' : ''} ${suffix ? 'pr-20' : ''}`}
+                />
+                {suffix ? <span className="absolute right-4 top-1/2 -translate-y-1/2 text-xs text-gray-500">{suffix}</span> : null}
+            </div>
+        </div>
+    );
+}
+
+function Metric({ label, value }: { label: string; value: string }) {
+    return (
+        <div className="glass-card p-5">
+            <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">{label}</p>
+            <p className="text-2xl font-black tabular-nums">{value}</p>
         </div>
     );
 }
