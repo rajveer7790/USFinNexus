@@ -2,70 +2,71 @@ import type { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import RentalPropertySeoContent from './RentalPropertySeoContent';
+import CalculatorFAQ from '@/components/CalculatorFAQ';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 const RentalPropertyClient = nextDynamic(() => import('./RentalPropertyClient'), {
     loading: () => <CalculatorSkeleton />,
 });
-import CalculatorFAQ from '@/components/CalculatorFAQ';
-import Breadcrumbs from '@/components/Breadcrumbs';
-import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Rental Property ROI & Cash Flow Calculator 2026 | USFinNexus',
-    description: 'Analyze rental property investments instantly. Calculate cash flow, cap rate, cash-on-cash return, and NOI for any US rental property. Free real estate investment calculator.',
+    title: 'Rental Property Calculator | USFinNexus',
+    description: 'Estimate rental-property cash flow, net operating income, cap rate and cash-on-cash return using your purchase, financing, rent, vacancy and expense assumptions.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/rental-property' },
     openGraph: {
         type: 'website',
-        title: 'Rental Property ROI & Cash Flow Calculator 2026 | USFinNexus',
-        description: 'Calculate cash flow, cap rate, and cash-on-cash return for any rental property instantly. Free real estate investment analyzer.',
+        title: 'Rental Property Calculator | USFinNexus',
+        description: 'Model rental-property cash flow and return metrics using assumptions you control.',
         url: 'https://usfinnexus.com/calculators/rental-property',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Rental Property ROI Calculator 2026 — USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus Rental Property Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Rental Property ROI Calculator 2026 | USFinNexus',
-        description: 'Cash flow, cap rate, and cash-on-cash return for any rental property. Free real estate investment calculator.',
+        title: 'Rental Property Calculator | USFinNexus',
+        description: 'Estimate rental cash flow, NOI, cap rate and cash-on-cash return.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 
 const RENTAL_FAQS = [
     {
-        question: 'What is a good Cap Rate for a rental property?',
-        answer: 'A "good" Cap Rate typically ranges from 5% to 10%, but it heavily depends on the market. Properties in high-appreciation, low-risk areas (like prime locations in major cities) often have lower cap rates (4-6%). Properties in higher-risk or lower-appreciation areas may offer higher cap rates (8-12%+).',
+        question: 'What is a good cap rate for a rental property?',
+        answer: 'There is no universal good cap rate. Cap rates vary by property type, location, condition, financing environment and risk. Compare a property with relevant local alternatives and make sure the net operating income assumptions include realistic vacancy and operating expenses.',
     },
     {
-        question: 'What is a good Cash-on-Cash Return?',
-        answer: 'Many real estate investors aim for a Cash-on-Cash return of 8% to 12% or higher. This metric tells you how hard your initial invested cash is working for you during the first year of ownership.',
+        question: 'What is a good cash-on-cash return?',
+        answer: 'The appropriate cash-on-cash target depends on risk, financing, investor objectives and alternative uses of capital. Use the metric to compare scenarios on a consistent basis rather than treating one percentage as a guaranteed or universally acceptable return.',
     },
     {
-        question: 'How do I estimate CapEx and Maintenance?',
-        answer: 'CapEx (Capital Expenditures) covers big-ticket replacements like a new roof, HVAC, or appliances. Maintenance covers smaller, routine fixes. A conservative estimate is setting aside 5% to 10% of gross rent for CapEx, and another 5% to 10% for Maintenance.',
+        question: 'How should I estimate maintenance and capital expenditures?',
+        answer: 'Use property-specific evidence when possible: age and condition of the roof, HVAC and appliances, inspection findings, service history and local repair costs. Percentage-of-rent reserves can be useful for rough scenarios, but they are not a substitute for property-specific budgeting.',
     },
     {
-        question: 'Should I use a property manager?',
-        answer: 'Property managers typically charge 8% to 12% of collected rent. If you live far from the property or want a truly passive investment, the fee is usually worth it. If you house-hack or live locally and want to maximize cash flow, managing it yourself saves money but costs time.',
-    }
+        question: 'Should I include property-management fees?',
+        answer: 'Include management fees if you expect to hire a manager or want to compare the property on a professionally managed basis. Fees and services vary by market and contract, so use an actual local quote rather than a universal percentage.',
+    },
 ];
 
 export default function RentalPropertyPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <WebApplicationSchema
-                name="Rental Property ROI & Cash Flow Calculator"
-                description="Analyze rental property investments instantly. Calculate Cash Flow, Cap Rate, Cash-on-Cash Return, and NOI."
+                name="Rental Property Calculator"
+                description="Estimate rental-property cash flow, NOI, cap rate and cash-on-cash return using user-entered assumptions."
                 url="https://usfinnexus.com/calculators/rental-property"
-                dateModified="2026-03-01"
+                dateModified="2026-08-07"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Rental Property Calculator', item: '/calculators/rental-property' }]} />
-            <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026</p>
-            <h1 className="sr-only">Free Rental Property ROI & Cash Flow Calculator 2026</h1>
+            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 7, 2026 · Scenario analysis, not an investment-return forecast</p>
+            <h1 className="sr-only">Rental Property Calculator</h1>
             <RentalPropertyClient />
             <RentalPropertySeoContent />
-            <CalculatorFAQ faqs={RENTAL_FAQS} title="Rental Property Investment — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={RENTAL_FAQS} title="Rental Property Calculator FAQ" />
         </main>
     );
 }
