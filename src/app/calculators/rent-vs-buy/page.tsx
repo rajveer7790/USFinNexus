@@ -2,31 +2,32 @@ import type { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import RentVsBuySeoContent from './RentVsBuySeoContent';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 const RentVsBuyClient = nextDynamic(() => import('./RentVsBuyClient'), {
     loading: () => <CalculatorSkeleton />,
 });
-import Breadcrumbs from '@/components/Breadcrumbs';
-import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Rent vs Buy Calculator 2026 — Should I Rent or Buy a Home? | USFinNexus',
-    description: 'Free rent vs buy calculator. Compare total 5-year costs, home equity, and break-even year. Uses real 2026 appreciation, tax benefits, and investment return data.',
+    title: 'Rent vs. Buy Calculator | USFinNexus',
+    description: 'Compare modeled renting and homeownership costs over time using your rent, home price, mortgage, taxes, insurance, appreciation, investment-return and selling-cost assumptions.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/rent-vs-buy' },
     openGraph: {
         type: 'website',
-        title: 'Rent vs Buy Calculator 2026 | USFinNexus',
-        description: 'Should you rent or buy? Compare 5-year total costs, equity growth, and break-even point with real 2026 data.',
+        title: 'Rent vs. Buy Calculator | USFinNexus',
+        description: 'Compare renting and homeownership scenarios using assumptions you control.',
         url: 'https://usfinnexus.com/calculators/rent-vs-buy',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Rent vs Buy Calculator 2026 — USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus Rent vs. Buy Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Rent vs Buy Calculator 2026 | Should I Rent or Buy?',
-        description: 'Compare total 5-year costs, equity growth, and break-even year. Find out if buying makes sense for you.',
+        title: 'Rent vs. Buy Calculator | USFinNexus',
+        description: 'Compare modeled renting and homeownership costs over time.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
@@ -35,11 +36,12 @@ export default function RentVsBuyPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
-                name="Rent vs. Buy Calculator 2026"
-                description="Compare total renting vs. buying costs over any time horizon. Includes home appreciation, tax savings, and opportunity cost."
+                name="Rent vs. Buy Calculator"
+                description="Compare modeled renting and homeownership costs over a selected time horizon using user-entered assumptions."
                 url="https://usfinnexus.com/calculators/rent-vs-buy"
+                dateModified="2026-08-07"
             />
-            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Rent vs Buy', item: '/calculators/rent-vs-buy' }]} />
+            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Rent vs. Buy Calculator', item: '/calculators/rent-vs-buy' }]} />
             <RentVsBuyClient />
             <RentVsBuySeoContent />
         </main>
