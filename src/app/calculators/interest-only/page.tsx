@@ -14,36 +14,37 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Interest-Only Mortgage Calculator 2026 | USFinNexus',
-    description: 'Calculate your interest-only mortgage payments and see exactly how much your payment will jump when the loan fully amortizes.',
+    title: 'Interest-Only Mortgage Calculator | USFinNexus',
+    description: 'Estimate payments during an interest-only mortgage period and compare the modeled payment after principal-and-interest amortization begins.',
+    alternates: { canonical: 'https://usfinnexus.com/calculators/interest-only' },
     openGraph: {
         type: 'website',
-        title: 'Interest-Only Mortgage Calculator 2026 | USFinNexus',
-        description: 'Calculate interest-only mortgage payments and see exactly how much your payment jumps when the loan fully amortizes. Compare IO vs standard payments side by side.',
+        title: 'Interest-Only Mortgage Calculator | USFinNexus',
+        description: 'Model interest-only and later amortizing mortgage payments.',
         url: 'https://usfinnexus.com/calculators/interest-only',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Interest-Only Mortgage Calculator 2026 - USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus Interest-Only Mortgage Calculator' }],
     },
-    alternates: { canonical: 'https://usfinnexus.com/calculators/interest-only' },
     twitter: {
         card: 'summary_large_image',
-        title: 'Interest-Only Mortgage Calculator 2026 | USFinNexus',
-        description: 'Calculate interest-only payments and see exactly how much your payment jumps when full amortization kicks in.',
+        title: 'Interest-Only Mortgage Calculator | USFinNexus',
+        description: 'Compare modeled interest-only and amortizing mortgage payments.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 
 const INTEREST_ONLY_FAQS = [
     {
-        question: 'Why does my principal balance never go down on an IO loan?',
-        answer: 'During the initial IO period (e.g., the first 10 years), the bank only requires you to pay the exact amount of interest the loan generates that month. Because you are not paying a single dollar extra toward the principal, the core balance of the debt remains completely frozen.',
+        question: 'Why can the principal balance stay unchanged during an interest-only period?',
+        answer: 'If the required payment during the interest-only period covers only accrued interest and no optional principal is paid, the principal balance generally does not decline during that period. The exact payment rules depend on the loan contract.',
     },
     {
-        question: 'What is payment shock?',
-        answer: 'Payment shock occurs at the end of the interest-only period. For a 30-year loan with a 10-year IO period, you suddenly have to pay off the entire principal balance in just 20 years. Your payment instantly spikes by hundreds or thousands of dollars a month, which catches many homeowners off guard and can lead to foreclosure.',
+        question: 'What is payment shock on an interest-only mortgage?',
+        answer: 'Payment shock describes a material increase in the required payment after the interest-only period ends. If the remaining balance must then amortize over a shorter remaining term, the principal-and-interest payment can rise substantially. The size of the change depends on the loan terms and rate structure.',
     },
     {
-        question: 'Are interest-only loans a good idea?',
-        answer: 'For the average homebuyer, they are a terrible idea. They are highly risky and rely on the hope that your income will dramatically increase or the home will rapidly appreciate. They are best used strategically by wealthy investors or individuals with variable, bonus-heavy compensation structures.',
+        question: 'Are interest-only mortgages appropriate for every borrower?',
+        answer: 'No. They can create higher future payments and slower principal reduction, and some products also have variable-rate risk. Suitability depends on the borrower, loan terms, cash-flow needs and ability to handle future payments. Compare the complete loan disclosures rather than relying only on the initial payment.',
     },
 ];
 
@@ -51,15 +52,16 @@ export default function InterestOnlyPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
-                name="Interest-Only Mortgage Calculator 2026"
-                description="Calculate interest-only mortgage payments and see the payment jump when the loan fully amortizes."
+                name="Interest-Only Mortgage Calculator"
+                description="Estimate modeled interest-only mortgage payments and the payment after amortization begins."
                 url="https://usfinnexus.com/calculators/interest-only"
+                dateModified="2026-08-07"
             />
-            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Interest-Only Calculator', item: '/calculators/interest-only' }]} />
+            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Interest-Only Mortgage Calculator', item: '/calculators/interest-only' }]} />
             <h1 className="sr-only">Interest-Only Mortgage Calculator</h1>
             <InterestOnlyClient />
             <InterestOnlySeoContent />
-            <CalculatorFAQ faqs={INTEREST_ONLY_FAQS} title="Interest-Only Mortgages — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={INTEREST_ONLY_FAQS} title="Interest-Only Mortgage Calculator FAQ" />
         </main>
     );
 }
