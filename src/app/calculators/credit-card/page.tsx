@@ -14,36 +14,37 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Credit Card Payoff Calculator 2026 — Find Your Debt-Free Date | USFinNexus',
-    description: 'Calculate how long to pay off your credit card balance and see exactly how much interest you save by increasing monthly payments. Free credit card payoff calculator.',
+    title: 'Credit Card Payoff Calculator | USFinNexus',
+    description: 'Estimate how long it may take to pay off a credit-card balance and compare total interest under different monthly payment assumptions.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/credit-card' },
     openGraph: {
         type: 'website',
-        title: 'Credit Card Payoff Calculator 2026 | USFinNexus',
-        description: 'Find your debt-free date and total interest cost. See how paying more each month saves you thousands.',
+        title: 'Credit Card Payoff Calculator | USFinNexus',
+        description: 'Estimate credit-card payoff time and modeled interest under different payment amounts.',
         url: 'https://usfinnexus.com/calculators/credit-card',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Credit Card Payoff Calculator 2026 — USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus Credit Card Payoff Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Credit Card Payoff Calculator 2026 | USFinNexus',
-        description: 'When will your credit card be paid off? See your debt-free date and total interest cost.',
+        title: 'Credit Card Payoff Calculator | USFinNexus',
+        description: 'Estimate payoff time and interest under different credit-card payments.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 
 const CREDIT_CARD_FAQS = [
     {
-        question: 'Why is my credit card balance barely going down?',
-        answer: 'Because of compound interest. If you have a 25% APR and only make the minimum payment, roughly 80% of your payment goes directly to the bank as interest profit. Only a tiny fraction is actually applied to the principal balance.',
+        question: 'Why can a credit-card balance decline slowly when I make only small payments?',
+        answer: 'Interest is charged according to the card agreement, so part of each payment can go to interest and fees before reducing principal. The exact allocation depends on the APR, balance, transaction types, fees, daily-balance method and payment amount.',
     },
     {
-        question: 'Should I use savings to pay off my credit card?',
-        answer: 'Mathematically, yes. If you have $10,000 sitting in a savings account earning 5% interest, you are making $500 a year. But if you have $10,000 in credit card debt at 25% APR, you are losing $2,500 a year. The debt is destroying your wealth 5 times faster than your savings can grow. Pay off the card immediately.',
+        question: 'Should I use savings to pay off credit-card debt?',
+        answer: 'That decision depends on the card APR, savings yield, emergency-fund needs, taxes, upcoming expenses and other debts. A higher credit-card APR can make repayment financially attractive, but using all available cash can create liquidity risk. Compare both the interest math and your need for emergency reserves.',
     },
     {
-        question: 'Will closing a paid-off credit card hurt my credit score?',
-        answer: 'Yes. Closing a credit card reduces your Total Available Credit and increases your Credit Utilization Ratio, which will actively lower your FICO score. It also shortens your Average Age of Accounts. Unless the card charges a massive annual fee, you should keep the account open but cut the physical card up so you cannot use it.',
+        question: 'Will closing a paid-off credit card always lower my credit score?',
+        answer: 'Not necessarily. Closing an account can reduce available revolving credit and may affect utilization, but credit-score impact depends on the full credit file and scoring model. Closed accounts can also remain on credit reports for a period of time. Consider fees, fraud risk, account management and credit profile rather than assuming one outcome is guaranteed.',
     },
 ];
 
@@ -52,14 +53,15 @@ export default function CreditCardPage() {
         <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Credit Card Payoff Calculator"
-                description="Calculate how long it takes to pay off your credit card balance and see how much interest you can save."
+                description="Estimate credit-card payoff time and total interest under different monthly payment assumptions."
                 url="https://usfinnexus.com/calculators/credit-card"
+                dateModified="2026-08-07"
             />
-            <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Credit Card', item: '/calculators/credit-card' }]} />
-            <h1 className="sr-only">Credit Card Payoff Calculator 2026</h1>
+            <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Credit Card Payoff Calculator', item: '/calculators/credit-card' }]} />
+            <h1 className="sr-only">Credit Card Payoff Calculator</h1>
             <CreditCardClient />
             <CreditCardSeoContent />
-            <CalculatorFAQ faqs={CREDIT_CARD_FAQS} title="Credit Card Payoff — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={CREDIT_CARD_FAQS} title="Credit Card Payoff Calculator FAQ" />
         </main>
     );
 }
