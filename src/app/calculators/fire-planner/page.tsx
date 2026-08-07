@@ -2,70 +2,71 @@ import type { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import FirePlannerSeoContent from './FirePlannerSeoContent';
+import CalculatorFAQ from '@/components/CalculatorFAQ';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 const FirePlannerClient = nextDynamic(() => import('./FirePlannerClient'), {
     loading: () => <CalculatorSkeleton />,
 });
-import CalculatorFAQ from '@/components/CalculatorFAQ';
-import Breadcrumbs from '@/components/Breadcrumbs';
-import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'FIRE Calculator 2026 — Financial Independence Retire Early | USFinNexus',
-    description: 'Calculate your FIRE number and early retirement timeline. Free financial independence calculator with safe withdrawal rate modeling and Coast FIRE analysis.',
+    title: 'FIRE Calculator | USFinNexus',
+    description: 'Estimate a financial-independence target and modeled timeline using annual spending, savings, current investments, return assumptions and a withdrawal-rate scenario.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/fire-planner' },
     openGraph: {
         type: 'website',
-        title: 'FIRE Calculator 2026 — Financial Independence Retire Early | USFinNexus',
-        description: 'Calculate your FIRE number and how many years to early retirement. Free financial independence planner.',
+        title: 'FIRE Calculator | USFinNexus',
+        description: 'Model a financial-independence target and timeline using assumptions you control.',
         url: 'https://usfinnexus.com/calculators/fire-planner',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'FIRE Calculator 2026 — USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus FIRE Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'FIRE Calculator 2026 | Financial Independence | USFinNexus',
-        description: 'What is your FIRE number? Calculate how many years to financial independence and early retirement.',
+        title: 'FIRE Calculator | USFinNexus',
+        description: 'Estimate a financial-independence target and timeline under different scenarios.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 
 const FIRE_FAQS = [
     {
-        question: 'What is the 4% Rule?',
-        answer: 'The 4% rule is a rule of thumb used to determine a safe withdrawal rate for retirement. It suggests that you can withdraw 4% of your investment portfolio in your first year of retirement, and then adjust that amount for inflation each year, without running out of money for at least 30 years. It is based on the Trinity Study.',
+        question: 'What is a FIRE number?',
+        answer: 'A FIRE number is a planning target for the investment portfolio needed to support a chosen level of annual spending. A common shorthand divides annual spending by an assumed withdrawal rate. At 4%, that is 25 times annual spending. The target is not a guarantee because taxes, other income, market returns, inflation and retirement length can change the outcome.',
     },
     {
-        question: 'Is the 4% rule still safe in 2026?',
-        answer: 'Many financial advisors still use the 4% rule as a baseline, but some argue for a more conservative 3.5% or 3.3% withdrawal rate if you are retiring very early (e.g., in your 30s or 40s), because your money needs to last 40-50 years instead of 30. Our calculator lets you adjust the safe withdrawal rate to test different scenarios.',
+        question: 'Is the 4% rule guaranteed to work for early retirement?',
+        answer: 'No. The 4% rule is a historical planning heuristic based on specific portfolio, withdrawal and time-horizon assumptions. Early retirement can last substantially longer than 30 years, so test multiple withdrawal rates and return assumptions rather than treating 4% as a guaranteed safe rate.',
     },
     {
-        question: 'What does "Real Investment Return" mean?',
-        answer: '"Real return" is your investment return minus inflation. Historically, the S&P 500 has returned about 10% annually before inflation. With average inflation around 3%, the "real" return is roughly 7%. Using real returns allows you to calculate everything in today\'s dollars.',
+        question: 'What does real investment return mean?',
+        answer: 'A real return is an investment return after accounting for inflation. Using a real-return assumption allows a projection to be expressed in roughly today’s purchasing power. Future nominal returns and inflation are uncertain, so the selected rate should be treated as a scenario rather than a forecast.',
     },
     {
-        question: 'How do I speed up my FIRE timeline?',
-        answer: 'There are only two ways: increase your income or decrease your expenses. Decreasing expenses is actually twice as powerful because it not only increases your savings rate (allowing you to invest more), but it also lowers your target FIRE number (because you need less money to live on).',
-    }
+        question: 'Does a higher savings rate always guarantee an earlier retirement?',
+        answer: 'A higher savings rate can improve a modeled financial-independence timeline by increasing contributions and potentially lowering required spending, but actual results also depend on taxes, investment returns, inflation, healthcare, major expenses and the withdrawal strategy. The calculator is a scenario tool, not a retirement guarantee.',
+    },
 ];
 
 export default function FirePlannerPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <WebApplicationSchema
-                name="FIRE Timeline Planner Calculator"
-                description="Calculate your FIRE number and early retirement timeline. Free advanced financial independence calculator."
+                name="FIRE Calculator"
+                description="Estimate a financial-independence target and modeled timeline using user-entered spending, savings, return and withdrawal-rate assumptions."
                 url="https://usfinnexus.com/calculators/fire-planner"
-                dateModified="2026-03-01"
+                dateModified="2026-08-07"
             />
-            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'FIRE Planner', item: '/calculators/fire-planner' }]} />
-            <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026</p>
-            <h1 className="sr-only">FIRE Calculator: Financial Independence Retire Early</h1>
+            <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'FIRE Calculator', item: '/calculators/fire-planner' }]} />
+            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 7, 2026 · Scenario analysis, not a retirement-return forecast</p>
+            <h1 className="sr-only">FIRE Calculator</h1>
             <FirePlannerClient />
             <FirePlannerSeoContent />
-            <CalculatorFAQ faqs={FIRE_FAQS} title="FIRE Movement — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={FIRE_FAQS} title="FIRE Calculator FAQ" />
         </main>
     );
 }
