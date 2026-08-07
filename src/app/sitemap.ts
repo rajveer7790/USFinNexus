@@ -5,8 +5,7 @@ import fs from 'fs';
 import path from 'path';
 
 export const dynamic = 'force-static';
-// Production content release: August 3, 2026.
-// Priority tiers for calculators
+
 const CALC_PRIORITY: Record<string, number> = {
     '/calculators/mortgage': 0.95,
     '/calculators/affordability': 0.95,
@@ -45,105 +44,69 @@ const CALC_PRIORITY: Record<string, number> = {
     '/canada/mortgage-calculator': 0.90,
 };
 
-// Dynamically read all blog post folders
-function getBlogPosts() {
+function getBlogSlugs(): string[] {
     try {
         const blogDir = path.join(process.cwd(), 'src', 'app', 'blog');
-        const entries = fs.readdirSync(blogDir, { withFileTypes: true });
-        
-        return entries
-            .filter(dirent => dirent.isDirectory())
-            .map(dirent => {
-                const pagePath = path.join(blogDir, dirent.name, 'page.tsx');
-                let lastMod = new Date('2026-05-18'); // Default to recent
-                if (fs.existsSync(pagePath)) {
-                    const stats = fs.statSync(pagePath);
-                    lastMod = stats.mtime;
-                }
-                return {
-                    slug: dirent.name,
-                    date: lastMod.toISOString().split('T')[0]
-                };
-            });
-    } catch (e) {
-        console.error('Error reading blog directory for sitemap:', e);
+        return fs.readdirSync(blogDir, { withFileTypes: true })
+            .filter((entry) => entry.isDirectory() && fs.existsSync(path.join(blogDir, entry.name, 'page.tsx')))
+            .map((entry) => entry.name);
+    } catch (error) {
+        console.error('Error reading blog directory for sitemap:', error);
         return [];
     }
 }
 
-const BLOG_POSTS = getBlogPosts();
-
-function parseArticleDate(dateStr: string): Date {
-    return new Date(dateStr);
+function safeDate(value: string | undefined): Date | undefined {
+    if (!value) return undefined;
+    const parsed = new Date(value);
+    return Number.isNaN(parsed.getTime()) ? undefined : parsed;
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://usfinnexus.com';
 
-    // 1. Core Static Pages
-    const corePages = [
-        { route: '', priority: 1.0, lastMod: '2026-05-14' },
-        { route: '/calculators', priority: 0.90, lastMod: '2026-07-26' },
-        { route: '/canada', priority: 0.90, lastMod: '2026-07-26' },
-        { route: '/blog', priority: 0.85, lastMod: '2026-08-03' },
-        { route: '/guides', priority: 0.80, lastMod: '2026-03-01' },
-        { route: '/articles', priority: 0.75, lastMod: '2026-03-01' },
-        { route: '/about', priority: 0.65, lastMod: '2026-03-01' },
-        { route: '/methodology', priority: 0.65, lastMod: '2026-03-01' },
-        { route: '/contact', priority: 0.60, lastMod: '2026-03-01' },
-        { route: '/disclaimer', priority: 0.55, lastMod: '2026-03-01' },
-        { route: '/privacy', priority: 0.50, lastMod: '2026-03-01' },
-        { route: '/terms', priority: 0.50, lastMod: '2026-03-01' },
-    ].map(({ route, priority, lastMod }) => ({
+    // Use explicit dates only where we know a meaningful content update occurred.
+    // Do not use filesystem mtimes: a fresh Cloudflare checkout can make unchanged URLs look newly modified.
+    const corePages: MetadataRoute.Sitemap = [
+        { url: `${baseUrl}/`, lastModified: new Date('2026-08-07'), changeFrequency: 'weekly', priority: 1.0 },
+        { url: `${baseUrl}/calculators`, changeFrequency: 'weekly', priority: 0.90 },
+        { url: `${baseUrl}/canada`, changeFrequency: 'weekly', priority: 0.80 },
+        { url: `${baseUrl}/blog`, changeFrequency: 'weekly', priority: 0.80 },
+        { url: `${baseUrl}/guides`, changeFrequency: 'monthly', priority: 0.75 },
+        { url: `${baseUrl}/articles`, changeFrequency: 'monthly', priority: 0.75 },
+        { url: `${baseUrl}/about`, lastModified: new Date('2026-08-07'), changeFrequency: 'monthly', priority: 0.65 },
+        { url: `${baseUrl}/methodology`, changeFrequency: 'monthly', priority: 0.65 },
+        { url: `${baseUrl}/contact`, changeFrequency: 'yearly', priority: 0.50 },
+        { url: `${baseUrl}/disclaimer`, changeFrequency: 'yearly', priority: 0.50 },
+        { url: `${baseUrl}/privacy`, changeFrequency: 'yearly', priority: 0.50 },
+        { url: `${baseUrl}/terms`, changeFrequency: 'yearly', priority: 0.50 },
+    ];
+
+    const calculators: MetadataRoute.Sitemap = Object.entries(CALC_PRIORITY).map(([route, priority]) => ({
         url: `${baseUrl}${route}`,
-        lastModified: new Date(lastMod),
-        changeFrequency: 'weekly' as const,
+        ...(route === '/calculators/income-tax' ? { lastModified: new Date('2026-08-07') } : {}),
+        changeFrequency: 'monthly' as const,
         priority,
     }));
 
-    // 2. Financial Calculators (priority from CALC_PRIORITY map)
-    const calculators = Object.keys(CALC_PRIORITY).map((route) => {
-        let lastMod = new Date('2026-05-01');
-        try {
-            const pagePath = path.join(process.cwd(), 'src', 'app', route, 'page.tsx');
-            if (fs.existsSync(pagePath)) {
-                const stats = fs.statSync(pagePath);
-                lastMod = stats.mtime;
-            }
-        } catch (e) {
-            // Ignore errors
-        }
-        return {
-            url: `${baseUrl}${route}`,
-            lastModified: lastMod,
-            changeFrequency: 'weekly' as const,
-            priority: CALC_PRIORITY[route],
-        };
-    });
-
-    // 3. Articles - use real publish dates from metadata
-    const articles = ALL_ARTICLES.map((article) => ({
+    const articles: MetadataRoute.Sitemap = ALL_ARTICLES.map((article) => ({
         url: `${baseUrl}/articles/${article.slug}`,
-        lastModified: parseArticleDate(article.date),
-        changeFrequency: 'weekly' as const,
+        ...(safeDate(article.date) ? { lastModified: safeDate(article.date) } : {}),
+        changeFrequency: 'monthly' as const,
         priority: 0.70,
     }));
 
-    // 4. Guides
-    const guidePages = ALL_GUIDES.map(g => ({
-        url: `${baseUrl}/guides/${g.slug}`,
-        lastModified: new Date('2026-03-01'),
+    const guides: MetadataRoute.Sitemap = ALL_GUIDES.map((guide) => ({
+        url: `${baseUrl}/guides/${guide.slug}`,
         changeFrequency: 'monthly' as const,
-        priority: 0.75,
+        priority: 0.70,
     }));
 
-    // 5. Blog Posts
-    const blogPosts = BLOG_POSTS.map(({ slug, date }) => ({
+    const blogPosts: MetadataRoute.Sitemap = getBlogSlugs().map((slug) => ({
         url: `${baseUrl}/blog/${slug}`,
-        lastModified: new Date(date),
         changeFrequency: 'monthly' as const,
-        priority: 0.80,
+        priority: 0.70,
     }));
 
-    return [...corePages, ...calculators, ...articles, ...guidePages, ...blogPosts];
+    return [...corePages, ...calculators, ...articles, ...guides, ...blogPosts];
 }
