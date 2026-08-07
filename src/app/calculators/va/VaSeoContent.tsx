@@ -1,83 +1,56 @@
-import React from 'react';
+import Link from 'next/link';
 
 export default function VaSeoContent() {
     return (
         <section className="bg-white border-t border-gray-100 py-10 mt-6">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-blue">
-                <h2 className="text-3xl font-black text-navy-900 mb-6">
-                    How to Use the VA Loan Calculator
-                </h2>
+                <h2 className="text-3xl font-black text-navy-900 mb-6">How a VA Loan Calculator Works</h2>
                 <p className="lead text-xl text-gray-600">
-                    The VA loan program is arguably the most powerful mortgage option available in the United States, reserved exclusively for eligible veterans, active-duty service members, and surviving spouses. By allowing 0% down and requiring zero Private Mortgage Insurance (PMI), VA loans save borrowers thousands of dollars. Our 2026 VA Loan Calculator handles the complex math behind the scenes, including the VA Funding Fee.
+                    VA-backed home loans are available to eligible Veterans, service members and certain surviving spouses. A qualifying purchase can be made without a required down payment from VA, and VA-backed loans do not require monthly private mortgage insurance. The actual loan still depends on entitlement, lender underwriting, property requirements and the borrower&apos;s finances.
                 </p>
 
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    VA Loan Benefits and Requirements
-                </h3>
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">VA Funding Fee</h3>
                 <p>
-                    VA loans are backed by the Department of Veterans Affairs (VA), which guarantees a portion of the loan for the private lender. This guarantee enables highly favorable terms:
+                    Many VA-backed loans include a one-time VA funding fee. The percentage depends on the loan type, down payment and whether the borrower is using the VA home-loan benefit for the first time or after a prior use. VA&apos;s current purchase-loan chart, effective April 7, 2023, lists the following rates for borrowers who are not exempt:
                 </p>
-                <ul>
-                    <li>
-                        <strong>0% Down Payment:</strong> Unlike conventional loans (typically requiring 3% to 20% down) or FHA loans (3.5%), the VA loan allows eligible borrowers to purchase a home with literally $0 down. 
-                    </li>
-                    <li>
-                        <strong>No PMI or MIP:</strong> Mortgage insurance is completely eliminated with a VA loan. This alone can lower your monthly payment by $100 to $300 compared to other loan types with similar balances.
-                    </li>
-                    <li>
-                        <strong>No Loan Limits (For Full Entitlement):</strong> As of a few years ago, the VA removed limits on loans over $144,000 for veterans with their full entitlement intact. Our calculator defaults to checking against standard FHFA baseline limits to stay safe, but many lenders will go extremely high for VA borrowers with excellent credit and sufficient income.
-                    </li>
-                </ul>
-
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Understanding the VA Funding Fee (2026 Rates)
-                </h3>
-                <p>
-                    While there is no monthly mortgage insurance, the VA does charge an upfront &quot;Funding Fee.&quot; This fee is used to keep the VA home loan program running for future generations without burdening taxpayers.
-                </p>
-                
-                <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 my-6">
-                    <p className="mb-4">
-                        The size of your funding fee depends on a few factors:
-                    </p>
-                    <ul className="mb-4">
-                        <li><strong>First-time vs. Subsequent Use:</strong> Using a VA loan for the very first time results in a lower fee than using it a second or third time.</li>
-                        <li><strong>Down Payment:</strong> While you can put $0 down, voluntarily making a down payment of 5% or 10% will drastically reduce the funding fee percentage.</li>
-                    </ul>
-                    <p className="mb-0">
-                        <strong>Disability Exemption:</strong> Veterans receiving VA compensation for a service-connected disability are completely exempt from the funding fee. You simply check the &quot;Disability Exemption&quot; box in our calculator to remove it from the math.
-                    </p>
+                <div className="overflow-x-auto my-6">
+                    <table className="w-full text-sm border border-gray-200">
+                        <thead className="bg-gray-50"><tr><th className="px-3 py-2 text-left">Down payment</th><th className="px-3 py-2 text-left">First use</th><th className="px-3 py-2 text-left">After first use</th></tr></thead>
+                        <tbody>
+                            <tr className="border-t"><td className="px-3 py-2">Less than 5%</td><td className="px-3 py-2">2.15%</td><td className="px-3 py-2">3.30%</td></tr>
+                            <tr className="border-t"><td className="px-3 py-2">5% or more</td><td className="px-3 py-2">1.50%</td><td className="px-3 py-2">1.50%</td></tr>
+                            <tr className="border-t"><td className="px-3 py-2">10% or more</td><td className="px-3 py-2">1.25%</td><td className="px-3 py-2">1.25%</td></tr>
+                        </tbody>
+                    </table>
                 </div>
                 <p>
-                    Similar to the FHA upfront premium, the massive majority of VA borrowers choose to finance the funding fee into the total loan amount rather than paying it as cash at closing.
+                    The funding fee can generally be paid at closing or financed into the loan. Some borrowers are exempt, including certain Veterans receiving or eligible to receive VA compensation for a service-connected disability and other categories identified by VA. Confirm exemption status with the Certificate of Eligibility and lender rather than relying on a checkbox alone.
+                </p>
+                <p><a href="https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/" target="_blank" rel="noopener noreferrer">VA: funding fee and closing costs</a></p>
+
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">Down Payment and Loan Limits</h3>
+                <p>
+                    VA itself does not require a down payment for an eligible borrower with sufficient entitlement, but a lender can still have underwriting requirements and a down payment may be needed in some entitlement or purchase-price situations. Veterans with full entitlement generally are not subject to a VA county loan limit, although the lender still determines how much it will lend based on income, credit, assets and other factors.
                 </p>
 
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Frequently Asked Questions
-                </h3>
-                
-                <div className="space-y-6 mt-6">
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">How do I prove I am eligible for a VA Loan?</h4>
-                        <p className="text-gray-600">
-                            You must obtain a Certificate of Eligibility (COE) from the VA. Your lender can usually pull this for you almost instantly through the VA&apos;s digital portal, or you can request it yourself through the eBenefits website.
-                        </p>
-                    </div>
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">No Monthly VA Mortgage Insurance</h3>
+                <p>
+                    VA-backed loans do not charge monthly PMI or FHA-style annual MIP. That does not mean the loan has no additional costs: the funding fee, lender charges, discount points, title/settlement charges, taxes, homeowners insurance and other closing costs can still apply.
+                </p>
 
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">Can I buy an investment property with a VA loan?</h4>
-                        <p className="text-gray-600">
-                            No. VA loans are strictly for primary residences. You must intend to occupy the home within a reasonable timeframe (usually 60 days after closing). However, you can buy a multi-unit property (up to 4 units) with a VA loan, provided you live in one of the units as your primary residence.
-                        </p>
-                    </div>
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">Eligibility and Occupancy</h3>
+                <p>
+                    A Certificate of Eligibility helps establish entitlement, but it is not a loan approval. The lender also evaluates the borrower and property. VA purchase loans are intended for a home the borrower will occupy as a primary residence under VA occupancy rules; special circumstances can have different timing or requirements.
+                </p>
 
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">Is a VA loan ALWAYS the best option?</h4>
-                        <p className="text-gray-600">
-                            Almost always, assuming you are eligible. The lack of PMI and competitive interest rates are hard to beat. The only scenario where a conventional loan might be better is if you are making a massive 20% down payment anyway and want to entirely avoid the VA Funding Fee (if you are not disabled). Compare both options using our calculators to be certain.
-                        </p>
-                    </div>
-                </div>
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">VA vs. Conventional or FHA</h3>
+                <p>
+                    There is no universally best mortgage. Compare the actual rate, points, funding fee or mortgage insurance, closing costs, required cash, monthly payment and total cost under the period you expect to keep the loan. Use the <Link href="/calculators/mortgage">Mortgage Calculator</Link> and <Link href="/calculators/fha">FHA Mortgage Calculator</Link> for side-by-side scenarios.
+                </p>
+
+                <p className="text-sm text-gray-500">
+                    Educational estimate only. VA and the lender determine entitlement, funding-fee exemption, underwriting, occupancy and loan terms.
+                </p>
             </div>
         </section>
     );
