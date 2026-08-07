@@ -2,32 +2,33 @@ import type { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import VaSeoContent from './VaSeoContent';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 const GovLoanClient = nextDynamic(() => import('../fha-va-usda/GovLoanClient'), {
     loading: () => <CalculatorSkeleton />,
 });
-import Breadcrumbs from '@/components/Breadcrumbs';
-import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'VA Loan Calculator 2026 - VA Funding Fee and Payments | USFinNexus',
+    title: 'VA Loan Calculator | USFinNexus',
     description:
-        'Calculate your VA loan monthly payment with 0% down. Automatically calculates the 2026 VA Funding Fee based on your military service and down payment.',
+        'Estimate a VA-backed home-loan payment and funding fee based on purchase price, down payment, rate, term and first-use or subsequent-use assumptions. Funding-fee exemptions may apply.',
+    alternates: { canonical: 'https://usfinnexus.com/calculators/va' },
     openGraph: {
         type: 'website',
-        title: 'VA Loan Calculator 2026 - Zero Down Payment | USFinNexus',
-        description: 'Calculate your VA loan monthly payment with 0% down. Automatically calculates 2026 VA Funding Fee based on your service type and down payment. Free, no signup.',
+        title: 'VA Loan Calculator | USFinNexus',
+        description: 'Estimate a VA-backed purchase-loan payment and applicable funding-fee scenario.',
         url: 'https://usfinnexus.com/calculators/va',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'VA Loan Calculator 2026 Zero Down - USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus VA Loan Calculator' }],
     },
-    alternates: { canonical: 'https://usfinnexus.com/calculators/va' },
     twitter: {
         card: 'summary_large_image',
-        title: 'VA Loan Calculator 2026 — 0% Down VA Funding Fee | USFinNexus',
-        description: 'VA loan monthly payment with 0% down. Includes 2026 VA Funding Fee. Free VA mortgage calculator.',
+        title: 'VA Loan Calculator | USFinNexus',
+        description: 'Estimate VA-backed home-loan payments and funding-fee scenarios.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
@@ -36,12 +37,14 @@ export default function VaLoanPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
-                name="VA Loan Calculator 2026"
-                description="Calculate your VA loan monthly payment with 0% down including the 2026 VA Funding Fee."
+                name="VA Loan Calculator"
+                description="Estimate a VA-backed purchase-loan payment and funding fee under the assumptions entered."
                 url="https://usfinnexus.com/calculators/va"
+                dateModified="2026-08-07"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'VA Loan Calculator', item: '/calculators/va' }]} />
-                            <GovLoanClient initialTab="va" />
+            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 7, 2026 · VA purchase funding-fee chart effective April 7, 2023 remains the current VA chart</p>
+            <GovLoanClient initialTab="va" />
             <VaSeoContent />
         </main>
     );
