@@ -15,79 +15,83 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Free Mortgage & Finance Calculators 2026 | USFinNexus',
-    description: 'Free mortgage, affordability, refinance, auto & personal loan calculators. Instant PDF + CSV downloads — no signup, no email, no lead-gen spam. Built for Americans.',
-    alternates: { canonical: 'https://usfinnexus.com' },
+    title: 'Mortgage & Finance Calculators | USFinNexus',
+    description: 'Free mortgage and personal finance calculators for U.S. consumers. Estimate mortgage payments, affordability, refinance, debt, taxes, retirement and more with clear assumptions.',
+    alternates: { canonical: 'https://usfinnexus.com/' },
     openGraph: {
         type: 'website',
         locale: 'en_US',
-        url: 'https://usfinnexus.com',
+        url: 'https://usfinnexus.com/',
         siteName: 'USFinNexus',
-        title: 'Free Mortgage & Finance Calculators 2026 | USFinNexus',
-        description: '28+ free CFPB-compliant mortgage and finance calculators. Instant PDF + CSV reports. No signup, no email, no lead-gen. Built for Americans.',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus — Free Mortgage & Finance Calculators for Americans' }],
+        title: 'Mortgage & Finance Calculators | USFinNexus',
+        description: 'Free mortgage and personal finance calculators with source-linked rules, clear assumptions and browser-based calculation tools.',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus mortgage and finance calculators' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Free Mortgage & Finance Calculators 2026 | USFinNexus',
-        description: '28+ free CFPB-compliant calculators. Instant PDF reports. Zero data collection. No signup ever.',
+        title: 'Mortgage & Finance Calculators | USFinNexus',
+        description: 'Free mortgage and personal finance calculators for U.S. consumers with clear assumptions and planning estimates.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 
 /* ═══ DATA ═══ */
 const RATES = [
-    { l: '30-Yr Fixed', v: '6.37%' }, { l: '15-Yr Fixed', v: '5.72%' },
-    { l: 'FHA', v: '6.06%' }, { l: 'VA', v: '5.95%' },
-    { l: 'CONFORMING', v: '$832,750' }, { l: 'FHA FLOOR', v: '$541,287' },
-    { l: 'MAX DTI', v: '43%' }, { l: 'PMI @', v: '78% LTV' },
+    { l: '2026 CONFORMING', v: '$832,750' },
+    { l: 'HIGH-COST CEILING', v: '$1,249,125' },
+    { l: '2026 FHA FLOOR', v: '$541,287' },
+    { l: 'FHA CEILING', v: '$1,249,125' },
+    { l: 'TAX STD · SINGLE', v: '$16,100' },
+    { l: 'TAX STD · MFJ', v: '$32,200' },
+    { l: 'SOCIAL SECURITY BASE', v: '$184,500' },
+    { l: 'PMI HPA AUTO', v: '78%*' },
 ];
 
 const STEPS = [
-    { n: '01', h: 'Pick a Calculator', p: 'Choose from 28+ CFPB-compliant tools.' },
-    { n: '02', h: 'Enter Numbers', p: 'Simple inputs — no signup or email.' },
-    { n: '03', h: 'Get Results', p: 'Instant breakdown with charts & tables.' },
-    { n: '04', h: 'Download PDF', p: 'One-click PDF report. Zero server contact.' },
+    { n: '01', h: 'Pick a Calculator', p: 'Choose the tool that matches your planning question.' },
+    { n: '02', h: 'Enter Numbers', p: 'Use your own assumptions — no calculator signup required.' },
+    { n: '03', h: 'Review Results', p: 'See breakdowns, charts, ratios and planning estimates.' },
+    { n: '04', h: 'Export When Available', p: 'Use browser-generated PDF or CSV exports on supported tools.' },
 ];
 
 const TOOLS = [
     // Mortgage & Housing
-    { href: '/calculators/mortgage', icon: Home, title: 'Mortgage Calculator', desc: 'Full PITI + amortization. Instant PDF export.', badge: 'hot', cat: 'mortgage' },
-    { href: '/calculators/affordability', icon: DollarSign, title: 'Home Affordability', desc: 'CFPB 28/43 DTI guidelines.', badge: 'hot', cat: 'mortgage' },
-    { href: '/calculators/refinance', icon: TrendingUp, title: 'Refinance Calculator', desc: 'Monthly savings & break-even point.', badge: 'hot', cat: 'mortgage' },
-    { href: '/calculators/rent-vs-buy', icon: ArrowLeftRight, title: 'Rent vs. Buy', desc: '5-year total cost comparison.', cat: 'mortgage' },
-    { href: '/calculators/rental-property', icon: Home, title: 'Rental Property ROI', desc: 'Cash flow & Cap Rate analyzer.', badge: 'new', cat: 'mortgage' },
-    { href: '/calculators/fha-va-usda', icon: Landmark, title: 'FHA / VA / USDA', desc: 'Government loan comparison.', cat: 'mortgage' },
-    { href: '/calculators/heloc', icon: Home, title: 'HELOC', desc: 'Equity line estimator.', cat: 'mortgage' },
-    { href: '/calculators/fha', icon: Home, title: 'FHA Calculator', desc: 'FHA-specific with MIP.', cat: 'mortgage' },
-    { href: '/calculators/va', icon: Star, title: 'VA Calculator', desc: 'Zero-down VA loan math.', cat: 'mortgage' },
-    { href: '/calculators/arm', icon: Activity, title: 'ARM Calculator', desc: 'Adjustable rate scenarios.', cat: 'mortgage' },
-    { href: '/calculators/interest-only', icon: Percent, title: 'Interest-Only', desc: 'IO period vs full amortization.', cat: 'mortgage' },
-    { href: '/calculators/amortization', icon: Table2, title: 'Amortization', desc: 'Full schedule with extra payments.', cat: 'mortgage' },
-    { href: '/calculators/down-payment', icon: PiggyBank, title: 'Down Payment', desc: 'Savings timeline planner.', cat: 'mortgage' },
-    { href: '/calculators/points-buydown', icon: BarChart2, title: 'Points Buy-Down', desc: 'Rate buy-down break-even.', cat: 'mortgage' },
-    { href: '/calculators/dti', icon: Scale, title: 'DTI Calculator', desc: 'Front & back-end ratios.', cat: 'mortgage' },
+    { href: '/calculators/mortgage', icon: Home, title: 'Mortgage Calculator', desc: 'PITI, PMI, HOA and amortization estimates.', badge: 'hot', cat: 'mortgage' },
+    { href: '/calculators/affordability', icon: DollarSign, title: 'Home Affordability', desc: 'Income, debt and planning DTI scenarios.', badge: 'hot', cat: 'mortgage' },
+    { href: '/calculators/refinance', icon: TrendingUp, title: 'Refinance Calculator', desc: 'Monthly savings and break-even scenarios.', badge: 'hot', cat: 'mortgage' },
+    { href: '/calculators/rent-vs-buy', icon: ArrowLeftRight, title: 'Rent vs. Buy', desc: 'Compare estimated ownership and renting costs.', cat: 'mortgage' },
+    { href: '/calculators/rental-property', icon: Home, title: 'Rental Property ROI', desc: 'Cash flow and cap-rate planning.', badge: 'new', cat: 'mortgage' },
+    { href: '/calculators/fha-va-usda', icon: Landmark, title: 'FHA / VA / USDA', desc: 'Compare government-backed loan scenarios.', cat: 'mortgage' },
+    { href: '/calculators/heloc', icon: Home, title: 'HELOC', desc: 'Home-equity line planning estimate.', cat: 'mortgage' },
+    { href: '/calculators/fha', icon: Home, title: 'FHA Calculator', desc: 'FHA-focused payment and MIP estimates.', cat: 'mortgage' },
+    { href: '/calculators/va', icon: Star, title: 'VA Calculator', desc: 'VA-focused mortgage planning.', cat: 'mortgage' },
+    { href: '/calculators/arm', icon: Activity, title: 'ARM Calculator', desc: 'Adjustable-rate mortgage scenarios.', cat: 'mortgage' },
+    { href: '/calculators/interest-only', icon: Percent, title: 'Interest-Only', desc: 'Interest-only period vs amortizing payment.', cat: 'mortgage' },
+    { href: '/calculators/amortization', icon: Table2, title: 'Amortization', desc: 'Payment schedule with extra-payment scenarios.', cat: 'mortgage' },
+    { href: '/calculators/down-payment', icon: PiggyBank, title: 'Down Payment', desc: 'Savings timeline and target planning.', cat: 'mortgage' },
+    { href: '/calculators/points-buydown', icon: BarChart2, title: 'Points Buy-Down', desc: 'Rate buy-down break-even estimate.', cat: 'mortgage' },
+    { href: '/calculators/dti', icon: Scale, title: 'DTI Calculator', desc: 'Front-end and back-end debt ratios.', cat: 'mortgage' },
     // Loans & Debt
-    { href: '/calculators/auto-loan', icon: Car, title: 'Auto Loan', desc: 'Monthly payment + total interest.', cat: 'loans' },
-    { href: '/calculators/student-loan', icon: BookOpen, title: 'Student Loan', desc: 'Repayment plan comparison.', badge: 'new', cat: 'loans' },
-    { href: '/calculators/credit-card', icon: Target, title: 'Credit Card Payoff', desc: 'Payoff date + interest saved.', badge: 'new', cat: 'loans' },
-    { href: '/calculators/personal-loan', icon: Calculator, title: 'Personal Loan', desc: 'APR comparison tool.', cat: 'loans' },
-    { href: '/calculators/debt-payoff', icon: Target, title: 'Debt Payoff Planner', desc: 'Snowball vs Avalanche strategies.', badge: 'hot', cat: 'loans' },
-    { href: '/calculators/comparison', icon: Scale, title: 'Loan Comparison', desc: 'Side-by-side loan analysis.', cat: 'loans' },
+    { href: '/calculators/auto-loan', icon: Car, title: 'Auto Loan', desc: 'Monthly payment and total interest estimate.', cat: 'loans' },
+    { href: '/calculators/student-loan', icon: BookOpen, title: 'Student Loan', desc: 'Repayment planning scenarios.', badge: 'new', cat: 'loans' },
+    { href: '/calculators/credit-card', icon: Target, title: 'Credit Card Payoff', desc: 'Payoff timeline and interest estimate.', badge: 'new', cat: 'loans' },
+    { href: '/calculators/personal-loan', icon: Calculator, title: 'Personal Loan', desc: 'Payment and APR comparison tool.', cat: 'loans' },
+    { href: '/calculators/debt-payoff', icon: Target, title: 'Debt Payoff Planner', desc: 'Snowball and avalanche scenarios.', badge: 'hot', cat: 'loans' },
+    { href: '/calculators/comparison', icon: Scale, title: 'Loan Comparison', desc: 'Side-by-side loan-cost analysis.', cat: 'loans' },
     // Wealth & Tax
-    { href: '/calculators/retirement', icon: TrendingUp, title: 'Retirement Planner', desc: 'Compound growth projections.', badge: 'new', cat: 'wealth' },
-    { href: '/calculators/fire-planner', icon: TrendingUp, title: 'FIRE Planner', desc: 'Early retirement timeline.', badge: 'new', cat: 'wealth' },
+    { href: '/calculators/retirement', icon: TrendingUp, title: 'Retirement Planner', desc: 'Long-term growth projections.', badge: 'new', cat: 'wealth' },
+    { href: '/calculators/fire-planner', icon: TrendingUp, title: 'FIRE Planner', desc: 'Early-retirement planning scenarios.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/investment', icon: LineChart, title: 'Compound Interest', desc: 'Investment growth calculator.', badge: 'new', cat: 'wealth' },
-    { href: '/calculators/drip', icon: LineChart, title: 'DRIP Forecaster', desc: 'Dividend reinvestment plan.', badge: 'new', cat: 'wealth' },
-    { href: '/calculators/income-tax', icon: FileText, title: 'Income Tax 2026', desc: '2026 brackets + TCJA sunset.', badge: 'new', cat: 'wealth' },
-    { href: '/calculators/crypto-tax', icon: FileText, title: 'Crypto Tax Estimator', desc: 'Capital gains tax estimator.', badge: 'new', cat: 'wealth' },
-    { href: '/calculators/options-profit', icon: BarChart2, title: 'Options Profit/Loss', desc: 'Visualizer for Calls/Puts.', badge: 'new', cat: 'wealth' },
-    { href: '/calculators/budget', icon: PiggyBank, title: 'Budget 50/30/20', desc: 'Needs, wants, savings split.', cat: 'wealth' },
+    { href: '/calculators/drip', icon: LineChart, title: 'DRIP Forecaster', desc: 'Dividend reinvestment projection.', badge: 'new', cat: 'wealth' },
+    { href: '/calculators/income-tax', icon: FileText, title: 'Income Tax 2026', desc: 'IRS 2026 federal brackets and standard deductions.', badge: 'new', cat: 'wealth' },
+    { href: '/calculators/crypto-tax', icon: FileText, title: 'Crypto Tax Estimator', desc: 'Capital-gains planning estimate.', badge: 'new', cat: 'wealth' },
+    { href: '/calculators/options-profit', icon: BarChart2, title: 'Options Profit/Loss', desc: 'Calls and puts payoff visualization.', badge: 'new', cat: 'wealth' },
+    { href: '/calculators/budget', icon: PiggyBank, title: 'Budget 50/30/20', desc: 'Needs, wants and savings planning split.', cat: 'wealth' },
     // Regional
-    { href: '/calculators/california', icon: Map, title: 'California Closing', desc: 'CA-specific costs.', cat: 'regional' },
-    { href: '/calculators/texas', icon: Map, title: 'Texas Closing', desc: 'TX-specific costs.', cat: 'regional' },
-    { href: '/calculators/florida', icon: Map, title: 'Florida Closing', desc: 'FL-specific costs.', cat: 'regional' },
-    { href: '/calculators/closing-costs', icon: FileText, title: 'General Closing', desc: 'National average estimate.', cat: 'regional' },
+    { href: '/calculators/california', icon: Map, title: 'California Closing', desc: 'California closing-cost planning.', cat: 'regional' },
+    { href: '/calculators/texas', icon: Map, title: 'Texas Closing', desc: 'Texas closing-cost planning.', cat: 'regional' },
+    { href: '/calculators/florida', icon: Map, title: 'Florida Closing', desc: 'Florida closing-cost planning.', cat: 'regional' },
+    { href: '/calculators/closing-costs', icon: FileText, title: 'General Closing', desc: 'National closing-cost planning estimate.', cat: 'regional' },
 ];
 
 const QUICK_TOOLS = [
@@ -105,43 +109,43 @@ const QUICK_TOOLS = [
 
 const STATS = [
     { val: '28+', label: 'Free Calculators', src: 'Platform' },
-    { val: '$0', label: 'Cost to You', src: 'Always' },
-    { val: '0 bytes', label: 'Data Collected', src: 'Privacy' },
-    { val: '100%', label: 'Free, Forever', src: 'Promise' },
+    { val: '$0', label: 'Calculator Cost', src: 'Core Tools' },
+    { val: 'Local', label: 'Input Processing', src: 'Calculator Fields' },
+    { val: '2026', label: 'Federal Limits', src: 'Source-Checked' },
 ];
 
 const DIFFS = [
-    { icon: Shield, h: 'CFPB-Compliant Math', p: 'Every formula follows Consumer Financial Protection Bureau guidelines.', c: 'di-cyan' },
-    { icon: Lock, h: 'Zero Data Collection', p: 'All calculations run client-side — nothing hits our servers.', c: 'di-mag' },
-    { icon: Download, h: 'Instant PDF Reports', p: 'One-click professional PDF. Generated in your browser.', c: 'di-vio' },
-    { icon: Eye, h: 'No Paywalls or Signup', p: 'Every tool is free forever. No email walls. No lead-gen.', c: 'di-lime' },
-    { icon: Zap, h: '2026 Limits Updated', p: '$832,750 conforming · $541,287 FHA floor · Updated monthly.', c: 'di-amb' },
+    { icon: Shield, h: 'Source-Linked Rules', p: 'Time-sensitive federal limits and tax inputs are checked against primary agency sources.', c: 'di-cyan' },
+    { icon: Lock, h: 'Calculator Inputs Stay Local', p: 'Calculator values are designed to be processed in your browser rather than submitted as lender leads.', c: 'di-mag' },
+    { icon: Download, h: 'Browser Exports', p: 'Supported tools can generate PDF or CSV reports without a calculator account.', c: 'di-vio' },
+    { icon: Eye, h: 'No Calculator Signup', p: 'Core calculation results are available without an email or phone-number gate.', c: 'di-lime' },
+    { icon: Zap, h: '2026 Limits Verified', p: '$832,750 conforming baseline · $541,287 FHA floor · source-reviewed August 2026.', c: 'di-amb' },
 ];
 
 const HOME_FAQS = [
     {
-        question: 'Are all USFinNexus calculators really free?',
-        answer: 'Yes — every <strong>free mortgage calculator</strong> and <strong>financial calculator</strong> on USFinNexus is 100% <strong>free</strong>, forever. There are no premium tiers, no email walls, and no lead-gen forms. PDF and CSV exports are also always free. The site is supported by non-intrusive display ads, not lender referral commissions.',
+        question: 'Are USFinNexus calculators free to use?',
+        answer: 'Yes. Core USFinNexus calculators are free to use without a calculator account gate. Some tools also provide browser-generated PDF or CSV exports. The site may be supported by advertising.',
     },
     {
-        question: 'Does USFinNexus sell my data to mortgage lenders?',
-        answer: 'No. All calculations run entirely in your browser (client-side). Nothing you type into any calculator is sent to our servers. We do not collect, store, or sell any personally identifiable information. Zero bytes of your financial data leave your device.',
+        question: 'What happens to the financial numbers I enter into a calculator?',
+        answer: 'Calculator input values are designed to be processed in your browser rather than submitted as mortgage-lender leads. This does not mean the entire website has zero data processing: advertising, analytics, security, or other third-party services may process browser or usage data as described in the Privacy Policy.',
     },
     {
         question: 'What is the 2026 conforming loan limit?',
-        answer: 'The 2026 FHFA conforming loan limit is $832,750 for most U.S. counties. In high-cost areas (parts of California, New York, Hawaii, and other high-cost metros), the ceiling rises to $1,249,125. Loans above these limits are classified as jumbo loans and carry different qualification requirements.',
+        answer: 'For 2026, the FHFA one-unit baseline conforming loan limit is $832,750 in most of the United States and the one-unit high-cost-area ceiling is $1,249,125. County-specific limits and special statutory areas can differ, so verify the property location with FHFA data.',
     },
     {
         question: 'How accurate are the mortgage calculators?',
-        answer: 'All formulas follow CFPB (Consumer Financial Protection Bureau) guidelines and standard U.S. amortization math. Results are accurate estimates based on the inputs you provide. Actual lender quotes will vary based on your credit score, income, property appraisal, and lender-specific fees. Always confirm final numbers with a licensed mortgage professional.',
+        answer: 'Mortgage principal-and-interest calculations use standard amortization math. Total payment and affordability results depend on the assumptions you enter for rates, taxes, insurance, PMI, HOA dues, closing costs, income and debts. Calculator outputs are planning estimates, not lender quotes or approvals.',
     },
     {
-        question: 'What is a good debt-to-income ratio for buying a home?',
-        answer: 'Conventional lenders generally require a back-end DTI (total monthly debts ÷ gross income) of 43% or lower. The CFPB\'s Qualified Mortgage rule caps back-end DTI at 43%. For the best rates, aim for a front-end DTI (housing costs only) under 28% and a back-end DTI under 36%.',
+        question: 'Is 43% DTI the CFPB Qualified Mortgage limit?',
+        answer: 'No. The current General Qualified Mortgage definition does not use a universal 43% debt-to-income cap. A 43% back-end DTI may still be shown as a planning benchmark or used in some underwriting contexts, but actual requirements vary by loan program, lender and borrower profile.',
     },
     {
-        question: 'Can I download my mortgage calculation results?',
-        answer: 'Yes. Every calculator on USFinNexus includes a free one-click PDF export and CSV download. The PDF includes your full amortization schedule, monthly payment breakdown (principal, interest, taxes, insurance, PMI), and total cost summary — generated entirely in your browser with no server contact.',
+        question: 'Can I download calculator results?',
+        answer: 'Many USFinNexus calculators include browser-generated PDF or CSV export features. Availability and report contents depend on the specific calculator.',
     },
 ];
 
@@ -154,14 +158,14 @@ export default function HomePage() {
             <div className="ph-announce">
                 <div className="ph-announce-inner neo-container">
                     <span className="ph-ann-dot" />
-                    <span>30-Yr Fixed <strong>6.37%</strong></span>
+                    <span>2026 Conforming <strong>$832,750</strong></span>
                     <span className="ph-ann-sep">·</span>
-                    <span>15-Yr Fixed <strong>5.72%</strong></span>
+                    <span>High-Cost <strong>$1,249,125</strong></span>
                     <span className="ph-ann-sep">·</span>
-                    <span>FHA <strong>6.06%</strong></span>
+                    <span>FHA Floor <strong>$541,287</strong></span>
                     <span className="ph-ann-sep">·</span>
-                    <span>Conforming <strong>$832,750</strong></span>
-                    <span className="ph-ann-tag">May 2026 · CFPB Compliant</span>
+                    <span>Tax Std. Deduction <strong>$16,100 single</strong></span>
+                    <span className="ph-ann-tag">Verified Aug 2026</span>
                 </div>
             </div>
 
@@ -176,16 +180,16 @@ export default function HomePage() {
                     <div className="neo-hero-left">
                         <div className="neo-status neo-reveal">
                             <span className="neo-status-pulse" />
-                            CFPB Compliant · May 2026
+                            Source-reviewed · August 2026
                         </div>
                         <h1 className="neo-h1">
-                            <span className="neo-h1-w1">Free Mortgage Calculator</span>
-                            <span className="neo-h1-w2">& Finance Tools 2026</span>
-                            <span className="neo-h1-w3">— No Signup Required</span>
+                            <span className="neo-h1-w1">Mortgage & Finance Calculators</span>
+                            <span className="neo-h1-w2">for U.S. Consumers</span>
+                            <span className="neo-h1-w3">— Free to Use</span>
                         </h1>
                         <p className="neo-hero-p neo-reveal neo-reveal--d2">
-                            28+ professional calculators with instant <strong>PDF reports</strong>.
-                            No signup, no email, no hidden fees — <strong>100% free, forever.</strong>
+                            28+ planning calculators for mortgages, debt, taxes and long-term finance.
+                            Clear assumptions, source-linked rules and <strong>no calculator signup required.</strong>
                         </p>
                         <div className="neo-hero-actions neo-reveal neo-reveal--d3">
                             <Link href="/calculators/mortgage" className="neo-btn-main">
@@ -197,9 +201,9 @@ export default function HomePage() {
                         </div>
                         <div className="neo-hero-trust neo-reveal neo-reveal--d4">
                             {[
-                                { i: Lock, t: 'Zero Data' },
-                                { i: Shield, t: 'CFPB Compliant' },
-                                { i: Download, t: 'Free PDF Export' },
+                                { i: Lock, t: 'Local Calculator Inputs' },
+                                { i: Shield, t: 'Source-Linked Rules' },
+                                { i: Download, t: 'Browser Exports' },
                             ].map(x => (
                                 <span key={x.t} className="neo-trust-pill"><x.i size={12} /> {x.t}</span>
                             ))}
@@ -208,9 +212,9 @@ export default function HomePage() {
                         <div className="ph-hero-stats neo-reveal neo-reveal--d4">
                             <div className="ph-hero-stat"><span className="ph-hs-val">28+</span><span className="ph-hs-lbl">Free Tools</span></div>
                             <div className="ph-hero-stat-div" />
-                            <div className="ph-hero-stat"><span className="ph-hs-val">$0</span><span className="ph-hs-lbl">Cost Forever</span></div>
+                            <div className="ph-hero-stat"><span className="ph-hs-val">$0</span><span className="ph-hs-lbl">Core Tool Cost</span></div>
                             <div className="ph-hero-stat-div" />
-                            <div className="ph-hero-stat"><span className="ph-hs-val">0 bytes</span><span className="ph-hs-lbl">Data Stored</span></div>
+                            <div className="ph-hero-stat"><span className="ph-hs-val">Local</span><span className="ph-hs-lbl">Input Processing</span></div>
                         </div>
                     </div>
 
@@ -253,7 +257,7 @@ export default function HomePage() {
                 <div className="neo-container neo-steps-section">
                     <div className="neo-sec-tag"><span className="neo-sec-dot" /> How It Works</div>
                     <h2 className="neo-sec-h2">Clarity in <em>four simple steps.</em></h2>
-                    <p className="neo-sec-p">From question to professional PDF report in under 60 seconds.</p>
+                    <p className="neo-sec-p">From question to a structured planning estimate in a few inputs.</p>
                     <div className="neo-steps-grid">
                         {STEPS.map(s => (
                             <div key={s.n} className="neo-step-card">
@@ -269,14 +273,14 @@ export default function HomePage() {
                 <div className="neo-container neo-tools-section" id="tools">
                     <div className="neo-sec-tag"><span className="neo-sec-dot" /> Calculator Suite</div>
                     <h2 className="neo-sec-h2">28+ <em>free tools,</em> one platform.</h2>
-                    <p className="neo-sec-p">Every calculator is CFPB-compliant with instant PDF export.</p>
+                    <p className="neo-sec-p">Mortgage and finance calculators with clear inputs, assumptions and educational outputs.</p>
 
                     {/* Spotlight hero card */}
                     <Link href="/calculators/mortgage" className="neo-tool-hero">
                         <div>
                             <span className="neo-tool-badge neo-badge-hot">Most Popular</span>
                             <h3>Mortgage Calculator</h3>
-                            <p>Full PITI breakdown with amortization schedule, PMI, taxes & insurance. Instant PDF export.</p>
+                            <p>Estimate principal, interest, taxes, insurance, PMI, HOA dues and an amortization schedule.</p>
                         </div>
                         <span className="neo-hero-launch"><Home size={15} /> Launch Calculator <ArrowRight size={14} /></span>
                     </Link>
@@ -303,7 +307,7 @@ export default function HomePage() {
                 <div className="neo-stats-bg" />
                 <div className="neo-container neo-stats-inner">
                     <div className="neo-sec-tag neo-sec-tag--dark"><span className="neo-sec-dot" /> By The Numbers</div>
-                    <h2 className="neo-sec-h2 neo-sec-h2--light">Used by homebuyers <em>nationwide.</em></h2>
+                    <h2 className="neo-sec-h2 neo-sec-h2--light">Built for financial <em>planning clarity.</em></h2>
                     <div className="neo-stats-row">
                         {STATS.map(s => (
                             <div key={s.label} className="neo-stat-block">
@@ -325,7 +329,7 @@ export default function HomePage() {
             <section className="neo-light-zone">
                 <div className="neo-container neo-diff-section">
                     <div className="neo-sec-tag"><span className="neo-sec-dot" /> Why USFinNexus</div>
-                    <h2 className="neo-sec-h2">What makes us <em>different.</em></h2>
+                    <h2 className="neo-sec-h2">Designed for <em>clear estimates.</em></h2>
                     <div className="neo-diff-grid">
                         <div className="neo-diff-list">
                             {DIFFS.map(d => (
@@ -341,17 +345,17 @@ export default function HomePage() {
                         <div className="neo-diff-visual flex flex-col justify-between">
                             <div>
                                 <div className="neo-dv-glow" />
-                                <div className="neo-dv-title">Feature Comparison</div>
+                                <div className="neo-dv-title">Platform Approach</div>
                                 <div className="neo-dv-header">
-                                    <span>Others</span>
+                                    <span>Common Variation</span>
                                     <span>USFinNexus</span>
                                 </div>
                                 {[
-                                    { l: 'Cost', them: '$9.99/mo', us: 'Free Forever' },
-                                    { l: 'Email Required', them: 'Yes', us: 'Never' },
-                                    { l: 'Data Collected', them: 'Everything', us: '0 bytes' },
-                                    { l: 'PDF Export', them: 'Premium Only', us: 'Always Free' },
-                                    { l: 'CFPB Compliant', them: '✕', us: '✓' },
+                                    { l: 'Calculator Cost', them: 'Varies by provider', us: 'Core tools free' },
+                                    { l: 'Calculator Signup', them: 'Varies by provider', us: 'Not required' },
+                                    { l: 'Calculator Inputs', them: 'Varies by provider', us: 'Browser processed' },
+                                    { l: 'Export', them: 'Varies by tool', us: 'Available on many tools' },
+                                    { l: 'Regulatory Claims', them: 'Varies', us: 'No certification claim' },
                                 ].map(r => (
                                     <div key={r.l} className="neo-dv-row">
                                         <span className="neo-dv-label">{r.l}</span>
@@ -361,8 +365,8 @@ export default function HomePage() {
                                 ))}
                             </div>
                             <div className="mt-8 text-center">
-                                <Link href="/why-we-dont-collect-data" className="text-blue-600 hover:text-blue-800 font-bold text-sm inline-flex items-center gap-1 transition-colors">
-                                    Read our Zero-Data Promise <ArrowRight size={14} />
+                                <Link href="/privacy" className="text-blue-600 hover:text-blue-800 font-bold text-sm inline-flex items-center gap-1 transition-colors">
+                                    Read our Privacy Policy <ArrowRight size={14} />
                                 </Link>
                             </div>
                         </div>
@@ -377,7 +381,7 @@ export default function HomePage() {
                 <div className="neo-container neo-cta-inner">
                     <div className="neo-sec-tag neo-sec-tag--dark"><span className="neo-sec-dot" /> Get Started</div>
                     <h2 className="neo-sec-h2 neo-sec-h2--light">Your financial clarity <em>starts here.</em></h2>
-                    <p className="neo-cta-p">28+ professional tools. Free PDF exports. Zero lead-gen. Always private.</p>
+                    <p className="neo-cta-p">28+ planning tools. No calculator signup. Clear assumptions and educational estimates.</p>
                     <div className="neo-cta-btns">
                         <Link href="/calculators/mortgage" className="neo-btn-main">
                             <Home size={16} /> Start Mortgage Calculator <ArrowRight size={14} />
@@ -392,7 +396,7 @@ export default function HomePage() {
                 <div className="neo-container" style={{ maxWidth: '800px', paddingTop: '3.5rem', paddingBottom: '3.5rem' }}>
                     <div className="neo-sec-tag"><span className="neo-sec-dot" /> FAQ</div>
                     <h2 className="neo-sec-h2" id="faq-heading">Frequently Asked <em>Questions</em></h2>
-                    <p className="neo-sec-p">Quick answers about our free mortgage and finance calculators.</p>
+                    <p className="neo-sec-p">Quick answers about our mortgage and finance calculators.</p>
                     <div style={{ marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '0' }}>
                         {HOME_FAQS.map((faq, i) => (
                             <details key={i} style={{
@@ -431,7 +435,7 @@ export default function HomePage() {
                     </p>
                 </div>
             </section>
-            {/* FAQPage JSON-LD for rich snippets */}
+
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -440,50 +444,47 @@ export default function HomePage() {
                     mainEntity: HOME_FAQS.map(faq => ({
                         '@type': 'Question',
                         name: faq.question,
-                        acceptedAnswer: {
-                            '@type': 'Answer',
-                            text: faq.answer,
-                        },
+                        acceptedAnswer: { '@type': 'Answer', text: faq.answer },
                     })),
                 }) }}
             />
-            {/* ItemList JSON-LD — calculator collection (helps Google understand tool breadth) */}
+
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify({
                     '@context': 'https://schema.org',
                     '@type': 'ItemList',
-                    name: 'Free Mortgage & Finance Calculators',
-                    description: '28+ free, CFPB-compliant mortgage and finance calculators for Americans.',
-                    url: 'https://usfinnexus.com',
+                    name: 'Mortgage & Finance Calculators',
+                    description: 'Free mortgage and personal finance calculators for U.S. consumers.',
+                    url: 'https://usfinnexus.com/',
                     numberOfItems: 28,
                     itemListElement: [
                         { '@type': 'ListItem', position: 1, name: 'Mortgage Calculator', url: 'https://usfinnexus.com/calculators/mortgage' },
                         { '@type': 'ListItem', position: 2, name: 'Home Affordability Calculator', url: 'https://usfinnexus.com/calculators/affordability' },
-                        { '@type': 'ListItem', position: 3, name: 'Refinance Calculator', url: 'https://usfinnexus.com/calculators/refinance' },
-                        { '@type': 'ListItem', position: 4, name: 'Debt-to-Income (DTI) Calculator', url: 'https://usfinnexus.com/calculators/dti' },
-                        { '@type': 'ListItem', position: 5, name: 'Amortization Schedule Calculator', url: 'https://usfinnexus.com/calculators/amortization' },
+                        { '@type': 'ListItem', position: 3, name: 'Mortgage Refinance Calculator', url: 'https://usfinnexus.com/calculators/refinance' },
+                        { '@type': 'ListItem', position: 4, name: 'Debt-to-Income Ratio Calculator', url: 'https://usfinnexus.com/calculators/dti' },
+                        { '@type': 'ListItem', position: 5, name: 'Mortgage Amortization Calculator', url: 'https://usfinnexus.com/calculators/amortization' },
                         { '@type': 'ListItem', position: 6, name: 'Rent vs. Buy Calculator', url: 'https://usfinnexus.com/calculators/rent-vs-buy' },
                         { '@type': 'ListItem', position: 7, name: 'FHA Loan Calculator', url: 'https://usfinnexus.com/calculators/fha' },
                         { '@type': 'ListItem', position: 8, name: 'VA Loan Calculator', url: 'https://usfinnexus.com/calculators/va' },
-                        { '@type': 'ListItem', position: 9, name: 'Closing Costs Calculator', url: 'https://usfinnexus.com/calculators/closing-costs' },
+                        { '@type': 'ListItem', position: 9, name: 'Closing Cost Calculator', url: 'https://usfinnexus.com/calculators/closing-costs' },
                         { '@type': 'ListItem', position: 10, name: 'Auto Loan Calculator', url: 'https://usfinnexus.com/calculators/auto-loan' },
-                        { '@type': 'ListItem', position: 11, name: 'Debt Payoff Planner', url: 'https://usfinnexus.com/calculators/debt-payoff' },
-                        { '@type': 'ListItem', position: 12, name: 'Retirement Planner', url: 'https://usfinnexus.com/calculators/retirement' },
-                        { '@type': 'ListItem', position: 13, name: 'Income Tax Calculator 2026', url: 'https://usfinnexus.com/calculators/income-tax' },
+                        { '@type': 'ListItem', position: 11, name: 'Debt Payoff Calculator', url: 'https://usfinnexus.com/calculators/debt-payoff' },
+                        { '@type': 'ListItem', position: 12, name: 'Retirement Calculator', url: 'https://usfinnexus.com/calculators/retirement' },
+                        { '@type': 'ListItem', position: 13, name: '2026 Federal Income Tax Calculator', url: 'https://usfinnexus.com/calculators/income-tax' },
                         { '@type': 'ListItem', position: 14, name: 'HELOC Calculator', url: 'https://usfinnexus.com/calculators/heloc' },
-                        { '@type': 'ListItem', position: 15, name: 'Down Payment Savings Calculator', url: 'https://usfinnexus.com/calculators/down-payment' },
+                        { '@type': 'ListItem', position: 15, name: 'Down Payment Calculator', url: 'https://usfinnexus.com/calculators/down-payment' },
                     ],
                 }) }}
             />
-            {/* HowTo JSON-LD for How It Works steps */}
+
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify({
                     '@context': 'https://schema.org',
                     '@type': 'HowTo',
                     name: 'How to Use USFinNexus Financial Calculators',
-                    description: 'Get a professional PDF mortgage or finance calculation in four simple steps — no signup, no email required.',
+                    description: 'Use a USFinNexus mortgage or finance calculator in four simple steps.',
                     totalTime: 'PT1M',
                     tool: [{ '@type': 'HowToTool', name: 'Web browser' }],
                     step: [
@@ -491,28 +492,28 @@ export default function HomePage() {
                             '@type': 'HowToStep',
                             position: 1,
                             name: 'Pick a Calculator',
-                            text: 'Choose from 28+ CFPB-compliant mortgage and finance calculators covering home buying, refinancing, debt payoff, retirement, and more.',
+                            text: 'Choose the mortgage or finance calculator that matches your planning question.',
                             url: 'https://usfinnexus.com/#tools',
                         },
                         {
                             '@type': 'HowToStep',
                             position: 2,
                             name: 'Enter Your Numbers',
-                            text: 'Fill in simple inputs like home price, down payment, and interest rate. No signup or email address required — ever.',
+                            text: 'Fill in the relevant inputs such as home price, down payment, income, debt or interest rate. No calculator signup is required.',
                             url: 'https://usfinnexus.com/calculators/mortgage',
                         },
                         {
                             '@type': 'HowToStep',
                             position: 3,
-                            name: 'Get Instant Results',
-                            text: 'See a full breakdown of your mortgage payment with charts and amortization tables, calculated instantly in your browser.',
+                            name: 'Review the Estimate',
+                            text: 'Review the calculated breakdown, ratios, charts or amortization table provided by the selected tool.',
                             url: 'https://usfinnexus.com/calculators/mortgage',
                         },
                         {
                             '@type': 'HowToStep',
                             position: 4,
-                            name: 'Download Free PDF Report',
-                            text: 'Click the PDF button to download a professional report with your full amortization schedule. Generated in your browser — zero server contact.',
+                            name: 'Export When Available',
+                            text: 'Use PDF or CSV export features when the selected calculator provides them.',
                             url: 'https://usfinnexus.com/calculators/mortgage',
                         },
                     ],
