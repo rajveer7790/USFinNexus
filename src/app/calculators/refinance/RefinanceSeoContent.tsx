@@ -1,96 +1,53 @@
-import React from 'react';
 import Link from 'next/link';
 
 export default function RefinanceSeoContent() {
     return (
         <section className="bg-white border-t border-gray-100 py-10 mt-6">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-blue">
-                <h2 className="text-3xl font-black text-navy-900 mb-6">
-                    When Does It Make Sense to Refinance?
-                </h2>
+                <h2 className="text-3xl font-black text-navy-900 mb-6">How to Evaluate a Mortgage Refinance</h2>
                 <p className="lead text-xl text-gray-600">
-                    Refinancing makes financial sense when your monthly savings exceed closing costs before you move or sell. A rate drop of 0.75%–1.0% or more typically clears the break-even hurdle within 24 months. Enter your current loan balance, existing rate, and new rate above to calculate your exact break-even date and lifetime savings.
+                    A refinance can lower a payment, shorten a term, change loan type or provide cash from home equity. The useful comparison is not a generic “one-percent rule”; it is the cost of your current remaining loan versus the new loan under the rate, term, fees and time horizon that apply to you.
                 </p>
 
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    How Do I Calculate My Refinance Break-Even Point?
-                </h3>
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">Simple Refinance Break-Even</h3>
                 <p>
-                    When you refinance, you have to pay closing costs all over again (typically 2% to 5% of the loan amount). To determine if refinancing is worth it, you must calculate how many months of savings it takes to recoup those upfront costs.
+                    A simple break-even calculation divides refinance costs by monthly payment savings. If closing costs are $4,000 and the modeled payment falls by $200 per month, the simple break-even is 20 months.
                 </p>
-                <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 my-6">
-                    <p className="mb-2 font-bold text-navy-900">Example Calculation:</p>
-                    <ul className="mb-0">
-                        <li><strong>Closing Costs:</strong> $4,000</li>
-                        <li><strong>Monthly Savings from New Rate:</strong> $200/month</li>
-                        <li><strong>Break-Even Point:</strong> $4,000 ÷ $200 = <strong>20 months</strong></li>
-                    </ul>
-                </div>
                 <p>
-                    If you plan to sell the house or move in 12 months, refinancing would actually <em>cost</em> you $1,600 net. If you plan to stay in the home for 5 years (60 months), you would save $8,000 net. Always ensure your planned time in the home exceeds the break-even date shown in our calculator.
+                    That calculation is intentionally simple. It can miss the effect of resetting the repayment term, financing closing costs, changing mortgage insurance, changing taxes or escrow, and differences in total interest. Use it as a first comparison rather than a complete refinance decision.
                 </p>
 
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    The 2026 Rate Environment: Is It Time to Refinance?
-                </h3>
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">Use a Rate Quote Relevant to You</h3>
                 <p>
-                    For homeowners who purchased or refinanced during the rate spikes of 2023 and 2024 (when rates routinely breached 7.5% and even 8%), the 2026 rate environment offers a crucial window of opportunity. With average 30-year fixed rates hovering in the mid-to-high 6% range, and 15-year rates dipping into the upper 5% range, many recent buyers can finally achieve the "1% rule" (dropping their interest rate by a full percentage point).
-                </p>
-                <p>
-                    However, the Federal Reserve's stance in 2026 remains data-dependent, meaning rates continue to exhibit volatility. If your break-even analysis shows a timeline of 24 months or less, locking in a lower rate now provides guaranteed savings rather than gambling on further rate drops that may not materialize.
+                    Mortgage rates move frequently and borrower pricing varies. Instead of relying on an undated national average, enter the rate and points from a lender quote or a realistic scenario. Credit profile, loan-to-value, occupancy, loan type, points and lender pricing can all affect the actual rate and fees.
                 </p>
 
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    What Are the Best Reasons to Refinance in 2026?
-                </h3>
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">Compare the Remaining Term</h3>
+                <p>
+                    A lower monthly payment is not automatically a lower total cost. Refinancing a loan with fewer years remaining into a new 30-year term can reduce the required monthly payment while extending repayment. Compare the current months remaining with the new term and consider how long you expect to keep the loan.
+                </p>
+
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">Cash-Out Refinance</h3>
+                <p>
+                    A cash-out refinance replaces the existing mortgage with a larger loan and provides part of the difference in cash, subject to lender and loan-program requirements. Because it increases the balance secured by the home, compare it with alternatives such as a <Link href="/calculators/heloc">HELOC</Link> and consider rate, fees, repayment term and risk to home equity.
+                </p>
+
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">Closing Costs</h3>
+                <p>
+                    Refinance costs vary substantially by lender, property and transaction. Use the lender&apos;s estimate when available rather than assuming every refinance costs a fixed percentage of the balance. If fees are rolled into the new loan or exchanged for a higher rate, include that structure in the comparison.
+                </p>
+
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">Related Calculators</h3>
                 <ul>
-                    <li>
-                        <strong>Lowering Your Interest Rate:</strong> The classic reason. A standard rule of thumb is that if you can drop your rate by 0.75% to 1.0% or more, it is usually worth exploring.
-                    </li>
-                    <li>
-                        <strong>Removing Mortgage Insurance (PMI/MIP):</strong> If you bought your home with an FHA loan (which carries permanent Mortgage Insurance Premium) or a conventional loan with less than 20% down, and your home value has appreciated significantly, refinancing into a new conventional loan can instantly remove that expensive monthly insurance fee.
-                    </li>
-                    <li>
-                        <strong>Switching from a 30-Year to a 15-Year Term:</strong> If your income has increased, you might want to refinance into a shorter term. Your monthly payment will likely go up, but your interest rate drops significantly and you pay off the home in half the time, saving hundreds of thousands in interest.
-                    </li>
+                    <li><Link href="/calculators/mortgage">Mortgage Calculator</Link> — compare all-in payment assumptions.</li>
+                    <li><Link href="/calculators/amortization">Mortgage Amortization Calculator</Link> — compare remaining principal and interest over time.</li>
+                    <li><Link href="/calculators/points-buydown">Mortgage Points Calculator</Link> — compare upfront points with modeled monthly savings.</li>
+                    <li><Link href="/calculators/heloc">HELOC Calculator</Link> — model a home-equity line scenario.</li>
                 </ul>
 
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    What is a Cash-Out Refinance?
-                </h3>
-                <p>
-                    If you have significant equity in your home (meaning the home is worth much more than you owe), you can do a &quot;cash-out refinance.&quot; This involves taking out a new loan that is larger than your current balance and pocketing the difference in cash. 
+                <p className="text-sm text-gray-500">
+                    Educational estimate only. A lender determines the actual rate, fees, eligibility, cash-out limits and required disclosures.
                 </p>
-                <p>
-                    Borrowers frequently use this strategy to fund major home renovations, pay off high-interest credit card debt, or cover college tuition. However, it means your new loan balance will be higher, your payments might increase, and you are restarting the clock on your mortgage. Alternatively, you might want to look into a <Link href="/calculators/heloc" className="text-blue-600 hover:underline">HELOC (Home Equity Line of Credit)</Link> if you only need the cash but want to keep your existing low 1st-mortgage rate intact.
-                </p>
-
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Frequently Asked Questions
-                </h3>
-                
-                <div className="space-y-6 mt-6">
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">Can I roll the closing costs into the new loan?</h4>
-                        <p className="text-gray-600">
-                            Yes. This is called a &quot;no-out-of-pocket&quot; refinance. The lender simply adds the $4,000 (or whatever the closing costs are) onto your new loan balance. You don&apos;t bring cash to closing, but you will pay interest on those closing costs for the next 30 years.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">Does refinancing hurt my credit score?</h4>
-                        <p className="text-gray-600">
-                            Temporarily, yes. The lender will do a &quot;hard pull&quot; on your credit, which usually drops your score by a few points. It also closes your old mortgage account and opens a new one, which temporarily lowers the average age of your credit accounts. However, the score almost always rebounds completely within a few months of on-time payments.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">How much equity do I need to refinance?</h4>
-                        <p className="text-gray-600">
-                            Generally, you need at least 3% to 5% equity to qualify for a traditional rate-and-term refinance. To avoid PMI on the new loan, you need 20% equity. For a cash-out refinance, lenders typically require you to leave at least 20% equity in the home (i.e., you can only borrow up to 80% of the home&apos;s value).
-                        </p>
-                    </div>
-                </div>
             </div>
         </section>
     );
