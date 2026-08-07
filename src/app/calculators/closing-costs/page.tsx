@@ -2,56 +2,57 @@ import type { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import ClosingCostsSeoContent from './ClosingCostsSeoContent';
+import CalculatorFAQ from '@/components/CalculatorFAQ';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 const ClosingCostsClient = nextDynamic(() => import('./ClosingCostsClient'), {
     loading: () => <CalculatorSkeleton />,
 });
-import CalculatorFAQ from '@/components/CalculatorFAQ';
-import Breadcrumbs from '@/components/Breadcrumbs';
-import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Closing Costs Calculator 2026 — Buyer & Seller Breakdown | USFinNexus',
-    description: 'Estimate buyer and seller closing costs for any US home purchase. State-specific transfer taxes, title fees, prepaid items, and agent commissions. Free, no signup.',
+    title: 'Closing Cost Calculator | USFinNexus',
+    description: 'Estimate buyer and seller closing costs using the lender, title, recording, transfer-tax, prepaid, broker and other transaction-specific amounts you enter.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/closing-costs' },
     openGraph: {
         type: 'website',
-        title: 'Closing Costs Calculator 2026 — Buyer & Seller Breakdown | USFinNexus',
-        description: 'Estimate your full closing costs breakdown — title, transfer taxes, prepaids, and agent fees. Free for any US home purchase.',
+        title: 'Closing Cost Calculator | USFinNexus',
+        description: 'Build a buyer and seller closing-cost estimate from transaction-specific fees, taxes and prepaid items.',
         url: 'https://usfinnexus.com/calculators/closing-costs',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Closing Costs Calculator 2026 — USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus Closing Cost Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Closing Costs Calculator 2026 | USFinNexus',
-        description: 'Full buyer and seller closing cost breakdown. Title fees, transfer taxes, and prepaids for any US home.',
+        title: 'Closing Cost Calculator | USFinNexus',
+        description: 'Estimate buyer and seller closing costs using your transaction-specific amounts.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 
 const CLOSING_COSTS_FAQS = [
     {
-        question: 'How much are closing costs on a $300,000 home purchase?',
-        answer: 'Buyer closing costs on a $300,000 home typically range from $6,000–$15,000 (2%–5% of the purchase price). This includes lender origination fees ($1,500–3,000), title insurance ($700–1,500), appraisal ($350–$600), prepaid property taxes and insurance (1–2 months), and government recording fees. Use our calculator to get a state-specific estimate.',
+        question: 'How much are closing costs on a home purchase?',
+        answer: 'There is no single percentage that applies to every transaction. Closing costs depend on the loan, lender, property, title or settlement provider, state and local taxes, prepaid interest, escrow funding, insurance, contract credits and other items. The lender’s Loan Estimate and final Closing Disclosure are the best transaction-specific sources for a financed purchase.',
     },
     {
-        question: 'Who pays closing costs — buyer or seller?',
-        answer: 'Both buyer and seller pay closing costs, but different amounts. Buyers typically pay 2%–5% of the purchase price (lender fees, title insurance, prepaid items). Sellers typically pay 5%–9% (6% real estate agent commissions plus transfer taxes and attorney fees). In buyer\'s markets, sellers may agree to cover some buyer closing costs as a concession.',
+        question: 'Who pays closing costs, the buyer or seller?',
+        answer: 'Both sides can have closing costs, and allocation varies by law, contract and local custom. Buyers can pay lender, appraisal, title, recording and prepaid items. Sellers can pay transfer charges, settlement or attorney costs, agreed broker compensation and concessions. Use the purchase contract and settlement documents for the actual allocation.',
     },
     {
-        question: 'Can closing costs be rolled into the mortgage?',
-        answer: 'In most cases, no — standard purchase mortgages require closing costs to be paid upfront. However, some loan programs allow a “no-closing-cost” option where the costs are added to the loan amount or exchanged for a higher interest rate. VA loans allow sellers to pay all closing costs, and FHA allows sellers to contribute up to 6% of the purchase price.',
+        question: 'When should I receive a Loan Estimate and Closing Disclosure?',
+        answer: 'For mortgages covered by the CFPB Loan Estimate and Closing Disclosure rules, the lender generally provides the Loan Estimate within three business days after receiving an application, and the borrower must receive the Closing Disclosure at least three business days before closing. Some loan types are subject to different disclosure rules.',
     },
     {
-        question: 'What is lender\'s title insurance vs. owner\'s title insurance?',
-        answer: 'Lender\'s title insurance protects the mortgage lender against title defects and is typically required for all financed purchases. Owner\'s title insurance protects the buyer and is optional but strongly recommended. Lender\'s title insurance is usually $500–$1,000; owner\'s is $800–$2,000 depending on the home price and state.',
+        question: 'Are all closing costs tax deductible?',
+        answer: 'No. IRS rules distinguish deductible items, costs that can be added to the home’s basis, and costs that are neither deductible nor added to basis. Mortgage interest and certain real estate taxes can be deductible when applicable requirements are met; other settlement costs can receive different treatment. Review current IRS guidance for your transaction.',
     },
     {
-        question: 'What states have the highest transfer taxes on real estate?',
-        answer: 'States with the highest real estate transfer taxes include: Delaware (4%), Pennsylvania (2% + local), New York City (1%–1.425% + state), Vermont (1.25%), and Connecticut (0.75%–1.25%). States with no transfer tax include: Texas, Florida, Missouri, and Montana. Our closing costs calculator applies the correct state-specific rate automatically.',
+        question: 'Why does this calculator not automatically apply a state transfer-tax rate?',
+        answer: 'Transfer and recording charges can depend on state, county, municipality, property type, exemptions, consideration, mortgage amount and who pays under the contract. A single statewide lookup can produce a materially wrong estimate, so this calculator lets you enter the amount from the applicable local source or settlement professional.',
     },
 ];
 
@@ -59,14 +60,16 @@ export default function ClosingCostsPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
-                name="Closing Costs Calculator 2026"
-                description="Estimate buyer and seller closing costs for any US home purchase with state-specific transfer taxes and title fees."
+                name="Closing Cost Calculator"
+                description="Estimate buyer and seller closing costs using transaction-specific fees, taxes and prepaid items entered by the user."
                 url="https://usfinnexus.com/calculators/closing-costs"
+                dateModified="2026-08-07"
             />
-            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Closing Costs Calculator', item: '/calculators/closing-costs' }]} />
-                            <ClosingCostsClient />
+            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Closing Cost Calculator', item: '/calculators/closing-costs' }]} />
+            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 7, 2026 · Enter local transfer taxes and settlement charges from your transaction documents</p>
+            <ClosingCostsClient />
             <ClosingCostsSeoContent />
-            <CalculatorFAQ faqs={CLOSING_COSTS_FAQS} title="Closing Costs — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={CLOSING_COSTS_FAQS} title="Closing Cost Calculator FAQ" />
         </main>
     );
 }
