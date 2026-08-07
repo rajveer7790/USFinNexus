@@ -2,56 +2,58 @@ import type { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import DtiSeoContent from './DtiSeoContent';
+import CalculatorFAQ from '@/components/CalculatorFAQ';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 const DtiClient = nextDynamic(() => import('./DtiClient'), {
     loading: () => <CalculatorSkeleton />,
 });
-import CalculatorFAQ from '@/components/CalculatorFAQ';
-import Breadcrumbs from '@/components/Breadcrumbs';
-import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Debt-to-Income Ratio Calculator (DTI) 2026 | USFinNexus',
-    description: 'Free DTI calculator. Check if your debt-to-income ratio qualifies for a mortgage. See front-end and back-end DTI vs CFPB 28/43 guidelines instantly.',
+    title: 'Debt-to-Income Ratio Calculator | USFinNexus',
+    description:
+        'Calculate your debt-to-income ratio from gross monthly income and recurring debt payments. Learn how mortgage lenders use DTI without treating 43% as a universal General QM cutoff.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/dti' },
     openGraph: {
         type: 'website',
-        title: 'Debt-to-Income Ratio Calculator (DTI) 2026 | USFinNexus',
-        description: 'Check your front-end and back-end DTI against CFPB 28/43 mortgage guidelines instantly. Free DTI calculator.',
+        title: 'Debt-to-Income Ratio Calculator | USFinNexus',
+        description: 'Calculate DTI and understand how lenders use the ratio in mortgage underwriting.',
         url: 'https://usfinnexus.com/calculators/dti',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'DTI Ratio Calculator 2026 — USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus Debt-to-Income Ratio Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Debt-to-Income Ratio Calculator 2026 | USFinNexus',
-        description: 'Check your DTI against CFPB mortgage guidelines. Front-end and back-end ratios calculated instantly.',
+        title: 'Debt-to-Income Ratio Calculator | USFinNexus',
+        description: 'Calculate DTI and understand lender underwriting context.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 
 const DTI_FAQS = [
     {
-        question: 'What DTI ratio do I need to get a mortgage?',
-        answer: 'Most conventional lenders require a back-end DTI of 43% or lower for a Qualified Mortgage (CFPB standard). Some lenders go up to 50% for borrowers with strong credit and assets. FHA loans allow up to 43% DTI with a 580+ credit score, or up to 50% with compensating factors. VA loans technically have no DTI limit, but most lenders cap at 41%.',
+        question: 'How do I calculate my debt-to-income ratio?',
+        answer: 'Divide the monthly debt payments included in your scenario by gross monthly income, then multiply by 100. For example, $1,800 in monthly debt obligations divided by $6,000 of gross monthly income equals a 30% DTI.',
     },
     {
-        question: 'What is included in the front-end DTI ratio?',
-        answer: 'Front-end DTI (also called the "housing ratio") includes only housing-related costs: your mortgage principal, interest, property taxes, homeowners insurance, HOA fees, and PMI if applicable. The CFPB guideline is to keep this under 28% of gross monthly income for a Qualified Mortgage.',
+        question: 'Is 43% the maximum DTI for a Qualified Mortgage?',
+        answer: 'No. The CFPB removed the former fixed 43% DTI limit from the General Qualified Mortgage definition and replaced it with price-based thresholds. Mortgage lenders and individual loan programs can still use DTI requirements, so the relevant threshold varies by loan and borrower.',
     },
     {
-        question: 'How can I lower my DTI before applying for a mortgage?',
-        answer: 'The two ways to lower DTI are: (1) Pay off or pay down existing debts — even eliminating a small monthly car payment can move your DTI significantly. (2) Increase your income — a documented pay raise, side income, or added co-borrower income all reduce DTI. Avoid taking on new debt (car loans, credit cards) in the 6 months before applying for a mortgage.',
+        question: 'What is front-end versus back-end DTI?',
+        answer: 'Front-end DTI generally compares monthly housing obligations with gross monthly income. Back-end DTI generally adds other recurring monthly debts to the housing obligation. Exact definitions and treatment of individual obligations can vary by lender or program.',
     },
     {
-        question: 'Does student loan debt hurt my DTI for a mortgage?',
-        answer: 'Yes. Student loan monthly payments are counted in your back-end DTI. If your student loans are in income-driven repayment (IDR) with $0 payments, FHA uses 0.5% of the outstanding balance as a monthly payment proxy. Conventional loans use the actual payment amount shown on your credit report.',
+        question: 'Does student-loan debt count in mortgage DTI?',
+        answer: 'Student-loan obligations can be included in mortgage underwriting, but the payment amount used can depend on the loan program, repayment status and documentation. Use the payment a prospective lender or program would recognize rather than assuming one universal rule.',
     },
     {
-        question: 'What is a good DTI ratio for financial health?',
-        answer: 'As a general rule: under 20% DTI is excellent, 20–35% is good, 36–43% is manageable but watch for new debt, over 43% signals financial stress and limits loan options. The 2026 Consumer Financial Protection Bureau standard for Qualified Mortgages caps back-end DTI at 43%.',
+        question: 'Can a high DTI prevent mortgage approval?',
+        answer: 'A higher DTI can reduce borrowing capacity or affect eligibility, but DTI is not the only factor. Credit, assets, reserves, loan-to-value, property, income stability, automated underwriting findings and program rules can all matter.',
     },
 ];
 
@@ -59,18 +61,16 @@ export default function DtiPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
-                name="Debt-to-Income (DTI) Calculator 2026"
-                description="Free DTI calculator showing front-end and back-end ratios to check your mortgage readiness."
+                name="Debt-to-Income Ratio Calculator"
+                description="Calculate monthly debt payments as a percentage of gross monthly income."
                 url="https://usfinnexus.com/calculators/dti"
-                dateModified="2026-03-01"
+                dateModified="2026-08-07"
             />
-            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'DTI Calculator', item: '/calculators/dti' }]} />
-            <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026 &middot; CFPB Qualified Mortgage standards applied</p>
-                            <div className="pt-8">
-                    <DtiClient />
-                </div>
+            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Debt-to-Income Ratio Calculator', item: '/calculators/dti' }]} />
+            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 7, 2026 · Current CFPB General QM context applied</p>
+            <DtiClient />
             <DtiSeoContent />
-            <CalculatorFAQ faqs={DTI_FAQS} title="DTI Ratio — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={DTI_FAQS} title="Debt-to-Income Ratio Calculator FAQ" />
         </main>
     );
 }
