@@ -2,70 +2,71 @@ import type { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import DripSeoContent from './DripSeoContent';
+import CalculatorFAQ from '@/components/CalculatorFAQ';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 const DripClient = nextDynamic(() => import('./DripClient'), {
     loading: () => <CalculatorSkeleton />,
 });
-import CalculatorFAQ from '@/components/CalculatorFAQ';
-import Breadcrumbs from '@/components/Breadcrumbs';
-import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'DRIP Calculator 2026 — Dividend Reinvestment Forecaster | USFinNexus',
-    description: 'Calculate the compound growth of dividend reinvestment over time. Model dividend growth rates, yield on cost, and tax-adjusted returns. Free DRIP forecaster.',
+    title: 'Dividend Reinvestment Calculator | USFinNexus',
+    description: 'Project dividend-reinvestment growth using your starting balance, dividend yield, dividend-growth, share-price growth, contributions and tax assumptions.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/drip' },
     openGraph: {
         type: 'website',
-        title: 'DRIP Dividend Reinvestment Calculator 2026 | USFinNexus',
-        description: 'Model dividend reinvestment compounding over decades. Dividend growth, yield on cost, and tax modeling.',
+        title: 'Dividend Reinvestment Calculator | USFinNexus',
+        description: 'Model dividend reinvestment using assumptions you control.',
         url: 'https://usfinnexus.com/calculators/drip',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'DRIP Dividend Reinvestment Calculator 2026 — USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus Dividend Reinvestment Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'DRIP Dividend Reinvestment Calculator 2026 | USFinNexus',
-        description: 'How powerful is dividend reinvestment? Model your DRIP portfolio growth over decades.',
+        title: 'Dividend Reinvestment Calculator | USFinNexus',
+        description: 'Project dividend reinvestment under different yield and growth assumptions.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 
 const DRIP_FAQS = [
     {
-        question: 'What is Dividend Yield?',
-        answer: 'Dividend yield is the financial ratio that shows how much a company pays out in dividends each year relative to its stock price. For example, if a stock trades at $100 and pays a $3 annual dividend, the yield is 3%.',
+        question: 'What is dividend yield?',
+        answer: 'Dividend yield is the annual cash dividend per share divided by the current share price. It changes when either the dividend or share price changes and should not be treated as a guaranteed future return.',
     },
     {
-        question: 'What is Yield on Cost (YOC)?',
-        answer: 'Yield on Cost is the annual dividend payout divided by the original price you paid for the stock, rather than its current price. If you bought a stock for $50 and it now pays a $5 dividend, your Yield on Cost is 10%, even if the current stock price is $100 (which would make the current yield 5%).',
+        question: 'What is yield on cost?',
+        answer: 'Yield on cost compares current annual dividends with the original amount invested. It can be useful for looking back at an investment, but it does not replace current yield, total return or an opportunity-cost comparison.',
     },
     {
-        question: 'Are DRIP programs really free?',
-        answer: 'Yes, today almost all major US brokerages (Fidelity, Schwab, Vanguard, Robinhood) offer automatic dividend reinvestment for free with absolutely zero commission fees.',
+        question: 'Do brokerages always reinvest dividends for free?',
+        answer: 'No universal rule applies. Many U.S. brokerages offer automatic dividend reinvestment without a separate commission for eligible securities, but eligibility, fractional-share treatment, fees and execution methods vary by broker and security. Check the broker’s current terms.',
     },
     {
-        question: 'Do I have to pay taxes if I reinvest my dividends?',
-        answer: 'Yes. Unless the stock is held inside a tax-advantaged retirement account (like an IRA or 401k), the IRS treats reinvested dividends the exact same as cash dividends. You will owe taxes on them in the year they are paid.',
-    }
+        question: 'Are reinvested dividends still taxable?',
+        answer: 'In a taxable account, reinvesting a dividend generally does not by itself make the dividend tax-free. Federal tax treatment depends on whether a dividend is qualified or nonqualified and on the taxpayer’s circumstances. Tax-advantaged accounts have different rules.',
+    },
 ];
 
 export default function DripPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <WebApplicationSchema
-                name="Dividend Reinvestment (DRIP) Forecaster"
-                description="Calculate the compound growth of your dividend investing portfolio over time."
+                name="Dividend Reinvestment Calculator"
+                description="Project dividend reinvestment using user-entered yield, growth, contribution and tax assumptions."
                 url="https://usfinnexus.com/calculators/drip"
-                dateModified="2026-03-01"
+                dateModified="2026-08-07"
             />
-            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'DRIP Forecaster', item: '/calculators/drip' }]} />
-            <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026</p>
-            <h1 className="sr-only">DRIP Calculator: Dividend Reinvestment Forecaster</h1>
+            <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Dividend Reinvestment Calculator', item: '/calculators/drip' }]} />
+            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 7, 2026 · Scenario analysis, not an investment-return forecast</p>
+            <h1 className="sr-only">Dividend Reinvestment Calculator</h1>
             <DripClient />
             <DripSeoContent />
-            <CalculatorFAQ faqs={DRIP_FAQS} title="Dividend Investing — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={DRIP_FAQS} title="Dividend Reinvestment Calculator FAQ" />
         </main>
     );
 }
