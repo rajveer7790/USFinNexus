@@ -14,36 +14,46 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: '2026 Federal Income Tax Calculator — Post-TCJA Brackets | USFinNexus',
-    description: 'Estimate your 2026 federal income taxes under new post-TCJA sunset brackets. Calculate effective and marginal tax rates, standard deduction, and take-home pay.',
+    title: '2026 Federal Income Tax Calculator | USFinNexus',
+    description:
+        'Estimate 2026 U.S. federal income tax using official IRS ordinary-income brackets and standard deductions. Includes a simplified employee Social Security and Medicare estimate.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/income-tax' },
     openGraph: {
         type: 'website',
-        title: '2026 Federal Income Tax Calculator — Post-TCJA Sunset Brackets | USFinNexus',
-        description: 'Calculate your 2026 federal income tax under new post-TCJA brackets. Effective rate, marginal rate, and take-home pay.',
+        title: '2026 Federal Income Tax Calculator | USFinNexus',
+        description: 'Estimate tax-year 2026 federal income tax with official IRS brackets and standard deductions.',
         url: 'https://usfinnexus.com/calculators/income-tax',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: '2026 Income Tax Calculator — USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus 2026 Federal Income Tax Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: '2026 Income Tax Calculator | Post-TCJA Brackets | USFinNexus',
-        description: 'What will you owe in 2026? Calculate your federal taxes under the new post-TCJA brackets.',
+        title: '2026 Federal Income Tax Calculator | USFinNexus',
+        description: 'Estimate 2026 federal income tax using official IRS brackets and standard deductions.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 
 const INCOME_TAX_FAQS = [
     {
-        question: 'What is the difference between a Marginal Tax Rate and an Effective Tax Rate?',
-        answer: 'Your Marginal Tax Rate is the highest tax bracket your last dollar falls into (e.g., 24%). However, because the US uses a progressive tax system, you don’t pay 24% on all your income. Your Effective Tax Rate is the true average percentage you actually pay across all brackets, which is always much lower than your Marginal rate.',
+        question: 'What are the federal income tax rates for 2026?',
+        answer: 'For tax year 2026, the ordinary federal income-tax rates are 10%, 12%, 22%, 24%, 32%, 35% and 37%. The dollar thresholds depend on filing status. USFinNexus uses the 2026 IRS rate schedules for Single, Married Filing Jointly and Head of Household in this simplified calculator.',
     },
     {
-        question: 'What happens when the TCJA expires in 2026?',
-        answer: 'The Tax Cuts and Jobs Act of 2017 lowered individual tax rates. Many of these provisions expire at the end of 2025. In 2026, without new legislation, the top marginal rate returns to 39.6% and the massive Standard Deduction will be cut roughly in half, pushing more Americans back to itemizing deductions.',
+        question: 'What is the 2026 standard deduction?',
+        answer: 'For tax year 2026, the basic standard deduction is $16,100 for Single filers, $32,200 for Married Filing Jointly, and $24,150 for Head of Household, before additional deductions that may apply for age or blindness.',
     },
     {
-        question: 'Do 1099 contractors pay more taxes than W-2 employees?',
-        answer: 'Yes. W-2 employees split FICA taxes (Social Security and Medicare) with their employer, paying only 7.65%. If you are a 1099 independent contractor, you are both the employer and employee, meaning you must pay the full 15.3% Self-Employment Tax on top of your standard federal income tax.',
+        question: 'Did federal tax rates automatically revert to pre-TCJA rates in 2026?',
+        answer: 'No. Current 2026 IRS guidance uses the 10%, 12%, 22%, 24%, 32%, 35% and 37% rate structure. The calculator does not use the old assumption that the individual rate schedule would automatically revert to the pre-TCJA brackets in 2026.',
+    },
+    {
+        question: 'Does this calculator handle self-employment tax or 1099 income?',
+        answer: 'No. The payroll-tax portion is a simplified employee-wage model. Self-employment tax, the deductible portion of self-employment tax, business deductions, QBI and other rules require a different calculation.',
+    },
+    {
+        question: 'Is this the same as preparing a federal tax return?',
+        answer: 'No. It is an educational estimate. It does not model every credit, deduction, preferential capital-gain rate, AMT, NIIT, dependent rule, special deduction, state tax or Form 1040 provision. Use current IRS forms or qualified tax software/professional advice for filing.',
     },
 ];
 
@@ -51,15 +61,17 @@ export default function IncomeTaxPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
-                name="Free 2026 Federal Income Tax Calculator"
-                description="Estimate your 2026 federal income taxes with post-TCJA brackets. See effective and marginal rates instantly."
+                name="2026 Federal Income Tax Calculator"
+                description="Estimate 2026 federal income tax using official IRS ordinary-income brackets and standard deductions."
                 url="https://usfinnexus.com/calculators/income-tax"
+                dateModified="2026-08-07"
             />
-            <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Income Tax', item: '/calculators/income-tax' }]} />
+            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Federal Income Tax Calculator', item: '/calculators/income-tax' }]} />
+            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 7, 2026 · Tax year 2026 IRS rate schedules</p>
             <h1 className="sr-only">2026 Federal Income Tax Calculator</h1>
             <IncomeTaxClient />
             <IncomeTaxSeoContent />
-            <CalculatorFAQ faqs={INCOME_TAX_FAQS} title="Income Tax — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={INCOME_TAX_FAQS} title="2026 Federal Income Tax Calculator FAQ" />
         </main>
     );
 }
