@@ -14,20 +14,20 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Free Mortgage Calculator — No Email or Signup Required (2026) | USFinNexus',
-    description: 'Calculate your full PITI mortgage payment instantly — principal, interest, taxes, insurance & PMI. Free PDF download. 100% privacy focused, no email required.',
+    title: 'Mortgage Calculator | USFinNexus',
+    description: 'Estimate your monthly mortgage payment including principal, interest, property taxes, homeowners insurance, PMI and HOA fees. View amortization and extra-payment scenarios.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/mortgage' },
     openGraph: {
         type: 'website',
-        title: 'Free Mortgage Calculator — No Email or Signup Required (2026)',
-        description: 'Full PITI breakdown, amortization schedule, extra payments, and instant free PDF + CSV exports. No signup or email needed.',
+        title: 'Mortgage Calculator | USFinNexus',
+        description: 'Estimate a complete monthly mortgage payment with principal, interest, taxes, insurance, PMI and HOA fees.',
         url: 'https://usfinnexus.com/calculators/mortgage',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Free Mortgage Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Mortgage Calculator — USFinNexus' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Free Mortgage Calculator — No Email or Signup Required (2026)',
-        description: 'Full PITI breakdown + amortization schedule. Free PDF export. No signup needed.',
+        title: 'Mortgage Calculator | USFinNexus',
+        description: 'Estimate monthly PITI, PMI and HOA costs and review an amortization schedule.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
@@ -35,27 +35,27 @@ export const metadata: Metadata = {
 const MORTGAGE_FAQS = [
     {
         question: 'What is PITI in a mortgage payment?',
-        answer: 'PITI stands for Principal, Interest, Taxes, and Insurance — the four components of a full monthly mortgage payment. Principal reduces your loan balance, interest is the lender\'s fee, property taxes are collected monthly into escrow, and insurance covers homeowners insurance (and PMI if your down payment is under 20%).',
+        answer: 'PITI stands for principal, interest, taxes, and insurance. Principal reduces the loan balance, interest is the cost of borrowing, and taxes and homeowners insurance are commonly included in an escrowed monthly payment. PMI, HOA dues, and other costs may also affect the total monthly housing payment.',
     },
     {
-        question: 'How much does a $400,000 mortgage cost per month in 2026?',
-        answer: 'At a 7% interest rate on a 30-year fixed mortgage with $80,000 down (20%), the principal and interest payment is approximately $2,129/month. Adding typical property taxes ($400/mo) and insurance ($120/mo), total PITI is roughly $2,650/month. Use our calculator for your exact figures.',
+        question: 'How much does a $400,000 mortgage cost per month at 7%?',
+        answer: 'For a $400,000 loan amount at 7% interest over 30 years, principal and interest are about $2,661 per month. If instead the home price is $400,000 with 20% down, the $320,000 loan has principal and interest of about $2,129 per month. Property taxes, homeowners insurance, HOA dues, and mortgage insurance can increase the total payment.',
     },
     {
-        question: 'What credit score do I need for the best mortgage rate?',
-        answer: 'To qualify for the best conventional mortgage rates, you typically need a credit score of 740 or higher. Scores of 720–739 are still excellent. FHA loans accept scores as low as 580 with 3.5% down, or 500 with 10% down. VA loans have no minimum score set by the VA, though lenders often require 620+.',
+        question: 'What credit score do I need for a mortgage?',
+        answer: 'Minimum and preferred credit scores vary by loan program, lender, automated underwriting results, down payment, and borrower profile. Higher scores can improve pricing, but there is no single credit-score threshold that guarantees the best mortgage rate across all lenders and programs.',
     },
     {
         question: 'How does PMI work and when can I cancel it?',
-        answer: 'Private Mortgage Insurance (PMI) is required when your down payment is less than 20% of the home price. It costs 0.5%–1.5% of the loan annually. Under the Homeowners Protection Act, your lender must automatically cancel PMI when your loan balance reaches 78% of the original home value. You can request cancellation at 80% LTV.',
+        answer: 'Private mortgage insurance commonly applies to conventional loans with higher loan-to-value ratios. Under the federal Homeowners Protection Act, borrower-requested cancellation can generally become available at 80% of the home’s original value when applicable conditions are met, and automatic termination generally occurs at the scheduled 78% point when applicable requirements are satisfied. Different rules apply to FHA mortgage insurance.',
     },
     {
-        question: 'Is it better to get a 15-year or 30-year mortgage?',
-        answer: 'A 15-year mortgage has higher monthly payments but significantly lower total interest paid — often 50–60% less. A 30-year mortgage has lower monthly payments, giving more cash flow flexibility. If you can comfortably afford the 15-year payments, it builds equity faster and saves tens of thousands in interest. Use our mortgage calculator to compare both scenarios.',
+        question: 'Is a 15-year or 30-year mortgage better?',
+        answer: 'A 15-year fixed mortgage generally has a higher monthly principal-and-interest payment but can reduce total interest and build equity faster. A 30-year term usually lowers the required monthly payment but can produce more lifetime interest. The better option depends on cash flow, rate, goals, and how long you expect to keep the loan.',
     },
     {
         question: 'What is the 2026 conforming loan limit?',
-        answer: 'The 2026 FHFA conforming loan limit is $832,750 for most US counties (baseline). In high-cost areas (like parts of California, New York, and Hawaii), the ceiling is $1,249,125. Loans above these limits are "jumbo" loans.',
+        answer: 'The FHFA 2026 baseline conforming loan limit for a one-unit property is $832,750 in most of the United States. The one-unit high-cost-area ceiling is $1,249,125. County-specific limits can differ, so confirm the applicable limit for the property location.',
     },
 ];
 
@@ -63,14 +63,14 @@ export default function MortgagePage() {
     return (
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <WebApplicationSchema
-                name="Free Mortgage Calculator 2026"
-                description="Calculate your full PITI mortgage payment instantly — principal, interest, taxes, insurance & PMI. Free PDF & CSV download."
+                name="Mortgage Calculator"
+                description="Estimate monthly mortgage principal, interest, taxes, insurance, PMI and HOA costs and review an amortization schedule."
                 url="https://usfinnexus.com/calculators/mortgage"
-                dateModified="2026-05-10"
+                dateModified="2026-08-07"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Mortgage Calculator', item: '/calculators/mortgage' }]} />
-            <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: May 2026 &middot; 2026 FHFA conforming loan limits applied</p>
-            <h1 className="sr-only">Free Mortgage Calculator 2026 with PDF Download</h1>
+            <p className="text-xs text-gray-500 mt-1 mb-4">Last reviewed: August 7, 2026 · 2026 FHFA conforming loan limits verified</p>
+            <h1 className="sr-only">Mortgage Calculator</h1>
             <MortgageCalculatorClient />
             <MortgageSeoContent />
             <CalculatorFAQ faqs={MORTGAGE_FAQS} title="Mortgage Calculator — Frequently Asked Questions" />
