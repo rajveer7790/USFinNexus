@@ -27,7 +27,7 @@ export const ALL_ARTICLES: ArticleEntry[] = [
     { slug: 'ny-boi-law-starts-january-2026-even-if-federal-exempt', title: "NY BOI Law Starts January 2026 - Even If Federal BOI Is Exempt", category: 'State Compliance', readTime: '6 min', excerpt: 'New York marches ahead with its own transparency framework regardless of federal changes.', image: '/images/ny_llc_transparency_hero_1772351646909.png', date: 'Feb 26, 2026' },
     { slug: '2026-tax-changes-20-percent-qbi-deduction-permanent', title: '2026 Tax Changes: 20% QBI Deduction Made Permanent - Save Big on Your LLC', category: 'Tax', readTime: '8 min', excerpt: 'The One Big Beautiful Bill locked in LLC tax savings permanently. Here is what it means for you.', image: '/images/tax_deduction_hero_1772351400720.png', date: 'Feb 24, 2026' },
     { slug: 'fincen-irs-compliance-checklist-us-llc-2026', title: 'FinCEN + IRS Compliance Checklist Every US LLC Needs in 2026', category: 'Tax', readTime: '7 min', excerpt: 'A combined federal compliance roadmap covering BOI, real estate reporting, and tax filings.', image: '/images/irs_compliance_hero_1772351552653.png', date: 'Feb 25, 2026' },
-    { slug: '2026-income-tax-brackets-how-the-tcja-sunset-affects-you', title: '2026 Income Tax Brackets: Navigating the TCJA Sunset and New Legislation', category: 'Tax', readTime: '9 min', excerpt: 'A comprehensive guide to the 2026 income tax bracket changes and how the TCJA sunset impacts your taxable income.', image: '/images/tax_deduction_hero_1772351400720.png', date: 'Feb 26, 2026' },
+    { slug: '2026-income-tax-brackets-how-the-tcja-sunset-affects-you', title: '2026 Federal Income Tax Brackets and Standard Deduction', category: 'Tax', readTime: '9 min', excerpt: 'A guide to the current 2026 federal ordinary-income tax brackets and standard deductions under the law in effect for tax year 2026.', image: '/images/tax_deduction_hero_1772351400720.png', date: 'Feb 26, 2026' },
 ];
 
 function seededRandom(seed: number) {
@@ -40,7 +40,7 @@ function shuffleArray<T>(array: T[], seedStr: string): T[] {
     for (let i = 0; i < seedStr.length; i++) {
         seed += seedStr.charCodeAt(i);
     }
-    
+
     const shuffled = [...array];
     for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(seededRandom(seed++) * (i + 1));
@@ -51,10 +51,8 @@ function shuffleArray<T>(array: T[], seedStr: string): T[] {
 
 export function getRelatedArticles(currentSlug: string, count = 4): ArticleEntry[] {
     const current = ALL_ARTICLES.find(a => a.slug === currentSlug);
-    
+
     if (!current) {
-        // If current article is not in the list, deterministically shuffle the entire list
-        // based on the currentSlug so that every page gets a unique set of related articles.
         const fallbackArticles = ALL_ARTICLES.filter(a => a.slug !== currentSlug);
         return shuffleArray(fallbackArticles, currentSlug).slice(0, count);
     }
