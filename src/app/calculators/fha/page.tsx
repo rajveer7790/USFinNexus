@@ -2,32 +2,33 @@ import type { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import FhaSeoContent from './FhaSeoContent';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 const GovLoanClient = nextDynamic(() => import('../fha-va-usda/GovLoanClient'), {
     loading: () => <CalculatorSkeleton />,
 });
-import Breadcrumbs from '@/components/Breadcrumbs';
-import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'FHA Loan Calculator 2026 - MIP, PMI, and Payment Breakdown | USFinNexus',
+    title: 'FHA Mortgage Calculator | USFinNexus',
     description:
-        'Calculate your exact FHA mortgage payment including the upfront and annual Mortgage Insurance Premium (MIP). Free FHA calculator with 3.5% down payment options.',
+        'Estimate an FHA mortgage payment including principal, interest, property taxes, homeowners insurance, upfront MIP and annual mortgage insurance under the assumptions entered.',
+    alternates: { canonical: 'https://usfinnexus.com/calculators/fha' },
     openGraph: {
         type: 'website',
-        title: 'FHA Loan Calculator 2026 with MIP | USFinNexus',
-        description: 'Calculate your exact FHA loan monthly payment including upfront MIP (1.75%) and annual MIP fees. See the true cost of FHA financing with 3.5% down in 2026.',
+        title: 'FHA Mortgage Calculator | USFinNexus',
+        description: 'Estimate an FHA mortgage payment with upfront and annual mortgage-insurance assumptions.',
         url: 'https://usfinnexus.com/calculators/fha',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'FHA Loan Calculator 2026 with MIP - USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus FHA Mortgage Calculator' }],
     },
-    alternates: { canonical: 'https://usfinnexus.com/calculators/fha' },
     twitter: {
         card: 'summary_large_image',
-        title: 'FHA Loan Calculator 2026 — MIP & Payment Breakdown | USFinNexus',
-        description: 'Exact FHA payment with upfront and annual MIP. 3.5% down options. Free FHA mortgage calculator.',
+        title: 'FHA Mortgage Calculator | USFinNexus',
+        description: 'Estimate FHA principal, interest, taxes, insurance and mortgage-insurance costs.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
@@ -36,12 +37,14 @@ export default function FhaLoanPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
-                name="FHA Loan Calculator 2026"
-                description="Calculate your exact FHA loan monthly payment including upfront and annual MIP fees."
+                name="FHA Mortgage Calculator"
+                description="Estimate an FHA mortgage payment including principal, interest, property taxes, insurance and mortgage-insurance assumptions."
                 url="https://usfinnexus.com/calculators/fha"
+                dateModified="2026-08-07"
             />
-            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'FHA Loan Calculator', item: '/calculators/fha' }]} />
-                            <GovLoanClient initialTab="fha" />
+            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'FHA Mortgage Calculator', item: '/calculators/fha' }]} />
+            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 7, 2026 · FHA estimates are subject to HUD program rules and case-specific mortgage-insurance treatment</p>
+            <GovLoanClient initialTab="fha" />
             <FhaSeoContent />
         </main>
     );
