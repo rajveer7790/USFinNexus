@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
-import AffordabilitySeoContent from './AffordabilitySeoContent';
+import AffordabilitySeoContentV2 from './AffordabilitySeoContentV2';
 
 const AffordabilityClient = nextDynamic(() => import('./AffordabilityClient'), {
     loading: () => <CalculatorSkeleton />,
@@ -14,44 +14,44 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Home Affordability Calculator 2026 — How Much House Can I Afford? | USFinNexus',
-    description: 'Free CFPB-compliant home affordability calculator. Know your max home price, monthly payment, front-end & back-end DTI in seconds. No signup, no spam.',
-    alternates: { canonical: 'https://usfinnexus.com/calculators/affordability' },
+    title: 'Home Affordability Calculator | USFinNexus',
+    description: 'Estimate how much house you can afford using income, recurring debt, down payment, mortgage rate, term and property-tax assumptions. Compare 28% and 43% planning scenarios.',
+    alternates: { canonical: '/calculators/affordability' },
     openGraph: {
         type: 'website',
-        title: 'Home Affordability Calculator 2026 — How Much House Can I Afford?',
-        description: 'CFPB-compliant affordability calculator. Know your max home price, DTI ratios, and monthly payment instantly.',
+        title: 'Home Affordability Calculator | USFinNexus',
+        description: 'Estimate a home-price range from income, debt, down payment, mortgage rate and property-tax assumptions.',
         url: 'https://usfinnexus.com/calculators/affordability',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Home Affordability Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Home Affordability Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Home Affordability Calculator 2026 | USFinNexus',
-        description: 'How much house can you afford? Get your CFPB-compliant max home price instantly.',
+        title: 'Home Affordability Calculator | USFinNexus',
+        description: 'Estimate how much house you can afford and compare planning scenarios.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 
 const AFFORDABILITY_FAQS = [
     {
-        question: 'How much house can I afford on a $100,000 salary?',
-        answer: 'On a $100,000 annual salary (roughly $8,333/month gross), the CFPB\'s 28% front-end DTI guideline allows up to $2,333/month for housing (PITI). At a 7% rate on a 30-year mortgage, that supports a home price of roughly $290,000–$320,000 depending on taxes and insurance in your area. Use our affordability calculator for your exact situation.',
+        question: 'How does a home affordability calculator work?',
+        answer: 'It combines gross income, recurring debt, a proposed housing-payment share, down payment, mortgage rate, loan term, property taxes and other assumptions to estimate a home-price range. It is a planning estimate, not a lender preapproval.',
     },
     {
-        question: 'What is the CFPB 28/43 rule for mortgage qualification?',
-        answer: 'The CFPB\'s Qualified Mortgage guidelines use two DTI limits: the "front-end" ratio caps your housing costs (PITI) at 28% of gross monthly income, and the "back-end" ratio caps all monthly debt payments (housing + car loans + student loans + credit cards) at 43% of gross monthly income. Lenders may allow higher ratios for strong borrowers.',
+        question: 'Is 43% DTI the current CFPB Qualified Mortgage maximum?',
+        answer: 'No. The CFPB removed the former fixed 43% DTI limit from the General Qualified Mortgage definition and replaced it with price-based thresholds. Specific loan programs, automated underwriting systems and lenders can use different DTI requirements.',
     },
     {
-        question: 'Does my down payment affect how much house I can afford?',
-        answer: 'Yes — a larger down payment reduces your loan amount, which lowers your monthly payment and may eliminate PMI (if 20%+). A $50,000 larger down payment on a 30-year 7% loan reduces monthly payments by about $333/month and could increase your affordable home price by $50,000–$60,000.',
+        question: 'Why does this calculator show 28% and 43%?',
+        answer: 'They are familiar planning reference points. The 28% output models a more conservative housing-cost share and the 43% output models a higher total-debt scenario. Neither percentage guarantees mortgage approval or defines a universal current lending limit.',
     },
     {
-        question: 'What debts count toward my back-end DTI?',
-        answer: 'Back-end DTI includes all monthly minimum debt payments: your proposed mortgage PITI, car loans, student loans, personal loans, credit card minimum payments, alimony, and child support. It does not include utilities, groceries, insurance premiums, or subscription services.',
+        question: 'Does a larger down payment increase affordability?',
+        answer: 'A larger down payment generally reduces the amount financed and the monthly principal-and-interest payment for the same home price. It can also affect mortgage-insurance costs. The actual effect depends on the loan program, rate, taxes, insurance and other factors.',
     },
     {
-        question: 'Can I afford a house with a 50% DTI?',
-        answer: 'Some lenders allow DTI ratios up to 50% for borrowers with strong compensating factors (high credit score, large cash reserves, low LTV). However, a 50% DTI leaves less financial buffer for emergencies and lifestyle expenses. Financial planners generally recommend keeping total housing costs under 30% of gross income.',
+        question: 'What should I include in recurring monthly debt?',
+        answer: 'For a planning estimate, include required recurring obligations such as auto loans, student loans and minimum revolving-debt payments. Mortgage underwriting can count certain obligations and income differently, so a lender-calculated DTI can differ from this tool.',
     },
 ];
 
@@ -59,17 +59,16 @@ export default function AffordabilityPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
-                name="Home Affordability Calculator 2026"
-                description="Free CFPB-compliant home affordability calculator. Know your max home price, monthly payment, and DTI ratios instantly."
+                name="Home Affordability Calculator"
+                description="Estimate a home-price range using income, recurring debt, down payment, mortgage rate and housing-cost assumptions."
                 url="https://usfinnexus.com/calculators/affordability"
-                dateModified="2026-03-01"
+                dateModified="2026-08-07"
             />
-            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Affordability Calculator', item: '/calculators/affordability' }]} />
-            <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026 &middot; CFPB 28/43 DTI guidelines applied</p>
+            <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Home Affordability Calculator', item: '/calculators/affordability' }]} />
+            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 7, 2026 &middot; 28% and 43% are planning scenarios, not universal approval limits</p>
             <AffordabilityClient />
-            <AffordabilitySeoContent />
-            <CalculatorFAQ faqs={AFFORDABILITY_FAQS} title="Home Affordability — Frequently Asked Questions" />
+            <AffordabilitySeoContentV2 />
+            <CalculatorFAQ faqs={AFFORDABILITY_FAQS} title="Home Affordability Calculator FAQs" />
         </main>
     );
 }
-
