@@ -2,31 +2,32 @@ import type { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import ArmSeoContent from './ArmSeoContent';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 const ArmCalculatorClient = nextDynamic(() => import('./ArmCalculatorClient'), {
     loading: () => <CalculatorSkeleton />,
 });
-import Breadcrumbs from '@/components/Breadcrumbs';
-import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'ARM Calculator 2026 - Adjustable Rate Mortgage Worst-Case Analysis | USFinNexus',
-    description: 'Free ARM mortgage calculator. Instantly see your worst-case payment scenario, fully-indexed rate, and understand rate caps (5/1, 7/1 ARMs).',
+    title: 'ARM Mortgage Calculator | USFinNexus',
+    description: 'Estimate adjustable-rate mortgage payments and test rate-reset and cap scenarios for an ARM using the loan amount, initial rate, index, margin and cap assumptions you enter.',
+    alternates: { canonical: 'https://usfinnexus.com/calculators/arm' },
     openGraph: {
         type: 'website',
-        title: 'ARM Calculator 2026 | USFinNexus',
-        description: 'Adjustable rate mortgage calculator with worst-case payment scenarios and rate cap analysis for 5/1 and 7/1 ARMs. Free, no signup required.',
+        title: 'ARM Mortgage Calculator | USFinNexus',
+        description: 'Model adjustable-rate mortgage payments, rate resets and cap scenarios.',
         url: 'https://usfinnexus.com/calculators/arm',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'ARM Adjustable Rate Mortgage Calculator 2026 - USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus ARM Mortgage Calculator' }],
     },
-    alternates: { canonical: 'https://usfinnexus.com/calculators/arm' },
     twitter: {
         card: 'summary_large_image',
-        title: 'ARM Calculator 2026 — Adjustable Rate Mortgage Worst-Case | USFinNexus',
-        description: 'See your worst-case ARM payment, fully-indexed rate, and rate cap scenarios for 5/1, 7/1 ARMs. Free calculator.',
+        title: 'ARM Mortgage Calculator | USFinNexus',
+        description: 'Estimate adjustable-rate mortgage payment and rate-cap scenarios.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
@@ -35,12 +36,13 @@ export default function ArmCalculatorPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
-                name="ARM Calculator 2026"
-                description="Adjustable rate mortgage calculator with worst-case scenarios and rate cap analysis."
+                name="ARM Mortgage Calculator"
+                description="Estimate adjustable-rate mortgage payments and rate-reset scenarios using the assumptions entered."
                 url="https://usfinnexus.com/calculators/arm"
+                dateModified="2026-08-07"
             />
-            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'ARM Calculator', item: '/calculators/arm' }]} />
-                            <ArmCalculatorClient />
+            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'ARM Mortgage Calculator', item: '/calculators/arm' }]} />
+            <ArmCalculatorClient />
             <ArmSeoContent />
         </main>
     );
