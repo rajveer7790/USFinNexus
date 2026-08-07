@@ -14,36 +14,37 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Personal Loan Calculator 2026 - Payment & Interest Estimator | USFinNexus',
-    description: 'Free personal loan calculator for 2026. Calculate monthly payments, total interest, and payday loan or debt consolidation payoff schedules.',
+    title: 'Personal Loan Calculator | USFinNexus',
+    description: 'Estimate a personal-loan monthly payment, total interest and payoff schedule using the loan amount, APR, term and fee assumptions you enter.',
+    alternates: { canonical: 'https://usfinnexus.com/calculators/personal-loan' },
     openGraph: {
         type: 'website',
-        title: 'Personal Loan Calculator 2026 - Payment & Interest | USFinNexus',
-        description: 'Calculate your monthly personal loan payment, total interest cost, and full payoff schedule. Works for debt consolidation and general loans. Free, no signup.',
+        title: 'Personal Loan Calculator | USFinNexus',
+        description: 'Estimate personal-loan payments, interest and payoff schedule.',
         url: 'https://usfinnexus.com/calculators/personal-loan',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Personal Loan Calculator 2026 - USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus Personal Loan Calculator' }],
     },
-    alternates: { canonical: 'https://usfinnexus.com/calculators/personal-loan' },
     twitter: {
         card: 'summary_large_image',
-        title: 'Personal Loan Calculator 2026 — Payment & APR Comparison | USFinNexus',
-        description: 'Calculate personal loan monthly payments, total interest, and compare APRs. Free personal loan estimator.',
+        title: 'Personal Loan Calculator | USFinNexus',
+        description: 'Estimate monthly personal-loan payments and total interest.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 
 const PERSONAL_LOAN_FAQS = [
     {
-        question: 'Are personal loan rates fixed or variable?',
-        answer: 'Most personal loans have fixed interest rates. This means your monthly payment will remain exactly the same for the entire life of the loan (e.g., $450 a month for exactly 36 months). This predictability makes them excellent for debt consolidation.',
+        question: 'Are personal-loan interest rates fixed or variable?',
+        answer: 'Many unsecured personal loans use a fixed APR and fixed payment, but product terms vary by lender. Confirm whether the offered APR is fixed or variable and whether fees are included in the disclosed APR before comparing loans.',
     },
     {
-        question: 'What is an Origination Fee?',
-        answer: 'An origination fee is an upfront charge taken by the lender to process the personal loan. It usually ranges from 1% to 8% of the loan amount. If you borrow $10,000 with a 5% fee, the bank takes $500 immediately and only gives you $9,500. You must still pay back the full $10,000.',
+        question: 'What is a personal-loan origination fee?',
+        answer: 'An origination fee is a lender charge that may be deducted from loan proceeds or otherwise reflected in the transaction. The fee amount and treatment vary by lender. Compare the APR, amount actually received and total repayment rather than assuming one fee range applies to every loan.',
     },
     {
         question: 'Can I pay off a personal loan early?',
-        answer: 'Yes, but you must check the loan agreement for a "Prepayment Penalty." Many reputable lenders allow you to pay off the loan early with zero penalties, which saves you money on interest. Always ask the lender explicitly if they charge a prepayment penalty before signing the contract.',
+        answer: 'Many loans permit early payoff, but prepayment terms depend on the contract and applicable law. Review the loan agreement for any prepayment charge and confirm how additional payments are applied before assuming an early payoff will work a particular way.',
     },
 ];
 
@@ -51,15 +52,16 @@ export default function PersonalLoanPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
-                name="Personal Loan Calculator 2026"
-                description="Calculate your monthly personal loan payment, total interest, and full payoff schedule."
+                name="Personal Loan Calculator"
+                description="Estimate personal-loan monthly payment, total interest and payoff schedule using user-entered assumptions."
                 url="https://usfinnexus.com/calculators/personal-loan"
+                dateModified="2026-08-07"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Personal Loan Calculator', item: '/calculators/personal-loan' }]} />
             <h1 className="sr-only">Personal Loan Calculator</h1>
             <PersonalLoanClient />
             <PersonalLoanSeoContent />
-            <CalculatorFAQ faqs={PERSONAL_LOAN_FAQS} title="Personal Loans — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={PERSONAL_LOAN_FAQS} title="Personal Loan Calculator FAQ" />
         </main>
     );
 }
