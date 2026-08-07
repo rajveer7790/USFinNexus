@@ -13,20 +13,20 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Mortgage Amortization Schedule Calculator 2026 | USFinNexus',
-    description: 'Free mortgage amortization schedule calculator. See exact month-by-month breakdown of principal vs interest, extra payments impact, and total interest over 15 or 30 years.',
-    alternates: { canonical: 'https://usfinnexus.com/calculators/amortization' },
+    title: 'Mortgage Amortization Calculator | USFinNexus',
+    description: 'Generate a month-by-month mortgage amortization schedule showing principal, interest, remaining balance and the effect of extra principal payments.',
+    alternates: { canonical: '/calculators/amortization' },
     openGraph: {
         type: 'website',
-        title: 'Mortgage Amortization Schedule Calculator 2026 | USFinNexus',
-        description: 'Full month-by-month amortization table with extra payments. See exactly how much interest you can save. Free PDF export.',
+        title: 'Mortgage Amortization Calculator | USFinNexus',
+        description: 'View a month-by-month mortgage amortization schedule and model extra principal payments.',
         url: 'https://usfinnexus.com/calculators/amortization',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Amortization Schedule Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Mortgage Amortization Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mortgage Amortization Schedule Calculator 2026 | USFinNexus',
-        description: 'Full month-by-month amortization table. See principal vs interest every month. Free PDF export.',
+        title: 'Mortgage Amortization Calculator | USFinNexus',
+        description: 'View principal, interest and remaining balance month by month.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
@@ -35,14 +35,13 @@ export default function AmortizationPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
-                name="Mortgage Amortization Schedule Calculator 2026"
-                description="Generate a full month-by-month amortization schedule showing principal vs. interest and extra payment impacts."
+                name="Mortgage Amortization Calculator"
+                description="Generate a month-by-month mortgage amortization schedule showing principal, interest, remaining balance and extra-payment impacts."
                 url="https://usfinnexus.com/calculators/amortization"
-                dateModified="2026-03-01"
+                dateModified="2026-08-07"
             />
-            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Amortization Calculator', item: '/calculators/amortization' }]} />
-            <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026 &middot; Standard US mortgage amortization formula</p>
-                            <MortgageCalculator initialTab="amortization" />
+            <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Mortgage Amortization Calculator', item: '/calculators/amortization' }]} />
+            <MortgageCalculator initialTab="amortization" />
             <AmortizationSeoContent />
         </main>
     );
