@@ -14,37 +14,41 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Free HELOC Calculator 2026 - Home Equity Line of Credit | USFinNexus',
-    description:
-        'Calculate your HELOC payments, available equity, and total interest. See draw-period vs repayment-period costs instantly. Free, no signup required.',
+    title: 'HELOC Calculator | USFinNexus',
+    description: 'Estimate HELOC available credit, draw-period interest payments and repayment-period payments using your home value, mortgage balance, credit-line limit and rate assumptions.',
+    alternates: { canonical: 'https://usfinnexus.com/calculators/heloc' },
     openGraph: {
         type: 'website',
-        title: 'Free HELOC Calculator 2026 - Home Equity Line of Credit | USFinNexus',
-        description: 'Calculate your HELOC payments, available equity, and total interest. Compare draw-period interest-only payments vs full repayment period costs. Free, no signup.',
+        title: 'HELOC Calculator | USFinNexus',
+        description: 'Model home-equity line of credit draw and repayment scenarios.',
         url: 'https://usfinnexus.com/calculators/heloc',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'HELOC Home Equity Line of Credit Calculator 2026 - USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus HELOC Calculator' }],
     },
-    alternates: { canonical: 'https://usfinnexus.com/calculators/heloc' },
     twitter: {
         card: 'summary_large_image',
-        title: 'HELOC Calculator 2026 — Home Equity Line of Credit | USFinNexus',
-        description: 'Calculate your HELOC available equity, draw-period payments, and repayment-period costs. Free, no signup.',
+        title: 'HELOC Calculator | USFinNexus',
+        description: 'Estimate HELOC available credit, draw-period interest and repayment payments.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 
 const HELOC_FAQS = [
     {
-        question: 'What is the difference between the Draw Period and Repayment Period?',
-        answer: 'During the Draw Period (usually the first 10 years), you can withdraw money from your HELOC, and the bank only requires you to make interest-only payments. When the Draw Period ends, the Repayment Period begins (usually 20 years). You can no longer withdraw money, and your payment drastically jumps because you must now pay back the principal plus interest.',
+        question: 'What is the difference between a HELOC draw period and repayment period?',
+        answer: 'A HELOC agreement can provide a draw period when the borrower may access the credit line, followed by a repayment period when additional draws generally stop and the outstanding balance is repaid. Payment rules vary by product; some draw periods allow interest-only minimum payments while others require principal as well. Check the actual HELOC agreement.',
     },
     {
         question: 'Does a HELOC have a fixed or variable interest rate?',
-        answer: 'Almost all HELOCs have a variable interest rate tied to the Prime Rate. If the Federal Reserve raises interest rates, your HELOC payment will increase automatically. This makes them risky in an inflationary environment.',
+        answer: 'Many HELOCs use a variable rate based on an index plus a lender margin, although product structures differ and some lenders offer fixed-rate conversion options. A variable-rate HELOC payment can change when the applicable index changes.',
     },
     {
-        question: 'How much of my home equity can I borrow?',
-        answer: 'Most banks limit your total debt to a Combined Loan-to-Value (CLTV) ratio of 80% to 85%. If your home is worth $500,000, 80% is $400,000. If you owe $300,000 on your primary mortgage, the bank will only approve a HELOC for the remaining $100,000.',
+        question: 'How much home equity can I borrow with a HELOC?',
+        answer: 'Lenders often set a maximum combined loan-to-value ratio, or CLTV, but the permitted percentage varies by lender, borrower, occupancy and property. The calculator lets you enter a CLTV assumption rather than treating 80% or 85% as a universal limit.',
+    },
+    {
+        question: 'Is HELOC interest tax deductible?',
+        answer: 'Tax treatment depends on current law and how the borrowed funds are used. Do not assume every HELOC interest payment is deductible; review current IRS guidance or consult a qualified tax professional for your situation.',
     },
 ];
 
@@ -52,15 +56,16 @@ export default function HELOCPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
-                name="HELOC Calculator 2026"
-                description="Calculate your HELOC payments, available equity, and total interest across draw and repayment periods."
+                name="HELOC Calculator"
+                description="Estimate home-equity line of credit availability and modeled draw and repayment payments."
                 url="https://usfinnexus.com/calculators/heloc"
+                dateModified="2026-08-07"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'HELOC Calculator', item: '/calculators/heloc' }]} />
             <h1 className="sr-only">HELOC Calculator</h1>
             <HELOCClient />
             <HelocSeoContent />
-            <CalculatorFAQ faqs={HELOC_FAQS} title="HELOC — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={HELOC_FAQS} title="HELOC Calculator FAQ" />
         </main>
     );
 }
