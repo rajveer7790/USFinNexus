@@ -14,36 +14,37 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Student Loan Payoff Calculator 2026 — Extra Payment Estimator | USFinNexus',
-    description: 'Calculate your student loan payoff date and see how extra monthly payments save years and thousands in interest. Free student loan calculator with PDF export.',
+    title: 'Student Loan Payoff Calculator | USFinNexus',
+    description: 'Estimate student-loan payoff time and total interest, and compare an extra-payment scenario using the balance, APR, payment and additional amount you enter.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/student-loan' },
     openGraph: {
         type: 'website',
-        title: 'Student Loan Payoff Calculator 2026 | USFinNexus',
-        description: 'See your exact student loan payoff date and how much extra payments save. Free calculator with PDF export.',
+        title: 'Student Loan Payoff Calculator | USFinNexus',
+        description: 'Estimate student-loan payoff time, interest and extra-payment scenarios.',
         url: 'https://usfinnexus.com/calculators/student-loan',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Student Loan Calculator 2026 — USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus Student Loan Payoff Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Student Loan Payoff Calculator 2026 | USFinNexus',
-        description: 'When will your student loans be paid off? See how extra payments cut years off your debt.',
+        title: 'Student Loan Payoff Calculator | USFinNexus',
+        description: 'Estimate student-loan payoff time and interest under different payment scenarios.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 
 const STUDENT_LOAN_FAQS = [
     {
-        question: 'How exactly do extra payments work?',
-        answer: 'When you make an extra payment on a student loan, the entire extra amount goes directly to reducing the principal balance. This bypasses the interest schedule entirely, which means you will pay less total interest over the life of the loan and reach a $0 balance years ahead of schedule.',
+        question: 'How do extra student-loan payments affect payoff?',
+        answer: 'Additional payments can reduce principal faster and therefore reduce future interest when the servicer applies them after any accrued interest and fees according to the loan terms. Servicing rules and payment allocation can vary, so check how the servicer applies amounts above the scheduled payment.',
     },
     {
-        question: 'What is the "advance due date" trap?',
-        answer: 'Many student loan servicers will automatically take your extra payment and use it to push your next due date into the future. This does NOT help you pay off the loan faster. You must explicitly tell the servicer to apply the extra funds directly to the principal balance.',
+        question: 'What does it mean when a student-loan due date is advanced?',
+        answer: 'Some servicers can place an account in paid-ahead status after receiving more than the amount due. That does not necessarily prevent the extra amount from reducing principal, but payment allocation and future required payments can differ. Review the servicer instructions if your goal is faster payoff.',
     },
     {
-        question: 'Should I refinance my Federal student loans?',
-        answer: 'Refinancing to a lower rate can mathematically save you money, but it is incredibly risky if you have Federal loans. By refinancing with a private lender, you permanently lose all federal protections, including Income-Driven Repayment (IDR), forbearance options, and Public Service Loan Forgiveness (PSLF).',
+        question: 'What happens if I refinance federal student loans with a private lender?',
+        answer: 'A private refinance replaces federal loans with a private loan. That can permanently give up federal benefits and protections associated with the refinanced loans, which may include federal repayment options, deferment or forbearance rules and forgiveness programs. Compare both the interest cost and the value of federal benefits before refinancing.',
     },
 ];
 
@@ -52,14 +53,15 @@ export default function StudentLoanPage() {
         <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Student Loan Payoff Calculator"
-                description="Calculate your student loan payoff schedule and see how much interest you save with extra payments."
+                description="Estimate student-loan payoff time and interest under standard and extra-payment scenarios."
                 url="https://usfinnexus.com/calculators/student-loan"
+                dateModified="2026-08-07"
             />
-            <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Student Loan', item: '/calculators/student-loan' }]} />
+            <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Student Loan Payoff Calculator', item: '/calculators/student-loan' }]} />
             <h1 className="sr-only">Student Loan Payoff Calculator</h1>
             <StudentLoanClient />
             <StudentLoanSeoContent />
-            <CalculatorFAQ faqs={STUDENT_LOAN_FAQS} title="Student Loans — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={STUDENT_LOAN_FAQS} title="Student Loan Payoff Calculator FAQ" />
         </main>
     );
 }
