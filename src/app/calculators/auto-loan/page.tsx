@@ -14,40 +14,40 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Auto Loan Calculator 2026 — Monthly Car Payment & Total Cost | USFinNexus',
-    description: 'Free auto loan calculator for 2026. Calculate monthly car payments, total interest paid, sales tax estimate, and download a full amortization schedule.',
-    alternates: { canonical: 'https://usfinnexus.com/calculators/auto-loan' },
+    title: 'Auto Loan Calculator | USFinNexus',
+    description: 'Estimate a monthly car payment, total interest and loan amortization using vehicle price, down payment, trade-in, taxes, fees, APR and loan term.',
+    alternates: { canonical: '/calculators/auto-loan' },
     openGraph: {
         type: 'website',
-        title: 'Auto Loan Calculator 2026 — Monthly Car Payment | USFinNexus',
-        description: 'Calculate your monthly car payment, total interest, and full amortization schedule. Free auto loan calculator.',
+        title: 'Auto Loan Calculator | USFinNexus',
+        description: 'Estimate monthly car payments, total interest and amortization from your own auto-loan assumptions.',
         url: 'https://usfinnexus.com/calculators/auto-loan',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Auto Loan Calculator 2026 — USFinNexus' }],
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Auto Loan Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Auto Loan Calculator 2026 | Monthly Car Payment | USFinNexus',
-        description: 'Monthly car payment, total interest, and full amortization. Free auto loan calculator.',
+        title: 'Auto Loan Calculator | USFinNexus',
+        description: 'Estimate a monthly car payment and total interest.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 
 const AUTO_LOAN_FAQS = [
     {
-        question: 'How do you calculate a car payment with tax and fees?',
-        answer: 'To calculate the true out-the-door car payment, you must take the negotiated price of the vehicle, subtract your down payment and trade-in value, and then add your state sales tax (e.g., 7%) and dealership fees to the final principal balance. Our calculator handles this complex math automatically if you input your tax rate.',
+        question: 'How is a monthly car payment calculated?',
+        answer: 'For a standard amortizing auto loan, the payment depends on the amount financed, APR and number of monthly payments. Taxes, registration, dealer charges, trade-in treatment and rebates can change the amount financed and vary by state and transaction.',
     },
     {
-        question: 'What is a good interest rate for a car loan in 2026?',
-        answer: 'For a new car in 2026, borrowers with excellent credit (740+) should expect interest rates between 5.5% and 7.0%. Used car rates are typically 1% to 2% higher. Dealership promotional rates (like 1.9% or 2.9%) are sometimes available but require pristine credit and usually mandate a shorter 36- or 48-month term.',
+        question: 'What APR should I use in the calculator?',
+        answer: 'Use the APR or interest rate from a current lender or dealer financing quote for your credit profile and vehicle. Broad market averages are not individualized offers and can become stale quickly.',
     },
     {
-        question: 'Is it better to get a 60-month or 72-month car loan?',
-        answer: 'A 60-month (5-year) loan is mathematically superior. While a 72-month loan drops your monthly payment, it dramatically increases the total interest you pay to the bank. More importantly, cars depreciate rapidly. With a 72-month loan, you are at extreme risk of being "underwater" (owing more than the car is worth) for the first four years of the loan.',
+        question: 'Does a longer auto-loan term reduce the payment?',
+        answer: 'A longer term generally lowers the required monthly payment for the same principal and rate, but it usually increases total interest and can keep the loan balance above the vehicle value for longer.',
     },
     {
-        question: 'Does paying extra on my car loan reduce the monthly payment?',
-        answer: 'No. Unless you formally refinance the loan, your required monthly payment will never change. However, paying extra directly reduces your principal balance, which drastically cuts the total interest you pay over the life of the loan and allows you to pay off the car months or years early.',
+        question: 'What happens if I pay extra principal?',
+        answer: 'If the loan permits principal prepayments and the servicer applies them correctly, extra principal can reduce the balance faster and lower future interest. It does not necessarily reduce the scheduled monthly payment unless the loan is recast or refinanced.',
     },
 ];
 
@@ -55,15 +55,16 @@ export default function AutoLoanPage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
-                name="Auto Loan Calculator 2026"
-                description="Calculate your monthly car payment with taxes and trade-in. Get a full amortization schedule instantly."
+                name="Auto Loan Calculator"
+                description="Estimate monthly car payments, total interest and amortization using vehicle and loan assumptions."
                 url="https://usfinnexus.com/calculators/auto-loan"
+                dateModified="2026-08-07"
             />
-            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Auto Loan Calculator', item: '/calculators/auto-loan' }]} />
-            <h1 className="sr-only">Auto Loan Calculator 2026</h1>
+            <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Auto Loan Calculator', item: '/calculators/auto-loan' }]} />
+            <h1 className="sr-only">Auto Loan Calculator</h1>
             <AutoLoanClient />
             <AutoLoanSeoContent />
-            <CalculatorFAQ faqs={AUTO_LOAN_FAQS} title="Auto Loan Calculator — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={AUTO_LOAN_FAQS} title="Auto Loan Calculator FAQs" />
         </main>
     );
 }
