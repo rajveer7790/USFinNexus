@@ -16,6 +16,7 @@ const CORE_ROUTES = [
     '/articles',
     '/about',
     '/methodology',
+    '/editorial-guidelines',
     '/contact',
     '/privacy',
     '/terms',
