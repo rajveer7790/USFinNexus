@@ -1,93 +1,60 @@
-import React from 'react';
 import Link from 'next/link';
 
 export default function FhaSeoContent() {
     return (
         <section className="bg-white border-t border-gray-100 py-10 mt-6">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-green">
-                <h2 className="text-3xl font-black text-navy-900 mb-6">
-                    How to Use the FHA Loan Calculator
-                </h2>
+                <h2 className="text-3xl font-black text-navy-900 mb-6">How an FHA Mortgage Calculator Works</h2>
                 <p className="lead text-xl text-gray-600">
-                    Federal Housing Administration (FHA) loans are one of the most popular paths to homeownership in the United States, particularly for first-time buyers. Because they require lower credit scores and smaller down payments, they open doors for many borrowers. However, they come with specific Mortgage Insurance Premium (MIP) requirements. Our calculator accounts for these exact 2026 FHA guidelines.
+                    FHA-insured mortgages can allow a smaller minimum down payment than many conventional scenarios, but the payment can also include upfront and annual mortgage insurance. Use this calculator as a planning estimate and confirm eligibility, mortgage-insurance treatment and county loan limits with an FHA-approved lender and current HUD guidance.
                 </p>
 
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    FHA Loan Requirements Explained
-                </h3>
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">FHA Down Payment and Credit Context</h3>
                 <p>
-                    Unlike conventional loans, FHA loans are insured by the government. This reduces the risk for lenders, which in turn allows them to offer more lenient qualifying terms:
+                    HUD&apos;s FHA program rules permit a minimum 3.5% down payment for borrowers meeting the applicable minimum decision credit-score requirement, while borrowers in a lower score band can be subject to a 10% minimum investment. That does not mean every borrower meeting a score threshold will be approved: lenders can apply underwriting requirements and overlays, and the complete borrower and property file must qualify.
                 </p>
-                <ul>
-                    <li>
-                        <strong>Low Down Payment:</strong> If your credit score is 580 or higher, you are eligible for an FHA loan with just a <strong>3.5% down payment</strong>. If your score is between 500 and 579, a 10% down payment is required.
-                    </li>
-                    <li>
-                        <strong>FHA Loan Limits:</strong> The FHA limits how much you can borrow, based on the county you live in. In 2026, the baseline FHA loan limit &quot;floor&quot; in low-cost areas is $541,287, while high-cost &quot;ceiling&quot; areas go up to $1,249,125. Our calculator will alert you if you exceed these limits.
-                    </li>
-                    <li>
-                        <strong>Debt-to-Income (DTI) Ratios:</strong> FHA loans generally allow for higher debt-to-income ratios-often approving borrowers with DTI ratios up to 43%, and sometimes up to 50% with &quot;compensating factors.&quot;
-                    </li>
-                </ul>
 
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Understanding FHA MIP (Mortgage Insurance Premium)
-                </h3>
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">2026 FHA Loan Limits</h3>
                 <p>
-                    Because FHA loans require such a small down payment, the risk of default is higher. To protect lenders, the FHA charges borrowers a Mortgage Insurance Premium (MIP). Unlike conventional Private Mortgage Insurance (PMI), FHA MIP has two distinct components:
+                    For 2026, HUD&apos;s one-unit FHA mortgage-limit floor is <strong>$541,287</strong> and the high-cost ceiling is <strong>$1,249,125</strong>. The actual limit depends on the property location and unit count, so use HUD&apos;s official lookup for a specific county rather than assuming the national ceiling applies everywhere.
                 </p>
-                
-                <div className="bg-green-50 p-6 rounded-xl border border-green-100 my-6">
-                    <h4 className="font-bold text-green-800 mb-2">1. Upfront Mortgage Insurance Premium (UFMIP)</h4>
-                    <p className="mb-4">
-                        Currently set at <strong>1.75%</strong> of the base loan amount. Most borrowers choose to roll this fee directly into their total loan balance rather than paying it outright at closing. Our calculator automatically handles this inclusion.
-                    </p>
-                    <h4 className="font-bold text-green-800 mb-2">2. Annual Mortgage Insurance Premium</h4>
-                    <p className="mb-0">
-                        Paid monthly, this fee is typically <strong>0.55%</strong> of the outstanding loan balance for a standard 30-year FHA loan with 3.5% down. Note: If you put down less than 10%, this annual MIP <em>cannot be cancelled</em> and stays for the life of the loan. If you put down 10% or more, it drops off after 11 years.
-                    </p>
-                </div>
-
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    FHA vs. Conventional Loans
-                </h3>
                 <p>
-                    Which is right for you? It largely depends on your credit score and available cash:
+                    <a href="https://www.hud.gov/hud-partners/single-family-mortgage-limits" target="_blank" rel="noopener noreferrer">HUD: FHA mortgage limits</a>
                 </p>
-                <ul>
-                    <li><strong>Choose FHA if:</strong> Your credit score is under 620, or if you have a higher DTI ratio. Even with lower scores, FHA interest rates are often very competitive.</li>
-                    <li><strong>Choose Conventional if:</strong> You have strong credit (680+) and aim to put down at least 5% or 20%. With conventional loans, the monthly PMI will eventually fall off automatically once you reach 22% equity.</li>
-                </ul>
+
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">FHA Mortgage Insurance</h3>
                 <p>
-                    Many borrowers start with an FHA loan to acquire the house, build equity, and improve their credit. A few years later, they often use a <Link href="/calculators/refinance" className="text-green-600 hover:underline">Mortgage Refinance</Link> to switch from an FHA to a conventional loan to eliminate the permanent MIP.
+                    FHA mortgage insurance is called MIP, not conventional PMI. FHA loans can include an upfront mortgage insurance premium (UFMIP) and an annual MIP that is collected in monthly installments. The applicable annual rate depends on factors including loan term, loan amount and loan-to-value ratio; the exact premium should be confirmed against the current FHA Single Family Housing Policy Handbook and the loan documents.
+                </p>
+                <p>
+                    The commonly used upfront MIP rate for standard forward FHA mortgages is <strong>1.75% of the base loan amount</strong>. Annual MIP treatment is more nuanced than one universal percentage, especially when comparing 15-year and longer-term loans.
+                </p>
+                <p>
+                    <a href="https://www.hud.gov/hud-partners/housing-upfront-late-charges" target="_blank" rel="noopener noreferrer">HUD: upfront MIP information</a>{' · '}
+                    <a href="https://www.hud.gov/hud-partners/housing-premium-calculation" target="_blank" rel="noopener noreferrer">HUD: monthly MIP calculation</a>
                 </p>
 
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Frequently Asked Questions
-                </h3>
-                
-                <div className="space-y-6 mt-6">
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">Are FHA loans only for first-time buyers?</h4>
-                        <p className="text-gray-600">
-                            No. While they are extremely popular among first-time homebuyers due to the low down payment requirements, FHA loans can be used by anyone, provided the property will be their primary residence. You cannot use an FHA loan for an investment property or a vacation home.
-                        </p>
-                    </div>
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">How Long FHA MIP Can Last</h3>
+                <p>
+                    For many modern FHA mortgages, annual MIP duration depends on the original loan-to-value ratio and term. A common 30-year purchase scenario with less than 10% down can carry annual MIP for the mortgage term, while an original LTV of 90% or less can have an 11-year duration. Older FHA loans can follow different rules, so do not apply this rule to every FHA mortgage ever originated.
+                </p>
 
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">Can I remove FHA Mortgage Insurance?</h4>
-                        <p className="text-gray-600">
-                            If you made a down payment of less than 10%, the annual MIP cannot be removed-it lasts for the life of the loan. The only way to remove it is to refinance the mortgage into a non-FHA loan. If you made a down payment of 10% or more, the MIP will automatically fall off after 11 years.
-                        </p>
-                    </div>
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">FHA vs. Conventional Mortgage</h3>
+                <p>
+                    The better option depends on the borrower and the available quotes. Compare the interest rate, upfront fees, monthly mortgage insurance, down payment, credit-based pricing, total cash needed and expected holding period. Conventional borrower-paid PMI may be cancellable under federal law when statutory conditions are met; FHA MIP follows separate HUD rules.
+                </p>
+                <p>
+                    Use the <Link href="/calculators/mortgage">Mortgage Calculator</Link> for a conventional scenario and the <Link href="/calculators/refinance">Mortgage Refinance Calculator</Link> if you are comparing a future refinance.
+                </p>
 
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">What is the FHA down payment requirement?</h4>
-                        <p className="text-gray-600">
-                            The standard minimum is 3.5%, assuming your credit score is at least 580. This down payment can come from your personal savings, or it can be fully funded by a gift from a family member or an approved down payment assistance program.
-                        </p>
-                    </div>
-                </div>
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">DTI Is Not One Universal FHA Approval Number</h3>
+                <p>
+                    FHA underwriting considers debt-to-income ratios, but approval is not determined by one website threshold. Automated underwriting findings, compensating factors, lender requirements, credit history, reserves and other details can affect the result. Use the <Link href="/calculators/dti">Debt-to-Income Ratio Calculator</Link> as a planning tool rather than an approval test.
+                </p>
+
+                <p className="text-sm text-gray-500">
+                    Educational estimate only. HUD and the FHA-approved lender determine the applicable program rules, loan limits, mortgage-insurance treatment and underwriting outcome.
+                </p>
             </div>
         </section>
     );
