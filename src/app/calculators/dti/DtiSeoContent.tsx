@@ -5,62 +5,51 @@ export default function DtiSeoContent() {
     return (
         <section className="bg-white border-t border-gray-100 py-10 mt-6">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-blue">
-                <h2 className="text-3xl font-black text-navy-900 mb-6">
-                    What is a Good Debt-to-Income (DTI) Ratio?
-                </h2>
+                <h2 className="text-3xl font-black text-navy-900 mb-6">How to Understand Your Debt-to-Income Ratio</h2>
                 <p className="lead text-xl text-gray-600">
-                    A good DTI ratio for a mortgage is 36% or below. Most lenders approve loans up to 43% back-end DTI—the CFPB&apos;s qualified mortgage ceiling. Your front-end DTI (housing costs only) should stay at or below 28%. Enter your income and monthly debts above to see exactly where you stand.
+                    Debt-to-income ratio (DTI) compares recurring monthly debt obligations with gross monthly income. Lower ratios generally leave more room in a household budget, but mortgage eligibility cannot be reduced to one universal percentage.
                 </p>
 
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    What DTI Ratio Do Mortgage Lenders Require?
-                </h3>
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">Is 43% the Qualified Mortgage DTI Limit?</h3>
                 <p>
-                    Lenders generally adhere strictly to the &quot;28/36 Rule&quot;:
+                    No. The CFPB removed the old 43% debt-to-income limit from the General Qualified Mortgage definition and replaced that framework with price-based thresholds. You may still see 43% used as a planning benchmark or in particular underwriting contexts, but it should not be described as the universal current General QM maximum.
                 </p>
-                <ul>
-                    <li><strong>Ideal (≤ 36%):</strong> This is the golden standard. If your <em>total</em> monthly debt (including your new proposed mortgage payment, car loans, and credit cards) is 36% or less of your gross income, lenders view you as extremely low risk.</li>
-                    <li><strong>The Cutoff (43%):</strong> Under Consumer Financial Protection Bureau (CFPB) guidelines, 43% is the absolute maximum DTI ratio for what is considered a &quot;Qualified Mortgage&quot; (a loan with the strongest federal protections against predatory lending).</li>
-                    <li><strong>Exceptions (Up to 50%):</strong> Some FHA lenders and specific Fannie Mae automated underwriting systems will approve borrowers with DTIs approaching 50%, provided they have massive &quot;compensating factors&quot; (like perfect credit or vast cash reserves). </li>
-                </ul>
 
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    What Counts as &quot;Debt&quot; in the Formula?
-                </h3>
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">Front-End vs. Back-End DTI</h3>
+                <ul>
+                    <li><strong>Front-end DTI:</strong> compares proposed housing expenses with gross monthly income.</li>
+                    <li><strong>Back-end DTI:</strong> compares housing plus other recurring monthly debt obligations with gross monthly income.</li>
+                </ul>
+                <p>
+                    Traditional 28% housing and 36% total-debt ratios can be useful budgeting references. They are not universal legal limits or guarantees of mortgage approval.
+                </p>
+
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">What Debts Can Affect Mortgage DTI?</h3>
                 <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 my-6">
-                    <p className="mb-2 font-bold text-navy-900">Lenders DO Include:</p>
-                    <ul className="mb-4">
-                        <li>Proposed Mortgage Payment (PITI: Principal, Interest, Taxes, Insurance, HOA)</li>
-                        <li>Auto Loan Payments</li>
-                        <li>Student Loan Minimums</li>
-                        <li>Credit Card <strong>Minimum</strong> Monthly Payments</li>
-                        <li>Child Support or Alimony Obligations</li>
-                    </ul>
-                    <p className="mb-2 font-bold text-navy-900">Lenders do NOT Include:</p>
+                    <p className="mb-2 font-bold text-navy-900">Common recurring obligations can include:</p>
                     <ul className="mb-0">
-                        <li>Groceries and Utilities (Water, Trash, Electric)</li>
-                        <li>Health Insurance or Car Insurance</li>
-                        <li>Cell Phone Bills or Streaming Subscriptions</li>
+                        <li>The proposed housing payment used by the loan program</li>
+                        <li>Auto and personal-loan payments</li>
+                        <li>Student-loan obligations</li>
+                        <li>Credit-card minimum payments</li>
+                        <li>Certain alimony, child-support, or other recurring obligations</li>
                     </ul>
                 </div>
-
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    What Is the Difference Between Front-End and Back-End DTI?
-                </h3>
                 <p>
-                    Lenders actually calculate two distinct DTI numbers when you apply for a mortgage:
+                    The exact payment used for a debt can differ by mortgage program and documentation. Student loans are a common example: the qualifying payment may depend on repayment status and the applicable FHA, VA, USDA, Fannie Mae, Freddie Mac, or lender rules.
                 </p>
-                <ul>
-                    <li>
-                        <strong>Front-End DTI (The Housing Ratio):</strong> This is the percentage of your income dedicated solely to your new housing payment (PITI: Principal, Interest, Taxes, and Insurance). Most conventional lenders want this below 28%.
-                    </li>
-                    <li>
-                        <strong>Back-End DTI (The Total Debt Ratio):</strong> This is the percentage of your income dedicated to your housing payment <em>plus</em> all other recurring monthly debts (car loans, student loans, credit cards). This is the number that typically cannot exceed 43%.
-                    </li>
-                </ul>
+
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">Use DTI as One Part of the Affordability Picture</h3>
+                <p>
+                    DTI does not capture every household expense. Utilities, maintenance, childcare, health costs, retirement savings and emergency reserves can materially affect what feels affordable even when they are not all included in a mortgage DTI calculation.
+                </p>
                 <p className="mt-6 mb-8">
-                    To learn more about how these ratios impact your mortgage approval chances in 2026, read our comprehensive guide on <Link href="/blog/front-end-vs-back-end-dti-2026" className="text-blue-600 hover:underline font-bold">Front-End vs Back-End DTI (CFPB Guidelines)</Link>.
+                    After calculating DTI, use the <Link href="/calculators/affordability" className="text-blue-600 hover:underline font-bold">Home Affordability Calculator</Link> and <Link href="/calculators/mortgage" className="text-blue-600 hover:underline font-bold">Mortgage Calculator</Link> to test a complete housing-cost scenario.
                 </p>
+
+                <div className="mt-8 p-5 rounded-xl border border-gray-200 bg-gray-50 text-sm text-gray-700">
+                    <strong>Important:</strong> This is an educational ratio calculator, not a loan approval, pre-qualification, Qualified Mortgage determination, or lender underwriting system.
+                </div>
             </div>
         </section>
     );

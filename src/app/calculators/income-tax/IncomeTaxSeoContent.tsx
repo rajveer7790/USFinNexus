@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
 
@@ -8,91 +6,67 @@ export default function IncomeTaxSeoContent() {
         <section className="bg-white border-t border-gray-100 py-10 mt-6">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-blue">
                 <h2 className="text-3xl font-black text-navy-900 mb-6">
-                    Understanding Your 2026 Federal Income Taxes
+                    2026 Federal Income Tax Brackets and Standard Deduction
                 </h2>
                 <p className="lead text-xl text-gray-600">
-                    The tax landscape in 2026 is mathematically complex due to the expiration of several provisions from the Tax Cuts and Jobs Act (TCJA). Whether you are a W-2 employee or a 1099 contractor, understanding exactly how your money is taxed is the first step to legally keeping more of it. Our calculator instantly reveals your true effective tax rate and your precise take-home pay.
+                    This calculator uses the IRS tax-year 2026 ordinary-income brackets and standard deductions published in Revenue Procedure 2025-32. The seven ordinary federal rates for 2026 are <strong>10%, 12%, 22%, 24%, 32%, 35%, and 37%</strong>. The income thresholds vary by filing status.
                 </p>
 
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Marginal Tax Rate vs. Effective Tax Rate
-                </h3>
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">2026 Standard Deduction</h3>
                 <p>
-                    The biggest mistake Americans make is confusing their Marginal bracket with their Effective rate. The United States uses a <strong>progressive tax system</strong>, meaning your income is taxed in chunks, not all at once.
+                    For tax year 2026, the basic standard deduction is <strong>$16,100 for single filers</strong>, <strong>$32,200 for married couples filing jointly</strong>, and <strong>$24,150 for heads of household</strong>. Additional standard-deduction amounts can apply to some taxpayers, including certain taxpayers who are age 65 or older or blind; this simplified calculator does not model every additional deduction or eligibility rule.
                 </p>
+
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">Marginal Tax Rate vs. Effective Tax Rate</h3>
+                <p>
+                    The United States uses a progressive federal income-tax system. Your <strong>marginal tax rate</strong> is the rate that applies to the top portion of your taxable ordinary income, not to every dollar you earn. Your <strong>effective federal income-tax rate</strong> in this calculator is the estimated federal income tax divided by the gross wage income you entered.
+                </p>
+                <p>
+                    Moving into a higher bracket does not cause all of your income to be taxed at the higher rate. Only the portion of taxable income within that bracket is taxed at that bracket&apos;s rate.
+                </p>
+
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">What This Calculator Includes</h3>
                 <ul>
-                    <li>
-                        <strong>Marginal Tax Rate:</strong> This is the highest tax bracket your last dollar falls into. If you are in the 24% tax bracket, you do not pay 24% on all of your income. You only pay 24% on the money that falls <em>inside that specific tier</em>.
-                    </li>
-                    <li>
-                        <strong>Effective Tax Rate:</strong> This is the number that actually matters. It is the true, blended average of all the taxes you pay divided by your total gross income. For example, even if your Marginal bracket is 24%, your Effective rate might only be 14.5% after the lower brackets and standard deduction are factored in.
-                    </li>
+                    <li>IRS 2026 ordinary federal income-tax brackets for Single, Married Filing Jointly, and Head of Household.</li>
+                    <li>IRS 2026 basic standard deductions for those filing statuses.</li>
+                    <li>An employee-side Social Security estimate using the 2026 taxable wage base of $184,500.</li>
+                    <li>Medicare tax plus the Additional Medicare Tax estimate using the applicable threshold for the filing statuses supported here.</li>
                 </ul>
-                <p>
-                    Our calculator explicitly shows both numbers side-by-side so you can see exactly how much of your paycheck is actually going to the IRS.
-                </p>
 
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    The Power of the Standard Deduction
-                </h3>
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">What It Does Not Include</h3>
                 <p>
-                    Before the IRS calculates your tax brackets, you get to subtract the Standard Deduction from your Gross Income. This creates your <strong>Taxable Income</strong>.
-                </p>
-                <p>
-                    For example, if the Standard Deduction is roughly $15,000 for a single filer in 2026, and you make $65,000, the IRS completely ignores the first $15,000. You are only taxed on the remaining $50,000. 
-                </p>
-                <p>
-                    Unless you have massive mortgage interest payments, medical bills, or charitable donations, it is almost always mathematically superior to take the Standard Deduction rather than itemizing.
+                    A real federal tax return can be affected by tax credits, capital gains, qualified dividends, the Alternative Minimum Tax, Net Investment Income Tax, business income, self-employment tax, retirement-account rules, itemized-deduction limitations, dependents, and other adjustments. State and local income taxes are also excluded. Treat the result as an educational planning estimate, not tax preparation or tax advice.
                 </p>
 
                 <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 my-6">
-                    <h4 className="font-bold text-navy-900 mb-2">How to Legally Lower Your Taxable Income</h4>
+                    <h4 className="font-bold text-navy-900 mb-2">Primary source</h4>
                     <p className="text-navy-800 m-0">
-                        The easiest way to pay less to the IRS is to lower your Taxable Income before the year ends using pre-tax accounts:
-                        <br/><br/>
-                        <strong>1. Traditional 401(k):</strong> If you make $80,000 and contribute $10,000 to a Traditional 401(k), the IRS pretends you only made $70,000. You instantly save thousands in taxes today (though you will pay taxes on it when you retire).
-                        <br/><br/>
-                        <strong>2. HSA (Health Savings Account):</strong> If you have a High Deductible Health Plan, HSA contributions are triple-tax-advantaged. They lower your taxable income today, grow tax-free, and can be withdrawn tax-free for medical expenses.
+                        The 2026 federal bracket thresholds and standard-deduction amounts used here are based on IRS Revenue Procedure 2025-32. For filing decisions, verify your circumstances against current IRS instructions or a qualified tax professional.
                     </p>
                 </div>
 
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    W-2 Employees vs. 1099 Contractors (Self-Employment Tax)
-                </h3>
+                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">W-2 Wages vs. Self-Employment Income</h3>
                 <p>
-                    If you are a W-2 employee, your employer secretly pays half of your FICA taxes (Social Security and Medicare). You only see 7.65% come out of your paycheck.
-                </p>
-                <p>
-                    If you are a freelancer, Uber driver, or small business owner (1099 Contractor), you are technically both the employer and the employee. Therefore, you are legally required to pay the full <strong>15.3% Self-Employment Tax</strong> on top of your standard federal income tax. This catches many new freelancers completely off guard in April. If you are self-employed, you must meticulously track your business deductions to offset this massive tax burden.
-                </p>
-
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    The 2026 TCJA Sunset Provisions
-                </h3>
-                <p>
-                    The Tax Cuts and Jobs Act (TCJA) of 2017 lowered individual tax brackets and massively doubled the Standard Deduction. However, many of those individual cuts were written to expire at the end of 2025. 
-                </p>
-                <p>
-                    In 2026, without Congressional intervention, the top marginal tax rate reverts to 39.6% (up from 37%), and the massive Standard Deduction shrinks by roughly half, causing millions of Americans to revert back to itemizing their deductions. Our calculator is built to model the exact federal brackets active in 2026.
+                    The payroll-tax portion of this tool is designed as an <strong>employee wage-income estimate</strong>. Self-employed taxpayers generally calculate Social Security and Medicare taxes under self-employment-tax rules, which are different from simply doubling an employee withholding amount and can involve deductions and special calculations. This tool therefore should not be used as a self-employment-tax calculator.
                 </p>
 
                 <div className="mt-12 p-6 bg-gradient-to-r from-navy-900 to-blue-900 rounded-2xl text-white text-center shadow-lg" style={{ background: 'linear-gradient(135deg, #0A192F, #1a4d9a)' }}>
-                    <h3 className="text-2xl font-bold mb-3 text-white">Filing State Taxes?</h3>
-                    <p className="mb-6 opacity-90">This calculator focuses strictly on Federal Income and FICA taxes. If you live in a state like California or Florida, your take-home pay will vary wildly based on state income tax laws.</p>
+                    <h3 className="text-2xl font-bold mb-3 text-white">Explore Related Planning Tools</h3>
+                    <p className="mb-6 opacity-90">Use the federal tax estimate together with broader budgeting and debt-planning tools. State-specific closing-cost calculators are housing tools and do not calculate state income tax.</p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link
-                            href="/calculators/california"
+                            href="/calculators/budget"
                             className="bg-white text-navy-900 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
                             style={{ color: '#0A192F' }}
                         >
-                            California Tax Calculator
+                            Budget Calculator
                         </Link>
                         <Link
-                            href="/calculators/florida"
+                            href="/calculators/retirement"
                             className="bg-white text-navy-900 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
                             style={{ color: '#0A192F' }}
                         >
-                            Florida Tax Calculator
+                            Retirement Calculator
                         </Link>
                     </div>
                 </div>
