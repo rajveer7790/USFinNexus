@@ -2,56 +2,57 @@ import type { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import RefinanceSeoContent from './RefinanceSeoContent';
+import CalculatorFAQ from '@/components/CalculatorFAQ';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 const RefinanceClient = nextDynamic(() => import('./RefinanceClient'), {
     loading: () => <CalculatorSkeleton />,
 });
-import CalculatorFAQ from '@/components/CalculatorFAQ';
-import Breadcrumbs from '@/components/Breadcrumbs';
-import WebApplicationSchema from '@/components/WebApplicationSchema';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Refinance Calculator 2026 — Break-Even & Monthly Savings | USFinNexus',
-    description: 'Free mortgage refinance calculator. See your monthly savings, break-even point, and lifetime savings instantly. No signup needed. Updated for 2026 rates.',
+    title: 'Mortgage Refinance Calculator | USFinNexus',
+    description: 'Compare your current mortgage with a refinance scenario. Estimate monthly payment savings, closing-cost break-even and total modeled cost under the assumptions you enter.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/refinance' },
     openGraph: {
         type: 'website',
-        title: 'Refinance Calculator 2026 — Break-Even & Monthly Savings | USFinNexus',
-        description: 'See your monthly savings, break-even point, and lifetime interest savings. Free mortgage refinance calculator. No signup.',
+        title: 'Mortgage Refinance Calculator | USFinNexus',
+        description: 'Estimate refinance payment savings, closing-cost break-even and modeled total cost.',
         url: 'https://usfinnexus.com/calculators/refinance',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Mortgage Refinance Calculator 2026 — USFinNexus' }],
+        siteName: 'USFinNexus',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus Mortgage Refinance Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Refinance Calculator 2026 | Break-Even & Monthly Savings',
-        description: 'Is refinancing worth it? Get your break-even point and monthly savings instantly.',
+        title: 'Mortgage Refinance Calculator | USFinNexus',
+        description: 'Compare mortgage refinance payment savings and break-even under your assumptions.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 
 const REFINANCE_FAQS = [
     {
-        question: 'When does it make sense to refinance your mortgage in 2026?',
-        answer: 'Refinancing typically makes sense when the new interest rate is at least 0.5%–1% lower than your current rate, you plan to stay in the home past the break-even point, and your credit score qualifies you for a better rate. Use our break-even calculator — if you recoup closing costs within 2–3 years, refinancing is generally worth it.',
+        question: 'How is a simple refinance break-even point calculated?',
+        answer: 'A simple break-even estimate divides refinance costs by monthly payment savings. For example, $4,000 of costs divided by $200 of monthly savings equals 20 months. This is only a first-pass measure because a refinance can also reset the loan term, change total interest, finance closing costs or alter cash paid at closing.',
     },
     {
-        question: 'How is the refinance break-even point calculated?',
-        answer: 'Break-even point = Total closing costs ÷ Monthly payment savings. For example, if refinancing costs $4,000 in closing costs and saves you $200/month, your break-even is 20 months. If you plan to stay in the home longer than 20 months, refinancing makes financial sense.',
+        question: 'Does a lower monthly payment always mean refinancing saves money?',
+        answer: 'No. A lower payment can come from a lower interest rate, a longer repayment term, or both. Compare remaining cost on the current loan with the new loan term, closing costs and how long you expect to keep the mortgage.',
     },
     {
-        question: 'Is it worth refinancing if I only save $100 per month?',
-        answer: 'It depends on the closing costs and how long you plan to stay. If closing costs are $3,000 and you save $100/month, break-even is 30 months (2.5 years). If you will stay 5+ more years, that is $3,000+ in net savings. Factor in how many years remain on your current loan too — refinancing a 25-year-old 30-year loan into a new 30-year loan restarts the clock.',
+        question: 'What refinance closing costs should I enter?',
+        answer: 'Use the lender estimate or Loan Estimate when available. Fees can include origination or underwriting charges, appraisal, title services, recording fees, prepaid interest and other settlement costs. Costs vary by loan, lender and location, so a generic percentage should not replace an actual quote.',
     },
     {
-        question: 'What are typical refinance closing costs in 2026?',
-        answer: 'Refinance closing costs typically range from 2%–5% of the loan amount. On a $300,000 loan, expect $6,000–$15,000 in closing costs. Key fees include loan origination (0.5%–1%), appraisal ($300–$600), title search and insurance ($500–$1,500), and prepaid interest. Some lenders offer no-closing-cost refinancing by folding costs into the rate.',
+        question: 'Should I use today’s advertised mortgage rate as my refinance rate?',
+        answer: 'Use the rate and points you realistically expect to receive. Advertised market averages can be useful context but borrower pricing varies with credit, loan-to-value, loan type, occupancy, points and lender pricing. If a page shows a market average, it should identify its source date.',
     },
     {
-        question: 'Can I do a cash-out refinance in 2026?',
-        answer: 'Yes. A cash-out refinance replaces your current mortgage with a larger loan, and you receive the difference in cash. Most lenders allow up to 80% LTV on a cash-out refi. For a home worth $500,000 with a $300,000 mortgage, you could potentially access up to $100,000 in cash. Rates on cash-out refis are typically 0.25%–0.5% higher than standard rate-and-term refinances.',
+        question: 'Is this calculator a refinance approval or lender quote?',
+        answer: 'No. It is a scenario calculator. Approval, rate, fees, cash-out limits and underwriting requirements are determined by the lender and applicable loan program.',
     },
 ];
 
@@ -59,16 +60,16 @@ export default function RefinancePage() {
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
-                name="Mortgage Refinance Calculator 2026"
-                description="Compare your current mortgage to a new loan. Find your monthly savings, lifetime savings, and exact break-even point."
+                name="Mortgage Refinance Calculator"
+                description="Compare a current mortgage with a refinance scenario and estimate payment savings and simple break-even."
                 url="https://usfinnexus.com/calculators/refinance"
-                dateModified="2026-03-01"
+                dateModified="2026-08-07"
             />
-            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Refinance Calculator', item: '/calculators/refinance' }]} />
-            <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026 &middot; 2026 average mortgage rates applied</p>
+            <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Mortgage Refinance Calculator', item: '/calculators/refinance' }]} />
+            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 7, 2026 · Enter the rate and closing costs relevant to your scenario</p>
             <RefinanceClient />
             <RefinanceSeoContent />
-            <CalculatorFAQ faqs={REFINANCE_FAQS} title="Mortgage Refinance — Frequently Asked Questions" />
+            <CalculatorFAQ faqs={REFINANCE_FAQS} title="Mortgage Refinance Calculator FAQ" />
         </main>
     );
 }
