@@ -95,6 +95,8 @@ function getBlogPosts() {
             if (slug === 'hsa-contribution-limits-2026') image = '/images/hsa-contribution-limits-2026.webp';
             if (slug === 'salt-deduction-limit-2026') image = '/images/salt-deduction-limit-2026.webp';
             if (slug === 'aca-premium-tax-credit-2026') image = '/images/aca-premium-tax-credit-2026.webp';
+            if (slug === 'capital-gains-tax-rates-2026') image = '/images/capital-gains-tax-rates-2026.webp';
+            if (slug === 'earned-income-tax-credit-2026') image = '/images/earned-income-tax-credit-2026.webp';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
