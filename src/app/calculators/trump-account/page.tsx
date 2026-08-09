@@ -9,7 +9,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Trump Account Calculator 2026: Project the $1,000 Seed | USFinNexus',
+    title: 'Trump Account Calculator 2026: Project the $1,000 Seed',
     description: 'Estimate how a Trump Account could grow from the federal $1,000 seed plus family or employer contributions. Free 2026 projection calculator.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/trump-account' },
     openGraph: {

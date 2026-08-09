@@ -3,19 +3,19 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-    title: '15-Year vs 30-Year Mortgage 2026 — Full Payment & Interest Comparison | USFinNexus',
+    title: '15-Year vs 30-Year Mortgage 2026 — Full Payment & Interest Comparison',
     description: 'Compare 15-year vs 30-year mortgage with exact math on monthly payments, total interest saved, and opportunity cost of the extra cash flow. Updated for 2026 rates.',
     alternates: { canonical: 'https://usfinnexus.com/guides/15-vs-30-year-mortgage' },
     openGraph: {
         type: 'article',
-        title: '15-Year vs 30-Year Mortgage 2026 | Full Comparison | USFinNexus',
+        title: '15-Year vs 30-Year Mortgage 2026 | Full Comparison',
         description: 'Exact math on monthly payments, total interest, and opportunity cost. Which mortgage term wins in 2026?',
         url: 'https://usfinnexus.com/guides/15-vs-30-year-mortgage',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: '15 vs 30 Year Mortgage Comparison — USFinNexus' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: '15-Year vs 30-Year Mortgage 2026 | Which Is Better? | USFinNexus',
+        title: '15-Year vs 30-Year Mortgage 2026 | Which Is Better?',
         description: 'How much do you really save with a 15-year mortgage? Full payment and interest comparison.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },

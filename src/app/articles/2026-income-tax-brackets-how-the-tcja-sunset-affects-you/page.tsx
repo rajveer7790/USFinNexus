@@ -5,11 +5,11 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: '2026 Federal Income Tax Brackets & Standard Deduction | USFinNexus',
+    title: '2026 Federal Income Tax Brackets & Standard Deduction',
     description: 'Official 2026 federal income tax brackets and standard deductions, plus what actually happened to the expected TCJA sunset. Based on IRS 2026 guidance.',
     alternates: { canonical: '/articles/2026-income-tax-brackets-how-the-tcja-sunset-affects-you' },
     openGraph: {
-        title: '2026 Federal Income Tax Brackets & Standard Deduction | USFinNexus',
+        title: '2026 Federal Income Tax Brackets & Standard Deduction',
         description: 'Official 2026 federal tax brackets, standard deductions and an explanation of why the expected TCJA rate sunset did not occur.',
         url: 'https://usfinnexus.com/articles/2026-income-tax-brackets-how-the-tcja-sunset-affects-you',
         type: 'article',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: '2026 Federal Income Tax Brackets | USFinNexus',
+        title: '2026 Federal Income Tax Brackets',
         description: 'Official 2026 federal brackets and standard deductions based on IRS guidance.',
         images: ['https://usfinnexus.com/images/tax_deduction_hero_1772351400720.png'],
     },

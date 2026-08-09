@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'FHA Loans: The Ultimate 2026 Guide for First-Time Homebuyers | USFinNexus',
+    title: 'FHA Loans: The Ultimate 2026 Guide for First-Time Homebuyers',
     description: 'A 580 credit score and a 3.5% down payment are all you need to buy a house in 2026. Learn how the FHA loan program bypasses strict bank requirements.',
     alternates: { canonical: 'https://usfinnexus.com/blog/fha-loans-first-time-homebuyers-2026' },
     openGraph: {

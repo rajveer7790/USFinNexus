@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Mortgage Points Explained: Should You Buy Down Your Rate in 2026? | USFinNexus',
+    title: 'Mortgage Points Explained: Should You Buy Down Your Rate in 2026?',
     description: 'Do not pay your lender $5,000 upfront without doing the math. Learn how to calculate the break-even point on discount points, and why buying points in 2026 might be a massive mistake.',
 
     alternates: { canonical: 'https://usfinnexus.com/blog/mortgage-points-buydown-calculator' },

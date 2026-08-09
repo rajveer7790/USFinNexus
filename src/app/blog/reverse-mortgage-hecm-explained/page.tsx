@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Reverse Mortgages (HECM) Explained: 2026 Guide for Seniors | USFinNexus',
+    title: 'Reverse Mortgages (HECM) Explained: 2026 Guide for Seniors',
     description: 'Understand how a Home Equity Conversion Mortgage (HECM) actually works. Explore the risks, costs, and strategic uses for reverse mortgages in 2026.',
     openGraph: {
         title: 'Reverse Mortgages (HECM) Explained: 2026 Guide for Seniors',

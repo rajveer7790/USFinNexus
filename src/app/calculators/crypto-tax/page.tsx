@@ -14,19 +14,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Crypto Tax Calculator 2026 — Capital Gains on Bitcoin & Crypto | USFinNexus',
+    title: 'Crypto Tax Calculator 2026 — Capital Gains on Bitcoin & Crypto',
     description: 'Estimate your 2026 cryptocurrency capital gains taxes. Calculate short-term vs long-term gains for Bitcoin, Ethereum, and altcoins under IRS rules. Free crypto tax estimator.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/crypto-tax' },
     openGraph: {
         type: 'website',
-        title: 'Crypto Tax Calculator 2026 — Bitcoin & Crypto Capital Gains | USFinNexus',
+        title: 'Crypto Tax Calculator 2026 — Bitcoin & Crypto Capital Gains',
         description: 'Estimate your 2026 crypto capital gains taxes. Short-term vs long-term rates under current IRS rules.',
         url: 'https://usfinnexus.com/calculators/crypto-tax',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Crypto Tax Calculator 2026 — USFinNexus' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Crypto Tax Calculator 2026 | Bitcoin Capital Gains | USFinNexus',
+        title: 'Crypto Tax Calculator 2026 | Bitcoin Capital Gains',
         description: 'How much tax do you owe on your crypto gains? Short vs long-term capital gains estimated instantly.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -61,8 +61,8 @@ export default function CryptoTaxPage() {
                 dateModified="2026-03-01"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Crypto Tax Estimator', item: '/calculators/crypto-tax' }]} />
+            <h1 className="sr-only">Crypto Tax Calculator</h1>
             <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026</p>
-            <h1 className="sr-only">Crypto Tax Calculator: Estimate Capital Gains</h1>
             <CryptoTaxClient />
             <CryptoTaxSeoContent />
             <CalculatorFAQ faqs={CRYPTO_FAQS} title="Cryptocurrency Taxes — Frequently Asked Questions" />

@@ -8,11 +8,11 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Should You Refinance in 2026? Break-Even Calculator + Complete Guide | USFinNexus',
+    title: 'Should You Refinance in 2026? Break-Even Calculator + Complete Guide',
     description: 'Is refinancing worth it in 2026? Calculate your break-even month, monthly savings, and lifetime interest reduction. Includes when NOT to refinance and current rate guidance.',
     alternates: { canonical: 'https://usfinnexus.com/blog/should-i-refinance-2026' },
-    openGraph: { type: 'article', title: 'Should You Refinance in 2026? Break-Even Guide | USFinNexus', description: 'Break-even calculator, monthly savings, and the complete guide to whether refinancing makes sense at current 2026 rates.', url: 'https://usfinnexus.com/blog/should-i-refinance-2026', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Should I Refinance 2026 — USFinNexus' }] },
-    twitter: { card: 'summary_large_image', title: 'Should You Refinance in 2026? Break-Even Guide | USFinNexus', description: 'Calculate your break-even month and monthly savings before refinancing at 2026 rates.', images: ['https://usfinnexus.com/icon-512.png'] },
+    openGraph: { type: 'article', title: 'Should You Refinance in 2026? Break-Even Guide', description: 'Break-even calculator, monthly savings, and the complete guide to whether refinancing makes sense at current 2026 rates.', url: 'https://usfinnexus.com/blog/should-i-refinance-2026', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Should I Refinance 2026' }] },
+    twitter: { card: 'summary_large_image', title: 'Should You Refinance in 2026? Break-Even Guide', description: 'Calculate your break-even month and monthly savings before refinancing at 2026 rates.', images: ['https://usfinnexus.com/icon-512.png'] },
 };
 
 export default function BlogPost() {

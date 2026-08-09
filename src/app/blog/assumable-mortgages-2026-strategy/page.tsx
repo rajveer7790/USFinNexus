@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Assumable Mortgages in 2026: How to Buy a Home with a 2.5% Rate | USFinNexus',
+    title: 'Assumable Mortgages in 2026: How to Buy a Home with a 2.5% Rate',
     description: 'Learn how to legally transfer a sellers ultra-low 2.5% mortgage rate into your name using an assumable mortgage in 2026. Complete guide to FHA and VA loan assumptions.',
     alternates: { canonical: 'https://usfinnexus.com/blog/assumable-mortgages-2026-strategy' },
     openGraph: {

@@ -6,7 +6,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import AuthorBio from '@/components/AuthorBio';
 
 export const metadata: Metadata = {
-    title: 'Trump Account vs 529 Plan: Which to Fund First in 2026? | USFinNexus',
+    title: 'Trump Account vs 529 Plan: Which to Fund First in 2026?',
     description: 'Compare Trump Accounts and 529 plans for 2026: tax treatment, contribution rules, investment flexibility, education use, control and a practical funding order.',
     alternates: { canonical: 'https://usfinnexus.com/blog/trump-account-vs-529-plan' },
     openGraph: {

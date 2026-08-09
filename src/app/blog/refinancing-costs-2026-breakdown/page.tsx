@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Refinancing Costs 2026: Itemized Breakdown of Hidden Fees | USFinNexus',
+    title: 'Refinancing Costs 2026: Itemized Breakdown of Hidden Fees',
     description: 'Do not get scammed by hidden mortgage fees. Learn exactly what refinancing costs in 2026, which fees are negotiable, and how to spot predatory lending.',
     openGraph: {
         title: 'Refinancing Costs 2026: Itemized Breakdown of Hidden Fees',

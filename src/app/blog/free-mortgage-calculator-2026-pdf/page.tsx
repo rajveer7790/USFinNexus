@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Free Mortgage Calculator 2026: Print Your Amortization PDF | USFinNexus',
+    title: 'Free Mortgage Calculator 2026: Print Your Amortization PDF',
     description: 'Do not trust the bank\'s math. Use our free 2026 mortgage calculator to generate a printable PDF amortization schedule and see exactly where your money goes.',
 
     alternates: { canonical: 'https://usfinnexus.com/calculators/mortgage' },

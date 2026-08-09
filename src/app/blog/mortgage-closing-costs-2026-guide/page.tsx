@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Mortgage Closing Costs 2026: The Ultimate Guide to Fees & Negotiation | USFinNexus',
+    title: 'Mortgage Closing Costs 2026: The Ultimate Guide to Fees & Negotiation',
     description: 'Stop overpaying at the closing table. Learn exactly what the 2026 mortgage closing costs are, how to decode your Loan Estimate, and which junk fees to negotiate away.',
     openGraph: {
         title: 'Mortgage Closing Costs 2026: The Ultimate Guide to Fees & Negotiation',

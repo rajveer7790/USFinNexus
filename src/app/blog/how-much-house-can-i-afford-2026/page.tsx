@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'The 28/36 Rule: How to Calculate Your Housing Budget in 2026 | USFinNexus',
+    title: 'The 28/36 Rule: How to Calculate Your Housing Budget in 2026',
     description: 'Stop guessing your housing budget. Use the 28/36 rule to mathematically calculate exactly how much house you can afford without becoming "house poor".',
     alternates: { canonical: 'https://usfinnexus.com/blog/how-much-house-can-afford-2026' },
     openGraph: {

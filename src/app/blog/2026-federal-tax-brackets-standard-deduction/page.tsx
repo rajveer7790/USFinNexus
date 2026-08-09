@@ -9,7 +9,7 @@ const URL = 'https://usfinnexus.com/blog/2026-federal-tax-brackets-standard-dedu
 const IMAGE = 'https://usfinnexus.com/images/2026-federal-tax-brackets-standard-deduction.webp';
 
 export const metadata: Metadata = {
-    title: '2026 Tax Brackets & Standard Deduction Guide | USFinNexus',
+    title: '2026 Tax Brackets & Standard Deduction Guide',
     description: 'See the 2026 federal income tax brackets, standard deduction by filing status, marginal-rate examples and practical withholding steps.',
     alternates: { canonical: URL },
     openGraph: {

@@ -9,7 +9,7 @@ const URL = 'https://usfinnexus.com/blog/capital-gains-tax-rates-2026';
 const IMAGE = 'https://usfinnexus.com/images/capital-gains-tax-rates-2026.webp';
 
 export const metadata: Metadata = {
-    title: 'Capital Gains Tax Rates 2026: 0%, 15% & 20% | USFinNexus',
+    title: 'Capital Gains Tax Rates 2026: 0%, 15% & 20%',
     description: 'See the 2026 long-term capital gains tax brackets, NIIT thresholds, holding-period rules, loss deductions and practical sale-planning examples.',
     alternates: { canonical: URL },
     openGraph: {
@@ -101,7 +101,7 @@ export default function CapitalGainsTaxRates2026Page() {
                     <h2>Capital losses, carryforwards and wash sales</h2>
                     <p>Capital gains and losses are netted by character. Short-term items are combined, long-term items are combined and the resulting categories interact under Schedule D. If losses exceed gains, an individual can generally deduct up to $3,000 of net capital loss against other income, or $1,500 when married filing separately. Remaining loss generally carries to later years.</p>
                     <p>A carryforward is valuable but does not justify taking unnecessary risk or selling solely for a tax result. Preserve the prior Schedule D and the Capital Loss Carryover Worksheet. Brokerage dashboards may not know about losses created in another account or before an account transfer.</p>
-                    <p>The wash-sale rule can defer a loss when substantially identical stock or securities are acquired within the period beginning 30 days before and ending 30 days after the loss sale. Purchases in another brokerage account or an IRA can be relevant. Our <Link href="/blog/tax-loss-harvesting">tax-loss harvesting guide</Link> explains the workflow, but use current professional guidance for complex replacements.</p>
+                    <p>The wash-sale rule can defer a loss when substantially identical stock or securities are acquired within the period beginning 30 days before and ending 30 days after the loss sale. Purchases in another brokerage account or an IRA can be relevant. Our <Link href="/blog/tax-loss-harvesting-calculator-strategy">tax-loss harvesting guide</Link> explains the workflow, but use current professional guidance for complex replacements.</p>
 
                     <h2>Home sales have a separate exclusion framework</h2>
                     <p>Qualifying homeowners may exclude up to $250,000 of gain, or up to $500,000 on some joint returns, under the principal-residence rules. Ownership and use tests, prior exclusions and exceptions matter. The exclusion is not an annual 0% capital-gains bracket and it does not automatically cover depreciation from rental or business use.</p>

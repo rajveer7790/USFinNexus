@@ -9,7 +9,7 @@ const URL = 'https://usfinnexus.com/blog/federal-student-loan-interest-rates-202
 const IMAGE = 'https://usfinnexus.com/images/federal-student-loan-interest-rates-2026-27.webp';
 
 export const metadata: Metadata = {
-    title: 'Student Loan Rates 2026–27: 6.52%–9.07% | USFinNexus',
+    title: 'Student Loan Rates 2026–27: 6.52%–9.07%',
     description: 'Official 2026–27 federal student loan rates: 6.52% undergraduate, 8.07% graduate and 9.07% PLUS. See payment examples and borrowing tips.',
     alternates: { canonical: URL },
     openGraph: {

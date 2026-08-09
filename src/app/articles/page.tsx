@@ -8,11 +8,11 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'FinCEN & BOI Compliance Articles 2026 | USFinNexus',
+    title: 'FinCEN & BOI Compliance Articles 2026',
     description: 'Expert guides on 2026 FinCEN BOI exemptions, Real Estate Reporting Rules, LLC Transparency Acts, and US tax compliance. Stay compliant.',
     alternates: { canonical: 'https://usfinnexus.com/articles' },
     openGraph: {
-        title: 'FinCEN & BOI Compliance Articles 2026 | USFinNexus',
+        title: 'FinCEN & BOI Compliance Articles 2026',
         description: 'Expert guides on 2026 FinCEN BOI exemptions, Real Estate Reporting Rules, LLC Transparency Acts, and US tax compliance.',
         url: 'https://usfinnexus.com/articles',
         type: 'website',

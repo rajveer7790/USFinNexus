@@ -14,19 +14,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Debt-to-Income Ratio Calculator | USFinNexus',
+    title: 'Debt-to-Income Ratio Calculator',
     description: 'Calculate your debt-to-income ratio from recurring monthly debt and gross monthly income. Compare planning benchmarks without treating 43% as a universal mortgage approval limit.',
     alternates: { canonical: '/calculators/dti' },
     openGraph: {
         type: 'website',
-        title: 'Debt-to-Income Ratio Calculator | USFinNexus',
+        title: 'Debt-to-Income Ratio Calculator',
         description: 'Calculate DTI and understand how lenders may use debt-to-income ratios in mortgage underwriting.',
         url: 'https://usfinnexus.com/calculators/dti',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Debt-to-Income Ratio Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Debt-to-Income Ratio Calculator | USFinNexus',
+        title: 'Debt-to-Income Ratio Calculator',
         description: 'Calculate your debt-to-income ratio and compare planning benchmarks.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },

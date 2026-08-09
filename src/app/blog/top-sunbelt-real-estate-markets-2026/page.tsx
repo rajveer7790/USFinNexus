@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Top 5 Sunbelt Cities for Real Estate Investment in 2026 | USFinNexus',
+    title: 'Top 5 Sunbelt Cities for Real Estate Investment in 2026',
     description: 'Looking to invest in real estate this year? We analyze the top 5 emerging Sunbelt cities offering high rental yields, job growth, and affordability in 2026.',
     openGraph: {
         title: 'Top 5 Sunbelt Cities for Real Estate Investment in 2026',
@@ -100,7 +100,7 @@ export default function SunbeltRealEstateBlog() {
             </header>
 
             <div className="mb-10 rounded-2xl overflow-hidden shadow-lg border border-gray-100">
-                <img src="/api/images/sunbelt_real_estate" alt="Modern Sunbelt City Skyline" className="w-full h-auto object-cover max-h-[450px]" />
+                <img src="/images/home-hero-v2.png" alt="Sunbelt housing market illustration" className="w-full h-auto object-cover max-h-[450px]" />
             </div>
 
             <div className="prose max-w-none" style={{ color: 'var(--color-text)' }}>

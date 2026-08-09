@@ -3,19 +3,19 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: 'Credit Score Needed to Buy a House in 2026 — FHA, VA, Conventional | USFinNexus',
+    title: 'Credit Score Needed to Buy a House in 2026 — FHA, VA, Conventional',
     description: 'Exact credit score requirements for every mortgage type in 2026: FHA (580+), VA (620+), USDA (640+), Conventional (620+). See how your score affects your rate.',
     alternates: { canonical: 'https://usfinnexus.com/guides/mortgage-credit-score-requirements' },
     openGraph: {
         type: 'article',
-        title: 'Credit Score Requirements for a Mortgage 2026 | USFinNexus',
+        title: 'Credit Score Requirements for a Mortgage 2026',
         description: 'FHA, VA, USDA, and conventional mortgage credit score minimums for 2026. How your score affects your rate.',
         url: 'https://usfinnexus.com/guides/mortgage-credit-score-requirements',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Mortgage Credit Score Requirements 2026 — USFinNexus' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Credit Score to Buy a House 2026 | FHA, VA, Conventional | USFinNexus',
+        title: 'Credit Score to Buy a House 2026 | FHA, VA, Conventional',
         description: 'What credit score do you need for a mortgage? See requirements for every loan type in 2026.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },

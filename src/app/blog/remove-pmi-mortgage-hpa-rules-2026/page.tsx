@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'How to Remove PMI in 2026: The HPA Rules You Need to Know | USFinNexus',
+    title: 'How to Remove PMI in 2026: The HPA Rules You Need to Know',
     description: 'Stop paying useless mortgage insurance. Learn the exact rules of the Homeowners Protection Act (HPA) and how to force your lender to cancel your PMI in 2026.',
 
     alternates: { canonical: 'https://usfinnexus.com/blog/pmi-explained-cost-removal-2026' },

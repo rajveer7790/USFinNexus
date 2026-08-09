@@ -2,10 +2,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: 'How Much Income Do You Need to Buy a House by State 2026 | USFinNexus',
+    title: 'How Much Income Do You Need to Buy a House by State 2026',
     description: 'Find out exactly how much salary you need to afford the median home in all 50 US States, calculating PITI and a 28% front-end DTI.',
+    alternates: { canonical: '/data/home-affordability-by-state' },
     openGraph: {
-        title: 'Income Needed to Buy a House by State | USFinNexus',
+        title: 'Income Needed to Buy a House by State',
         description: 'See the exact salary required to buy a home in California vs Texas vs Florida.',
         url: 'https://usfinnexus.com/data/home-affordability-by-state',
     },

@@ -8,10 +8,10 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'How to Find Unclaimed Money in the USA 2026 — Free Government Databases | USFinNexus',
+    title: 'How to Find Unclaimed Money in the USA 2026 — Free Government Databases',
     description: 'Step-by-step guide to finding unclaimed money using free government databases. Includes forgotten 401(k) accounts, FHA mortgage refunds, uncashed tax refunds, and state unclaimed property.',
     alternates: { canonical: 'https://usfinnexus.com/blog/usa-people-search-finance' },
-    openGraph: { type: 'article', title: 'How to Find Unclaimed Money in the USA 2026 | Free Guide | USFinNexus', description: 'Free government databases for finding unclaimed money, forgotten 401(k)s, FHA refunds, and uncashed tax refunds.', url: 'https://usfinnexus.com/blog/usa-people-search-finance', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Find Unclaimed Money USA 2026' }] },
+    openGraph: { type: 'article', title: 'How to Find Unclaimed Money in the USA 2026 | Free Guide', description: 'Free government databases for finding unclaimed money, forgotten 401(k)s, FHA refunds, and uncashed tax refunds.', url: 'https://usfinnexus.com/blog/usa-people-search-finance', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Find Unclaimed Money USA 2026' }] },
     twitter: { card: 'summary_large_image', title: 'Find Unclaimed Money in the USA 2026 | Free Guide', description: 'Americans leave $70+ billion in unclaimed money each year. Here is how to find yours using free government databases.', images: ['https://usfinnexus.com/icon-512.png'] },
 };
 

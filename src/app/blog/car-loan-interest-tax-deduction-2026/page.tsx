@@ -9,7 +9,7 @@ const URL = 'https://usfinnexus.com/blog/car-loan-interest-tax-deduction-2026';
 const IMAGE = 'https://usfinnexus.com/images/car-loan-interest-tax-deduction-2026.webp';
 
 export const metadata: Metadata = {
-    title: 'Car Loan Interest Tax Deduction 2026: $10,000 Rules | USFinNexus',
+    title: 'Car Loan Interest Tax Deduction 2026: $10,000 Rules',
     description: 'Learn who qualifies for the 2026 car loan interest tax deduction, which new U.S.-assembled vehicles qualify, income limits, VIN rules and how to claim it.',
     alternates: { canonical: URL },
     openGraph: {

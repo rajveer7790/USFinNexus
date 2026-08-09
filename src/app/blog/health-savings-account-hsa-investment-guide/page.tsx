@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'HSA Investment Guide 2026: Turn Your Health Savings Account Into a Wealth-Building Tool | USFinNexus',
+    title: 'HSA Investment Guide 2026: Rules & Strategy',
     description: 'Learn how to invest your HSA for triple tax-free growth in 2026. Contribution limits, investment options, Medicare strategy, and step-by-step instructions inside.',
     alternates: { canonical: 'https://usfinnexus.com/blog/health-savings-account-hsa-investment-guide' },
     openGraph: {

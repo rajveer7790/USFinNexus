@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'HELOC vs. Home Equity Loan: Which is Better in 2026? | USFinNexus',
+    title: 'HELOC vs. Home Equity Loan: Which is Better in 2026?',
     description: 'Do not use a 24% interest credit card to renovate your kitchen. Learn the exact difference between a HELOC and a Home Equity Loan to unlock your home\'s cash value.',
     alternates: { canonical: 'https://usfinnexus.com/blog/heloc-vs-home-equity-loan-2026' },
     openGraph: {

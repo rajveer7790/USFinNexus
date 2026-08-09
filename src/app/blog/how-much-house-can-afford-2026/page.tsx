@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'How Much House Can You Afford in 2026? The Real-World Guide | USFinNexus',
+    title: 'How Much House Can You Afford in 2026? The Real-World Guide',
     description: 'Calculate your true home affordability using the 28/36 rule, DTI, current 2026 interest rates, and hidden homeownership costs. Stop guessing, start calculating.',
 
     alternates: { canonical: 'https://usfinnexus.com/blog/how-much-house-can-i-afford-2026' },

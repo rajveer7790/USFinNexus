@@ -1,0 +1,28 @@
+{
+  "counts": {
+    "pages": 219,
+    "missingTitle": 0,
+    "emptyHtml": 0,
+    "longTitles": 0,
+    "missingDescription": 0,
+    "h1NotOne": 0,
+    "missingCanonical": 0,
+    "brokenInternalLinks": 0,
+    "brokenInternalImages": 0,
+    "invalidApplicationSchema": 0,
+    "sitemapBadUrls": 0
+  },
+  "findings": {
+    "pages": 219,
+    "missingTitle": [],
+    "emptyHtml": [],
+    "longTitles": [],
+    "missingDescription": [],
+    "h1NotOne": [],
+    "missingCanonical": [],
+    "brokenInternalLinks": [],
+    "brokenInternalImages": [],
+    "invalidApplicationSchema": [],
+    "sitemapBadUrls": []
+  }
+}

@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Mortgage Amortization Explained: Where Your Payment Actually Goes | USFinNexus',
+    title: 'Mortgage Amortization Explained: Where Your Payment Actually Goes',
     description: 'Stop guessing how much equity you have. Learn how mortgage amortization works and see exactly how your monthly payment is split between principal and interest.',
     openGraph: {
         title: 'Mortgage Amortization Explained: Where Your Payment Goes',

@@ -13,19 +13,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Mortgage Amortization Calculator | USFinNexus',
+    title: 'Mortgage Amortization Calculator',
     description: 'Generate a month-by-month mortgage amortization schedule showing principal, interest, remaining balance and the effect of extra principal payments.',
     alternates: { canonical: '/calculators/amortization' },
     openGraph: {
         type: 'website',
-        title: 'Mortgage Amortization Calculator | USFinNexus',
+        title: 'Mortgage Amortization Calculator',
         description: 'View a month-by-month mortgage amortization schedule and model extra principal payments.',
         url: 'https://usfinnexus.com/calculators/amortization',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Mortgage Amortization Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mortgage Amortization Calculator | USFinNexus',
+        title: 'Mortgage Amortization Calculator',
         description: 'View principal, interest and remaining balance month by month.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },

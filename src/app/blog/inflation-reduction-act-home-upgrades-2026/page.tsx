@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Inflation Reduction Act (2026): Claim Your $14,000 Home Upgrade Rebates | USFinNexus',
+    title: 'Inflation Reduction Act (2026): Claim Your $14,000 Home Upgrade Rebates',
     description: 'The federal government will pay you to upgrade your house. Learn how to claim the massive 2026 Inflation Reduction Act (IRA) rebates for heat pumps, solar panels, and electrical panels.',
     alternates: { canonical: 'https://usfinnexus.com/blog/inflation-reduction-act-home-upgrades-2026' },
     openGraph: {

@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'What is a Jumbo Loan in 2026? Rules, Limits, and Requirements | USFinNexus',
+    title: 'What is a Jumbo Loan in 2026? Rules, Limits, and Requirements',
     description: 'If you want to buy a $1.5 million luxury home, standard government mortgages will not help you. Learn the strict 2026 rules for securing a Jumbo Loan.',
 
     alternates: { canonical: 'https://usfinnexus.com/blog/jumbo-mortgages-over-loan-limit' },

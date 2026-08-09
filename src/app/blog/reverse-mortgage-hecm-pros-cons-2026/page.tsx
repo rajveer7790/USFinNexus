@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Reverse Mortgages Explained (2026): The Good, The Bad, and The Scam | USFinNexus',
+    title: 'Reverse Mortgages Explained (2026): The Good, The Bad, and The Scam',
     description: 'A reverse mortgage can save a retiree from bankruptcy, or it can destroy their family\'s inheritance. Learn the terrifying math behind HECM loans and how banks seize the house.',
     alternates: { canonical: 'https://usfinnexus.com/blog/reverse-mortgage-hecm-pros-cons-2026' },
     openGraph: {

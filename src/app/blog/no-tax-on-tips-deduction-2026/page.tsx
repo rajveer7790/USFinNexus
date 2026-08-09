@@ -9,7 +9,7 @@ const URL = 'https://usfinnexus.com/blog/no-tax-on-tips-deduction-2026';
 const IMAGE = 'https://usfinnexus.com/images/no-tax-on-tips-deduction-2026.webp';
 
 export const metadata: Metadata = {
-    title: 'No Tax on Tips 2026: $25,000 Deduction Rules | USFinNexus',
+    title: 'No Tax on Tips 2026: $25,000 Deduction Rules',
     description: 'Learn who qualifies for the 2026 no-tax-on-tips deduction, the $25,000 limit, income phaseout, eligible occupations, records and examples.',
     alternates: { canonical: URL },
     openGraph: {

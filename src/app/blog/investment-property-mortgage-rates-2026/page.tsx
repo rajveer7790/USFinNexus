@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Investment Property Mortgage Rates 2026: The DSCR Loophole | USFinNexus',
+    title: 'Investment Property Mortgage Rates 2026: The DSCR Loophole',
     description: 'Buying a rental property is entirely different from buying a primary residence. Learn why investment mortgages are more expensive, and how to use DSCR loans to bypass income requirements.',
     alternates: { canonical: 'https://usfinnexus.com/blog/investment-property-mortgage-rates-2026' },
     openGraph: {

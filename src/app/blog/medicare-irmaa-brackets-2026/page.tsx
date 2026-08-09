@@ -9,7 +9,7 @@ const URL = 'https://usfinnexus.com/blog/medicare-irmaa-brackets-2026';
 const IMAGE = 'https://usfinnexus.com/images/medicare-irmaa-brackets-2026.webp';
 
 export const metadata: Metadata = {
-    title: 'Medicare IRMAA 2026: Part B & D Premiums | USFinNexus',
+    title: 'Medicare IRMAA 2026: Part B & D Premiums',
     description: 'See every 2026 Medicare IRMAA bracket, Part B premium and Part D surcharge, based mainly on 2024 MAGI, plus SSA-44 reduction and appeal rules.',
     alternates: { canonical: URL },
     openGraph: {

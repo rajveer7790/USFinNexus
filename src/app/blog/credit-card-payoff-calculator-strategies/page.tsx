@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Credit Card Payoff Calculator & Strategies: Avalanche vs Snowball | USFinNexus',
+    title: 'Credit Card Payoff Calculator & Strategies: Avalanche vs Snowball',
     description: 'Stop falling for the minimum payment trap. Learn the three mathematical strategies to pay off credit card debt fast in 2026: Avalanche, Snowball, and Snowflake.',
     alternates: { canonical: 'https://usfinnexus.com/blog/credit-card-payoff-calculator-strategies' },
     openGraph: {

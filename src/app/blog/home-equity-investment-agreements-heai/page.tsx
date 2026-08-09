@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Home Equity Investment Agreements (HEAI) Explained: 2026 Guide | USFinNexus',
+    title: 'Home Equity Investment Agreements (HEAI) Explained: 2026 Guide',
     description: 'Companies like Hometap and Point will give you $100,000 today with zero monthly payments. Learn the hidden costs of selling a percentage of your home equity.',
     alternates: { canonical: 'https://usfinnexus.com/blog/home-equity-investment-agreements-heai' },
     openGraph: {

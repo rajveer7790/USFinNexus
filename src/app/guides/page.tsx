@@ -5,7 +5,7 @@ import { ALL_GUIDES } from '@/lib/guides';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-    title: 'Financial Guides 2026 - Mortgage & Cross-Border | USFinNexus',
+    title: 'Financial Guides 2026 - Mortgage & Cross-Border',
     description: 'Expert guides on US & Canadian real estate, cross-border mortgages, first-time home buying, and credit requirements.',
     alternates: { canonical: 'https://usfinnexus.com/guides' },
 };

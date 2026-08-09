@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Piggyback Mortgages (80/10/10): How to Avoid PMI in 2026 | USFinNexus',
+    title: 'Piggyback Mortgages (80/10/10): How to Avoid PMI in 2026',
     description: 'Avoid Private Mortgage Insurance (PMI) without a 20% down payment using the 80/10/10 piggyback loan strategy. Compare the math and risks for 2026 buyers.',
     openGraph: {
         title: 'Piggyback Mortgages (80/10/10): How to Avoid PMI in 2026',

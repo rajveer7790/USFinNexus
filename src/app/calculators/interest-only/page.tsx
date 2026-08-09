@@ -14,11 +14,11 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Interest-Only Mortgage Calculator 2026 | USFinNexus',
+    title: 'Interest-Only Mortgage Calculator 2026',
     description: 'Calculate your interest-only mortgage payments and see exactly how much your payment will jump when the loan fully amortizes.',
     openGraph: {
         type: 'website',
-        title: 'Interest-Only Mortgage Calculator 2026 | USFinNexus',
+        title: 'Interest-Only Mortgage Calculator 2026',
         description: 'Calculate interest-only mortgage payments and see exactly how much your payment jumps when the loan fully amortizes. Compare IO vs standard payments side by side.',
         url: 'https://usfinnexus.com/calculators/interest-only',
         images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Interest-Only Mortgage Calculator 2026 - USFinNexus' }],
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     alternates: { canonical: 'https://usfinnexus.com/calculators/interest-only' },
     twitter: {
         card: 'summary_large_image',
-        title: 'Interest-Only Mortgage Calculator 2026 | USFinNexus',
+        title: 'Interest-Only Mortgage Calculator 2026',
         description: 'Calculate interest-only payments and see exactly how much your payment jumps when full amortization kicks in.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -56,7 +56,6 @@ export default function InterestOnlyPage() {
                 url="https://usfinnexus.com/calculators/interest-only"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Interest-Only Calculator', item: '/calculators/interest-only' }]} />
-            <h1 className="sr-only">Interest-Only Mortgage Calculator</h1>
             <InterestOnlyClient />
             <InterestOnlySeoContent />
             <CalculatorFAQ faqs={INTEREST_ONLY_FAQS} title="Interest-Only Mortgages — Frequently Asked Questions" />

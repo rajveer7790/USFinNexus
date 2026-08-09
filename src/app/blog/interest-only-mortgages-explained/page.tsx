@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: "Interest-Only Mortgages Explained: The Hidden Risks 2026 | USFinNexus",
+    title: "Interest-Only Mortgages Explained: The Hidden Risks 2026",
     description: 'Interest-only loans offer massive monthly savings for the first 10 years, followed by a brutal payment shock. Learn if this risky mortgage strategy is right for you.',
     openGraph: {
         title: "Interest-Only Mortgages: When They Make Sense (and Usually Don't)",

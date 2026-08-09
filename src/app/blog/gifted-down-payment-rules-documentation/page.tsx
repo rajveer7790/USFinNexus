@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Gifted Down Payment Rules: The 2026 Guide to IRS & Underwriting | USFinNexus',
+    title: 'Gifted Down Payment Rules: The 2026 Guide to IRS & Underwriting',
     description: 'If your parents give you $20,000 to buy a house, the bank might reject your mortgage. Learn the strict IRS gift tax rules and how to write a legal Gift Letter.',
     alternates: { canonical: 'https://usfinnexus.com/blog/gifted-down-payment-rules-documentation' },
     openGraph: {

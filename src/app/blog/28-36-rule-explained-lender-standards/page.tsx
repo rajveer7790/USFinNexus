@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'The 28/36 Rule Explained: How Lenders Size Your Mortgage in 2026 | USFinNexus',
+    title: 'The 28/36 Rule Explained: How Lenders Size Your Mortgage in 2026',
     description: 'Learn exactly how mortgage lenders use the 28/36 rule to determine your borrowing limit in 2026. Calculate your front-end and back-end DTI to guarantee approval.',
     alternates: { canonical: 'https://usfinnexus.com/blog/28-36-rule-explained-lender-standards' },
     openGraph: {

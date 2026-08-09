@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: "Why Your Lender's Quote is Higher Than the Online Calculator | USFinNexus",
+    title: "Why Your Lender's Quote is Higher Than the Online Calculator",
     description: 'Frustrated that your official Loan Estimate is hundreds of dollars higher than what the online calculator promised? Learn the 4 hidden costs lenders legally have to include.',
     openGraph: {
         title: "Why Your Lender's Quote Differs from Online Calculators",

@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: "How Much House Can I Afford? The 28/36 Rule Explained 2026 | USFinNexus",
+    title: "How Much House Can I Afford? The 28/36 Rule Explained 2026",
     description: 'Stop guessing your budget. Learn how to calculate your exact housing affordability using the gold-standard 28/36 rule that lenders use to approve your mortgage.',
     openGraph: {
         title: "What's Your Real Mortgage Affordability? (Use the 28/36 Rule)",

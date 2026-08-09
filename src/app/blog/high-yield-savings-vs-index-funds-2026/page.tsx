@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'High-Yield Savings vs. Index Funds: Where to Park Your Cash in 2026 | USFinNexus',
+    title: 'High-Yield Savings vs. Index Funds: Where to Park Your Cash in 2026',
     description: 'Interest rates are shifting in 2026. Should you keep your money in a safe 5% HYSA or invest in the S&P 500? We break down the math for modern investors.',
     openGraph: {
         title: 'High-Yield Savings vs. Index Funds in 2026',
@@ -100,7 +100,7 @@ export default function HighYieldVsIndexBlog() {
             </header>
 
             <div className="mb-10 rounded-2xl overflow-hidden shadow-lg border border-gray-100">
-                <img src="/api/images/high_yield_vs_index" alt="Financial Charts and Bank Vault" className="w-full h-auto object-cover max-h-[450px]" />
+                <img src="/images/small-business-savings.png" alt="Savings and investment planning illustration" className="w-full h-auto object-cover max-h-[450px]" />
             </div>
 
             <div className="prose max-w-none" style={{ color: 'var(--color-text)' }}>

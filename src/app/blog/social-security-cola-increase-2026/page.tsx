@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Social Security COLA Increase 2026: Why Your Check Might Be Smaller | USFinNexus',
+    title: 'Social Security COLA Increase 2026: Why Your Check Might Be Smaller',
     description: 'Inflation is cooling down, which means the massive Social Security COLA bumps of the last three years are over. Learn exactly how the 2026 COLA is calculated.',
     alternates: { canonical: 'https://usfinnexus.com/blog/social-security-cola-increase-2026' },
     openGraph: {

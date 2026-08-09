@@ -9,7 +9,7 @@ const URL = 'https://usfinnexus.com/blog/irs-standard-mileage-rate-2026';
 const IMAGE = 'https://usfinnexus.com/images/irs-standard-mileage-rate-2026.webp';
 
 export const metadata: Metadata = {
-    title: 'IRS Mileage Rate 2026: New July Rates | USFinNexus',
+    title: 'IRS Mileage Rate 2026: New July Rates',
     description: 'The 2026 IRS business mileage rate is 72.5¢ through June and 76¢ from July. See medical, moving and charity rates, eligibility and examples.',
     alternates: { canonical: URL },
     openGraph: {

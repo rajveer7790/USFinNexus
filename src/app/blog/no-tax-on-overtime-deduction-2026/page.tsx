@@ -9,7 +9,7 @@ const URL = 'https://usfinnexus.com/blog/no-tax-on-overtime-deduction-2026';
 const IMAGE = 'https://usfinnexus.com/images/no-tax-on-overtime-2026.webp';
 
 export const metadata: Metadata = {
-    title: 'No Tax on Overtime 2026: Rules, Limits & Examples | USFinNexus',
+    title: 'No Tax on Overtime 2026: Rules, Limits & Examples',
     description: 'Understand the 2026 qualified overtime deduction: what pay counts, the $12,500/$25,000 limits, MAGI phaseout, W-2 reporting and filing records.',
     alternates: { canonical: URL },
     openGraph: {

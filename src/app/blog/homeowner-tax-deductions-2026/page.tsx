@@ -8,28 +8,28 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Homeowner Tax Deductions 2026: New $40K SALT Cap, PMI Return & Senior Deduction | USFinNexus',
-    description: 'Every homeowner tax deduction available in 2026 — the new $40,000 SALT cap, PMI deduction return, $4,000 senior homeowner deduction, mortgage interest, and energy credits. Updated for 2026.',
+    title: 'Homeowner Tax Deductions for 2026',
+    description: 'IRS-verified homeowner tax deductions for tax year 2026, including the $40,400 SALT limit, mortgage-interest rules and the enhanced $6,000 senior deduction.',
     alternates: { canonical: 'https://usfinnexus.com/blog/homeowner-tax-deductions-2026' },
-    openGraph: { type: 'article', title: 'Homeowner Tax Deductions 2026 — New SALT Cap, PMI & Senior Deduction', description: 'Every homeowner tax deduction in 2026 including the new $40K SALT cap, PMI deduction return, and $4K senior homeowner deduction.', url: 'https://usfinnexus.com/blog/homeowner-tax-deductions-2026', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Homeowner Tax Deductions 2026' }] },
-    twitter: { card: 'summary_large_image', title: 'Homeowner Tax Deductions 2026 | New SALT Cap & PMI Return', description: 'New $40K SALT cap, PMI back as a deduction, and a new senior homeowner deduction. Full guide for 2026 filers.', images: ['https://usfinnexus.com/images/home-hero-v2.png'] },
+    openGraph: { type: 'article', title: 'Homeowner Tax Deductions for 2026', description: 'IRS-verified 2026 SALT, mortgage-interest and enhanced senior-deduction rules.', url: 'https://usfinnexus.com/blog/homeowner-tax-deductions-2026', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Homeowner Tax Deductions 2026' }] },
+    twitter: { card: 'summary_large_image', title: 'Homeowner Tax Deductions for 2026', description: 'IRS-verified SALT, mortgage-interest and senior-deduction rules for tax year 2026.', images: ['https://usfinnexus.com/images/home-hero-v2.png'] },
 };
 
 export default function HomeownerTaxDeductionsBlog() {
     return (
         <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-                { '@type': 'Question', name: 'Is PMI tax deductible in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. PMI (Private Mortgage Insurance) is deductible in 2026 for taxpayers who itemize deductions. The deduction was reinstated and made permanent in recent legislation. The deductibility phases out for AGI above $100,000 (single) and $109,000 (married filing jointly).' } },
-                { '@type': 'Question', name: 'What is the new SALT deduction cap in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'The SALT (State and Local Tax) deduction cap was raised to $40,000 in 2026 (from $10,000 under TCJA). This is a major benefit for homeowners in high-tax states like California, New York, and New Jersey who pay large amounts in property taxes and state income taxes.' } },
-                { '@type': 'Question', name: 'What is the senior homeowner deduction in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'A new $4,000 additional standard deduction is available in 2026 for homeowners aged 65 or older who have owned their primary residence for at least 5 years. This is stackable with the existing age-related standard deduction increase and can significantly reduce taxable income for senior homeowners.' } }
+                { '@type': 'Question', name: 'Is PMI tax deductible in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'No under the current IRS homeowner guidance. The itemized deduction for mortgage insurance premiums expired, so PMI premiums cannot currently be claimed as an itemized deduction.' } },
+                { '@type': 'Question', name: 'What is the SALT deduction limit for tax year 2026?', acceptedAnswer: { '@type': 'Answer', text: 'For tax year 2026, the overall SALT limit is $40,400, or $20,200 for married taxpayers filing separately. A phaseout begins above specified modified adjusted gross income levels, with a statutory floor.' } },
+                { '@type': 'Question', name: 'What is the enhanced senior deduction?', acceptedAnswer: { '@type': 'Answer', text: 'For tax years 2025 through 2028, an eligible taxpayer age 65 or older may claim an additional deduction of up to $6,000 per person. Income phaseouts apply, and homeownership is not required.' } }
             ] }) }} />
             
             <ArticleSchema
                 title="Every Homeowner Tax Deduction You Can Claim in 2026"
-                description="Complete guide to every homeowner tax deduction in 2026 — the new $40,000 SALT cap, PMI deduction return, senior homeowner deduction, and mortgage interest rules."
+                description="IRS-verified guide to tax-year 2026 SALT, mortgage-interest, mortgage-insurance and enhanced senior-deduction rules."
                 url="https://usfinnexus.com/blog/homeowner-tax-deductions-2026"
                 datePublished="2026-04-08"
-                dateModified="2026-04-08"
+                dateModified="2026-08-09"
                 authorName="USFinNexus Editorial Team"
                 keywords={['homeowner tax deductions 2026', 'SALT deduction 2026', 'PMI tax deductible', 'mortgage interest deduction', 'senior homeowner deduction', 'tax filing 2026', 'property tax deduction']}
             />
@@ -59,7 +59,7 @@ export default function HomeownerTaxDeductionsBlog() {
                     </p>
 
                     <p>
-                        Most notably, the heavily restricted SALT deduction cap increased to a massive <strong>$40,000</strong>, private mortgage insurance (PMI) premiums became <strong>deductible again</strong>, and a brand-new, highly lucrative deduction was introduced specifically for <strong>homeowners aged 65 and older</strong>. 
+                        For tax year 2026, the federal SALT deduction limit is <strong>$40,400</strong> for most filing statuses other than married filing separately. The IRS also confirms that mortgage-insurance premiums are <strong>not currently deductible</strong>, while an enhanced deduction of up to <strong>$6,000 per eligible person age 65 or older</strong> may apply regardless of homeownership.
                     </p>
                     <p>
                         However, you cannot simply claim these deductions automatically. You must understand how they work, how they interact with the standard deduction, and whether you meet the strict IRS income thresholds. This comprehensive guide walks you through every single homeowner tax deduction available in 2026, who exactly qualifies, and how to make sure you are not leaving thousands of dollars in the government's pockets.
@@ -147,7 +147,7 @@ export default function HomeownerTaxDeductionsBlog() {
 
                     <h2 className="text-3xl font-bold mt-16 mb-6 text-navy-900 flex items-center gap-3">
                         <Target className="w-8 h-8 text-amber-500" />
-                        What Is the State and Local Tax (SALT) Deduction and the New $40,000 Cap?
+                        What Is the 2026 State and Local Tax (SALT) Deduction Limit?
                     </h2>
 
                     <p>
@@ -157,47 +157,47 @@ export default function HomeownerTaxDeductionsBlog() {
                         For years, this deduction was ruthlessly capped at <strong>$10,000</strong>. This was a devastating limit for homeowners in high-tax states who routinely paid $15,000 or more in property taxes alone, effectively forcing them to pay federal taxes on money they had already paid to their state governments.
                     </p>
                     <p>
-                        Starting with the 2025 tax year (filing in 2026), Congress officially raised the SALT cap to <strong>$40,000</strong> for tax years 2025 through 2029. That is a massive, landscape-shifting relief for homeowners in states like New York, New Jersey, California, Connecticut, and Illinois.
+                        For tax year 2026, IRS guidance lists a <strong>$40,400</strong> overall SALT limit, or $20,200 for married taxpayers filing separately. The limit begins to phase down above specified modified adjusted gross income thresholds and cannot fall below the statutory floor.
                     </p>
                     
                     <div className="card p-8 mb-8 border-l-4 border-amber-400 bg-amber-50">
                         <p className="text-amber-900 mb-0">
-                            <strong>The SALT Math:</strong> A married couple in New Jersey pays $15,000 in property taxes and $12,000 in state income tax = $27,000 total SALT. Under the old $10,000 cap, $17,000 in deductions would have been completely lost to the void. Under the new $40,000 cap, they can deduct the full $27,000, drastically reducing their taxable income.
+                            <strong>The SALT Math:</strong> A married couple filing jointly that pays $15,000 in property taxes and $12,000 in state income tax has $27,000 of potential SALT before applying eligibility, itemization and income-phaseout rules.
                         </p>
                     </div>
 
                     <h2 className="text-3xl font-bold mt-16 mb-6 text-navy-900 flex items-center gap-3">
                         <ShieldCheck className="w-8 h-8 text-blue-500" />
-                        Is PMI Tax-Deductible Again in 2026?
+                        Is PMI Tax-Deductible in 2026?
                     </h2>
 
                     <p>
                         This one is a big deal for first-time buyers who put down less than 20%. 
                     </p>
                     <p>
-                        Starting in 2026, private mortgage insurance (PMI) premiums — along with FHA mortgage insurance premiums (MIP), VA funding fees, and USDA guarantee fees — are once again treated as <strong>fully deductible mortgage interest</strong>.
+                        No. Current IRS Publication 936 states that the itemized deduction for mortgage-insurance premiums has expired. You <strong>cannot currently claim PMI premiums</strong> as an itemized deduction.
                     </p>
                     <p>
-                        If you are paying $150 per month in PMI on a conventional loan, that is $1,800 per year you can now add directly to your mortgage interest deduction when you itemize. The PMI deduction was available on and off for years but had officially expired. Its permanent return in 2026 is phenomenal news for millions of homeowners still carrying mortgage insurance.
+                        Do not add conventional PMI, FHA MIP or similar insurance costs to mortgage interest solely because they appear on a housing statement. Use the current Form 1098, Schedule A instructions and IRS Publication 936 when preparing a return.
                     </p>
 
                     <div className="bg-red-50 p-6 rounded-xl border border-red-200 my-8">
                         <p className="text-red-900 text-sm m-0 flex gap-2">
                             <AlertTriangle className="w-5 h-5 shrink-0" />
-                            <strong>Income Phase-Out Warning:</strong> The PMI deduction begins to phase out if your Adjusted Gross Income (AGI) exceeds $100,000 (single) or $109,000 (married filing jointly). If you make over these limits, you cannot claim the PMI deduction.
+                            <strong>Current-rule note:</strong> Historic PMI phaseout thresholds do not revive an expired deduction. Verify future legislation and the current-year IRS instructions before filing.
                         </p>
                     </div>
 
                     <h2 className="text-3xl font-bold mt-16 mb-6 text-navy-900 flex items-center gap-3">
                         <PlusCircle className="w-8 h-8 text-emerald-600" />
-                        What Is the New Senior Homeowner Deduction for Ages 65+?
+                        What Is the Enhanced Deduction for Taxpayers Age 65+?
                     </h2>
 
                     <p>
-                        Beginning with the 2025 tax year, homeowners aged 65 and older qualify for a highly specific, highly lucrative additional federal deduction. This legislation was designed to help seniors on fixed incomes who own their homes outright (meaning they pay no mortgage interest) and therefore do not have enough deductions to justify itemizing.
+                        For tax years 2025 through 2028, eligible taxpayers age 65 or older may claim an enhanced deduction. It is not limited to homeowners and can be available whether the taxpayer itemizes or takes the standard deduction.
                     </p>
                     <p>
-                        The Senior Homeowner Deduction allows eligible taxpayers to claim an additional <strong>$4,000 standard deduction</strong> (or $8,000 for a married couple where both are over 65). 
+                        The enhanced deduction is up to <strong>$6,000 per eligible person</strong>, or up to $12,000 on a joint return when both spouses qualify. It phases out above $75,000 of modified adjusted gross income for single filers and $150,000 for joint filers.
                     </p>
                     <p>
                         <strong>The Requirements:</strong>

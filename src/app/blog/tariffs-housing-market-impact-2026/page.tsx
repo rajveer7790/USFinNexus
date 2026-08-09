@@ -8,10 +8,10 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'How Tariffs Are Raising Home Prices in 2026 — $10,000+ Per New Home | USFinNexus',
+    title: 'How Tariffs Are Raising Home Prices in 2026 — $10,000+ Per New Home',
     description: 'Steel, lumber, and aluminum tariffs are adding $9,200–$10,900 to new construction costs in 2026. How trade policy affects mortgage rates, new home supply, and your buying power.',
     alternates: { canonical: 'https://usfinnexus.com/blog/tariffs-housing-market-impact-2026' },
-    openGraph: { type: 'article', title: 'How Tariffs Are Raising Home Prices in 2026 | USFinNexus', description: 'Tariffs are adding $10,000+ to new home costs. How trade policy is worsening housing affordability in 2026.', url: 'https://usfinnexus.com/blog/tariffs-housing-market-impact-2026', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Tariffs Housing Market Impact 2026' }] },
+    openGraph: { type: 'article', title: 'How Tariffs Are Raising Home Prices in 2026', description: 'Tariffs are adding $10,000+ to new home costs. How trade policy is worsening housing affordability in 2026.', url: 'https://usfinnexus.com/blog/tariffs-housing-market-impact-2026', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Tariffs Housing Market Impact 2026' }] },
     twitter: { card: 'summary_large_image', title: 'Tariffs Are Adding $10,000+ to New Home Costs in 2026', description: 'How steel, lumber, and aluminum tariffs are making housing less affordable and what buyers can do.', images: ['https://usfinnexus.com/icon-512.png'] },
 };
 

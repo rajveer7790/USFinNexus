@@ -9,7 +9,7 @@ const URL = 'https://usfinnexus.com/blog/child-tax-credit-2026';
 const IMAGE = 'https://usfinnexus.com/images/child-tax-credit-2026.webp';
 
 export const metadata: Metadata = {
-    title: 'Child Tax Credit 2026: $2,200 Rules | USFinNexus',
+    title: 'Child Tax Credit 2026: $2,200 Rules',
     description: 'See the 2026 Child Tax Credit amount, $1,700 refundable limit, $200,000/$400,000 phaseouts, qualifying-child tests, refund timing and examples.',
     alternates: { canonical: URL },
     openGraph: {

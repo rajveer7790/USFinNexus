@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'The Complete First-Time Homebuyer Mortgage Guide (2026) | USFinNexus',
+    title: 'The Complete First-Time Homebuyer Mortgage Guide (2026)',
     description: 'A step-by-step guide to getting approved for your first mortgage in 2026. Learn how underwriters analyze your finances, and avoid the critical mistakes that destroy approvals.',
     alternates: { canonical: 'https://usfinnexus.com/blog/first-time-homebuyer-mortgage-guide-2026' },
     openGraph: {

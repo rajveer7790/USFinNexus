@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Paying Off Your Mortgage Early vs. Investing: The 2026 Math | USFinNexus',
+    title: 'Paying Off Your Mortgage Early vs. Investing: The 2026 Math',
     description: 'Should you send an extra $500 a month to the bank to pay off your house early? Learn the exact mathematical formula to decide between debt payoff and stock market investing.',
 
     alternates: { canonical: 'https://usfinnexus.com/blog/pay-off-mortgage-early-strategy' },

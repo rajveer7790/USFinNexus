@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'High-Yield Savings vs. CDs: Where to Hide Your Cash in 2026 | USFinNexus',
+    title: 'High-Yield Savings vs. CDs: Where to Hide Your Cash in 2026',
     description: 'If you have cash sitting in a traditional checking account earning 0.01%, you are losing money to inflation. Discover the mathematical difference between a HYSA and a CD.',
     alternates: { canonical: 'https://usfinnexus.com/blog/high-yield-savings-vs-cd-2026' },
     openGraph: {

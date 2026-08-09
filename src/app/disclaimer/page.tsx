@@ -4,18 +4,18 @@ import { Shield } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-    title: 'Disclaimer | USFinNexus — Calculator Results Are Estimates Only',
+    title: 'Disclaimer — Calculator Results Are Estimates Only',
     description: 'Important disclaimer: USFinNexus calculator results are estimates for educational purposes only and do not constitute financial, mortgage, tax, or legal advice.',
     alternates: { canonical: 'https://usfinnexus.com/disclaimer' },
     openGraph: {
         type: 'website',
         url: 'https://usfinnexus.com/disclaimer',
-        title: 'Disclaimer | USFinNexus',
+        title: 'Disclaimer',
         description: 'Calculator results are estimates only. Not financial, mortgage, tax, or legal advice.',
     },
     twitter: {
         card: 'summary',
-        title: 'Disclaimer | USFinNexus',
+        title: 'Disclaimer',
         description: 'Calculator results are estimates only — not financial advice.',
     },
 };

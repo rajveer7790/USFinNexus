@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Safe Yields: US Treasuries vs. Emerging Market Bonds in 2026 | USFinNexus',
+    title: 'Safe Yields: US Treasuries vs. Emerging Market Bonds in 2026',
     description: 'In a world of global instability, where should you look for safe yield? We compare the safety of US Treasuries against the high returns of Emerging Markets.',
     openGraph: {
         title: 'Safe Yields: US Treasuries vs. Emerging Market Bonds',
@@ -100,7 +100,7 @@ export default function SafeYieldsBondsBlog() {
             </header>
 
             <div className="mb-10 rounded-2xl overflow-hidden shadow-lg border border-gray-100">
-                <img src="/api/images/safe_yields_bonds" alt="US Treasury bonds and emerging market flags on a glowing blue graph" className="w-full h-auto object-cover max-h-[450px]" />
+                <img src="/images/small-business-savings.png" alt="U.S. Treasury and bond yield planning" className="w-full h-auto object-cover max-h-[450px]" />
             </div>
 
             <div className="prose max-w-none" style={{ color: 'var(--color-text)' }}>

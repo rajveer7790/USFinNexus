@@ -14,19 +14,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Student Loan Payoff Calculator 2026 — Extra Payment Estimator | USFinNexus',
+    title: 'Student Loan Payoff Calculator 2026 — Extra Payment Estimator',
     description: 'Calculate your student loan payoff date and see how extra monthly payments save years and thousands in interest. Free student loan calculator with PDF export.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/student-loan' },
     openGraph: {
         type: 'website',
-        title: 'Student Loan Payoff Calculator 2026 | USFinNexus',
+        title: 'Student Loan Payoff Calculator 2026',
         description: 'See your exact student loan payoff date and how much extra payments save. Free calculator with PDF export.',
         url: 'https://usfinnexus.com/calculators/student-loan',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Student Loan Calculator 2026 — USFinNexus' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Student Loan Payoff Calculator 2026 | USFinNexus',
+        title: 'Student Loan Payoff Calculator 2026',
         description: 'When will your student loans be paid off? See how extra payments cut years off your debt.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -56,7 +56,6 @@ export default function StudentLoanPage() {
                 url="https://usfinnexus.com/calculators/student-loan"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Student Loan', item: '/calculators/student-loan' }]} />
-            <h1 className="sr-only">Student Loan Payoff Calculator</h1>
             <StudentLoanClient />
             <StudentLoanSeoContent />
             <CalculatorFAQ faqs={STUDENT_LOAN_FAQS} title="Student Loans — Frequently Asked Questions" />

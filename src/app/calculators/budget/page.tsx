@@ -14,12 +14,12 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Budget Calculator 2026 - 50/30/20 Rule Planner | USFinNexus',
+    title: 'Budget Calculator 2026 - 50/30/20 Rule Planner',
     description:
         'Plan your monthly budget using the 50/30/20 rule. See where your money goes across needs, wants, and savings. Free budget planner, no signup required.',
     openGraph: {
         type: 'website',
-        title: '50/30/20 Budget Calculator 2026 | USFinNexus',
+        title: '50/30/20 Budget Calculator 2026',
         description: 'Free monthly budget planner using the 50/30/20 rule. Categorize your spending across needs, wants, and savings. Find opportunities to save more. No signup.',
         url: 'https://usfinnexus.com/calculators/budget',
         images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: '50/30/20 Budget Calculator 2026 - USFinNexus' }],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     alternates: { canonical: 'https://usfinnexus.com/calculators/budget' },
     twitter: {
         card: 'summary_large_image',
-        title: 'Budget Calculator 2026 — 50/30/20 Rule Planner | USFinNexus',
+        title: 'Budget Calculator 2026 — 50/30/20 Rule Planner',
         description: 'Plan your monthly budget with the 50/30/20 rule. See needs, wants, and savings split instantly. Free budget planner.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -61,7 +61,6 @@ export default function BudgetPage() {
                 url="https://usfinnexus.com/calculators/budget"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Budget Planner', item: '/calculators/budget' }]} />
-            <h1 className="sr-only">Budget Calculator 2026</h1>
             <BudgetClient />
             <BudgetSeoContent />
             <CalculatorFAQ faqs={BUDGET_FAQS} title="Budget Planner — Frequently Asked Questions" />

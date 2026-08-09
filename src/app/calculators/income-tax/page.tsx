@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     alternates: { canonical: '/calculators/income-tax' },
     openGraph: {
         type: 'website',
-        title: '2026 Federal Income Tax Calculator | USFinNexus',
+        title: '2026 Federal Income Tax Calculator',
         description: 'Estimate 2026 federal income tax with official IRS brackets and standard deductions.',
         url: 'https://usfinnexus.com/calculators/income-tax',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: '2026 Federal Income Tax Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: '2026 Federal Income Tax Calculator | USFinNexus',
+        title: '2026 Federal Income Tax Calculator',
         description: 'Estimate 2026 federal income tax with official IRS brackets and standard deductions.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -64,7 +64,6 @@ export default function IncomeTaxPage() {
                 url="https://usfinnexus.com/calculators/income-tax"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Income Tax Calculator', item: '/calculators/income-tax' }]} />
-            <h1 className="sr-only">2026 Federal Income Tax Calculator</h1>
             <IncomeTaxClient />
             <IncomeTaxSeoContent />
             <CalculatorFAQ faqs={INCOME_TAX_FAQS} title="2026 Federal Income Tax Calculator FAQs" />

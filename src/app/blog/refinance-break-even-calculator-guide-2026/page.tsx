@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Refinance Break-Even Calculator Guide: When Does Refinancing Actually Make Sense? 2026',
+    title: 'Refinance Break-Even Calculator Guide',
     description: 'Master the refinance break-even formula. See real scenarios, closing costs, and when refinancing saves money-plus a free calculator to run your numbers.',
     openGraph: {
         title: 'Refinance Break-Even Calculator: When Does It Make Sense? 2026 Guide',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         images: ['https://usfinnexus.com/images/refinance-break-even-hero-2026.png'],
     },
 
-    alternates: { canonical: 'https://usfinnexus.com/blog/should-i-refinance-2026' },
+    alternates: { canonical: 'https://usfinnexus.com/blog/refinance-break-even-calculator-guide-2026' },
 };
 
 export default function RefinanceBreakEvenBlog() {
@@ -36,7 +36,7 @@ export default function RefinanceBreakEvenBlog() {
             description="Master the refinance break-even formula. See real scenarios, closing costs, and when refinancing saves money-plus a free calculator to run your numbers."
             url="https://usfinnexus.com/blog/refinance-break-even-calculator-guide-2026"
             datePublished="2026-05-15"
-            dateModified="2026-05-15"
+            dateModified="2026-08-09"
             authorName="USFinNexus Editorial Team"
             keywords={['refinance calculator', 'break-even point', 'mortgage refinancing', 'closing costs', 'when to refinance', 'refinance scenarios', '2026 mortgage rates']}
         />
@@ -135,7 +135,7 @@ export default function RefinanceBreakEvenBlog() {
 
                 <h3 className="text-xl font-bold mt-8 mb-4">Scenario 1: Locked high in 2023, ready to move</h3>
                 <p className="mb-4">
-                    A homeowner on Reddit locked in a 7.0% rate in 2023 on a $300,000 loan. Now in May 2026, they can refinance to 6.1%. Their current payment is roughly $1,996/month; the new payment would be around $1,847. That&apos;s $149/month in savings.
+                    Consider a hypothetical $300,000 remaining balance at 7.0%. If a qualified borrower receives a 6.1% refinance quote with the same remaining term, the principal-and-interest payment would fall—but the decision still depends on points, lender fees, taxes, insurance and how long the borrower keeps the loan. Enter the actual Loan Estimate figures instead of treating this illustration as a current market quote.
                 </p>
                 <p className="mb-4">
                     With typical closing costs of 3% (about $9,000), the break-even is: $9,000 ÷ $149 = 60 months (5 years).
@@ -270,7 +270,7 @@ export default function RefinanceBreakEvenBlog() {
                     <a href="https://www.freddiemac.com/pmms" target="_blank" rel="noopener noreferrer" className="text-[#0066CC] hover:underline">30-year fixed rates are hovering around 6.36%, with 15-year rates at 5.71%</a>. That&apos;s down from last year&apos;s peaks (6.81% / 5.92%), but still elevated compared to pandemic lows.
                 </p>
                 <p className="mb-4">
-                    Forecasters expect rates to stay in the 6.0%-6.5% range through late 2026 into 2027. Translation: if your current rate is 7%+ (common for 2023-2024 borrowers), there&apos;s a refinance opportunity. If you&apos;re at 6.0%-6.25%, the potential savings are slimmer and break-even points stretch longer.
+                    Freddie Mac&apos;s weekly PMMS average was 6.69% for a 30-year fixed mortgage on August 6, 2026. That national average is not a refinance quote and does not predict future rates. Use the rate, points and fees on your own Loan Estimate; even a lower note rate may not justify the transaction when costs or a term reset are included.
                 </p>
                 <p className="mb-4">
                     Don&apos;t wait for a perfect rate. The cost of waiting-staying at a higher rate for months-often exceeds the benefit of a slightly lower rate later.

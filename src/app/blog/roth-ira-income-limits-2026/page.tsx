@@ -9,7 +9,7 @@ const URL = 'https://usfinnexus.com/blog/roth-ira-income-limits-2026';
 const IMAGE = 'https://usfinnexus.com/images/roth-ira-income-limits-2026.webp';
 
 export const metadata: Metadata = {
-    title: 'Roth IRA Income Limits 2026: MAGI Phase-Out Guide | USFinNexus',
+    title: 'Roth IRA Income Limits 2026: MAGI Phase-Out Guide',
     description: 'See the 2026 Roth IRA income limits, $7,500 contribution cap, $8,600 age-50 limit, phase-out formula and excess-contribution fixes.',
     alternates: { canonical: URL },
     openGraph: {

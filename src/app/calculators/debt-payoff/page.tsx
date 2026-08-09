@@ -14,19 +14,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Debt Payoff Calculator 2026 — Snowball vs Avalanche Strategy | USFinNexus',
+    title: 'Debt Payoff Calculator 2026 — Snowball vs Avalanche Strategy',
     description: 'Compare debt snowball vs avalanche payoff methods across all your debts. See which strategy gets you debt-free fastest and saves the most interest. Free, no signup.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/debt-payoff' },
     openGraph: {
         type: 'website',
-        title: 'Debt Payoff Calculator 2026 — Snowball vs Avalanche | USFinNexus',
+        title: 'Debt Payoff Calculator 2026 — Snowball vs Avalanche',
         description: 'Compare snowball vs avalanche across all your debts. Find your debt-free date and total interest savings.',
         url: 'https://usfinnexus.com/calculators/debt-payoff',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Debt Payoff Calculator 2026 — USFinNexus' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Debt Payoff Calculator 2026 | Snowball vs Avalanche | USFinNexus',
+        title: 'Debt Payoff Calculator 2026 | Snowball vs Avalanche',
         description: 'Snowball or avalanche — which gets you debt-free faster? Compare strategies across all your debts.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -56,7 +56,6 @@ export default function DebtPayoffPage() {
                 url="https://usfinnexus.com/calculators/debt-payoff"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Debt Payoff Calculator', item: '/calculators/debt-payoff' }]} />
-            <h1 className="sr-only">Debt Payoff Calculator</h1>
             <DebtPayoffClient />
             <DebtPayoffSeoContent />
             <CalculatorFAQ faqs={DEBT_PAYOFF_FAQS} title="Debt Payoff — Frequently Asked Questions" />

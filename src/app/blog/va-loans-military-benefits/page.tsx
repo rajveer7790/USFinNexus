@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'VA Loans Explained: 2026 Guide to Zero Down Payment & Benefits | USFinNexus',
+    title: 'VA Loans Explained: 2026 Guide to Zero Down Payment & Benefits',
     description: 'The VA Loan is the most powerful mortgage in America. Learn how military veterans can buy a home in 2026 with 0% down, no PMI, and lower interest rates.',
     openGraph: {
         title: 'VA Loans Explained: 2026 Guide to Zero Down Payment & Benefits',

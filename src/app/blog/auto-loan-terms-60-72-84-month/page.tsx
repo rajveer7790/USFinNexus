@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: '60 vs 72 vs 84-Month Auto Loan: The Hidden Dangers of Long-Term Car Loans | USFinNexus',
+    title: '60 vs 72 vs 84-Month Auto Loan: The Hidden Dangers of Long-Term Car Loans',
     description: 'Dealers are pushing 84-month auto loans to artificially lower your monthly payment. See the exact math on how long-term car loans destroy your wealth through depreciation and interest.',
     alternates: { canonical: 'https://usfinnexus.com/blog/auto-loan-terms-60-72-84-month' },
     openGraph: {

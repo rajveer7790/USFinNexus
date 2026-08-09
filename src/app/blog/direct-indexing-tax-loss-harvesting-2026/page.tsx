@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Direct Indexing & Tax-Loss Harvesting: The 2026 Guide | USFinNexus',
+    title: 'Direct Indexing & Tax-Loss Harvesting: The 2026 Guide',
     description: 'Why are wealthy investors abandoning traditional ETFs? Learn how Direct Indexing algorithms use micro-losses to generate massive tax deductions on your portfolio.',
     alternates: { canonical: 'https://usfinnexus.com/blog/direct-indexing-tax-loss-harvesting-2026' },
     openGraph: {

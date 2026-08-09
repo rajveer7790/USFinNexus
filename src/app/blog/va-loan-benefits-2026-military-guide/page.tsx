@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'VA Loan Benefits 2026: The Ultimate Military Housing Guide | USFinNexus',
+    title: 'VA Loan Benefits 2026: The Ultimate Military Housing Guide',
     description: 'The VA Loan is the most powerful mortgage in America. Learn how veterans can buy a $500,000 house with $0 down and absolutely no Private Mortgage Insurance (PMI).',
     alternates: { canonical: 'https://usfinnexus.com/blog/va-loan-benefits-2026-military-guide' },
     openGraph: {

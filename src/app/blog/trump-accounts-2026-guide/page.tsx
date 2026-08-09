@@ -6,7 +6,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import AuthorBio from '@/components/AuthorBio';
 
 export const metadata: Metadata = {
-    title: 'Trump Accounts 2026: $1,000 Seed, Eligibility & Rules | USFinNexus',
+    title: 'Trump Accounts 2026: $1,000 Seed, Eligibility & Rules',
     description: 'A plain-English guide to Trump Accounts in 2026: who qualifies for the $1,000 pilot contribution, contribution limits, Form 4547, investments and next steps.',
     alternates: { canonical: 'https://usfinnexus.com/blog/trump-accounts-2026-guide' },
     openGraph: {

@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Multifamily Real Estate Investing 2026: The House Hacking Blueprint | USFinNexus',
+    title: 'Multifamily Real Estate Investing 2026: The House Hacking Blueprint',
     description: 'Stop buying single-family homes. Learn the mathematical superiority of multifamily real estate and how to buy a 4-unit apartment building with just 3.5% down.',
     alternates: { canonical: 'https://usfinnexus.com/blog/multifamily-real-estate-investing-2026' },
     openGraph: {

@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Chattel Mortgages Explained: How to Finance a Mobile Home in 2026 | USFinNexus',
+    title: 'Chattel Mortgages Explained: How to Finance a Mobile Home in 2026',
     description: 'Buying a manufactured home on rented land? You cannot use a traditional mortgage. Learn how chattel mortgages work, the interest rate trap, and how to protect yourself.',
     alternates: { canonical: 'https://usfinnexus.com/blog/chattel-mortgages-mobile-homes-financing' },
     openGraph: {

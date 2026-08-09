@@ -9,7 +9,7 @@ const URL = 'https://usfinnexus.com/blog/hsa-contribution-limits-2026';
 const IMAGE = 'https://usfinnexus.com/images/hsa-contribution-limits-2026.webp';
 
 export const metadata: Metadata = {
-    title: 'HSA Contribution Limits 2026: New Rules | USFinNexus',
+    title: 'HSA Contribution Limits 2026: New Rules',
     description: 'Learn the 2026 HSA contribution limits, HDHP thresholds, age-55 catch-up, Medicare timing and new bronze, catastrophic and DPC eligibility rules.',
     alternates: { canonical: URL },
     openGraph: {

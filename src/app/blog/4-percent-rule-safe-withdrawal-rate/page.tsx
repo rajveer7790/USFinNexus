@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'The 4% Rule Explained: Is it Still a Safe Withdrawal Rate in 2026? | USFinNexus',
+    title: 'The 4% Rule Explained: Is it Still a Safe Withdrawal Rate in 2026?',
     description: 'The 4% rule has guided retirees for decades, but soaring inflation and sequence of returns risk in 2026 have many experts recommending a 3.5% or 3.2% safe withdrawal rate instead.',
     alternates: { canonical: 'https://usfinnexus.com/blog/4-percent-rule-safe-withdrawal-rate' },
     openGraph: {
@@ -176,7 +176,7 @@ export default function BlogPost() {
                     <p className="text-purple-100 mb-8 max-w-xl mx-auto">
                         Don't guess when you can retire. Use our free FIRE Calculator to model your exact portfolio under a 3%, 3.5%, or 4% Safe Withdrawal Rate, and see exactly what year you will hit financial independence.
                     </p>
-                    <Link href="/calculators/fire" className="inline-block bg-white text-navy-900 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
+                    <Link href="/calculators/fire-planner" className="inline-block bg-white text-navy-900 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
                         Calculate My FIRE Number
                     </Link>
                 </div>
@@ -210,7 +210,7 @@ export default function BlogPost() {
             </div>
             </article>
         </div>
-        <RelatedCalculators exclude={['/calculators/fire']} limit={4} title="Related Retirement Tools" />
+        <RelatedCalculators exclude={['/calculators/fire-planner']} limit={4} title="Related Retirement Tools" />
         <RelatedArticles currentSlug="4-percent-rule-safe-withdrawal-rate" category="Retirement" />
         </>
     );

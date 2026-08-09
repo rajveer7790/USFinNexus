@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Coast FIRE vs. Barista FIRE: Semi-Retirement Strategies for 2026 | USFinNexus',
+    title: 'Coast FIRE vs. Barista FIRE: Semi-Retirement Strategies for 2026',
     description: 'You do not need $2 million to escape the corporate grind. Learn the exact mathematical formulas behind Coast FIRE and Barista FIRE to design your early retirement.',
     alternates: { canonical: 'https://usfinnexus.com/blog/coast-fire-vs-barista-fire-2026' },
     openGraph: {

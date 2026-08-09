@@ -8,11 +8,11 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Spring 2026 Housing Market Forecast: Rates, Prices & Buyer Strategy | USFinNexus',
+    title: 'Spring 2026 Housing Market Forecast: Rates, Prices & Buyer Strategy',
     description: 'Spring 2026 housing market analysis: mortgage rate outlook, home price trends, inventory data by region, and expert strategy for buyers and sellers navigating this market.',
     alternates: { canonical: 'https://usfinnexus.com/blog/spring-2026-housing-market-forecast' },
-    openGraph: { type: 'article', title: 'Spring 2026 Housing Market Forecast | USFinNexus', description: 'Mortgage rates, home prices, inventory, and the best buyer/seller strategy for spring 2026.', url: 'https://usfinnexus.com/blog/spring-2026-housing-market-forecast', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Spring 2026 Housing Market Forecast' }] },
-    twitter: { card: 'summary_large_image', title: 'Spring 2026 Housing Market Forecast | USFinNexus', description: 'Mortgage rates, home prices, and the best strategy for buyers and sellers this spring.', images: ['https://usfinnexus.com/icon-512.png'] },
+    openGraph: { type: 'article', title: 'Spring 2026 Housing Market Forecast', description: 'Mortgage rates, home prices, inventory, and the best buyer/seller strategy for spring 2026.', url: 'https://usfinnexus.com/blog/spring-2026-housing-market-forecast', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Spring 2026 Housing Market Forecast' }] },
+    twitter: { card: 'summary_large_image', title: 'Spring 2026 Housing Market Forecast', description: 'Mortgage rates, home prices, and the best strategy for buyers and sellers this spring.', images: ['https://usfinnexus.com/icon-512.png'] },
 };
 
 export default function SpringHousingMarketBlog() {

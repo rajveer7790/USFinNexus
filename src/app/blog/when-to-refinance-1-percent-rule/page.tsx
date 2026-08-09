@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'When to Refinance a Mortgage: Is the 1% Rule Dead in 2026? | USFinNexus',
+    title: 'When to Refinance a Mortgage: Is the 1% Rule Dead in 2026?',
     description: 'Learn when it actually makes mathematical sense to refinance your mortgage in 2026. Explore the old 1% rule, closing cost break-even points, and cash-flow strategy.',
     openGraph: {
         title: 'When to Refinance a Mortgage: Is the 1% Rule Dead in 2026?',

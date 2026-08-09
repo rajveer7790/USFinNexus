@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'How to Buy a House with Bad Credit in 2026: FHA & Manual Underwriting | USFinNexus',
+    title: 'How to Buy a House with Bad Credit in 2026: FHA & Manual Underwriting',
     description: 'You do not need a 700 credit score to buy a home. Learn the exact government loan loopholes and rapid rescore strategies designed for buyers with bad credit.',
     alternates: { canonical: 'https://usfinnexus.com/blog/how-to-buy-a-house-with-bad-credit' },
     openGraph: {

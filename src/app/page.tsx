@@ -13,7 +13,7 @@ import {
 const HomeHeroWidget = dynamic(() => import('@/components/HomeHeroWidget'));
 
 export const metadata: Metadata = {
-    title: 'Financial Calculators for Mortgages, Loans & Money | USFinNexus',
+    title: 'Financial Calculators for Mortgages, Loans & Money',
     description: 'Free U.S. financial calculators for mortgages, home affordability, refinancing, debt, loans, retirement and federal taxes. No account required.',
     alternates: { canonical: '/' },
     openGraph: {
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
         locale: 'en_US',
         url: 'https://usfinnexus.com/',
         siteName: 'USFinNexus',
-        title: 'Financial Calculators for Mortgages, Loans & Money | USFinNexus',
+        title: 'Financial Calculators for Mortgages, Loans & Money',
         description: 'Free U.S. mortgage and personal-finance calculators with clear assumptions and no account required.',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus financial calculators' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Financial Calculators | USFinNexus',
+        title: 'Financial Calculators',
         description: 'Free U.S. mortgage and personal-finance calculators with clear assumptions and no account required.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },

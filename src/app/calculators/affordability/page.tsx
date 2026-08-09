@@ -14,19 +14,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Home Affordability Calculator | USFinNexus',
+    title: 'Home Affordability Calculator',
     description: 'Estimate how much house you can afford using income, recurring debt, down payment, mortgage rate, term and property-tax assumptions. Compare 28% and 43% planning scenarios.',
     alternates: { canonical: '/calculators/affordability' },
     openGraph: {
         type: 'website',
-        title: 'Home Affordability Calculator | USFinNexus',
+        title: 'Home Affordability Calculator',
         description: 'Estimate a home-price range from income, debt, down payment, mortgage rate and property-tax assumptions.',
         url: 'https://usfinnexus.com/calculators/affordability',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Home Affordability Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Home Affordability Calculator | USFinNexus',
+        title: 'Home Affordability Calculator',
         description: 'Estimate how much house you can afford and compare planning scenarios.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },

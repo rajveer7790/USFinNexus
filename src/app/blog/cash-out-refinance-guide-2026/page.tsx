@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Cash-Out Refinance Guide 2026: When Is It Worth Losing Your Old Interest Rate? | USFinNexus',
+    title: 'Cash-Out Refinance Guide 2026: Costs & Risks',
     description: 'A cash-out refinance allows you to turn your home equity into liquid cash, but it resets your entire mortgage. Learn the math behind debt consolidation and the hidden tax rules.',
     alternates: { canonical: 'https://usfinnexus.com/blog/cash-out-refinance-guide-2026' },
     openGraph: {

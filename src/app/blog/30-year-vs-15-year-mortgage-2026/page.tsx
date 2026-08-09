@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: '30-Year vs 15-Year Mortgage in 2026: Which Saves You More? | USFinNexus',
+    title: '30-Year vs 15-Year Mortgage in 2026: Which Saves You More?',
     description: 'A 15-year mortgage saves you massive amounts of interest, but is it the smartest financial move? Compare the exact math, monthly payments, and the "invest the difference" strategy for 2026.',
     alternates: { canonical: 'https://usfinnexus.com/blog/30-year-vs-15-year-mortgage-2026' },
     openGraph: {

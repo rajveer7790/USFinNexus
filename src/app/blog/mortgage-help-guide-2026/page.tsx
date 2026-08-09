@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: "Mortgage Help Guide 2026: What To Do If You Can\'t Pay | USFinNexus",
+    title: "Mortgage Help Guide 2026: What To Do If You Can\'t Pay",
     description: 'A comprehensive, factual guide on what to do if you are struggling to make your mortgage payments in 2026. Covers forbearance, loan modifications, hardship letters, and free HUD counseling.',
     openGraph: {
         title: "Mortgage Help Guide 2026: What To Do If You Can\'t Pay",

@@ -14,19 +14,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Mortgage Refinance Calculator | USFinNexus',
+    title: 'Mortgage Refinance Calculator',
     description: 'Compare your current mortgage with a new loan. Estimate monthly payment savings, refinance costs and a simple break-even period using your own rate and fee assumptions.',
     alternates: { canonical: '/calculators/refinance' },
     openGraph: {
         type: 'website',
-        title: 'Mortgage Refinance Calculator | USFinNexus',
+        title: 'Mortgage Refinance Calculator',
         description: 'Estimate refinance payment savings, costs and break-even timing using your own loan assumptions.',
         url: 'https://usfinnexus.com/calculators/refinance',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Mortgage Refinance Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mortgage Refinance Calculator | USFinNexus',
+        title: 'Mortgage Refinance Calculator',
         description: 'Compare current and proposed mortgage scenarios and estimate break-even timing.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },

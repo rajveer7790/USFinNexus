@@ -34,13 +34,13 @@ export const metadata: Metadata = {
     },
     openGraph: {
         type: 'website', locale: 'en_US', url: 'https://usfinnexus.com/', siteName: 'USFinNexus',
-        title: 'Mortgage Calculator & Financial Calculators | USFinNexus',
+        title: 'Mortgage Calculator & Financial Calculators',
         description: 'Free U.S. mortgage and personal finance calculators with clear assumptions and no account required.',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus financial calculators' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mortgage Calculator & Financial Calculators | USFinNexus',
+        title: 'Mortgage Calculator & Financial Calculators',
         description: 'Free U.S. mortgage and personal finance calculators with clear assumptions and no account required.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },

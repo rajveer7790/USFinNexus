@@ -14,19 +14,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Closing Cost Calculator | USFinNexus',
+    title: 'Closing Cost Calculator',
     description: 'Estimate home-buying closing costs including lender charges, title and settlement fees, prepaid items, taxes and other assumptions. Actual costs vary by transaction and location.',
     alternates: { canonical: '/calculators/closing-costs' },
     openGraph: {
         type: 'website',
-        title: 'Closing Cost Calculator | USFinNexus',
+        title: 'Closing Cost Calculator',
         description: 'Estimate buyer closing-cost categories for a U.S. home purchase using your own assumptions.',
         url: 'https://usfinnexus.com/calculators/closing-costs',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Closing Cost Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Closing Cost Calculator | USFinNexus',
+        title: 'Closing Cost Calculator',
         description: 'Estimate common home-purchase closing-cost categories.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },

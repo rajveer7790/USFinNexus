@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'The AI Revolution in Personal Finance: Top Tools for Smart Investors in 2026 | USFinNexus',
+    title: 'Best AI Personal Finance Tools in 2026',
     description: 'Artificial Intelligence has moved beyond chatbots. Discover how generative AI, direct indexing algorithms, and AI wealth managers are fundamentally disrupting retail investing in 2026.',
     alternates: { canonical: 'https://usfinnexus.com/blog/ai-personal-finance-investing-2026' },
     openGraph: {
@@ -152,7 +152,7 @@ export default function BlogPost() {
                     <p className="text-green-100 mb-8 max-w-xl mx-auto">
                         Whether you use an AI wealth manager or buy standard ETFs, the key to wealth is compound interest. Use our free, zero-data Compound Growth Calculator to see how much your portfolio will be worth in 10, 20, or 30 years.
                     </p>
-                    <Link href="/calculators/compound-interest" className="inline-block bg-white text-green-900 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
+                    <Link href="/calculators/investment" className="inline-block bg-white text-green-900 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
                         Calculate Portfolio Growth
                     </Link>
                 </div>
@@ -186,7 +186,7 @@ export default function BlogPost() {
             </div>
             </article>
         </div>
-        <RelatedCalculators exclude={['/calculators/compound-interest']} limit={4} title="Related Investing Tools" />
+        <RelatedCalculators exclude={['/calculators/investment']} limit={4} title="Related Investing Tools" />
         <RelatedArticles currentSlug="ai-personal-finance-investing-2026" category="FinTech" />
         </>
     );

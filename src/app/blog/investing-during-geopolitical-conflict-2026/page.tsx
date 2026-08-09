@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Investing During Geopolitical Conflict: Safe Havens in 2026 | USFinNexus',
+    title: 'Investing During Geopolitical Conflict: Safe Havens in 2026',
     description: 'When global tensions rise, markets react. Discover how smart investors are protecting their portfolios during international conflicts in 2026.',
     openGraph: {
         title: 'Investing During Geopolitical Conflict: Safe Havens in 2026',
@@ -99,7 +99,7 @@ export default function GeopoliticalConflictBlog() {
             </header>
 
             <div className="mb-10 rounded-2xl overflow-hidden shadow-lg border border-gray-100">
-                <img src="/api/images/geopolitical_conflict_investing" alt="Glowing golden safe vault acting as a safe haven" className="w-full h-auto object-cover max-h-[450px]" />
+                <img src="/images/small-business-savings.png" alt="Portfolio planning during geopolitical uncertainty" className="w-full h-auto object-cover max-h-[450px]" />
             </div>
 
             <div className="prose max-w-none" style={{ color: 'var(--color-text)' }}>

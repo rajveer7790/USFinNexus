@@ -3,19 +3,19 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: 'First-Time Homebuyer Programs 2026 — Grants, Down Payment Assistance & Loans | USFinNexus',
+    title: 'First-Time Homebuyer Programs 2026',
     description: 'Complete guide to first-time homebuyer programs in 2026. Federal grants, state down payment assistance, FHA loans, and local programs available to first-time buyers.',
     alternates: { canonical: 'https://usfinnexus.com/guides/first-time-homebuyer-programs' },
     openGraph: {
         type: 'article',
-        title: 'First-Time Homebuyer Programs 2026 | Down Payment Assistance | USFinNexus',
+        title: 'First-Time Homebuyer Programs 2026 | Down Payment Assistance',
         description: 'Every grant, loan, and assistance program available to first-time buyers in 2026. Federal, state, and local options.',
         url: 'https://usfinnexus.com/guides/first-time-homebuyer-programs',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'First-Time Homebuyer Programs 2026 — USFinNexus' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'First-Time Homebuyer Programs 2026 | Down Payment Help | USFinNexus',
+        title: 'First-Time Homebuyer Programs 2026 | Down Payment Help',
         description: 'Grants, down payment assistance, and loan programs for first-time buyers in 2026. Full guide.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },

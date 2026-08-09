@@ -4,18 +4,18 @@ import { ExternalLink, Shield, Calculator, FileText } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-    title: 'Financial Calculator Methodology & Data Sources | USFinNexus',
+    title: 'Financial Calculator Methodology & Data Sources',
     description: 'See the formulas, assumptions, limitations and primary sources behind USFinNexus mortgage, DTI, affordability, refinance and tax calculators.',
     alternates: { canonical: '/methodology' },
     openGraph: {
         type: 'article',
         url: 'https://usfinnexus.com/methodology',
-        title: 'Financial Calculator Methodology & Data Sources | USFinNexus',
+        title: 'Financial Calculator Methodology & Data Sources',
         description: 'Formulas, assumptions, limitations and primary sources used by USFinNexus financial calculators.',
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Financial Calculator Methodology | USFinNexus',
+        title: 'Financial Calculator Methodology',
         description: 'How USFinNexus calculates mortgage, DTI, affordability and related estimates.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },

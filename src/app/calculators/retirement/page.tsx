@@ -14,19 +14,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Free Retirement Calculator 2026 — Plan Your Nest Egg | USFinNexus',
+    title: 'Free Retirement Calculator 2026 — Plan Your Nest Egg',
     description: 'Calculate how much you need to retire comfortably and see if your savings are on track. Free retirement planner with compound growth projections and PDF export.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/retirement' },
     openGraph: {
         type: 'website',
-        title: 'Retirement Calculator 2026 — Plan Your Nest Egg | USFinNexus',
+        title: 'Retirement Calculator 2026 — Plan Your Nest Egg',
         description: 'How much do you need to retire? See if your savings are on track with free compound growth projections.',
         url: 'https://usfinnexus.com/calculators/retirement',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Retirement Calculator 2026 — USFinNexus' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Retirement Calculator 2026 | Plan Your Nest Egg | USFinNexus',
+        title: 'Retirement Calculator 2026 | Plan Your Nest Egg',
         description: 'Are your retirement savings on track? See how much you need and when you can retire.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -56,7 +56,6 @@ export default function RetirementPage() {
                 url="https://usfinnexus.com/calculators/retirement"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Retirement Planner', item: '/calculators/retirement' }]} />
-            <h1 className="sr-only">Retirement Calculator</h1>
             <RetirementClient />
             <RetirementSeoContent />
             <CalculatorFAQ faqs={RETIREMENT_FAQS} title="Retirement Planning — Frequently Asked Questions" />

@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Jumbo Mortgages Explained: Financing Homes Over the Loan Limit 2026 | USFinNexus',
+    title: 'Jumbo Mortgages Explained: Financing Homes Over the Loan Limit 2026',
     description: 'When you buy a luxury home or live in an expensive city, a standard mortgage will not cover the cost. Learn how Jumbo Loans work and how to qualify.',
     openGraph: {
         title: 'Jumbo Mortgages Explained: Financing Homes Over the Loan Limit',

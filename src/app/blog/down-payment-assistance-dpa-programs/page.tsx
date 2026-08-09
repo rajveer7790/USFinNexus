@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Down Payment Assistance (DPA) Programs: The 2026 Guide | USFinNexus',
+    title: 'Down Payment Assistance (DPA) Programs: The 2026 Guide',
     description: 'Stop waiting years to save 20%. Learn how state and federal Down Payment Assistance (DPA) programs can give you free grants or forgivable loans to buy a house in 2026.',
     alternates: { canonical: 'https://usfinnexus.com/blog/down-payment-assistance-dpa-programs' },
     openGraph: {

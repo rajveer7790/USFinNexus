@@ -7,11 +7,11 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Mega Backdoor Roth IRA Guide 2026 — Contribute Up to $69,000 Tax-Free | USFinNexus',
+    title: 'Mega Backdoor Roth IRA Guide 2026 — Contribute Up to $69,000 Tax-Free',
     description: 'Learn how to legally contribute up to $69,000 into tax-free retirement accounts in 2026 using the Mega Backdoor Roth IRA strategy — even if you earn too much for a regular Roth.',
     alternates: { canonical: 'https://usfinnexus.com/blog/mega-backdoor-roth-ira-guide-2026' },
     openGraph: {
-        title: 'Mega Backdoor Roth IRA Guide 2026 | USFinNexus',
+        title: 'Mega Backdoor Roth IRA Guide 2026',
         description: 'Contribute up to $69,000 into tax-free retirement accounts in 2026 — even above Roth IRA income limits.',
         url: 'https://usfinnexus.com/blog/mega-backdoor-roth-ira-guide-2026',
         type: 'article',
@@ -48,7 +48,7 @@ export default function MegaBackdoorBlog() {
                     <h1 className="text-2xl md:text-4xl font-black mb-6 leading-tight text-slate-900">The Mega Backdoor Roth IRA Guide for 2026</h1>
                 </header>
                 <div className="mb-10 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-slate-900 min-h-[400px]">
-                    <img src="/images/mega_backdoor_roth.png" alt="Mega Backdoor Roth" className="w-full h-auto object-cover max-h-[450px]" />
+                    <img src="/images/roth-ira-income-limits-2026.webp" alt="Mega Backdoor Roth planning guide" className="w-full h-auto object-cover max-h-[450px]" />
                 </div>
                 <div className="prose max-w-none text-slate-800">
                     <p className="lead text-lg font-medium mb-8 text-slate-600">If you earn over $161,000 as a single filer (or $240,000 married filing jointly), you are legally banned from contributing directly to a Roth IRA. But there is a perfectly legal strategy — endorsed by the IRS since 2014 — that allows you to funnel up to <strong>$69,000 per year</strong> into tax-free retirement accounts. It is called the Mega Backdoor Roth.</p>

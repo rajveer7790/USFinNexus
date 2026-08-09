@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'What is a Good Debt-to-Income (DTI) Ratio in 2026? | USFinNexus',
+    title: 'What is a Good Debt-to-Income (DTI) Ratio in 2026?',
     description: 'A 800 credit score cannot save you if your DTI is too high. Learn exactly how mortgage underwriters calculate your Debt-to-Income ratio and the strict 43% rule.',
 
     alternates: { canonical: 'https://usfinnexus.com/blog/debt-to-income-ratio-dti-calculator-2026' },

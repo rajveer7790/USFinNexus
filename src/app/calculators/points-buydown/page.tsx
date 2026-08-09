@@ -14,11 +14,11 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Mortgage Points Buy-Down Calculator 2026 - Break-Even Analysis | USFinNexus',
+    title: 'Mortgage Points Buy-Down Calculator 2026 - Break-Even Analysis',
     description: 'Free mortgage points calculator for 2026. Calculate if paying discount points upfront is worth it. See monthly savings and find your break-even point.',
     openGraph: {
         type: 'website',
-        title: 'Mortgage Points Buy-Down Calculator 2026 | USFinNexus',
+        title: 'Mortgage Points Buy-Down Calculator 2026',
         description: 'Calculate if paying discount points upfront is worth it. Find your break-even point and total interest savings from buying down your mortgage rate. Free, no signup.',
         url: 'https://usfinnexus.com/calculators/points-buydown',
         images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Mortgage Points Buy-Down Calculator 2026 - USFinNexus' }],
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     alternates: { canonical: 'https://usfinnexus.com/calculators/points-buydown' },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mortgage Points Buy-Down Calculator 2026 | USFinNexus',
+        title: 'Mortgage Points Buy-Down Calculator 2026',
         description: 'Is paying points worth it? Find your break-even month and total interest savings. Free mortgage points calculator.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -56,7 +56,6 @@ export default function PointsBuyDownPage() {
                 url="https://usfinnexus.com/calculators/points-buydown"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Points Buy-Down Calculator', item: '/calculators/points-buydown' }]} />
-            <h1 className="sr-only">Mortgage Points Calculator</h1>
             <PointsBuyDownClient />
             <PointsBuydownSeoContent />
             <CalculatorFAQ faqs={POINTS_FAQS} title="Mortgage Points — Frequently Asked Questions" />

@@ -9,7 +9,7 @@ const URL = 'https://usfinnexus.com/blog/earned-income-tax-credit-2026';
 const IMAGE = 'https://usfinnexus.com/images/earned-income-tax-credit-2026.webp';
 
 export const metadata: Metadata = {
-    title: 'Earned Income Tax Credit 2026: Limits & Rules | USFinNexus',
+    title: 'Earned Income Tax Credit 2026: Limits & Rules',
     description: 'Check 2026 EITC income limits, maximum credits, the $12,200 investment-income cap, qualifying-child rules and how to claim the refundable credit.',
     alternates: { canonical: URL },
     openGraph: {

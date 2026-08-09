@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'How Global Conflicts Are Impacting US Real Estate in 2026 | USFinNexus',
+    title: 'How Global Conflicts Are Impacting US Real Estate in 2026',
     description: "Think a war across the globe doesn\'t affect your local housing market? Think again. Here is how supply chains and foreign capital alter US real estate.",
     openGraph: {
         title: 'How Global Conflicts Impact US Real Estate in 2026',
@@ -100,7 +100,7 @@ export default function GlobalConflictRealEstateBlog() {
             </header>
 
             <div className="mb-10 rounded-2xl overflow-hidden shadow-lg border border-gray-100">
-                <img src="/api/images/global_conflict_real_estate" alt="Modern house with abstract global supply chain map" className="w-full h-auto object-cover max-h-[450px]" />
+                <img src="/images/home-hero-v2.png" alt="Modern house representing global real estate conditions" className="w-full h-auto object-cover max-h-[450px]" />
             </div>
 
             <div className="prose max-w-none" style={{ color: 'var(--color-text)' }}>

@@ -9,7 +9,7 @@ const URL = 'https://usfinnexus.com/blog/aca-premium-tax-credit-2026';
 const IMAGE = 'https://usfinnexus.com/images/aca-premium-tax-credit-2026.webp';
 
 export const metadata: Metadata = {
-    title: 'ACA Premium Tax Credit 2026: Income Rules | USFinNexus',
+    title: 'ACA Premium Tax Credit 2026: Income Rules',
     description: 'Understand 2026 ACA premium tax credit income limits, the restored 400% FPL ceiling, APTC repayment risk, Form 8962 and Marketplace planning.',
     alternates: { canonical: URL },
     openGraph: {

@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'First-Time Home Buyer Programs 2026: Grants, Loans, & Loopholes | USFinNexus',
+    title: 'First-Time Home Buyer Programs 2026: Grants, Loans, & Loopholes',
     description: 'Stop letting high interest rates lock you out of the housing market. Discover the top 2026 first-time home buyer programs, including USDA zero-down loans and the Good Neighbor Next Door grant.',
 
     alternates: { canonical: 'https://usfinnexus.com/blog/first-time-homebuyer-programs-grants-2026' },

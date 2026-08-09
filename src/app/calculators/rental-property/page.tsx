@@ -14,19 +14,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Rental Property ROI & Cash Flow Calculator 2026 | USFinNexus',
+    title: 'Rental Property ROI & Cash Flow Calculator 2026',
     description: 'Analyze rental property investments instantly. Calculate cash flow, cap rate, cash-on-cash return, and NOI for any US rental property. Free real estate investment calculator.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/rental-property' },
     openGraph: {
         type: 'website',
-        title: 'Rental Property ROI & Cash Flow Calculator 2026 | USFinNexus',
+        title: 'Rental Property ROI & Cash Flow Calculator 2026',
         description: 'Calculate cash flow, cap rate, and cash-on-cash return for any rental property instantly. Free real estate investment analyzer.',
         url: 'https://usfinnexus.com/calculators/rental-property',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Rental Property ROI Calculator 2026 — USFinNexus' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Rental Property ROI Calculator 2026 | USFinNexus',
+        title: 'Rental Property ROI Calculator 2026',
         description: 'Cash flow, cap rate, and cash-on-cash return for any rental property. Free real estate investment calculator.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -61,8 +61,8 @@ export default function RentalPropertyPage() {
                 dateModified="2026-03-01"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Rental Property Calculator', item: '/calculators/rental-property' }]} />
+            <h1 className="sr-only">Rental Property Calculator</h1>
             <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026</p>
-            <h1 className="sr-only">Free Rental Property ROI & Cash Flow Calculator 2026</h1>
             <RentalPropertyClient />
             <RentalPropertySeoContent />
             <CalculatorFAQ faqs={RENTAL_FAQS} title="Rental Property Investment — Frequently Asked Questions" />

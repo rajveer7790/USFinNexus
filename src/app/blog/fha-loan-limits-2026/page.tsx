@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'FHA Loan Limits 2026: County-by-County Maximums | USFinNexus',
+    title: 'FHA Loan Limits 2026: County-by-County Maximums',
     description: 'The Federal Housing Administration has officially increased mortgage borrowing limits for 2026. Discover the exact maximum FHA loan amount for your specific county.',
     alternates: { canonical: 'https://usfinnexus.com/blog/fha-loan-limits-2026' },
     openGraph: {

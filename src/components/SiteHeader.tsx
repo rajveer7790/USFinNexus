@@ -17,6 +17,7 @@ const NAV_CALCULATORS = [
         color: '#0da6f2',
         items: [
             { href: '/calculators/mortgage', label: 'Mortgage Calculator', icon: Home, desc: 'Full PITI + amortization' },
+            { href: '/calculators/mortgage-payoff', label: 'Mortgage Payoff', icon: Target, desc: 'Extra payments & interest saved' },
             { href: '/calculators/affordability', label: 'Affordability', icon: DollarSign, desc: 'How much can I afford?' },
             { href: '/calculators/refinance', label: 'Refinance', icon: TrendingUp, desc: 'Savings & break-even' },
             { href: '/calculators/rent-vs-buy', label: 'Rent vs. Buy', icon: ArrowLeftRight, desc: 'True cost comparison' },
@@ -74,6 +75,7 @@ const NAV_CALCULATORS = [
 ];
 
 const NAV_RESOURCES = [
+    { href: '/mortgage-rates', label: 'Current Mortgage Rates', icon: TrendingUp, desc: 'Freddie Mac weekly averages' },
     { href: '/blog', label: 'Resources & Blog', icon: Newspaper, desc: 'Mortgage tips and finance news' },
     { href: '/guides', label: 'Financial Guides', icon: BookOpen, desc: 'In-depth homebuyer guides' },
     { href: '/articles', label: 'Articles', icon: FileText, desc: 'CFPB, FinCEN, tax updates' },

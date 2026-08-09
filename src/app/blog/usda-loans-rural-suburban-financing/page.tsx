@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'USDA Loans 2026: The Secret 100% Financing Zero Down Mortgage | USFinNexus',
+    title: 'USDA Loans 2026: The Secret 100% Financing Zero Down Mortgage',
     description: 'You do not have to buy a farm to get a USDA loan. Learn how to secure a 0% down mortgage in suburban areas in 2026. Explore income limits and map eligibility.',
     openGraph: {
         title: 'USDA Loans 2026: The Secret 100% Financing Zero Down Mortgage',

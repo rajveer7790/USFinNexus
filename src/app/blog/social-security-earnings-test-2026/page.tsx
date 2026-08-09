@@ -9,7 +9,7 @@ const URL = 'https://usfinnexus.com/blog/social-security-earnings-test-2026';
 const IMAGE = 'https://usfinnexus.com/images/social-security-earnings-test-2026.webp';
 
 export const metadata: Metadata = {
-    title: 'Social Security Earnings Test 2026: Limits & Examples | USFinNexus',
+    title: 'Social Security Earnings Test 2026: Limits & Examples',
     description: 'Learn the 2026 Social Security earnings limits of $24,480 and $65,160, what income counts, benefit withholding and full-retirement-age rules.',
     alternates: { canonical: URL },
     openGraph: {

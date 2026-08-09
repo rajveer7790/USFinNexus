@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Conventional vs. FHA vs. VA Mortgages: The Complete 2026 Comparison Guide | USFinNexus',
+    title: 'Conventional vs. FHA vs. VA Mortgages: The Complete 2026 Comparison Guide',
     description: 'Do not choose the wrong mortgage type. Compare the exact down payment, credit score, and PMI requirements for Conventional, FHA, VA, and USDA loans in 2026.',
     alternates: { canonical: 'https://usfinnexus.com/blog/conventional-fha-va-mortgages-guide' },
     openGraph: {

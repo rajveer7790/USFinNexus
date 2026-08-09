@@ -14,19 +14,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Options Profit & Loss Calculator — Call & Put Payoff Visualizer | USFinNexus',
+    title: 'Options Profit & Loss Calculator — Call & Put Payoff Visualizer',
     description: 'Visualize your options trade before placing it. Calculate max profit, max loss, and break-even prices for calls, puts, and spreads. Free options profit calculator.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/options-profit' },
     openGraph: {
         type: 'website',
-        title: 'Options Profit & Loss Calculator — Payoff Visualizer | USFinNexus',
+        title: 'Options Profit & Loss Calculator — Payoff Visualizer',
         description: 'Visualize max profit, max loss, and break-even for calls and puts before you trade. Free options calculator.',
         url: 'https://usfinnexus.com/calculators/options-profit',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Options Profit Calculator — USFinNexus' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Options Profit & Loss Calculator | Payoff Visualizer | USFinNexus',
+        title: 'Options Profit & Loss Calculator | Payoff Visualizer',
         description: 'Know your max profit, max loss, and break-even before you trade. Free options P&L visualizer.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -57,8 +57,8 @@ export default function OptionsProfitPage() {
                 dateModified="2026-03-01"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Options Profit Calculator', item: '/calculators/options-profit' }]} />
+            <h1 className="sr-only">Options Profit Calculator</h1>
             <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026</p>
-            <h1 className="sr-only">Options Profit Calculator & Payoff Visualizer</h1>
             <OptionsProfitClient />
             <OptionsProfitSeoContent />
             <CalculatorFAQ faqs={OPTIONS_FAQS} title="Options Trading — Frequently Asked Questions" />

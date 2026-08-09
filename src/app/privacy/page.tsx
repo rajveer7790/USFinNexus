@@ -3,18 +3,18 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-    title: 'Privacy Policy | USFinNexus',
+    title: 'Privacy Policy',
     description: 'Read how USFinNexus handles calculator inputs, local browser storage, advertising technologies and third-party services.',
     alternates: { canonical: '/privacy' },
     openGraph: {
         type: 'website',
         url: 'https://usfinnexus.com/privacy',
-        title: 'Privacy Policy | USFinNexus',
+        title: 'Privacy Policy',
         description: 'How USFinNexus handles calculator inputs, browser storage, advertising and third-party services.',
     },
     twitter: {
         card: 'summary',
-        title: 'Privacy Policy | USFinNexus',
+        title: 'Privacy Policy',
         description: 'How USFinNexus handles calculator inputs, browser storage and advertising technologies.',
     },
 };

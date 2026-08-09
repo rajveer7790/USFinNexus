@@ -12,6 +12,11 @@ const nextConfig: NextConfig = {
     // the specific icons used, instead of the entire lucide-react library.
     experimental: {
         optimizePackageImports: ['lucide-react', 'sonner', 'recharts'],
+        // Static export previously produced intermittent empty HTML files and
+        // ENOTEMPTY errors while parallel workers finalized the same output tree.
+        // Serialize export work for deterministic Cloudflare Pages artifacts.
+        cpus: 1,
+        workerThreads: false,
     },
 
     // ── Strip console.log from production bundles ──────────────────────────────

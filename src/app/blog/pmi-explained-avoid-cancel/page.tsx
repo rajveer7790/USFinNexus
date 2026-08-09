@@ -8,12 +8,12 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'PMI Explained 2026: What It Is, How to Avoid It, and How to Cancel It | USFinNexus',
+    title: 'PMI Explained 2026: What It Is, How to Avoid It, and How to Cancel It',
     description: 'Everything about Private Mortgage Insurance (PMI) in 2026. How much it costs, 5 ways to avoid it, how to cancel at 80% LTV, and the automatic cancellation rule at 78% LTV.',
 
     alternates: { canonical: 'https://usfinnexus.com/blog/pmi-explained-cost-removal-2026' },
-    openGraph: { type: 'article', title: 'PMI Explained 2026: Costs, Avoidance & Cancellation | USFinNexus', description: 'How PMI is calculated, 5 ways to avoid it, how to cancel at 80% LTV, and the automatic cancellation rule at 78% LTV under the Homeowners Protection Act.', url: 'https://usfinnexus.com/blog/pmi-explained-avoid-cancel', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'PMI Explained 2026 — USFinNexus' }] },
-    twitter: { card: 'summary_large_image', title: 'PMI Explained 2026: Costs, Avoidance & How to Cancel | USFinNexus', description: 'PMI can cost $100–$300/month. Here is how to avoid it, calculate it, and get rid of it.', images: ['https://usfinnexus.com/images/home-hero-v2.png'] },
+    openGraph: { type: 'article', title: 'PMI Explained 2026: Costs, Avoidance & Cancellation', description: 'How PMI is calculated, 5 ways to avoid it, how to cancel at 80% LTV, and the automatic cancellation rule at 78% LTV under the Homeowners Protection Act.', url: 'https://usfinnexus.com/blog/pmi-explained-avoid-cancel', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'PMI Explained 2026' }] },
+    twitter: { card: 'summary_large_image', title: 'PMI Explained 2026: Costs, Avoidance & How to Cancel', description: 'PMI can cost $100–$300/month. Here is how to avoid it, calculate it, and get rid of it.', images: ['https://usfinnexus.com/images/home-hero-v2.png'] },
 };
 
 export default function BlogPost() {

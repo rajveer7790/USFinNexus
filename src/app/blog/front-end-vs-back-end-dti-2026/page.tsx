@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Front-End vs Back-End DTI: CFPB Guidelines for 2026 | USFinNexus',
+    title: 'Front-End vs Back-End DTI: CFPB Guidelines for 2026',
     description: 'Learn the difference between front-end and back-end debt-to-income (DTI) ratios. Discover exactly what lenders and the CFPB look for in 2026 mortgage applications.',
     alternates: { canonical: 'https://usfinnexus.com/blog/front-end-vs-back-end-dti-2026' },
     openGraph: { 

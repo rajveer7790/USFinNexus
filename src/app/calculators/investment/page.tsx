@@ -14,19 +14,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Compound Interest & Investment Growth Calculator 2026 | USFinNexus',
+    title: 'Compound Interest & Investment Growth Calculator 2026',
     description: 'Calculate investment growth with compound interest. See how regular contributions grow over time with interactive charts. Free investment calculator with PDF export.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/investment' },
     openGraph: {
         type: 'website',
-        title: 'Compound Interest & Investment Growth Calculator 2026 | USFinNexus',
+        title: 'Compound Interest & Investment Growth Calculator 2026',
         description: 'See how your investments compound over time. Interactive charts with monthly contributions. Free calculator.',
         url: 'https://usfinnexus.com/calculators/investment',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Investment Compound Interest Calculator 2026 — USFinNexus' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Compound Interest Calculator 2026 | USFinNexus',
+        title: 'Compound Interest Calculator 2026',
         description: 'Watch your investments grow with the power of compounding. Free investment growth calculator.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -56,7 +56,6 @@ export default function InvestmentPage() {
                 url="https://usfinnexus.com/calculators/investment"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Compound Interest', item: '/calculators/investment' }]} />
-            <h1 className="sr-only">Compound Interest Calculator</h1>
             <InvestmentClient />
             <InvestmentSeoContent />
             <CalculatorFAQ faqs={INVESTMENT_FAQS} title="Compound Interest — Frequently Asked Questions" />

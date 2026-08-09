@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Debt Payoff Methods: The Math vs. The Psychology of Avalanche & Snowball | USFinNexus',
+    title: 'Debt Payoff Methods: The Math vs. The Psychology of Avalanche & Snowball',
     description: 'Are you trying to pay off student loans, car notes, and credit cards? Understand the exact mathematical difference between the Debt Avalanche and Debt Snowball methods.',
     alternates: { canonical: 'https://usfinnexus.com/blog/debt-payoff-avalanche-vs-snowball-method' },
     openGraph: {

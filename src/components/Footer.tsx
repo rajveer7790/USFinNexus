@@ -3,7 +3,9 @@ import { Shield, Home, DollarSign, TrendingUp, BookOpen, FileText } from 'lucide
 import LogoIcon from './LogoIcon';
 
 const MORTGAGE_LINKS = [
+    { href: '/mortgage-rates', label: 'Current Mortgage Rates' },
     { href: '/calculators/mortgage', label: 'Mortgage Calculator' },
+    { href: '/calculators/mortgage-payoff', label: 'Mortgage Payoff Calculator' },
     { href: '/calculators/affordability', label: 'Affordability Calculator' },
     { href: '/calculators/refinance', label: 'Refinance Calculator' },
     { href: '/calculators/rent-vs-buy', label: 'Rent vs. Buy' },

@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: "Mortgage Pre-Approval vs Pre-Qualification 2026 | USFinNexus",
+    title: "Mortgage Pre-Approval vs Pre-Qualification 2026",
     description: 'Understand the critical difference between a mortgage pre-qualification and a pre-approval. Learn why sellers only care about one of them.',
     openGraph: {
         title: "Mortgage Pre-Approval vs Pre-Qualification: What's the Difference?",

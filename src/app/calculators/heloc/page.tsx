@@ -14,12 +14,12 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Free HELOC Calculator 2026 - Home Equity Line of Credit | USFinNexus',
+    title: 'Free HELOC Calculator 2026 - Home Equity Line of Credit',
     description:
         'Calculate your HELOC payments, available equity, and total interest. See draw-period vs repayment-period costs instantly. Free, no signup required.',
     openGraph: {
         type: 'website',
-        title: 'Free HELOC Calculator 2026 - Home Equity Line of Credit | USFinNexus',
+        title: 'Free HELOC Calculator 2026 - Home Equity Line of Credit',
         description: 'Calculate your HELOC payments, available equity, and total interest. Compare draw-period interest-only payments vs full repayment period costs. Free, no signup.',
         url: 'https://usfinnexus.com/calculators/heloc',
         images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'HELOC Home Equity Line of Credit Calculator 2026 - USFinNexus' }],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     alternates: { canonical: 'https://usfinnexus.com/calculators/heloc' },
     twitter: {
         card: 'summary_large_image',
-        title: 'HELOC Calculator 2026 — Home Equity Line of Credit | USFinNexus',
+        title: 'HELOC Calculator 2026 — Home Equity Line of Credit',
         description: 'Calculate your HELOC available equity, draw-period payments, and repayment-period costs. Free, no signup.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -57,7 +57,6 @@ export default function HELOCPage() {
                 url="https://usfinnexus.com/calculators/heloc"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'HELOC Calculator', item: '/calculators/heloc' }]} />
-            <h1 className="sr-only">HELOC Calculator</h1>
             <HELOCClient />
             <HelocSeoContent />
             <CalculatorFAQ faqs={HELOC_FAQS} title="HELOC — Frequently Asked Questions" />

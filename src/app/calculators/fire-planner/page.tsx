@@ -14,19 +14,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'FIRE Calculator 2026 — Financial Independence Retire Early | USFinNexus',
+    title: 'FIRE Calculator 2026 — Financial Independence Retire Early',
     description: 'Calculate your FIRE number and early retirement timeline. Free financial independence calculator with safe withdrawal rate modeling and Coast FIRE analysis.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/fire-planner' },
     openGraph: {
         type: 'website',
-        title: 'FIRE Calculator 2026 — Financial Independence Retire Early | USFinNexus',
+        title: 'FIRE Calculator 2026 — Financial Independence Retire Early',
         description: 'Calculate your FIRE number and how many years to early retirement. Free financial independence planner.',
         url: 'https://usfinnexus.com/calculators/fire-planner',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'FIRE Calculator 2026 — USFinNexus' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'FIRE Calculator 2026 | Financial Independence | USFinNexus',
+        title: 'FIRE Calculator 2026 | Financial Independence',
         description: 'What is your FIRE number? Calculate how many years to financial independence and early retirement.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -61,8 +61,8 @@ export default function FirePlannerPage() {
                 dateModified="2026-03-01"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'FIRE Planner', item: '/calculators/fire-planner' }]} />
+            <h1 className="sr-only">FIRE Retirement Planner</h1>
             <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026</p>
-            <h1 className="sr-only">FIRE Calculator: Financial Independence Retire Early</h1>
             <FirePlannerClient />
             <FirePlannerSeoContent />
             <CalculatorFAQ faqs={FIRE_FAQS} title="FIRE Movement — Frequently Asked Questions" />

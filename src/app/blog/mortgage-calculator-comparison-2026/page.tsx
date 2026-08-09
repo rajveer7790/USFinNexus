@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: "Mortgage Calculator Comparison: 5 Key Numbers You're Missing | USFinNexus",
+    title: "Mortgage Calculator Comparison: 5 Key Numbers You're Missing",
     description: 'Stop using basic mortgage calculators that lie to you. Learn the 5 hidden costs every calculator should include and compare the top tools for 2026 homebuyers.',
     openGraph: {
         title: "Mortgage Calculator Comparison: 5 Key Numbers You're Missing",

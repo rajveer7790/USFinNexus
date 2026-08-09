@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Should You Buy Mortgage Points in 2026? Break-Even Math Explained | USFinNexus',
+    title: 'Should You Buy Mortgage Points in 2026? Break-Even Math Explained',
     description: 'Learn how mortgage discount points work. See the exact math to calculate your break-even point and decide if buying down your interest rate is worth the upfront cost.',
     openGraph: {
         title: 'Should You Buy Mortgage Points in 2026? Break-Even Math Explained',

@@ -54,7 +54,19 @@ const DEFAULT = {
 
 type TabKey = 'breakdown' | 'amortization' | 'extra' | 'charts';
 
-export default function MortgageCalculator({ initialTab = 'breakdown' }: { initialTab?: TabKey } = {}) {
+interface MortgageCalculatorProps {
+    initialTab?: TabKey;
+    heading?: string;
+    intro?: string;
+    showHeading?: boolean;
+}
+
+export default function MortgageCalculator({
+    initialTab = 'breakdown',
+    heading = 'Mortgage Calculator',
+    intro = 'Estimate principal, interest, property taxes, insurance, PMI and HOA fees using your own assumptions.',
+    showHeading = true,
+}: MortgageCalculatorProps = {}) {
     const [homePrice, setHomePrice] = useState(DEFAULT.homePrice);
     const [downDollar, setDownDollar] = useState(DEFAULT.downPaymentDollar);
     const [downPct, setDownPct] = useState(DEFAULT.downPaymentPct);
@@ -171,14 +183,14 @@ export default function MortgageCalculator({ initialTab = 'breakdown' }: { initi
             <div className="absolute bottom-[-100px] right-[-100px] w-[500px] h-[500px] bg-green-500 rounded-full mix-blend-screen filter blur-[128px] opacity-10 pointer-events-none hidden" />
 
             {/* Page Header */}
-            <div className="mb-5 sm:mb-7 text-center relative">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy-900 mb-2 sm:mb-3 tracking-tight leading-tight">
-                    Premium Mortgage Calculator
-                </h1>
-                <p className="text-sm text-gray-500 max-w-2xl mx-auto">
-                    Calculate your full PITI mortgage payment instantly with our high-end, responsive tool.
-                </p>
-            </div>
+            {showHeading && (
+                <div className="mb-5 sm:mb-7 text-center relative">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy-900 mb-2 sm:mb-3 tracking-tight leading-tight">
+                        {heading}
+                    </h1>
+                    <p className="text-sm text-gray-500 max-w-2xl mx-auto">{intro}</p>
+                </div>
+            )}
 
             {/* Download Bar (Top) */}
             {summary && (

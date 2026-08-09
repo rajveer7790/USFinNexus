@@ -14,19 +14,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Auto Loan Calculator | USFinNexus',
+    title: 'Auto Loan Calculator',
     description: 'Estimate a monthly car payment, total interest and loan amortization using vehicle price, down payment, trade-in, taxes, fees, APR and loan term.',
     alternates: { canonical: '/calculators/auto-loan' },
     openGraph: {
         type: 'website',
-        title: 'Auto Loan Calculator | USFinNexus',
+        title: 'Auto Loan Calculator',
         description: 'Estimate monthly car payments, total interest and amortization from your own auto-loan assumptions.',
         url: 'https://usfinnexus.com/calculators/auto-loan',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Auto Loan Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Auto Loan Calculator | USFinNexus',
+        title: 'Auto Loan Calculator',
         description: 'Estimate a monthly car payment and total interest.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -61,7 +61,6 @@ export default function AutoLoanPage() {
                 dateModified="2026-08-07"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Auto Loan Calculator', item: '/calculators/auto-loan' }]} />
-            <h1 className="sr-only">Auto Loan Calculator</h1>
             <AutoLoanClient />
             <AutoLoanSeoContent />
             <CalculatorFAQ faqs={AUTO_LOAN_FAQS} title="Auto Loan Calculator FAQs" />

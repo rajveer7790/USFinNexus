@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'The Silver Tsunami Housing Shift: Aging Boomers in 2026 | USFinNexus',
+    title: 'The Silver Tsunami Housing Shift: Aging Boomers in 2026',
     description: 'How the aging Baby Boomer generation is finally unlocking the 2026 housing market inventory, and the regions where millennials can capitalize on this shift.',
     alternates: { canonical: 'https://usfinnexus.com/blog/silver-tsunami-housing-shift-2026' },
     openGraph: {

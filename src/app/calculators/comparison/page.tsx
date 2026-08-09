@@ -14,19 +14,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Mortgage Loan Comparison Calculator 2026 — Side-by-Side Analysis | USFinNexus',
+    title: 'Mortgage Loan Comparison Calculator 2026 — Side-by-Side Analysis',
     description: 'Compare up to 3 mortgage loan scenarios side by side. Instantly see total interest, monthly payments, and lifetime costs across different rates, terms, and down payments.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/comparison' },
     openGraph: {
         type: 'website',
-        title: 'Mortgage Loan Comparison Calculator 2026 | USFinNexus',
+        title: 'Mortgage Loan Comparison Calculator 2026',
         description: 'Compare up to 3 mortgage scenarios side by side. Monthly payments, total interest, and lifetime costs.',
         url: 'https://usfinnexus.com/calculators/comparison',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Mortgage Comparison Calculator 2026 — USFinNexus' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mortgage Comparison Calculator 2026 | USFinNexus',
+        title: 'Mortgage Comparison Calculator 2026',
         description: 'Compare up to 3 mortgage scenarios side by side. Find the best loan for your budget.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -57,7 +57,6 @@ export default function ComparisonPage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Loan Comparison', item: '/calculators/comparison' }]} />
             <div className="pt-8">
-                <h1 className="sr-only">Mortgage Comparison Calculator</h1>
                 <ComparisonClient />
             </div>
             <ComparisonSeoContent />

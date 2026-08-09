@@ -9,7 +9,7 @@ const URL = 'https://usfinnexus.com/blog/salt-deduction-limit-2026';
 const IMAGE = 'https://usfinnexus.com/images/salt-deduction-limit-2026.webp';
 
 export const metadata: Metadata = {
-    title: 'SALT Deduction Limit 2026: $40,400 Cap | USFinNexus',
+    title: 'SALT Deduction Limit 2026: $40,400 Cap',
     description: 'Learn the 2026 SALT deduction limit, $505,000 MAGI phaseout, eligible state and local taxes, itemizing math and homeowner planning rules.',
     alternates: { canonical: URL },
     openGraph: {

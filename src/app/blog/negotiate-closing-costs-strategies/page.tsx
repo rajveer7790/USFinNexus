@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'How to Negotiate Closing Costs in 2026: Scripts & Strategies | USFinNexus',
+    title: 'How to Negotiate Closing Costs in 2026: Scripts & Strategies',
     description: 'Do not pay $15,000 in closing costs without fighting back. Learn exactly which mortgage fees are negotiable, what to say to your lender, and how to shop for title insurance.',
 
     alternates: { canonical: 'https://usfinnexus.com/blog/closing-costs-itemized-breakdown-2026' },

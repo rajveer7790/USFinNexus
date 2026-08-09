@@ -3,19 +3,19 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-    title: 'First-Time Homebuyer Guide 2026 — Complete Step-by-Step Walkthrough | USFinNexus',
+    title: 'First-Time Homebuyer Guide 2026 — Complete Step-by-Step Walkthrough',
     description: 'The complete 2026 first-time homebuyer guide. Pre-approval, home search, making offers, inspection, closing costs, escrow timeline — everything you need to buy your first home.',
     alternates: { canonical: 'https://usfinnexus.com/guides/first-time-homebuyer-guide' },
     openGraph: {
         type: 'article',
-        title: 'First-Time Homebuyer Guide 2026 — Step-by-Step | USFinNexus',
+        title: 'First-Time Homebuyer Guide 2026 — Step-by-Step',
         description: 'Everything you need to buy your first home: pre-approval, offers, inspection, closing costs, and the escrow timeline.',
         url: 'https://usfinnexus.com/guides/first-time-homebuyer-guide',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'First-Time Homebuyer Guide 2026 — USFinNexus' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'First-Time Homebuyer Guide 2026 | Step-by-Step | USFinNexus',
+        title: 'First-Time Homebuyer Guide 2026 | Step-by-Step',
         description: 'Everything you need to buy your first home in 2026. Pre-approval to closing — complete guide.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },

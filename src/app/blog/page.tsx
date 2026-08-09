@@ -4,10 +4,10 @@ import Image from 'next/image';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-    title: 'Mortgage, Housing Market & Finance Blog | USFinNexus',
+    title: 'Mortgage, Housing Market & Finance Blog',
     description: 'Free guides on mortgage rates, housing market trends, homeowner tax deductions, home buying programs, and personal finance - written for everyday Americans in 2026.',
     alternates: { canonical: 'https://usfinnexus.com/blog' },
-    openGraph: { title: 'Mortgage, Housing Market & Finance Blog | USFinNexus', description: 'Free guides on mortgage rates, housing market trends, and personal finance for everyday Americans.', url: 'https://usfinnexus.com/blog', type: 'website', siteName: 'USFinNexus' },
+    openGraph: { title: 'Mortgage, Housing Market & Finance Blog', description: 'Free guides on mortgage rates, housing market trends, and personal finance for everyday Americans.', url: 'https://usfinnexus.com/blog', type: 'website', siteName: 'USFinNexus' },
 };
 
 // Image mappings based on category for placeholder automation

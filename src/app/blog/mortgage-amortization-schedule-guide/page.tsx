@@ -8,11 +8,11 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'How to Read a Mortgage Amortization Schedule — Complete 2026 Guide | USFinNexus',
+    title: 'How to Read a Mortgage Amortization Schedule — Complete 2026 Guide',
     description: 'Learn how a mortgage amortization schedule works, why most payments go to interest early, how extra payments save tens of thousands, and how to generate your own free schedule.',
     alternates: { canonical: 'https://usfinnexus.com/blog/mortgage-amortization-schedule-guide' },
-    openGraph: { type: 'article', title: 'How to Read a Mortgage Amortization Schedule | USFinNexus', description: 'Why early payments go mostly to interest, how extra payments save thousands, and how to generate your own free amortization schedule.', url: 'https://usfinnexus.com/blog/mortgage-amortization-schedule-guide', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Mortgage Amortization Schedule Guide' }] },
-    twitter: { card: 'summary_large_image', title: 'How to Read a Mortgage Amortization Schedule | USFinNexus', description: 'Why 80% of early payments go to interest — and how to fight back with extra payments.', images: ['https://usfinnexus.com/icon-512.png'] },
+    openGraph: { type: 'article', title: 'How to Read a Mortgage Amortization Schedule', description: 'Why early payments go mostly to interest, how extra payments save thousands, and how to generate your own free amortization schedule.', url: 'https://usfinnexus.com/blog/mortgage-amortization-schedule-guide', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Mortgage Amortization Schedule Guide' }] },
+    twitter: { card: 'summary_large_image', title: 'How to Read a Mortgage Amortization Schedule', description: 'Why 80% of early payments go to interest — and how to fight back with extra payments.', images: ['https://usfinnexus.com/icon-512.png'] },
 };
 
 export default function BlogPost() {

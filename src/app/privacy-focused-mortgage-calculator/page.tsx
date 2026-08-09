@@ -54,7 +54,7 @@ export default function PrivacyMortgagePage() {
                 />
                 
                 <div className="mb-12">
-                    <MortgageCalculatorClient />
+                    <MortgageCalculatorClient showHeading={false} />
                 </div>
 
                 <div className="prose prose-slate max-w-4xl mx-auto" style={{ color: 'var(--color-text)' }}>

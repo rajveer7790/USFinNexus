@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Rate-and-Term vs. Cash-Out Refinance 2026: Which is Right For You? | USFinNexus',
+    title: 'Rate-and-Term vs. Cash-Out Refinance 2026: Which is Right For You?',
     description: 'Learn the critical differences between a rate-and-term refinance and a cash-out refinance. Compare interest rates, tax implications, and loan-to-value limits.',
     openGraph: {
         title: 'Rate-and-Term vs. Cash-Out Refinance 2026',

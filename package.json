@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "preview": "npm run build && npx wrangler pages dev out",
-    "deploy": "npm run build && npx wrangler pages deploy out --project-name usfinnexus"
+    "seo:audit": "node scripts/seo-audit.mjs",
+    "verify": "npm run build && npm run seo:audit"
   },
   "dependencies": {
 
@@ -39,4 +40,3 @@
     "wrangler": "^4.90.0"
   }
 }
-

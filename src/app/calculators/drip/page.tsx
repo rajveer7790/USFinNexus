@@ -14,19 +14,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'DRIP Calculator 2026 — Dividend Reinvestment Forecaster | USFinNexus',
+    title: 'DRIP Calculator 2026 — Dividend Reinvestment Forecaster',
     description: 'Calculate the compound growth of dividend reinvestment over time. Model dividend growth rates, yield on cost, and tax-adjusted returns. Free DRIP forecaster.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/drip' },
     openGraph: {
         type: 'website',
-        title: 'DRIP Dividend Reinvestment Calculator 2026 | USFinNexus',
+        title: 'DRIP Dividend Reinvestment Calculator 2026',
         description: 'Model dividend reinvestment compounding over decades. Dividend growth, yield on cost, and tax modeling.',
         url: 'https://usfinnexus.com/calculators/drip',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'DRIP Dividend Reinvestment Calculator 2026 — USFinNexus' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'DRIP Dividend Reinvestment Calculator 2026 | USFinNexus',
+        title: 'DRIP Dividend Reinvestment Calculator 2026',
         description: 'How powerful is dividend reinvestment? Model your DRIP portfolio growth over decades.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -61,8 +61,8 @@ export default function DripPage() {
                 dateModified="2026-03-01"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'DRIP Forecaster', item: '/calculators/drip' }]} />
+            <h1 className="sr-only">Dividend Reinvestment Calculator</h1>
             <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026</p>
-            <h1 className="sr-only">DRIP Calculator: Dividend Reinvestment Forecaster</h1>
             <DripClient />
             <DripSeoContent />
             <CalculatorFAQ faqs={DRIP_FAQS} title="Dividend Investing — Frequently Asked Questions" />

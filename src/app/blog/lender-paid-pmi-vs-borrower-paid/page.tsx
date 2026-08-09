@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Lender-Paid PMI (LPMI) vs Borrower-Paid PMI (BPMI): Which Costs Less? | USFinNexus',
+    title: 'Lender-Paid PMI (LPMI) vs Borrower-Paid PMI (BPMI): Which Costs Less?',
     description: 'Compare Lender-Paid PMI (LPMI) and Borrower-Paid PMI (BPMI) in 2026. Learn the math behind higher interest rates vs monthly insurance premiums to see which saves you money.',
     alternates: { canonical: 'https://usfinnexus.com/blog/lender-paid-pmi-vs-borrower-paid' },
     openGraph: {

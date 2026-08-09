@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'High-Yield Checking Accounts: Beating Inflation Without Locking Up Cash | USFinNexus',
+    title: 'High-Yield Checking Accounts: Beating Inflation Without Locking Up Cash',
     description: 'Stop settling for 0.01% APY on your checking account. Discover the best high-yield checking accounts in 2026 that pay you to hold your money.',
     openGraph: {
         title: 'High-Yield Checking Accounts in 2026',
@@ -100,7 +100,7 @@ export default function CheckingBlog() {
             </header>
 
             <div className="mb-10 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-slate-900 flex items-center justify-center min-h-[400px]">
-                <img src="/images/high_yield_checking.png" alt="Glowing ATM with coins" className="w-full h-auto object-cover max-h-[450px]" />
+                <img src="/images/small-business-savings.png" alt="Savings account planning illustration" className="w-full h-auto object-cover max-h-[450px]" />
             </div>
 
             <div className="prose max-w-none text-slate-800">

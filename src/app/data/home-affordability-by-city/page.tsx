@@ -2,10 +2,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: 'Home Affordability Index by City (2026 Data) | USFinNexus',
+    title: 'Home Affordability Index by City (2026 Data)',
     description: 'Compare the median household income to the median home price in the 50 largest US Metro areas to see where buying a house is actually possible in 2026.',
+    alternates: { canonical: '/data/home-affordability-by-city' },
     openGraph: {
-        title: 'Home Affordability Index by City | USFinNexus',
+        title: 'Home Affordability Index by City',
         description: 'Discover the most and least affordable cities in America based on localized income data.',
         url: 'https://usfinnexus.com/data/home-affordability-by-city',
     },

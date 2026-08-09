@@ -14,19 +14,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Mortgage Calculator | USFinNexus',
+    title: 'Mortgage Calculator',
     description: 'Estimate your monthly mortgage payment with principal, interest, property taxes, homeowners insurance, PMI and HOA fees. View amortization and extra-payment scenarios.',
     alternates: { canonical: '/calculators/mortgage' },
     openGraph: {
         type: 'website',
-        title: 'Mortgage Calculator | USFinNexus',
+        title: 'Mortgage Calculator',
         description: 'Estimate monthly mortgage payments including principal, interest, taxes, insurance, PMI and HOA fees.',
         url: 'https://usfinnexus.com/calculators/mortgage',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus Mortgage Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mortgage Calculator | USFinNexus',
+        title: 'Mortgage Calculator',
         description: 'Estimate monthly mortgage payments and view an amortization schedule.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -70,7 +70,6 @@ export default function MortgagePage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Mortgage Calculator', item: '/calculators/mortgage' }]} />
             <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 7, 2026 &middot; 2026 FHFA and HUD loan limits referenced where applicable</p>
-            <h1 className="sr-only">Mortgage Calculator</h1>
             <MortgageCalculatorClient />
             <MortgageSeoContentV2 />
             <CalculatorFAQ faqs={MORTGAGE_FAQS} title="Mortgage Calculator FAQs" />

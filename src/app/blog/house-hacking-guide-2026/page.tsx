@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'House Hacking in 2026: The Ultimate Guide to Living for Free | USFinNexus',
+    title: 'House Hacking in 2026: The Ultimate Guide to Living for Free',
     description: 'Learn how to offset your mortgage or live for free in 2026 using house hacking strategies like duplexes, ADUs, and roommate renting.',
     openGraph: {
         title: 'House Hacking in 2026: Live for Free While Building Wealth',
@@ -100,7 +100,7 @@ export default function HouseHackingBlog() {
             </header>
 
             <div className="mb-10 rounded-2xl overflow-hidden shadow-lg border border-gray-100">
-                <img src="/api/images/house_hacking" alt="Beautiful Duplex Multi-family Home" className="w-full h-auto object-cover max-h-[450px]" />
+                <img src="/images/home-hero-v2.png" alt="Home used for a house-hacking strategy" className="w-full h-auto object-cover max-h-[450px]" />
             </div>
 
             <div className="prose max-w-none" style={{ color: 'var(--color-text)' }}>

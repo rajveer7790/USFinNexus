@@ -9,7 +9,7 @@ const URL = 'https://usfinnexus.com/blog/401k-contribution-limits-2026';
 const IMAGE = 'https://usfinnexus.com/images/401k-contribution-limits-2026.webp';
 
 export const metadata: Metadata = {
-    title: '401(k) Limits 2026: $24,500 + Catch-Up Rules | USFinNexus',
+    title: '401(k) Limits 2026: $24,500 + Catch-Up Rules',
     description: 'See the 2026 401(k) contribution limit, age 50 and age 60–63 catch-up amounts, $72,000 overall limit and the new Roth catch-up rule.',
     alternates: { canonical: URL },
     openGraph: {

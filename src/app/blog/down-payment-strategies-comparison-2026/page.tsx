@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Down Payment Strategies 2026: 3% vs. 20% Mathematical Breakdown | USFinNexus',
+    title: 'Down Payment Strategies 2026: 3% vs. 20% Mathematical Breakdown',
     description: 'Should you drain your life savings to put 20% down, or put 3% down and invest the difference? We break down the mathematical opportunity cost of down payments in 2026.',
     alternates: { canonical: 'https://usfinnexus.com/blog/down-payment-strategies-comparison-2026' },
     openGraph: {

@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'No PMI Mortgages: How to Buy a House Without 20% Down | USFinNexus',
+    title: 'No PMI Mortgages: How to Buy a House Without 20% Down',
     description: 'Avoid Private Mortgage Insurance without draining your savings. Explore Lender-Paid PMI, Piggyback loans, VA loans, and specialized physician programs for 2026.',
     openGraph: {
         title: 'No PMI Mortgages: How to Buy a House Without 20% Down',
@@ -157,7 +157,7 @@ export default function PostComponent() {
                         <p className="text-blue-100 mb-4 text-sm">
                             Want to know exactly how much PMI will cost you over the next 5 years? Use our PMI Calculator to model your exact down payment percentage and see the financial impact.
                         </p>
-                        <Link href="/calculators/pmi" className="inline-flex items-center justify-center px-5 py-2.5 bg-white text-blue-900 font-bold rounded-lg hover:bg-blue-50 transition-colors text-sm">
+                        <Link href="/calculators/down-payment" className="inline-flex items-center justify-center px-5 py-2.5 bg-white text-blue-900 font-bold rounded-lg hover:bg-blue-50 transition-colors text-sm">
                             Launch PMI Calculator
                         </Link>
                     </div>

@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Debt-to-Income Ratio (DTI) Calculator & Mortgage Guide 2026 | USFinNexus',
+    title: 'Debt-to-Income Ratio (DTI) Calculator & Mortgage Guide 2026',
     description: 'A 800 credit score will not save you if your DTI is too high. Learn how banks calculate your Debt-to-Income ratio in 2026 and how to lower it before applying for a mortgage.',
     alternates: { canonical: 'https://usfinnexus.com/blog/debt-to-income-ratio-dti-calculator-2026' },
     openGraph: {
