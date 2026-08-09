@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
+import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
 const MortgageCalculator = dynamic(() => import('../mortgage/MortgageCalculatorClient'), {
     loading: () => <CalculatorSkeleton />,
@@ -36,6 +37,7 @@ export default function MortgagePayoffPage() {
                 heading="Mortgage Payoff Calculator"
                 intro="Add a recurring principal payment to estimate a faster payoff date and lower lifetime interest."
             />
+            <SemrushIntentSection slug="mortgage-payoff" />
 
             <article className="prose prose-slate max-w-4xl mx-auto mt-12">
                 <h2>How to calculate a faster mortgage payoff</h2>

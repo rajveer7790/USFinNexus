@@ -3,6 +3,7 @@ import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
+import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 import HelocSeoContent from './HelocSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 
@@ -58,6 +59,7 @@ export default function HELOCPage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'HELOC Calculator', item: '/calculators/heloc' }]} />
             <HELOCClient />
+            <SemrushIntentSection slug="heloc" />
             <HelocSeoContent />
             <CalculatorFAQ faqs={HELOC_FAQS} title="HELOC — Frequently Asked Questions" />
         </main>

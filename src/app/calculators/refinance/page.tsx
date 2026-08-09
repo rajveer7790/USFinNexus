@@ -9,6 +9,7 @@ const RefinanceClient = nextDynamic(() => import('./RefinanceClient'), {
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
+import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -62,11 +63,12 @@ export default function RefinancePage() {
                 name="Mortgage Refinance Calculator"
                 description="Compare a current mortgage with a proposed refinance and estimate payment savings, costs and break-even timing."
                 url="https://usfinnexus.com/calculators/refinance"
-                dateModified="2026-08-07"
+                dateModified="2026-08-09"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Mortgage Refinance Calculator', item: '/calculators/refinance' }]} />
-            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 7, 2026 &middot; Use a current lender quote for rate and fee assumptions</p>
+            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 9, 2026 &middot; Use a current lender quote for rate and fee assumptions</p>
             <RefinanceClient />
+            <SemrushIntentSection slug="refinance" />
             <RefinanceSeoContentV2 />
             <CalculatorFAQ faqs={REFINANCE_FAQS} title="Mortgage Refinance Calculator FAQs" />
         </main>

@@ -3,6 +3,7 @@ import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
+import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 import InterestOnlySeoContent from './InterestOnlySeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 
@@ -57,6 +58,7 @@ export default function InterestOnlyPage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Interest-Only Calculator', item: '/calculators/interest-only' }]} />
             <InterestOnlyClient />
+            <SemrushIntentSection slug="interest-only" />
             <InterestOnlySeoContent />
             <CalculatorFAQ faqs={INTEREST_ONLY_FAQS} title="Interest-Only Mortgages — Frequently Asked Questions" />
         </main>

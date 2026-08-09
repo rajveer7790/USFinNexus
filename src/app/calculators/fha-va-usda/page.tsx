@@ -3,6 +3,7 @@ import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
+import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 import FhaVaUsdaSeoContent from './FhaVaUsdaSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 
@@ -57,6 +58,7 @@ export default function GovLoanComparisonPage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Gov Loan Comparison', item: '/calculators/fha-va-usda' }]} />
             <GovLoanClient />
+            <SemrushIntentSection slug="fha-va-usda" />
             <FhaVaUsdaSeoContent />
             <CalculatorFAQ faqs={GOV_LOAN_FAQS} title="Government Loans — Frequently Asked Questions" />
         </main>

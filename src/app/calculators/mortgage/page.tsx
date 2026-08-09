@@ -9,6 +9,7 @@ const MortgageCalculatorClient = nextDynamic(() => import('./MortgageCalculatorC
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
+import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -66,11 +67,12 @@ export default function MortgagePage() {
                 name="Mortgage Calculator"
                 description="Estimate your monthly mortgage payment with principal, interest, taxes, insurance, PMI and HOA fees."
                 url="https://usfinnexus.com/calculators/mortgage"
-                dateModified="2026-08-07"
+                dateModified="2026-08-09"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Mortgage Calculator', item: '/calculators/mortgage' }]} />
-            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 7, 2026 &middot; 2026 FHFA and HUD loan limits referenced where applicable</p>
+            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 9, 2026 &middot; 2026 FHFA and HUD loan limits referenced where applicable</p>
             <MortgageCalculatorClient />
+            <SemrushIntentSection slug="mortgage" />
             <MortgageSeoContentV2 />
             <CalculatorFAQ faqs={MORTGAGE_FAQS} title="Mortgage Calculator FAQs" />
         </main>

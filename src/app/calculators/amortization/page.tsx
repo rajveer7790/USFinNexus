@@ -8,6 +8,7 @@ const MortgageCalculator = nextDynamic(() => import('../mortgage/MortgageCalcula
 });
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
+import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -38,10 +39,11 @@ export default function AmortizationPage() {
                 name="Mortgage Amortization Calculator"
                 description="Generate a month-by-month mortgage amortization schedule showing principal, interest, remaining balance and extra-payment impacts."
                 url="https://usfinnexus.com/calculators/amortization"
-                dateModified="2026-08-07"
+                dateModified="2026-08-09"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Mortgage Amortization Calculator', item: '/calculators/amortization' }]} />
             <MortgageCalculator initialTab="amortization" />
+            <SemrushIntentSection slug="amortization" />
             <AmortizationSeoContent />
         </main>
     );

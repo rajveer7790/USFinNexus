@@ -3,6 +3,7 @@ import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
+import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 import StudentLoanSeoContent from './StudentLoanSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 
@@ -57,6 +58,7 @@ export default function StudentLoanPage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Student Loan', item: '/calculators/student-loan' }]} />
             <StudentLoanClient />
+            <SemrushIntentSection slug="student-loan" />
             <StudentLoanSeoContent />
             <CalculatorFAQ faqs={STUDENT_LOAN_FAQS} title="Student Loans — Frequently Asked Questions" />
         </main>

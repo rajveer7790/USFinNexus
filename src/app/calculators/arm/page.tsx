@@ -8,6 +8,7 @@ const ArmCalculatorClient = nextDynamic(() => import('./ArmCalculatorClient'), {
 });
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
+import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -41,6 +42,7 @@ export default function ArmCalculatorPage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'ARM Calculator', item: '/calculators/arm' }]} />
                             <ArmCalculatorClient />
+            <SemrushIntentSection slug="arm" />
             <ArmSeoContent />
         </main>
     );

@@ -9,6 +9,7 @@ const DtiClient = nextDynamic(() => import('./DtiClient'), {
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
+import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -62,11 +63,12 @@ export default function DtiPage() {
                 name="Debt-to-Income Ratio Calculator"
                 description="Calculate recurring monthly debt as a percentage of gross monthly income."
                 url="https://usfinnexus.com/calculators/dti"
-                dateModified="2026-08-07"
+                dateModified="2026-08-09"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Debt-to-Income Ratio Calculator', item: '/calculators/dti' }]} />
-            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 7, 2026 &middot; Current CFPB General Qualified Mortgage rule reflected</p>
+            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 9, 2026 &middot; Current CFPB General Qualified Mortgage rule reflected</p>
             <div className="pt-8"><DtiClient /></div>
+            <SemrushIntentSection slug="dti" />
             <DtiSeoContentV2 />
             <CalculatorFAQ faqs={DTI_FAQS} title="Debt-to-Income Ratio Calculator FAQs" />
         </main>
