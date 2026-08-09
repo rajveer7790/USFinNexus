@@ -1,7 +1,5 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import AdUnit from '@/components/AdUnit';
-import { AD_SLOTS } from '@/lib/adConfig';
 import dynamic from 'next/dynamic';
 import {
     Home, DollarSign, TrendingUp, Car, Calculator, Scale, ArrowLeftRight,
@@ -246,8 +244,6 @@ export default function HomePage() {
                     <div className="neo-stats-row">{STATS.map((stat) => <div key={stat.label} className="neo-stat-block"><div className="neo-stat-val">{stat.val}</div><div className="neo-stat-name">{stat.label}</div><div className="neo-stat-src">{stat.src}</div></div>)}</div>
                 </div>
             </section>
-
-            <div className="neo-container py-4"><AdUnit slot={AD_SLOTS.HOMEPAGE_BANNER} format="horizontal" /></div>
 
             <section className="neo-light-zone">
                 <div className="neo-container neo-diff-section">

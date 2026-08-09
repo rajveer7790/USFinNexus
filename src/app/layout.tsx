@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from 'next';
 import { Inter, IBM_Plex_Mono } from 'next/font/google';
 import SiteHeader from '@/components/SiteHeader';
 import Footer from '@/components/Footer';
-import InteractiveAdSense from '@/components/InteractiveAdSense';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { Toaster } from 'sonner';
 import './globals.css';
@@ -75,11 +74,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <link rel="manifest" href="/manifest.json" />
                 <link rel="dns-prefetch" href="//pagead2.googlesyndication.com" />
                 <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
+                <script
+                    async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1373076230922603"
+                    crossOrigin="anonymous"
+                />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
             </head>
             <body className={`${inter.className} ${plexMono.variable}`} suppressHydrationWarning>
-                <InteractiveAdSense client="ca-pub-1373076230922603" />
                 <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" disableTransitionOnChange>
                     <SiteHeader />
                     <main id="main-content" className="min-h-screen">{children}</main>
