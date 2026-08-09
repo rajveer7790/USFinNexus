@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-    title: 'Terms of Service',
+    title: 'Website Terms, Calculator Use & Disclaimers',
     description: 'USFinNexus terms of service. Free mortgage and finance calculators provided for educational and informational purposes only.',
     alternates: { canonical: 'https://usfinnexus.com/terms' },
     openGraph: {

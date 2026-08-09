@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Balance Transfer Credit Cards: The 0% APR Strategy Guide for 2026',
+    title: "Balance Transfer Credit Cards: The 0% APR Strategy Guide for 2026 | Guide",
     description: 'A 0% APR balance transfer credit card can save you thousands in interest and help you escape debt—but only if you avoid the three massive traps built into the fine print.',
     alternates: { canonical: 'https://usfinnexus.com/blog/balance-transfer-credit-cards-strategy' },
     openGraph: {

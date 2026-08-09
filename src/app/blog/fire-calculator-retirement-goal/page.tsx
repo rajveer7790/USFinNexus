@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'FIRE Calculator: How to Mathematically Retire 20 Years Early',
+    title: "FIRE Calculator: How to Mathematically Retire 20 Years Early | Guide",
     description: 'Stop waiting until you are 65. Learn the exact mathematical formula to calculate your FIRE (Financial Independence, Retire Early) number and permanently escape the rat race.',
     alternates: { canonical: 'https://usfinnexus.com/blog/fire-calculator-retirement-goal' },
     openGraph: {

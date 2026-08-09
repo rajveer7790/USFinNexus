@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Navigating the 2026 Commercial Real Estate Reset',
+    title: "Navigating the 2026 Commercial Real Estate Reset | Guide",
     description: 'The 2026 commercial real estate crash is not what you think. While office spaces collapse under the "extend and pretend" crisis, data centers and industrial logistics are booming.',
     alternates: { canonical: 'https://usfinnexus.com/blog/commercial-real-estate-reset-2026' },
     openGraph: {

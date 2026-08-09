@@ -7,12 +7,12 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Mortgage Closing Costs 2026: The Ultimate Guide to Fees & Negotiation',
-    description: 'Stop overpaying at the closing table. Learn exactly what the 2026 mortgage closing costs are, how to decode your Loan Estimate, and which junk fees to negotiate away.',
+    title: "Mortgage Closing Costs 2026: The Ultimate Guide to Fees & | Guide",
+    description: 'Stop overpaying at the closing table. Learn exactly what the 2026 mortgage closing costs are, how to decode your Loan Estimate, and which junk fees to negotiate away.',
     openGraph: {
         title: 'Mortgage Closing Costs 2026: The Ultimate Guide to Fees & Negotiation',
         description: 'Stop overpaying at the closing table. Learn exactly what the 2026 mortgage closing costs are and which junk fees to negotiate away.',
-        url: 'https://usfinnexus.com/blog/mortgage-closing-costs-2026-guide',
+        url: 'https://usfinnexus.com/blog/closing-costs-itemized-breakdown-2026',
         type: 'article',
         siteName: 'USFinNexus',
         images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Mortgage Closing Costs Guide 2026' }]
@@ -27,7 +27,7 @@ export default function PostComponent() {
             <ArticleSchema
                 title="Mortgage Closing Costs 2026: The Ultimate Guide to Fees & Negotiation"
                 description="Stop overpaying at the closing table. Learn exactly what the 2026 mortgage closing costs are and which junk fees to negotiate away."
-                url="https://usfinnexus.com/blog/mortgage-closing-costs-2026-guide"
+                url="https://usfinnexus.com/blog/closing-costs-itemized-breakdown-2026"
                 datePublished="2026-05-26"
                 dateModified="2026-05-26"
                 authorName="USFinNexus Editorial Team"
@@ -70,7 +70,7 @@ export default function PostComponent() {
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[
                     { name: 'Blog', item: '/blog' },
-                    { name: 'Closing Costs Guide', item: '/blog/mortgage-closing-costs-2026-guide' }
+                    { name: 'Closing Costs Guide', item: '/blog/closing-costs-itemized-breakdown-2026' }
                 ]} />
 
                 <article className="prose prose-slate prose-lg max-w-none">
@@ -88,7 +88,7 @@ export default function PostComponent() {
                     </header>
 
                     <p className="lead text-2xl text-gray-700 mb-10 font-light leading-relaxed">
-                        You have saved for years to accumulate a 20% down payment. You have found the perfect house. Your offer was accepted. But three days before you are scheduled to get the keys, the lender hands you a document called a Closing Disclosure. It demands an additional $14,000 in cash. Welcome to the brutal reality of Mortgage Closing Costs. 
+                        You have saved for years to accumulate a 20% down payment. You have found the perfect house. Your offer was accepted. But three days before you are scheduled to get the keys, the lender hands you a document called a Closing Disclosure. It demands an additional $14,000 in cash. Welcome to the brutal reality of Mortgage Closing Costs.
                     </p>
 
                     <p>
@@ -107,7 +107,7 @@ export default function PostComponent() {
                     </h2>
 
                     <p>
-                        By federal law, within three business days of applying for a mortgage, the lender must hand you a standardized, three-page document called the <strong>Loan Estimate (LE)</strong>. 
+                        By federal law, within three business days of applying for a mortgage, the lender must hand you a standardized, three-page document called the <strong>Loan Estimate (LE)</strong>.
                     </p>
                     <p>
                         This document is your financial battle map. It is broken down into alphabetical sections (Section A through Section J). If you want to stop the bank from overcharging you, you must understand exactly which sections are rigid, and which sections are highly negotiable.
@@ -165,7 +165,7 @@ export default function PostComponent() {
                     <p>
                         Discount Points are an optional upfront fee you pay the bank to permanently lower your interest rate. One "point" costs exactly 1% of your loan amount and usually lowers your interest rate by 0.25%. If you plan to stay in the house for 10+ years, buying points can mathematically save you tens of thousands of dollars. If you plan to refinance in 2 years, buying points is a massive financial mistake.
                     </p>
-                    
+
                     <div className="my-8 p-6 bg-gradient-to-r from-blue-900 to-indigo-900 rounded-xl text-white shadow-lg">
                         <h4 className="text-xl font-bold mb-2 flex items-center gap-2">
                             <Calculator className="w-5 h-5" /> Calculate Your Break-Even Point
@@ -193,7 +193,7 @@ export default function PostComponent() {
 
                     <h3 className="text-2xl font-bold mt-8 mb-4">5. Escrow and Prepaids (The Hidden Cash Drain)</h3>
                     <p>
-                        This is the section that destroys first-time homebuyers. Even if you negotiate the bank's fees down to zero, you still have to fund your Escrow Account. 
+                        This is the section that destroys first-time homebuyers. Even if you negotiate the bank's fees down to zero, you still have to fund your Escrow Account.
                     </p>
                     <p>
                         The bank wants to ensure that you never default on your property taxes or your homeowners insurance. So, at closing, they will force you to pay <strong>6 to 12 months of property taxes upfront</strong>, and <strong>a full year of homeowners insurance upfront</strong>. In high-tax states like New Jersey, Texas, or Illinois, these "prepaids" can easily add $6,000 to $10,000 to your cash-to-close requirement. This is not a "fee"—it is your own money being put into a forced savings account—but it still requires massive liquid cash on closing day.
@@ -212,7 +212,7 @@ export default function PostComponent() {
 
                     <h3 className="text-2xl font-bold mt-8 mb-4">Strategy 1: The "Three LE" Rule</h3>
                     <p>
-                        You cannot negotiate effectively if you only have one offer. You must apply with three different lenders on the exact same day. 
+                        You cannot negotiate effectively if you only have one offer. You must apply with three different lenders on the exact same day.
                     </p>
                     <ol>
                         <li>Apply with a massive national bank (e.g., Chase or Bank of America).</li>
@@ -233,7 +233,7 @@ export default function PostComponent() {
 
                     <h3 className="text-2xl font-bold mt-8 mb-4">Strategy 3: The "No Closing Cost" Mortgage Illusion</h3>
                     <p>
-                        If you are completely out of cash, you can ask your lender for a "No Closing Cost" mortgage. 
+                        If you are completely out of cash, you can ask your lender for a "No Closing Cost" mortgage.
                     </p>
                     <p>
                         <strong>Warning: The bank is not giving you a charity discount.</strong> They are simply paying your $10,000 closing costs upfront, and in exchange, they will dramatically increase your interest rate (e.g., from 6.5% to 7.0%) for the entire 30-year life of the loan. You avoid the upfront cash requirement, but you will pay tens of thousands of dollars in extra interest over the next three decades. This is only a viable strategy if you plan to live in the house for less than 5 years.
@@ -254,10 +254,10 @@ export default function PostComponent() {
                     </h2>
 
                     <p>
-                        Three business days before you sign the final paperwork, the lender must provide you with the <strong>Closing Disclosure (CD)</strong>. This is the final, official accounting of every penny. 
+                        Three business days before you sign the final paperwork, the lender must provide you with the <strong>Closing Disclosure (CD)</strong>. This is the final, official accounting of every penny.
                     </p>
                     <p>
-                        You must place your original Loan Estimate (LE) side-by-side with your final Closing Disclosure (CD). Compare Section A. If the Origination Charges on the CD are even one dollar higher than the LE, the lender has broken federal law (TRID guidelines), and they must legally refund you the difference. 
+                        You must place your original Loan Estimate (LE) side-by-side with your final Closing Disclosure (CD). Compare Section A. If the Origination Charges on the CD are even one dollar higher than the LE, the lender has broken federal law (TRID guidelines), and they must legally refund you the difference.
                     </p>
                     <p>
                         Check the Escrow section carefully. If property taxes were estimated at $4,000 on the LE but jumped to $7,000 on the CD, ask why. Often, the lender used the previous owner's tax exemptions on the estimate, but corrected them for the final disclosure. This is legal, but it will cause massive payment shock.
@@ -282,9 +282,9 @@ export default function PostComponent() {
                 </article>
 
                 <div className="mt-16">
-                    
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-white p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">Advanced 2026 Wealth-Building Strategies & Financial FAQ</h2>
                     <p className="text-lg text-slate-700 mb-6">
@@ -293,7 +293,7 @@ export default function PostComponent() {
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">The Power of the "Wealth Multiplier" Effect</h3>
                     <p className="text-slate-700 mb-4">
-                        Financial success in 2026 is rarely achieved through a single, isolated decision. Instead, it is the result of the "Wealth Multiplier" effect—the mathematical compounding of several smart decisions executed simultaneously. For example, a homeowner who successfully negotiates their closing costs saves upfront cash. If they take that exact cash savings and immediately deploy it into a tax-advantaged account like a Roth IRA or HSA, they are shielding future growth from the IRS. 
+                        Financial success in 2026 is rarely achieved through a single, isolated decision. Instead, it is the result of the "Wealth Multiplier" effect—the mathematical compounding of several smart decisions executed simultaneously. For example, a homeowner who successfully negotiates their closing costs saves upfront cash. If they take that exact cash savings and immediately deploy it into a tax-advantaged account like a Roth IRA or HSA, they are shielding future growth from the IRS.
                     </p>
                     <p className="text-slate-700 mb-4">
                         Over a 30-year time horizon, that initial $5,000 savings does not just remain $5,000; compounding at an average annualized rate of 7%, it transforms into over $38,000 of tax-free purchasing power. This is the exact playbook utilized by high-net-worth individuals: ruthlessly optimizing the margins on debt (mortgages, auto loans) to free up liquidity for equity investments.
@@ -301,7 +301,7 @@ export default function PostComponent() {
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">Navigating the "Good Debt vs. Bad Debt" Paradigm</h3>
                     <p className="text-slate-700 mb-4">
-                        The traditional advice of "all debt is bad" is fundamentally obsolete in modern finance. In 2026, understanding the bifurcation between productive debt and destructive debt is the ultimate litmus test for financial literacy. 
+                        The traditional advice of "all debt is bad" is fundamentally obsolete in modern finance. In 2026, understanding the bifurcation between productive debt and destructive debt is the ultimate litmus test for financial literacy.
                     </p>
                     <p className="text-slate-700 mb-4">
                         <strong>Destructive Debt (Bad Debt):</strong> Any borrowing utilized to purchase depreciating consumer goods. Credit card balances carrying 20%+ APRs, high-interest personal loans used for vacations, and 84-month auto loans on luxury vehicles represent wealth destruction. Because the interest rate heavily outpaces inflation and market returns, this debt traps the consumer in a negative compounding cycle.

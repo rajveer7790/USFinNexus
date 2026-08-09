@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'S&P 500 vs. Real Estate: The Ultimate 2026 Investing Showdown',
+    title: "S&P 500 vs. Real Estate: The Ultimate 2026 Investing Showdown | Guide",
     description: 'Should you buy an index fund or a rental property? Learn the mathematical difference between compound interest and real estate leverage in 2026.',
     alternates: { canonical: 'https://usfinnexus.com/blog/sp500-vs-real-estate-investing-2026' },
     openGraph: {

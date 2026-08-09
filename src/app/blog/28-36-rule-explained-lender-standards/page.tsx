@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'The 28/36 Rule Explained: How Lenders Size Your Mortgage in 2026',
+    title: "The 28/36 Rule Explained: How Lenders Size Your Mortgage in 2026 | Guide",
     description: 'Learn exactly how mortgage lenders use the 28/36 rule to determine your borrowing limit in 2026. Calculate your front-end and back-end DTI to guarantee approval.',
     alternates: { canonical: 'https://usfinnexus.com/blog/28-36-rule-explained-lender-standards' },
     openGraph: {
@@ -26,7 +26,7 @@ export default function BlogPost() {
         <>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     { '@type': 'Question', name: 'What is the 28/36 rule for mortgages?', acceptedAnswer: { '@type': 'Answer', text: 'The 28/36 rule is a financial guideline used by conventional mortgage lenders to assess your borrowing risk. It states that your maximum monthly housing payment should not exceed 28% of your gross monthly income, and your total monthly debt payments (housing + car loans + credit cards) should not exceed 36%.' } },
-    { '@type': 'Question', name: 'Is the 28/36 rule a strict law?', acceptedAnswer: { '@type': 'Answer', text: 'No. While 28/36 is the "gold standard" for conventional loans, it is not a strict law. Lenders frequently approve back-end ratios up to 43% (the CFPB limit for a Qualified Mortgage) or even 50% for borrowers with excellent credit and cash reserves. FHA loans generally follow a 31/43 rule.' } },
+    { '@type': 'Question', name: 'Is the 28/36 rule a strict law?', acceptedAnswer: { '@type': 'Answer', text: 'No. The 28/36 rule is a budgeting guideline, not a universal approval rule. The CFPB General Qualified Mortgage definition uses price-based thresholds rather than the former fixed 43% DTI cap. Loan programs, automated underwriting systems and lenders apply their own requirements.' } },
     { '@type': 'Question', name: 'Does the 28% housing ratio include property taxes and insurance?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The 28% limit applies to your PITI payment: Principal, Interest, Property Taxes, and Homeowners Insurance. If you are buying a condo or into an HOA, the monthly HOA dues are also included in this 28% limit.' } },
 ] }) }} />
         <ArticleSchema
@@ -151,7 +151,7 @@ export default function BlogPost() {
                 </p>
 
                 <ul className="list-disc pl-6 space-y-4 mb-8">
-                    <li><strong>The 43% Hard Stop:</strong> The Consumer Financial Protection Bureau (CFPB) generally caps Back-End DTI at 43% for a mortgage to be legally considered a "Qualified Mortgage" (protecting lenders from certain liabilities). Most conventional lenders will push your approval up to 43% if you have a 740+ credit score.</li>
+                    <li><strong>No universal 43% hard stop:</strong> The CFPB replaced the former fixed 43% DTI limit in the General Qualified Mortgage definition with price-based thresholds. Conventional approval still depends on the program, automated underwriting findings, documented income, credit, assets and other factors.</li>
                     <li><strong>The 50% Exception:</strong> In rare cases, conventional lenders will approve a Back-End DTI up to 50%. This requires massive compensating factors—such as a 20% down payment, an 800 credit score, and 12 months of mortgage payments sitting in a cash reserve account.</li>
                     <li><strong>FHA Loans (The 31/43 Rule):</strong> Government-backed FHA loans are more lenient. Their standard baseline is the 31/43 rule (31% Front-End, 43% Back-End). However, with an automated approval and a 580 credit score, FHA loans are frequently approved with Back-End DTIs reaching 50% to 55%.</li>
                     <li><strong>VA Loans (The 41 Rule):</strong> VA loans only look at one ratio: the Back-End DTI. Their benchmark guideline is 41%. However, VA underwriters also rely heavily on a unique metric called "Residual Income" (ensuring you have enough cash left over for groceries and gas after all debts are paid). If your residual income is high, VA loans regularly approve DTIs exceeding 50%.</li>
@@ -184,7 +184,7 @@ export default function BlogPost() {
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">Advanced Strategies to Improve Your DTI Before Applying</h2>
                     <p className="text-lg text-slate-700 mb-6">
-                        If you have run the math and discovered your Debt-to-Income ratio exceeds the 36% or 43% limits, do not panic. Lenders look at a snapshot of your finances at the exact moment of application. Here are legal, highly effective strategies to manipulate that snapshot in your favor.
+                        If your Debt-to-Income ratio is above a planning benchmark, do not assume automatic denial. Ask the lender which obligations and income were counted, then consider legitimate ways to reduce required payments, document eligible income or adjust the purchase budget.
                     </p>
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">1. Pay Off Installment Loans with &lt;10 Payments Remaining</h3>

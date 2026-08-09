@@ -6,7 +6,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'NY BOI Law Starts January 2026 - Even If Federal BOI Is Exempt',
+    title: "NY BOI Law Starts January 2026 - Even If Federal BOI Is Exempt | Key Facts",
     description: 'New York marches ahead with its own transparency framework regardless of federal changes. Learn what the NY LLC Transparency Act means for your business.',
     openGraph: {
         title: 'NY BOI Law Starts January 2026 - Even If Federal BOI Is Exempt',

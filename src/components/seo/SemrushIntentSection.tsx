@@ -110,7 +110,7 @@ const intentPages = {
     scenarios: ['Pay the mortgage off 5 years early.', 'Compare biweekly-equivalent payments with monthly extra principal.', 'Estimate the payment needed for a 10-year or 15-year payoff target.'],
     links: [
       { href: '/blog/pay-off-mortgage-early-strategy', label: 'review payoff strategies' },
-      { href: '/blog/paying-off-mortgage-early-vs-investing', label: 'compare payoff versus investing' },
+      { href: '/blog/pay-off-mortgage-early-strategy', label: 'compare payoff versus investing' },
       { href: '/calculators/amortization', label: 'view an amortization schedule' },
     ],
   },

@@ -23,6 +23,18 @@ const IMG = {
 
 let cachedPosts: BlogPostEntry[] | null = null;
 
+export const CANONICALIZED_ALIASES = new Set([
+    'first-time-home-buyer-programs-2026', 'free-mortgage-calculator-2026-pdf',
+    'how-much-house-can-afford-2026', 'interest-only-mortgages-explained',
+    'mortgage-affordability-28-36-rule', 'mortgage-amortization-schedule',
+    'mortgage-closing-costs-2026-guide', 'mortgage-help-guide-2026',
+    'mortgage-points-discount-points-calculator', 'negotiate-closing-costs-strategies',
+    'paying-off-mortgage-early-vs-investing', 'pmi-explained-avoid-cancel',
+    'remove-pmi-mortgage-hpa-rules-2026', 'reverse-mortgage-hecm-explained',
+    'va-loans-military-benefits', 'what-is-a-good-debt-to-income-ratio',
+    'what-is-a-jumbo-loan-2026', 'when-to-refinance-1-percent-rule',
+]);
+
 export function getAllBlogPosts(): BlogPostEntry[] {
     if (cachedPosts) return cachedPosts;
 
@@ -33,7 +45,7 @@ export function getAllBlogPosts(): BlogPostEntry[] {
         const posts: BlogPostEntry[] = [];
 
         for (const dirent of entries) {
-            if (!dirent.isDirectory()) continue;
+            if (!dirent.isDirectory() || CANONICALIZED_ALIASES.has(dirent.name)) continue;
             const slug = dirent.name;
             
             const pagePath = path.join(blogDir, slug, 'page.tsx');

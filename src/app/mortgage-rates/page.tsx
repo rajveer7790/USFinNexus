@@ -5,7 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 const SOURCE_DATE = 'August 6, 2026';
 
 export const metadata: Metadata = {
-    title: 'Current Mortgage Rates: August 2026',
+    title: 'Mortgage Rates Today: August 2026 Data & Context',
     description: 'Freddie Mac weekly mortgage-rate averages for August 2026, with clear methodology, trend context and links to payment, affordability and refinance calculators.',
     alternates: { canonical: '/mortgage-rates' },
     openGraph: {

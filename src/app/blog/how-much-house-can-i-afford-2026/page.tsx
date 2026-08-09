@@ -10,7 +10,7 @@ import ArticleSchema from '@/components/ArticleSchema';
 export const metadata: Metadata = {
     title: 'The 28/36 Rule: How to Calculate Your Housing Budget in 2026',
     description: 'Stop guessing your housing budget. Use the 28/36 rule to mathematically calculate exactly how much house you can afford without becoming "house poor".',
-    alternates: { canonical: 'https://usfinnexus.com/blog/how-much-house-can-afford-2026' },
+    alternates: { canonical: 'https://usfinnexus.com/blog/how-much-house-can-i-afford-2026' },
     openGraph: {
         type: 'article',
         title: 'How Much House Can You Actually Afford?',
@@ -60,7 +60,7 @@ export default function BlogPost() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    <em>Looking for our comprehensive 2026 home affordability guide? Read our <Link href="/blog/how-much-house-can-afford-2026" className="text-blue-600 underline">Main Affordability Guide</Link> instead.</em><br/><br/>
+                    <em>Looking for our comprehensive 2026 home affordability guide? Read our <Link href="/blog/how-much-house-can-i-afford-2026" className="text-blue-600 underline">Main Affordability Guide</Link> instead.</em><br/><br/>
                     The biggest mistake a first-time homebuyer can make is letting a bank decide their budget. 
                 </p>
 

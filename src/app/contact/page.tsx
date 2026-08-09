@@ -41,9 +41,9 @@ export default function ContactPage() {
                     <p className="text-sm mb-4 leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>
                         For all inquiries, please reach out to us via email. We strive to respond to all messages within 24-48 hours.
                     </p>
-                    <a href="mailto:contact@usfinnexus.com" className="text-sm font-bold" style={{ color: '#00C853' }}>
-                        contact@usfinnexus.com
-                    </a>
+                    <p className="text-sm font-bold" style={{ color: '#00C853' }}>
+                        contact [at] usfinnexus [dot] com
+                    </p>
                 </div>
 
                 <div className="card p-6 flex flex-col items-center text-center">

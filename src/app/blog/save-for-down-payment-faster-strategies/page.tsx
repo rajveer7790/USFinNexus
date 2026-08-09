@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: '5 Proven Ways to Save for a Down Payment Faster in 2026',
+    title: "5 Proven Ways to Save for a Down Payment Faster in 2026 | Guide",
     description: 'Stop letting housing inflation outpace your savings. Here are 5 aggressive, mathematical strategies to save for a down payment faster in the 2026 real estate market.',
     alternates: { canonical: 'https://usfinnexus.com/blog/save-for-down-payment-faster-strategies' },
     openGraph: {

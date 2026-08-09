@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Free Mortgage Calculator 2026: Print Your Amortization PDF',
+    title: "Free Mortgage Calculator 2026: Print Your Amortization PDF | Guide",
     description: 'Do not trust the bank\'s math. Use our free 2026 mortgage calculator to generate a printable PDF amortization schedule and see exactly where your money goes.',
 
     alternates: { canonical: 'https://usfinnexus.com/calculators/mortgage' },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         type: 'article',
         title: 'Free Mortgage Calculator & Printable Amortization Schedule',
         description: 'Take back control of your financial math. Generate a free, instant PDF of your complete 30-year mortgage amortization schedule.',
-        url: 'https://usfinnexus.com/blog/free-mortgage-calculator-2026-pdf',
+        url: 'https://usfinnexus.com/calculators/mortgage',
         siteName: 'USFinNexus',
         images: [{ url: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: 'Mortgage Calculator PDF' }]
     }
@@ -33,14 +33,14 @@ export default function BlogPost() {
         <ArticleSchema
             title="Free Mortgage Calculator 2026: Print Your Amortization PDF"
             description="Do not trust the bank's math. Use our free mortgage calculator to generate a printable PDF amortization schedule and see exactly where your money goes."
-            url="https://usfinnexus.com/blog/free-mortgage-calculator-2026-pdf"
+            url="https://usfinnexus.com/calculators/mortgage"
             datePublished="2026-05-26"
             dateModified="2026-05-26"
             authorName="USFinNexus Editorial Team"
             keywords={['Mortgage', 'Calculator', 'Tools', '2026']}
         />
         <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
-            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Mortgage Calculator PDF', item: '/blog/free-mortgage-calculator-2026-pdf' }]} />
+            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Mortgage Calculator PDF', item: '/calculators/mortgage' }]} />
             <article className="prose prose-slate max-w-none">
 
             <header className="mb-10">

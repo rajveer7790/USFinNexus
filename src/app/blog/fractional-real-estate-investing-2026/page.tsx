@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Fractional Real Estate Investing: How to Buy a Rental Property for $100',
+    title: "Fractional Real Estate Investing: How to Buy a Rental Property for | Guide",
     description: 'You no longer need a $80,000 down payment to become a landlord. Learn how fractional real estate platforms allow you to buy shares of rental properties in 2026.',
     alternates: { canonical: 'https://usfinnexus.com/blog/fractional-real-estate-investing-2026' },
     openGraph: {

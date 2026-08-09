@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: '2026 Conforming Loan Limits: Conventional, FHA, and VA Guide',
+    title: "2026 Conforming Loan Limits: Conventional, FHA, and VA Guide | Guide",
     description: 'The Federal Housing Finance Agency (FHFA) has officially announced the 2026 conforming loan limits. See how much you can borrow before needing a Jumbo loan.',
     alternates: { canonical: 'https://usfinnexus.com/blog/2026-loan-limits-conforming' },
     openGraph: {

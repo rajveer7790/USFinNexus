@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Streamline Refinance 2026: Fast Track for FHA, VA, & USDA Loans',
+    title: "Streamline Refinance 2026: Fast Track for FHA, VA, & USDA Loans | Guide",
     description: 'Learn how to bypass appraisals, skip income verification, and secure a lower mortgage rate in weeks using a government Streamline Refinance program.',
     openGraph: {
         title: 'Streamline Refinance 2026: Fast Track for FHA, VA, & USDA Loans',

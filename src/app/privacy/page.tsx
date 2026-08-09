@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-    title: 'Privacy Policy',
+    title: 'How USFinNexus Handles Calculator & Visitor Data',
     description: 'Read how USFinNexus handles calculator inputs, local browser storage, advertising technologies and third-party services.',
     alternates: { canonical: '/privacy' },
     openGraph: {

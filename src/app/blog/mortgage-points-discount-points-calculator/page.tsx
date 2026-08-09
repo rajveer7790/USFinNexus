@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Mortgage Points Explained: Should You Buy Down Your Rate in 2026?',
+    title: "Mortgage Points Explained: Should You Buy Down Your Rate in 2026? | Guide",
     description: 'Do not pay your lender $5,000 upfront without doing the math. Learn how to calculate the break-even point on discount points, and why buying points in 2026 might be a massive mistake.',
 
     alternates: { canonical: 'https://usfinnexus.com/blog/mortgage-points-buydown-calculator' },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         type: 'article',
         title: 'The Dangerous Math of Mortgage Discount Points',
         description: 'Lenders will aggressively try to sell you "discount points" to lower your interest rate. Here is the exact mathematical equation to determine if it is actually worth the cash.',
-        url: 'https://usfinnexus.com/blog/mortgage-points-discount-points-calculator',
+        url: 'https://usfinnexus.com/blog/mortgage-points-buydown-calculator',
         siteName: 'USFinNexus',
         images: [{ url: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: 'Mortgage Points' }]
     }
@@ -33,14 +33,14 @@ export default function BlogPost() {
         <ArticleSchema
             title="Mortgage Points Explained: Should You Buy Down Your Rate in 2026?"
             description="Do not pay your lender $5,000 upfront without doing the math. Learn how to calculate the break-even point on discount points."
-            url="https://usfinnexus.com/blog/mortgage-points-discount-points-calculator"
+            url="https://usfinnexus.com/blog/mortgage-points-buydown-calculator"
             datePublished="2026-05-26"
             dateModified="2026-05-26"
             authorName="USFinNexus Editorial Team"
             keywords={['Mortgage', 'Interest Rates', 'Financing', '2026']}
         />
         <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
-            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Mortgage Discount Points', item: '/blog/mortgage-points-discount-points-calculator' }]} />
+            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Mortgage Discount Points', item: '/blog/mortgage-points-buydown-calculator' }]} />
             <article className="prose prose-slate max-w-none">
 
             <header className="mb-10">

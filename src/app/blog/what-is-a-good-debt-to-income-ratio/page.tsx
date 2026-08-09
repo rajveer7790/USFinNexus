@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'What is a Good Debt-to-Income (DTI) Ratio in 2026?',
+    title: "What is a Good Debt-to-Income (DTI) Ratio in 2026? | Guide",
     description: 'A 800 credit score cannot save you if your DTI is too high. Learn exactly how mortgage underwriters calculate your Debt-to-Income ratio and the strict 43% rule.',
 
     alternates: { canonical: 'https://usfinnexus.com/blog/debt-to-income-ratio-dti-calculator-2026' },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         type: 'article',
         title: 'The Math That Decides Your Mortgage Approval: DTI Explained',
         description: 'You make $150,000 a year, but the bank still denied your mortgage. Why? Because of your Debt-to-Income ratio. Here is the exact formula the bank uses to judge your finances.',
-        url: 'https://usfinnexus.com/blog/what-is-a-good-debt-to-income-ratio',
+        url: 'https://usfinnexus.com/blog/debt-to-income-ratio-dti-calculator-2026',
         siteName: 'USFinNexus',
         images: [{ url: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: 'Debt to Income Ratio' }]
     }
@@ -33,14 +33,14 @@ export default function BlogPost() {
         <ArticleSchema
             title="What is a Good Debt-to-Income (DTI) Ratio in 2026?"
             description="A 800 credit score cannot save you if your DTI is too high. Learn exactly how mortgage underwriters calculate your Debt-to-Income ratio and the strict 43% rule."
-            url="https://usfinnexus.com/blog/what-is-a-good-debt-to-income-ratio"
+            url="https://usfinnexus.com/blog/debt-to-income-ratio-dti-calculator-2026"
             datePublished="2026-05-26"
             dateModified="2026-05-26"
             authorName="USFinNexus Editorial Team"
             keywords={['Mortgage', 'Budgeting', 'Credit', '2026']}
         />
         <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
-            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Debt-to-Income Ratio', item: '/blog/what-is-a-good-debt-to-income-ratio' }]} />
+            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Debt-to-Income Ratio', item: '/blog/debt-to-income-ratio-dti-calculator-2026' }]} />
             <article className="prose prose-slate max-w-none">
 
             <header className="mb-10">

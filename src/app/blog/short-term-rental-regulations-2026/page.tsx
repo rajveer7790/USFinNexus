@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Short-Term Rental Regulations in 2026: Is the Airbnb Arbitrage Dead?',
+    title: "Short-Term Rental Regulations in 2026: Is the Airbnb Arbitrage | Guide",
     description: 'Cities across the USA are cracking down on short-term rentals in 2026. We analyze the new laws, the death of Airbnb arbitrage, and the pivot to mid-term rentals.',
     alternates: { canonical: 'https://usfinnexus.com/blog/short-term-rental-regulations-2026' },
     openGraph: {

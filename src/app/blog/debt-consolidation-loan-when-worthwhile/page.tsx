@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Debt Consolidation Loans: When Are They Actually Worthwhile?',
+    title: "Debt Consolidation Loans: When Are They Actually Worthwhile? | Guide",
     description: 'A debt consolidation loan can lower your monthly payments and save you thousands in interest—but only if you avoid the massive psychological trap that bankrupts most borrowers.',
     alternates: { canonical: 'https://usfinnexus.com/blog/debt-consolidation-loan-when-worthwhile' },
     openGraph: {

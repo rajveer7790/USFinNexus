@@ -11,7 +11,7 @@ const MortgageCalculator = dynamic(() => import('../mortgage/MortgageCalculatorC
 });
 
 export const metadata: Metadata = {
-    title: 'Mortgage Payoff Calculator',
+    title: "Mortgage Payoff Calculator | Free Tool",
     description: 'Model extra monthly principal and compare your original mortgage schedule with an accelerated payoff plan, including estimated time and interest saved.',
     alternates: { canonical: '/calculators/mortgage-payoff' },
     openGraph: {
@@ -56,7 +56,7 @@ export default function MortgagePayoffPage() {
                     Confirm that your loan has no prepayment penalty, maintain an emergency reserve, and tell the servicer to apply the additional amount to principal. Paying a mortgage by credit card usually adds fees or cash-advance risk and is not the same as making an extra principal payment.
                 </p>
                 <p>
-                    Also compare the <Link href="/calculators/amortization">amortization calculator</Link>, the <Link href="/blog/pay-off-mortgage-early-strategy">mortgage payoff strategy guide</Link>, and the <Link href="/blog/paying-off-mortgage-early-vs-investing">payoff-versus-investing guide</Link>.
+                    Also compare the <Link href="/calculators/amortization">amortization calculator</Link>, the <Link href="/blog/pay-off-mortgage-early-strategy">mortgage payoff strategy guide</Link>, and the <Link href="/blog/pay-off-mortgage-early-strategy">payoff-versus-investing guide</Link>.
                 </p>
             </article>
         </main>

@@ -5,7 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: '2026 Federal Income Tax Brackets & Standard Deduction',
+    title: "2026 Federal Income Tax Brackets & Standard Deduction | Key Facts",
     description: 'Official 2026 federal income tax brackets and standard deductions, plus what actually happened to the expected TCJA sunset. Based on IRS 2026 guidance.',
     alternates: { canonical: '/articles/2026-income-tax-brackets-how-the-tcja-sunset-affects-you' },
     openGraph: {

@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Defense & Cybersecurity Stocks: Investing in Global Security in 2026',
+    title: "Defense & Cybersecurity Stocks: Investing in Global Security in | Guide",
     description: 'As geopolitical tensions rise in 2026, defense and cybersecurity stocks are surging. Learn how to invest in the companies protecting global infrastructure.',
 
     alternates: { canonical: 'https://usfinnexus.com/blog/defense-cybersecurity-stocks-2026' },

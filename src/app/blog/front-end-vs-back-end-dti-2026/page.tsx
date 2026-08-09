@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Front-End vs Back-End DTI: CFPB Guidelines for 2026',
+    title: "Front-End vs Back-End DTI: CFPB Guidelines for 2026 | Guide",
     description: 'Learn the difference between front-end and back-end debt-to-income (DTI) ratios. Discover exactly what lenders and the CFPB look for in 2026 mortgage applications.',
     alternates: { canonical: 'https://usfinnexus.com/blog/front-end-vs-back-end-dti-2026' },
     openGraph: { 
@@ -98,10 +98,10 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Are the CFPB Guidelines for 2026?</h2>
                 <p className="mb-4">
-                    The <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-en-1791/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Consumer Financial Protection Bureau (CFPB)</a> sets strict rules for what qualifies as a safe, "Qualified Mortgage."
+                    The <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-en-1791/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Consumer Financial Protection Bureau (CFPB)</a> explains DTI as one measure of repayment capacity. Mortgage qualification still depends on the applicable loan category and underwriting rules.
                 </p>
                 <ul className="list-disc pl-6 mb-8 space-y-2">
-                    <li><strong>The 43% Standard:</strong> The CFPB recommends a maximum Back-End DTI of 43%. If your ratio exceeds 43%, lenders are taking on significant legal risk to issue the loan, meaning you will face steep interest rates or outright denial.</li>
+                    <li><strong>General Qualified Mortgage:</strong> The current definition uses price-based thresholds and no longer applies the former fixed 43% DTI cap. Lenders must still consider and verify income, assets and debts when evaluating ability to repay.</li>
                     <li><strong>FHA Loans:</strong> The FHA is slightly more forgiving, often allowing a Front-End DTI of 31% and a Back-End DTI of 43% (and sometimes up to 50% with compensating factors like excellent credit).</li>
                     <li><strong>Fannie Mae / Freddie Mac:</strong> Conventional loans generally aim for a 36% Back-End DTI, though automated underwriting systems regularly approve ratios up to 45% (or 50% for highly qualified borrowers).</li>
                 </ul>
@@ -135,7 +135,7 @@ export default function BlogPost() {
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Strategies for Optimizing Your DTI for Mortgage Approval?</h2>
                     <p className="text-lg text-slate-700 mb-6">
-                        If your Back-End DTI is hovering dangerously close to the 43% limit, you must take proactive steps to manipulate the ratio before the underwriter reviews your file. Lowering your DTI is often faster and more impactful than trying to raise your credit score.
+                        If your Back-End DTI is near a lender&apos;s planning threshold, review the calculation before applying. Correcting counted obligations, reducing required debt payments or choosing a smaller housing payment can improve the file without misrepresenting any information.
                     </p>
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">What Is the "Pay Down, Not Pay Off" DTI Strategy?</h3>

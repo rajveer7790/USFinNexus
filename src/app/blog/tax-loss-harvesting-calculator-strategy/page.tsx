@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Tax-Loss Harvesting Explained: Turn Your Losing Stocks Into Cash',
+    title: "Tax-Loss Harvesting Explained: Turn Your Losing Stocks Into Cash | Guide",
     description: 'If you lost $5,000 in the stock market this year, do not panic. Learn how to use Tax-Loss Harvesting to mathematically force the IRS to cover your losses.',
     alternates: { canonical: 'https://usfinnexus.com/blog/tax-loss-harvesting-calculator-strategy' },
     openGraph: {

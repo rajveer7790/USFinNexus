@@ -15,7 +15,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Home Affordability Calculator',
+    title: "Home Affordability Calculator | Free Tool",
     description: 'Estimate how much house you can afford using income, recurring debt, down payment, mortgage rate, term and property-tax assumptions. Compare 28% and 43% planning scenarios.',
     alternates: { canonical: '/calculators/affordability' },
     openGraph: {

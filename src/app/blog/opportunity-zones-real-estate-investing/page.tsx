@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Opportunity Zones Explained: How Real Estate Investors Avoid Taxes',
+    title: "Opportunity Zones Explained: How Real Estate Investors Avoid Taxes | Guide",
     description: 'Billionaires do not pay capital gains taxes. Learn how the 2026 Opportunity Zone program allows you to legally shelter your real estate profits from the IRS.',
     alternates: { canonical: 'https://usfinnexus.com/blog/opportunity-zones-real-estate-investing' },
     openGraph: {

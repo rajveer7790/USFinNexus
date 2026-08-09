@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Is 20% Down Still the Golden Standard in 2026? The PMI Myth',
+    title: "Is 20% Down Still the Golden Standard in 2026? The PMI Myth | Guide",
     description: 'The 20% down payment rule is outdated. Discover why the average first-time buyer in 2026 puts down just 6%, the real cost of PMI, and how waiting to save 20% can cost you thousands in lost equity.',
     alternates: { canonical: 'https://usfinnexus.com/blog/20-percent-down-payment-standard-2026' },
     openGraph: {

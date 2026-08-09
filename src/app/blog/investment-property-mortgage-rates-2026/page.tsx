@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Investment Property Mortgage Rates 2026: The DSCR Loophole',
+    title: "Investment Property Mortgage Rates 2026: The DSCR Loophole | Guide",
     description: 'Buying a rental property is entirely different from buying a primary residence. Learn why investment mortgages are more expensive, and how to use DSCR loans to bypass income requirements.',
     alternates: { canonical: 'https://usfinnexus.com/blog/investment-property-mortgage-rates-2026' },
     openGraph: {
@@ -101,7 +101,7 @@ export default function BlogPost() {
                     Let's assume you successfully buy your first rental property. Three years later, you find a fantastic deal on a second property. You go back to the bank to get another mortgage.
                 </p>
                 <p>
-                    The bank looks at your file and denies you. They tell you your <strong>Debt-to-Income (DTI) ratio</strong> is too high. Because you now have your personal mortgage, plus the mortgage on your first rental property, your total debts mathematically exceed the strict 43% DTI threshold allowed by standard underwriting rules.
+                    A lender may determine that your <strong>Debt-to-Income (DTI) ratio</strong> is too high after counting the primary-home payment, investment-property obligations and only the eligible portion of rental income. The acceptable result varies by loan program and underwriting findings; 43% is not a universal hard ceiling.
                 </p>
                 <p>
                     You are effectively cut off. You cannot buy more houses because your W-2 salary is not high enough to support massive amounts of debt.

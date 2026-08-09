@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Auto Loan Calculator Guide: How Much Car Can You Really Afford in 2026?',
+    title: "Auto Loan Calculator Guide: How Much Car Can You Really Afford in | Guide",
     description: 'Stop negotiating the monthly payment at the dealership. Learn the 20/4/10 rule of car affordability and how to calculate your true auto loan budget in 2026.',
     alternates: { canonical: 'https://usfinnexus.com/blog/auto-loan-calculator-car-affordability' },
     openGraph: {

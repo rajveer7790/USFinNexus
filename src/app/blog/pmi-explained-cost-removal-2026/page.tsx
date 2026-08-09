@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'PMI Explained: What It Is, How Much It Costs, and When It Ends',
+    title: "PMI Explained: What It Is, How Much It Costs, and When It Ends | Guide",
     description: 'Private Mortgage Insurance (PMI) explained for 2026. Learn exactly how much PMI costs, who it protects, and the strategies you can use to avoid paying it.',
     alternates: { canonical: 'https://usfinnexus.com/blog/pmi-explained-cost-removal-2026' },
     openGraph: {

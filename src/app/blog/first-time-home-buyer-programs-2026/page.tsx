@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'First-Time Home Buyer Programs 2026: Grants, Loans, & Loopholes',
+    title: "First-Time Home Buyer Programs 2026: Grants, Loans, & Loopholes | Guide",
     description: 'Stop letting high interest rates lock you out of the housing market. Discover the top 2026 first-time home buyer programs, including USDA zero-down loans and the Good Neighbor Next Door grant.',
 
     alternates: { canonical: 'https://usfinnexus.com/blog/first-time-homebuyer-programs-grants-2026' },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         type: 'article',
         title: 'The Ultimate 2026 First-Time Home Buyer Guide',
         description: 'From 50% discount government grants for teachers to 0% down rural mortgages, here are the programs designed specifically to get you out of your apartment.',
-        url: 'https://usfinnexus.com/blog/first-time-home-buyer-programs-2026',
+        url: 'https://usfinnexus.com/blog/first-time-homebuyer-programs-grants-2026',
         siteName: 'USFinNexus',
         images: [{ url: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: 'First Time Homebuyer Programs' }]
     }
@@ -33,14 +33,14 @@ export default function BlogPost() {
         <ArticleSchema
             title="First-Time Home Buyer Programs 2026: Grants, Loans, & Loopholes"
             description="Stop letting high interest rates lock you out of the housing market. Discover the top 2026 first-time home buyer programs, including USDA zero-down loans."
-            url="https://usfinnexus.com/blog/first-time-home-buyer-programs-2026"
+            url="https://usfinnexus.com/blog/first-time-homebuyer-programs-grants-2026"
             datePublished="2026-05-26"
             dateModified="2026-05-26"
             authorName="USFinNexus Editorial Team"
             keywords={['Home Buying', 'Mortgage', 'First Time Buyer', '2026']}
         />
         <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
-            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'First-Time Buyer Programs', item: '/blog/first-time-home-buyer-programs-2026' }]} />
+            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'First-Time Buyer Programs', item: '/blog/first-time-homebuyer-programs-grants-2026' }]} />
             <article className="prose prose-slate max-w-none">
 
             <header className="mb-10">

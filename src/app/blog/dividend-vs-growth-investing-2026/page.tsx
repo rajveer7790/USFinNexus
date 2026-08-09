@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Dividend vs. Growth Investing: Which Strategy Wins in 2026?',
+    title: "Dividend vs. Growth Investing: Which Strategy Wins in 2026? | Guide",
     description: 'Should you invest for immediate cash flow or long-term stock appreciation? We break down the mathematical differences between Dividend and Growth investing strategies.',
     alternates: { canonical: 'https://usfinnexus.com/blog/dividend-vs-growth-investing-2026' },
     openGraph: {

@@ -14,7 +14,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: '2026 Federal Income Tax Calculator',
+    title: "2026 Federal Income Tax Calculator | Free Tool",
     description: 'Estimate 2026 U.S. federal income tax using official IRS tax brackets and standard deductions. Includes marginal rate, effective rate and an employee FICA estimate.',
     alternates: { canonical: '/calculators/income-tax' },
     openGraph: {

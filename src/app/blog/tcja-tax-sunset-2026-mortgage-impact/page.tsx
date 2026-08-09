@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'TCJA Tax Sunset 2026: What It Means For Your Mortgage',
+    title: "TCJA Tax Sunset 2026: What It Means For Your Mortgage | Guide",
     description: 'The Tax Cuts and Jobs Act (TCJA) is set to sunset in 2026. Learn how the return of previous tax brackets and deduction limits could impact your mortgage and home affordability.',
     openGraph: {
         title: 'TCJA Tax Sunset 2026: What It Means For Your Mortgage',

@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'First-Time Homebuyer Grants 2026: How to Find Free Money',
+    title: "First-Time Homebuyer Grants 2026: How to Find Free Money | Guide",
     description: 'A mortgage is a loan you have to pay back. A grant is free money. Learn how to locate municipal block grants and FHLB funds to buy your house in 2026.',
     alternates: { canonical: 'https://usfinnexus.com/blog/first-time-homebuyer-programs-grants-2026' },
     openGraph: {

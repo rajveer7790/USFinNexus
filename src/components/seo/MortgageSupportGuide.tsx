@@ -71,7 +71,7 @@ export type MortgageSupportGuideSlug = keyof typeof guides;
 
 export function supportGuideMetadata(slug: MortgageSupportGuideSlug) {
   const guide = guides[slug];
-  return { title: guide.title, description: guide.intro, alternates: { canonical: `/blog/${slug}` } };
+  return { title: `${guide.title} | Guide`, description: guide.intro, alternates: { canonical: `/blog/${slug}` } };
 }
 
 export default function MortgageSupportGuide({ slug }: { slug: MortgageSupportGuideSlug }) {

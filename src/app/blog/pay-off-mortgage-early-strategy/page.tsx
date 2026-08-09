@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'How to Pay Off Your Mortgage in 10 Years Without Refinancing',
+    title: "How to Pay Off Your Mortgage in 10 Years Without Refinancing | Guide",
     description: 'Learn the exact math and strategies to pay off a 30-year mortgage in 10 years or less. Accelerate your payoff with extra principal payments.',
     openGraph: {
         title: 'How to Pay Off Your Mortgage in 10 Years Without Refinancing',

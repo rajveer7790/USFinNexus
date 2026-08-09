@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Appraisal Contingency: What Happens if Your Home Appraises Low?',
+    title: "Appraisal Contingency: What Happens if Your Home Appraises Low? | Guide",
     description: 'A low appraisal can destroy a real estate deal. Learn exactly how an appraisal contingency protects your earnest money, and the 4 strategies to fix an appraisal gap in 2026.',
     alternates: { canonical: 'https://usfinnexus.com/blog/appraisal-contingency-low-appraisal' },
     openGraph: {

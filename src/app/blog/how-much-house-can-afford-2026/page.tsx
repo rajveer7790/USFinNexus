@@ -8,14 +8,14 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'How Much House Can You Afford in 2026? The Real-World Guide',
+    title: "How Much House Can You Afford in 2026? The Real-World Guide | Guide",
     description: 'Calculate your true home affordability using the 28/36 rule, DTI, current 2026 interest rates, and hidden homeownership costs. Stop guessing, start calculating.',
 
     alternates: { canonical: 'https://usfinnexus.com/blog/how-much-house-can-i-afford-2026' },
     openGraph: {
         title: 'How Much House Can You Afford in 2026? The Real-World Guide',
         description: 'Calculate your true home affordability using the 28/36 rule, DTI, current 2026 interest rates, and hidden homeownership costs. Stop guessing, start calculating.',
-        url: 'https://usfinnexus.com/blog/how-much-house-can-afford-2026',
+        url: 'https://usfinnexus.com/blog/how-much-house-can-i-afford-2026',
         type: 'article',
         siteName: 'USFinNexus',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'How Much House Can You Afford 2026' }],
@@ -41,20 +41,20 @@ export default function HowMuchHouseBlog() {
                 { '@type': 'Question', name: 'What is Debt-to-Income (DTI) ratio?', acceptedAnswer: { '@type': 'Answer', text: 'DTI compares your total monthly debt payments to your gross monthly income. Most lenders prefer a DTI below 36%, though some programs like FHA loans may allow DTIs up to 43% or even 50% with compensating factors.' } }
             ]
         }) }} />
-        
-        <ArticleSchema 
-            title="How Much House Can You Afford in 2026? The Real-World Guide" 
-            description="Calculate your true home affordability using the 28/36 rule, DTI, current 2026 interest rates, and hidden homeownership costs." 
-            url="https://usfinnexus.com/blog/how-much-house-can-afford-2026" 
-            datePublished="2026-05-16" 
-            dateModified="2026-05-16" 
-            authorName="USFinNexus Editorial Team" 
-            keywords={['how much house can i afford 2026', '28/36 rule', 'DTI ratio', 'mortgage rates 2026']} 
+
+        <ArticleSchema
+            title="How Much House Can You Afford in 2026? The Real-World Guide"
+            description="Calculate your true home affordability using the 28/36 rule, DTI, current 2026 interest rates, and hidden homeownership costs."
+            url="https://usfinnexus.com/blog/how-much-house-can-i-afford-2026"
+            datePublished="2026-05-16"
+            dateModified="2026-05-16"
+            authorName="USFinNexus Editorial Team"
+            keywords={['how much house can i afford 2026', '28/36 rule', 'DTI ratio', 'mortgage rates 2026']}
         />
 
         <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
-            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Home Affordability 2026', item: '/blog/how-much-house-can-afford-2026' }]} />
-            
+            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Home Affordability 2026', item: '/blog/how-much-house-can-i-afford-2026' }]} />
+
             <article className="prose prose-slate max-w-none">
                 <header className="mb-10 text-center sm:text-left">
                     <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold mb-4 bg-indigo-100 text-indigo-700 ring-1 ring-inset ring-indigo-200">
@@ -88,7 +88,7 @@ export default function HowMuchHouseBlog() {
                         <CheckCircle className="w-8 h-8 text-indigo-600" />
                         The Golden Standard: The 28/36 Rule
                     </h2>
-                    
+
                     <p>
                         If you walk into any bank or mortgage lender in 2026, the first mathematical hurdle you will encounter is the <strong>28/36 rule</strong>. This is the bedrock of mortgage underwriting and the most reliable heuristic for determining if you can comfortably afford a home.
                     </p>
@@ -118,7 +118,7 @@ export default function HowMuchHouseBlog() {
                     <p>
                         Imagine a household earning $120,000 per year ($10,000 per month gross income).
                     </p>
-                    
+
                     <div className="overflow-hidden rounded-xl border border-slate-200 my-8 shadow-sm">
                         <table className="w-full text-left border-collapse">
                             <thead>
@@ -149,9 +149,9 @@ export default function HowMuchHouseBlog() {
                     </div>
 
                     <p>
-                        In this scenario, if the household has a $500 monthly car payment and $300 in student loans ($800 total debt), their available housing budget under the 36% rule shrinks. 
+                        In this scenario, if the household has a $500 monthly car payment and $300 in student loans ($800 total debt), their available housing budget under the 36% rule shrinks.
                         <br/><br/>
-                        $3,600 (Max Total Debt) - $800 (Existing Debt) = <strong>$2,800</strong>. 
+                        $3,600 (Max Total Debt) - $800 (Existing Debt) = <strong>$2,800</strong>.
                         <br/><br/>
                         They perfectly hit the 28% max. But if their existing debt was $1,200/month, their max housing payment would drop to $2,400 to satisfy the 36% back-end ratio rule.
                     </p>
@@ -175,7 +175,7 @@ export default function HowMuchHouseBlog() {
                     </h2>
 
                     <p>
-                        While the 28/36 rule is a fantastic conservative benchmark for personal finance, modern lending in 2026 often pushes these boundaries through the <strong>Debt-to-Income (DTI) ratio</strong> limit. 
+                        While the 28/36 rule is a fantastic conservative benchmark for personal finance, modern lending in 2026 often pushes these boundaries through the <strong>Debt-to-Income (DTI) ratio</strong> limit.
                     </p>
 
                     <p>
@@ -198,7 +198,7 @@ export default function HowMuchHouseBlog() {
                     </h2>
 
                     <p>
-                        The price tag on the house is only half the story. The interest rate dictates your actual monthly cash flow. In 2026, the mortgage market continues to see dynamic shifts. 
+                        The price tag on the house is only half the story. The interest rate dictates your actual monthly cash flow. In 2026, the mortgage market continues to see dynamic shifts.
                     </p>
 
                     <p>
@@ -260,7 +260,7 @@ export default function HowMuchHouseBlog() {
                     </h2>
 
                     <p>
-                        Determining how much house you can afford in 2026 is an exercise in reality. Ignore what the bank says you are <em>approved</em> for, and focus on what your lifestyle and budget dictate you are <em>comfortable</em> paying. 
+                        Determining how much house you can afford in 2026 is an exercise in reality. Ignore what the bank says you are <em>approved</em> for, and focus on what your lifestyle and budget dictate you are <em>comfortable</em> paying.
                     </p>
 
                     <ol className="list-decimal pl-6 space-y-4 mb-12">
@@ -288,7 +288,7 @@ export default function HowMuchHouseBlog() {
 
                 <div className="mt-16 pt-8 border-t border-slate-200">
                                <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">Advanced Strategies: The Brutal Math of House Affordability</h2>
                     <p className="text-lg text-slate-700 mb-6">
@@ -328,7 +328,7 @@ export default function HowMuchHouseBlog() {
                 </div>     </div>
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 16, 2026" />
             </article>
-            
+
             <div className="mt-16">
                 <RelatedCalculators exclude={[]} limit={4} title="Affordability Tools" />
                 <RelatedArticles currentSlug="how-much-house-can-afford-2026" category="Mortgage" />

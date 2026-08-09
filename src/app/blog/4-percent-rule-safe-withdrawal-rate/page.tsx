@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'The 4% Rule Explained: Is it Still a Safe Withdrawal Rate in 2026?',
+    title: "The 4% Rule Explained: Is it Still a Safe Withdrawal Rate in 2026? | Guide",
     description: 'The 4% rule has guided retirees for decades, but soaring inflation and sequence of returns risk in 2026 have many experts recommending a 3.5% or 3.2% safe withdrawal rate instead.',
     alternates: { canonical: 'https://usfinnexus.com/blog/4-percent-rule-safe-withdrawal-rate' },
     openGraph: {

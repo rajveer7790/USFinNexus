@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Portfolio Loans & Non-QM Mortgages: The 2026 Freelancer Guide',
+    title: "Portfolio Loans & Non-QM Mortgages: The 2026 Freelancer Guide | Guide",
     description: 'If you are self-employed or a freelancer, traditional banks will deny your mortgage. Learn how to use Bank Statement Loans and Non-QM mortgages to buy a house without a W-2.',
     alternates: { canonical: 'https://usfinnexus.com/blog/portfolio-loans-non-qm-mortgages-2026' },
     openGraph: {

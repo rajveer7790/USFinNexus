@@ -23,7 +23,11 @@ const routeFor = (file) => {
   return `/${rel.replace(/\/index\.html$/, '').replace(/\.html$/, '')}`;
 };
 
-const routeFiles = new Map(htmlFiles.map((file) => [routeFor(file), file]));
+const redirectsPath = path.resolve('public/_redirects');
+const redirectSources = new Set(fs.existsSync(redirectsPath)
+  ? fs.readFileSync(redirectsPath, 'utf8').split(/\r?\n/).map((line) => line.trim()).filter((line) => line && !line.startsWith('#')).map((line) => line.split(/\s+/)[0])
+  : []);
+const routeFiles = new Map(htmlFiles.map((file) => [routeFor(file), file]).filter(([route]) => !redirectSources.has(route)));
 const decodeEntities = (value) => value
   .replaceAll('&amp;', '&')
   .replaceAll('&quot;', '"')
@@ -42,20 +46,29 @@ const normalizeInternal = (href) => {
 };
 
 const findings = {
-  pages: htmlFiles.length,
+  pages: routeFiles.size,
   missingTitle: [],
   emptyHtml: [],
   longTitles: [],
   missingDescription: [],
   h1NotOne: [],
   missingCanonical: [],
+  canonicalMismatch: [],
+  duplicateH1Title: [],
+  lowTextHtmlRatio: [],
   brokenInternalLinks: [],
   brokenInternalImages: [],
   invalidApplicationSchema: [],
   sitemapBadUrls: [],
+  sitemapCanonicalMismatches: [],
+  oneIncomingInternalLink: [],
+  depthOver3: [],
+  missingHstsRule: [],
 };
 
-for (const file of htmlFiles) {
+const pageInfo = new Map();
+
+for (const file of routeFiles.values()) {
   const html = fs.readFileSync(file, 'utf8');
   const route = routeFor(file);
   if (html.trim().length === 0) {
@@ -71,16 +84,28 @@ for (const file of htmlFiles) {
   }
   const h1Count = (html.match(/<h1\b/gi) || []).length;
   if (h1Count !== 1) findings.h1NotOne.push({ route, count: h1Count });
-  if (route !== '/404' && !/<link[^>]+rel=["']canonical["']/i.test(html)) findings.missingCanonical.push(route);
+  const h1 = decodeEntities(html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1]?.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() || '');
+  const canonical = decodeEntities(html.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)/i)?.[1] || html.match(/<link[^>]+href=["']([^"']+)["'][^>]+rel=["']canonical/i)?.[1] || '');
+  if (route !== '/404' && !canonical) findings.missingCanonical.push(route);
+  else if (route !== '/404' && normalizeInternal(canonical) !== route) findings.canonicalMismatch.push({ route, canonical });
+  const normalizeText = (value) => value.toLowerCase().replace(/\s*[|—–-]\s*usfinnexus.*$/, '').replace(/[^a-z0-9]+/g, ' ').trim();
+  if (title && h1 && normalizeText(decodeEntities(title)) === normalizeText(h1)) findings.duplicateH1Title.push({ route, title: decodeEntities(title), h1 });
+  const body = html.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i)?.[1] || html;
+  const textChars = decodeEntities(body.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()).length;
+  const ratio = html.length ? Math.round((textChars / html.length) * 10000) / 100 : 0;
+  if (ratio < 10) findings.lowTextHtmlRatio.push({ route, ratio, textChars, htmlBytes: html.length });
 
+  const targets = new Set();
   for (const match of html.matchAll(/<a\b[^>]*href=["']([^"']+)["']/gi)) {
     const href = match[1];
     if (/^(#|mailto:|tel:|javascript:)/i.test(href)) continue;
     const target = normalizeInternal(href);
+    if (target) targets.add(target);
     if (target && !routeFiles.has(target) && !fs.existsSync(path.join(outDir, target.slice(1)))) {
       findings.brokenInternalLinks.push({ route, href, target });
     }
   }
+  pageInfo.set(route, { canonical, targets });
   for (const match of html.matchAll(/<img\b[^>]*src=["']([^"']+)["']/gi)) {
     const src = match[1];
     if (/^(https?:|data:|blob:)/i.test(src)) continue;
@@ -110,8 +135,27 @@ if (fs.existsSync(sitemapPath)) {
   for (const [, loc] of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)) {
     const target = normalizeInternal(loc);
     if (!target || !routeFiles.has(target)) findings.sitemapBadUrls.push(loc);
+    else if (pageInfo.get(target)?.canonical && normalizeInternal(pageInfo.get(target).canonical) !== target) findings.sitemapCanonicalMismatches.push({ loc, canonical: pageInfo.get(target).canonical });
   }
 }
+
+const incoming = new Map([...routeFiles.keys()].map((route) => [route, 0]));
+for (const { targets } of pageInfo.values()) for (const target of targets) if (incoming.has(target)) incoming.set(target, incoming.get(target) + 1);
+findings.oneIncomingInternalLink = [...incoming].filter(([route, count]) => route !== '/' && route !== '/404' && count <= 1).map(([route, count]) => ({ route, count }));
+const depth = new Map([['/', 0]]);
+const queue = ['/'];
+while (queue.length) {
+  const route = queue.shift();
+  for (const target of pageInfo.get(route)?.targets || []) {
+    if (routeFiles.has(target) && !depth.has(target)) {
+      depth.set(target, depth.get(route) + 1);
+      queue.push(target);
+    }
+  }
+}
+findings.depthOver3 = [...routeFiles.keys()].filter((route) => route !== '/404' && (!depth.has(route) || depth.get(route) > 3)).map((route) => ({ route, depth: depth.get(route) ?? null }));
+const headersPath = path.resolve('public/_headers');
+if (!fs.existsSync(headersPath) || !/Strict-Transport-Security:\s*max-age=/i.test(fs.readFileSync(headersPath, 'utf8'))) findings.missingHstsRule.push('public/_headers');
 
 for (const key of Object.keys(findings)) {
   if (key === 'pages') continue;
@@ -130,5 +174,5 @@ const counts = Object.fromEntries(Object.entries(findings).map(([key, value]) =>
 fs.mkdirSync('reports', { recursive: true });
 fs.writeFileSync('reports/seo-audit.json', `${JSON.stringify({ counts, findings }, null, 2)}\n`);
 console.log(JSON.stringify(counts, null, 2));
-const blocking = ['emptyHtml', 'missingTitle', 'missingDescription', 'h1NotOne', 'missingCanonical', 'brokenInternalLinks', 'brokenInternalImages', 'invalidApplicationSchema', 'sitemapBadUrls'];
+const blocking = ['emptyHtml', 'missingTitle', 'missingDescription', 'h1NotOne', 'missingCanonical', 'canonicalMismatch', 'duplicateH1Title', 'brokenInternalLinks', 'brokenInternalImages', 'invalidApplicationSchema', 'sitemapBadUrls', 'sitemapCanonicalMismatches', 'depthOver3', 'missingHstsRule'];
 if (blocking.some((key) => findings[key].length)) process.exitCode = 1;

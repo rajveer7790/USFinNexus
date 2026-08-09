@@ -6,7 +6,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'FinCEN + IRS Compliance Checklist Every US LLC Needs in 2026',
+    title: "FinCEN + IRS Compliance Checklist Every US LLC Needs in 2026 | Key Facts",
     description: 'A combined federal compliance roadmap covering BOI, real estate reporting, and tax filings for every US LLC in 2026.',
     openGraph: {
         title: 'FinCEN + IRS Compliance Checklist Every US LLC Needs in 2026',

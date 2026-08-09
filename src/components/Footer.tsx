@@ -42,6 +42,13 @@ const STATE_LINKS = [
 ];
 
 const RESOURCE_LINKS = [
+    { href: '/canada', label: 'Canada Finance Hub' },
+    { href: '/blog/mortgage-broker-fees', label: 'Mortgage Broker Fees' },
+    { href: '/blog/pay-off-student-loans-vs-invest-decision', label: 'Student Loans vs. Investing' },
+    { href: '/data/home-affordability-by-state', label: 'Affordability by State' },
+    { href: '/data/home-affordability-by-city', label: 'Affordability by City' },
+    { href: '/privacy-focused-mortgage-calculator', label: 'Private Mortgage Calculator' },
+    { href: '/why-we-dont-collect-data', label: 'Zero-Data Promise' },
     { href: '/blog', label: 'Resources & Blog' },
     { href: '/guides', label: 'Financial Guides' },
     { href: '/articles', label: 'Articles' },

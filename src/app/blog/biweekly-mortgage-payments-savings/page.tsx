@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Biweekly Mortgage Payments: Do They Actually Save You Money?',
+    title: "Biweekly Mortgage Payments: Do They Actually Save You Money? | Guide",
     description: 'Switching to biweekly mortgage payments can shave years off your loan and save you thousands in interest—but do not fall for the third-party fee traps.',
     alternates: { canonical: 'https://usfinnexus.com/blog/biweekly-mortgage-payments-savings' },
     openGraph: {

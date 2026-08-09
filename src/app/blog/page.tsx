@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { CANONICALIZED_ALIASES } from '@/lib/blogs';
 
 export const metadata: Metadata = {
     title: 'Mortgage, Housing Market & Finance Blog',
@@ -34,7 +35,7 @@ function getBlogPosts() {
         let thinPosts = [];
 
         for (const dirent of entries) {
-            if (!dirent.isDirectory()) continue;
+            if (!dirent.isDirectory() || CANONICALIZED_ALIASES.has(dirent.name)) continue;
             const slug = dirent.name;
             
             const pagePath = path.join(blogDir, slug, 'page.tsx');

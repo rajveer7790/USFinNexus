@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'The Complete First-Time Homebuyer Mortgage Guide (2026)',
+    title: "The Complete First-Time Homebuyer Mortgage Guide (2026) | Guide",
     description: 'A step-by-step guide to getting approved for your first mortgage in 2026. Learn how underwriters analyze your finances, and avoid the critical mistakes that destroy approvals.',
     alternates: { canonical: 'https://usfinnexus.com/blog/first-time-homebuyer-mortgage-guide-2026' },
     openGraph: {
@@ -88,7 +88,7 @@ export default function BlogPost() {
 
                 <h3 className="text-xl font-bold mt-8 mb-3">1. Capacity (Your DTI)</h3>
                 <p>
-                    Capacity measures your ability to actually make the monthly payments. The underwriter calculates your Debt-to-Income (DTI) ratio. If your total monthly debts (including the new mortgage) exceed 43% of your gross monthly income, you will be denied.
+                    Capacity measures your ability to make the monthly payments. The underwriter calculates DTI using eligible income and counted obligations under the selected program. A ratio above 43% is not an automatic universal denial; automated underwriting, program rules and compensating factors affect the decision.
                 </p>
 
                 <h3 className="text-xl font-bold mt-8 mb-3">2. Capital (Your Cash)</h3>

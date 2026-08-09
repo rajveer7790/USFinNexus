@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Interest-Only Mortgages: The Wealthy Investor\'s Cheat Code',
+    title: 'Interest-Only Mortgage Risks, Payments & Reset Guide',
     description: 'Why do millionaires refuse to pay down their mortgage principal? Learn the dangerous math behind Interest-Only loans and the terrifying Payment Shock trap.',
     alternates: { canonical: 'https://usfinnexus.com/blog/interest-only-mortgage-pros-cons' },
     openGraph: {

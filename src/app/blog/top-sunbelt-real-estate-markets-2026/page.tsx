@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Top 5 Sunbelt Cities for Real Estate Investment in 2026',
+    title: "Top 5 Sunbelt Cities for Real Estate Investment in 2026 | Guide",
     description: 'Looking to invest in real estate this year? We analyze the top 5 emerging Sunbelt cities offering high rental yields, job growth, and affordability in 2026.',
     openGraph: {
         title: 'Top 5 Sunbelt Cities for Real Estate Investment in 2026',

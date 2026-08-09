@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Closing Costs Itemized Breakdown 2026: What You Actually Pay',
+    title: "Closing Costs Itemized Breakdown 2026: What You Actually Pay | Guide",
     description: 'Do not get blindsided at the closing table. See a line-by-line breakdown of 2026 mortgage closing costs, including exactly which fees you can negotiate with your lender.',
     alternates: { canonical: 'https://usfinnexus.com/blog/closing-costs-itemized-breakdown-2026' },
     openGraph: {

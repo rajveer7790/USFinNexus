@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Mortgage Forbearance vs. Deferment vs. Modification (2026 Guide)',
+    title: "Mortgage Forbearance vs. Deferment vs. Modification (2026 Guide) | Guide",
     description: 'If you lose your job and cannot pay your mortgage, do not panic. Learn the exact difference between Forbearance, Deferment, and Loan Modification to save your home from foreclosure.',
     alternates: { canonical: 'https://usfinnexus.com/blog/forbearance-deferment-loan-modification-2026' },
     openGraph: {

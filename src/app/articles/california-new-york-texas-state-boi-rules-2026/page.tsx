@@ -6,7 +6,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'California, New York & Texas: State BOI Rules Every LLC Must Know in 2026',
+    title: "California, New York & Texas: State BOI Rules Every LLC Must | Key Facts",
     description: 'Federal exemption does not protect you from aggressive state-level transparency laws. Learn the 2026 state BOI requirements for CA, NY, and TX.',
     openGraph: {
         title: 'California, New York & Texas: State BOI Rules Every LLC Must Know in 2026',

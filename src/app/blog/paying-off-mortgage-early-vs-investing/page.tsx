@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Paying Off Your Mortgage Early vs. Investing: The 2026 Math',
+    title: "Paying Off Your Mortgage Early vs. Investing: The 2026 Math | Guide",
     description: 'Should you send an extra $500 a month to the bank to pay off your house early? Learn the exact mathematical formula to decide between debt payoff and stock market investing.',
 
     alternates: { canonical: 'https://usfinnexus.com/blog/pay-off-mortgage-early-strategy' },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         type: 'article',
         title: 'The Math of Paying Off Your Mortgage Early',
         description: 'Before you send the bank a massive check to pay off your house, you must understand the terrifying opportunity cost of trapping your cash inside home equity.',
-        url: 'https://usfinnexus.com/blog/paying-off-mortgage-early-vs-investing',
+        url: 'https://usfinnexus.com/blog/pay-off-mortgage-early-strategy',
         siteName: 'USFinNexus',
         images: [{ url: 'https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: 'Investing vs Mortgage' }]
     }
@@ -33,14 +33,14 @@ export default function BlogPost() {
         <ArticleSchema
             title="Paying Off Your Mortgage Early vs. Investing: The 2026 Math"
             description="Should you send an extra $500 a month to the bank to pay off your house early? Learn the exact mathematical formula to decide between debt payoff and investing."
-            url="https://usfinnexus.com/blog/paying-off-mortgage-early-vs-investing"
+            url="https://usfinnexus.com/blog/pay-off-mortgage-early-strategy"
             datePublished="2026-05-26"
             dateModified="2026-05-26"
             authorName="USFinNexus Editorial Team"
             keywords={['Investing', 'Mortgage', 'Personal Finance', '2026']}
         />
         <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
-            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Paying Off Mortgage vs Investing', item: '/blog/paying-off-mortgage-early-vs-investing' }]} />
+            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Paying Off Mortgage vs Investing', item: '/blog/pay-off-mortgage-early-strategy' }]} />
             <article className="prose prose-slate max-w-none">
 
             <header className="mb-10">

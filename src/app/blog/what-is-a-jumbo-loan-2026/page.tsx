@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'What is a Jumbo Loan in 2026? Rules, Limits, and Requirements',
+    title: "What is a Jumbo Loan in 2026? Rules, Limits, and Requirements | Guide",
     description: 'If you want to buy a $1.5 million luxury home, standard government mortgages will not help you. Learn the strict 2026 rules for securing a Jumbo Loan.',
 
     alternates: { canonical: 'https://usfinnexus.com/blog/jumbo-mortgages-over-loan-limit' },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         type: 'article',
         title: 'The Jumbo Loan Guide: Financing a $1.5M House',
         description: 'You make $300,000 a year and want to buy a luxury property. But because the house costs more than the government limit, the bank will force you to use a Jumbo Loan. Here is what to expect.',
-        url: 'https://usfinnexus.com/blog/what-is-a-jumbo-loan-2026',
+        url: 'https://usfinnexus.com/blog/jumbo-mortgages-over-loan-limit',
         siteName: 'USFinNexus',
         images: [{ url: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: 'Jumbo Mortgage' }]
     }
@@ -33,14 +33,14 @@ export default function BlogPost() {
         <ArticleSchema
             title="What is a Jumbo Loan in 2026? Rules, Limits, and Requirements"
             description="If you want to buy a $1.5 million luxury home, standard government mortgages will not help you. Learn the strict 2026 rules for securing a Jumbo Loan."
-            url="https://usfinnexus.com/blog/what-is-a-jumbo-loan-2026"
+            url="https://usfinnexus.com/blog/jumbo-mortgages-over-loan-limit"
             datePublished="2026-05-26"
             dateModified="2026-05-26"
             authorName="USFinNexus Editorial Team"
             keywords={['Mortgage', 'Luxury Real Estate', 'Financing', '2026']}
         />
         <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
-            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Jumbo Loans', item: '/blog/what-is-a-jumbo-loan-2026' }]} />
+            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Jumbo Loans', item: '/blog/jumbo-mortgages-over-loan-limit' }]} />
             <article className="prose prose-slate max-w-none">
 
             <header className="mb-10">

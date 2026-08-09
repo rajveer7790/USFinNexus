@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'High-Yield Savings vs. Index Funds: Where to Park Your Cash in 2026',
+    title: "High-Yield Savings vs. Index Funds: Where to Park Your Cash in 2026 | Guide",
     description: 'Interest rates are shifting in 2026. Should you keep your money in a safe 5% HYSA or invest in the S&P 500? We break down the math for modern investors.',
     openGraph: {
         title: 'High-Yield Savings vs. Index Funds in 2026',

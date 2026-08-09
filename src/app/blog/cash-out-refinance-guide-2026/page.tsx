@@ -201,7 +201,7 @@ export default function BlogPost() {
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">Impact on Your Debt-to-Income (DTI) Ratio</h3>
                     <p className="text-slate-700 mb-4">
-                        While paying off high-interest credit cards with a cash-out refinance lowers your monthly cash outflow, it alters your Debt-to-Income (DTI) ratio. Lenders will still heavily scrutinize your income. If your DTI exceeds 43% with the new, larger mortgage payment, you will be denied the loan, even if you have hundreds of thousands of dollars in equity.
+                        Paying off high-interest cards with a cash-out refinance can lower required monthly payments, but it converts unsecured debt into debt secured by the home. The lender will recalculate DTI and ability to repay under the applicable program; no single percentage guarantees approval or denial, even when substantial equity exists.
                     </p>
                 </div>
 

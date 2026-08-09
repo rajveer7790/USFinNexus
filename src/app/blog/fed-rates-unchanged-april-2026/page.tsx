@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Fed Holds Rates Unchanged in April 2026: What It Means For You',
+    title: "Fed Holds Rates Unchanged in April 2026: What It Means For You | Guide",
     description: 'The Federal Reserve shocked the market by holding interest rates flat in April 2026. Here is exactly what this means for your mortgage, savings account, and portfolio.',
     alternates: { canonical: 'https://usfinnexus.com/blog/fed-rates-unchanged-april-2026' },
     openGraph: {

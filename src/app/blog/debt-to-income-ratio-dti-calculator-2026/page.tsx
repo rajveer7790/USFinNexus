@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Debt-to-Income Ratio (DTI) Calculator & Mortgage Guide 2026',
+    title: "Debt-to-Income Ratio (DTI) Calculator & Mortgage Guide 2026 | Guide",
     description: 'A 800 credit score will not save you if your DTI is too high. Learn how banks calculate your Debt-to-Income ratio in 2026 and how to lower it before applying for a mortgage.',
     alternates: { canonical: 'https://usfinnexus.com/blog/debt-to-income-ratio-dti-calculator-2026' },
     openGraph: {
@@ -26,7 +26,7 @@ export default function BlogPost() {
         <>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     { '@type': 'Question', name: 'What is a Debt-to-Income (DTI) ratio?', acceptedAnswer: { '@type': 'Answer', text: 'Your Debt-to-Income (DTI) ratio is the percentage of your gross monthly income (before taxes) that goes toward paying your monthly debt obligations, including your future mortgage payment. It is the primary metric banks use to determine if you can actually afford a home.' } },
-    { '@type': 'Question', name: 'What is the maximum DTI allowed for a mortgage in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'For Conventional loans, the maximum DTI is typically 43%, though strong borrowers can push it to 50% with automated underwriting approval. For FHA loans, the absolute ceiling is usually 50% to 57%, depending on your credit score and down payment.' } },
+    { '@type': 'Question', name: 'What is the maximum DTI allowed for a mortgage in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'There is no universal maximum that applies to every mortgage. The General Qualified Mortgage definition uses price-based thresholds rather than the former fixed 43% DTI cap. Program rules, automated underwriting, documented income, credit, assets and compensating factors can change the result.' } },
     { '@type': 'Question', name: 'How can I lower my DTI quickly before buying a house?', acceptedAnswer: { '@type': 'Answer', text: 'The fastest way to lower your DTI is to completely pay off an installment loan that has a high monthly payment but a low total balance (like a car loan with $4,000 left). Wiping out a $400/month car payment instantly frees up $400 in your DTI calculation, drastically increasing your mortgage purchasing power.' } },
 ] }) }} />
         <ArticleSchema
@@ -112,7 +112,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Are the DTI Limits for a Mortgage in 2026?</h2>
                 <p>
-                    The Consumer Financial Protection Bureau (CFPB) generally considers a DTI of 43% to be the highest threshold for a "Qualified Mortgage," meaning a loan that is relatively safe from default. However, specific loan programs have different hard limits:
+                    DTI remains an important underwriting input, but the CFPB&apos;s current General Qualified Mortgage definition does not impose the former universal 43% cap. Program rules and automated underwriting can produce different acceptable ranges:
                 </p>
                 
                 <ul className="list-disc pl-6 space-y-4 mb-8">
@@ -168,7 +168,7 @@ export default function BlogPost() {
                     <Calculator className="w-12 h-12 mx-auto text-blue-300 mb-4" />
                     <h3 className="text-2xl font-bold mb-3 text-white">Calculate Your DTI Now</h3>
                     <p className="text-blue-100 mb-8 max-w-xl mx-auto">
-                        Do not apply for a mortgage blindly. Use our DTI Calculator to input your gross income, your current debts, and your target home price to instantly see if you pass the 43% threshold.
+                        Use our DTI Calculator to compare recurring debts with gross income, then confirm the lender&apos;s program-specific calculation. The result is a planning estimate, not a pass/fail approval threshold.
                     </p>
                     <Link href="/calculators/dti" className="inline-block bg-white text-navy-900 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
                         Run Your DTI Math

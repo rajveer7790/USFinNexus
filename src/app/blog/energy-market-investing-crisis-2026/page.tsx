@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Energy Market Investing: Navigating the 2026 Grid Crisis',
+    title: "Energy Market Investing: Navigating the 2026 Grid Crisis | Guide",
     description: 'Artificial Intelligence is consuming massive amounts of electricity, sparking a historic nuclear renaissance. Learn how to invest in the 2026 energy sector.',
 
     alternates: { canonical: 'https://usfinnexus.com/blog/energy-market-investing-crisis-2026' },

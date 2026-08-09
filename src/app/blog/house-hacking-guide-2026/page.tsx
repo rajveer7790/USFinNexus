@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'House Hacking in 2026: The Ultimate Guide to Living for Free',
+    title: "House Hacking in 2026: The Ultimate Guide to Living for Free | Guide",
     description: 'Learn how to offset your mortgage or live for free in 2026 using house hacking strategies like duplexes, ADUs, and roommate renting.',
     openGraph: {
         title: 'House Hacking in 2026: Live for Free While Building Wealth',

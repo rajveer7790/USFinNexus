@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'No PMI Mortgages: How to Buy a House Without 20% Down',
+    title: "No PMI Mortgages: How to Buy a House Without 20% Down | Guide",
     description: 'Avoid Private Mortgage Insurance without draining your savings. Explore Lender-Paid PMI, Piggyback loans, VA loans, and specialized physician programs for 2026.',
     openGraph: {
         title: 'No PMI Mortgages: How to Buy a House Without 20% Down',

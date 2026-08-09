@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'The 2026 Crypto Tax Guide: What the IRS New Rules Mean for You',
+    title: "The 2026 Crypto Tax Guide: What the IRS New Rules Mean for You | Guide",
     description: 'The Wild West is officially over. Learn how the new IRS Form 1099-DA changes crypto taxes in 2026, and how staking, mining, and airdrops are taxed.',
     alternates: { canonical: 'https://usfinnexus.com/blog/crypto-tax-guide-2026' },
     openGraph: {

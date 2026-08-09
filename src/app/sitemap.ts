@@ -46,10 +46,32 @@ const CALC_PRIORITY: Record<string, number> = {
 };
 
 function getBlogSlugs(): string[] {
+    // These URLs intentionally canonicalize to stronger pages. Keeping aliases out
+    // of the sitemap avoids conflicting indexation signals.
+    const canonicalizedAliases = new Set([
+        'first-time-home-buyer-programs-2026',
+        'free-mortgage-calculator-2026-pdf',
+        'how-much-house-can-afford-2026',
+        'interest-only-mortgages-explained',
+        'mortgage-affordability-28-36-rule',
+        'mortgage-amortization-schedule',
+        'mortgage-closing-costs-2026-guide',
+        'mortgage-help-guide-2026',
+        'mortgage-points-discount-points-calculator',
+        'negotiate-closing-costs-strategies',
+        'paying-off-mortgage-early-vs-investing',
+        'pmi-explained-avoid-cancel',
+        'remove-pmi-mortgage-hpa-rules-2026',
+        'reverse-mortgage-hecm-explained',
+        'va-loans-military-benefits',
+        'what-is-a-good-debt-to-income-ratio',
+        'what-is-a-jumbo-loan-2026',
+        'when-to-refinance-1-percent-rule',
+    ]);
     try {
         const blogDir = path.join(process.cwd(), 'src', 'app', 'blog');
         return fs.readdirSync(blogDir, { withFileTypes: true })
-            .filter((entry) => entry.isDirectory() && fs.existsSync(path.join(blogDir, entry.name, 'page.tsx')))
+            .filter((entry) => entry.isDirectory() && !canonicalizedAliases.has(entry.name) && fs.existsSync(path.join(blogDir, entry.name, 'page.tsx')))
             .map((entry) => entry.name);
     } catch (error) {
         console.error('Error reading blog directory for sitemap:', error);

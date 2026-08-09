@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Trade-In Value and Auto Loans: How Dealerships Hide Negative Equity',
+    title: "Trade-In Value and Auto Loans: How Dealerships Hide Negative Equity | Guide",
     description: 'Never negotiate your trade-in at the same time as your new car purchase. Learn how dealerships use the "Trade-In Shell Game" to trap buyers in negative equity auto loans.',
     alternates: { canonical: 'https://usfinnexus.com/blog/car-trade-in-value-auto-loan' },
     openGraph: {

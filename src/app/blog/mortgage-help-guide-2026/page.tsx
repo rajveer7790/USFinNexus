@@ -8,11 +8,11 @@ import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
     title: "Mortgage Help Guide 2026: What To Do If You Can\'t Pay",
-    description: 'A comprehensive, factual guide on what to do if you are struggling to make your mortgage payments in 2026. Covers forbearance, loan modifications, hardship letters, and free HUD counseling.',
+    description: 'A comprehensive, factual guide on what to do if you are struggling to make your mortgage payments in 2026. Covers forbearance, loan modifications, hardship letters, and free HUD counseling.',
     openGraph: {
         title: "Mortgage Help Guide 2026: What To Do If You Can\'t Pay",
         description: 'Actionable steps if you are struggling to make your mortgage payments in 2026. Forbearance, loan modification, HUD counselors, and foreclosure prevention.',
-        url: 'https://usfinnexus.com/blog/mortgage-help-guide-2026',
+        url: 'https://usfinnexus.com/blog/first-time-homebuyer-mortgage-guide-2026',
         type: 'article',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Mortgage Help Guide 2026 — USFinNexus' }],
     },
@@ -70,14 +70,14 @@ export default function MortgageHelpBlog() {
             <ArticleSchema
                 title="Mortgage Help Guide 2026: What To Do If You Can't Pay"
                 description="Actionable steps if you are struggling to make your mortgage payments."
-                url="https://usfinnexus.com/blog/mortgage-help-guide-2026"
+                url="https://usfinnexus.com/blog/first-time-homebuyer-mortgage-guide-2026"
                 datePublished="2026-05-10"
                 dateModified="2026-05-10"
                 authorName="USFinNexus Editorial Team"
                 keywords={['mortgage help 2026', 'cant pay mortgage 2026', 'mortgage forbearance', 'loan modification 2026', 'HUD housing counselor', 'how to avoid foreclosure']}
             />
             <div className="max-w-3xl mx-auto px-4 py-7 sm:py-9">
-                <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Guides', item: '/blog/mortgage-help-guide-2026' }]} />
+                <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Guides', item: '/blog/first-time-homebuyer-mortgage-guide-2026' }]} />
                 <article className="prose prose-slate max-w-none">
                     <header className="mb-10">
                         <span className="inline-block px-3 py-1 rounded text-xs font-bold mb-4" style={{ background: 'rgba(239, 68, 68, 0.1)', color: '#EF4444' }}>Emergency Guide</span>
@@ -261,9 +261,9 @@ export default function MortgageHelpBlog() {
                         <p>Remember: the earlier you act, the more options you have. A phone call today costs nothing. Waiting another month costs you leverage, options, and potentially your credit score.</p>
 
                     </div>
-                    
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-white p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">Advanced 2026 Wealth-Building Strategies & Financial FAQ</h2>
                     <p className="text-lg text-slate-700 mb-6">
@@ -272,7 +272,7 @@ export default function MortgageHelpBlog() {
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">The Power of the "Wealth Multiplier" Effect</h3>
                     <p className="text-slate-700 mb-4">
-                        Financial success in 2026 is rarely achieved through a single, isolated decision. Instead, it is the result of the "Wealth Multiplier" effect—the mathematical compounding of several smart decisions executed simultaneously. For example, a homeowner who successfully negotiates their closing costs saves upfront cash. If they take that exact cash savings and immediately deploy it into a tax-advantaged account like a Roth IRA or HSA, they are shielding future growth from the IRS. 
+                        Financial success in 2026 is rarely achieved through a single, isolated decision. Instead, it is the result of the "Wealth Multiplier" effect—the mathematical compounding of several smart decisions executed simultaneously. For example, a homeowner who successfully negotiates their closing costs saves upfront cash. If they take that exact cash savings and immediately deploy it into a tax-advantaged account like a Roth IRA or HSA, they are shielding future growth from the IRS.
                     </p>
                     <p className="text-slate-700 mb-4">
                         Over a 30-year time horizon, that initial $5,000 savings does not just remain $5,000; compounding at an average annualized rate of 7%, it transforms into over $38,000 of tax-free purchasing power. This is the exact playbook utilized by high-net-worth individuals: ruthlessly optimizing the margins on debt (mortgages, auto loans) to free up liquidity for equity investments.
@@ -280,7 +280,7 @@ export default function MortgageHelpBlog() {
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">Navigating the "Good Debt vs. Bad Debt" Paradigm</h3>
                     <p className="text-slate-700 mb-4">
-                        The traditional advice of "all debt is bad" is fundamentally obsolete in modern finance. In 2026, understanding the bifurcation between productive debt and destructive debt is the ultimate litmus test for financial literacy. 
+                        The traditional advice of "all debt is bad" is fundamentally obsolete in modern finance. In 2026, understanding the bifurcation between productive debt and destructive debt is the ultimate litmus test for financial literacy.
                     </p>
                     <p className="text-slate-700 mb-4">
                         <strong>Destructive Debt (Bad Debt):</strong> Any borrowing utilized to purchase depreciating consumer goods. Credit card balances carrying 20%+ APRs, high-interest personal loans used for vacations, and 84-month auto loans on luxury vehicles represent wealth destruction. Because the interest rate heavily outpaces inflation and market returns, this debt traps the consumer in a negative compounding cycle.

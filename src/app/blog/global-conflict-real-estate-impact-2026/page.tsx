@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'How Global Conflicts Are Impacting US Real Estate in 2026',
+    title: "How Global Conflicts Are Impacting US Real Estate in 2026 | Guide",
     description: "Think a war across the globe doesn\'t affect your local housing market? Think again. Here is how supply chains and foreign capital alter US real estate.",
     openGraph: {
         title: 'How Global Conflicts Impact US Real Estate in 2026',

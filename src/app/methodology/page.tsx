@@ -4,7 +4,7 @@ import { ExternalLink, Shield, Calculator, FileText } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-    title: 'Financial Calculator Methodology & Data Sources',
+    title: 'Calculator Methodology, Formulas & Data Sources',
     description: 'See the formulas, assumptions, limitations and primary sources behind USFinNexus mortgage, DTI, affordability, refinance and tax calculators.',
     alternates: { canonical: '/methodology' },
     openGraph: {
@@ -36,7 +36,7 @@ const SOURCES = [
     },
     {
         org: 'U.S. Department of Housing and Urban Development (HUD)',
-        url: 'https://www.hud.gov/hud-partners/single-family-mortgage-limits',
+        url: 'https://www.hud.gov/hud-partners/single-family-lender',
         description: 'FHA mortgage limits and FHA program information. For 2026, the one-unit national floor is $541,287 and the standard high-cost ceiling is $1,249,125, subject to location-specific limits.',
         icon: '🏠',
     },

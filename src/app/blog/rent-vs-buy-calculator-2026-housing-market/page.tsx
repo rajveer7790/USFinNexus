@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Rent vs Buy in 2026: Why Renting is NOT Throwing Money Away',
+    title: "Rent vs Buy in 2026: Why Renting is NOT Throwing Money Away | Guide",
     description: 'In 2026, renting is mathematically cheaper than buying a house in 80% of US cities. Learn the unrecoverable costs of homeownership and the 5-Year Rule.',
     alternates: { canonical: 'https://usfinnexus.com/blog/rent-vs-buy-calculator-2026-housing-market' },
     openGraph: {

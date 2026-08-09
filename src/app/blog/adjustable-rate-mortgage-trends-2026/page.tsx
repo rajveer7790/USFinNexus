@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Adjustable-Rate Mortgage (ARM) Trends 2026: Is It Worth the Risk?',
+    title: "Adjustable-Rate Mortgage (ARM) Trends 2026: Is It Worth the Risk? | Guide",
     description: 'Should you use a 5/1 or 7/1 ARM to secure a lower initial interest rate in 2026? We break down the math, rate caps, and the Federal Reserve risks you must consider.',
     alternates: { canonical: 'https://usfinnexus.com/blog/adjustable-rate-mortgage-trends-2026' },
     openGraph: {

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "What's Your Real Mortgage Affordability? (Use the 28/36 Rule)",
         description: 'Stop guessing your budget. Learn how to calculate your exact housing affordability using the gold-standard 28/36 rule that lenders use to approve your mortgage.',
-        url: 'https://usfinnexus.com/blog/mortgage-affordability-28-36-rule',
+        url: 'https://usfinnexus.com/blog/28-36-rule-explained-lender-standards',
         type: 'article',
         siteName: 'USFinNexus',
         images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Mortgage Affordability 28/36 Rule' }]
@@ -28,7 +28,7 @@ export default function PostComponent() {
             <ArticleSchema
                 title="What's Your Real Mortgage Affordability? (Use the 28/36 Rule)"
                 description="Learn how the 28/36 rule works and what it means for your mortgage affordability."
-                url="https://usfinnexus.com/blog/mortgage-affordability-28-36-rule"
+                url="https://usfinnexus.com/blog/28-36-rule-explained-lender-standards"
                 datePublished="2026-05-26"
                 dateModified="2026-05-26"
                 authorName="USFinNexus Editorial Team"
@@ -71,7 +71,7 @@ export default function PostComponent() {
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[
                     { name: 'Blog', item: '/blog' },
-                    { name: 'Affordability & The 28/36 Rule', item: '/blog/mortgage-affordability-28-36-rule' }
+                    { name: 'Affordability & The 28/36 Rule', item: '/blog/28-36-rule-explained-lender-standards' }
                 ]} />
 
                 <article className="prose prose-slate prose-lg max-w-none">

@@ -15,7 +15,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Mortgage Calculator',
+    title: "Mortgage Calculator | Free Tool",
     description: 'Estimate your monthly mortgage payment with principal, interest, property taxes, homeowners insurance, PMI and HOA fees. View amortization and extra-payment scenarios.',
     alternates: { canonical: '/calculators/mortgage' },
     openGraph: {

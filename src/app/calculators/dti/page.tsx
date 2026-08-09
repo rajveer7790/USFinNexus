@@ -15,7 +15,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Debt-to-Income Ratio Calculator',
+    title: "Debt-to-Income Ratio Calculator | Free Tool",
     description: 'Calculate your debt-to-income ratio from recurring monthly debt and gross monthly income. Compare planning benchmarks without treating 43% as a universal mortgage approval limit.',
     alternates: { canonical: '/calculators/dti' },
     openGraph: {

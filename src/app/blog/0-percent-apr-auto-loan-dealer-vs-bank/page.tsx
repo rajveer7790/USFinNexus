@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: '0% APR Auto Loans in 2026: The Hidden Cost of Dealer Financing',
+    title: "0% APR Auto Loans in 2026: The Hidden Cost of Dealer Financing | Guide",
     description: 'Is a 0% APR auto loan actually a good deal? Learn the hidden math behind captive dealer financing vs. traditional bank auto loans in 2026, and how taking the cash rebate often saves you more money.',
     alternates: { canonical: 'https://usfinnexus.com/blog/0-percent-apr-auto-loan-dealer-vs-bank' },
     openGraph: {

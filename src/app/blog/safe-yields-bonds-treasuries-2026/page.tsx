@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Safe Yields: US Treasuries vs. Emerging Market Bonds in 2026',
+    title: "Safe Yields: US Treasuries vs. Emerging Market Bonds in 2026 | Guide",
     description: 'In a world of global instability, where should you look for safe yield? We compare the safety of US Treasuries against the high returns of Emerging Markets.',
     openGraph: {
         title: 'Safe Yields: US Treasuries vs. Emerging Market Bonds',
