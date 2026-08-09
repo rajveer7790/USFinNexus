@@ -166,7 +166,7 @@ export default function StudentLoanClient() {
 
     return (
         <CalculatorLayout
-            title="Student Loan Payoff Calculator"
+            title="Student Loan Repayment Calculator"
             description="Find out exactly how much time and money you can save by adding a little extra to your monthly student loan payments."
             inputs={InputSection}
             results={ResultsSection}

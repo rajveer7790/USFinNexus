@@ -40,7 +40,7 @@ export default function InterestOnlyClient() {
                     <span className="text-xs font-black uppercase tracking-[0.3em] text-amber-500">Interest-Only Loan</span>
                 </div>
                 <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight bg-gradient-to-r from-navy-900 via-amber-500 to-navy-900 bg-clip-text text-transparent">
-                    Interest-Only Calculator
+                    Interest-Only Loan Calculator
                 </h1>
                 <p className="text-gray-500 max-w-2xl font-medium text-lg">
                     Calculate your payments during the interest-only period and see how much your payment will jump when the loan fully amortizes.

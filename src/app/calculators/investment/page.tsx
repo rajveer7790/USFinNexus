@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
 import InvestmentSeoContent from './InvestmentSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
+import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
 const InvestmentClient = nextDynamic(() => import('./InvestmentClient'), {
     loading: () => <CalculatorSkeleton />,
@@ -39,11 +40,11 @@ const INVESTMENT_FAQS = [
     },
     {
         question: 'What is a realistic interest rate to use?',
-        answer: 'If you are investing in a broad US Stock Market index fund (like the S&P 500) over a 20+ year horizon, financial planners often use an inflation-adjusted return rate of 7% to 8%. If you are saving money in a High-Yield Savings Account or CDs, expect 4% to 5%.',
+        answer: 'There is no universally realistic rate. Use several scenarios based on the investment type, fees, taxes, inflation and time horizon. Historical market returns and today’s savings yields are not guaranteed future returns.',
     },
     {
         question: 'Is it better to invest a lump sum or monthly?',
-        answer: 'Mathematically, investing a lump sum immediately (Time in the Market) usually beats spreading it out. However, most people do not have massive lump sums laying around. Consistently investing a smaller amount every single month out of your paycheck (Dollar Cost Averaging) is the most reliable way to build massive wealth over 30 years.',
+        answer: 'A lump sum has more time exposed to market returns, while phased investing can reduce timing anxiety and fit cash flow. The appropriate choice depends on liquidity needs, risk tolerance, taxes and whether the money is already available.',
     },
 ];
 
@@ -58,6 +59,7 @@ export default function InvestmentPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Compound Interest', item: '/calculators/investment' }]} />
             <InvestmentClient />
             <InvestmentSeoContent />
+            <SemrushIntentSection slug="investment" />
             <CalculatorFAQ faqs={INVESTMENT_FAQS} title="Compound Interest — Frequently Asked Questions" />
         </main>
     );

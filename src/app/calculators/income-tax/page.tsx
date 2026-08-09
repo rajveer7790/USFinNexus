@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
 import IncomeTaxSeoContent from './IncomeTaxSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
+import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
 const IncomeTaxClient = nextDynamic(() => import('./IncomeTaxClient'), {
     loading: () => <CalculatorSkeleton />,
@@ -66,6 +67,7 @@ export default function IncomeTaxPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Income Tax Calculator', item: '/calculators/income-tax' }]} />
             <IncomeTaxClient />
             <IncomeTaxSeoContent />
+            <SemrushIntentSection slug="income-tax" />
             <CalculatorFAQ faqs={INCOME_TAX_FAQS} title="2026 Federal Income Tax Calculator FAQs" />
         </main>
     );

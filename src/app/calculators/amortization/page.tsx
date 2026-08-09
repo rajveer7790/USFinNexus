@@ -14,7 +14,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Mortgage Amortization Calculator',
+    title: 'Mortgage Amortization Schedule Calculator',
     description: 'Generate a month-by-month mortgage amortization schedule showing principal, interest, remaining balance and the effect of extra principal payments.',
     alternates: { canonical: '/calculators/amortization' },
     openGraph: {
@@ -42,7 +42,7 @@ export default function AmortizationPage() {
                 dateModified="2026-08-09"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Mortgage Amortization Calculator', item: '/calculators/amortization' }]} />
-            <MortgageCalculator initialTab="amortization" />
+            <MortgageCalculator initialTab="amortization" heading="Mortgage Amortization Calculator" intro="Calculate a mortgage payment and view the complete principal, interest and remaining-balance schedule." />
             <SemrushIntentSection slug="amortization" />
             <AmortizationSeoContent />
         </main>

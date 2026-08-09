@@ -42,16 +42,16 @@ export default function AutoLoanSeoContent() {
                 </ul>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    The 20/4/10 Rule for Car Buying
+                    The 20/4/10 Guideline for Car Buying
                 </h3>
                 <p>
-                    If you want to buy a car without destroying your ability to build wealth, you must follow the strict <strong>20/4/10 Rule</strong>:
+                    The <strong>20/4/10 guideline</strong> is one optional budgeting framework, not a lending rule. Adapt it to income stability, insurance, other debt and emergency savings:
                 </p>
                 <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 my-6">
                     <ul className="mb-0 space-y-2">
-                        <li><strong>20% Down:</strong> Always put down at least 20%. Cars are depreciating assets. They lose 20% of their value in the first year. If you put 0% down, you are instantly mathematically trapped.</li>
-                        <li><strong>4-Year Term (48 Months):</strong> Do not stretch the loan to 72 or 84 months just to afford the payment. If you cannot afford the car on a 48-month loan, you cannot afford the car.</li>
-                        <li><strong>10% of Gross Income:</strong> Your total monthly car expenses (the loan payment + insurance + gas) should never exceed 10% of your gross monthly income.</li>
+                        <li><strong>20% down:</strong> A larger down payment can reduce the amount financed and negative-equity risk, but keep adequate emergency cash.</li>
+                        <li><strong>4-year term:</strong> A shorter term can reduce interest, while a longer term lowers the required payment but usually raises total cost.</li>
+                        <li><strong>10% transportation target:</strong> Treat this as a starting point and include payment, insurance, fuel, charging, maintenance, registration and parking.</li>
                     </ul>
                 </div>
                 <p>
@@ -65,22 +65,22 @@ export default function AutoLoanSeoContent() {
                     When you sit down at the salesman&apos;s desk, they will ask you one question: <em>&quot;What monthly payment are you looking for?&quot;</em>
                 </p>
                 <p>
-                    <strong>Never answer this question.</strong> 
+                    Keep the conversation anchored to the out-the-door price, amount financed, APR, term and total of payments—not only the monthly payment.
                 </p>
                 <p>
-                    If you say you want a $500 monthly payment, the dealer will take a $45,000 car and simply stretch the loan out to 84 months (7 years) at a massive 9% interest rate to hit that exact $500 number. You will end up paying $15,000 in pure interest. Always negotiate the <strong>Out-the-Door (OTD) Price</strong> of the vehicle, and use your smartphone with our calculator open to independently verify their math.
+                    The same payment can be produced by different prices, down payments, APRs and terms. Request the <strong>out-the-door price</strong> and written financing disclosures, then enter those exact figures in the calculator.
                 </p>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
                     How to Secure the Best Auto Loan Rate in 2026
                 </h3>
                 <p>
-                    In a high-interest-rate environment, the dealership is not your friend. Here is the blueprint for securing cheap car money:
+                    Financing offers change with the borrower, vehicle, lender and market. Use this comparison process:
                 </p>
                 <ol>
-                    <li><strong>Pre-Approval is Mandatory:</strong> Walk into a local credit union or an online bank a week before you visit the dealership. Apply for a loan and get a physical pre-approval letter locking in a 5.5% or 6.5% rate.</li>
-                    <li><strong>Force the Dealer to Beat It:</strong> When you negotiate the car, pull out your pre-approval letter. Tell the dealer: &quot;I already have financing at 6.0%. If you can beat this rate, I will use your bank. If not, I am using mine.&quot;</li>
-                    <li><strong>Check the Manufacturer Incentives:</strong> Often, car manufacturers (like Toyota or Ford) will offer subsidized &quot;promotional rates&quot; like 0.9% or 1.9% for 48 months to move inventory. These are almost always the best deal, but they require top-tier credit (740+).</li>
+                    <li><strong>Request preapproval:</strong> Compare a bank or credit-union offer before visiting the dealer, including the APR, term, fees and expiration date.</li>
+                    <li><strong>Compare dealer financing:</strong> Ask for the same amount financed and term so the APR and total of payments are comparable.</li>
+                    <li><strong>Evaluate incentives:</strong> Promotional financing may replace a cash rebate. Calculate both options and review eligibility conditions.</li>
                 </ol>
 
                 <div className="mt-12 p-6 bg-gradient-to-r from-navy-900 to-blue-900 rounded-2xl text-white text-center shadow-lg" style={{ background: 'linear-gradient(135deg, #0A192F, #1a4d9a)' }}>

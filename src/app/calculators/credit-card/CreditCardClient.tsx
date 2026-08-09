@@ -140,7 +140,7 @@ export default function CreditCardClient() {
 
     return (
         <CalculatorLayout
-            title="Credit Card Payoff Calculator"
+            title="Credit Card Debt Payoff Calculator"
             description="Find out how long it will take to pay off your credit card balance, and see how much interest you can save by increasing your monthly payment."
             inputs={InputSection}
             results={ResultsSection}

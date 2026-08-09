@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import CaliforniaSeoContent from './CaliforniaSeoContent';
+import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
 const MortgageCalculator = nextDynamic(() => import('../mortgage/MortgageCalculatorClient'), {
     loading: () => <CalculatorSkeleton />,
@@ -42,6 +43,7 @@ export default function CaliforniaPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'California Mortgage', item: '/calculators/california' }]} />
                 <MortgageCalculator heading="California Mortgage Calculator" intro="Model a California mortgage using your own tax and insurance assumptions." />
             <CaliforniaSeoContent />
+            <SemrushIntentSection slug="california" />
         </main>
     );
 }

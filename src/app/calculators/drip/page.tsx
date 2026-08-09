@@ -9,6 +9,7 @@ const DripClient = nextDynamic(() => import('./DripClient'), {
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
+import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -43,7 +44,7 @@ const DRIP_FAQS = [
     },
     {
         question: 'Are DRIP programs really free?',
-        answer: 'Yes, today almost all major US brokerages (Fidelity, Schwab, Vanguard, Robinhood) offer automatic dividend reinvestment for free with absolutely zero commission fees.',
+        answer: 'Many brokerages offer automatic dividend reinvestment, sometimes without a separate commission, but eligibility, fractional-share treatment and fees vary by security and account. Confirm the current program terms with your brokerage.',
     },
     {
         question: 'Do I have to pay taxes if I reinvest my dividends?',
@@ -61,10 +62,11 @@ export default function DripPage() {
                 dateModified="2026-03-01"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'DRIP Forecaster', item: '/calculators/drip' }]} />
-            <h1 className="sr-only">Dividend Reinvestment Calculator</h1>
+            <h1 className="sr-only">DRIP Calculator: Dividend Reinvestment Growth</h1>
             <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026</p>
             <DripClient />
             <DripSeoContent />
+            <SemrushIntentSection slug="drip" />
             <CalculatorFAQ faqs={DRIP_FAQS} title="Dividend Investing — Frequently Asked Questions" />
         </main>
     );

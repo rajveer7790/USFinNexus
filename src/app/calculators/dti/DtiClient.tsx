@@ -40,7 +40,7 @@ export default function DtiClient() {
                         <div className="p-2 rounded-xl bg-[#0da6f2]/10 border border-[#0da6f2]/20"><Percent className="text-[#0da6f2]" size={22} /></div>
                         <span className="text-xs font-black uppercase tracking-[0.3em] text-[#0da6f2]">Debt Analysis</span>
                     </div>
-                    <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight bg-gradient-to-r from-navy-900 via-[#0da6f2] to-navy-900 bg-clip-text text-transparent">Debt-to-Income Ratio Calculator</h1>
+                    <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight bg-gradient-to-r from-navy-900 via-[#0da6f2] to-navy-900 bg-clip-text text-transparent">Debt-to-Income (DTI) Ratio Calculator</h1>
                     <p className="text-gray-500 font-medium text-lg">Calculate your DTI from recurring monthly debt and gross monthly income.</p>
                 </div>
 

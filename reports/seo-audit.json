@@ -530,15 +530,15 @@
       },
       {
         "route": "/calculators/affordability",
-        "ratio": 7.16,
-        "textChars": 7602,
-        "htmlBytes": 106232
+        "ratio": 7.24,
+        "textChars": 7707,
+        "htmlBytes": 106432
       },
       {
         "route": "/calculators/amortization",
-        "ratio": 5.95,
-        "textChars": 6162,
-        "htmlBytes": 103566
+        "ratio": 6,
+        "textChars": 6234,
+        "htmlBytes": 103880
       },
       {
         "route": "/calculators/arm",
@@ -548,9 +548,9 @@
       },
       {
         "route": "/calculators/auto-loan",
-        "ratio": 8.72,
-        "textChars": 8962,
-        "htmlBytes": 102802
+        "ratio": 8.76,
+        "textChars": 9513,
+        "htmlBytes": 108585
       },
       {
         "route": "/calculators/budget",
@@ -560,15 +560,15 @@
       },
       {
         "route": "/calculators/california",
-        "ratio": 6.12,
-        "textChars": 6309,
-        "htmlBytes": 103007
+        "ratio": 6.75,
+        "textChars": 7382,
+        "htmlBytes": 109338
       },
       {
         "route": "/calculators/closing-costs",
-        "ratio": 7.85,
-        "textChars": 8581,
-        "htmlBytes": 109317
+        "ratio": 8.32,
+        "textChars": 9617,
+        "htmlBytes": 115631
       },
       {
         "route": "/calculators/comparison",
@@ -578,9 +578,9 @@
       },
       {
         "route": "/calculators/credit-card",
-        "ratio": 7.03,
-        "textChars": 6345,
-        "htmlBytes": 90238
+        "ratio": 7.69,
+        "textChars": 7397,
+        "htmlBytes": 96190
       },
       {
         "route": "/calculators/crypto-tax",
@@ -602,15 +602,15 @@
       },
       {
         "route": "/calculators/drip",
-        "ratio": 4.97,
-        "textChars": 4660,
-        "htmlBytes": 93728
+        "ratio": 5.76,
+        "textChars": 5777,
+        "htmlBytes": 100346
       },
       {
         "route": "/calculators/dti",
-        "ratio": 6.16,
-        "textChars": 6183,
-        "htmlBytes": 100368
+        "ratio": 6.22,
+        "textChars": 6252,
+        "htmlBytes": 100500
       },
       {
         "route": "/calculators/fha-va-usda",
@@ -638,27 +638,27 @@
       },
       {
         "route": "/calculators/heloc",
-        "ratio": 8.61,
-        "textChars": 9389,
-        "htmlBytes": 109007
+        "ratio": 8.71,
+        "textChars": 9516,
+        "htmlBytes": 109241
       },
       {
         "route": "/calculators/income-tax",
-        "ratio": 6.58,
-        "textChars": 6106,
-        "htmlBytes": 92863
+        "ratio": 7.22,
+        "textChars": 7176,
+        "htmlBytes": 99374
       },
       {
         "route": "/calculators/interest-only",
-        "ratio": 7.94,
-        "textChars": 7971,
-        "htmlBytes": 100377
+        "ratio": 8.01,
+        "textChars": 8049,
+        "htmlBytes": 100528
       },
       {
         "route": "/calculators/investment",
-        "ratio": 6.88,
-        "textChars": 6278,
-        "htmlBytes": 91307
+        "ratio": 6.99,
+        "textChars": 6753,
+        "htmlBytes": 96666
       },
       {
         "route": "/calculators/mortgage-payoff",
@@ -668,9 +668,9 @@
       },
       {
         "route": "/calculators/mortgage",
-        "ratio": 7.05,
-        "textChars": 8403,
-        "htmlBytes": 119164
+        "ratio": 7.12,
+        "textChars": 8498,
+        "htmlBytes": 119354
       },
       {
         "route": "/calculators/options-profit",
@@ -680,9 +680,9 @@
       },
       {
         "route": "/calculators/personal-loan",
-        "ratio": 7.26,
-        "textChars": 7069,
-        "htmlBytes": 97419
+        "ratio": 7.83,
+        "textChars": 8116,
+        "htmlBytes": 103644
       },
       {
         "route": "/calculators/points-buydown",
@@ -716,9 +716,9 @@
       },
       {
         "route": "/calculators/student-loan",
-        "ratio": 7.31,
-        "textChars": 7109,
-        "htmlBytes": 97254
+        "ratio": 7.39,
+        "textChars": 7194,
+        "htmlBytes": 97375
       },
       {
         "route": "/calculators/texas",

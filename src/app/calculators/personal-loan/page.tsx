@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
 import PersonalLoanSeoContent from './PersonalLoanSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
+import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
 const PersonalLoanClient = nextDynamic(() => import('./PersonalLoanClient'), {
     loading: () => <CalculatorSkeleton />,
@@ -39,7 +40,7 @@ const PERSONAL_LOAN_FAQS = [
     },
     {
         question: 'What is an Origination Fee?',
-        answer: 'An origination fee is an upfront charge taken by the lender to process the personal loan. It usually ranges from 1% to 8% of the loan amount. If you borrow $10,000 with a 5% fee, the bank takes $500 immediately and only gives you $9,500. You must still pay back the full $10,000.',
+        answer: 'An origination fee is a lender charge that may be deducted from the proceeds or added according to the agreement. The amount varies by lender and offer. Compare the cash received, amount financed and disclosed APR before accepting a loan.',
     },
     {
         question: 'Can I pay off a personal loan early?',
@@ -58,6 +59,7 @@ export default function PersonalLoanPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Personal Loan Calculator', item: '/calculators/personal-loan' }]} />
             <PersonalLoanClient />
             <PersonalLoanSeoContent />
+            <SemrushIntentSection slug="personal-loan" />
             <CalculatorFAQ faqs={PERSONAL_LOAN_FAQS} title="Personal Loans — Frequently Asked Questions" />
         </main>
     );

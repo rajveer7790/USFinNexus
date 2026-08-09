@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
 import CreditCardSeoContent from './CreditCardSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
+import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
 const CreditCardClient = nextDynamic(() => import('./CreditCardClient'), {
     loading: () => <CalculatorSkeleton />,
@@ -14,8 +15,8 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Credit Card Payoff Calculator 2026 — Find Your Debt-Free Date',
-    description: 'Calculate how long to pay off your credit card balance and see exactly how much interest you save by increasing monthly payments. Free credit card payoff calculator.',
+    title: 'Credit Card Debt Calculator: Payoff Date & Interest',
+    description: 'Use this credit card debt calculator to estimate payoff time, total interest and the effect of a larger fixed monthly payment or balance transfer.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/credit-card' },
     openGraph: {
         type: 'website',
@@ -35,15 +36,15 @@ export const metadata: Metadata = {
 const CREDIT_CARD_FAQS = [
     {
         question: 'Why is my credit card balance barely going down?',
-        answer: 'Because of compound interest. If you have a 25% APR and only make the minimum payment, roughly 80% of your payment goes directly to the bank as interest profit. Only a tiny fraction is actually applied to the principal balance.',
+        answer: 'A high APR and a low minimum payment can direct a large share of early payments to interest. Issuer minimum-payment formulas vary, so use the current statement balance, APR and required minimum for an accurate estimate.',
     },
     {
         question: 'Should I use savings to pay off my credit card?',
-        answer: 'Mathematically, yes. If you have $10,000 sitting in a savings account earning 5% interest, you are making $500 a year. But if you have $10,000 in credit card debt at 25% APR, you are losing $2,500 a year. The debt is destroying your wealth 5 times faster than your savings can grow. Pay off the card immediately.',
+        answer: 'Compare the card APR with the after-tax savings yield, but keep enough emergency cash for essential expenses. Using every dollar of savings can cause new borrowing when an unexpected bill arrives.',
     },
     {
         question: 'Will closing a paid-off credit card hurt my credit score?',
-        answer: 'Yes. Closing a credit card reduces your Total Available Credit and increases your Credit Utilization Ratio, which will actively lower your FICO score. It also shortens your Average Age of Accounts. Unless the card charges a massive annual fee, you should keep the account open but cut the physical card up so you cannot use it.',
+        answer: 'It can affect utilization and account-age factors, but the result depends on the full credit file and scoring model. Weigh any annual fee, fraud exposure and spending risk before deciding whether to keep an unused account open.',
     },
 ];
 
@@ -58,6 +59,7 @@ export default function CreditCardPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Credit Card', item: '/calculators/credit-card' }]} />
             <CreditCardClient />
             <CreditCardSeoContent />
+            <SemrushIntentSection slug="credit-card" />
             <CalculatorFAQ faqs={CREDIT_CARD_FAQS} title="Credit Card Payoff — Frequently Asked Questions" />
         </main>
     );

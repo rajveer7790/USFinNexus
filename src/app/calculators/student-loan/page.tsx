@@ -15,8 +15,8 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Student Loan Payoff Calculator 2026 — Extra Payment Estimator',
-    description: 'Calculate your student loan payoff date and see how extra monthly payments save years and thousands in interest. Free student loan calculator with PDF export.',
+    title: 'Student Loan Payment Calculator: Repayment & Payoff',
+    description: 'Use this student loan payment calculator to estimate monthly payments, repayment term, payoff date, total interest and extra-payment scenarios.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/student-loan' },
     openGraph: {
         type: 'website',

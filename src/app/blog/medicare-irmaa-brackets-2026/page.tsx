@@ -119,7 +119,7 @@ export default function MedicareIrmaaBrackets2026Page() {
                 </div>
 
                 <div className="prose prose-slate mx-auto max-w-3xl prose-headings:font-black prose-a:text-blue-700">
-                    <p><strong>Quick answer:</strong> The standard 2026 Part B premium is $202.90 per month. IRMAA begins above $109,000 of 2024 MAGI for an individual return or above $218,000 for married filing jointly. At the highest tier, Part B is $689.90 per person per month and Part D adds $91 to the selected drug plan&apos;s monthly premium.</p>
+                    <p><strong>Quick answer:</strong> IRMAA means income-related monthly adjustment amount. The standard 2026 Part B premium is $202.90 per month. IRMAA begins above $109,000 of 2024 MAGI for an individual return or above $218,000 for married filing jointly. At the highest tier, Part B is $689.90 per person per month and Part D adds $91 to the selected drug plan&apos;s monthly premium. The Social Security Administration determines the adjustment using tax data supplied by the IRS.</p>
 
                     <aside className="not-prose my-8 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-950">
                         This article provides general educational information, not individualized tax, legal, investment or Medicare advice. A conversion, gain, withdrawal or filing-status change can affect many taxes and benefits beyond IRMAA. Verify your notice with Social Security, Medicare and qualified advisers before changing a financial plan.

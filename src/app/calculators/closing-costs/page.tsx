@@ -7,6 +7,7 @@ const ClosingCostsClient = nextDynamic(() => import('./ClosingCostsClient'), {
     loading: () => <CalculatorSkeleton />,
 });
 import CalculatorFAQ from '@/components/CalculatorFAQ';
+import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
 
@@ -14,8 +15,8 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Closing Cost Calculator',
-    description: 'Estimate home-buying closing costs including lender charges, title and settlement fees, prepaid items, taxes and other assumptions. Actual costs vary by transaction and location.',
+    title: 'Closing Costs Calculator for Home Buyers',
+    description: 'Use this closing costs calculator to estimate lender charges, title and settlement fees, prepaid items, taxes and insurance for a home purchase.',
     alternates: { canonical: '/calculators/closing-costs' },
     openGraph: {
         type: 'website',
@@ -67,6 +68,7 @@ export default function ClosingCostsPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Closing Cost Calculator', item: '/calculators/closing-costs' }]} />
             <ClosingCostsClient />
             <ClosingCostsSeoContent />
+            <SemrushIntentSection slug="closing-costs" />
             <CalculatorFAQ faqs={CLOSING_COSTS_FAQS} title="Closing Cost Calculator FAQs" />
         </main>
     );

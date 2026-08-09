@@ -67,7 +67,7 @@ export default function HELOCClient() {
                     <span className="text-xs font-black uppercase tracking-[0.3em] text-[#0da6f2]">Home Equity</span>
                 </div>
                 <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight bg-gradient-to-r from-navy-900 via-[#0da6f2] to-navy-900 bg-clip-text text-transparent">
-                    HELOC Calculator 2026
+                    HELOC &amp; Home Equity Line of Credit Calculator
                 </h1>
                 <p className="text-gray-500 max-w-2xl font-medium text-lg">
                     Calculate payments on a Home Equity Line of Credit. See interest-only draw period payments and full P&I repayment costs.

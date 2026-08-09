@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
 import AutoLoanSeoContent from './AutoLoanSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
+import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
 const AutoLoanClient = nextDynamic(() => import('./AutoLoanClient'), {
     loading: () => <CalculatorSkeleton />,
@@ -63,6 +64,7 @@ export default function AutoLoanPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Auto Loan Calculator', item: '/calculators/auto-loan' }]} />
             <AutoLoanClient />
             <AutoLoanSeoContent />
+            <SemrushIntentSection slug="auto-loan" />
             <CalculatorFAQ faqs={AUTO_LOAN_FAQS} title="Auto Loan Calculator FAQs" />
         </main>
     );

@@ -43,15 +43,15 @@ export default function InvestmentSeoContent() {
                 </div>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    What Interest Rate Should You Expect?
+                    What Annual Return Should You Model?
                 </h3>
                 <p>
-                    When using the calculator, it is critical to use realistic numbers so you do not drastically overestimate your future wealth. 
+                    No single return assumption is suitable for every investment. Use a range of scenarios and distinguish nominal returns from inflation-adjusted purchasing power.
                 </p>
                 <ul>
-                    <li><strong>4% to 5%:</strong> This is a highly conservative return, typical of a High-Yield Savings Account (HYSA) or a heavy bond portfolio in 2026.</li>
-                    <li><strong>7% to 8%:</strong> This is the gold standard for long-term planning. It represents the historical, inflation-adjusted return of the S&P 500 over the last 100 years. If you invest in broad US index funds, 7-8% is the mathematically safest assumption for a 30-year horizon.</li>
-                    <li><strong>10% to 12%:</strong> The nominal (non-inflation adjusted) historical return of the US stock market. Use this if you want to see absolute dollar amounts, but understand that inflation will erode the purchasing power of those dollars.</li>
+                    <li><strong>Lower-return case:</strong> Model a conservative outcome after expected fees and taxes.</li>
+                    <li><strong>Planning case:</strong> Use an assumption consistent with the asset mix and time horizon, without treating historical averages as a promise.</li>
+                    <li><strong>Stress case:</strong> Test weak or negative early returns to understand sequence risk and whether the contribution plan remains sustainable.</li>
                 </ul>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
@@ -61,12 +61,12 @@ export default function InvestmentSeoContent() {
                     Because compounding is so powerful, the fees you pay to financial advisors or mutual funds also compound against you. 
                 </p>
                 <p>
-                    If you pay a financial advisor a 1% AUM (Assets Under Management) fee, you are not just losing 1% of your money. You are losing 1% of your entire portfolio balance <em>every single year</em>, plus you are losing all the compound interest that the 1% would have generated over 30 years. A 1% fee can easily cannibalize 25% to 30% of your total lifetime wealth. This is why financial experts in 2026 highly recommend low-cost index funds (like VTSAX or FXAIX) which charge microscopic fees like 0.03%.
+                    A recurring asset-based fee reduces the balance that remains available to compound. Compare gross and net return scenarios, review each fund&apos;s current expense ratio and include advisory, trading and account costs that apply to your situation.
                 </p>
 
                 <div className="mt-12 p-6 bg-gradient-to-r from-navy-900 to-blue-900 rounded-2xl text-white text-center shadow-lg" style={{ background: 'linear-gradient(135deg, #0A192F, #1a4d9a)' }}>
                     <h3 className="text-2xl font-bold mb-3 text-white">Planning for Early Retirement (FIRE)?</h3>
-                    <p className="mb-6 opacity-90">If you are using compound interest to escape the rat race early, you need to know your exact "FIRE Number" (Financial Independence, Retire Early). Use our specialized FIRE Calculator to find out exactly how much you need to retire in your 30s or 40s.</p>
+                    <p className="mb-6 opacity-90">Use the FIRE calculator to explore a financial-independence target under different spending, savings and return assumptions. The output is a planning scenario, not an exact retirement date.</p>
                     <Link
                         href="/calculators/fire-planner"
                         className="bg-white text-navy-900 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors inline-flex items-center gap-2"

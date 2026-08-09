@@ -126,7 +126,7 @@ export default function InvestmentClient() {
 
     return (
         <CalculatorLayout
-            title="Compound Interest Calculator"
+            title="Investment Growth Calculator"
             description="See how the power of compound interest multiplies your money over time. Compare your total deposits against the total interest earned."
             inputs={InputSection}
             results={ResultsSection}
