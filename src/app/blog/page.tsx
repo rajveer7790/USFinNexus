@@ -52,9 +52,9 @@ function getBlogPosts() {
 
             // --- SEO FIX: Extract Metadata ---
             let title = slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-            const titleMatch = content.match(/title:\s*['"](.*?)['"]/);
-            if (titleMatch && titleMatch[1]) {
-                title = titleMatch[1].replace(' | USFinNexus', '');
+            const titleMatch = content.match(/title:\s*(['"])(.*?)\1/);
+            if (titleMatch && titleMatch[2]) {
+                title = titleMatch[2].replace(' | USFinNexus', '');
             }
             
             let category = 'Personal Finance';
@@ -62,7 +62,7 @@ function getBlogPosts() {
             else if (slug.includes('mortgage') || slug.includes('refinance') || slug.includes('fha') || slug.includes('va') || slug.includes('loan')) category = 'Mortgage';
             else if (slug.includes('tax') || slug.includes('mileage-rate')) category = 'Taxes';
             else if (slug.includes('invest') || slug.includes('stock') || slug.includes('bond')) category = 'Investing';
-            else if (slug.includes('retire') || slug.includes('401k') || slug.includes('ira') || slug.includes('fire') || slug.includes('medicare')) category = 'Retirement';
+            else if (slug.includes('retire') || slug.includes('401k') || slug.includes('ira') || slug.includes('fire') || slug.includes('medicare') || slug.includes('savers-credit') || slug.includes('required-minimum')) category = 'Retirement';
             else if (slug.includes('auto') || slug.includes('car')) category = 'Auto Loans';
             else if (slug.includes('home') || slug.includes('housing') || slug.includes('real-estate')) category = 'Housing Market';
             
@@ -98,6 +98,8 @@ function getBlogPosts() {
             if (slug === 'aca-premium-tax-credit-2026') image = '/images/aca-premium-tax-credit-2026.webp';
             if (slug === 'capital-gains-tax-rates-2026') image = '/images/capital-gains-tax-rates-2026.webp';
             if (slug === 'earned-income-tax-credit-2026') image = '/images/earned-income-tax-credit-2026.webp';
+            if (slug === 'savers-credit-2026') image = '/images/savers-credit-2026.webp';
+            if (slug === 'required-minimum-distributions-2026') image = '/images/required-minimum-distributions-2026.webp';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
