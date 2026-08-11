@@ -12,6 +12,7 @@ export const metadata: Metadata = {
         url: 'https://usfinnexus.com/methodology',
         title: 'Financial Calculator Methodology & Data Sources',
         description: 'Formulas, assumptions, limitations and primary sources used by USFinNexus financial calculators.',
+        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus calculator methodology and data sources' }],
     },
     twitter: {
         card: 'summary_large_image',
@@ -100,6 +101,16 @@ export default function MethodologyPage() {
         dateModified: '2026-08-07',
         inLanguage: 'en-US',
         isAccessibleForFree: true,
+        image: {
+            '@type': 'ImageObject',
+            url: 'https://usfinnexus.com/icon-512.png',
+            width: 512,
+            height: 512,
+        },
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://usfinnexus.com/methodology',
+        },
         author: { '@type': 'Organization', name: 'USFinNexus', url: 'https://usfinnexus.com/' },
         publisher: { '@id': 'https://usfinnexus.com/#organization' },
         citation: SOURCES.map((source) => ({ '@type': 'WebSite', name: source.org, url: source.url })),

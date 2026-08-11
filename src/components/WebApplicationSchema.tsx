@@ -6,34 +6,40 @@ interface WebApplicationSchemaProps {
     dateModified?: string;
 }
 
+/**
+ * Calculator pages are free browser tools, but Google requires a genuine
+ * aggregateRating or review for SoftwareApplication rich results. USFinNexus
+ * does not publish fabricated ratings, so calculators use accurate WebPage
+ * markup instead of ineligible SoftwareApplication markup.
+ */
 export default function WebApplicationSchema({
     name,
     description,
     url,
-    category = 'FinanceApplication',
     dateModified,
 }: WebApplicationSchemaProps) {
     const schema: Record<string, unknown> = {
         '@context': 'https://schema.org',
-        '@type': 'WebApplication',
+        '@type': 'WebPage',
+        '@id': `${url}#webpage`,
         name,
         description,
         url,
         ...(dateModified && { dateModified }),
-        applicationCategory: category,
-        operatingSystem: 'Any',
-        browserRequirements: 'Requires JavaScript',
-        isAccessibleForFree: true,
         inLanguage: 'en-US',
-        offers: {
-            '@type': 'Offer',
-            price: '0',
-            priceCurrency: 'USD',
-        },
-        provider: {
-            '@type': 'Organization',
+        isAccessibleForFree: true,
+        isPartOf: {
+            '@type': 'WebSite',
+            '@id': 'https://usfinnexus.com/#website',
             name: 'USFinNexus',
-            url: 'https://usfinnexus.com',
+            url: 'https://usfinnexus.com/',
+        },
+        about: {
+            '@type': 'Thing',
+            name: 'Financial calculator',
+        },
+        publisher: {
+            '@id': 'https://usfinnexus.com/#organization',
         },
     };
 
