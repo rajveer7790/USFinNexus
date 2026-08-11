@@ -60,7 +60,7 @@ function getBlogPosts() {
             let category = 'Personal Finance';
             if (slug.includes('student-loan')) category = 'Education';
             else if (slug.includes('mortgage') || slug.includes('refinance') || slug.includes('fha') || slug.includes('va') || slug.includes('loan')) category = 'Mortgage';
-            else if (slug.includes('tax') || slug.includes('mileage-rate')) category = 'Taxes';
+            else if (slug.includes('tax') || slug.includes('mileage-rate') || slug.includes('gift-tax')) category = 'Taxes';
             else if (slug.includes('invest') || slug.includes('stock') || slug.includes('bond')) category = 'Investing';
             else if (slug.includes('retire') || slug.includes('401k') || slug.includes('ira') || slug.includes('fire') || slug.includes('medicare') || slug.includes('savers-credit') || slug.includes('required-minimum')) category = 'Retirement';
             else if (slug.includes('auto') || slug.includes('car')) category = 'Auto Loans';
@@ -100,6 +100,8 @@ function getBlogPosts() {
             if (slug === 'earned-income-tax-credit-2026') image = '/images/earned-income-tax-credit-2026.webp';
             if (slug === 'savers-credit-2026') image = '/images/savers-credit-2026.webp';
             if (slug === 'required-minimum-distributions-2026') image = '/images/required-minimum-distributions-2026.webp';
+            if (slug === 'estate-gift-tax-exemption-2026') image = '/images/estate-gift-tax-exemption-2026.webp';
+            if (slug === 'medicare-part-d-costs-2026') image = '/images/medicare-part-d-costs-2026.webp';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
