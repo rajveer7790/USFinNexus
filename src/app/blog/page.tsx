@@ -58,11 +58,11 @@ function getBlogPosts() {
             }
             
             let category = 'Personal Finance';
-            if (slug.includes('student-loan')) category = 'Education';
+            if (slug.includes('student-loan') || slug.includes('pell-grant') || slug.includes('fafsa')) category = 'Education';
             else if (slug.includes('mortgage') || slug.includes('refinance') || slug.includes('fha') || slug.includes('va') || slug.includes('loan')) category = 'Mortgage';
             else if (slug.includes('tax') || slug.includes('mileage-rate') || slug.includes('gift-tax')) category = 'Taxes';
             else if (slug.includes('invest') || slug.includes('stock') || slug.includes('bond')) category = 'Investing';
-            else if (slug.includes('retire') || slug.includes('401k') || slug.includes('ira') || slug.includes('fire') || slug.includes('medicare') || slug.includes('savers-credit') || slug.includes('required-minimum')) category = 'Retirement';
+            else if (slug.includes('retire') || slug.includes('401k') || slug.includes('ira') || slug.includes('fire') || slug.includes('medicare') || slug.includes('savers-credit') || slug.includes('required-minimum') || slug.includes('social-security')) category = 'Retirement';
             else if (slug.includes('auto') || slug.includes('car')) category = 'Auto Loans';
             else if (slug.includes('home') || slug.includes('housing') || slug.includes('real-estate')) category = 'Housing Market';
             
@@ -102,6 +102,8 @@ function getBlogPosts() {
             if (slug === 'required-minimum-distributions-2026') image = '/images/required-minimum-distributions-2026.webp';
             if (slug === 'estate-gift-tax-exemption-2026') image = '/images/estate-gift-tax-exemption-2026.webp';
             if (slug === 'medicare-part-d-costs-2026') image = '/images/medicare-part-d-costs-2026.webp';
+            if (slug === 'social-security-payment-schedule-2026') image = '/images/social-security-payment-schedule-2026.webp';
+            if (slug === 'pell-grant-2026-27') image = '/images/pell-grant-2026-27.webp';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
