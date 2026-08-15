@@ -58,7 +58,9 @@ function getBlogPosts() {
             }
             
             let category = 'Personal Finance';
-            if (slug.includes('student-loan') || slug.includes('pell-grant') || slug.includes('fafsa')) category = 'Education';
+            if (slug.includes('va-disability') || slug.includes('veteran')) category = 'Veterans Benefits';
+            else if (slug.includes('fsa-contribution') || slug.includes('flexible-spending')) category = 'Employee Benefits';
+            else if (slug.includes('student-loan') || slug.includes('pell-grant') || slug.includes('fafsa')) category = 'Education';
             else if (slug.includes('mortgage') || slug.includes('refinance') || slug.includes('fha') || slug.includes('va') || slug.includes('loan')) category = 'Mortgage';
             else if (slug.includes('tax') || slug.includes('mileage-rate') || slug.includes('gift-tax')) category = 'Taxes';
             else if (slug.includes('invest') || slug.includes('stock') || slug.includes('bond')) category = 'Investing';
@@ -104,6 +106,8 @@ function getBlogPosts() {
             if (slug === 'medicare-part-d-costs-2026') image = '/images/medicare-part-d-costs-2026.webp';
             if (slug === 'social-security-payment-schedule-2026') image = '/images/social-security-payment-schedule-2026.webp';
             if (slug === 'pell-grant-2026-27') image = '/images/pell-grant-2026-27.webp';
+            if (slug === 'fsa-contribution-limits-2026') image = '/images/fsa-contribution-limits-2026.webp';
+            if (slug === 'va-disability-pay-rates-2026') image = '/images/va-disability-pay-rates-2026.webp';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
@@ -130,7 +134,7 @@ function getBlogPosts() {
 
 const POSTS = getBlogPosts();
 
-const CATEGORIES = ['All', 'Housing Market', 'Real Estate Investment', 'Mortgage', 'Home Buying', 'Affordability', 'Refinance', 'Taxes', 'Investing', 'Bonds & Fixed Income', 'Retirement', 'FinTech', 'Banking', 'Credit Cards', 'Personal Finance', 'Auto Loans', 'Education'];
+const CATEGORIES = ['All', 'Housing Market', 'Real Estate Investment', 'Mortgage', 'Home Buying', 'Affordability', 'Refinance', 'Taxes', 'Investing', 'Bonds & Fixed Income', 'Retirement', 'FinTech', 'Banking', 'Credit Cards', 'Personal Finance', 'Auto Loans', 'Education', 'Employee Benefits', 'Veterans Benefits'];
 
 export default function BlogPage() {
     return (

@@ -94,7 +94,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${baseUrl}/`, lastModified: new Date('2026-08-07'), changeFrequency: 'weekly', priority: 1.0 },
         { url: `${baseUrl}/calculators`, changeFrequency: 'weekly', priority: 0.90 },
         { url: `${baseUrl}/canada`, changeFrequency: 'weekly', priority: 0.80 },
-        { url: `${baseUrl}/blog`, lastModified: new Date('2026-08-14'), changeFrequency: 'weekly', priority: 0.80 },
+        { url: `${baseUrl}/blog`, lastModified: new Date('2026-08-15'), changeFrequency: 'weekly', priority: 0.80 },
         { url: `${baseUrl}/guides`, changeFrequency: 'monthly', priority: 0.75 },
         { url: `${baseUrl}/articles`, changeFrequency: 'monthly', priority: 0.75 },
         { url: `${baseUrl}/mortgage-rates`, lastModified: new Date('2026-08-06'), changeFrequency: 'weekly', priority: 0.85 },
