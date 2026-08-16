@@ -108,6 +108,8 @@ function getBlogPosts() {
             if (slug === 'pell-grant-2026-27') image = '/images/pell-grant-2026-27.webp';
             if (slug === 'fsa-contribution-limits-2026') image = '/images/fsa-contribution-limits-2026.webp';
             if (slug === 'va-disability-pay-rates-2026') image = '/images/va-disability-pay-rates-2026.webp';
+            if (slug === 'adoption-tax-credit-2026') image = '/images/adoption-tax-credit-2026.webp';
+            if (slug === 'student-loan-interest-deduction-2026') image = '/images/student-loan-interest-deduction-2026.webp';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
