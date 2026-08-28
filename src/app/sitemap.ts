@@ -66,6 +66,7 @@ function getBlogSlugs(): string[] {
         'va-loans-military-benefits',
         'what-is-a-good-debt-to-income-ratio',
         'what-is-a-jumbo-loan-2026',
+        'tcja-tax-sunset-2026-mortgage-impact',
         'when-to-refinance-1-percent-rule',
     ]);
     try {

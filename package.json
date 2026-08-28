@@ -9,10 +9,10 @@
     "lint": "next lint",
     "preview": "npm run build && npx wrangler pages dev out",
     "seo:audit": "node scripts/seo-audit.mjs",
-    "verify": "npm run build && npm run seo:audit"
+    "verify": "npm run build && npm run seo:audit",
+    "seo:quality": "node scripts/content-quality-audit.mjs"
   },
   "dependencies": {
-
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "html2canvas": "^1.4.1",

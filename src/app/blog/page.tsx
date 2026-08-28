@@ -76,11 +76,18 @@ function getBlogPosts() {
             else if (category === 'Auto Loans') image = IMG.auto;
             else if (category === 'Housing Market') image = IMG.housing;
             
-            // Prefer the editorial publish date embedded in ArticleSchema.
-            const stats = fs.statSync(pagePath);
-            const publishedMatch = content.match(/datePublished=["'](\d{4}-\d{2}-\d{2})["']/);
-            const dateISO = publishedMatch?.[1] || stats.mtime.toISOString().split('T')[0];
-            const dateStr = new Date(dateISO + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+            // Prefer dates explicitly maintained in page metadata/schema.
+            // Filesystem mtimes are intentionally ignored because fresh CI/Cloudflare
+            // checkouts can make old content appear newly published.
+            const publishedMatch =
+                content.match(/datePublished=["'](\d{4}-\d{2}-\d{2})["']/) ||
+                content.match(/publishedTime:\s*["'](\d{4}-\d{2}-\d{2})["']/) ||
+                content.match(/dateModified=["'](\d{4}-\d{2}-\d{2})["']/) ||
+                content.match(/modifiedTime:\s*["'](\d{4}-\d{2}-\d{2})["']/);
+            const dateISO = publishedMatch?.[1] || '';
+            const dateStr = dateISO
+                ? new Date(dateISO + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })
+                : 'Evergreen guide';
 
             if (slug === 'trump-accounts-2026-guide') image = '/images/trump-accounts-2026.webp';
             if (slug === 'trump-account-vs-529-plan') image = '/images/trump-account-vs-529.webp';
