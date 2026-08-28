@@ -75,10 +75,23 @@ export function getAllBlogPosts(): BlogPostEntry[] {
             else if (category === 'Auto Loans') image = IMG.auto;
             else if (category === 'Housing Market') image = IMG.housing;
             
-            const stats = fs.statSync(pagePath);
-            const dateStr = stats.mtime.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+            const publishedMatch =
+                content.match(/datePublished=["'](\\d{4}-\\d{2}-\\d{2})["']/) ||
+                content.match(/publishedTime:\\s*["'](\\d{4}-\\d{2}-\\d{2})["']/) ||
+                content.match(/dateModified=["'](\\d{4}-\\d{2}-\\d{2})["']/) ||
+                content.match(/modifiedTime:\\s*["'](\\d{4}-\\d{2}-\\d{2})["']/);
+            const dateISO = publishedMatch?.[1];
+            const dateStr = dateISO
+                ? new Date(`${dateISO}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })
+                : 'Evergreen guide';
+
+            const descriptionMatch = content.match(/description:\\s*(['"])(.*?)\\1/);
+            const excerpt = descriptionMatch?.[2]
+                ?.replace(/\\\\(["'])/g, '$1')
+                .replace(/\\s+/g, ' ')
+                .trim() || `Practical USFinNexus guidance on ${title.replace(/\\s*[|—–-]\\s*USFinNexus.*$/i, '').toLowerCase()}.`;
             
-            posts.push({ slug, title, date: dateStr, category, readTime: '10 min', image, excerpt: 'Read this comprehensive guide to understand the financial strategies you need for ' + new Date().getFullYear() + '.' });
+            posts.push({ slug, title, date: dateStr, category, readTime: '10 min', image, excerpt });
         }
 
         cachedPosts = posts.sort((a, b) => a.title.localeCompare(b.title));
