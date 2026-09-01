@@ -45,7 +45,7 @@ const CALC_PRIORITY: Record<string, number> = {
     '/canada/mortgage-calculator': 0.90,
 };
 
-function getBlogSlugs(): string[] {
+function getBlogEntries(): Array<{ slug: string; lastModified?: Date }> {
     // These URLs intentionally canonicalize to stronger pages. Keeping aliases out
     // of the sitemap avoids conflicting indexation signals.
     const canonicalizedAliases = new Set([
@@ -72,7 +72,12 @@ function getBlogSlugs(): string[] {
         const blogDir = path.join(process.cwd(), 'src', 'app', 'blog');
         return fs.readdirSync(blogDir, { withFileTypes: true })
             .filter((entry) => entry.isDirectory() && !canonicalizedAliases.has(entry.name) && fs.existsSync(path.join(blogDir, entry.name, 'page.tsx')))
-            .map((entry) => entry.name);
+            .map((entry) => {
+                const source = fs.readFileSync(path.join(blogDir, entry.name, 'page.tsx'), 'utf8');
+                const modified = source.match(/dateModified=["'](\d{4}-\d{2}-\d{2})["']/)?.[1];
+                const published = source.match(/datePublished=["'](\d{4}-\d{2}-\d{2})["']/)?.[1];
+                return { slug: entry.name, lastModified: safeDate(modified || published) };
+            });
     } catch (error) {
         console.error('Error reading blog directory for sitemap:', error);
         return [];
@@ -94,7 +99,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${baseUrl}/`, lastModified: new Date('2026-08-07'), changeFrequency: 'weekly', priority: 1.0 },
         { url: `${baseUrl}/calculators`, changeFrequency: 'weekly', priority: 0.90 },
         { url: `${baseUrl}/canada`, changeFrequency: 'weekly', priority: 0.80 },
-        { url: `${baseUrl}/blog`, lastModified: new Date('2026-08-16'), changeFrequency: 'weekly', priority: 0.80 },
+        { url: `${baseUrl}/blog`, lastModified: new Date('2026-09-01'), changeFrequency: 'weekly', priority: 0.80 },
         { url: `${baseUrl}/guides`, changeFrequency: 'monthly', priority: 0.75 },
         { url: `${baseUrl}/articles`, changeFrequency: 'monthly', priority: 0.75 },
         { url: `${baseUrl}/mortgage-rates`, lastModified: new Date('2026-08-06'), changeFrequency: 'weekly', priority: 0.85 },
@@ -126,8 +131,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.70,
     }));
 
-    const blogPosts: MetadataRoute.Sitemap = getBlogSlugs().map((slug) => ({
+    const blogPosts: MetadataRoute.Sitemap = getBlogEntries().map(({ slug, lastModified }) => ({
         url: `${baseUrl}/blog/${slug}`,
+        ...(lastModified ? { lastModified } : {}),
         changeFrequency: 'monthly' as const,
         priority: 0.70,
     }));

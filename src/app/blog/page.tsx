@@ -110,6 +110,9 @@ function getBlogPosts() {
             if (slug === 'va-disability-pay-rates-2026') image = '/images/va-disability-pay-rates-2026.webp';
             if (slug === 'adoption-tax-credit-2026') image = '/images/adoption-tax-credit-2026.webp';
             if (slug === 'student-loan-interest-deduction-2026') image = '/images/student-loan-interest-deduction-2026.webp';
+            if (slug === 'ev-tax-credit-2026') image = '/images/ev-tax-credit-2026.webp';
+            if (slug === 'i-bond-rate-2026') image = '/images/i-bond-rate-2026.webp';
+            if (slug === 'social-security-spousal-benefits-2026') image = '/images/social-security-spousal-benefits-2026.webp';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
