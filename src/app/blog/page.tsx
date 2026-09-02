@@ -113,6 +113,8 @@ function getBlogPosts() {
             if (slug === 'ev-tax-credit-2026') image = '/images/ev-tax-credit-2026.webp';
             if (slug === 'i-bond-rate-2026') image = '/images/i-bond-rate-2026.webp';
             if (slug === 'social-security-spousal-benefits-2026') image = '/images/social-security-spousal-benefits-2026.webp';
+            if (slug === 'estimated-tax-payment-dates-2026') image = '/images/estimated-tax-payment-dates-2026.webp';
+            if (slug === 'medicare-part-b-premium-deductible-2026') image = '/images/medicare-part-b-premium-deductible-2026.webp';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
