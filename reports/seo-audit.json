@@ -526,7 +526,7 @@
         "route": "/blog",
         "ratio": 3.17,
         "textChars": 16815,
-        "htmlBytes": 530046
+        "htmlBytes": 530033
       },
       {
         "route": "/calculators/affordability",

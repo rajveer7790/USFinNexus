@@ -22,6 +22,16 @@ const IMG = {
     finance: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
 };
 
+// These shared-component guides predate per-page ArticleSchema dates. Keep their
+// reviewed date stable instead of using checkout mtimes, which change on every
+// Cloudflare deployment and can incorrectly move old posts above new articles.
+const LEGACY_PUBLISH_DATES: Record<string, string> = {
+    'mortgage-broker-fees': '2026-08-09',
+    'pay-mortgage-with-credit-card': '2026-08-09',
+    'second-mortgage-guide': '2026-08-09',
+    'selling-house-with-mortgage': '2026-08-09',
+};
+
 import fs from 'fs';
 import path from 'path';
 
@@ -80,7 +90,7 @@ function getBlogPosts() {
             // Prefer the editorial publish date embedded in ArticleSchema.
             const stats = fs.statSync(pagePath);
             const publishedMatch = content.match(/datePublished=["'](\d{4}-\d{2}-\d{2})["']/);
-            const dateISO = publishedMatch?.[1] || stats.mtime.toISOString().split('T')[0];
+            const dateISO = publishedMatch?.[1] || LEGACY_PUBLISH_DATES[slug] || stats.mtime.toISOString().split('T')[0];
             const dateStr = new Date(dateISO + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 
             if (slug === 'trump-accounts-2026-guide') image = '/images/trump-accounts-2026.webp';
