@@ -58,7 +58,8 @@ function getBlogPosts() {
             }
             
             let category = 'Personal Finance';
-            if (slug.includes('va-disability') || slug.includes('veteran')) category = 'Veterans Benefits';
+            if (slug.includes('snap-benefits')) category = 'Government Benefits';
+            else if (slug.includes('va-disability') || slug.includes('veteran')) category = 'Veterans Benefits';
             else if (slug.includes('fsa-contribution') || slug.includes('flexible-spending')) category = 'Employee Benefits';
             else if (slug.includes('student-loan') || slug.includes('pell-grant') || slug.includes('fafsa')) category = 'Education';
             else if (slug.includes('mortgage') || slug.includes('refinance') || slug.includes('fha') || slug.includes('va') || slug.includes('loan')) category = 'Mortgage';
@@ -115,6 +116,8 @@ function getBlogPosts() {
             if (slug === 'social-security-spousal-benefits-2026') image = '/images/social-security-spousal-benefits-2026.webp';
             if (slug === 'estimated-tax-payment-dates-2026') image = '/images/estimated-tax-payment-dates-2026.webp';
             if (slug === 'medicare-part-b-premium-deductible-2026') image = '/images/medicare-part-b-premium-deductible-2026.webp';
+            if (slug === 'tax-extension-deadline-2026') image = '/images/tax-extension-deadline-2026.webp';
+            if (slug === 'snap-benefits-2027') image = '/images/snap-benefits-2027.webp';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
@@ -141,7 +144,7 @@ function getBlogPosts() {
 
 const POSTS = getBlogPosts();
 
-const CATEGORIES = ['All', 'Housing Market', 'Real Estate Investment', 'Mortgage', 'Home Buying', 'Affordability', 'Refinance', 'Taxes', 'Investing', 'Bonds & Fixed Income', 'Retirement', 'FinTech', 'Banking', 'Credit Cards', 'Personal Finance', 'Auto Loans', 'Education', 'Employee Benefits', 'Veterans Benefits'];
+const CATEGORIES = ['All', 'Housing Market', 'Real Estate Investment', 'Mortgage', 'Home Buying', 'Affordability', 'Refinance', 'Taxes', 'Investing', 'Bonds & Fixed Income', 'Retirement', 'FinTech', 'Banking', 'Credit Cards', 'Personal Finance', 'Government Benefits', 'Auto Loans', 'Education', 'Employee Benefits', 'Veterans Benefits'];
 
 export default function BlogPage() {
     return (
