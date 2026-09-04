@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import ArticleSchema from '@/components/ArticleSchema';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AuthorBio from '@/components/AuthorBio';
@@ -121,6 +122,7 @@ export default function TrumpAccountVs529() {
                     <p>Start with the <Link href="/blog/trump-accounts-2026-guide">complete Trump Accounts guide</Link>, confirm details through the <a href="https://www.irs.gov/trumpaccounts" target="_blank" rel="noopener noreferrer">IRS Trump Accounts hub</a>, and compare your state&apos;s official 529 disclosure documents before investing.</p>
                 </div>
                 <div className="mx-auto mt-12 max-w-3xl"><AuthorBio /></div>
+            <ContextualInternalLinks currentSlug="trump-account-vs-529-plan" showBlogs showCalculators />
             </article>
         </main>
     );

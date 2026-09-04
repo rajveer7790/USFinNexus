@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import ArticleSchema from '@/components/ArticleSchema';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AuthorBio from '@/components/AuthorBio';
@@ -131,6 +132,7 @@ export default function TrumpAccountsGuide() {
                     ))}
                 </div>
                 <div className="mx-auto mt-12 max-w-3xl"><AuthorBio /></div>
+            <ContextualInternalLinks currentSlug="trump-accounts-2026-guide" showBlogs showCalculators />
             </article>
         </main>
     );

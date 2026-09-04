@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import DownPaymentSeoContent from './DownPaymentSeoContent';
@@ -48,6 +49,7 @@ export default function DownPaymentPage() {
                     <DownPaymentClient />
                 </div>
             <DownPaymentSeoContent />
+        <ContextualInternalLinks currentSlug="down-payment" showBlogs showCalculators={false} />
         </main>
     );
 }

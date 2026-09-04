@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import RentVsBuySeoContent from './RentVsBuySeoContent';
@@ -42,6 +43,7 @@ export default function RentVsBuyPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Rent vs Buy', item: '/calculators/rent-vs-buy' }]} />
             <RentVsBuyClient />
             <RentVsBuySeoContent />
+        <ContextualInternalLinks currentSlug="rent-vs-buy" showBlogs showCalculators={false} />
         </main>
     );
 }

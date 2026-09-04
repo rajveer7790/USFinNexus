@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import { ShieldCheck, Search, CheckCircle2, AlertTriangle, FileText, Banknote } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
 import RelatedCalculators from '@/components/RelatedCalculators';
@@ -205,6 +206,7 @@ export default function PostComponent() {
                         You are not penalized for shopping around for the best interest rate. In fact, it is highly recommended that you get pre-approved by at least two lenders to compare their loan estimates.
                     </p>
 
+                <ContextualInternalLinks currentSlug="mortgage-preapproval-prequalification" showBlogs showCalculators={false} />
                 </article>
 
                 <div className="mt-16">

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -61,6 +62,7 @@ export default function PersonalLoanPage() {
             <PersonalLoanSeoContent />
             <SemrushIntentSection slug="personal-loan" />
             <CalculatorFAQ faqs={PERSONAL_LOAN_FAQS} title="Personal Loans — Frequently Asked Questions" />
+        <ContextualInternalLinks currentSlug="personal-loan" showBlogs showCalculators={false} />
         </main>
     );
 }

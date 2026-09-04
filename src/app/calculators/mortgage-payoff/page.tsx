@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
@@ -59,6 +60,7 @@ export default function MortgagePayoffPage() {
                     Also compare the <Link href="/calculators/amortization">amortization calculator</Link>, the <Link href="/blog/pay-off-mortgage-early-strategy">mortgage payoff strategy guide</Link>, and the <Link href="/blog/pay-off-mortgage-early-strategy">payoff-versus-investing guide</Link>.
                 </p>
             </article>
+        <ContextualInternalLinks currentSlug="mortgage-payoff" showBlogs showCalculators={false} />
         </main>
     );
 }

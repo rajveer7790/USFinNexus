@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
@@ -67,6 +68,7 @@ export default function TrumpAccountPage() {
             <div className="mt-12">
                 <CalculatorFAQ faqs={FAQS} title="Trump Account Calculator FAQs" />
             </div>
+        <ContextualInternalLinks currentSlug="trump-account" showBlogs showCalculators={false} />
         </main>
     );
 }

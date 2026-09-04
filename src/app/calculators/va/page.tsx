@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import VaSeoContent from './VaSeoContent';
@@ -43,6 +44,7 @@ export default function VaLoanPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'VA Loan Calculator', item: '/calculators/va' }]} />
                             <GovLoanClient initialTab="va" />
             <VaSeoContent />
+        <ContextualInternalLinks currentSlug="va" showBlogs showCalculators={false} />
         </main>
     );
 }

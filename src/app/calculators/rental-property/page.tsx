@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import RentalPropertySeoContent from './RentalPropertySeoContent';
@@ -66,6 +67,7 @@ export default function RentalPropertyPage() {
             <RentalPropertyClient />
             <RentalPropertySeoContent />
             <CalculatorFAQ faqs={RENTAL_FAQS} title="Rental Property Investment — Frequently Asked Questions" />
+        <ContextualInternalLinks currentSlug="rental-property" showBlogs showCalculators={false} />
         </main>
     );
 }

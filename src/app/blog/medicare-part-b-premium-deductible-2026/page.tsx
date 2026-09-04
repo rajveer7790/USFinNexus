@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import ArticleSchema from '@/components/ArticleSchema';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AuthorBio from '@/components/AuthorBio';
@@ -133,6 +134,7 @@ export default function MedicarePartBPremiumDeductible2026Page() {
                     {faqs.map((faq) => <section key={faq.question}><h3>{faq.question}</h3><p>{faq.answer}</p></section>)}
                 </div>
                 <AuthorBio />
+            <ContextualInternalLinks currentSlug="medicare-part-b-premium-deductible-2026" showBlogs showCalculators />
             </article>
         </main>
     );

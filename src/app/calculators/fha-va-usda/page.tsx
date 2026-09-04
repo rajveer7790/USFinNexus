@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -61,6 +62,7 @@ export default function GovLoanComparisonPage() {
             <SemrushIntentSection slug="fha-va-usda" />
             <FhaVaUsdaSeoContent />
             <CalculatorFAQ faqs={GOV_LOAN_FAQS} title="Government Loans — Frequently Asked Questions" />
+        <ContextualInternalLinks currentSlug="fha-va-usda" showBlogs showCalculators={false} />
         </main>
     );
 }

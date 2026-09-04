@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import { Calculator, AlertTriangle, Lightbulb, Map, DollarSign, Home, CheckCircle2 } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
 import RelatedCalculators from '@/components/RelatedCalculators';
@@ -199,6 +200,7 @@ export default function PostComponent() {
                         The standard Debt-to-Income limits for a USDA loan are 29% for the Front-End (Housing Ratio) and 41% for the Back-End (Total Debt Ratio). If your credit score is over 680, the GUS automated system will frequently approve you for slightly higher ratios, but you should aim to stay below 41% total debt.
                     </p>
 
+                <ContextualInternalLinks currentSlug="usda-loans-rural-suburban-financing" showBlogs showCalculators={false} />
                 </article>
 
                 <div className="mt-16">

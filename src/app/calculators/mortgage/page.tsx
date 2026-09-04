@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import MortgageSeoContentV2 from './MortgageSeoContentV2';
@@ -75,6 +76,7 @@ export default function MortgagePage() {
             <SemrushIntentSection slug="mortgage" />
             <MortgageSeoContentV2 />
             <CalculatorFAQ faqs={MORTGAGE_FAQS} title="Mortgage Calculator FAQs" />
+        <ContextualInternalLinks currentSlug="mortgage" showBlogs showCalculators={false} />
         </main>
     );
 }

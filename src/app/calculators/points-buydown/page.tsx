@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -59,6 +60,7 @@ export default function PointsBuyDownPage() {
             <PointsBuyDownClient />
             <PointsBuydownSeoContent />
             <CalculatorFAQ faqs={POINTS_FAQS} title="Mortgage Points — Frequently Asked Questions" />
+        <ContextualInternalLinks currentSlug="points-buydown" showBlogs showCalculators={false} />
         </main>
     );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import DripSeoContent from './DripSeoContent';
@@ -68,6 +69,7 @@ export default function DripPage() {
             <DripSeoContent />
             <SemrushIntentSection slug="drip" />
             <CalculatorFAQ faqs={DRIP_FAQS} title="Dividend Investing — Frequently Asked Questions" />
+        <ContextualInternalLinks currentSlug="drip" showBlogs showCalculators={false} />
         </main>
     );
 }

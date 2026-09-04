@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import CryptoTaxSeoContent from './CryptoTaxSeoContent';
@@ -66,6 +67,7 @@ export default function CryptoTaxPage() {
             <CryptoTaxClient />
             <CryptoTaxSeoContent />
             <CalculatorFAQ faqs={CRYPTO_FAQS} title="Cryptocurrency Taxes — Frequently Asked Questions" />
+        <ContextualInternalLinks currentSlug="crypto-tax" showBlogs showCalculators={false} />
         </main>
     );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import TexasSeoContent from './TexasSeoContent';
@@ -42,6 +43,7 @@ export default function TexasPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Texas Mortgage', item: '/calculators/texas' }]} />
                 <MortgageCalculator heading="Texas Mortgage Calculator" intro="Model a Texas mortgage using your own tax and insurance assumptions." />
             <TexasSeoContent />
+        <ContextualInternalLinks currentSlug="texas" showBlogs showCalculators={false} />
         </main>
     );
 }

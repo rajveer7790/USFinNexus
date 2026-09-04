@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -61,6 +62,7 @@ export default function InterestOnlyPage() {
             <SemrushIntentSection slug="interest-only" />
             <InterestOnlySeoContent />
             <CalculatorFAQ faqs={INTEREST_ONLY_FAQS} title="Interest-Only Mortgages — Frequently Asked Questions" />
+        <ContextualInternalLinks currentSlug="interest-only" showBlogs showCalculators={false} />
         </main>
     );
 }

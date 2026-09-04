@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -59,6 +60,7 @@ export default function DebtPayoffPage() {
             <DebtPayoffClient />
             <DebtPayoffSeoContent />
             <CalculatorFAQ faqs={DEBT_PAYOFF_FAQS} title="Debt Payoff — Frequently Asked Questions" />
+        <ContextualInternalLinks currentSlug="debt-payoff" showBlogs showCalculators={false} />
         </main>
     );
 }

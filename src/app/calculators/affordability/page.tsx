@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import AffordabilitySeoContentV2 from './AffordabilitySeoContentV2';
@@ -71,6 +72,7 @@ export default function AffordabilityPage() {
             <SemrushIntentSection slug="affordability" />
             <AffordabilitySeoContentV2 />
             <CalculatorFAQ faqs={AFFORDABILITY_FAQS} title="Home Affordability Calculator FAQs" />
+        <ContextualInternalLinks currentSlug="affordability" showBlogs showCalculators={false} />
         </main>
     );
 }

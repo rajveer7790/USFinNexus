@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 
 const guides = {
   'selling-house-with-mortgage': {
@@ -87,6 +88,7 @@ export default function MortgageSupportGuide({ slug }: { slug: MortgageSupportGu
         {guide.faqs.map(([question, answer]) => <section key={question}><h3>{question}</h3><p>{answer}</p></section>)}
         <h2>Use the related tools</h2>
         <ul>{guide.links.map(([href, label]) => <li key={href}><Link href={href}>{label}</Link></li>)}</ul>
+        <ContextualInternalLinks currentSlug={slug} showBlogs showCalculators={false} />
         <p className="text-sm">This guide provides general education, not personalized lending, legal, tax or investment advice. Confirm current terms with the lender, servicer, closing professional or appropriate adviser.</p>
       </article>
     </main>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -64,6 +65,7 @@ export default function BudgetPage() {
             <BudgetClient />
             <BudgetSeoContent />
             <CalculatorFAQ faqs={BUDGET_FAQS} title="Budget Planner — Frequently Asked Questions" />
+        <ContextualInternalLinks currentSlug="budget" showBlogs showCalculators={false} />
         </main>
     );
 }

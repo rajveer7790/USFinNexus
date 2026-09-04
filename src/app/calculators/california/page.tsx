@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import CaliforniaSeoContent from './CaliforniaSeoContent';
@@ -44,6 +45,7 @@ export default function CaliforniaPage() {
                 <MortgageCalculator heading="California Mortgage Calculator" intro="Model a California mortgage using your own tax and insurance assumptions." />
             <CaliforniaSeoContent />
             <SemrushIntentSection slug="california" />
+        <ContextualInternalLinks currentSlug="california" showBlogs showCalculators={false} />
         </main>
     );
 }

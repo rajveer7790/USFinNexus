@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import ArmSeoContent from './ArmSeoContent';
@@ -44,6 +45,7 @@ export default function ArmCalculatorPage() {
                             <ArmCalculatorClient />
             <SemrushIntentSection slug="arm" />
             <ArmSeoContent />
+        <ContextualInternalLinks currentSlug="arm" showBlogs showCalculators={false} />
         </main>
     );
 }

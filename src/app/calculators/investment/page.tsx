@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -61,6 +62,7 @@ export default function InvestmentPage() {
             <InvestmentSeoContent />
             <SemrushIntentSection slug="investment" />
             <CalculatorFAQ faqs={INVESTMENT_FAQS} title="Compound Interest — Frequently Asked Questions" />
+        <ContextualInternalLinks currentSlug="investment" showBlogs showCalculators={false} />
         </main>
     );
 }

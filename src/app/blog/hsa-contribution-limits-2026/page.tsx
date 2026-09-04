@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import ArticleSchema from '@/components/ArticleSchema';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AuthorBio from '@/components/AuthorBio';
@@ -209,6 +210,7 @@ export default function HsaContributionLimits2026Page() {
                 </div>
 
                 <div className="mx-auto mt-12 max-w-3xl"><AuthorBio updatedDate="August 2, 2026" /></div>
+            <ContextualInternalLinks currentSlug="hsa-contribution-limits-2026" showBlogs showCalculators />
             </article>
         </main>
     );

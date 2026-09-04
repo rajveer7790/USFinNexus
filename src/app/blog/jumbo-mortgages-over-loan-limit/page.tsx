@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import { Calculator, Home, AlertTriangle, Scale, ShieldCheck, DollarSign } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
 import RelatedCalculators from '@/components/RelatedCalculators';
@@ -195,6 +196,7 @@ export default function PostComponent() {
                         Because of this, major banks often offer highly competitive interest rates on Jumbo loans, sometimes undercutting standard conventional rates by 0.25% or more, just to win your business.
                     </p>
 
+                <ContextualInternalLinks currentSlug="jumbo-mortgages-over-loan-limit" showBlogs showCalculators={false} />
                 </article>
 
                 <div className="mt-16">

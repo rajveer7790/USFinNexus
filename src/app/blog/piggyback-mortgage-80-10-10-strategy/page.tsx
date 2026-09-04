@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import { Calculator, SplitSquareHorizontal, Percent, CheckCircle2, AlertTriangle, ShieldAlert } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
 import RelatedCalculators from '@/components/RelatedCalculators';
@@ -216,6 +217,7 @@ export default function PostComponent() {
                         <li className="flex items-center gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600"/> <strong>Cash Reserves:</strong> The lender will likely require you to have several months of mortgage payments sitting in your savings account after closing.</li>
                     </ul>
 
+                <ContextualInternalLinks currentSlug="piggyback-mortgage-80-10-10-strategy" showBlogs showCalculators={false} />
                 </article>
 
                 <div className="mt-16">

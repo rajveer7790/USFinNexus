@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import DtiSeoContentV2 from './DtiSeoContentV2';
@@ -71,6 +72,7 @@ export default function DtiPage() {
             <SemrushIntentSection slug="dti" />
             <DtiSeoContentV2 />
             <CalculatorFAQ faqs={DTI_FAQS} title="Debt-to-Income Ratio Calculator FAQs" />
+        <ContextualInternalLinks currentSlug="dti" showBlogs showCalculators={false} />
         </main>
     );
 }

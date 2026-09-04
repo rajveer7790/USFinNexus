@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -69,6 +70,7 @@ export default function IncomeTaxPage() {
             <IncomeTaxSeoContent />
             <SemrushIntentSection slug="income-tax" />
             <CalculatorFAQ faqs={INCOME_TAX_FAQS} title="2026 Federal Income Tax Calculator FAQs" />
+        <ContextualInternalLinks currentSlug="income-tax" showBlogs showCalculators={false} />
         </main>
     );
 }

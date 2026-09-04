@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import FloridaSeoContent from './FloridaSeoContent';
@@ -42,6 +43,7 @@ export default function FloridaPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Florida Mortgage', item: '/calculators/florida' }]} />
                 <MortgageCalculator heading="Florida Mortgage Calculator" intro="Model a Florida mortgage using your own tax and insurance assumptions." />
             <FloridaSeoContent />
+        <ContextualInternalLinks currentSlug="florida" showBlogs showCalculators={false} />
         </main>
     );
 }

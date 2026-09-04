@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import ArticleSchema from '@/components/ArticleSchema';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AuthorBio from '@/components/AuthorBio';
@@ -214,6 +215,7 @@ export default function SocialSecurityEarningsTest2026Page() {
                 <div className="mx-auto mt-12 max-w-3xl">
                     <AuthorBio updatedDate="July 29, 2026" />
                 </div>
+            <ContextualInternalLinks currentSlug="social-security-earnings-test-2026" showBlogs showCalculators />
             </article>
         </main>
     );

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -62,6 +63,7 @@ export default function HELOCPage() {
             <SemrushIntentSection slug="heloc" />
             <HelocSeoContent />
             <CalculatorFAQ faqs={HELOC_FAQS} title="HELOC — Frequently Asked Questions" />
+        <ContextualInternalLinks currentSlug="heloc" showBlogs showCalculators={false} />
         </main>
     );
 }

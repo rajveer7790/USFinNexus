@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -61,6 +62,7 @@ export default function CreditCardPage() {
             <CreditCardSeoContent />
             <SemrushIntentSection slug="credit-card" />
             <CalculatorFAQ faqs={CREDIT_CARD_FAQS} title="Credit Card Payoff — Frequently Asked Questions" />
+        <ContextualInternalLinks currentSlug="credit-card" showBlogs showCalculators={false} />
         </main>
     );
 }

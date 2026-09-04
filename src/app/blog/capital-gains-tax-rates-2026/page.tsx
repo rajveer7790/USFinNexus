@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import ArticleSchema from '@/components/ArticleSchema';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AuthorBio from '@/components/AuthorBio';
@@ -135,6 +136,7 @@ export default function CapitalGainsTaxRates2026Page() {
                     {faqs.map((faq) => <section key={faq.question}><h3>{faq.question}</h3><p>{faq.answer}</p></section>)}
                 </div>
                 <div className="mx-auto mt-12 max-w-3xl"><AuthorBio updatedDate="August 9, 2026" /></div>
+            <ContextualInternalLinks currentSlug="capital-gains-tax-rates-2026" showBlogs showCalculators />
             </article>
         </main>
     );

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import FirePlannerSeoContent from './FirePlannerSeoContent';
@@ -66,6 +67,7 @@ export default function FirePlannerPage() {
             <FirePlannerClient />
             <FirePlannerSeoContent />
             <CalculatorFAQ faqs={FIRE_FAQS} title="FIRE Movement — Frequently Asked Questions" />
+        <ContextualInternalLinks currentSlug="fire-planner" showBlogs showCalculators={false} />
         </main>
     );
 }

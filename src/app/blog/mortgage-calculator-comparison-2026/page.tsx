@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import { Calculator, LayoutGrid, Search, AlertTriangle, Lightbulb, TrendingUp } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
 import RelatedCalculators from '@/components/RelatedCalculators';
@@ -186,6 +187,7 @@ export default function PostComponent() {
                         </li>
                     </ul>
 
+                <ContextualInternalLinks currentSlug="mortgage-calculator-comparison-2026" showBlogs showCalculators={false} />
                 </article>
 
                 <div className="mt-16">

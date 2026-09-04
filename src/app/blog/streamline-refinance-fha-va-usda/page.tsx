@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import { Calculator, AlertTriangle, Zap, CheckCircle2, FastForward, Clock, FileText } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
 import RelatedCalculators from '@/components/RelatedCalculators';
@@ -215,6 +216,7 @@ export default function PostComponent() {
                         You must still calculate your Break-Even point, even on a streamline refinance, to ensure you are not losing money long-term.
                     </p>
 
+                <ContextualInternalLinks currentSlug="streamline-refinance-fha-va-usda" showBlogs showCalculators={false} />
                 </article>
 
                 <div className="mt-16">

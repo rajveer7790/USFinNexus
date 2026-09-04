@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import ArticleSchema from '@/components/ArticleSchema';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AuthorBio from '@/components/AuthorBio';
@@ -139,6 +140,7 @@ export default function EstateGiftTaxExemption2026Page() {
                     {faqs.map((faq) => <section key={faq.question}><h3>{faq.question}</h3><p>{faq.answer}</p></section>)}
                 </div>
                 <div className="mx-auto mt-12 max-w-3xl"><AuthorBio updatedDate="August 11, 2026" /></div>
+            <ContextualInternalLinks currentSlug="estate-gift-tax-exemption-2026" showBlogs showCalculators />
             </article>
         </main>
     );

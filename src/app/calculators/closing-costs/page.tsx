@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import ClosingCostsSeoContent from './ClosingCostsSeoContent';
@@ -70,6 +71,7 @@ export default function ClosingCostsPage() {
             <ClosingCostsSeoContent />
             <SemrushIntentSection slug="closing-costs" />
             <CalculatorFAQ faqs={CLOSING_COSTS_FAQS} title="Closing Cost Calculator FAQs" />
+        <ContextualInternalLinks currentSlug="closing-costs" showBlogs showCalculators={false} />
         </main>
     );
 }

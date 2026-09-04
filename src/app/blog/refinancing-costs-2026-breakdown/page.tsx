@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import { Calculator, AlertTriangle, Lightbulb, TrendingDown, CheckCircle2, DollarSign, Target } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
 import RelatedCalculators from '@/components/RelatedCalculators';
@@ -213,6 +214,7 @@ export default function PostComponent() {
                         Both options are completely valid strategies if you are cash-poor but desperately need to refinance out of an adjustable-rate mortgage. Just understand that you are always paying the toll troll—you are just deciding whether to pay him today or pay him tomorrow.
                     </p>
 
+                <ContextualInternalLinks currentSlug="refinancing-costs-2026-breakdown" showBlogs showCalculators={false} />
                 </article>
 
                 <div className="mt-16">
