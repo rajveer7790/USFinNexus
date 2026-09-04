@@ -128,6 +128,8 @@ function getBlogPosts() {
             if (slug === 'medicare-part-b-premium-deductible-2026') image = '/images/medicare-part-b-premium-deductible-2026.webp';
             if (slug === 'tax-extension-deadline-2026') image = '/images/tax-extension-deadline-2026.webp';
             if (slug === 'snap-benefits-2027') image = '/images/snap-benefits-2027.webp';
+            if (slug === 'fafsa-2027-28') image = '/images/fafsa-2027-28.webp';
+            if (slug === 'medicare-open-enrollment-2027') image = '/images/medicare-open-enrollment-2027.webp';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }

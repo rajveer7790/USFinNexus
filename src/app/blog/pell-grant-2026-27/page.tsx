@@ -108,6 +108,7 @@ export default function PellGrant202627Page() {
                         <li>Compare complete aid offers, including grants, scholarships, work-study, loans and the school&apos;s net price.</li>
                     </ol>
                     <p>Federal Student Aid says the FAFSA is free. Avoid companies that charge to submit the application or promise a guaranteed grant. State and school deadlines can be earlier than the federal deadline, and some nonfederal funds are limited, so filing sooner can protect access to more aid.</p>
+                    <p>Students starting school in fall 2027 need the next award-year form instead. Use the <Link href="/blog/fafsa-2027-28">FAFSA 2027–28 opening-date and filing checklist</Link> to prepare contributors, 2025 tax information and school deadlines.</p>
 
                     <h2>When Pell Grant money is paid</h2>
                     <p>The Department of Education does not normally send a Pell check directly to the student before enrollment. The school applies aid to eligible institutional charges such as tuition, fees and campus housing or food when applicable. Any eligible credit balance is then delivered to the student under the school&apos;s disbursement process.</p>
