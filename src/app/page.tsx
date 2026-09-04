@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import {
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Financial Calculators',
+        title: 'Financial Calculators for Mortgages, Loans & Money',
         description: 'Free U.S. mortgage and personal-finance calculators with clear assumptions and no account required.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -149,6 +150,20 @@ export default function HomePage() {
         })),
     };
 
+    const faqPageSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        '@id': 'https://usfinnexus.com/#faq',
+        mainEntity: HOME_FAQS.map((faq) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+            },
+        })),
+    };
+
     return (
         <div className="neo-root">
             <div className="ph-announce">
@@ -169,9 +184,8 @@ export default function HomePage() {
                     <div className="neo-hero-left">
                         <div className="neo-status neo-reveal"><span className="neo-status-pulse" /> U.S. Financial Planning Tools</div>
                         <h1 className="neo-h1">
-                            <span className="neo-h1-w1">Free Financial Calculators</span>
-                            <span className="neo-h1-w2">for Mortgages, Loans & Money</span>
-                            <span className="neo-h1-w3">— Clear Assumptions, No Account</span>
+                            <span className="neo-h1-w1">Free U.S. Financial</span>
+                            <span className="neo-h1-w3">Calculators</span>
                         </h1>
                         <p className="neo-hero-p neo-reveal neo-reveal--d2">
                             Estimate mortgage payments, affordability, debt, loans, retirement and taxes with tools built for U.S. consumers. <strong>Check the assumptions before you act.</strong>
@@ -254,6 +268,18 @@ export default function HomePage() {
                         <div className="neo-diff-visual flex flex-col justify-between">
                             <div>
                                 <div className="neo-dv-glow" /><div className="neo-dv-title">What We Prioritize</div>
+                                <div className="mb-6 flex items-center gap-4">
+                                    <Image
+                                        src="/images/home-hero.png"
+                                        alt="Illustrated home and financial planning dashboard with charts"
+                                        width={144}
+                                        height={144}
+                                        className="h-24 w-24 shrink-0 rounded-xl border border-white/10 object-cover"
+                                    />
+                                    <p className="text-xs leading-relaxed" style={{ color: 'rgba(255,255,255,.55)' }}>
+                                        Plan with transparent assumptions, then verify year-specific limits against the official sources.
+                                    </p>
+                                </div>
                                 {[
                                     ['Primary keyword', 'One main intent per page'],
                                     ['Year-specific values', 'Named official sources'],
@@ -265,6 +291,12 @@ export default function HomePage() {
                             <div className="mt-8 text-center"><Link href="/methodology" className="text-blue-600 hover:text-blue-800 font-bold text-sm inline-flex items-center gap-1">Read our methodology <ArrowRight size={14} /></Link></div>
                         </div>
                     </div>
+                    <p className="mt-6 text-xs leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>
+                        Official reference links:{' '}
+                        <a href="https://www.fhfa.gov/data/conforming-loan-limit" target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-600 hover:text-blue-800">FHFA conforming loan limits</a>,{' '}
+                        <a href="https://www.hud.gov/program_offices/housing/sfh/lender/origination/mortgage_limits" target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-600 hover:text-blue-800">HUD FHA mortgage limits</a>, and{' '}
+                        <a href="https://www.irs.gov/filing" target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-600 hover:text-blue-800">IRS filing guidance</a>.
+                    </p>
                 </div>
             </section>
 
@@ -295,6 +327,7 @@ export default function HomePage() {
             </section>
 
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
         </div>
     );
 }
