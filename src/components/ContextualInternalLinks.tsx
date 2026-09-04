@@ -135,8 +135,15 @@ function getCalculatorSuggestions(currentSlug: string): CalculatorLink[] {
         return overrideHrefs.map((href) => CALCULATORS.find((calculator) => calculator.href === href)).filter((calculator): calculator is CalculatorLink => Boolean(calculator));
     }
     const source = currentSlug.toLowerCase();
+    const sourceClusters = clusterMatches(source);
     return CALCULATORS
-        .map((calculator, index) => ({ calculator, score: calculator.keywords.reduce((total, keyword) => total + (source.includes(keyword) ? 1 : 0), 0), index }))
+        .map((calculator, index) => {
+            const directMatches = calculator.keywords.reduce((total, keyword) => total + (source.includes(keyword) ? 1 : 0), 0);
+            const calculatorClusters = clusterMatches(calculator.keywords.join(' '));
+            const sharedClusters = [...sourceClusters].filter((cluster) => calculatorClusters.has(cluster)).length;
+            return { calculator, score: directMatches * 3 + sharedClusters * 2, index };
+        })
+        .filter(({ score }) => score > 0)
         .sort((a, b) => b.score - a.score || a.index - b.index)
         .slice(0, 3)
         .map(({ calculator }) => calculator);
