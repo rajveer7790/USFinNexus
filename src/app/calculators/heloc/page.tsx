@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     alternates: { canonical: 'https://usfinnexus.com/calculators/heloc' },
     twitter: {
         card: 'summary_large_image',
-        title: 'HELOC Calculator 2026 — Home Equity Line of Credit',
+        title: 'Free HELOC Calculator 2026 - Home Equity Line of Credit',
         description: 'Calculate your HELOC available equity, draw-period payments, and repayment-period costs. Free, no signup.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },

@@ -12,14 +12,20 @@ const MortgageCalculator = dynamic(() => import('../mortgage/MortgageCalculatorC
 });
 
 export const metadata: Metadata = {
-    title: "Mortgage Payoff Calculator | Free Tool",
+    title: "Mortgage Payoff Calculator 2026: Extra Payment Savings",
     description: 'Model extra monthly principal and compare your original mortgage schedule with an accelerated payoff plan, including estimated time and interest saved.',
     alternates: { canonical: '/calculators/mortgage-payoff' },
     openGraph: {
         type: 'website',
         url: 'https://usfinnexus.com/calculators/mortgage-payoff',
-        title: 'Mortgage Payoff Calculator',
+        title: 'Mortgage Payoff Calculator 2026: Extra Payment Savings',
         description: 'Estimate how extra principal payments change your mortgage payoff date and total interest.',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Mortgage Payoff Calculator 2026: Extra Payment Savings',
+        description: 'Estimate how extra principal changes your payoff date and total interest.',
+        images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
 

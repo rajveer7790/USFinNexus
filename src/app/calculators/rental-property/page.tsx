@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import RentalPropertySeoContent from './RentalPropertySeoContent';
@@ -10,6 +9,7 @@ const RentalPropertyClient = nextDynamic(() => import('./RentalPropertyClient'),
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
+import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Rental Property ROI Calculator 2026',
+        title: 'Rental Property ROI & Cash Flow Calculator 2026',
         description: 'Cash flow, cap rate, and cash-on-cash return for any rental property. Free real estate investment calculator.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -66,8 +66,8 @@ export default function RentalPropertyPage() {
             <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026</p>
             <RentalPropertyClient />
             <RentalPropertySeoContent />
+            <SemrushIntentSection slug="rental-property" />
             <CalculatorFAQ faqs={RENTAL_FAQS} title="Rental Property Investment — Frequently Asked Questions" />
-        <ContextualInternalLinks currentSlug="rental-property" showBlogs showCalculators={false} />
         </main>
     );
 }

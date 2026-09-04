@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     alternates: { canonical: 'https://usfinnexus.com/calculators/california' },
     openGraph: {
         type: 'website',
-        title: 'California Mortgage Calculator 2026 — Prop 13 & Jumbo Loans',
+        title: 'California Mortgage Calculator 2026 — Prop 13, Jumbo Loans & Taxes',
         description: 'CA-specific mortgage calculator with Prop 13 property tax protection and high-cost county jumbo loan limits.',
         url: 'https://usfinnexus.com/calculators/california',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'California Mortgage Calculator 2026 — USFinNexus' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'California Mortgage Calculator 2026',
+        title: 'California Mortgage Calculator 2026 — Prop 13, Jumbo Loans & Taxes',
         description: 'CA mortgage calculator with Prop 13 taxes, jumbo loan limits, and 2026 high-cost county limits.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },

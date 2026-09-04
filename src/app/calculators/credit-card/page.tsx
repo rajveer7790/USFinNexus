@@ -16,19 +16,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Credit Card Debt Calculator: Payoff Date & Interest',
+    title: 'Credit Card Payoff Calculator 2026: Date & Interest',
     description: 'Use this credit card debt calculator to estimate payoff time, total interest and the effect of a larger fixed monthly payment or balance transfer.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/credit-card' },
     openGraph: {
         type: 'website',
-        title: 'Credit Card Payoff Calculator 2026',
+        title: 'Credit Card Payoff Calculator 2026: Date & Interest',
         description: 'Find your debt-free date and total interest cost. See how paying more each month saves you thousands.',
         url: 'https://usfinnexus.com/calculators/credit-card',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Credit Card Payoff Calculator 2026 — USFinNexus' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Credit Card Payoff Calculator 2026',
+        title: 'Credit Card Payoff Calculator 2026: Date & Interest',
         description: 'When will your credit card be paid off? See your debt-free date and total interest cost.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },

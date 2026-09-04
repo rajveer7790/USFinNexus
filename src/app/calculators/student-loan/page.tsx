@@ -16,19 +16,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Student Loan Payment Calculator: Repayment & Payoff',
+    title: 'Student Loan Payment Calculator 2026: Repayment & Payoff',
     description: 'Use this student loan payment calculator to estimate monthly payments, repayment term, payoff date, total interest and extra-payment scenarios.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/student-loan' },
     openGraph: {
         type: 'website',
-        title: 'Student Loan Payoff Calculator 2026',
+        title: 'Student Loan Payment Calculator 2026: Repayment & Payoff',
         description: 'See your exact student loan payoff date and how much extra payments save. Free calculator with PDF export.',
         url: 'https://usfinnexus.com/calculators/student-loan',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Student Loan Calculator 2026 — USFinNexus' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Student Loan Payoff Calculator 2026',
+        title: 'Student Loan Payment Calculator 2026: Repayment & Payoff',
         description: 'When will your student loans be paid off? See how extra payments cut years off your debt.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },

@@ -249,6 +249,21 @@ const intentPages = {
       { href: '/blog/credit-card-payoff-calculator-strategies', label: 'review payoff methods' },
     ],
   },
+  'rental-property': {
+    title: 'Rental property ROI, cash flow and cap-rate planning',
+    answer: 'A rental-property return estimate should include rent, vacancy, operating expenses, financing, capital expenditures and the cash invested. Compare cash flow, cap rate and cash-on-cash return as separate measures.',
+    points: [
+      { title: 'Use realistic expenses', detail: 'Include taxes, insurance, repairs, vacancy, management, utilities and reserves instead of relying only on gross rent.' },
+      { title: 'Separate return measures', detail: 'Cap rate excludes financing, while cash-on-cash return uses the cash invested. Do not compare them as interchangeable percentages.' },
+      { title: 'Stress-test the deal', detail: 'Model lower rent, vacancy, higher repairs and a different interest rate before treating the result as an investment decision.' },
+    ],
+    scenarios: ['Compare financed and all-cash purchases.', 'Stress-test vacancy and maintenance reserves.', 'Compare cap rate with cash-on-cash return.'],
+    links: [
+      { href: '/calculators/investment', label: 'compare general investment growth' },
+      { href: '/calculators/mortgage', label: 'estimate rental-property financing' },
+      { href: '/blog/short-term-rental-regulations-2026', label: 'review short-term-rental regulations' },
+    ],
+  },
   california: {
     title: 'California mortgage calculator assumptions',
     answer: 'A California mortgage estimate should combine principal and interest with property taxes, homeowners insurance, mortgage insurance, HOA dues and transaction-specific costs. Proposition 13 affects assessed-value rules, but it does not make every owner’s tax bill identical.',
