@@ -67,8 +67,6 @@ function getBlogEntries(): Array<{ slug: string; lastModified?: Date }> {
         'what-is-a-good-debt-to-income-ratio',
         'what-is-a-jumbo-loan-2026',
         'when-to-refinance-1-percent-rule',
-        'personal-loan-calculator-amount',
-        'tcja-tax-sunset-2026-mortgage-impact',
     ]);
     try {
         const blogDir = path.join(process.cwd(), 'src', 'app', 'blog');

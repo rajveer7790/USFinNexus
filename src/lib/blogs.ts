@@ -33,7 +33,6 @@ export const CANONICALIZED_ALIASES = new Set([
     'remove-pmi-mortgage-hpa-rules-2026', 'reverse-mortgage-hecm-explained',
     'va-loans-military-benefits', 'what-is-a-good-debt-to-income-ratio',
     'what-is-a-jumbo-loan-2026', 'when-to-refinance-1-percent-rule',
-    'personal-loan-calculator-amount', 'tcja-tax-sunset-2026-mortgage-impact',
 ]);
 
 export function getAllBlogPosts(): BlogPostEntry[] {
