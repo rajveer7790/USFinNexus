@@ -8,13 +8,13 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: "Assumable Mortgages in 2026: How to Buy a Home with a 2.5% Rate | Guide",
-    description: 'Learn how to legally transfer a sellers ultra-low 2.5% mortgage rate into your name using an assumable mortgage in 2026. Complete guide to FHA and VA loan assumptions.',
+    title: "Assumable Mortgages in 2026: FHA, VA & USDA Rules | Guide",
+    description: 'Learn how mortgage assumptions work, how to verify FHA, VA or USDA eligibility, and how to budget for the seller’s equity gap and lender review.',
     alternates: { canonical: 'https://usfinnexus.com/blog/assumable-mortgages-2026-strategy' },
     openGraph: {
         type: 'article',
-        title: 'Assumable Mortgages in 2026: The Ultimate Buyer Strategy',
-        description: 'You can still get a 2.5% mortgage rate in 2026. Here is the exact strategy for finding and closing an assumable FHA or VA loan.',
+        title: 'Assumable Mortgages in 2026: Buyer Checklist',
+        description: 'A practical checklist for eligibility, equity-gap funding, servicer approval, fees and closing timelines.',
         url: 'https://usfinnexus.com/blog/assumable-mortgages-2026-strategy',
         siteName: 'USFinNexus',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Assumable Mortgage 2026' }]
@@ -30,8 +30,8 @@ export default function BlogPost() {
     { '@type': 'Question', name: 'Do I have to qualify for the seller\'s mortgage?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. You cannot simply shake hands with the seller. You must submit a full application to the seller\'s mortgage servicer and prove you meet the strict credit score, DTI, and income requirements to take over the loan.' } },
 ] }) }} />
         <ArticleSchema
-            title="Assumable Mortgages in 2026: How to Buy a Home with a 2.5% Rate"
-            description="Learn how to legally transfer a seller's ultra-low 2.5% mortgage rate into your name using an assumable mortgage in 2026."
+            title="Assumable Mortgages in 2026: FHA, VA & USDA Rules"
+            description="Learn how assumptions work, including eligibility, equity-gap funding, servicer approval, fees and timelines."
             url="https://usfinnexus.com/blog/assumable-mortgages-2026-strategy"
             datePublished="2026-05-26"
             dateModified="2026-05-26"
@@ -60,7 +60,7 @@ export default function BlogPost() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    Between 2020 and 2021, millions of American homeowners locked in 30-year fixed mortgages at historic 2.5% to 3.0% interest rates. In 2026, those interest rates feel like ancient history. But what if there was a legal mechanism to buy a house today and <em>steal</em> the seller's 2021 interest rate?
+                    Some older FHA, VA and USDA loans may be assumable, allowing an approved buyer to take over the existing loan’s balance and rate. The rate is not guaranteed, the servicer must approve the transfer, and the buyer must fund any difference between the home price and the assumed balance.
                 </p>
 
                 <p>
@@ -171,9 +171,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Tactics for Closing an Assumable Mortgage?</h2>
                     <p className="text-lg text-slate-700 mb-6">

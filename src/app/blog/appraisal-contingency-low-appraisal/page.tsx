@@ -34,9 +34,9 @@ export default function BlogPost() {
                 { '@type': 'Question', name: 'What is an appraisal contingency?', acceptedAnswer: { '@type': 'Answer', text: 'An appraisal contingency is a clause in a real estate contract that states the buyer will only purchase the home if it appraises for an amount equal to or greater than the agreed-upon purchase price. If the appraisal comes in low, the buyer can walk away and get their earnest money deposit back.' } },
                 { '@type': 'Question', name: 'Will a bank lend more than the appraised value?', acceptedAnswer: { '@type': 'Answer', text: 'No. The bank will only lend a percentage of the appraised value or the purchase price, whichever is lower. If you offer $500,000 but the home appraises for $450,000, the bank calculates your loan based on the $450,000 valuation.' } },
                 { '@type': 'Question', name: 'What is an appraisal gap?', acceptedAnswer: { '@type': 'Answer', text: 'An appraisal gap is the difference between your accepted offer price and the lower appraised value. If you want to proceed with the purchase, you must bridge this gap by bringing extra cash to the closing table, or by successfully negotiating the price down with the seller.' } },
-                { '@type': 'Question', name: 'Should I ever waive my appraisal contingency?', acceptedAnswer: { '@type': 'Answer', text: 'You should only waive your appraisal contingency if you have massive cash reserves. If you waive it and the home appraises $50,000 low, you must legally pay that $50,000 out of pocket. If you cannot, the seller will seize your earnest money.' } }
+                { '@type': 'Question', name: 'Should I ever waive my appraisal contingency?', acceptedAnswer: { '@type': 'Answer', text: 'Waiving an appraisal contingency increases the buyer’s risk. If the appraisal is low, the contract may require the buyer to proceed, renegotiate, bring cash, or risk a contract dispute; the exact result depends on the signed agreement and state law. Review it with a qualified real-estate professional before waiving protection.' } }
             ] }) }} />
-            
+
             <ArticleSchema
                 title="Appraisal Contingency: What Happens if Your Home Appraises Low?"
                 description="A low appraisal can destroy a real estate deal. Learn exactly how an appraisal contingency protects your earnest money, and how to fix an appraisal gap in 2026."
@@ -46,7 +46,7 @@ export default function BlogPost() {
                 authorName="USFinNexus Editorial Team"
                 keywords={['Appraisal', 'Home Buying', 'Real Estate', '2026', 'Contingency']}
             />
-            
+
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Appraisal Contingency', item: '/blog/appraisal-contingency-low-appraisal' }]} />
                 <article className="prose prose-slate prose-lg max-w-none">
@@ -89,7 +89,7 @@ export default function BlogPost() {
                         To understand the problem, you must understand the lender's perspective. When a bank gives you a $400,000 mortgage, they are using the physical house as collateral. If you lose your job and stop paying the mortgage, the bank has the legal right to foreclose on the property, sell it on the open market, and recoup their $400,000.
                     </p>
                     <p>
-                        If you offered to buy a broken-down shack for a million dollars, the bank would be taking an enormous financial risk. If they foreclosed on the shack, they could never sell it for a million dollars to get their money back. 
+                        If you offered to buy a broken-down shack for a million dollars, the bank would be taking an enormous financial risk. If they foreclosed on the shack, they could never sell it for a million dollars to get their money back.
                     </p>
                     <p>
                         Therefore, the bank hires an independent, licensed <strong>Appraiser</strong>. The appraiser visits the property, measures the square footage, checks the condition, and heavily analyzes "comps" (comparable homes with similar features that have sold in the exact same neighborhood within the last six months). The appraiser then generates a legally binding report stating the exact Fair Market Value of the home.
@@ -115,9 +115,9 @@ export default function BlogPost() {
                     <p>
                         The <strong>Appraisal Contingency</strong> is a legal clause in your contract that provides a legally valid reason to back out. It essentially says:
                     </p>
-                    
+
                     <div className="card p-8 mb-8 border-l-4 border-emerald-500 bg-emerald-50 text-emerald-900 text-lg italic font-medium">
-                        "I agree to buy this house for $450,000, BUT this agreement is strictly contingent upon the home formally appraising for at least $450,000. If the appraiser values it for less, I have the absolute right to cancel this contract and receive my entire earnest money deposit back without penalty."
+                        "I agree to buy this house for $450,000, subject to the appraisal-contingency language in the signed contract. If the appraised value is lower, the contract may give the buyer options such as renegotiating, bringing additional cash, or cancelling—but the exact rights and deadlines depend on the contract and state law."
                     </div>
 
                     <h2 className="text-3xl font-bold mt-16 mb-6 text-navy-900 flex items-center gap-3">
@@ -128,7 +128,7 @@ export default function BlogPost() {
                     <p>
                         Let's look at the brutal math of a low appraisal. Assume you are buying a house with a 20% down payment to avoid PMI.
                     </p>
-                    
+
                     <ul className="space-y-4 my-8">
                         <li className="flex items-center gap-3 bg-slate-50 p-4 rounded-lg">
                             <span className="w-32 font-bold text-navy-900">Contract Price:</span>
@@ -148,10 +148,10 @@ export default function BlogPost() {
                         Now, the appraisal comes back at <strong>$420,000</strong>.
                     </p>
                     <p>
-                        Because the bank uses the lower number, they recalculate everything based on $420,000. The bank is now only willing to lend you 80% of $420,000 (which is $336,000). 
+                        Because the bank uses the lower number, they recalculate everything based on $420,000. The bank is now only willing to lend you 80% of $420,000 (which is $336,000).
                     </p>
                     <p>
-                        You still legally owe the seller $450,000, but the bank is only giving you $336,000. 
+                        You still legally owe the seller $450,000, but the bank is only giving you $336,000.
                         <br/><br/>
                         <span className="text-2xl font-black text-red-600 block text-center">$450,000 - $336,000 = $114,000 cash required.</span>
                     </p>
@@ -207,7 +207,7 @@ export default function BlogPost() {
                     <p>
                         In hyper-competitive real estate markets, buyers are often pressured to <strong>waive</strong> their appraisal contingency to make their offer more attractive to the seller. By waiving it, you are making a dangerous promise to the seller: <em>"I will pay you $450,000, and I will cover any appraisal gap in cash, no matter how large it is."</em>
                     </p>
-                    
+
                     <div className="card p-8 mb-8 border-l-4 border-red-500 bg-red-50">
                         <h3 className="text-xl font-bold mb-4 text-red-900">A Massive Financial Risk</h3>
                         <p className="text-red-900 mb-0">
@@ -231,9 +231,9 @@ export default function BlogPost() {
                 </article>
 
                 <div className="mt-16">
-                    
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Negotiation Tactics for Buyers After a Low Appraisal?</h2>
                     <p className="text-lg text-slate-700 mb-6">

@@ -51,7 +51,7 @@ const TOOLS = [
     { href: '/calculators/investment', icon: LineChart, title: 'Compound Interest', desc: 'Investment growth calculator.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/trump-account', icon: PiggyBank, title: 'Trump Account 2026', desc: '$1,000 seed + family contribution growth.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/drip', icon: LineChart, title: 'DRIP Forecaster', desc: 'Dividend reinvestment plan.', badge: 'new', cat: 'wealth' },
-    { href: '/calculators/income-tax', icon: FileText, title: 'Income Tax 2026', desc: '2026 brackets + TCJA sunset.', badge: 'new', cat: 'wealth' },
+    { href: '/calculators/income-tax', icon: FileText, title: 'Income Tax 2026', desc: '2026 brackets + One Big Beautiful Bill updates.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/crypto-tax', icon: FileText, title: 'Crypto Tax Estimator', desc: 'Capital gains tax estimator.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/options-profit', icon: BarChart2, title: 'Options Profit/Loss', desc: 'Visualizer for Calls/Puts.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/budget', icon: PiggyBank, title: 'Budget 50/30/20', desc: 'Needs, wants, savings split.', cat: 'wealth' },
@@ -69,7 +69,7 @@ export default function CalculatorsPage() {
             <section className="neo-light-zone py-12">
                 <div className="neo-container">
                     <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }]} />
-                    
+
                     <header className="mb-12">
                         <div className="neo-sec-tag"><span className="neo-sec-dot" /> All Tools</div>
                         <h1 className="neo-sec-h2">The Complete <em>Calculator Library</em></h1>

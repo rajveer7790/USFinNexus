@@ -23,7 +23,7 @@ export default function HomeownerTaxDeductionsBlog() {
                 { '@type': 'Question', name: 'What is the SALT deduction limit for tax year 2026?', acceptedAnswer: { '@type': 'Answer', text: 'For tax year 2026, the overall SALT limit is $40,400, or $20,200 for married taxpayers filing separately. A phaseout begins above specified modified adjusted gross income levels, with a statutory floor.' } },
                 { '@type': 'Question', name: 'What is the enhanced senior deduction?', acceptedAnswer: { '@type': 'Answer', text: 'For tax years 2025 through 2028, an eligible taxpayer age 65 or older may claim an additional deduction of up to $6,000 per person. Income phaseouts apply, and homeownership is not required.' } }
             ] }) }} />
-            
+
             <ArticleSchema
                 title="Every Homeowner Tax Deduction You Can Claim in 2026"
                 description="IRS-verified guide to tax-year 2026 SALT, mortgage-interest, mortgage-insurance and enhanced senior-deduction rules."
@@ -33,7 +33,7 @@ export default function HomeownerTaxDeductionsBlog() {
                 authorName="USFinNexus Editorial Team"
                 keywords={['homeowner tax deductions 2026', 'SALT deduction 2026', 'PMI tax deductible', 'mortgage interest deduction', 'senior homeowner deduction', 'tax filing 2026', 'property tax deduction']}
             />
-            
+
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Homeowner Tax Deductions 2026', item: '/blog/homeowner-tax-deductions-2026' }]} />
                 <article className="prose prose-slate prose-lg max-w-none">
@@ -55,7 +55,7 @@ export default function HomeownerTaxDeductionsBlog() {
                     </header>
 
                     <p className="lead text-2xl text-gray-700 mb-10 font-light leading-relaxed">
-                        Tax season is here, and if you own a home, you are sitting on deductions that could literally save you thousands of dollars. The 2025 tax year (which you file in 2026) brought massive legislative changes that directly benefit homeowners. 
+                        Tax season is here, and if you own a home, you are sitting on deductions that could literally save you thousands of dollars. The 2025 tax year (which you file in 2026) brought massive legislative changes that directly benefit homeowners.
                     </p>
 
                     <p>
@@ -82,7 +82,7 @@ export default function HomeownerTaxDeductionsBlog() {
                     </h2>
 
                     <p>
-                        Before we dive into the specific homeowner deductions, you must answer one fundamental, mathematical question: does itemizing actually save you more money than simply taking the standard deduction? 
+                        Before we dive into the specific homeowner deductions, you must answer one fundamental, mathematical question: does itemizing actually save you more money than simply taking the standard deduction?
                     </p>
                     <p>
                         When you file your taxes, the IRS allows you to choose one of two paths:
@@ -132,12 +132,12 @@ export default function HomeownerTaxDeductionsBlog() {
                     </h2>
 
                     <p>
-                        This is the undisputed heavyweight champion of homeowner tax breaks. You can deduct the interest you pay on your mortgage debt up to a massive <strong>$750,000</strong> principal balance (or $375,000 if married filing separately). 
+                        This is the undisputed heavyweight champion of homeowner tax breaks. You can deduct the interest you pay on your mortgage debt up to a massive <strong>$750,000</strong> principal balance (or $375,000 if married filing separately).
                     </p>
                     <p>
                         <em>Note: This $750,000 limit applies to loans taken out after December 15, 2017. If your mortgage predates that cutoff, you are grandfathered into the old $1 million limit.</em>
                     </p>
-                    
+
                     <div className="bg-purple-50 p-6 rounded-xl border border-purple-200 my-8">
                         <strong className="block text-purple-900 mb-2">How it works in practice:</strong>
                         <p className="text-purple-800 m-0">
@@ -151,7 +151,7 @@ export default function HomeownerTaxDeductionsBlog() {
                     </h2>
 
                     <p>
-                        The SALT deduction covers two massive expenses: your <strong>state income tax</strong> (or state sales tax, if you live in a state without income tax) PLUS your <strong>local property taxes</strong>. 
+                        The SALT deduction covers two massive expenses: your <strong>state income tax</strong> (or state sales tax, if you live in a state without income tax) PLUS your <strong>local property taxes</strong>.
                     </p>
                     <p>
                         For years, this deduction was ruthlessly capped at <strong>$10,000</strong>. This was a devastating limit for homeowners in high-tax states who routinely paid $15,000 or more in property taxes alone, effectively forcing them to pay federal taxes on money they had already paid to their state governments.
@@ -159,7 +159,7 @@ export default function HomeownerTaxDeductionsBlog() {
                     <p>
                         For tax year 2026, IRS guidance lists a <strong>$40,400</strong> overall SALT limit, or $20,200 for married taxpayers filing separately. The limit begins to phase down above specified modified adjusted gross income thresholds and cannot fall below the statutory floor.
                     </p>
-                    
+
                     <div className="card p-8 mb-8 border-l-4 border-amber-400 bg-amber-50">
                         <p className="text-amber-900 mb-0">
                             <strong>The SALT Math:</strong> A married couple filing jointly that pays $15,000 in property taxes and $12,000 in state income tax has $27,000 of potential SALT before applying eligibility, itemization and income-phaseout rules.
@@ -172,7 +172,7 @@ export default function HomeownerTaxDeductionsBlog() {
                     </h2>
 
                     <p>
-                        This one is a big deal for first-time buyers who put down less than 20%. 
+                        This one is a big deal for first-time buyers who put down less than 20%.
                     </p>
                     <p>
                         No. Current IRS Publication 936 states that the itemized deduction for mortgage-insurance premiums has expired. You <strong>cannot currently claim PMI premiums</strong> as an itemized deduction.
@@ -230,7 +230,7 @@ export default function HomeownerTaxDeductionsBlog() {
                     <p>
                         If you installed energy-efficient upgrades in 2025, you qualify for tax credits. <strong>Tax credits are far more valuable than deductions.</strong> A deduction reduces your taxable income, but a credit reduces your actual tax bill dollar-for-dollar. A $2,000 credit saves you exactly $2,000 in taxes.
                     </p>
-                    
+
                     <ul className="space-y-4 my-8">
                         <li className="flex items-start gap-3">
                             <Target className="w-6 h-6 text-emerald-500 shrink-0 mt-1" />
@@ -262,30 +262,30 @@ export default function HomeownerTaxDeductionsBlog() {
                     <div className="mt-12 text-sm text-gray-500 flex items-start gap-2 bg-gray-50 p-4 rounded-lg">
                         <ExternalLink className="w-5 h-5 shrink-0" />
                         <p className="m-0">
-                            <strong>Sources:</strong> <a href="https://www.irs.gov" className="text-blue-600 hover:underline">IRS.gov</a>, <a href="https://www.congress.gov" className="text-blue-600 hover:underline">Congress.gov</a>. This article is for educational purposes only and does not constitute professional tax advice. Always consult with a qualified CPA or enrolled agent regarding your specific financial situation.
+                            <strong>Sources:</strong> <a href="https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill" className="text-blue-600 hover:underline">IRS 2026 tax inflation adjustments</a>, <a href="https://www.irs.gov/filing/federal-income-tax-rates-and-brackets" className="text-blue-600 hover:underline">IRS federal tax brackets</a>. This article is for educational purposes only and does not constitute professional tax advice. Always consult with a qualified CPA or enrolled agent regarding your specific financial situation.
                         </p>
                     </div>
 
                 </article>
 
                 <div className="mt-16">
-                    
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Strategies for Homeowner Tax Deductions in 2026?</h2>
                     <p className="text-lg text-slate-700 mb-6">
-                        For years, the vast majority of homeowners simply took the massive Standard Deduction, rendering their mortgage interest practically irrelevant for tax purposes. In 2026, the expiration of the TCJA provisions brings itemized deductions back from the dead, requiring a radical shift in tax planning.
+                        For 2026, the One Big Beautiful Bill keeps the individual rate structure and expanded standard deduction in place. Homeowners should compare the standard deduction with eligible itemized deductions rather than assume that either choice automatically wins.
                     </p>
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">How Is the Mortgage Interest Deduction Returning?</h3>
                     <p className="text-slate-700 mb-4">
-                        If the TCJA sunsets as scheduled, the Standard Deduction is roughly cut in half. Simultaneously, the cap on how much mortgage debt qualifies for the interest deduction shifts. If you purchased a home with an interest rate of 6.5% or 7%, your annual interest payments are massive. In this environment, itemizing your taxes—specifically combining your mortgage interest with property taxes and charitable contributions—will likely far exceed the new lower Standard Deduction, saving you thousands of dollars in taxable income.
+                        IRS 2026 guidance lists standard deductions of $16,100 for single filers, $24,150 for heads of household, and $32,200 for married couples filing jointly. Mortgage interest, qualified points, state and local taxes, and charitable gifts help only when eligible itemized deductions exceed the standard deduction and the underlying limits are met.
                     </p>
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">What Is the SALT Cap Reversal Strategy?</h3>
                     <p className="text-slate-700 mb-4">
-                        One of the most contentious provisions of the last decade was the $10,000 cap on State and Local Tax (SALT) deductions. This brutally penalized homeowners in high-tax states like New York, New Jersey, and California, as their property taxes alone often exceeded the cap. With the SALT cap expiring in 2026, high-earners in these states can once again deduct their full property tax and state income tax burden against their federal taxes. If you are in a high-tax state, aggressive documentation of all state-level tax payments is critical this year.
+                        The SALT deduction is subject to the limits Congress and the IRS publish for the applicable tax year. Keep state income or sales tax and property-tax records, then confirm the current limit and any income-based phaseout before estimating a federal benefit. High-tax-state homeowners should not assume that the full amount is deductible.
                     </p>
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">How Do You Maximize Energy Efficiency Credits?</h3>

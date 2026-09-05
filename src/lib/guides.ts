@@ -8,6 +8,13 @@ export interface GuideEntry {
 
 export const ALL_GUIDES: GuideEntry[] = [
     {
+        slug: 'boi-reporting-2026',
+        title: 'BOI Reporting in 2026: FinCEN Exemptions and Foreign-Entity Rules',
+        category: 'Compliance',
+        readTime: '10 min',
+        excerpt: 'The current federal BOI rule for U.S.-created companies, foreign-formed entities, deadlines, and state-law caveats.'
+    },
+    {
         slug: '15-vs-30-year-mortgage',
         title: '15-Year vs. 30-Year Mortgage: Full Breakdown & Math',
         category: 'Education',

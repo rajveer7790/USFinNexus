@@ -64,7 +64,7 @@ export default function BlogPost() {
                 </p>
 
                 <p>
-                    A grant is legally classified as a gift. It is pure, tax-free cash given directly to your title company to cover your down payment or closing costs. You do not make monthly payments on it, there is no interest rate, and you never have to pay it back. 
+                    Assistance is program-specific. Some grants are forgivable only if you meet occupancy, income, purchase-price, or retention requirements; others are deferred second loans that must be repaid when you sell or refinance. Confirm the written program agreement before treating assistance as cash you will never repay.
                 </p>
                 <p>
                     Every year, millions of dollars in federal and state housing grants expire completely unclaimed simply because buyers do not know how to find them. Here is exactly where the free money is hidden in 2026, and how you can claim your share.
@@ -72,13 +72,13 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Is the Federal Home Loan Bank Down Payment Grant?</h2>
                 <p>
-                    The absolute largest source of free grant money in America is the FHLB system. Most buyers have never heard of it because the FHLB does not interact directly with consumers. 
+                    The absolute largest source of free grant money in America is the FHLB system. Most buyers have never heard of it because the FHLB does not interact directly with consumers.
                 </p>
                 <p>
                     Instead, the FHLB gives massive blocks of cash to local, community-level banks and credit unions across the country. Those local banks are then tasked with giving the money away to low-to-moderate-income homebuyers in their specific zip codes.
                 </p>
                 <p>
-                    Depending on the region, these grants range from <strong>$5,000 to $15,000</strong> per buyer. 
+                    Depending on the region, these grants range from <strong>$5,000 to $15,000</strong> per buyer.
                 </p>
 
                 <div className="card p-6 mb-8 border-l-4 border-yellow-500 bg-yellow-50">
@@ -87,7 +87,7 @@ export default function BlogPost() {
                         <div>
                             <h3 className="font-bold mb-2">The "First-Come, First-Served" Trap</h3>
                             <p className="text-sm m-0 text-gray-700">
-                                The biggest trap with FHLB grants is the funding cycle. The federal government refills these grant accounts every January. Because it is literally free money, the local banks usually run completely out of grant funds by April or May. 
+                                The biggest trap with FHLB grants is the funding cycle. The federal government refills these grant accounts every January. Because it is literally free money, the local banks usually run completely out of grant funds by April or May.
                                 <br/><br/>
                                 If you try to buy a house in October and ask for an FHLB grant, the bank will tell you the vault is empty. You must plan your home purchase for the spring if you want to secure these funds.
                             </p>
@@ -103,7 +103,7 @@ export default function BlogPost() {
                     Almost every major city and mid-sized county uses these funds to create hyper-local <strong>First-Time Homebuyer Grants</strong>.
                 </p>
                 <p>
-                    For example, the city of Atlanta might offer a $10,000 grant to anyone buying a house within the city limits. The county right next door might offer an entirely different $7,500 grant. 
+                    For example, the city of Atlanta might offer a $10,000 grant to anyone buying a house within the city limits. The county right next door might offer an entirely different $7,500 grant.
                 </p>
                 <p>
                     <strong>How to find them:</strong> Do not search national websites. Go to Google and explicitly type your city or county name, followed by "first time homebuyer grant." (e.g., <em>"Cook County first time homebuyer grant"</em>). You will almost always find a buried .gov page outlining the application process.
@@ -111,10 +111,10 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Are First-Generation Homebuyer Grants?</h2>
                 <p>
-                    A massive push in 2026 is the rollout of "First-Generation" grants. These are highly specific funds designed to break the cycle of generational renting. 
+                    A massive push in 2026 is the rollout of "First-Generation" grants. These are highly specific funds designed to break the cycle of generational renting.
                 </p>
                 <p>
-                    To qualify for a standard first-time buyer grant, you simply cannot have owned a home in the last three years. But to qualify for a <strong>First-Generation Grant</strong>, you must prove that your parents or legal guardians also do not currently own a home. 
+                    To qualify for a standard first-time buyer grant, you simply cannot have owned a home in the last three years. But to qualify for a <strong>First-Generation Grant</strong>, you must prove that your parents or legal guardians also do not currently own a home.
                 </p>
                 <p>
                     Because the qualifications are stricter, the payouts are massive. States like California and New York are utilizing first-generation grants that provide up to <strong>$25,000 in free money</strong> to help marginalized families build their first pillar of generational wealth.
@@ -144,9 +144,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">Advanced Strategies: Maximizing First-Time Homebuyer Grants in 2026</h2>
                     <p className="text-lg text-slate-700 mb-6">

@@ -54,7 +54,7 @@ export default function ArticlePage() {
                 </h1>
 
                 <p className="text-xl leading-relaxed mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    While the federal government recently exempted 95% of domestic U.S. businesses from FinCEN reporting, New York State went in the exact opposite direction. The New York LLC Transparency Act (NYLTA) takes full effect on January 1, 2026, and it aggressively targets foreign owners, out-of-state investors, and real estate holding companies doing business in the Empire State.
+                    FinCEN’s current federal rule exempts entities created in the United States from federal BOI reporting, but state requirements are a separate question. New York’s Department of State publishes its own beneficial-owner disclosure guidance and effective dates; check that official guidance for an entity registered or operating in New York.
                 </p>
 
                 <div className="flex items-center gap-4 border-t border-b py-4 border-gray-200">

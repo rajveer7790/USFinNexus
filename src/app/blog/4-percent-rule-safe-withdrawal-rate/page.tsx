@@ -69,7 +69,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What is the 4% Rule? (The Trinity Study)</h2>
                 <p>
-                    The 4% rule originated from a 1994 paper by financial advisor William Bengen, and was later codified by three professors at Trinity University (hence the famous "Trinity Study"). 
+                    The 4% rule originated from a 1994 paper by financial advisor William Bengen, and was later codified by three professors at Trinity University (hence the famous "Trinity Study").
                 </p>
                 <p>
                     The study looked at historical stock and bond market data going back to 1926. The researchers asked a simple question: <em>What percentage of your portfolio can you withdraw every year, adjusting for inflation, without ever running out of money over a 30-year retirement?</em>
@@ -140,7 +140,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Is the Modern Solution: Dynamic Withdrawals and the 3.2% Rule?</h2>
                 <p>
-                    Because of these modern risks, prominent retirement researchers (like Wade Pfau and Morningstar) have recently adjusted their Safe Withdrawal Rate recommendations. If you want a 95%+ probability of success over a 30-to-40 year retirement in today's economic climate, the new "safe" number is generally agreed to be between <strong>3.2% and 3.5%</strong>.
+                    Research does not establish one universally safe withdrawal rate. A sustainable percentage depends on your time horizon, asset mix, fees, taxes, spending flexibility, and the probability of success you target. Treat 4% as a starting scenario to test—not a guarantee—and model several rates in the <Link href="/calculators/retirement" className="text-blue-600 hover:underline">retirement calculator</Link>.
                 </p>
                 <p>
                     To calculate your required portfolio under the new rules, you simply invert the percentage:
@@ -155,7 +155,7 @@ export default function BlogPost() {
 
                 <h3 className="text-xl font-bold mt-8 mb-4">What Is the Guardrails Approach to Dynamic Spending?</h3>
                 <p>
-                    Rather than dropping their withdrawal rate to a painfully conservative 3.2% and working an extra five years, many modern retirees use a <strong>Dynamic Guardrails</strong> strategy (often called the Guyton-Klinger rules). 
+                    Rather than dropping their withdrawal rate to a painfully conservative 3.2% and working an extra five years, many modern retirees use a <strong>Dynamic Guardrails</strong> strategy (often called the Guyton-Klinger rules).
                 </p>
                 <p>
                     Instead of blindly adjusting for inflation every year, you adjust your spending based on market performance:
@@ -181,9 +181,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Retirement Tax Strategies?</h2>
                     <p className="text-lg text-slate-700 mb-6">
