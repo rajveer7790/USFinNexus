@@ -130,6 +130,8 @@ function getBlogPosts() {
             if (slug === 'snap-benefits-2027') image = '/images/snap-benefits-2027.webp';
             if (slug === 'fafsa-2027-28') image = '/images/fafsa-2027-28.webp';
             if (slug === 'medicare-open-enrollment-2027') image = '/images/medicare-open-enrollment-2027.webp';
+            if (slug === 'home-sale-tax-exclusion-2026') image = '/images/home-sale-tax-exclusion-2026.webp';
+            if (slug === 'medical-debt-credit-report-2026') image = '/images/medical-debt-credit-report-2026.webp';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
