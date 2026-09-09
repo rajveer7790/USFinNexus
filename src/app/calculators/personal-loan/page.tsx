@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -16,7 +17,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Personal Loan Calculator 2026 - Payment & Interest Estimator',
-    description: 'Free personal loan calculator for 2026. Calculate monthly payments, total interest, and payday loan or debt consolidation payoff schedules.',
+    description: 'Free personal loan calculator for 2026. Estimate monthly payments, total interest, APR and payoff schedules for debt consolidation or other borrowing.',
     openGraph: {
         type: 'website',
         title: 'Personal Loan Calculator 2026 - Payment & Interest',
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     alternates: { canonical: 'https://usfinnexus.com/calculators/personal-loan' },
     twitter: {
         card: 'summary_large_image',
-        title: 'Personal Loan Calculator 2026 — Payment & APR Comparison',
+        title: 'Personal Loan Calculator 2026 - Payment & Interest Estimator',
         description: 'Calculate personal loan monthly payments, total interest, and compare APRs. Free personal loan estimator.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -61,6 +62,7 @@ export default function PersonalLoanPage() {
             <PersonalLoanSeoContent />
             <SemrushIntentSection slug="personal-loan" />
             <CalculatorFAQ faqs={PERSONAL_LOAN_FAQS} title="Personal Loans — Frequently Asked Questions" />
+        <ContextualInternalLinks currentSlug="personal-loan" showBlogs showCalculators />
         </main>
     );
 }

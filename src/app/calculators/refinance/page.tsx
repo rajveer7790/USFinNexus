@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import RefinanceSeoContentV2 from './RefinanceSeoContentV2';
@@ -15,19 +16,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Mortgage Refinance Calculator',
-    description: 'Compare your current mortgage with a new loan. Estimate monthly payment savings, refinance costs and a simple break-even period using your own rate and fee assumptions.',
+    title: 'Mortgage Refinance Calculator 2026: Break-Even & Savings',
+    description: 'Use a mortgage refinance calculator to compare payment savings, refinance costs and break-even timing with your own rate, balance and fee assumptions.',
     alternates: { canonical: '/calculators/refinance' },
     openGraph: {
         type: 'website',
-        title: 'Mortgage Refinance Calculator',
-        description: 'Estimate refinance payment savings, costs and break-even timing using your own loan assumptions.',
+        title: 'Mortgage Refinance Calculator 2026: Break-Even & Savings',
+        description: 'Compare refinance payment savings, costs and break-even timing using your own loan assumptions.',
         url: 'https://usfinnexus.com/calculators/refinance',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Mortgage Refinance Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mortgage Refinance Calculator',
+        title: 'Mortgage Refinance Calculator 2026: Break-Even & Savings',
         description: 'Compare current and proposed mortgage scenarios and estimate break-even timing.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -63,14 +64,15 @@ export default function RefinancePage() {
                 name="Mortgage Refinance Calculator"
                 description="Compare a current mortgage with a proposed refinance and estimate payment savings, costs and break-even timing."
                 url="https://usfinnexus.com/calculators/refinance"
-                dateModified="2026-08-09"
+                dateModified="2026-09-09"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Mortgage Refinance Calculator', item: '/calculators/refinance' }]} />
-            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 9, 2026 &middot; Use a current lender quote for rate and fee assumptions</p>
+            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed September 9, 2026 &middot; Use a current lender quote for rate and fee assumptions</p>
             <RefinanceClient />
             <SemrushIntentSection slug="refinance" />
             <RefinanceSeoContentV2 />
             <CalculatorFAQ faqs={REFINANCE_FAQS} title="Mortgage Refinance Calculator FAQs" />
+        <ContextualInternalLinks currentSlug="refinance" showBlogs showCalculators />
         </main>
     );
 }
