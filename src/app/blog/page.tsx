@@ -132,6 +132,9 @@ function getBlogPosts() {
             if (slug === 'medicare-open-enrollment-2027') image = '/images/medicare-open-enrollment-2027.webp';
             if (slug === 'home-sale-tax-exclusion-2026') image = '/images/home-sale-tax-exclusion-2026.webp';
             if (slug === 'medical-debt-credit-report-2026') image = '/images/medical-debt-credit-report-2026.webp';
+            if (slug === 'fha-loan-limits-2026') image = '/images/fha-loan-limits-2026.webp';
+            if (slug === 'va-funding-fee-2026') image = '/images/va-funding-fee-2026.webp';
+            if (slug === 'irs-tax-payment-plan-2026') image = '/images/irs-tax-payment-plan-2026.webp';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
