@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import FhaSeoContent from './FhaSeoContent';
@@ -44,7 +43,6 @@ export default function FhaLoanPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'FHA Loan Calculator', item: '/calculators/fha' }]} />
                             <GovLoanClient initialTab="fha" />
             <FhaSeoContent />
-        <ContextualInternalLinks currentSlug="fha" showBlogs showCalculators />
         </main>
     );
 }

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -29,7 +28,7 @@ export const metadata: Metadata = {
     alternates: { canonical: 'https://usfinnexus.com/calculators/heloc' },
     twitter: {
         card: 'summary_large_image',
-        title: 'Free HELOC Calculator 2026 - Home Equity Line of Credit',
+        title: 'HELOC Calculator 2026 — Home Equity Line of Credit',
         description: 'Calculate your HELOC available equity, draw-period payments, and repayment-period costs. Free, no signup.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -63,7 +62,6 @@ export default function HELOCPage() {
             <SemrushIntentSection slug="heloc" />
             <HelocSeoContent />
             <CalculatorFAQ faqs={HELOC_FAQS} title="HELOC — Frequently Asked Questions" />
-        <ContextualInternalLinks currentSlug="heloc" showBlogs showCalculators />
         </main>
     );
 }

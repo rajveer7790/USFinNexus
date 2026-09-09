@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import ClosingCostsSeoContent from './ClosingCostsSeoContent';
@@ -16,19 +15,19 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Closing Costs Calculator 2026: Estimate Buyer Costs',
+    title: 'Closing Costs Calculator for Home Buyers',
     description: 'Use this closing costs calculator to estimate lender charges, title and settlement fees, prepaid items, taxes and insurance for a home purchase.',
     alternates: { canonical: '/calculators/closing-costs' },
     openGraph: {
         type: 'website',
-        title: 'Closing Costs Calculator 2026: Estimate Buyer Costs',
+        title: 'Closing Cost Calculator',
         description: 'Estimate buyer closing-cost categories for a U.S. home purchase using your own assumptions.',
         url: 'https://usfinnexus.com/calculators/closing-costs',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Closing Cost Calculator' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Closing Costs Calculator 2026: Estimate Buyer Costs',
+        title: 'Closing Cost Calculator',
         description: 'Estimate common home-purchase closing-cost categories.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -71,7 +70,6 @@ export default function ClosingCostsPage() {
             <ClosingCostsSeoContent />
             <SemrushIntentSection slug="closing-costs" />
             <CalculatorFAQ faqs={CLOSING_COSTS_FAQS} title="Closing Cost Calculator FAQs" />
-        <ContextualInternalLinks currentSlug="closing-costs" showBlogs showCalculators={false} />
         </main>
     );
 }
