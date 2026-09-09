@@ -67,7 +67,7 @@ export default function CryptoTaxPage() {
             <CryptoTaxClient />
             <CryptoTaxSeoContent />
             <CalculatorFAQ faqs={CRYPTO_FAQS} title="Cryptocurrency Taxes — Frequently Asked Questions" />
-        <ContextualInternalLinks currentSlug="crypto-tax" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="crypto-tax" showBlogs showCalculators />
         </main>
     );
 }

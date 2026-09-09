@@ -62,7 +62,7 @@ export default function InvestmentPage() {
             <InvestmentSeoContent />
             <SemrushIntentSection slug="investment" />
             <CalculatorFAQ faqs={INVESTMENT_FAQS} title="Compound Interest — Frequently Asked Questions" />
-        <ContextualInternalLinks currentSlug="investment" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="investment" showBlogs showCalculators />
         </main>
     );
 }

@@ -49,6 +49,8 @@ const STOP_WORDS = new Set(['2026', '2027', '2028', 'guide', 'calculator', 'expl
 
 const CALCULATOR_TOPIC_TERMS: Record<string, string> = {
     affordability: 'home house mortgage buyer down-payment affordability',
+    'biweekly-mortgage': 'biweekly mortgage payment payoff interest amortization',
+    arizona: 'arizona mortgage home housing property tax',
     amortization: 'mortgage payment amortization payoff interest',
     arm: 'mortgage adjustable-rate refinance rate',
     'auto-loan': 'auto car vehicle loan affordability',
@@ -62,6 +64,16 @@ const CALCULATOR_TOPIC_TERMS: Record<string, string> = {
     'down-payment': 'down-payment home buyer mortgage pmi',
     drip: 'investment dividend investing retirement',
     dti: 'dti debt mortgage income qualification',
+    colorado: 'colorado mortgage home housing property tax',
+    'extra-payment': 'extra payment mortgage payoff principal interest amortization',
+    georgia: 'georgia mortgage home housing property tax',
+    illinois: 'illinois mortgage home housing property tax',
+    massachusetts: 'massachusetts mortgage home housing property tax',
+    'new-jersey': 'new jersey mortgage home housing property tax',
+    'new-york': 'new york mortgage home housing property tax',
+    'north-carolina': 'north carolina mortgage home housing property tax',
+    ohio: 'ohio mortgage home housing property tax',
+    pennsylvania: 'pennsylvania mortgage home housing property tax',
     fha: 'fha mortgage home buyer loan limits',
     'fha-va-usda': 'fha va usda mortgage home buyer',
     'fire-planner': 'fire retirement investing savings withdrawal',
@@ -74,6 +86,9 @@ const CALCULATOR_TOPIC_TERMS: Record<string, string> = {
     'mortgage-payoff': 'mortgage payoff extra payment refinance',
     'options-profit': 'investing options stock profit',
     'personal-loan': 'personal loan debt credit payoff',
+    pmi: 'pmi mortgage insurance cancellation loan-to-value down-payment home',
+    virginia: 'virginia mortgage home housing property tax',
+    washington: 'washington mortgage home housing property tax',
     'points-buydown': 'mortgage points buydown rate closing',
     refinance: 'refinance mortgage rate break-even equity',
     'rent-vs-buy': 'rent buy home mortgage housing',
@@ -86,6 +101,9 @@ const CALCULATOR_TOPIC_TERMS: Record<string, string> = {
 };
 
 const CALCULATOR_OVERRIDES: Record<string, string[]> = {
+    pmi: ['/calculators/mortgage', '/calculators/fha', '/calculators/refinance'],
+    'extra-payment': ['/calculators/mortgage', '/calculators/mortgage-payoff', '/calculators/debt-payoff'],
+    'biweekly-mortgage': ['/calculators/mortgage', '/calculators/mortgage-payoff', '/calculators/amortization'],
     fha: ['/calculators/mortgage', '/calculators/down-payment', '/calculators/dti'],
     'personal-loan': ['/calculators/debt-payoff', '/calculators/credit-card', '/calculators/budget'],
     'credit-card': ['/calculators/debt-payoff', '/calculators/personal-loan', '/calculators/budget'],

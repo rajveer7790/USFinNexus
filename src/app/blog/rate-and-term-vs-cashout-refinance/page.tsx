@@ -208,7 +208,7 @@ export default function PostComponent() {
                         Instead, keep your 3% first mortgage exactly where it is, and take out a <strong>Home Equity Line of Credit (HELOC)</strong> or a Home Equity Loan for the $50,000. You will pay a higher interest rate (usually 8% to 10%) on the HELOC, but you are only paying it on the small $50,000 balance, while your massive primary mortgage stays protected at 3%.
                     </p>
 
-                <ContextualInternalLinks currentSlug="rate-and-term-vs-cashout-refinance" showBlogs showCalculators={false} />
+                <ContextualInternalLinks currentSlug="rate-and-term-vs-cashout-refinance" showBlogs showCalculators />
                 </article>
 
                 <div className="mt-16">

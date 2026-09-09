@@ -44,7 +44,7 @@ export default function VaLoanPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'VA Loan Calculator', item: '/calculators/va' }]} />
                             <GovLoanClient initialTab="va" />
             <VaSeoContent />
-        <ContextualInternalLinks currentSlug="va" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="va" showBlogs showCalculators />
         </main>
     );
 }

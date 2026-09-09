@@ -76,7 +76,7 @@ export default function MortgagePage() {
             <SemrushIntentSection slug="mortgage" />
             <MortgageSeoContentV2 />
             <CalculatorFAQ faqs={MORTGAGE_FAQS} title="Mortgage Calculator FAQs" />
-        <ContextualInternalLinks currentSlug="mortgage" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="mortgage" showBlogs showCalculators />
         </main>
     );
 }

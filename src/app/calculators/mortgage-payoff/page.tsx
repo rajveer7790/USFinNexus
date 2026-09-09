@@ -66,7 +66,7 @@ export default function MortgagePayoffPage() {
                     Also compare the <Link href="/calculators/amortization">amortization calculator</Link>, the <Link href="/blog/pay-off-mortgage-early-strategy">mortgage payoff strategy guide</Link>, and the <Link href="/blog/pay-off-mortgage-early-strategy">payoff-versus-investing guide</Link>.
                 </p>
             </article>
-        <ContextualInternalLinks currentSlug="mortgage-payoff" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="mortgage-payoff" showBlogs showCalculators />
         </main>
     );
 }

@@ -60,7 +60,7 @@ export default function RetirementPage() {
             <RetirementClient />
             <RetirementSeoContent />
             <CalculatorFAQ faqs={RETIREMENT_FAQS} title="Retirement Planning — Frequently Asked Questions" />
-        <ContextualInternalLinks currentSlug="retirement" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="retirement" showBlogs showCalculators />
         </main>
     );
 }

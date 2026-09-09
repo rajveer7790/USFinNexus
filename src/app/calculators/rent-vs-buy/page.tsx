@@ -43,7 +43,7 @@ export default function RentVsBuyPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Rent vs Buy', item: '/calculators/rent-vs-buy' }]} />
             <RentVsBuyClient />
             <RentVsBuySeoContent />
-        <ContextualInternalLinks currentSlug="rent-vs-buy" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="rent-vs-buy" showBlogs showCalculators />
         </main>
     );
 }

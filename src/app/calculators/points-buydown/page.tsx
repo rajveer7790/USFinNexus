@@ -60,7 +60,7 @@ export default function PointsBuyDownPage() {
             <PointsBuyDownClient />
             <PointsBuydownSeoContent />
             <CalculatorFAQ faqs={POINTS_FAQS} title="Mortgage Points — Frequently Asked Questions" />
-        <ContextualInternalLinks currentSlug="points-buydown" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="points-buydown" showBlogs showCalculators />
         </main>
     );
 }

@@ -212,7 +212,7 @@ export default function PostComponent() {
                         Because of these strict MPRs, in hyper-competitive seller's markets, some sellers are hesitant to accept VA offers, fearing that the VA appraiser will mandate expensive repairs that a conventional buyer's appraiser would ignore.
                     </p>
 
-                <ContextualInternalLinks currentSlug="va-loans-military-benefits" showBlogs showCalculators={false} />
+                <ContextualInternalLinks currentSlug="va-loans-military-benefits" showBlogs showCalculators />
                 </article>
 
                 <div className="mt-16">

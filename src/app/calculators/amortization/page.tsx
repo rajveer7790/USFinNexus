@@ -46,7 +46,7 @@ export default function AmortizationPage() {
             <MortgageCalculator initialTab="amortization" heading="Mortgage Amortization Calculator" intro="Calculate a mortgage payment and view the complete principal, interest and remaining-balance schedule." />
             <SemrushIntentSection slug="amortization" />
             <AmortizationSeoContent />
-        <ContextualInternalLinks currentSlug="amortization" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="amortization" showBlogs showCalculators />
         </main>
     );
 }

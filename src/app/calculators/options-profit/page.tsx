@@ -63,7 +63,7 @@ export default function OptionsProfitPage() {
             <OptionsProfitClient />
             <OptionsProfitSeoContent />
             <CalculatorFAQ faqs={OPTIONS_FAQS} title="Options Trading — Frequently Asked Questions" />
-        <ContextualInternalLinks currentSlug="options-profit" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="options-profit" showBlogs showCalculators />
         </main>
     );
 }

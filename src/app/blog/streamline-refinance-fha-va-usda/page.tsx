@@ -216,7 +216,7 @@ export default function PostComponent() {
                         You must still calculate your Break-Even point, even on a streamline refinance, to ensure you are not losing money long-term.
                     </p>
 
-                <ContextualInternalLinks currentSlug="streamline-refinance-fha-va-usda" showBlogs showCalculators={false} />
+                <ContextualInternalLinks currentSlug="streamline-refinance-fha-va-usda" showBlogs showCalculators />
                 </article>
 
                 <div className="mt-16">

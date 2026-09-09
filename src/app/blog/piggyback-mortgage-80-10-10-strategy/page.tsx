@@ -217,7 +217,7 @@ export default function PostComponent() {
                         <li className="flex items-center gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600"/> <strong>Cash Reserves:</strong> The lender will likely require you to have several months of mortgage payments sitting in your savings account after closing.</li>
                     </ul>
 
-                <ContextualInternalLinks currentSlug="piggyback-mortgage-80-10-10-strategy" showBlogs showCalculators={false} />
+                <ContextualInternalLinks currentSlug="piggyback-mortgage-80-10-10-strategy" showBlogs showCalculators />
                 </article>
 
                 <div className="mt-16">

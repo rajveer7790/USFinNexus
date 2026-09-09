@@ -62,7 +62,7 @@ export default function GovLoanComparisonPage() {
             <SemrushIntentSection slug="fha-va-usda" />
             <FhaVaUsdaSeoContent />
             <CalculatorFAQ faqs={GOV_LOAN_FAQS} title="Government Loans — Frequently Asked Questions" />
-        <ContextualInternalLinks currentSlug="fha-va-usda" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="fha-va-usda" showBlogs showCalculators />
         </main>
     );
 }

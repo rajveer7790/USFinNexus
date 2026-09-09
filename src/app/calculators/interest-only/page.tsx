@@ -62,7 +62,7 @@ export default function InterestOnlyPage() {
             <SemrushIntentSection slug="interest-only" />
             <InterestOnlySeoContent />
             <CalculatorFAQ faqs={INTEREST_ONLY_FAQS} title="Interest-Only Mortgages — Frequently Asked Questions" />
-        <ContextualInternalLinks currentSlug="interest-only" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="interest-only" showBlogs showCalculators />
         </main>
     );
 }

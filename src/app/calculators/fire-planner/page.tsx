@@ -67,7 +67,7 @@ export default function FirePlannerPage() {
             <FirePlannerClient />
             <FirePlannerSeoContent />
             <CalculatorFAQ faqs={FIRE_FAQS} title="FIRE Movement — Frequently Asked Questions" />
-        <ContextualInternalLinks currentSlug="fire-planner" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="fire-planner" showBlogs showCalculators />
         </main>
     );
 }

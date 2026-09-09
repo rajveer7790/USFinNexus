@@ -49,7 +49,7 @@ export default function DownPaymentPage() {
                     <DownPaymentClient />
                 </div>
             <DownPaymentSeoContent />
-        <ContextualInternalLinks currentSlug="down-payment" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="down-payment" showBlogs showCalculators />
         </main>
     );
 }

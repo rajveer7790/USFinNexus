@@ -62,7 +62,7 @@ export default function ComparisonPage() {
             </div>
             <ComparisonSeoContent />
             <CalculatorFAQ faqs={COMPARISON_FAQS} title="Loan Comparison — Frequently Asked Questions" />
-        <ContextualInternalLinks currentSlug="comparison" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="comparison" showBlogs showCalculators />
         </main>
     );
 }

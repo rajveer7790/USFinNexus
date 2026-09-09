@@ -45,7 +45,7 @@ export default function ArmCalculatorPage() {
                             <ArmCalculatorClient />
             <SemrushIntentSection slug="arm" />
             <ArmSeoContent />
-        <ContextualInternalLinks currentSlug="arm" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="arm" showBlogs showCalculators />
         </main>
     );
 }

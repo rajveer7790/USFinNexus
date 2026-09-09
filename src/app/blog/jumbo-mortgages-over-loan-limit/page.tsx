@@ -196,7 +196,7 @@ export default function PostComponent() {
                         Because of this, major banks often offer highly competitive interest rates on Jumbo loans, sometimes undercutting standard conventional rates by 0.25% or more, just to win your business.
                     </p>
 
-                <ContextualInternalLinks currentSlug="jumbo-mortgages-over-loan-limit" showBlogs showCalculators={false} />
+                <ContextualInternalLinks currentSlug="jumbo-mortgages-over-loan-limit" showBlogs showCalculators />
                 </article>
 
                 <div className="mt-16">

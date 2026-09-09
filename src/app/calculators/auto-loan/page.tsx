@@ -67,7 +67,7 @@ export default function AutoLoanPage() {
             <AutoLoanSeoContent />
             <SemrushIntentSection slug="auto-loan" />
             <CalculatorFAQ faqs={AUTO_LOAN_FAQS} title="Auto Loan Calculator FAQs" />
-        <ContextualInternalLinks currentSlug="auto-loan" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="auto-loan" showBlogs showCalculators />
         </main>
     );
 }

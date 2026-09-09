@@ -215,7 +215,7 @@ export default function PostComponent() {
                         A reverse mortgage becomes due and payable if you move out of the house for 12 consecutive months. If a medical emergency forces you into a nursing home or assisted living facility permanently, the loan will be called due, forcing the sale of the home precisely when your family is dealing with a crisis.
                     </p>
 
-                <ContextualInternalLinks currentSlug="reverse-mortgage-hecm-explained" showBlogs showCalculators={false} />
+                <ContextualInternalLinks currentSlug="reverse-mortgage-hecm-explained" showBlogs showCalculators />
                 </article>
 
                 <div className="mt-16">

@@ -214,7 +214,7 @@ export default function PostComponent() {
                         Both options are completely valid strategies if you are cash-poor but desperately need to refinance out of an adjustable-rate mortgage. Just understand that you are always paying the toll troll—you are just deciding whether to pay him today or pay him tomorrow.
                     </p>
 
-                <ContextualInternalLinks currentSlug="refinancing-costs-2026-breakdown" showBlogs showCalculators={false} />
+                <ContextualInternalLinks currentSlug="refinancing-costs-2026-breakdown" showBlogs showCalculators />
                 </article>
 
                 <div className="mt-16">

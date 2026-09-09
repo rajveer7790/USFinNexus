@@ -43,7 +43,7 @@ export default function TexasPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Texas Mortgage', item: '/calculators/texas' }]} />
                 <MortgageCalculator heading="Texas Mortgage Calculator" intro="Model a Texas mortgage using your own tax and insurance assumptions." />
             <TexasSeoContent />
-        <ContextualInternalLinks currentSlug="texas" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="texas" showBlogs showCalculators />
         </main>
     );
 }

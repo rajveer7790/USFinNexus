@@ -70,7 +70,7 @@ export default function IncomeTaxPage() {
             <IncomeTaxSeoContent />
             <SemrushIntentSection slug="income-tax" />
             <CalculatorFAQ faqs={INCOME_TAX_FAQS} title="2026 Federal Income Tax Calculator FAQs" />
-        <ContextualInternalLinks currentSlug="income-tax" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="income-tax" showBlogs showCalculators />
         </main>
     );
 }

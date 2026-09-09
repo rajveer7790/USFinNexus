@@ -69,7 +69,7 @@ export default function DripPage() {
             <DripSeoContent />
             <SemrushIntentSection slug="drip" />
             <CalculatorFAQ faqs={DRIP_FAQS} title="Dividend Investing — Frequently Asked Questions" />
-        <ContextualInternalLinks currentSlug="drip" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="drip" showBlogs showCalculators />
         </main>
     );
 }

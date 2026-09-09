@@ -187,7 +187,7 @@ export default function PostComponent() {
                         </li>
                     </ul>
 
-                <ContextualInternalLinks currentSlug="mortgage-calculator-comparison-2026" showBlogs showCalculators={false} />
+                <ContextualInternalLinks currentSlug="mortgage-calculator-comparison-2026" showBlogs showCalculators />
                 </article>
 
                 <div className="mt-16">

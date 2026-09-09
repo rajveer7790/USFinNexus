@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import ArticleSchema from '@/components/ArticleSchema';
 
 const guides = {
   'selling-house-with-mortgage': {
@@ -72,13 +73,17 @@ export type MortgageSupportGuideSlug = keyof typeof guides;
 
 export function supportGuideMetadata(slug: MortgageSupportGuideSlug) {
   const guide = guides[slug];
-  return { title: `${guide.title} | Guide`, description: guide.intro, alternates: { canonical: `/blog/${slug}` } };
+  const url = `https://usfinnexus.com/blog/${slug}`;
+  return { title: `${guide.title} | Guide`, description: guide.intro, alternates: { canonical: url }, openGraph: { type: 'article' as const, title: guide.title, description: guide.intro, url, siteName: 'USFinNexus', publishedTime: '2026-08-09', modifiedTime: '2026-08-09', images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: `${guide.title} — USFinNexus` }] }, twitter: { card: 'summary_large_image' as const, title: guide.title, description: guide.intro, images: ['https://usfinnexus.com/images/home-hero-v2.png'] } };
 }
 
 export default function MortgageSupportGuide({ slug }: { slug: MortgageSupportGuideSlug }) {
   const guide = guides[slug];
+  const url = `https://usfinnexus.com/blog/${slug}`;
   return (
     <main className="max-w-4xl mx-auto px-4 py-10">
+      <ArticleSchema title={guide.title} description={guide.intro} url={url} datePublished="2026-08-09" dateModified="2026-08-09" authorName="USFinNexus Editorial Team" image="https://usfinnexus.com/images/home-hero-v2.png" keywords={[slug, 'mortgage guide', 'USFinNexus']} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: guide.faqs.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) }) }} />
       <article className="prose prose-slate max-w-none">
         <p className="text-sm text-slate-500">Reviewed August 9, 2026 · Educational planning guide</p>
         <h1>{guide.title}</h1>

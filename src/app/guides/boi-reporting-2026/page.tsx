@@ -70,7 +70,7 @@ export default function BoiReporting2026Page() {
 
         <p className="text-sm text-slate-600"><strong>Disclaimer:</strong> This guide is educational information, not legal, tax, or compliance advice. Rules and deadlines can change; consult FinCEN, your state agency, or a qualified professional for a specific entity.</p>
       </article>
-      <ContextualInternalLinks currentSlug="boi-reporting-2026" showBlogs={false} showCalculators={false} />
+      <ContextualInternalLinks currentSlug="boi-reporting-2026" showBlogs={false} showCalculators />
       <div className="mt-6 flex flex-wrap gap-4 text-sm"><Link href="/articles" className="text-blue-700 hover:underline">More compliance articles</Link><Link href="/methodology" className="text-blue-700 hover:underline">Our methodology</Link></div>
       <AuthorBio author={USFinNexusEditorialTeam} updatedDate="September 5, 2026" />
     </main>

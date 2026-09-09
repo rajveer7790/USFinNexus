@@ -68,7 +68,7 @@ export default function TrumpAccountPage() {
             <div className="mt-12">
                 <CalculatorFAQ faqs={FAQS} title="Trump Account Calculator FAQs" />
             </div>
-        <ContextualInternalLinks currentSlug="trump-account" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="trump-account" showBlogs showCalculators />
         </main>
     );
 }

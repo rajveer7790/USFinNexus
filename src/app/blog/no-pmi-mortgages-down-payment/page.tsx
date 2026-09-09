@@ -181,7 +181,7 @@ export default function PostComponent() {
                         FHA loans are famous for allowing 3.5% down payments. However, they charge Mortgage Insurance Premium (MIP), which is effectively the same thing as PMI. The danger with FHA MIP is that if you put down less than 10%, the insurance premium is <strong>permanent for the life of the loan</strong>. It never drops off, no matter how much equity you build, unless you completely refinance out of the FHA program.
                     </p>
 
-                <ContextualInternalLinks currentSlug="no-pmi-mortgages-down-payment" showBlogs showCalculators={false} />
+                <ContextualInternalLinks currentSlug="no-pmi-mortgages-down-payment" showBlogs showCalculators />
                 </article>
 
                 <div className="mt-16">

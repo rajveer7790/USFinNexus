@@ -217,7 +217,7 @@ export default function PostComponent() {
                         You cannot simply "call the bank" and ask them to remove your ex-spouse's name from the mortgage. To release a co-borrower from legal liability for the debt, you are forced to refinance the entire loan solely into your own name, requiring you to qualify using only your individual income.
                     </p>
 
-                <ContextualInternalLinks currentSlug="when-to-refinance-1-percent-rule" showBlogs showCalculators={false} />
+                <ContextualInternalLinks currentSlug="when-to-refinance-1-percent-rule" showBlogs showCalculators />
                 </article>
 
                 <div className="mt-16">

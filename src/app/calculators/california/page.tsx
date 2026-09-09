@@ -45,7 +45,7 @@ export default function CaliforniaPage() {
                 <MortgageCalculator heading="California Mortgage Calculator" intro="Model a California mortgage using your own tax and insurance assumptions." />
             <CaliforniaSeoContent />
             <SemrushIntentSection slug="california" />
-        <ContextualInternalLinks currentSlug="california" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="california" showBlogs showCalculators />
         </main>
     );
 }

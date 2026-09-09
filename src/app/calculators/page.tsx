@@ -48,6 +48,9 @@ const TOOLS = [
     { href: '/calculators/retirement', icon: TrendingUp, title: 'Retirement Planner', desc: 'Compound growth projections.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/fire-planner', icon: TrendingUp, title: 'FIRE Planner', desc: 'Early retirement timeline.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/mortgage-payoff', icon: TrendingUp, title: 'Mortgage Payoff Calculator', desc: 'Model extra principal, payoff time and interest saved.', badge: 'new', cat: 'mortgage' },
+    { href: '/calculators/pmi', icon: Percent, title: 'PMI Removal Calculator', desc: 'Estimate 80% LTV target and PMI savings.', badge: 'new', cat: 'mortgage' },
+    { href: '/calculators/extra-payment', icon: TrendingUp, title: 'Extra Payment Mortgage', desc: 'See payoff time and interest savings.', badge: 'new', cat: 'mortgage' },
+    { href: '/calculators/biweekly-mortgage', icon: Table2, title: 'Biweekly Mortgage', desc: 'Compare 26 half-payments with monthly.', badge: 'new', cat: 'mortgage' },
     { href: '/calculators/investment', icon: LineChart, title: 'Compound Interest', desc: 'Investment growth calculator.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/trump-account', icon: PiggyBank, title: 'Trump Account 2026', desc: '$1,000 seed + family contribution growth.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/drip', icon: LineChart, title: 'DRIP Forecaster', desc: 'Dividend reinvestment plan.', badge: 'new', cat: 'wealth' },
@@ -74,7 +77,7 @@ export default function CalculatorsPage() {
                         <div className="neo-sec-tag"><span className="neo-sec-dot" /> All Tools</div>
                         <h1 className="neo-sec-h2">The Complete <em>Calculator Library</em></h1>
                         <p className="neo-sec-p">
-                            Browse our complete library of 35 free, CFPB-compliant calculators.
+                            Browse our complete library of 38 free, CFPB-compliant calculators.
                             Zero signup, instant PDF reports, and zero data collection.
                         </p>
                     </header>
@@ -93,6 +96,13 @@ export default function CalculatorsPage() {
                             </Link>
                         ))}
                     </div>
+                    <section className="mt-14" aria-labelledby="state-calculators-heading">
+                        <h2 id="state-calculators-heading" className="neo-sec-h2">State Mortgage Calculators</h2>
+                        <p className="neo-sec-p">Use local tax and insurance assumptions for high-intent state mortgage searches. Always replace defaults with the property’s current bill and quote.</p>
+                        <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+                            {['Arizona','Colorado','Georgia','Illinois','Massachusetts','New Jersey','New York','North Carolina','Ohio','Pennsylvania','Virginia','Washington'].map((state) => <Link key={state} href={`/calculators/${state.toLowerCase().replaceAll(' ', '-')}`} className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-bold text-blue-700 hover:border-blue-300 hover:bg-blue-50">{state} mortgage calculator</Link>)}
+                        </div>
+                    </section>
                 </div>
             </section>
 

@@ -196,7 +196,7 @@ export default function PostComponent() {
                         </Link>
                     </div>
 
-                <ContextualInternalLinks currentSlug="lender-quote-vs-online-calculator" showBlogs showCalculators={false} />
+                <ContextualInternalLinks currentSlug="lender-quote-vs-online-calculator" showBlogs showCalculators />
                 </article>
 
                 <div className="mt-16">

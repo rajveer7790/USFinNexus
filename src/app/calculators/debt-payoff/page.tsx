@@ -60,7 +60,7 @@ export default function DebtPayoffPage() {
             <DebtPayoffClient />
             <DebtPayoffSeoContent />
             <CalculatorFAQ faqs={DEBT_PAYOFF_FAQS} title="Debt Payoff — Frequently Asked Questions" />
-        <ContextualInternalLinks currentSlug="debt-payoff" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="debt-payoff" showBlogs showCalculators />
         </main>
     );
 }

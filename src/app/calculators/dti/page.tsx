@@ -72,7 +72,7 @@ export default function DtiPage() {
             <SemrushIntentSection slug="dti" />
             <DtiSeoContentV2 />
             <CalculatorFAQ faqs={DTI_FAQS} title="Debt-to-Income Ratio Calculator FAQs" />
-        <ContextualInternalLinks currentSlug="dti" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="dti" showBlogs showCalculators />
         </main>
     );
 }

@@ -65,7 +65,7 @@ export default function BudgetPage() {
             <BudgetClient />
             <BudgetSeoContent />
             <CalculatorFAQ faqs={BUDGET_FAQS} title="Budget Planner — Frequently Asked Questions" />
-        <ContextualInternalLinks currentSlug="budget" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="budget" showBlogs showCalculators />
         </main>
     );
 }
