@@ -63,7 +63,7 @@ export default function HELOCPage() {
             <SemrushIntentSection slug="heloc" />
             <HelocSeoContent />
             <CalculatorFAQ faqs={HELOC_FAQS} title="HELOC — Frequently Asked Questions" />
-        <ContextualInternalLinks currentSlug="heloc" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="heloc" showBlogs showCalculators />
         </main>
     );
 }

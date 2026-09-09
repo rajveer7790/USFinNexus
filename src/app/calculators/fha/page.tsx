@@ -44,7 +44,7 @@ export default function FhaLoanPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'FHA Loan Calculator', item: '/calculators/fha' }]} />
                             <GovLoanClient initialTab="fha" />
             <FhaSeoContent />
-        <ContextualInternalLinks currentSlug="fha" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="fha" showBlogs showCalculators />
         </main>
     );
 }

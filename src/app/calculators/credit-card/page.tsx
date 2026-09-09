@@ -62,7 +62,7 @@ export default function CreditCardPage() {
             <CreditCardSeoContent />
             <SemrushIntentSection slug="credit-card" />
             <CalculatorFAQ faqs={CREDIT_CARD_FAQS} title="Credit Card Payoff — Frequently Asked Questions" />
-        <ContextualInternalLinks currentSlug="credit-card" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="credit-card" showBlogs showCalculators />
         </main>
     );
 }

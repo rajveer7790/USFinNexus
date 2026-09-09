@@ -62,7 +62,7 @@ export default function PersonalLoanPage() {
             <PersonalLoanSeoContent />
             <SemrushIntentSection slug="personal-loan" />
             <CalculatorFAQ faqs={PERSONAL_LOAN_FAQS} title="Personal Loans — Frequently Asked Questions" />
-        <ContextualInternalLinks currentSlug="personal-loan" showBlogs showCalculators={false} />
+        <ContextualInternalLinks currentSlug="personal-loan" showBlogs showCalculators />
         </main>
     );
 }
