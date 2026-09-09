@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
@@ -62,6 +63,7 @@ export default function HELOCPage() {
             <HELOCClient />
             <SemrushIntentSection slug="heloc" />
             <HelocSeoContent />
+            <p className="mx-auto mt-6 max-w-4xl text-sm text-slate-600">Compare HELOCs with other second-lien options in our <Link className="font-semibold text-blue-700 hover:underline" href="/blog/second-mortgage-guide">second-mortgage guide</Link>.</p>
             <CalculatorFAQ faqs={HELOC_FAQS} title="HELOC — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="heloc" showBlogs showCalculators />
         </main>
