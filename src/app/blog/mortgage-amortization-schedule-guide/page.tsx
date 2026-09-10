@@ -8,27 +8,27 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'How to Read a Mortgage Amortization Schedule — Complete 2026 Guide',
-    description: 'Learn how a mortgage amortization schedule works, why most payments go to interest early, how extra payments save tens of thousands, and how to generate your own free schedule.',
+    title: 'How Does Mortgage Amortization Work? 2026 Guide',
+    description: 'Learn how mortgage amortization works, how each payment splits between principal and interest, how extra payments change the schedule, and how to generate one free.',
     alternates: { canonical: 'https://usfinnexus.com/blog/mortgage-amortization-schedule-guide' },
-    openGraph: { type: 'article', title: 'How to Read a Mortgage Amortization Schedule', description: 'Why early payments go mostly to interest, how extra payments save thousands, and how to generate your own free amortization schedule.', url: 'https://usfinnexus.com/blog/mortgage-amortization-schedule-guide', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Mortgage Amortization Schedule Guide' }] },
-    twitter: { card: 'summary_large_image', title: 'How to Read a Mortgage Amortization Schedule', description: 'Why 80% of early payments go to interest — and how to fight back with extra payments.', images: ['https://usfinnexus.com/icon-512.png'] },
+    openGraph: { type: 'article', title: 'How Does Mortgage Amortization Work?', description: 'See how principal, interest and the balance change over a fixed-rate mortgage.', url: 'https://usfinnexus.com/blog/mortgage-amortization-schedule-guide', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Mortgage Amortization Schedule Guide' }] },
+    twitter: { card: 'summary_large_image', title: 'How Does Mortgage Amortization Work?', description: 'Understand principal, interest, balance and extra payments with a free schedule.', images: ['https://usfinnexus.com/icon-512.png'] },
 };
 
 export default function BlogPost() {
     return (
         <>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'Why does most of my mortgage payment go to interest at first?', acceptedAnswer: { '@type': 'Answer', text: 'This is called front-loading, and it is how all standard US mortgage amortization works. Your interest is calculated as (current loan balance × monthly rate). In year 1, your balance is near the full loan amount, so interest is highest. As you pay down principal, the interest portion shrinks each month. On a 30-year $400,000 mortgage at 6.37%, your first payment is approximately $1,999 — about $1,682 of that is interest and only $317 is principal.' } },
-    { '@type': 'Question', name: 'How much does one extra mortgage payment per year save?', acceptedAnswer: { '@type': 'Answer', text: 'Making one extra principal payment per year (i.e., 13 payments instead of 12) on a $400,000, 30-year mortgage at 6.37% saves approximately $67,000 in interest and cuts about 4 years off the loan. The savings are higher the earlier in the loan you start making extra payments.' } },
+    { '@type': 'Question', name: 'Why does a mortgage payment include more interest at first?', acceptedAnswer: { '@type': 'Answer', text: 'Monthly interest is calculated from the outstanding principal balance. At the start of a fully amortizing loan, the balance is largest, so the interest portion is largest. As principal falls, more of the fixed payment goes toward principal. The exact split depends on the loan amount, rate and term.' } },
+    { '@type': 'Question', name: 'How much can extra mortgage payments save?', acceptedAnswer: { '@type': 'Answer', text: 'Extra principal can shorten the term and reduce total interest, but the amount depends on the balance, rate, term, timing and payment size. Model your exact scenario in an amortization calculator and confirm that your servicer applies extra money to principal.' } },
     { '@type': 'Question', name: 'How do I get a free amortization schedule for my mortgage?', acceptedAnswer: { '@type': 'Answer', text: 'USFinNexus offers a free amortization schedule calculator that generates a full month-by-month table with extra payment modeling. Enter your loan amount, interest rate, term, and any extra monthly payments, and download a free PDF or CSV. No signup or email required.' } },
 ] }) }} />
         <ArticleSchema
-            title="How to Read a Mortgage Amortization Schedule | USFinNexus"
-            description="Learn how to read and understand a mortgage amortization schedule, including how principal and interest change over time."
+            title="How Does Mortgage Amortization Work? 2026 Guide"
+            description="Learn how each mortgage payment splits between principal and interest and how extra payments change the schedule."
             url="https://usfinnexus.com/blog/mortgage-amortization-schedule-guide"
             datePublished="2026-02-25"
-            dateModified="2026-03-12"
+            dateModified="2026-09-10"
             authorName="USFinNexus Editorial Team"
         />
         <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
@@ -40,7 +40,7 @@ export default function BlogPost() {
                     Education
                 </span>
                 <h1 className="text-3xl md:text-5xl font-black mb-6 leading-tight" style={{ color: 'var(--color-text)' }}>
-                    How to Read a Mortgage Amortization Schedule
+                    How Does Mortgage Amortization Work?
                 </h1>
                 <div className="flex flex-wrap items-center gap-3 text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>
                     <span>By {USFinNexusEditorialTeam.name}</span>
@@ -55,7 +55,7 @@ export default function BlogPost() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    An amortization schedule is the single most important document in your mortgage. It tells you exactly where every dollar of your monthly payment goes-month by month, for the entire life of your loan. Here&apos;s how to read it like a pro.
+                    <strong>Answer first:</strong> Mortgage amortization is the gradual repayment of a loan through scheduled payments. Each payment covers that month’s interest first, then reduces principal; the balance reaches zero at the end of the term when payments are made as agreed.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Is an Amortization Schedule?</h2>
@@ -152,7 +152,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">How Do Extra Payments Affect Your Amortization Schedule?</h2>
                 <p className="mb-6">
-                    Making just <strong>one extra payment per year</strong> on a 30-year mortgage can shave off approximately 4-5 years from your loan term and save tens of thousands in interest. When you make an extra payment, 100% of that extra amount goes directly to principal reduction.
+                    Making extra principal payments can shorten a 30-year mortgage and reduce interest, but there is no universal “four-year” or dollar saving. Results vary with the loan and timing. Check for prepayment terms and tell the servicer to apply extra funds to principal.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">How Do You Generate Your Mortgage Amortization Schedule?</h2>
@@ -176,6 +176,7 @@ export default function BlogPost() {
 
 
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="March 12, 2026" />
+                <div className="mt-8 text-sm text-slate-600 border-t pt-6"><p><strong>Sources and disclaimer:</strong> Your servicer’s statement controls the exact allocation of payments, fees and escrow. Use the <Link href="/calculators/amortization" className="text-blue-700 underline">amortization calculator</Link> for planning; results are illustrative and not a payoff quote or financial advice.</p></div>
             </div>
             </article>
         </div>

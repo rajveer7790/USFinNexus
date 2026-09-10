@@ -8,11 +8,11 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Should You Buy Mortgage Points in 2026? Break-Even Math Explained',
-    description: 'Learn how mortgage discount points work. See the exact math to calculate your break-even point and decide if buying down your interest rate is worth the upfront cost.',
+    title: 'Are Mortgage Points Worth Buying? Break-Even Guide 2026',
+    description: 'Are mortgage points worth buying? Learn the 1% cost rule, lender-specific rate quotes, break-even math, cash-flow trade-offs and IRS deduction limits.',
     openGraph: {
-        title: 'Should You Buy Mortgage Points in 2026? Break-Even Math Explained',
-        description: 'Learn how mortgage discount points work. See the exact math to calculate your break-even point and decide if buying down your interest rate is worth the upfront cost.',
+        title: 'Are Mortgage Points Worth Buying? Break-Even Guide 2026',
+        description: 'Compare a higher rate with lender credits, or pay points upfront only when the break-even period fits your plans.',
         url: 'https://usfinnexus.com/blog/mortgage-points-buydown-calculator',
         type: 'article',
         siteName: 'USFinNexus',
@@ -27,11 +27,11 @@ export default function PostComponent() {
     return (
         <>
             <ArticleSchema
-                title="Should You Buy Down Your Mortgage Rate? (The Math on Points)"
-                description="Buying points lowers your rate but costs money upfront. Here's the break-even math."
+                title="Are Mortgage Points Worth Buying? Break-Even Guide 2026"
+                description="Compare points, lender credits and the break-even period before choosing a mortgage rate."
                 url="https://usfinnexus.com/blog/mortgage-points-buydown-calculator"
                 datePublished="2026-05-26"
-                dateModified="2026-05-26"
+                dateModified="2026-09-10"
                 authorName="USFinNexus Editorial Team"
                 keywords={['mortgage points', 'discount points', 'interest rate buydown']}
             />
@@ -54,7 +54,7 @@ export default function PostComponent() {
                             "name": "How much does 1 point lower my interest rate?",
                             "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "While it varies slightly by lender and market conditions, buying one point typically lowers your interest rate by 0.25%. Therefore, paying 1% of your loan amount upfront buys you a 0.25% reduction in your rate for the life of the loan."
+                                "text": "One point costs 1% of the loan amount, but the rate reduction is not fixed. Compare each lender’s written par-rate and points options because the credit, loan type, term and market can change the pricing."
                             }
                         },
                         {
@@ -62,7 +62,7 @@ export default function PostComponent() {
                             "name": "Are mortgage points tax deductible?",
                             "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "Yes. The IRS considers discount points to be prepaid mortgage interest. If you itemize your deductions, you can fully deduct the cost of points in the year you buy the house (or amortize the deduction if you are refinancing)."
+                                "text": "Points may be deductible as prepaid mortgage interest when IRS requirements are met, but limits apply. Review IRS Publication 936 and ask a tax professional; refinancing points are generally spread over the loan term rather than deducted all at once."
                             }
                         }
                     ]
@@ -81,7 +81,7 @@ export default function PostComponent() {
                             Finance Math
                         </span>
                         <h1 className="text-4xl md:text-5xl font-black mb-6 text-navy-900 leading-tight">
-                            Should You Buy Mortgage Points in 2026? The Break-Even Math
+                            Are Mortgage Points Worth Buying? Break-Even Guide 2026
                         </h1>
                         <div className="flex items-center text-sm text-gray-600 gap-4">
                             <span className="font-semibold text-blue-700">By {USFinNexusEditorialTeam.name}</span>
@@ -93,7 +93,7 @@ export default function PostComponent() {
                     </header>
 
                     <p className="lead text-2xl text-gray-700 mb-10 font-light leading-relaxed">
-                        When you lock in your mortgage, your lender will offer you a menu of interest rates. The standard, "par" rate comes with no extra fees. But right below it, you will see lower rates that require you to pay thousands of dollars in upfront cash. This is known as "buying points."
+                        <strong>Answer first:</strong> Mortgage points can be worth buying when the upfront cost is recovered through monthly principal-and-interest savings before you sell or refinance, and the payment still fits your cash reserves. Compare the lender’s written options and calculate the break-even month in our <Link href="/calculators/mortgage" className="text-blue-700 underline">mortgage calculator</Link>.
                     </p>
 
                     <p>
@@ -115,7 +115,7 @@ export default function PostComponent() {
                     </p>
                     <ul className="space-y-4 my-6">
                         <li><strong>The Cost Rule:</strong> One point always costs exactly <strong>1% of your loan amount</strong>. If you are borrowing $300,000, one point costs $3,000. If you are borrowing $500,000, one point costs $5,000.</li>
-                        <li><strong>The Rate Rule:</strong> Buying one point typically lowers your interest rate by <strong>0.25%</strong>. (This is a general industry standard, though some lenders might only offer a 0.125% or 0.20% reduction, which is why you must do the math).</li>
+                        <li><strong>The pricing rule:</strong> One point costs 1% of the loan amount, but there is no guaranteed rate reduction. The lender must quote the exact rate and payment for your loan scenario.</li>
                     </ul>
 
                     <h2 className="text-3xl font-bold mt-16 mb-6 text-navy-900 flex items-center gap-3">
@@ -215,6 +215,7 @@ export default function PostComponent() {
                 <RelatedCalculators />
                     <RelatedArticles />
                     <AuthorBio author={USFinNexusEditorialTeam} />
+                    <div className="mt-8 text-sm text-slate-600 border-t pt-6"><p><strong>Sources and disclaimer:</strong> Review <a href="https://www.irs.gov/publications/p936" className="text-blue-700 underline">IRS Publication 936</a> for points-deduction rules and ask the lender for a written rate/credit worksheet. Break-even results are educational estimates, not tax, mortgage or investment advice.</p></div>
                 </div>
             </div>
         </>
