@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'What Is Debt-to-Income Ratio (DTI) and Why Does It Matter?',
+    title: 'Debt-to-Income Ratio (DTI): Why It Matters in 2026',
     description: 'Understand debt-to-income ratio (DTI), the formula lenders use, what counts as debt, and practical ways to lower DTI before a mortgage or personal-loan application.',
     alternates: { canonical: 'https://usfinnexus.com/blog/debt-to-income-ratio-dti-calculator-2026' },
     openGraph: {
