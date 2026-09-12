@@ -42,7 +42,6 @@ const CALC_PRIORITY: Record<string, number> = {
     '/calculators/fha': 0.75,
     '/calculators/va': 0.75,
     '/calculators/options-profit': 0.75,
-    '/calculators/pmi': 0.88,
     '/calculators/pmi-removal': 0.90,
     '/calculators/temporary-buydown': 0.88,
     '/calculators/escrow-shortage': 0.88,
