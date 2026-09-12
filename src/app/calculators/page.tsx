@@ -48,7 +48,7 @@ const TOOLS = [
     { href: '/calculators/retirement', icon: TrendingUp, title: 'Retirement Planner', desc: 'Compound growth projections.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/fire-planner', icon: TrendingUp, title: 'FIRE Planner', desc: 'Early retirement timeline.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/mortgage-payoff', icon: TrendingUp, title: 'Mortgage Payoff Calculator', desc: 'Model extra principal, payoff time and interest saved.', badge: 'new', cat: 'mortgage' },
-    { href: '/calculators/pmi', icon: Percent, title: 'PMI Removal Calculator', desc: 'Estimate 80% LTV target and PMI savings.', badge: 'new', cat: 'mortgage' },
+    { href: '/calculators/pmi-removal', icon: Percent, title: 'PMI Removal Calculator', desc: 'Estimate 80% LTV target and PMI savings.', badge: 'new', cat: 'mortgage' },
     { href: '/calculators/extra-payment', icon: TrendingUp, title: 'Extra Payment Mortgage', desc: 'See payoff time and interest savings.', badge: 'new', cat: 'mortgage' },
     { href: '/calculators/biweekly-mortgage', icon: Table2, title: 'Biweekly Mortgage', desc: 'Compare 26 half-payments with monthly.', badge: 'new', cat: 'mortgage' },
     { href: '/calculators/investment', icon: LineChart, title: 'Compound Interest', desc: 'Investment growth calculator.', badge: 'new', cat: 'wealth' },
