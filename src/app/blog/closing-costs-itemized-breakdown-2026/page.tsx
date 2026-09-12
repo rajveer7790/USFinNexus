@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Mortgage Closing Costs: What Homebuyers Should Expect',
+    title: 'Mortgage Closing Costs 2026: What Buyers Should Expect',
     description: 'Mortgage closing costs explained for U.S. homebuyers: lender fees, title, appraisal, prepaids, escrow, taxes, seller credits and how to compare a Loan Estimate.',
     alternates: { canonical: 'https://usfinnexus.com/blog/closing-costs-itemized-breakdown-2026' },
     openGraph: {
