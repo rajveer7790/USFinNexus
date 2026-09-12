@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: 'Are Mortgage Points Worth Buying? Break-Even Guide 2026',
+    title: 'Mortgage Points Break-Even Guide 2026',
     description: 'Are mortgage points worth buying? Learn the 1% cost rule, lender-specific rate quotes, break-even math, cash-flow trade-offs and IRS deduction limits.',
     openGraph: {
         title: 'Are Mortgage Points Worth Buying? Break-Even Guide 2026',
