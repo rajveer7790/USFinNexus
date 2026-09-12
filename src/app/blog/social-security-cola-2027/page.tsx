@@ -9,7 +9,7 @@ import ArticleSchema from '@/components/ArticleSchema';
 const url = 'https://usfinnexus.com/blog/social-security-cola-2027';
 
 export const metadata: Metadata = {
-    title: 'Social Security COLA 2027: Announcement Date and Calculation',
+    title: 'Social Security COLA 2027: Timeline and Formula',
     description: 'The 2027 Social Security COLA is not official yet. Learn the expected announcement timing, CPI-W formula, payment timing and how to plan without relying on predictions.',
     alternates: { canonical: url },
     openGraph: {
