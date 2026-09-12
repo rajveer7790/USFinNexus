@@ -3,7 +3,14 @@
 /mortgage-calculator /calculators/mortgage 301
 /mortgage-calculator/ /calculators/mortgage 301
 /piti-mortgage-calculator /calculators/mortgage 301
-/pmi-calculator /calculators/pmi 301
+/pmi-calculator /calculators/pmi-removal 301
+/calculators/pmi /calculators/pmi-removal 301
+/pmi-removal-calculator /calculators/pmi-removal 301
+/calculators/buydown /calculators/temporary-buydown 301
+/calculators/2-1-buydown /calculators/temporary-buydown 301
+/2-1-buydown-calculator /calculators/temporary-buydown 301
+/home-affordability-calculator /calculators/affordability 301
+/calculators/biweekly /calculators/biweekly-mortgage 301
 /extra-payment-mortgage-calculator /calculators/extra-payment 301
 /biweekly-mortgage-calculator /calculators/biweekly-mortgage 301
 /blog/how-much-house-can-afford-2026 /blog/how-much-house-can-i-afford-2026 301
