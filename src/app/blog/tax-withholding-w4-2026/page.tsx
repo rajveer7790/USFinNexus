@@ -9,7 +9,7 @@ import ArticleSchema from '@/components/ArticleSchema';
 const url = 'https://usfinnexus.com/blog/tax-withholding-w4-2026';
 
 export const metadata: Metadata = {
-    title: 'Tax Withholding 2026: How to Check Your W-4 and Paycheck',
+    title: 'Tax Withholding 2026: W-4 and Paycheck Guide',
     description: 'Use the IRS Tax Withholding Estimator to review your 2026 paycheck, update Form W-4, avoid a surprise tax bill and plan estimated payments when needed.',
     alternates: { canonical: url },
     openGraph: { type: 'article', title: 'Tax Withholding 2026: How to Check Your W-4', description: 'A practical U.S. guide to paycheck withholding, Form W-4 and year-end tax planning.', url, siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/images/tax-withholding-w4-2026.webp', width: 1200, height: 630, alt: 'Worker reviewing a paycheck and W-4 tax withholding' }] },
