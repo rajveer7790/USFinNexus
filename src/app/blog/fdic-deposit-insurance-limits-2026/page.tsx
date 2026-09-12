@@ -9,7 +9,7 @@ import ArticleSchema from '@/components/ArticleSchema';
 const url = 'https://usfinnexus.com/blog/fdic-deposit-insurance-limits-2026';
 
 export const metadata: Metadata = {
-    title: 'FDIC Deposit Insurance Limits 2026: How Much Is Protected?',
+    title: 'FDIC Insurance Limits 2026: Coverage by Account Type',
     description: 'Learn the 2026 FDIC deposit insurance limit, how single and joint ownership works, what accounts qualify, and how to check a bank’s coverage before depositing money.',
     alternates: { canonical: url },
     openGraph: { type: 'article', title: 'FDIC Deposit Insurance Limits 2026', description: 'A practical guide to the $250,000 FDIC limit, ownership categories and safe bank-account planning.', url, siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/images/fdic-deposit-insurance-2026.webp', width: 1200, height: 630, alt: 'Family reviewing FDIC-insured bank savings' }] },
