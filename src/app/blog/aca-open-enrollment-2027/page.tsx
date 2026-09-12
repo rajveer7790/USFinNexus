@@ -9,7 +9,7 @@ import ArticleSchema from '@/components/ArticleSchema';
 const url = 'https://usfinnexus.com/blog/aca-open-enrollment-2027';
 
 export const metadata: Metadata = {
-    title: 'ACA Open Enrollment 2027: Dates, Deadlines and Checklist',
+    title: 'ACA Open Enrollment 2027: Dates, Deadlines | USFinNexus',
     description: 'ACA Open Enrollment for 2027 starts November 1. See federal Marketplace deadlines, January coverage dates, subsidy updates and a practical plan-comparison checklist.',
     alternates: { canonical: url },
     openGraph: {
