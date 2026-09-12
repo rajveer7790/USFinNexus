@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
@@ -69,6 +70,7 @@ export default function AffordabilityPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Home Affordability Calculator', item: '/calculators/affordability' }]} />
             <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 9, 2026 &middot; 28% and 43% are planning scenarios, not universal approval limits</p>
             <AffordabilityClient />
+            <p className="mx-auto max-w-3xl my-6 text-sm text-slate-600">Want salary-specific scenarios? Use the <Link href="/calculators/affordability/by-salary" className="text-blue-700 underline">affordability by salary hub</Link> for $60,000–$200,000 examples.</p>
             <SemrushIntentSection slug="affordability" />
             <AffordabilitySeoContentV2 />
             <CalculatorFAQ faqs={AFFORDABILITY_FAQS} title="Home Affordability Calculator FAQs" />
