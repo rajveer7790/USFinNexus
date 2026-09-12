@@ -5,7 +5,7 @@ import { calcAffordability, formatCurrency, formatPercent, US_MORTGAGE_CONSTANTS
 import DisclaimerBanner from '@/components/DisclaimerBanner';
 import { Home, Info, Scale, TrendingUp } from 'lucide-react';
 
-export default function AffordabilityClient({ initialMonthlyIncome = 7500 }: { initialMonthlyIncome?: number }) {
+export default function AffordabilityClient({ initialMonthlyIncome = 7500, showHeading = true }: { initialMonthlyIncome?: number; showHeading?: boolean }) {
     const [income, setIncome] = useState(initialMonthlyIncome);
     const [debts, setDebts] = useState(500);
     const [downPayment, setDownPayment] = useState(50000);
@@ -41,7 +41,7 @@ export default function AffordabilityClient({ initialMonthlyIncome = 7500 }: { i
                         <div className="p-2 rounded-xl bg-indigo-500/10 border border-indigo-500/20"><Home className="text-indigo-500" size={22} /></div>
                         <span className="text-xs font-black uppercase tracking-[0.25em] text-indigo-500">Home-buying planning</span>
                     </div>
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-3 tracking-tight">How Much House Can I Afford? Calculator</h1>
+                    {showHeading && <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-3 tracking-tight">How Much House Can I Afford? Calculator</h1>}
                     <p className="text-gray-500 max-w-3xl font-medium text-sm sm:text-lg">
                         Estimate a home-price range from your income, recurring debt, down payment, rate and property-tax assumptions. The 28% and 43% outputs are planning scenarios — not universal mortgage approval limits.
                     </p>
