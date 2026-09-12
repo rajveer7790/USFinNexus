@@ -1,0 +1,2 @@
+import type { Metadata } from 'next'; import SalaryScenarioPage from '../SalaryScenarioPage';
+export const dynamic='force-static'; export const metadata: Metadata={title:'How Much House Can I Afford on $200,000? 2026 Calculator',description:'Estimate home affordability on a $200,000 annual salary using debts, rate and down payment.',alternates:{canonical:'https://usfinnexus.com/calculators/affordability/salary-200000'}}; export default function Page(){return <SalaryScenarioPage amount={200000}/>;}
