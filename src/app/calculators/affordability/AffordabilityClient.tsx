@@ -5,8 +5,8 @@ import { calcAffordability, formatCurrency, formatPercent, US_MORTGAGE_CONSTANTS
 import DisclaimerBanner from '@/components/DisclaimerBanner';
 import { Home, Info, Scale, TrendingUp } from 'lucide-react';
 
-export default function AffordabilityClient() {
-    const [income, setIncome] = useState(7500);
+export default function AffordabilityClient({ initialMonthlyIncome = 7500 }: { initialMonthlyIncome?: number }) {
+    const [income, setIncome] = useState(initialMonthlyIncome);
     const [debts, setDebts] = useState(500);
     const [downPayment, setDownPayment] = useState(50000);
     const [rate, setRate] = useState(6.75);
