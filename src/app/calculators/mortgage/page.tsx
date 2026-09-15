@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
@@ -75,6 +76,10 @@ export default function MortgagePage() {
             <MortgageCalculatorClient />
             <SemrushIntentSection slug="mortgage" />
             <MortgageSeoContentV2 />
+            <section className="mx-auto my-10 max-w-4xl rounded-2xl border border-blue-100 bg-blue-50 p-6">
+                <h2 className="text-xl font-bold text-slate-950">Plan beyond the first payment</h2>
+                <p className="mt-2 text-slate-700">If taxes or insurance changed after an escrow analysis, use the <Link className="font-semibold text-blue-700 underline" href="/calculators/escrow-shortage">escrow shortage calculator</Link>. Comparing a current market-rate example? Read the <Link className="font-semibold text-blue-700 underline" href="/blog/mortgage-payment-at-676-september-2026">6.76% mortgage payment guide</Link>.</p>
+            </section>
             <CalculatorFAQ faqs={MORTGAGE_FAQS} title="Mortgage Calculator FAQs" />
         <ContextualInternalLinks currentSlug="mortgage" showBlogs showCalculators />
         </main>
