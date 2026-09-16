@@ -19,7 +19,7 @@ export default function RentalPropertyClient() {
     const [annualInsurance, setAnnualInsurance] = useState<number>(1200);
     const [monthlyHoa, setMonthlyHoa] = useState<number>(0);
 
-    const [closingCosts, setClosingCosts] = useState<number>(6000);
+    const [closingCosts, setClosingCosts] = useState<number>(0);
     const [repairCosts, setRepairCosts] = useState<number>(10000); // Initial rehab
 
     // Calculated values
