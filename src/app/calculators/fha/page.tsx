@@ -42,7 +42,7 @@ export default function FhaLoanPage() {
                 url="https://usfinnexus.com/calculators/fha"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'FHA Loan Calculator', item: '/calculators/fha' }]} />
-                            <GovLoanClient initialTab="fha" />
+                            <GovLoanClient initialTab="fha" heading="FHA Mortgage Calculator" />
             <FhaSeoContent />
         <ContextualInternalLinks currentSlug="fha" showBlogs showCalculators />
         </main>

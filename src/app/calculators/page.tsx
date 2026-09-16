@@ -9,12 +9,12 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'All Free Mortgage & Finance Calculators',
-    description: 'Browse our complete library of 35 free, CFPB-compliant mortgage and financial calculators. Instant PDF reports, no signup, and zero data collected.',
+    description: 'Browse our complete library of 41 free, CFPB-compliant mortgage and financial calculators. Instant PDF reports, no signup, and zero data collected.',
     alternates: { canonical: 'https://usfinnexus.com/calculators' },
     openGraph: {
         type: 'website',
         title: 'All Free Mortgage & Finance Calculators',
-        description: 'Browse our complete library of 35 free, CFPB-compliant mortgage and financial calculators.',
+        description: 'Browse our complete library of 41 free, CFPB-compliant mortgage and financial calculators.',
         url: 'https://usfinnexus.com/calculators',
         siteName: 'USFinNexus',
     },
@@ -51,6 +51,9 @@ const TOOLS = [
     { href: '/calculators/pmi-removal', icon: Percent, title: 'PMI Removal Calculator', desc: 'Estimate 80% LTV target and PMI savings.', badge: 'new', cat: 'mortgage' },
     { href: '/calculators/extra-payment', icon: TrendingUp, title: 'Extra Payment Mortgage', desc: 'See payoff time and interest savings.', badge: 'new', cat: 'mortgage' },
     { href: '/calculators/biweekly-mortgage', icon: Table2, title: 'Biweekly Mortgage', desc: 'Compare 26 half-payments with monthly.', badge: 'new', cat: 'mortgage' },
+    { href: '/calculators/temporary-buydown', icon: Percent, title: 'Temporary Buydown', desc: 'Model 1-0, 2-1 and 3-2-1 subsidies.', badge: 'new', cat: 'mortgage' },
+    { href: '/calculators/escrow-shortage', icon: Home, title: 'Escrow Shortage', desc: 'Explain payment jumps and repayment.', badge: 'new', cat: 'mortgage' },
+    { href: '/calculators/affordability/by-salary', icon: DollarSign, title: 'Affordability by Salary', desc: 'Compare home prices by income.', badge: 'new', cat: 'mortgage' },
     { href: '/calculators/investment', icon: LineChart, title: 'Compound Interest', desc: 'Investment growth calculator.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/trump-account', icon: PiggyBank, title: 'Trump Account 2026', desc: '$1,000 seed + family contribution growth.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/drip', icon: LineChart, title: 'DRIP Forecaster', desc: 'Dividend reinvestment plan.', badge: 'new', cat: 'wealth' },
@@ -77,7 +80,7 @@ export default function CalculatorsPage() {
                         <div className="neo-sec-tag"><span className="neo-sec-dot" /> All Tools</div>
                         <h1 className="neo-sec-h2">The Complete <em>Calculator Library</em></h1>
                         <p className="neo-sec-p">
-                            Browse our complete library of 38 free, CFPB-compliant calculators.
+                            Browse our complete library of 41 free, CFPB-compliant calculators.
                             Zero signup, instant PDF reports, and zero data collection.
                         </p>
                     </header>

@@ -142,7 +142,7 @@ export default function RefinanceClient() {
                                         </div>
                                         <div>
                                             <p className={`text-xl font-black mb-2 ${isWorthIt ? 'text-emerald-500' : 'text-amber-500'}`}>
-                                                {isWorthIt ? 'Refinancing Looks Favorable!' : 'Proceed with Caution'}
+                                                {isWorthIt ? 'Potential Savings After Break-Even' : 'Review Break-Even Before Refinancing'}
                                             </p>
                                             <p className="text-sm font-medium text-gray-500">
                                                 {result.monthlySavings > 0
@@ -225,5 +225,4 @@ export default function RefinanceClient() {
         </div>
     );
 }
-
 

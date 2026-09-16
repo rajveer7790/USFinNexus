@@ -2,16 +2,16 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
-const SOURCE_DATE = 'August 6, 2026';
+const SOURCE_DATE = 'September 10, 2026';
 
 export const metadata: Metadata = {
-    title: 'Mortgage Rates Today: August 2026 Data & Context',
+    title: 'Current Mortgage Rates: September 2026 Data & Context',
     description: 'Freddie Mac weekly mortgage-rate averages for August 2026, with clear methodology, trend context and links to payment, affordability and refinance calculators.',
     alternates: { canonical: '/mortgage-rates' },
     openGraph: {
         type: 'article',
         url: 'https://usfinnexus.com/mortgage-rates',
-        title: 'Current Mortgage Rates: August 2026',
+        title: 'Current Mortgage Rates: September 2026',
         description: 'Freddie Mac PMMS weekly averages, methodology and calculator links.',
     },
 };
@@ -23,7 +23,7 @@ export default function MortgageRatesPage() {
             <article className="prose prose-slate max-w-none">
                 <header className="not-prose my-8">
                     <p className="text-sm font-semibold text-blue-700">Data updated {SOURCE_DATE}</p>
-                    <h1 className="text-4xl font-black text-navy-900 mt-2">Current Mortgage Rates: August 2026</h1>
+                    <h1 className="text-4xl font-black text-navy-900 mt-2">Current Mortgage Rates: September 2026</h1>
                     <p className="text-lg text-gray-600 mt-3">National weekly averages are context, not a personalized lender quote.</p>
                 </header>
 
@@ -45,7 +45,7 @@ export default function MortgageRatesPage() {
                     Freddie Mac&apos;s Primary Mortgage Market Survey uses mortgage-rate information from thousands of conventional, conforming purchase applications submitted through Loan Product Advisor. The published figure is a national weekly average. Your quote can differ based on credit, loan-to-value ratio, property, occupancy, loan size, points, lender and lock period.
                 </p>
                 <p>
-                    The August 6 average increased from 6.66% the prior week. A one-week move is not a forecast. Compare a lender&apos;s annual percentage rate, points, lender fees and cash to close—not only the note rate.
+                    Freddie Mac&apos;s September 10, 2026 weekly average was 6.76% for a 30-year fixed loan and 6.09% for a 15-year fixed loan. A one-week move is not a forecast. Compare a lender&apos;s annual percentage rate, points, lender fees and cash to close—not only the note rate.
                 </p>
 
                 <h2>How a rate change affects a payment</h2>

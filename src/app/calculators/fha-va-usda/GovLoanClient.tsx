@@ -14,7 +14,7 @@ const TABS: { key: GovLoanType; label: string; icon: string; color: string }[] =
 
 const LOAN_TERMS = [15, 20, 30];
 
-export default function GovLoanClient({ initialTab = 'fha' }: { initialTab?: GovLoanType }) {
+export default function GovLoanClient({ initialTab = 'fha', heading }: { initialTab?: GovLoanType; heading?: string }) {
     const [loanType, setLoanType] = useState<GovLoanType>(initialTab);
     const [homePrice, setHomePrice] = useState(350000);
     const [downPct, setDownPct] = useState(initialTab === 'fha' ? 3.5 : 0);
@@ -58,7 +58,7 @@ export default function GovLoanClient({ initialTab = 'fha' }: { initialTab?: Gov
                         <span className="text-xs font-black uppercase tracking-[0.3em] text-[#0da6f2]">Government Backed</span>
                     </div>
                     <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight leading-none bg-gradient-to-r from-navy-900 via-[#0da6f2] to-navy-900 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-flow">
-                        FHA / VA / USDA Loan Calculator
+                        {heading || 'FHA / VA / USDA Loan Calculator'}
                     </h1>
                     <p className="text-gray-500 max-w-2xl font-medium text-lg">
                         Precision calculations for MIP, VA funding fees, and USDA guarantee fees updated for 2026.

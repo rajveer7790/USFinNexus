@@ -58,7 +58,7 @@ export default function GovLoanComparisonPage() {
                 url="https://usfinnexus.com/calculators/fha-va-usda"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Gov Loan Comparison', item: '/calculators/fha-va-usda' }]} />
-            <GovLoanClient />
+            <GovLoanClient heading="FHA vs. VA vs. USDA Loan Calculator" />
             <SemrushIntentSection slug="fha-va-usda" />
             <FhaVaUsdaSeoContent />
             <CalculatorFAQ faqs={GOV_LOAN_FAQS} title="Government Loans — Frequently Asked Questions" />

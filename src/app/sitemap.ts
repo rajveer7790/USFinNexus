@@ -132,6 +132,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${baseUrl}/contact`, changeFrequency: 'yearly', priority: 0.50 },
         { url: `${baseUrl}/disclaimer`, changeFrequency: 'yearly', priority: 0.50 },
         { url: `${baseUrl}/privacy`, changeFrequency: 'yearly', priority: 0.50 },
+        { url: `${baseUrl}/data/home-affordability-by-state`, changeFrequency: 'monthly', priority: 0.75 },
+        { url: `${baseUrl}/data/home-affordability-by-city`, changeFrequency: 'monthly', priority: 0.75 },
         { url: `${baseUrl}/terms`, changeFrequency: 'yearly', priority: 0.50 },
     ];
 

@@ -42,7 +42,7 @@ export default function VaLoanPage() {
                 url="https://usfinnexus.com/calculators/va"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'VA Loan Calculator', item: '/calculators/va' }]} />
-                            <GovLoanClient initialTab="va" />
+                            <GovLoanClient initialTab="va" heading="VA Loan Calculator" />
             <VaSeoContent />
         <ContextualInternalLinks currentSlug="va" showBlogs showCalculators />
         </main>
