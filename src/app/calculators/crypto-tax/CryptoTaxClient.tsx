@@ -60,26 +60,26 @@ export default function CryptoTaxClient() {
         setNetLongTerm(nlt);
 
         // 3. Calculate Short Term Tax (Taxes as Ordinary Income)
-        // Approximate 2024/2025/2026 tax brackets (simplified for estimation)
+        // 2026 federal ordinary-income marginal-rate thresholds; estimator only. Verify IRS tables before filing.
         // We find the marginal rate based on ordinary income.
         let stMarginalRate = 0;
         const totalIncome = ordinaryIncome + taxableShortTerm;
         
         if (filingStatus === 'single') {
-            if (totalIncome <= 11600) stMarginalRate = 0.10;
-            else if (totalIncome <= 47150) stMarginalRate = 0.12;
-            else if (totalIncome <= 100525) stMarginalRate = 0.22;
-            else if (totalIncome <= 191950) stMarginalRate = 0.24;
-            else if (totalIncome <= 243725) stMarginalRate = 0.32;
-            else if (totalIncome <= 609350) stMarginalRate = 0.35;
+            if (totalIncome <= 12400) stMarginalRate = 0.10;
+            else if (totalIncome <= 50400) stMarginalRate = 0.12;
+            else if (totalIncome <= 105700) stMarginalRate = 0.22;
+            else if (totalIncome <= 201775) stMarginalRate = 0.24;
+            else if (totalIncome <= 256225) stMarginalRate = 0.32;
+            else if (totalIncome <= 640600) stMarginalRate = 0.35;
             else stMarginalRate = 0.37;
         } else { // married
-            if (totalIncome <= 23200) stMarginalRate = 0.10;
-            else if (totalIncome <= 94300) stMarginalRate = 0.12;
-            else if (totalIncome <= 201050) stMarginalRate = 0.22;
-            else if (totalIncome <= 383900) stMarginalRate = 0.24;
-            else if (totalIncome <= 487450) stMarginalRate = 0.32;
-            else if (totalIncome <= 731200) stMarginalRate = 0.35;
+            if (totalIncome <= 24800) stMarginalRate = 0.10;
+            else if (totalIncome <= 100800) stMarginalRate = 0.12;
+            else if (totalIncome <= 211400) stMarginalRate = 0.22;
+            else if (totalIncome <= 403550) stMarginalRate = 0.24;
+            else if (totalIncome <= 512450) stMarginalRate = 0.32;
+            else if (totalIncome <= 768700) stMarginalRate = 0.35;
             else stMarginalRate = 0.37;
         }
 
@@ -91,12 +91,12 @@ export default function CryptoTaxClient() {
         const incomeForLt = totalIncome; // Income including ordinary and ST gains
         
         if (filingStatus === 'single') {
-            if (incomeForLt <= 47025) ltRate = 0;
-            else if (incomeForLt <= 518900) ltRate = 0.15;
+            if (incomeForLt <= 49450) ltRate = 0;
+            else if (incomeForLt <= 545500) ltRate = 0.15;
             else ltRate = 0.20;
         } else { // married
-            if (incomeForLt <= 94050) ltRate = 0;
-            else if (incomeForLt <= 583750) ltRate = 0.15;
+            if (incomeForLt <= 98800) ltRate = 0;
+            else if (incomeForLt <= 613700) ltRate = 0.15;
             else ltRate = 0.20;
         }
 

@@ -59,11 +59,11 @@ export default function CryptoTaxPage() {
                 name="Crypto Capital Gains Tax Estimator"
                 description="Estimate your cryptocurrency taxes instantly. Free US federal capital gains tax calculator."
                 url="https://usfinnexus.com/calculators/crypto-tax"
-                dateModified="2026-03-01"
+                dateModified="2026-09-17"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Crypto Tax Estimator', item: '/calculators/crypto-tax' }]} />
             <h1 className="sr-only">Crypto Tax Calculator</h1>
-            <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026</p>
+            <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: September 17, 2026</p>
             <CryptoTaxClient />
             <CryptoTaxSeoContent />
             <CalculatorFAQ faqs={CRYPTO_FAQS} title="Cryptocurrency Taxes — Frequently Asked Questions" />

@@ -134,6 +134,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${baseUrl}/privacy`, changeFrequency: 'yearly', priority: 0.50 },
         { url: `${baseUrl}/data/home-affordability-by-state`, changeFrequency: 'monthly', priority: 0.75 },
         { url: `${baseUrl}/data/home-affordability-by-city`, changeFrequency: 'monthly', priority: 0.75 },
+        { url: `${baseUrl}/privacy-focused-mortgage-calculator`, changeFrequency: 'monthly', priority: 0.70 },
+        { url: `${baseUrl}/why-we-dont-collect-data`, changeFrequency: 'monthly', priority: 0.70 },
         { url: `${baseUrl}/terms`, changeFrequency: 'yearly', priority: 0.50 },
     ];
 

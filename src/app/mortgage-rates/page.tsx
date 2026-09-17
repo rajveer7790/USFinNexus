@@ -6,7 +6,7 @@ const SOURCE_DATE = 'September 10, 2026';
 
 export const metadata: Metadata = {
     title: 'Current Mortgage Rates: September 2026 Data & Context',
-    description: 'Freddie Mac weekly mortgage-rate averages for August 2026, with clear methodology, trend context and links to payment, affordability and refinance calculators.',
+    description: 'Freddie Mac weekly mortgage-rate averages for September 2026, with clear methodology, trend context and links to payment, affordability and refinance calculators.',
     alternates: { canonical: '/mortgage-rates' },
     openGraph: {
         type: 'article',
@@ -30,12 +30,12 @@ export default function MortgageRatesPage() {
                 <div className="not-prose grid sm:grid-cols-2 gap-4 my-8">
                     <section className="rounded-2xl border border-blue-200 bg-blue-50 p-6">
                         <p className="text-sm text-gray-600">30-year fixed average</p>
-                        <p className="text-4xl font-black text-navy-900">6.69%</p>
+                        <p className="text-4xl font-black text-navy-900">6.76%</p>
                         <p className="text-sm text-gray-600">Freddie Mac PMMS, {SOURCE_DATE}</p>
                     </section>
                     <section className="rounded-2xl border border-blue-200 bg-blue-50 p-6">
                         <p className="text-sm text-gray-600">15-year fixed average</p>
-                        <p className="text-4xl font-black text-navy-900">6.01%</p>
+                        <p className="text-4xl font-black text-navy-900">6.09%</p>
                         <p className="text-sm text-gray-600">Freddie Mac PMMS, {SOURCE_DATE}</p>
                     </section>
                 </div>
