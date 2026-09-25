@@ -159,7 +159,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.70,
     }));
 
-    const requiredNewPosts: MetadataRoute.Sitemap = [\n        { url: `${baseUrl}/blog/hsa-contribution-limits-2027`, lastModified: new Date('2026-09-25'), changeFrequency: 'weekly', priority: 0.80 },\n        { url: `${baseUrl}/blog/medicare-part-d-costs-2027`, lastModified: new Date('2026-09-25'), changeFrequency: 'weekly', priority: 0.80 },\n    ];\n\n    const blogPosts: MetadataRoute.Sitemap = getBlogEntries().map(({ slug, lastModified }) => ({
+    const requiredNewPosts: MetadataRoute.Sitemap = [
+        { url: `${baseUrl}/blog/hsa-contribution-limits-2027`, lastModified: new Date('2026-09-25'), changeFrequency: 'weekly', priority: 0.80 },
+        { url: `${baseUrl}/blog/medicare-part-d-costs-2027`, lastModified: new Date('2026-09-25'), changeFrequency: 'weekly', priority: 0.80 },
+    ];
+
+    const blogPosts: MetadataRoute.Sitemap = getBlogEntries().map(({ slug, lastModified }) => ({
         url: `${baseUrl}/blog/${slug}`,
         ...(lastModified ? { lastModified } : {}),
         changeFrequency: 'monthly' as const,
