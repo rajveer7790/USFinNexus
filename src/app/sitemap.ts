@@ -160,6 +160,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
 
     const requiredNewPosts: MetadataRoute.Sitemap = [
+        { url: `${baseUrl}/blog/estimated-tax-payment-january-15-2027`, lastModified: new Date('2026-10-06'), changeFrequency: 'weekly', priority: 0.80 },
+        { url: `${baseUrl}/blog/senior-tax-deduction-6000-2026-schedule-1a`, lastModified: new Date('2026-10-06'), changeFrequency: 'weekly', priority: 0.80 },
+
         { url: `${baseUrl}/blog/hsa-contribution-limits-2027`, lastModified: new Date('2026-09-25'), changeFrequency: 'weekly', priority: 0.80 },
         { url: `${baseUrl}/blog/medicare-part-d-costs-2027`, lastModified: new Date('2026-09-25'), changeFrequency: 'weekly', priority: 0.80 },
     ];
