@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 
 export const dynamic = 'force-static';
-// October 6, 2026 batch: dynamic blog discovery includes the ten current posts with expanded copy.
+// October 6, 2026 batch: ten current posts with expanded SEO copy and source links.
 
 const CALC_PRIORITY: Record<string, number> = {
     '/calculators/mortgage': 0.95,
