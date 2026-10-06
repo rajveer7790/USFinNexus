@@ -135,6 +135,20 @@ function getBlogPosts() {
             if (slug === 'fha-loan-limits-2026') image = '/images/fha-loan-limits-2026.webp';
             if (slug === 'va-funding-fee-2026') image = '/images/va-funding-fee-2026.webp';
             if (slug === 'irs-tax-payment-plan-2026') image = '/images/irs-tax-payment-plan-2026.webp';
+            if (slug === 'medicare-advantage-premiums-2027') image = '/images/medicare-advantage-premiums-2027.svg';
+            if (slug === 'social-security-payment-schedule-2027') image = '/images/social-security-payment-schedule-2027.svg';
+            if (slug === 'tax-loss-harvesting-wash-sale-2026') image = '/images/tax-loss-harvesting-wash-sale-2026.svg';
+            if (slug === 'rmd-qcd-deadline-2026') image = '/images/rmd-qcd-deadline-2026.svg';
+            if (slug === 'medicare-plan-compare-2027-open-enrollment') image = '/images/medicare-plan-compare-2027-open-enrollment.svg';
+            if (slug === 'medicare-part-b-premium-2027-what-to-know') image = '/images/medicare-part-b-premium-2027-what-to-know.svg';
+            if (slug === 'homeowners-insurance-mortgage-payment-2026') image = '/images/homeowners-insurance-mortgage-payment-2026.svg';
+            if (slug === 'home-equity-line-vs-loan-2026') image = '/images/home-equity-line-vs-loan-2026.svg';
+            if (slug === 'mortgage-rate-lock-before-fed-meeting-2026') image = '/images/mortgage-rate-lock-before-fed-meeting-2026.svg';
+            if (slug === 'roth-conversion-tax-planning-2026') image = '/images/roth-conversion-tax-planning-2026.svg';
+            if (slug === 'tax-gain-harvesting-0-percent-2026') image = '/images/tax-gain-harvesting-0-percent-2026.svg';
+            if (slug === 'medicare-advantage-star-ratings-2027') image = '/images/medicare-advantage-star-ratings-2027.svg';
+            if (slug === 'mortgage-rate-vs-10-year-treasury-2026') image = '/images/mortgage-rate-vs-10-year-treasury-2026.svg';
+            if (slug === '2026-year-end-budget-reset') image = '/images/2026-year-end-budget-reset.svg';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
