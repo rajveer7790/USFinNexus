@@ -174,5 +174,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.70,
     }));
 
-    return [...corePages, ...calculators, ...articles, ...guides, ...requiredNewPosts, ...blogPosts];
+    const allEntries = [...corePages, ...calculators, ...articles, ...guides, ...requiredNewPosts, ...blogPosts];
+    return Array.from(new Map(allEntries.map((entry) => [entry.url, entry])).values());
 }
