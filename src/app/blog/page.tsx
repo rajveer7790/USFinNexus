@@ -145,10 +145,6 @@ function getBlogPosts() {
             if (slug === 'home-equity-line-vs-loan-2026') image = '/images/home-equity-line-vs-loan-2026.svg';
             if (slug === 'mortgage-rate-lock-before-fed-meeting-2026') image = '/images/mortgage-rate-lock-before-fed-meeting-2026.svg';
             if (slug === 'roth-conversion-tax-planning-2026') image = '/images/roth-conversion-tax-planning-2026.svg';
-            if (slug === 'tax-gain-harvesting-0-percent-2026') image = '/images/tax-gain-harvesting-0-percent-2026.svg';
-            if (slug === 'medicare-advantage-star-ratings-2027') image = '/images/medicare-advantage-star-ratings-2027.svg';
-            if (slug === 'mortgage-rate-vs-10-year-treasury-2026') image = '/images/mortgage-rate-vs-10-year-treasury-2026.svg';
-            if (slug === '2026-year-end-budget-reset') image = '/images/2026-year-end-budget-reset.svg';
 
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
         }
