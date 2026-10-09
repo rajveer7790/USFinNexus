@@ -9,12 +9,12 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
     title: 'All Free Mortgage & Finance Calculators',
-    description: 'Browse our complete library of 41 free, CFPB-compliant mortgage and financial calculators. Instant PDF reports, no signup, and zero data collected.',
+    description: 'Browse free U.S. mortgage and financial calculators for payments, affordability, tax, debt and retirement planning. No signup; clear assumptions and browser-side inputs.',
     alternates: { canonical: 'https://usfinnexus.com/calculators' },
     openGraph: {
         type: 'website',
         title: 'All Free Mortgage & Finance Calculators',
-        description: 'Browse our complete library of 41 free, CFPB-compliant mortgage and financial calculators.',
+        description: 'Browse free U.S. mortgage and financial calculators with clear assumptions and no signup.',
         url: 'https://usfinnexus.com/calculators',
         siteName: 'USFinNexus',
     },
@@ -80,8 +80,8 @@ export default function CalculatorsPage() {
                         <div className="neo-sec-tag"><span className="neo-sec-dot" /> All Tools</div>
                         <h1 className="neo-sec-h2">The Complete <em>Calculator Library</em></h1>
                         <p className="neo-sec-p">
-                            Browse our complete library of 41 free, CFPB-compliant calculators.
-                            Zero signup, instant PDF reports, and zero data collection.
+                            Browse our complete library of free U.S. calculators with clear assumptions and practical explanations.
+                            No signup; calculator inputs are designed to stay in your browser. Export options vary by tool.
                         </p>
                     </header>
 

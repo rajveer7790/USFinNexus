@@ -9,6 +9,7 @@ export interface BlogPostEntry {
     image: string;
     date: string;
     excerpt?: string;
+    dateISO?: string;
 }
 
 const IMG = {
@@ -54,7 +55,7 @@ export function getAllBlogPosts(): BlogPostEntry[] {
             const content = fs.readFileSync(pagePath, 'utf8');
             
             let title = slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-            const titleMatch = content.match(/title:\s*['"](.*?)['"]/);
+            const titleMatch = content.match(/(?:title|metaTitle):\s*['"](.*?)['"]/);
             if (titleMatch && titleMatch[1]) {
                 title = titleMatch[1].replace(' | USFinNexus', '');
             }
@@ -74,14 +75,19 @@ export function getAllBlogPosts(): BlogPostEntry[] {
             else if (category === 'Retirement') image = IMG.retirement;
             else if (category === 'Auto Loans') image = IMG.auto;
             else if (category === 'Housing Market') image = IMG.housing;
+            if (slug === 'medicare-part-b-90-rebate-october-2026') image = '/images/medicare-part-b-90-rebate-october-2026.webp';
+            if (slug === 'federal-scholarship-tax-credit-2027') image = '/images/federal-scholarship-tax-credit-2027.webp';
             
             const stats = fs.statSync(pagePath);
-            const dateStr = stats.mtime.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+            const dateISO = content.match(/datePublished=["'](\d{4}-\d{2}-\d{2})["']/)?.[1] || stats.mtime.toISOString().slice(0, 10);
+            const dateStr = new Date(`${dateISO}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+            const description = content.match(/description(?:\s*:\s*|=\s*)['"]([^'"]{50,220})['"]/)?.[1];
+            const lead = content.match(/<p className="lead">(?:<strong>Answer first:<\/strong>\s*)?([^<]{60,260})<\/p>/)?.[1];
             
-            posts.push({ slug, title, date: dateStr, category, readTime: '10 min', image, excerpt: 'Read this comprehensive guide to understand the financial strategies you need for ' + new Date().getFullYear() + '.' });
+            posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image, excerpt: lead || description || `A practical ${dateISO.slice(0, 4)} guide with clear assumptions, examples and next steps.` });
         }
 
-        cachedPosts = posts.sort((a, b) => a.title.localeCompare(b.title));
+        cachedPosts = posts.sort((a, b) => (b.dateISO || '').localeCompare(a.dateISO || '') || a.title.localeCompare(b.title));
         return cachedPosts;
     } catch (e) {
         console.error('Failed to dynamically load blog posts:', e);

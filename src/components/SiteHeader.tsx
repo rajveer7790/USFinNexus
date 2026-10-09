@@ -97,10 +97,14 @@ export default function SiteHeader() {
         setActiveMenu(null);
     }, [pathname]);
 
-    /* ── Lock body scroll when mobile menu is open ───────── */
+    /* ── Keep the page scrollable on touch devices ─────────
+       The old global overflow lock could survive a mobile browser
+       navigation/gesture and leave the document stuck at one position.
+       The drawer has its own bounded scroll area, so the page never needs
+       to disable body scrolling. */
     useEffect(() => {
-        document.body.style.overflow = mobileOpen ? 'hidden' : '';
-        return () => { document.body.style.overflow = ''; };
+        document.body.dataset.mobileMenuOpen = mobileOpen ? 'true' : 'false';
+        return () => { delete document.body.dataset.mobileMenuOpen; };
     }, [mobileOpen]);
 
     /* ── Scroll shadow ───────────────────────────────────── */
@@ -410,8 +414,8 @@ export default function SiteHeader() {
                         {/* Animated drawer */}
                         <div
                             id="mobile-nav"
-                            className="lg:hidden relative z-50 border-t border-gray-100 bg-white overflow-y-auto animate-slide-down"
-                            style={{ maxHeight: 'calc(100svh - 4rem)' }}
+                            className="lg:hidden relative z-50 border-t border-gray-100 bg-white overflow-y-auto overscroll-contain animate-slide-down"
+                            style={{ maxHeight: 'calc(100svh - 4rem)', WebkitOverflowScrolling: 'touch', touchAction: 'pan-y' }}
                             aria-label="Mobile navigation"
                         >
                             <div className="px-4 py-5 space-y-5">

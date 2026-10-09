@@ -148,7 +148,9 @@ function getBlogPosts() {
             if (slug === 'medicare-part-b-90-rebate-october-2026') image = '/images/medicare-part-b-90-rebate-october-2026.webp';
             if (slug === 'federal-scholarship-tax-credit-2027') image = '/images/federal-scholarship-tax-credit-2027.webp';
 
-            posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image });
+            const description = content.match(/description(?:\s*:\s*|=\s*)['"]([^'"]{50,220})['"]/)?.[1];
+            const lead = content.match(/<p className="lead">(?:<strong>Answer first:<\/strong>\s*)?([^<]{60,260})<\/p>/)?.[1];
+            posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image, excerpt: lead || description || `A practical ${dateISO.slice(0, 4)} guide with clear assumptions, examples and next steps.` });
         }
 
         // Output audit results to the console for the dev team
@@ -184,6 +186,11 @@ export default function BlogPage() {
                 <p className="text-base sm:text-xl max-w-3xl" style={{ color: 'var(--color-text-muted)' }}>
                     Free, expert-written guides on home buying, mortgage calculations, refinancing, and personal finance—designed for everyday Americans in 2026.
                 </p>
+                <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-4xl text-left">
+                    <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p className="text-xs font-black uppercase tracking-wider text-blue-700">Answer first</p><p className="mt-1 text-sm text-slate-600">Every guide starts with the practical decision and assumptions.</p></div>
+                    <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p className="text-xs font-black uppercase tracking-wider text-blue-700">Reviewed dates</p><p className="mt-1 text-sm text-slate-600">Time-sensitive tax, rates and benefit pages show when facts were checked.</p></div>
+                    <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p className="text-xs font-black uppercase tracking-wider text-blue-700">Use the math</p><p className="mt-1 text-sm text-slate-600">Open a calculator beside the guide and test your own numbers.</p></div>
+                </div>
             </div>
 
             <div className="flex gap-2 mb-8 sm:mb-12 overflow-x-auto pb-4 scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap">
@@ -216,8 +223,9 @@ export default function BlogPage() {
                             <h2 className="font-bold text-lg sm:text-xl mb-3 leading-snug group-hover:text-blue-600 transition-colors" style={{ color: 'var(--color-text)' }}>
                                 {post.title}
                             </h2>
+                            <p className="text-sm leading-relaxed line-clamp-3 mb-4" style={{ color: 'var(--color-text-muted)' }}>{post.excerpt}</p>
                             <div className="mt-auto flex items-center gap-3 text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>
-                                <span>{post.date}</span>
+                                <span>Reviewed {post.date}</span>
                                 <span>·</span>
                                 <span>{post.readTime} read</span>
                             </div>

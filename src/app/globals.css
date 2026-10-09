@@ -37,6 +37,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -45,6 +47,15 @@ body {
   color: var(--color-text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100%;
+  /* Never let a menu, chart or wide table disable vertical page scrolling. */
+  touch-action: pan-y;
+}
+
+body[data-mobile-menu-open="true"] {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* ─── Typography ──────────────────────────────────────────────── */
