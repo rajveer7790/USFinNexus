@@ -1,5 +1,5 @@
-Warning: truncated output (original token count: 1785)
-Total output lines: 139
+Warning: truncated output (original token count: 1849)
+Total output lines: 141
 
 import fs from 'fs';
 import path from 'path';
@@ -11,7 +11,7 @@ export interface BlogPostEntry {
     readTime: string;
     image: string;
     date: string;
-  …1685 tokens truncated…const diffCategory = shuffled.filter(a => a.category !== targetCategory);
+  …1749 tokens truncated…const diffCategory = shuffled.filter(a => a.category !== targetCategory);
         
         return [...sameCategory, ...diffCategory].slice(0, count);
     }
