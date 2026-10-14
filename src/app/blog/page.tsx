@@ -155,6 +155,8 @@ function getBlogPosts() {
             if (slug === 'bank-impersonation-scam-2026') image = '/images/bank-impersonation-scam-2026.webp';
             if (slug === 'personal-loan-apr-origination-fees-2026') image = '/images/personal-loan-apr-origination-fees-2026.webp';
             if (slug === 'heloc-interest-tax-deductible-2026') image = '/images/heloc-interest-tax-deductible-2026.webp';
+            if (slug === 'emergency-fund-how-much-2026') image = '/images/emergency-fund-how-much-2026.webp';
+            if (slug === 'mortgage-cash-reserves-after-closing-2026') image = '/images/mortgage-cash-reserves-after-closing-2026.webp';
 
             const description = content.match(/description(?:\s*:\s*|=\s*)['"]([^'"]{50,220})['"]/)?.[1];
             const lead = content.match(/<p className="lead">(?:<strong>Answer first:<\/strong>\s*)?([^<]{60,260})<\/p>/)?.[1];

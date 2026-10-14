@@ -85,6 +85,8 @@ export function getAllBlogPosts(): BlogPostEntry[] {
             if (slug === 'bank-impersonation-scam-2026') image = '/images/bank-impersonation-scam-2026.webp';
             if (slug === 'personal-loan-apr-origination-fees-2026') image = '/images/personal-loan-apr-origination-fees-2026.webp';
             if (slug === 'heloc-interest-tax-deductible-2026') image = '/images/heloc-interest-tax-deductible-2026.webp';
+            if (slug === 'emergency-fund-how-much-2026') image = '/images/emergency-fund-how-much-2026.webp';
+            if (slug === 'mortgage-cash-reserves-after-closing-2026') image = '/images/mortgage-cash-reserves-after-closing-2026.webp';
             
             const stats = fs.statSync(pagePath);
             const dateISO = content.match(/datePublished=["'](\d{4}-\d{2}-\d{2})["']/)?.[1] || stats.mtime.toISOString().slice(0, 10);
