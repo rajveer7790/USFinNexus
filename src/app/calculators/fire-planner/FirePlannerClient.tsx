@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
 
+type FireChartPoint = { age: number; portfolio: number; fireTarget: number; actualPortfolio?: number };
+
 export default function FirePlannerClient() {
     const [currentAge, setCurrentAge] = useState<number>(30);
     const [currentSavings, setCurrentSavings] = useState<number>(100000);
@@ -17,7 +19,7 @@ export default function FirePlannerClient() {
     const [yearsToFire, setYearsToFire] = useState<number>(0);
     const [fireAge, setFireAge] = useState<number>(0);
     
-    const [chartData, setChartData] = useState<any[]>([]);
+    const [chartData, setChartData] = useState<FireChartPoint[]>([]);
 
     useEffect(() => {
         // Calculate Savings based on rate or expenses
@@ -39,7 +41,7 @@ export default function FirePlannerClient() {
         
         let balance = currentSavings;
         let years = 0;
-        let data = [];
+        const data: FireChartPoint[] = [];
         
         data.push({
             age: currentAge,

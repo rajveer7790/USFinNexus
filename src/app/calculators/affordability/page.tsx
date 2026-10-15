@@ -70,7 +70,19 @@ export default function AffordabilityPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Home Affordability Calculator', item: '/calculators/affordability' }]} />
             <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 9, 2026 &middot; 28% and 43% are planning scenarios, not universal approval limits</p>
             <AffordabilityClient />
-            <p className="mx-auto max-w-3xl my-6 text-sm text-slate-600">Want salary-specific scenarios? Use the <Link href="/calculators/affordability/by-salary" className="text-blue-700 underline">affordability by salary hub</Link> for $60,000–$200,000 examples.</p>
+            <section className="mx-auto my-6 max-w-3xl rounded-xl border border-slate-200 p-5" aria-labelledby="salary-examples-heading">
+                <h2 id="salary-examples-heading" className="text-lg font-semibold">Explore affordability by salary</h2>
+                <p className="mt-1 text-sm text-slate-600">Compare sample budgets for common income levels. Results also depend on monthly debts, down payment, rates, taxes and insurance.</p>
+                <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+                    {[
+                        [60000, '$60,000'], [75000, '$75,000'], [100000, '$100,000'],
+                        [120000, '$120,000'], [150000, '$150,000'], [200000, '$200,000'],
+                    ].map(([amount, label]) => (
+                        <li key={amount}><Link href={`/calculators/affordability/salary-${amount}`} className="text-blue-700 underline">{label} salary scenario</Link></li>
+                    ))}
+                </ul>
+                <p className="mt-3 text-sm text-slate-600">See all examples in the <Link href="/calculators/affordability/by-salary" className="text-blue-700 underline">affordability by salary hub</Link>.</p>
+            </section>
             <SemrushIntentSection slug="affordability" />
             <AffordabilitySeoContentV2 />
             <CalculatorFAQ faqs={AFFORDABILITY_FAQS} title="Home Affordability Calculator FAQs" />

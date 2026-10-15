@@ -3,6 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
 
+type OptionsChartPoint = { price: number; profit: number };
+type OptionsTooltipProps = { active?: boolean; payload?: Array<{ value?: number | string }>; label?: number | string };
+
 export default function OptionsProfitClient() {
     const [strategy, setStrategy] = useState<string>('long_call');
     const [stockPrice, setStockPrice] = useState<number>(150);
@@ -10,7 +13,7 @@ export default function OptionsProfitClient() {
     const [premium, setPremium] = useState<number>(3.50);
     const [contracts, setContracts] = useState<number>(1);
 
-    const [chartData, setChartData] = useState<any[]>([]);
+    const [chartData, setChartData] = useState<OptionsChartPoint[]>([]);
     const [maxProfit, setMaxProfit] = useState<number | string>(0);
     const [maxLoss, setMaxLoss] = useState<number | string>(0);
     const [breakEven, setBreakEven] = useState<number>(0);
@@ -23,7 +26,7 @@ export default function OptionsProfitClient() {
         const numShares = contracts * 100;
         const totalPremium = premium * numShares;
 
-        let data = [];
+        const data: OptionsChartPoint[] = [];
         let calculatedMaxProfit: number | string = 0;
         let calculatedMaxLoss: number | string = 0;
         let calculatedBreakEven = 0;
@@ -77,14 +80,15 @@ export default function OptionsProfitClient() {
         setBreakEven(calculatedBreakEven);
     };
 
-    const CustomTooltip = ({ active, payload, label }: any) => {
+    const CustomTooltip = ({ active, payload, label }: OptionsTooltipProps) => {
         if (active && payload && payload.length) {
-            const isProfit = payload[0].value >= 0;
+            const value = Number(payload[0].value ?? 0);
+            const isProfit = value >= 0;
             return (
                 <div className="bg-white p-3 border border-gray-200 shadow-md rounded">
                     <p className="font-semibold text-gray-800">Stock Price: ${label}</p>
                     <p className={isProfit ? "text-green-600 font-bold" : "text-red-600 font-bold"}>
-                        {isProfit ? 'Profit' : 'Loss'}: ${payload[0].value}
+                        {isProfit ? 'Profit' : 'Loss'}: ${value.toFixed(2)}
                     </p>
                 </div>
             );

@@ -42,7 +42,7 @@ function getBlogPosts() {
         const entries = fs.readdirSync(blogDir, { withFileTypes: true });
         
         const posts = [];
-        let thinPosts = [];
+        const thinPosts = [];
 
         for (const dirent of entries) {
             if (!dirent.isDirectory() || CANONICALIZED_ALIASES.has(dirent.name)) continue;

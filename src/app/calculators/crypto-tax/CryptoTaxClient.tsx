@@ -53,8 +53,8 @@ export default function CryptoTaxClient() {
         // For tax purposes, we only care if they are > 0.
         // If net total is negative, up to $3000 can be deducted against ordinary income.
         
-        let taxableShortTerm = Math.max(0, nst);
-        let taxableLongTerm = Math.max(0, nlt);
+        const taxableShortTerm = Math.max(0, nst);
+        const taxableLongTerm = Math.max(0, nlt);
 
         setNetShortTerm(nst);
         setNetLongTerm(nlt);

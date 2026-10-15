@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, Legend } from 'recharts';
 
+type DripChartPoint = { year: number; Balance: number; TotalContributions: number; AnnualDividendIncome: number };
+
 export default function DripClient() {
     const [initialInvestment, setInitialInvestment] = useState<number>(10000);
     const [annualContribution, setAnnualContribution] = useState<number>(6000);
@@ -14,7 +16,7 @@ export default function DripClient() {
     const [taxRate, setTaxRate] = useState<number>(15); // Tax on dividends
     const [inTaxAdvantagedAccount, setInTaxAdvantagedAccount] = useState<boolean>(true); // If true, taxRate is ignored
 
-    const [chartData, setChartData] = useState<any[]>([]);
+    const [chartData, setChartData] = useState<DripChartPoint[]>([]);
     const [finalBalance, setFinalBalance] = useState<number>(0);
     const [totalContributions, setTotalContributions] = useState<number>(0);
     const [totalDividendsPaid, setTotalDividendsPaid] = useState<number>(0);
@@ -36,7 +38,7 @@ export default function DripClient() {
         const dividendGrowth = annualDividendGrowth / 100;
         const effectiveTaxRate = inTaxAdvantagedAccount ? 0 : (taxRate / 100);
 
-        let data = [];
+        const data: DripChartPoint[] = [];
         data.push({
             year: 0,
             Balance: balance,

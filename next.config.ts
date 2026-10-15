@@ -3,9 +3,8 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
     reactStrictMode: true,
 
-    eslint: {
-        ignoreDuringBuilds: true,
-    },
+    // The build script runs the standalone lint check before Next static export.
+    eslint: { ignoreDuringBuilds: true },
 
     // ── Tree-shake lucide-react & other heavy packages ─────────────────────────
     // This alone can cut ~30-50 kB from the shared bundle by only bundling
