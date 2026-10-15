@@ -131,8 +131,8 @@ export default function CalculatorLayout({
                             </div>
                             <div className="space-y-3">
                                 {[
-                                    { k: 'Avg 30-Yr Fixed', v: '6.37%' },
-                                    { k: 'Avg 15-Yr Fixed', v: '5.72%' },
+                                    { k: '30-Yr Avg · Oct 8', v: '7.40%' },
+                                    { k: '15-Yr Avg · Oct 8', v: '6.73%' },
                                     { k: 'Primary Residence DTI', v: '43%' },
                                     { k: 'PMI Required below', v: '20% Down' },
                                 ].map(bench => (

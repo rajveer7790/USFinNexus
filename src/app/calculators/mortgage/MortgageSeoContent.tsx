@@ -12,7 +12,7 @@ export default function MortgageSeoContent() {
                     How Do I Calculate My Mortgage Payment?
                 </h2>
                 <p className="lead text-xl text-gray-600">
-                    A mortgage calculator estimates your monthly PITI payment—Principal, Interest, Taxes, and Insurance—by applying standard amortization math to your loan amount and rate. For a $400,000 loan at 6.37% for 30 years, the P&amp;I payment alone is $2,661/month before taxes and insurance. Enter your details above to get your exact all-in number in seconds.
+                    A mortgage calculator estimates your monthly PITI payment—Principal, Interest, Taxes, and Insurance—by applying standard amortization math to your loan amount and rate. At Freddie Mac&apos;s October 8, 2026 30-year average of 7.40%, a $400,000 loan has principal and interest of about $2,770/month before taxes, insurance and other costs. Your rate and payment may differ.
                 </p>
 
                 <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
@@ -116,18 +116,18 @@ export default function MortgageSeoContent() {
                         <tbody>
                             <tr className="border-t">
                                 <td className="px-4 py-2 text-gray-600">Monthly P&amp;I payment</td>
-                                <td className="px-4 py-2 text-center">~$2,661</td>
-                                <td className="px-4 py-2 text-center">~$3,487</td>
+                                <td className="px-4 py-2 text-center">~$2,770</td>
+                                <td className="px-4 py-2 text-center">~$3,535</td>
                             </tr>
                             <tr className="border-t bg-gray-50">
                                 <td className="px-4 py-2 text-gray-600">Total interest paid</td>
-                                <td className="px-4 py-2 text-center">~$558,000</td>
-                                <td className="px-4 py-2 text-center">~$227,000</td>
+                                <td className="px-4 py-2 text-center">~$597,027</td>
+                                <td className="px-4 py-2 text-center">~$236,337</td>
                             </tr>
                             <tr className="border-t">
-                                <td className="px-4 py-2 text-gray-600">Interest rate (typical)</td>
-                                <td className="px-4 py-2 text-center">~6.37%</td>
-                                <td className="px-4 py-2 text-center">~5.72%</td>
+                                <td className="px-4 py-2 text-gray-600">Freddie Mac average · Oct. 8, 2026</td>
+                                <td className="px-4 py-2 text-center">7.40%</td>
+                                <td className="px-4 py-2 text-center">6.73%</td>
                             </tr>
                             <tr className="border-t bg-gray-50">
                                 <td className="px-4 py-2 text-gray-600">Best for</td>
@@ -137,8 +137,12 @@ export default function MortgageSeoContent() {
                         </tbody>
                     </table>
                 </div>
+                <p className="text-sm text-gray-600">
+                    The rate inputs are Freddie Mac&apos;s national weekly averages published October 8, 2026; they are not personalized offers. See the{' '}
+                    <a href="https://www.freddiemac.com/pmms" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Primary Mortgage Market Survey</a>.
+                </p>
                 <p>
-                    The 30-year mortgage&apos;s lower monthly payment provides flexibility - the difference can go to retirement savings, investments, or an emergency fund. The 15-year saves roughly <strong>$331,000 in interest</strong> on this example loan. Use the loan term toggle in our calculator to compare both scenarios side by side for your exact numbers. You can also run a detailed side-by-side with our{' '}
+                    These principal-and-interest estimates use a $400,000 balance with no points or additional fees. The 15-year example pays about <strong>$360,690 less interest</strong> over the loan term, but requires roughly $765 more per month. Actual offers depend on borrower and property details. Use the loan term toggle to compare scenarios, then review a personalized Loan Estimate. You can also run a detailed side-by-side with our{' '}
                     <Link href="/calculators/comparison" className="text-blue-600 hover:underline">Loan Comparison Calculator</Link>.
                 </p>
 
@@ -149,7 +153,7 @@ export default function MortgageSeoContent() {
                     You are not locked into your original schedule. Our calculator shows the dramatic impact of extra principal payments through a full amortization table:
                 </p>
                 <ul>
-                    <li><strong>Extra Monthly Payment:</strong> Even $100/month extra on a $400,000 loan at 6.37% saves over $50,000 in interest and pays the loan off 3 years early.</li>
+                    <li><strong>Extra Monthly Payment:</strong> On a $400,000, 30-year loan at 7.40%, adding $100 to each monthly payment saves about $80,600 in interest and pays the loan off about 40 months early, assuming the rate and payment remain constant.</li>
                     <li><strong>Bi-Weekly Payments:</strong> Switching to bi-weekly (half your payment every two weeks) results in 26 half-payments per year - the equivalent of one extra full monthly payment annually. This alone can cut 4-5 years off a 30-year loan.</li>
                     <li><strong>Lump-Sum Payments:</strong> Tax refunds, bonuses, or inheritance applied to your principal can have an outsized impact because they immediately reduce the balance on which interest compounds.</li>
                 </ul>

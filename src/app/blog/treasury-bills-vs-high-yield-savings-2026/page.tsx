@@ -6,7 +6,7 @@ import CalculatorFAQ from '@/components/CalculatorFAQ';
 
 const url = 'https://usfinnexus.com/blog/treasury-bills-vs-high-yield-savings-2026';
 const image = 'https://usfinnexus.com/images/treasury-bills-vs-high-yield-savings-2026.webp';
-const title = 'Treasury Bills vs High-Yield Savings 2026: Yield, Safety, Taxes and Liquidity';
+const title = 'Treasury Bills vs Savings in 2026: Yield and Liquidity';
 const description = 'Compare Treasury bills and high-yield savings accounts in 2026 by yield, federal protection, state taxes, liquidity, reinvestment risk and buying process.';
 const faqs = [
   { question: 'Are Treasury bills safer than a high-yield savings account?', answer: 'Treasury bills are direct obligations of the U.S. government. An eligible bank savings account is protected by FDIC insurance within applicable limits. Both can be low-risk when used correctly, but the protection and access rules differ.' },
@@ -33,7 +33,7 @@ export default function Page() {
       <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: title, item: '/blog/treasury-bills-vs-high-yield-savings-2026' }]} />
       <article className="prose prose-slate max-w-none">
         <p className="text-sm font-bold uppercase tracking-wider text-emerald-700">Savings · Reviewed October 8, 2026</p>
-        <h1>{title}</h1>
+        <h1>How to Compare T-Bills with High-Yield Savings</h1>
         <p className="lead"><strong>Answer first:</strong> A high-yield savings account is usually better for money that must be available immediately. A Treasury bill may be attractive for cash that can remain invested until a known maturity, especially in states with income tax because Treasury interest is generally exempt from state and local income taxes. Compare after-tax yield, access time and protection—not the headline rate alone.</p>
         <div className="not-prose my-8 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/treasury-bills-vs-high-yield-savings-2026.webp" alt="Treasury security and high-yield savings comparison" width="1200" height="630" className="h-auto w-full" /></div>
         <aside className="not-prose my-8 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-950">Educational information only. Rates change and market prices can move. This comparison is not tax, banking or investment advice. Verify current auction results, bank disclosures, insurance coverage and your tax situation.</aside>

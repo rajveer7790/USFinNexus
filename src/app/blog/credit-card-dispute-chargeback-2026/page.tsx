@@ -33,7 +33,7 @@ export default function Page() {
       <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: title, item: '/blog/credit-card-dispute-chargeback-2026' }]} />
       <article className="prose prose-slate max-w-none">
         <p className="text-sm font-bold uppercase tracking-wider text-blue-700">Credit cards · Reviewed October 8, 2026</p>
-        <h1>{title}</h1>
+        <h1>How to Dispute a Credit Card Charge: Steps and Timelines</h1>
         <p className="lead"><strong>Answer first:</strong> If a credit card statement contains an unauthorized charge, wrong amount, duplicate charge, missing credit or another qualifying billing error, notify the issuer immediately and send a written billing-error notice to the address designated for disputes. To preserve federal Fair Credit Billing Act rights, the issuer generally must receive that notice within 60 days after the first statement showing the error.</p>
         <div className="not-prose my-8 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/credit-card-dispute-chargeback-2026.webp" alt="Credit card statement, magnifying glass and secure dispute checklist" width="1200" height="630" className="h-auto w-full" /></div>
         <aside className="not-prose my-8 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-950">Educational information only. This guide is not legal, credit or financial advice. Issuer agreements, payment-network rules and state law can add requirements. Check the current CFPB and FTC guidance and your cardholder agreement.</aside>

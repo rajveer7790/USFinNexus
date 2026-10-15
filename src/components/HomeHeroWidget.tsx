@@ -23,7 +23,7 @@ function fmt(n: number): string {
 export default function HomeHeroWidget() {
     const [price, setPrice] = useState(450000);
     const [dp, setDp] = useState(20);
-    const [rate, setRate] = useState(6.37);
+    const [rate, setRate] = useState(7.40);
     const [term, setTerm] = useState(30);
 
     const loanAmt = price * (1 - dp / 100);
@@ -121,6 +121,9 @@ export default function HomeHeroWidget() {
                         className="w-full cursor-pointer"
                         style={{ accentColor: '#9B5CFF' }}
                     />
+                    <p className="text-[9px]" style={{ color: 'rgba(255,255,255,0.45)' }}>
+                        Starting rate uses Freddie Mac&apos;s Oct. 8, 2026 average; your quote will vary.
+                    </p>
                 </div>
 
                 {/* Loan Term */}
