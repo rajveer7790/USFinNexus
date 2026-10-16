@@ -88,9 +88,10 @@ export function getAllBlogPosts(): BlogPostEntry[] {
             if (slug === 'emergency-fund-how-much-2026') image = '/images/emergency-fund-how-much-2026.webp';
             if (slug === 'mortgage-cash-reserves-after-closing-2026') image = '/images/mortgage-cash-reserves-after-closing-2026.webp';
             
-            const stats = fs.statSync(pagePath);
-            const dateISO = content.match(/datePublished=["'](\d{4}-\d{2}-\d{2})["']/)?.[1] || stats.mtime.toISOString().slice(0, 10);
-            const dateStr = new Date(`${dateISO}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+            const editorialImage = content.match(/const image\s*=\s*['"]https:\/\/usfinnexus\.com(\/images\/[^'"]+\.webp)['"]/)?.[1];
+            if (editorialImage && fs.existsSync(path.join(process.cwd(), 'public', editorialImage))) image = editorialImage;
+            const dateISO = content.match(/datePublished=["'](\d{4}-\d{2}-\d{2})["']/)?.[1] || '';
+            const dateStr = dateISO ? new Date(`${dateISO}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) : 'Undated guide';
             const description = content.match(/description(?:\s*:\s*|=\s*)['"]([^'"]{50,220})['"]/)?.[1];
             const lead = content.match(/<p className="lead">(?:<strong>Answer first:<\/strong>\s*)?([^<]{60,260})<\/p>/)?.[1];
             

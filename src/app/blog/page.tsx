@@ -88,10 +88,9 @@ function getBlogPosts() {
             else if (category === 'Housing Market') image = IMG.housing;
             
             // Prefer the editorial publish date embedded in ArticleSchema.
-            const stats = fs.statSync(pagePath);
             const publishedMatch = content.match(/datePublished=["'](\d{4}-\d{2}-\d{2})["']/);
-            const dateISO = publishedMatch?.[1] || LEGACY_PUBLISH_DATES[slug] || stats.mtime.toISOString().split('T')[0];
-            const dateStr = new Date(dateISO + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+            const dateISO = publishedMatch?.[1] || LEGACY_PUBLISH_DATES[slug] || '';
+            const dateStr = dateISO ? new Date(dateISO + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) : 'Undated guide';
 
             if (slug === 'trump-accounts-2026-guide') image = '/images/trump-accounts-2026.webp';
             if (slug === 'trump-account-vs-529-plan') image = '/images/trump-account-vs-529.webp';
@@ -158,6 +157,8 @@ function getBlogPosts() {
             if (slug === 'emergency-fund-how-much-2026') image = '/images/emergency-fund-how-much-2026.webp';
             if (slug === 'mortgage-cash-reserves-after-closing-2026') image = '/images/mortgage-cash-reserves-after-closing-2026.webp';
 
+            const editorialImage = content.match(/const image\s*=\s*['"]https:\/\/usfinnexus\.com(\/images\/[^'"]+\.webp)['"]/)?.[1];
+            if (editorialImage && fs.existsSync(path.join(process.cwd(), 'public', editorialImage))) image = editorialImage;
             const description = content.match(/description(?:\s*:\s*|=\s*)['"]([^'"]{50,220})['"]/)?.[1];
             const lead = content.match(/<p className="lead">(?:<strong>Answer first:<\/strong>\s*)?([^<]{60,260})<\/p>/)?.[1];
             posts.push({ slug, title, date: dateStr, dateISO, category, readTime: '10 min', image, excerpt: lead || description || `A practical ${dateISO.slice(0, 4)} guide with clear assumptions, examples and next steps.` });
@@ -235,7 +236,7 @@ export default function BlogPage() {
                             </h2>
                             <p className="text-sm leading-relaxed line-clamp-3 mb-4" style={{ color: 'var(--color-text-muted)' }}>{post.excerpt}</p>
                             <div className="mt-auto flex items-center gap-3 text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>
-                                <span>Reviewed {post.date}</span>
+                                <span>{post.dateISO ? 'Published ' : ''}{post.date}</span>
                                 <span>·</span>
                                 <span>{post.readTime} read</span>
                             </div>
