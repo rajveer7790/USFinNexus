@@ -28,7 +28,6 @@ export const metadata: Metadata = {
 
 export default function Page() { return <>
   <ArticleSchema title={title} description={description} url={url} datePublished="2026-10-13" dateModified="2026-10-13" authorName="USFinNexus Editorial Team" image={image} keywords={['personal loan APR', 'personal loan origination fee', 'APR vs interest rate', 'personal loan fees 2026', 'compare personal loan offers']} />
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) }) }} />
   <main className="max-w-4xl mx-auto px-4 py-8"><Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: title, item: '/blog/personal-loan-apr-origination-fees-2026' }]} />
     <article className="prose prose-slate max-w-none">
       <p className="text-sm font-bold uppercase tracking-wider text-blue-700">Personal Loans · Reviewed October 13, 2026</p>

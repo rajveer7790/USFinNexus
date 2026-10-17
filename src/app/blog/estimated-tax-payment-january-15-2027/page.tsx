@@ -24,7 +24,6 @@ export const metadata:Metadata={
 };
 export default function Page(){
  return <><ArticleSchema title="January 15, 2027 Estimated Tax Payment: 2026 Q4 Guide" description="IRS-sourced guide to the final 2026 estimated tax installment, safe harbors and the early-filing exception." url={url} image={`https://usfinnexus.com${image}`} datePublished="2026-10-06" dateModified="2026-10-17" authorName="USFinNexus Editorial Team" keywords={['January 15 2027 estimated tax payment','2026 fourth quarter estimated tax','Form 1040-ES 2026','estimated tax safe harbor']}/>
- <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'FAQPage',mainEntity:faqs.map(f=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))})}}/>
  <main className="max-w-4xl mx-auto px-4 py-8"><Breadcrumbs items={[{name:'Blog',item:'/blog'},{name:'January 15, 2027 Estimated Tax Payment',item:'/blog/estimated-tax-payment-january-15-2027'}]}/><article className="prose prose-slate max-w-none">
  <p className="text-sm font-bold uppercase tracking-wider text-blue-700">Federal tax planning · Reviewed October 17, 2026</p>
  <h1>January 15, 2027 Estimated Tax Payment: Your 2026 Q4 Guide</h1>

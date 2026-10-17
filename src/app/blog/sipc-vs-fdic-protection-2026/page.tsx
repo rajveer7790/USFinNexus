@@ -28,7 +28,6 @@ export const metadata: Metadata = {
 
 export default function Page() { return <>
   <ArticleSchema title={title} description={description} url={url} datePublished="2026-10-12" dateModified="2026-10-12" authorName="USFinNexus Editorial Team" image={image} keywords={['SIPC vs FDIC', 'SIPC protection limits 2026', 'FDIC insurance limits', 'brokerage cash sweep protection', 'is brokerage account insured']} />
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) }) }} />
   <main className="max-w-4xl mx-auto px-4 py-8"><Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: title, item: '/blog/sipc-vs-fdic-protection-2026' }]} />
     <article className="prose prose-slate max-w-none">
       <p className="text-sm font-bold uppercase tracking-wider text-blue-700">Banking & Investing · Reviewed October 12, 2026</p>

@@ -29,7 +29,6 @@ export const metadata: Metadata = {
 export default function Page() {
   return <>
     <ArticleSchema title={title} description={description} url={url} datePublished="2026-10-09" dateModified="2026-10-09" authorName="USFinNexus Editorial Team" image={image} keywords={['federal scholarship tax credit 2027', '$1700 scholarship tax credit', 'Scholarship Granting Organization donation', 'SGO tax credit 2027']} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) }) }} />
     <main className="max-w-4xl mx-auto px-4 py-8">
       <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: title, item: '/blog/federal-scholarship-tax-credit-2027' }]} />
       <article className="prose prose-slate max-w-none">

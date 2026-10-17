@@ -22,7 +22,6 @@ export const metadata:Metadata={
 };
 export default function Page(){
  return <><ArticleSchema title="$6,000 Senior Tax Deduction 2026: Schedule 1-A Guide" description="IRS-sourced explanation of the enhanced senior deduction, phaseouts and Schedule 1-A." url={url} datePublished="2026-10-06" dateModified="2026-10-06" authorName="USFinNexus Editorial Team" keywords={['senior tax deduction 2026','$6000 senior deduction','Schedule 1-A senior deduction','senior tax break']}/>
- <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'FAQPage',mainEntity:faqs.map(f=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))})}}/>
  <main className="max-w-4xl mx-auto px-4 py-8"><Breadcrumbs items={[{name:'Blog',item:'/blog'},{name:'Senior Tax Deduction 2026',item:'/blog/senior-tax-deduction-6000-2026-schedule-1a'}]}/><article className="prose prose-slate max-w-none">
  <p className="text-sm font-bold uppercase tracking-wider text-blue-700">Tax changes · Reviewed October 6, 2026</p>
  <h1>$6,000 Senior Tax Deduction 2026: Schedule 1-A Explained</h1>

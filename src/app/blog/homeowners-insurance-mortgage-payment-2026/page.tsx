@@ -17,7 +17,6 @@ export const metadata:Metadata={
 };
 export default function Page(){
  return <><ArticleSchema title="Homeowners Insurance Increase 2026: Why Your Mortgage Payment Jumps" description="Understand how higher homeowners insurance changes escrow, why mortgage payments jump, and what to check before your next escrow analysis." url={url} datePublished="2026-10-06" dateModified="2026-10-06" authorName="USFinNexus Editorial Team" image={image} keywords={["homeowners insurance increase 2026","mortgage payment went up insurance","escrow insurance increase"]}/>
- <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'FAQPage',mainEntity:faqs.map((f)=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))})}}/>
  <main className="max-w-4xl mx-auto px-4 py-8"><Breadcrumbs items={[{name:'Blog',item:'/blog'},{name:'Homeowners Insurance Increase 2026: Why Your Mortgage Payment Jumps',item:'/blog/homeowners-insurance-mortgage-payment-2026'}]}/><article className="prose prose-slate max-w-none">
  <p className="text-sm font-bold uppercase tracking-wider text-blue-700">Mortgage & Housing · Reviewed October 6, 2026</p>
  <h1>Why Home Insurance Can Raise Your Monthly Mortgage Bill</h1>

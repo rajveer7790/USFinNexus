@@ -28,7 +28,6 @@ export const metadata: Metadata = {
 
 export default function Page() { return <>
   <ArticleSchema title={title} description={description} url={url} datePublished="2026-10-12" dateModified="2026-10-12" authorName="USFinNexus Editorial Team" image={image} keywords={['bank impersonation scam 2026', 'fake bank fraud department call', 'move money to protect it scam', 'bank fraud alert text', 'recover scam bank transfer']} />
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) }) }} />
   <main className="max-w-4xl mx-auto px-4 py-8"><Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: title, item: '/blog/bank-impersonation-scam-2026' }]} />
     <article className="prose prose-slate max-w-none">
       <p className="text-sm font-bold uppercase tracking-wider text-red-700">Fraud Prevention · Reviewed October 12, 2026</p>

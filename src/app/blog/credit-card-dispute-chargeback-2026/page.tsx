@@ -28,7 +28,6 @@ export const metadata: Metadata = {
 export default function Page() {
   return <>
     <ArticleSchema title={title} description={description} url={url} datePublished="2026-10-08" dateModified="2026-10-08" authorName="USFinNexus Editorial Team" image={image} keywords={['credit card dispute 2026', 'chargeback process', '60 day credit card dispute rule', 'billing error dispute letter']} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) }) }} />
     <main className="max-w-4xl mx-auto px-4 py-8">
       <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: title, item: '/blog/credit-card-dispute-chargeback-2026' }]} />
       <article className="prose prose-slate max-w-none">

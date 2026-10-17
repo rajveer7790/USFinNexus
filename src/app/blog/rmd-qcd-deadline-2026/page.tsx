@@ -17,7 +17,6 @@ export const metadata:Metadata={
 };
 export default function Page(){
  return <><ArticleSchema title="RMD and QCD Deadline 2026: Year-End IRA Checklist" description="A practical 2026 year-end checklist for required minimum distributions, qualified charitable distributions, inherited IRAs and tax reporting." url={url} datePublished="2026-10-06" dateModified="2026-10-06" authorName="USFinNexus Editorial Team" image={image} keywords={["RMD deadline 2026","qualified charitable distribution 2026","IRA year-end checklist"]}/>
- <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'FAQPage',mainEntity:faqs.map((f)=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))})}}/>
  <main className="max-w-4xl mx-auto px-4 py-8"><Breadcrumbs items={[{name:'Blog',item:'/blog'},{name:'RMD and QCD Deadline 2026: Year-End IRA Checklist',item:'/blog/rmd-qcd-deadline-2026'}]}/><article className="prose prose-slate max-w-none">
  <p className="text-sm font-bold uppercase tracking-wider text-blue-700">Retirement · Reviewed October 6, 2026</p>
  <h1>2026 Year-End IRA and Charitable Distribution Checklist</h1>

@@ -17,7 +17,6 @@ export const metadata:Metadata={
 };
 export default function Page(){
  return <><ArticleSchema title="Medicare Part B Premium 2027: What Is Known and What Is Not" description="Learn what determines the 2027 Medicare Part B premium, how IRMAA uses tax returns, and how to budget before CMS publishes final rates." url={url} datePublished="2026-10-06" dateModified="2026-10-06" authorName="USFinNexus Editorial Team" image={image} keywords={["Medicare Part B premium 2027","Part B deductible 2027","Medicare IRMAA 2027"]}/>
- <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'FAQPage',mainEntity:faqs.map((f)=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))})}}/>
  <main className="max-w-4xl mx-auto px-4 py-8"><Breadcrumbs items={[{name:'Blog',item:'/blog'},{name:'Medicare Part B Premium 2027: What Is Known and What Is Not',item:'/blog/medicare-part-b-premium-2027-what-to-know'}]}/><article className="prose prose-slate max-w-none">
  <p className="text-sm font-bold uppercase tracking-wider text-blue-700">Medicare & Retirement · Reviewed October 6, 2026</p>
  <h1>Planning for Medicare Part B Costs in 2027</h1>

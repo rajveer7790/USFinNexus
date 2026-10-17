@@ -17,7 +17,6 @@ export const metadata:Metadata={
 };
 export default function Page(){
  return <><ArticleSchema title="Medicare Plan Compare 2027: Open Enrollment Checklist" description="Use Medicare Plan Compare for 2027: compare premiums, prescriptions, doctors, pharmacies, star ratings and out-of-pocket limits before December 7." url={url} datePublished="2026-10-06" dateModified="2026-10-06" authorName="USFinNexus Editorial Team" image={image} keywords={["Medicare Plan Compare 2027","Medicare Open Enrollment 2027","compare Medicare plans"]}/>
- <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'FAQPage',mainEntity:faqs.map((f)=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))})}}/>
  <main className="max-w-4xl mx-auto px-4 py-8"><Breadcrumbs items={[{name:'Blog',item:'/blog'},{name:'Medicare Plan Compare 2027: Open Enrollment Checklist',item:'/blog/medicare-plan-compare-2027-open-enrollment'}]}/><article className="prose prose-slate max-w-none">
  <p className="text-sm font-bold uppercase tracking-wider text-blue-700">Medicare & Retirement · Reviewed October 6, 2026</p>
  <h1>A Step-by-Step Medicare Open Enrollment Review for 2027</h1>

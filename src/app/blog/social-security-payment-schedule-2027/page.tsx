@@ -17,7 +17,6 @@ export const metadata:Metadata={
 };
 export default function Page(){
  return <><ArticleSchema title="Social Security Payment Schedule 2027: Dates, SSI Shifts and Holidays" description="Check the official 2027 Social Security payment calendar, Wednesday birth-date rules, SSI holiday shifts and steps to take if a payment is late." url={url} datePublished="2026-10-06" dateModified="2026-10-06" authorName="USFinNexus Editorial Team" image={image} keywords={["Social Security payment schedule 2027","SSA payment dates 2027","SSI payment calendar 2027"]}/>
- <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'FAQPage',mainEntity:faqs.map((f)=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))})}}/>
  <main className="max-w-4xl mx-auto px-4 py-8"><Breadcrumbs items={[{name:'Blog',item:'/blog'},{name:'Social Security Payment Schedule 2027: Dates, SSI Shifts and Holidays',item:'/blog/social-security-payment-schedule-2027'}]}/><article className="prose prose-slate max-w-none">
  <p className="text-sm font-bold uppercase tracking-wider text-blue-700">Social Security · Reviewed October 6, 2026</p>
  <h1>Monthly Social Security and SSI Payment Dates for 2027</h1>

@@ -10,10 +10,11 @@
     "canonicalMismatch": 0,
     "duplicateH1Title": 0,
     "matchingTitleAndH1": 8,
-    "lowTextHtmlRatio": 235,
+    "lowTextHtmlRatio": 232,
     "brokenInternalLinks": 0,
     "brokenInternalImages": 0,
     "invalidApplicationSchema": 0,
+    "duplicateFaqSchema": 0,
     "sitemapBadUrls": 0,
     "sitemapCanonicalMismatches": 0,
     "oneIncomingInternalLink": 0,
@@ -219,9 +220,9 @@
       },
       {
         "route": "/blog/charitable-tax-deduction-2026",
-        "ratio": 6.78,
+        "ratio": 7.05,
         "textChars": 6792,
-        "htmlBytes": 100113
+        "htmlBytes": 96296
       },
       {
         "route": "/blog/chattel-mortgages-mobile-homes-financing",
@@ -258,12 +259,6 @@
         "ratio": 7.95,
         "textChars": 10256,
         "htmlBytes": 129009
-      },
-      {
-        "route": "/blog/credit-card-dispute-chargeback-2026",
-        "ratio": 9.7,
-        "textChars": 10718,
-        "htmlBytes": 110537
       },
       {
         "route": "/blog/credit-card-payoff-calculator-strategies",
@@ -345,9 +340,9 @@
       },
       {
         "route": "/blog/estimated-tax-payment-january-15-2027",
-        "ratio": 9.15,
+        "ratio": 9.51,
         "textChars": 10099,
-        "htmlBytes": 110388
+        "htmlBytes": 106234
       },
       {
         "route": "/blog/fdic-deposit-insurance-limits-2026",
@@ -477,9 +472,9 @@
       },
       {
         "route": "/blog/home-equity-line-vs-loan-2026",
-        "ratio": 8.31,
+        "ratio": 8.58,
         "textChars": 8503,
-        "htmlBytes": 102295
+        "htmlBytes": 99136
       },
       {
         "route": "/blog/homeowner-tax-deductions-2026",
@@ -489,9 +484,9 @@
       },
       {
         "route": "/blog/homeowners-insurance-mortgage-payment-2026",
-        "ratio": 7.97,
+        "ratio": 8.24,
         "textChars": 8212,
-        "htmlBytes": 103011
+        "htmlBytes": 99622
       },
       {
         "route": "/blog/house-hacking-guide-2026",
@@ -585,9 +580,9 @@
       },
       {
         "route": "/blog/medicare-advantage-premiums-2027",
-        "ratio": 8.44,
+        "ratio": 8.75,
         "textChars": 8835,
-        "htmlBytes": 104708
+        "htmlBytes": 100961
       },
       {
         "route": "/blog/medicare-advantage-star-ratings-2027",
@@ -596,16 +591,10 @@
         "htmlBytes": 87335
       },
       {
-        "route": "/blog/medicare-part-b-90-rebate-october-2026",
-        "ratio": 9.87,
-        "textChars": 10912,
-        "htmlBytes": 110564
-      },
-      {
         "route": "/blog/medicare-part-b-premium-2027-what-to-know",
-        "ratio": 7.85,
+        "ratio": 8.11,
         "textChars": 8025,
-        "htmlBytes": 102218
+        "htmlBytes": 98935
       },
       {
         "route": "/blog/medicare-part-d-costs-2027",
@@ -615,9 +604,9 @@
       },
       {
         "route": "/blog/medicare-plan-compare-2027-open-enrollment",
-        "ratio": 7.97,
+        "ratio": 8.23,
         "textChars": 8159,
-        "htmlBytes": 102414
+        "htmlBytes": 99145
       },
       {
         "route": "/blog/mega-backdoor-roth-ira-guide-2026",
@@ -675,9 +664,9 @@
       },
       {
         "route": "/blog/mortgage-rate-lock-before-fed-meeting-2026",
-        "ratio": 7.85,
+        "ratio": 8.09,
         "textChars": 7986,
-        "htmlBytes": 101780
+        "htmlBytes": 98655
       },
       {
         "route": "/blog/mortgage-rates-october-2026",
@@ -753,9 +742,9 @@
       },
       {
         "route": "/blog/personal-loan-apr-origination-fees-2026",
-        "ratio": 9.13,
+        "ratio": 9.51,
         "textChars": 10485,
-        "htmlBytes": 114902
+        "htmlBytes": 110267
       },
       {
         "route": "/blog/personal-loan-vs-credit-card-comparison",
@@ -813,15 +802,15 @@
       },
       {
         "route": "/blog/rmd-qcd-deadline-2026",
-        "ratio": 8.25,
+        "ratio": 8.51,
         "textChars": 8458,
-        "htmlBytes": 102480
+        "htmlBytes": 99342
       },
       {
         "route": "/blog/roth-conversion-tax-planning-2026",
-        "ratio": 7.93,
+        "ratio": 8.18,
         "textChars": 8059,
-        "htmlBytes": 101645
+        "htmlBytes": 98552
       },
       {
         "route": "/blog/safe-yields-bonds-treasuries-2026",
@@ -855,9 +844,9 @@
       },
       {
         "route": "/blog/senior-tax-deduction-6000-2026-schedule-1a",
-        "ratio": 8.57,
+        "ratio": 8.9,
         "textChars": 8970,
-        "htmlBytes": 104725
+        "htmlBytes": 100786
       },
       {
         "route": "/blog/short-term-rental-regulations-2026",
@@ -876,12 +865,6 @@
         "ratio": 7.29,
         "textChars": 9589,
         "htmlBytes": 131600
-      },
-      {
-        "route": "/blog/sipc-vs-fdic-protection-2026",
-        "ratio": 9.77,
-        "textChars": 11336,
-        "htmlBytes": 116000
       },
       {
         "route": "/blog/snap-cola-increase-2027-chart",
@@ -903,9 +886,9 @@
       },
       {
         "route": "/blog/social-security-payment-schedule-2027",
-        "ratio": 8.31,
+        "ratio": 8.6,
         "textChars": 8643,
-        "htmlBytes": 104019
+        "htmlBytes": 100464
       },
       {
         "route": "/blog/sp500-vs-real-estate-investing-2026",
@@ -927,9 +910,9 @@
       },
       {
         "route": "/blog/student-loan-idr-recertification-2026",
-        "ratio": 6.87,
+        "ratio": 7.15,
         "textChars": 6951,
-        "htmlBytes": 101170
+        "htmlBytes": 97169
       },
       {
         "route": "/blog/student-loan-repayment-plans-2026-income-driven",
@@ -951,9 +934,9 @@
       },
       {
         "route": "/blog/tax-loss-harvesting-wash-sale-2026",
-        "ratio": 8.4,
+        "ratio": 8.7,
         "textChars": 8721,
-        "htmlBytes": 103781
+        "htmlBytes": 100224
       },
       {
         "route": "/blog/tax-withholding-w4-2026",
@@ -969,9 +952,9 @@
       },
       {
         "route": "/blog/treasury-bills-vs-high-yield-savings-2026",
-        "ratio": 9.19,
+        "ratio": 9.56,
         "textChars": 10807,
-        "htmlBytes": 117537
+        "htmlBytes": 113012
       },
       {
         "route": "/blog/trump-account-vs-529-plan",
@@ -1487,6 +1470,7 @@
     "brokenInternalLinks": [],
     "brokenInternalImages": [],
     "invalidApplicationSchema": [],
+    "duplicateFaqSchema": [],
     "sitemapBadUrls": [],
     "sitemapCanonicalMismatches": [],
     "oneIncomingInternalLink": [],

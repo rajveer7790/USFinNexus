@@ -17,7 +17,6 @@ export const metadata:Metadata={
 };
 export default function Page(){
  return <><ArticleSchema title="Should You Lock Your Mortgage Rate Before a Fed Meeting?" description="The Fed does not set your 30-year mortgage rate. Use this practical 2026 rate-lock checklist for timing, float-downs, costs and risk." url={url} datePublished="2026-10-06" dateModified="2026-10-06" authorName="USFinNexus Editorial Team" image={image} keywords={["lock mortgage rate before Fed meeting 2026","mortgage rate lock timing","Fed meeting mortgage rate"]}/>
- <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'FAQPage',mainEntity:faqs.map((f)=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))})}}/>
  <main className="max-w-4xl mx-auto px-4 py-8"><Breadcrumbs items={[{name:'Blog',item:'/blog'},{name:'Should You Lock Your Mortgage Rate Before a Fed Meeting?',item:'/blog/mortgage-rate-lock-before-fed-meeting-2026'}]}/><article className="prose prose-slate max-w-none">
  <p className="text-sm font-bold uppercase tracking-wider text-blue-700">Mortgage & Housing · Reviewed October 6, 2026</p>
  <h1>Mortgage Rate Locks: A Decision Framework for Fed Weeks</h1>

@@ -17,7 +17,6 @@ export const metadata:Metadata={
 };
 export default function Page(){
  return <><ArticleSchema title="Roth Conversion Tax Planning 2026: Brackets, RMDs and Traps" description="A 2026 Roth conversion checklist: estimate taxable income, protect Medicare planning, avoid bracket surprises and coordinate RMDs." url={url} datePublished="2026-10-06" dateModified="2026-10-06" authorName="USFinNexus Editorial Team" image={image} keywords={["Roth conversion tax planning 2026","Roth conversion 2026 tax bracket","should I convert IRA to Roth"]}/>
- <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'FAQPage',mainEntity:faqs.map((f)=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))})}}/>
  <main className="max-w-4xl mx-auto px-4 py-8"><Breadcrumbs items={[{name:'Blog',item:'/blog'},{name:'Roth Conversion Tax Planning 2026: Brackets, RMDs and Traps',item:'/blog/roth-conversion-tax-planning-2026'}]}/><article className="prose prose-slate max-w-none">
  <p className="text-sm font-bold uppercase tracking-wider text-blue-700">Retirement · Reviewed October 6, 2026</p>
  <h1>A 2026 Checklist for Evaluating a Roth Conversion</h1>

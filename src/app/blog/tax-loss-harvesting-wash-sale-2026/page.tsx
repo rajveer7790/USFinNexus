@@ -17,7 +17,6 @@ export const metadata:Metadata={
 };
 export default function Page(){
  return <><ArticleSchema title="Tax-Loss Harvesting 2026: Wash-Sale Rules Before Year-End" description="Learn how tax-loss harvesting works in 2026, the IRS 30-day wash-sale rule, replacement investments, digital assets and recordkeeping." url={url} datePublished="2026-10-06" dateModified="2026-10-06" authorName="USFinNexus Editorial Team" image={image} keywords={["tax-loss harvesting 2026","wash sale rule 2026","sell stock at a loss tax"]}/>
- <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'FAQPage',mainEntity:faqs.map((f)=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))})}}/>
  <main className="max-w-4xl mx-auto px-4 py-8"><Breadcrumbs items={[{name:'Blog',item:'/blog'},{name:'Tax-Loss Harvesting 2026: Wash-Sale Rules Before Year-End',item:'/blog/tax-loss-harvesting-wash-sale-2026'}]}/><article className="prose prose-slate max-w-none">
  <p className="text-sm font-bold uppercase tracking-wider text-blue-700">Investing & Taxes · Reviewed October 6, 2026</p>
  <h1>Tax-Loss Harvesting: Timing and Wash-Sale Checks</h1>

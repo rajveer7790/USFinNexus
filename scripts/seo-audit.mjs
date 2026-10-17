@@ -60,6 +60,7 @@ const findings = {
   brokenInternalLinks: [],
   brokenInternalImages: [],
   invalidApplicationSchema: [],
+  duplicateFaqSchema: [],
   sitemapBadUrls: [],
   sitemapCanonicalMismatches: [],
   oneIncomingInternalLink: [],
@@ -120,11 +121,13 @@ for (const file of routeFiles.values()) {
     const asset = src.split(/[?#]/)[0].replace(/^\//, '');
     if (asset && !fs.existsSync(path.join(outDir, asset))) findings.brokenInternalImages.push({ route, src });
   }
+  let faqSchemaCount = 0;
   for (const match of html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
     try {
       const data = JSON.parse(match[1].replaceAll('&quot;', '"').replaceAll('&amp;', '&'));
       const nodes = Array.isArray(data) ? data : data['@graph'] || [data];
       for (const node of nodes) {
+        if (node?.['@type'] === 'FAQPage') faqSchemaCount++;
         if (!['WebApplication', 'SoftwareApplication'].includes(node?.['@type'])) continue;
         const missing = ['name', 'description', 'url', 'applicationCategory', 'operatingSystem', 'offers']
           .filter((key) => !node[key]);
@@ -135,6 +138,7 @@ for (const file of routeFiles.values()) {
       findings.invalidApplicationSchema.push({ route, missing: ['valid JSON-LD'] });
     }
   }
+  if (faqSchemaCount > 1) findings.duplicateFaqSchema.push({ route, count: faqSchemaCount });
 }
 
 for (const [kind, groups] of [['h1', headingRoutes], ['title', titleRoutes]]) {
@@ -185,5 +189,5 @@ const counts = Object.fromEntries(Object.entries(findings).map(([key, value]) =>
 fs.mkdirSync('reports', { recursive: true });
 fs.writeFileSync('reports/seo-audit.json', `${JSON.stringify({ counts, findings }, null, 2)}\n`);
 console.log(JSON.stringify(counts, null, 2));
-const blocking = ['emptyHtml', 'missingTitle', 'missingDescription', 'h1NotOne', 'missingCanonical', 'canonicalMismatch', 'duplicateH1Title', 'brokenInternalLinks', 'brokenInternalImages', 'invalidApplicationSchema', 'sitemapBadUrls', 'sitemapCanonicalMismatches', 'depthOver3', 'missingHstsRule'];
+const blocking = ['emptyHtml', 'missingTitle', 'missingDescription', 'h1NotOne', 'missingCanonical', 'canonicalMismatch', 'duplicateH1Title', 'brokenInternalLinks', 'brokenInternalImages', 'invalidApplicationSchema', 'duplicateFaqSchema', 'sitemapBadUrls', 'sitemapCanonicalMismatches', 'depthOver3', 'missingHstsRule'];
 if (blocking.some((key) => findings[key].length)) process.exitCode = 1;

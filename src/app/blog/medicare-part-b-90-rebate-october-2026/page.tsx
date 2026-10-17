@@ -29,7 +29,6 @@ export const metadata: Metadata = {
 export default function Page() {
   return <>
     <ArticleSchema title={title} description={description} url={url} datePublished="2026-10-09" dateModified="2026-10-09" authorName="USFinNexus Editorial Team" image={image} keywords={['Medicare $90 rebate October 2026', 'Medicare Part B rebate', 'Medicare rebate eligibility', 'Medicare rebate scam']} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) }) }} />
     <main className="max-w-4xl mx-auto px-4 py-8">
       <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: title, item: '/blog/medicare-part-b-90-rebate-october-2026' }]} />
       <article className="prose prose-slate max-w-none">
