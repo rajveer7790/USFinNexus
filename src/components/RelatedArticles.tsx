@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from '@/components/EditorialImage';
 import { getRelatedArticles, ALL_ARTICLES } from '@/lib/articles';
 import { getRelatedBlogPosts } from '@/lib/blogs';
 

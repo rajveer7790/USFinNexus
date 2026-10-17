@@ -10,13 +10,15 @@ import CalculatorFAQ from '@/components/CalculatorFAQ';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
 import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Rental Property ROI & Cash Flow Calculator 2026',
-    description: 'Analyze rental property investments instantly. Calculate cash flow, cap rate, cash-on-cash return, and NOI for any US rental property. Free real estate investment calculator.',
+    description: 'Analyze rental property investments instantly. Calculate cash flow, cap rate, cash-on-cash return, and NOI for any US rental property. Free real estate investment calculator.',
+
     alternates: { canonical: 'https://usfinnexus.com/calculators/rental-property' },
     openGraph: {
         type: 'website',
@@ -67,6 +69,7 @@ export default function RentalPropertyPage() {
             <RentalPropertyClient />
             <RentalPropertySeoContent />
             <SemrushIntentSection slug="rental-property" />
+            <ContextualInternalLinks currentSlug="rental-property" showBlogs showCalculators />
             <CalculatorFAQ faqs={RENTAL_FAQS} title="Rental Property Investment — Frequently Asked Questions" />
         </main>
     );

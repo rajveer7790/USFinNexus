@@ -55,6 +55,7 @@ const findings = {
   missingCanonical: [],
   canonicalMismatch: [],
   duplicateH1Title: [],
+  matchingTitleAndH1: [],
   lowTextHtmlRatio: [],
   brokenInternalLinks: [],
   brokenInternalImages: [],
@@ -67,6 +68,8 @@ const findings = {
 };
 
 const pageInfo = new Map();
+const headingRoutes = new Map();
+const titleRoutes = new Map();
 
 for (const file of routeFiles.values()) {
   const html = fs.readFileSync(file, 'utf8');
@@ -89,7 +92,12 @@ for (const file of routeFiles.values()) {
   if (route !== '/404' && !canonical) findings.missingCanonical.push(route);
   else if (route !== '/404' && normalizeInternal(canonical) !== route) findings.canonicalMismatch.push({ route, canonical });
   const normalizeText = (value) => value.toLowerCase().replace(/\s*[|—–-]\s*usfinnexus.*$/, '').replace(/[^a-z0-9]+/g, ' ').trim();
-  if (title && h1 && normalizeText(decodeEntities(title)) === normalizeText(h1)) findings.duplicateH1Title.push({ route, title: decodeEntities(title), h1 });
+  // A matching title and H1 on one page is normal. Detect duplicates across
+  // canonical routes instead of requiring artificial wording differences.
+  if (title && h1 && normalizeText(decodeEntities(title)) === normalizeText(h1)) findings.matchingTitleAndH1.push({ route, title: decodeEntities(title), h1 });
+  for (const [map, value] of [[headingRoutes, h1], [titleRoutes, title && decodeEntities(title)]]) {
+    if (value && route !== '/404') map.set(normalizeText(value), [...(map.get(normalizeText(value)) || []), route]);
+  }
   const body = html.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i)?.[1] || html;
   const textChars = decodeEntities(body.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()).length;
   const ratio = html.length ? Math.round((textChars / html.length) * 10000) / 100 : 0;
@@ -129,6 +137,9 @@ for (const file of routeFiles.values()) {
   }
 }
 
+for (const [kind, groups] of [['h1', headingRoutes], ['title', titleRoutes]]) {
+  for (const [text, routes] of groups) if (routes.length > 1) findings.duplicateH1Title.push({ kind, text, routes });
+}
 const sitemapPath = path.join(outDir, 'sitemap.xml');
 if (fs.existsSync(sitemapPath)) {
   const sitemap = fs.readFileSync(sitemapPath, 'utf8');

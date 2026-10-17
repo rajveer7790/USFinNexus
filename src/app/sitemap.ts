@@ -3,6 +3,7 @@ import { ALL_ARTICLES } from '@/lib/articles';
 import { ALL_GUIDES } from '@/lib/guides';
 import fs from 'fs';
 import path from 'path';
+import { canonicalPath } from '@/lib/canonical-routes';
 
 export const dynamic = 'force-static';
 // October 6, 2026 batch: ten current posts with expanded SEO copy and source links.
@@ -99,8 +100,8 @@ function getBlogEntries(): Array<{ slug: string; lastModified?: Date }> {
             .filter((entry) => entry.isDirectory() && !canonicalizedAliases.has(entry.name) && fs.existsSync(path.join(blogDir, entry.name, 'page.tsx')))
             .map((entry) => {
                 const source = fs.readFileSync(path.join(blogDir, entry.name, 'page.tsx'), 'utf8');
-                const modified = source.match(/dateModified=["'](\d{4}-\d{2}-\d{2})["']/)?.[1];
-                const published = source.match(/datePublished=["'](\d{4}-\d{2}-\d{2})["']/)?.[1];
+                const modified = source.includes('<ReviewedGuide') ? '2026-10-17' : source.match(/dateModified=["'](\d{4}-\d{2}-\d{2})["']/)?.[1];
+                const published = source.match(/(?:datePublished|published)=["'](\d{4}-\d{2}-\d{2})["']/)?.[1];
                 return { slug: entry.name, lastModified: safeDate(modified || published) };
             });
     } catch (error) {
@@ -176,5 +177,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
 
     const allEntries = [...corePages, ...calculators, ...articles, ...guides, ...requiredNewPosts, ...blogPosts];
-    return Array.from(new Map(allEntries.map((entry) => [entry.url, entry])).values());
+    return Array.from(new Map(allEntries.filter(entry => canonicalPath(new URL(entry.url).pathname) === new URL(entry.url).pathname).map((entry) => [entry.url, entry])).values());
 }

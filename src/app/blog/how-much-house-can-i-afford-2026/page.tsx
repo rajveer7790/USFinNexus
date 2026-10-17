@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import Link from 'next/link';
 import { Target, Calculator, AlertTriangle, Home, DollarSign, Activity, PieChart } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
@@ -189,6 +190,7 @@ export default function BlogPost() {
                 <div className="mt-8 text-sm text-slate-600 border-t pt-6"><p><strong>Sources and disclaimer:</strong> Review the <a href="https://www.consumerfinance.gov/owning-a-home/" className="text-blue-700 underline">CFPB homebuying resources</a> for current consumer guidance. USFinNexus estimates are educational and are not a loan offer, tax opinion or financial advice.</p></div>
             </div>
             </article>
+            <ContextualInternalLinks currentSlug="how-much-house-can-i-afford-2026" showBlogs showCalculators />
             <div className="mt-16">
                 <RelatedCalculators exclude={['/calculators/dti']} limit={4} title="Related Calculators" />
                 <RelatedArticles currentSlug="how-much-house-can-i-afford-2026" category="Home Buying" />

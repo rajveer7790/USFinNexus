@@ -1,0 +1,416 @@
+[
+  {
+    "source": "https://usfinnexus.com/calculators/mortgage",
+    "target": "https://usfinnexus.com/blog/lender-quote-vs-online-calculator",
+    "anchor": "the calculator with your lender’s payment breakdown",
+    "context": "If your estimate differs from a quote, compare the calculator with your lender’s payment breakdown before changing the loan amount.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/mortgage",
+    "target": "https://usfinnexus.com/blog/how-to-calculate-monthly-mortgage-payment",
+    "anchor": "how monthly mortgage payments are calculated",
+    "context": "To understand the formula behind the result, read how monthly mortgage payments are calculated.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/mortgage",
+    "target": "https://usfinnexus.com/blog/30-year-vs-15-year-mortgage-2026",
+    "anchor": "15-year and 30-year mortgage costs",
+    "context": "Before choosing a loan term, compare 15-year and 30-year mortgage costs using the same borrowing amount.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/affordability",
+    "target": "https://usfinnexus.com/blog/how-much-house-can-i-afford-2026",
+    "anchor": "this home-affordability planning guide",
+    "context": "Separate lender qualification from your household budget with this home-affordability planning guide.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/affordability",
+    "target": "https://usfinnexus.com/blog/28-36-rule-explained-lender-standards",
+    "anchor": "28/36 is a planning scenario rather than an approval guarantee",
+    "context": "If you are using percentage rules, see why 28/36 is a planning scenario rather than an approval guarantee.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/affordability",
+    "target": "https://usfinnexus.com/blog/mortgage-preapproval-prequalification",
+    "anchor": "prequalification versus mortgage preapproval",
+    "context": "Before you commit to a purchase, understand prequalification versus mortgage preapproval.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/down-payment",
+    "target": "https://usfinnexus.com/blog/20-percent-down-payment-standard-2026",
+    "anchor": "the trade-offs of a 20% down payment",
+    "context": "Before waiting for a larger deposit, compare the trade-offs of a 20% down payment.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/down-payment",
+    "target": "https://usfinnexus.com/blog/down-payment-assistance-dpa-programs",
+    "anchor": "down-payment assistance programs and their conditions",
+    "context": "If cash is the obstacle, investigate down-payment assistance programs and their conditions.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/down-payment",
+    "target": "https://usfinnexus.com/blog/no-down-payment-mortgages-va-usda-fha",
+    "anchor": "VA, USDA and FHA low-down-payment options",
+    "context": "Eligible buyers can also compare VA, USDA and FHA low-down-payment options.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/closing-costs",
+    "target": "https://usfinnexus.com/blog/closing-costs-itemized-breakdown-2026",
+    "anchor": "the itemized closing-cost breakdown",
+    "context": "To prepare cash for settlement, work through the itemized closing-cost breakdown.",
+    "links_added_to_source": 2,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/closing-costs",
+    "target": "https://usfinnexus.com/blog/mortgage-points-buydown-calculator",
+    "anchor": "the mortgage points and buydown guide",
+    "context": "Compare the lender fee with ongoing interest using the mortgage points and buydown guide.",
+    "links_added_to_source": 2,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/refinance",
+    "target": "https://usfinnexus.com/blog/should-i-refinance-2026",
+    "anchor": "when refinancing can make financial sense",
+    "context": "A rate reduction alone does not settle the decision. Read when refinancing can make financial sense.",
+    "links_added_to_source": 2,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/refinance",
+    "target": "https://usfinnexus.com/blog/streamline-refinance-fha-va-usda",
+    "anchor": "FHA, VA and USDA streamline refinance options",
+    "context": "Program rules differ, so check FHA, VA and USDA streamline refinance options before assuming the same process applies.",
+    "links_added_to_source": 2,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/pmi-removal",
+    "target": "https://usfinnexus.com/blog/pmi-explained-cost-removal-2026",
+    "anchor": "PMI cost and removal rules",
+    "context": "For the distinction between requesting cancellation and automatic termination, see PMI cost and removal rules.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/pmi-removal",
+    "target": "https://usfinnexus.com/blog/lender-paid-pmi-vs-borrower-paid",
+    "anchor": "lender-paid versus borrower-paid PMI",
+    "context": "If you are comparing how premiums are paid, read lender-paid versus borrower-paid PMI.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/pmi-removal",
+    "target": "https://usfinnexus.com/blog/no-pmi-mortgages-down-payment",
+    "anchor": "the costs that can replace monthly mortgage insurance",
+    "context": "Before choosing a “no PMI” offer, examine the costs that can replace monthly mortgage insurance.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/comparison",
+    "target": "https://usfinnexus.com/blog/piggyback-mortgage-80-10-10-strategy",
+    "anchor": "the 80-10-10 piggyback mortgage structure",
+    "context": "A second loan changes the risk as well as the payment. Compare the 80-10-10 piggyback mortgage structure.",
+    "links_added_to_source": 2,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/comparison",
+    "target": "https://usfinnexus.com/blog/portfolio-loans-non-qm-mortgages-2026",
+    "anchor": "portfolio and non-QM mortgage trade-offs",
+    "context": "If a quoted loan is outside standard underwriting, read portfolio and non-QM mortgage trade-offs.",
+    "links_added_to_source": 2,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/va",
+    "target": "https://usfinnexus.com/blog/va-loan-benefits-2026-military-guide",
+    "anchor": "the VA loan benefits guide",
+    "context": "Check the program distinctions in the VA loan benefits guide alongside your lender’s eligibility review.",
+    "links_added_to_source": 1,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/interest-only",
+    "target": "https://usfinnexus.com/blog/interest-only-mortgage-pros-cons",
+    "anchor": "interest-only mortgage risks and payment changes",
+    "context": "A low initial payment does not show the later obligation. Review interest-only mortgage risks and payment changes.",
+    "links_added_to_source": 1,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/mortgage-payoff",
+    "target": "https://usfinnexus.com/blog/pay-off-mortgage-early-strategy",
+    "anchor": "early mortgage payoff with other uses of cash",
+    "context": "Before sending extra principal, compare early mortgage payoff with other uses of cash.",
+    "links_added_to_source": 1,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/rent-vs-buy",
+    "target": "https://usfinnexus.com/blog/rent-vs-buy-calculator-2026-housing-market",
+    "anchor": "this rent-versus-buy planning guide",
+    "context": "Test the time horizon and ownership expenses in this rent-versus-buy planning guide.",
+    "links_added_to_source": 2,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/rent-vs-buy",
+    "target": "https://usfinnexus.com/blog/silver-tsunami-housing-shift-2026",
+    "anchor": "the limits of the “silver tsunami” housing narrative",
+    "context": "Broader market stories need local evidence; see the limits of the “silver tsunami” housing narrative.",
+    "links_added_to_source": 2,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/rental-property",
+    "target": "https://usfinnexus.com/blog/investment-property-mortgage-rates-2026",
+    "anchor": "investment-property mortgage pricing factors",
+    "context": "Financing a rental differs from financing your residence. Check investment-property mortgage pricing factors.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/rental-property",
+    "target": "https://usfinnexus.com/blog/multifamily-real-estate-investing-2026",
+    "anchor": "multifamily investing costs and risks",
+    "context": "For multiple units, compare multifamily investing costs and risks.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/rental-property",
+    "target": "https://usfinnexus.com/blog/fractional-real-estate-investing-2026",
+    "anchor": "the fractional real estate investing guide",
+    "context": "Fractional ownership has a different structure; read the fractional real estate investing guide.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/auto-loan",
+    "target": "https://usfinnexus.com/blog/0-percent-apr-auto-loan-dealer-vs-bank",
+    "anchor": "0% APR dealer financing with a bank loan",
+    "context": "A low advertised rate can involve a trade-off. Compare 0% APR dealer financing with a bank loan.",
+    "links_added_to_source": 2,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/auto-loan",
+    "target": "https://usfinnexus.com/blog/auto-loan-terms-60-72-84-month",
+    "anchor": "60-, 72- and 84-month car loans",
+    "context": "To test a lower payment against total interest, compare 60-, 72- and 84-month car loans.",
+    "links_added_to_source": 2,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/personal-loan",
+    "target": "https://usfinnexus.com/blog/personal-loan-vs-credit-card-comparison",
+    "anchor": "personal loans with credit cards on total cost",
+    "context": "Before consolidating a balance, compare personal loans with credit cards on total cost.",
+    "links_added_to_source": 1,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/credit-card",
+    "target": "https://usfinnexus.com/blog/credit-card-payoff-calculator-strategies",
+    "anchor": "credit card payoff strategies",
+    "context": "Turn the estimate into a repayment plan with credit card payoff strategies.",
+    "links_added_to_source": 1,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/debt-payoff",
+    "target": "https://usfinnexus.com/blog/debt-payoff-avalanche-vs-snowball-method",
+    "anchor": "the debt avalanche and snowball methods",
+    "context": "Choose a repayment order by comparing the debt avalanche and snowball methods.",
+    "links_added_to_source": 1,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/retirement",
+    "target": "https://usfinnexus.com/blog/roth-ira-vs-401k-comparison-2026",
+    "anchor": "the Roth IRA versus 401(k) comparison",
+    "context": "Choose where to direct new savings with the Roth IRA versus 401(k) comparison.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/retirement",
+    "target": "https://usfinnexus.com/blog/mega-backdoor-roth-ira-guide-2026",
+    "anchor": "the mega backdoor Roth process and limits",
+    "context": "If your workplace plan permits after-tax contributions, check the mega backdoor Roth process and limits.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/retirement",
+    "target": "https://usfinnexus.com/blog/social-security-payment-schedule-2027",
+    "anchor": "the 2027 Social Security payment calendar",
+    "context": "For benefit cash flow, check the 2027 Social Security payment calendar.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/budget",
+    "target": "https://usfinnexus.com/blog/social-security-cola-2027",
+    "anchor": "the confirmed 2027 Social Security COLA update",
+    "context": "If benefits support your budget, read the confirmed 2027 Social Security COLA update.",
+    "links_added_to_source": 2,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/budget",
+    "target": "https://usfinnexus.com/blog/medicare-plan-compare-2027-open-enrollment",
+    "anchor": "Medicare plans for 2027 open enrollment",
+    "context": "Before choosing health coverage, compare Medicare plans for 2027 open enrollment.",
+    "links_added_to_source": 2,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/income-tax",
+    "target": "https://usfinnexus.com/blog/estimated-tax-payment-january-15-2027",
+    "anchor": "the January 15, 2027 estimated-tax installment",
+    "context": "If income is not fully covered by withholding, review the January 15, 2027 estimated-tax installment.",
+    "links_added_to_source": 2,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/income-tax",
+    "target": "https://usfinnexus.com/blog/homeowner-tax-deductions-2026",
+    "anchor": "the homeowner tax-deduction guide",
+    "context": "Homeowners should distinguish deductible items from cash costs using the homeowner tax-deduction guide.",
+    "links_added_to_source": 2,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/investment",
+    "target": "https://usfinnexus.com/blog/treasury-bills-vs-high-yield-savings-2026",
+    "anchor": "Treasury bills and high-yield savings",
+    "context": "For money needed soon, compare Treasury bills and high-yield savings.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/investment",
+    "target": "https://usfinnexus.com/blog/sp500-vs-real-estate-investing-2026",
+    "anchor": "stock index investing versus direct real estate",
+    "context": "For longer-term choices, consider stock index investing versus direct real estate.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/investment",
+    "target": "https://usfinnexus.com/blog/ai-personal-finance-investing-2026",
+    "anchor": "the limits of AI investing tools",
+    "context": "Before following an automated recommendation, read the limits of AI investing tools.",
+    "links_added_to_source": 3,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/crypto-tax",
+    "target": "https://usfinnexus.com/blog/crypto-tax-guide-2026",
+    "anchor": "the crypto tax reporting guide",
+    "context": "Before relying on the estimate, organize records using the crypto tax reporting guide.",
+    "links_added_to_source": 1,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/calculators/student-loan",
+    "target": "https://usfinnexus.com/blog/student-loan-idr-recertification-2026",
+    "anchor": "the IDR recertification checklist",
+    "context": "Check your servicer’s instructions alongside the IDR recertification checklist.",
+    "links_added_to_source": 1,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/blog/treasury-bills-vs-high-yield-savings-2026",
+    "target": "https://usfinnexus.com/blog/fdic-deposit-insurance-limits-2026",
+    "anchor": "FDIC deposit-insurance ownership categories and limits",
+    "context": "If you choose a bank account, verify FDIC deposit-insurance ownership categories and limits.",
+    "links_added_to_source": 1,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/blog/how-much-house-can-i-afford-2026",
+    "target": "https://usfinnexus.com/calculators/arizona",
+    "anchor": "Arizona mortgage calculator",
+    "context": "For a state-specific payment scenario, start with the Arizona mortgage calculator and replace assumptions with your property’s actual costs.",
+    "links_added_to_source": 2,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  },
+  {
+    "source": "https://usfinnexus.com/blog/how-much-house-can-i-afford-2026",
+    "target": "https://usfinnexus.com/calculators/ohio",
+    "anchor": "Ohio mortgage calculator",
+    "context": "Buying in Ohio? Use the Ohio mortgage calculator with a local tax bill and an insurance quote.",
+    "links_added_to_source": 2,
+    "rendered": true,
+    "source_google_index_status": "Not supplied; not asserted"
+  }
+]

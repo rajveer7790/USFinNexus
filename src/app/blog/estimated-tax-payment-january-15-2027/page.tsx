@@ -3,11 +3,13 @@ import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
+import EditorialImage from '@/components/EditorialImage';
 
 const url='https://usfinnexus.com/blog/estimated-tax-payment-january-15-2027';
+const image = '/images/estimated-tax-january-15-2027.webp';
 const faqs=[
 {question:'When is the fourth estimated tax payment for 2026 due?',answer:'For most calendar-year individuals, the fourth 2026 estimated tax payment is due January 15, 2027. Weekend or legal-holiday rules can move a due date to the next business day.'},
-{question:'Can I skip the January 15, 2027 payment if I file early?',answer:'Generally yes. If you file your 2026 Form 1040 or 1040-SR by January 31, 2027 and pay the remaining balance in full, the January installment is not required.'},
+{question:'Can I skip the January 15, 2027 payment if I file early?',answer:'Generally yes. If you file your 2026 Form 1040 or 1040-SR by February 1, 2027 and pay the remaining balance in full, the January installment is not required.'},
 {question:'Who usually needs to pay estimated tax?',answer:'You generally need estimated payments when you expect to owe at least $1,000 after withholding and refundable credits and your prepayments will be below the applicable IRS safe-harbor amount.'},
 {question:'What income counts for the fourth estimated payment?',answer:'The final installment covers income received September 1 through December 31, including self-employment profit, interest, dividends, rent, capital gains and other income not covered by enough withholding.'},
 {question:'How much should I pay in January?',answer:'Use the 2026 Form 1040-ES worksheet or IRS Publication 505. Compare your annual safe-harbor target with withholding and timely installments already made; do not guess from the prior balance due.'},
@@ -17,16 +19,18 @@ export const metadata:Metadata={
  title:'January 15, 2027 Estimated Tax Payment: 2026 Q4 Guide',
  description:'The 2026 fourth estimated tax payment is due January 15, 2027. See who must pay, safe-harbor math, the early-filing exception and IRS payment steps.',
  alternates:{canonical:url},
- openGraph:{type:'article',title:'January 15, 2027 Estimated Tax Payment Guide',description:'How to handle the final 2026 estimated tax installment, safe harbors and the early-filing exception.',url,siteName:'USFinNexus'},
- twitter:{card:'summary_large_image',title:'January 15, 2027 Estimated Tax Payment Guide',description:'Final 2026 estimated tax installment explained with IRS rules and practical steps.'}
+ openGraph:{type:'article',title:'January 15, 2027 Estimated Tax Payment Guide',description:'How to handle the final 2026 estimated tax installment, safe harbors and the early-filing exception.',url,siteName:'USFinNexus',images:[{url:image,width:1200,height:630}]},
+ twitter:{card:'summary_large_image',title:'January 15, 2027 Estimated Tax Payment Guide',description:'Final 2026 estimated tax installment explained with IRS rules and practical steps.',images:[image]}
 };
 export default function Page(){
- return <><ArticleSchema title="January 15, 2027 Estimated Tax Payment: 2026 Q4 Guide" description="IRS-sourced guide to the final 2026 estimated tax installment, safe harbors and the early-filing exception." url={url} datePublished="2026-10-06" dateModified="2026-10-06" authorName="USFinNexus Editorial Team" keywords={['January 15 2027 estimated tax payment','2026 fourth quarter estimated tax','Form 1040-ES 2026','estimated tax safe harbor']}/>
+ return <><ArticleSchema title="January 15, 2027 Estimated Tax Payment: 2026 Q4 Guide" description="IRS-sourced guide to the final 2026 estimated tax installment, safe harbors and the early-filing exception." url={url} image={`https://usfinnexus.com${image}`} datePublished="2026-10-06" dateModified="2026-10-17" authorName="USFinNexus Editorial Team" keywords={['January 15 2027 estimated tax payment','2026 fourth quarter estimated tax','Form 1040-ES 2026','estimated tax safe harbor']}/>
  <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'FAQPage',mainEntity:faqs.map(f=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))})}}/>
  <main className="max-w-4xl mx-auto px-4 py-8"><Breadcrumbs items={[{name:'Blog',item:'/blog'},{name:'January 15, 2027 Estimated Tax Payment',item:'/blog/estimated-tax-payment-january-15-2027'}]}/><article className="prose prose-slate max-w-none">
- <p className="text-sm font-bold uppercase tracking-wider text-blue-700">Federal tax planning · Reviewed October 6, 2026</p>
+ <p className="text-sm font-bold uppercase tracking-wider text-blue-700">Federal tax planning · Reviewed October 17, 2026</p>
  <h1>January 15, 2027 Estimated Tax Payment: Your 2026 Q4 Guide</h1>
- <p className="lead"><strong>Answer first:</strong> Most calendar-year taxpayers who make estimated payments must pay the fourth 2026 installment by <strong>January 15, 2027</strong>. It covers income received from September 1 through December 31, 2026. You can generally avoid that separate installment if you file your 2026 federal return by January 31, 2027 and pay the balance in full.</p>
+ <EditorialImage src={image} width={1200} height={630} alt="Original illustration of an estimated-tax planning calendar and household records" priority className="w-full h-auto rounded-2xl" />
+ <p><strong>Updated October 17, 2026:</strong> The early-filing exception date is February 1, 2027, as specified in the <a href="https://www.irs.gov/pub/irs-pdf/f1040es.pdf">2026 Form 1040-ES instructions</a>. An earlier version incorrectly used January 31 without the calendar adjustment.</p>
+ <p className="lead"><strong>Answer first:</strong> Most calendar-year taxpayers who make estimated payments must pay the fourth 2026 installment by <strong>January 15, 2027</strong>. It covers income received from September 1 through December 31, 2026. You can generally avoid that separate installment if you file your 2026 federal return by February 1, 2027 and pay the balance in full.</p>
  <p>This deadline is easy to miss because it falls in the next calendar year. It is still a payment for tax year 2026, not an advance payment for 2027. The IRS Publication 505 and Form 1040-ES instructions control the details, including special rules for farmers, fishers, fiscal-year taxpayers and disaster areas.</p>
  <aside className="not-prose my-8 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-950">This is general federal tax education, not individualized tax or legal advice. State estimated-tax rules can differ. Verify the current IRS worksheet and speak with a qualified tax professional for a complex, high-income, multi-state or business situation.</aside>
  <h2>What the January payment covers</h2>
@@ -56,8 +60,8 @@ export default function Page(){
  <p>An underpayment penalty is based on the size and duration of a shortfall for each installment period. Paying the full annual tax by filing does not automatically erase an earlier timing shortfall. Form 2210 is used to calculate the penalty and evaluate exceptions, including annualized income and certain disaster relief.</p>
  <p>If you discover a shortfall, pay promptly and update any remaining withholding or estimated payments. Keep a written calculation showing how you reached the amount. If a federally declared disaster affects your county, rely on the specific IRS notice rather than assuming every taxpayer receives the same postponement.</p>
  <h2>The early-filing exception</h2>
- <p>The IRS allows a practical alternative to a separate January payment: file your 2026 Form 1040 or 1040-SR by January 31, 2027 and pay the remaining balance in full. The exception does not mean the income was tax-free, and it does not remove any earlier installment obligation. It simply lets the final payment accompany the return when you file early.</p>
- <p>Tax software may display a January voucher even when you qualify for the exception. Confirm that the return is accepted and the full balance is paid. If you file after January 31, plan for the January installment instead.</p>
+ <p>The IRS allows a practical alternative to a separate January payment: file your 2026 Form 1040 or 1040-SR by February 1, 2027 and pay the remaining balance in full. The exception does not mean the income was tax-free, and it does not remove any earlier installment obligation. It simply lets the final payment accompany the return when you file early.</p>
+ <p>Tax software may display a January voucher even when you qualify for the exception. Confirm that the return is accepted and the full balance is paid. If you file after February 1, plan for the January installment instead.</p>
  <h2>December checklist</h2>
  <ul><li>Reconcile 2026 income through November and update your year-end forecast.</li><li>Check capital gains, retirement distributions and business profit that may arrive in December.</li><li>Compare withholding and timely payments with the 90%, 100% or 110% target.</li><li>Decide whether equal installments or annualized income better matches your records.</li><li>Schedule the payment early and save proof.</li><li>Review the separate state deadline and payment portal.</li></ul>
  <p>Use the <Link href="/calculators/income-tax">income-tax calculator</Link> for a planning estimate, then verify the result against Form 1040-ES. If you are building a household cash plan, the <Link href="/calculators/budget">budget calculator</Link> can reserve money for the January payment.</p>

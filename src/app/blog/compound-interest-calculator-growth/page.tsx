@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: "Compound Interest Calculator: How '0,000 Grows Over 30 Years | Guide",
+    title: 'Compound Interest: How $10,000 Can Grow Over 30 Years',
     description: 'Understand the mathematical miracle of compound interest. Learn the Rule of 72 and see exactly how early investing turns small deposits into a multi-million dollar portfolio.',
     alternates: { canonical: 'https://usfinnexus.com/blog/compound-interest-calculator-growth' },
     openGraph: {

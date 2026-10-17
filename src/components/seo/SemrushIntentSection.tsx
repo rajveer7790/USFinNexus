@@ -80,7 +80,7 @@ const intentPages = {
     scenarios: ['$6,000 cost and $300 monthly savings produces a simple 20-month break-even.', 'Compare rate-and-term refinance with cash-out refinance.', 'Test paying costs in cash versus financing them into the balance.'],
     links: [
       { href: '/blog/refinancing-costs-2026-breakdown', label: 'review refinance closing costs' },
-      { href: '/blog/refinance-break-even-calculator-guide-2026', label: 'understand break-even analysis' },
+      { href: '/blog/mortgage-refinance-break-even-2026', label: 'understand break-even analysis' },
       { href: '/mortgage-rates', label: 'review current rate context' },
     ],
   },

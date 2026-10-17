@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getAllBlogPosts, type BlogPostEntry } from '@/lib/blogs';
+import { EDITORIAL_LINKS } from '@/lib/editorial-links';
 
 interface ContextualInternalLinksProps {
     currentSlug: string;
@@ -152,6 +153,7 @@ function getBlogSuggestions(currentSlug: string): BlogPostEntry[] {
         .filter((post) => post.slug !== currentSlug)
         .map((post, index) => ({ post, score: scoreBlog(currentSlug, post), index }))
         .sort((a, b) => b.score - a.score || a.index - b.index)
+        .filter(({ score }) => score > 0)
         .slice(0, 3)
         .map(({ post }) => post);
 }
@@ -182,12 +184,14 @@ function getCalculatorSuggestions(currentSlug: string): CalculatorLink[] {
 export default function ContextualInternalLinks({ currentSlug, showBlogs = true, showCalculators = true }: ContextualInternalLinksProps) {
     const blogs = showBlogs ? getBlogSuggestions(currentSlug) : [];
     const calculators = showCalculators ? getCalculatorSuggestions(currentSlug) : [];
+    const nextSteps = EDITORIAL_LINKS[currentSlug] || [];
     if (blogs.length === 0 && calculators.length === 0) return null;
 
     return (
         <section className="not-prose mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-5" aria-labelledby="contextual-links-heading">
             <h2 id="contextual-links-heading" className="text-lg font-black text-slate-900">Continue your financial research</h2>
             <p className="mt-1 text-sm text-slate-600">Use these closely related USFinNexus guides and tools to plan your next step.</p>
+            {nextSteps.length > 0 && <div className="mt-4 space-y-3 text-sm text-slate-700">{nextSteps.map(link => <p key={link.href}>{link.before}<Link className="text-blue-700 underline" href={link.href}>{link.anchor}</Link>{link.after}</p>)}</div>}
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
                 {blogs.length > 0 && (
                     <div>

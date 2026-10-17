@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -108,7 +109,8 @@ export default function Page() {
         <CalculatorFAQ faqs={faqs} title="Treasury Bills vs High-Yield Savings 2026 FAQs" />
         <h2>Disclaimer</h2>
         <p>This article was reviewed October 8, 2026 for general education. It does not recommend a security, bank or account. Market yields, APYs, taxes, insurance eligibility and liquidity can change.</p>
-      </article>
+            </article>
+            <ContextualInternalLinks currentSlug="treasury-bills-vs-high-yield-savings-2026" showBlogs showCalculators />
     </main>
   </>;
 }
