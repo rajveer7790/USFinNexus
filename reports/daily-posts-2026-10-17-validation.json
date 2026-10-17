@@ -1,0 +1,47 @@
+{
+  "checked": "2026-10-17",
+  "posts": [
+    {
+      "slug": "cd-maturity-grace-period-auto-renewal-2026",
+      "article_words": 1784,
+      "h1_count": 1,
+      "faq_entities": 6,
+      "description_chars": 156,
+      "hero_dimensions": [
+        1200,
+        630
+      ],
+      "hero_bytes": 52414,
+      "hero_sha256": "1bf31aa66e45f7dbf9bf19a8bbab9adfca0fac069aa5fc2f2dadd95c36156c4e",
+      "canonical": "https://usfinnexus.com/blog/cd-maturity-grace-period-auto-renewal-2026",
+      "date": "2026-10-17",
+      "sitemap": true
+    },
+    {
+      "slug": "mortgage-servicing-transfer-checklist-2026",
+      "article_words": 1613,
+      "h1_count": 1,
+      "faq_entities": 6,
+      "description_chars": 145,
+      "hero_dimensions": [
+        1200,
+        630
+      ],
+      "hero_bytes": 62418,
+      "hero_sha256": "c8cf0a13d9811937fe05dffe9b7b20afa3f1a986eba3477522ee6ee2eb9117e5",
+      "canonical": "https://usfinnexus.com/blog/mortgage-servicing-transfer-checklist-2026",
+      "date": "2026-10-17",
+      "sitemap": true
+    }
+  ],
+  "index_first_two": [
+    "/blog/cd-maturity-grace-period-auto-renewal-2026",
+    "/blog/mortgage-servicing-transfer-checklist-2026"
+  ],
+  "hypothetical_apy_example": {
+    "balance": 25000,
+    "year_end_3_5_percent": 25875.0,
+    "year_end_4_percent": 26000.0,
+    "difference": 125
+  }
+}
