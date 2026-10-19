@@ -1,6 +1,6 @@
 {
   "counts": {
-    "pages": 286,
+    "pages": 288,
     "missingTitle": 0,
     "emptyHtml": 0,
     "longTitles": 0,
@@ -22,7 +22,7 @@
     "missingHstsRule": 0
   },
   "findings": {
-    "pages": 286,
+    "pages": 288,
     "missingTitle": [],
     "emptyHtml": [],
     "longTitles": [],
@@ -196,9 +196,9 @@
       },
       {
         "route": "/blog/balance-transfer-credit-cards-strategy",
-        "ratio": 7.53,
-        "textChars": 9472,
-        "htmlBytes": 125725
+        "ratio": 7.61,
+        "textChars": 9592,
+        "htmlBytes": 126085
       },
       {
         "route": "/blog/biweekly-mortgage-payments-savings",
@@ -239,8 +239,8 @@
       {
         "route": "/blog/coast-fire-vs-barista-fire-2026",
         "ratio": 9.04,
-        "textChars": 12005,
-        "htmlBytes": 132762
+        "textChars": 12004,
+        "htmlBytes": 132813
       },
       {
         "route": "/blog/commercial-real-estate-reset-2026",
@@ -250,9 +250,9 @@
       },
       {
         "route": "/blog/compound-interest-calculator-growth",
-        "ratio": 8.16,
-        "textChars": 10544,
-        "htmlBytes": 129225
+        "ratio": 8.19,
+        "textChars": 10593,
+        "htmlBytes": 129351
       },
       {
         "route": "/blog/conventional-fha-va-mortgages-guide",
@@ -1162,9 +1162,9 @@
       },
       {
         "route": "/calculators/fire-planner",
-        "ratio": 5.52,
-        "textChars": 5513,
-        "htmlBytes": 99858
+        "ratio": 5.51,
+        "textChars": 5507,
+        "htmlBytes": 99855
       },
       {
         "route": "/calculators/florida",

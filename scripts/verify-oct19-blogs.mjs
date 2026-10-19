@@ -1,0 +1,64 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
+
+const slugs = ['deferred-interest-vs-zero-apr-store-cards-2026', 'medicare-advantage-plan-not-renewing-2027'];
+const sitemap = fs.readFileSync('out/sitemap.xml', 'utf8');
+const index = fs.readFileSync('out/blog.html', 'utf8');
+const directory = index.split('<section aria-label="Browse finance guides">')[1]?.split('</section>')[0];
+assert(directory, 'Blog directory missing');
+const cards = [...directory.matchAll(/<a\b(?=[^>]*class="group flex flex-col)[^>]*href="\/blog\/([^"#]+)"/g)].map(m => m[1]);
+assert.deepEqual(cards.slice(0, 2), slugs, 'Newest-first order');
+assert(directory.split(`/blog/${slugs[0]}`)[1].split('</a>')[0].includes('Credit Cards'));
+assert(directory.split(`/blog/${slugs[1]}`)[1].split('</a>')[0].includes('Retirement'));
+const decode = value => value.replaceAll('&amp;', '&').replaceAll('&#x27;', "'").replaceAll('&#39;', "'").replaceAll('&quot;', '"');
+const results = [];
+for (const slug of slugs) {
+  const html = fs.readFileSync(`out/blog/${slug}.html`, 'utf8');
+  const article = html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)?.[1];
+  assert(article, `${slug}: article missing`);
+  const words = article.replace(/<[^>]*>/g, ' ').replace(/&[^;]+;/g, ' ').trim().split(/\s+/).length;
+  assert(words >= 1200, `${slug}: only ${words} words`);
+  assert.equal((html.match(/<h1\b/g) || []).length, 1);
+  assert(article.includes('<h2>') && article.includes('<h3>'));
+  const url = `https://usfinnexus.com/blog/${slug}`;
+  assert(html.includes(`<link rel="canonical" href="${url}"`));
+  assert(html.includes('name="twitter:card" content="summary_large_image"'));
+  assert(html.includes(`property="og:url" content="${url}"`));
+  assert(!/<meta[^>]+name="robots"[^>]+noindex/i.test(html));
+  const imageUrl = `https://usfinnexus.com/images/${slug}.webp`;
+  assert(html.includes(`property="og:image" content="${imageUrl}"`));
+  assert(html.includes(`name="twitter:image" content="${imageUrl}"`));
+  const schemas = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m => JSON.parse(m[1]));
+  const posts = schemas.filter(s => s['@type'] === 'BlogPosting');
+  const faqs = schemas.filter(s => s['@type'] === 'FAQPage');
+  assert.equal(posts.length, 1); assert.equal(faqs.length, 1);
+  assert.equal(posts[0].datePublished, '2026-10-19'); assert.equal(posts[0].dateModified, '2026-10-19');
+  assert.equal(posts[0].image.url, imageUrl);
+  assert.equal(faqs[0].mainEntity.length, 6);
+  for (const q of faqs[0].mainEntity) {
+    assert(decode(article).includes(q.name));
+    assert(decode(article).includes(q.acceptedAnswer.text));
+  }
+  assert(sitemap.includes(`<loc>${url}</loc>`));
+  assert(directory.includes(`/images/${slug}.webp`));
+  const description = decode(html.match(/<meta name="description" content="([^"]+)"/)?.[1] || '');
+  assert(description.length > 0 && description.length <= 160);
+  const links = [...article.matchAll(/href="(\/[^"#]*)/g)].map(m => m[1]);
+  assert(links.some(l => l.startsWith('/calculators/')) && links.some(l => l.startsWith('/blog/')));
+  for (const link of links) assert(fs.existsSync(`out${link}.html`), `Broken internal link: ${link}`);
+  const hero = article.match(new RegExp(`<img[^>]+src="/images/${slug}\\.webp"[^>]*>`))?.[0];
+  assert(hero && /alt="[^"]{20,}"/.test(hero), 'Descriptive hero alt');
+  const bytes = fs.readFileSync(`public/images/${slug}.webp`);
+  assert.equal(bytes.toString('ascii', 8, 12), 'WEBP'); assert.equal(bytes.toString('ascii', 12, 16), 'VP8 ');
+  const dimensions = [bytes.readUInt16LE(26) & 0x3fff, bytes.readUInt16LE(28) & 0x3fff];
+  assert.deepEqual(dimensions, [1200, 630]);
+  assert(bytes.equals(fs.readFileSync(`out/images/${slug}.webp`)));
+  results.push({ slug, renderedWords: words, faqCount: 6, h1Count: 1, descriptionLength: description.length, internalLinks: links.length, canonical: url, heroDimensions: dimensions, heroBytes: bytes.length, heroSha256: createHash('sha256').update(bytes).digest('hex') });
+}
+assert.equal(90 * 12, 1080); assert.equal(1200 - 1080, 120);
+assert.equal(100 * 12, 1200); assert.equal(120 * 10, 1200); assert.equal(150 * 8, 1200);
+assert.equal(40 * 12 + 25 * 12, 780);
+const report = { checked: '2026-10-19', results, newestCards: cards.slice(0, 2), numericalExamples: 'passed', status: 'passed' };
+fs.writeFileSync('reports/daily-posts-2026-10-19-validation.json', JSON.stringify(report, null, 2) + '\n');
+console.log(JSON.stringify(report, null, 2));

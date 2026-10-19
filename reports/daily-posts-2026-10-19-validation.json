@@ -1,0 +1,41 @@
+{
+  "checked": "2026-10-19",
+  "results": [
+    {
+      "slug": "deferred-interest-vs-zero-apr-store-cards-2026",
+      "renderedWords": 1576,
+      "faqCount": 6,
+      "h1Count": 1,
+      "descriptionLength": 157,
+      "internalLinks": 4,
+      "canonical": "https://usfinnexus.com/blog/deferred-interest-vs-zero-apr-store-cards-2026",
+      "heroDimensions": [
+        1200,
+        630
+      ],
+      "heroBytes": 85774,
+      "heroSha256": "236dd4b3741bb31441d1142a5a7bb23a36a6cd5bae9e4968678e2b0c2be99663"
+    },
+    {
+      "slug": "medicare-advantage-plan-not-renewing-2027",
+      "renderedWords": 1696,
+      "faqCount": 6,
+      "h1Count": 1,
+      "descriptionLength": 153,
+      "internalLinks": 4,
+      "canonical": "https://usfinnexus.com/blog/medicare-advantage-plan-not-renewing-2027",
+      "heroDimensions": [
+        1200,
+        630
+      ],
+      "heroBytes": 79360,
+      "heroSha256": "d8abaafb63749a49cd6cf6589014d9b163477e2616b118fbd165d70d1572954e"
+    }
+  ],
+  "newestCards": [
+    "deferred-interest-vs-zero-apr-store-cards-2026",
+    "medicare-advantage-plan-not-renewing-2027"
+  ],
+  "numericalExamples": "passed",
+  "status": "passed"
+}

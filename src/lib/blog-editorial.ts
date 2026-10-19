@@ -8,7 +8,7 @@ export function blogCategory(slug: string): string {
     if (/fsa-contribution|flexible-spending/.test(slug)) return 'Employee Benefits';
     if (/(?:^|-)cd(?:-|$)|certificate-of-deposit/.test(slug)) return 'Banking';
     if (/auto|(?:^|-)car(?:-|$)|vehicle|trade-in/.test(slug)) return 'Auto Loans';
-    if (/credit-card|balance-transfer/.test(slug)) return 'Credit Cards';
+    if (/credit-card|balance-transfer|deferred-interest|store-cards/.test(slug)) return 'Credit Cards';
     if (/tax|irs|deduction|withholding|salt/.test(slug)) return 'Taxes';
     if (/personal-loan|debt-payoff|debt-consolidation/.test(slug)) return 'Personal Finance';
     if (/mortgage|refinance|fha|(?:^|-)va(?:-|$)|usda|pmi|heloc|buydown|closing|escrow|down-payment|afford|appraisal/.test(slug)) return 'Mortgage';
