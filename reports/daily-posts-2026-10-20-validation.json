@@ -1,0 +1,41 @@
+{
+  "checked": "2026-10-20",
+  "results": [
+    {
+      "slug": "401k-loan-vs-hardship-withdrawal-2026",
+      "renderedWords": 1710,
+      "faqCount": 6,
+      "h1Count": 1,
+      "descriptionLength": 154,
+      "internalLinks": 5,
+      "canonical": "https://usfinnexus.com/blog/401k-loan-vs-hardship-withdrawal-2026",
+      "heroDimensions": [
+        1200,
+        630
+      ],
+      "heroBytes": 69110,
+      "heroSha256": "a878f9762434acb5cafa1c1856ee560eeb15fca53539ae4391069d7bc26cf5bf"
+    },
+    {
+      "slug": "closing-disclosure-three-day-rule-2026",
+      "renderedWords": 1613,
+      "faqCount": 6,
+      "h1Count": 1,
+      "descriptionLength": 154,
+      "internalLinks": 4,
+      "canonical": "https://usfinnexus.com/blog/closing-disclosure-three-day-rule-2026",
+      "heroDimensions": [
+        1200,
+        630
+      ],
+      "heroBytes": 76644,
+      "heroSha256": "f8d0500172f49c981b7c6587c7dc8ee700d6b62c4bbfe7063041958583e65a67"
+    }
+  ],
+  "newestCards": [
+    "401k-loan-vs-hardship-withdrawal-2026",
+    "closing-disclosure-three-day-rule-2026"
+  ],
+  "numericalExamples": "passed",
+  "status": "passed"
+}

@@ -1,6 +1,6 @@
 {
   "counts": {
-    "pages": 288,
+    "pages": 290,
     "missingTitle": 0,
     "emptyHtml": 0,
     "longTitles": 0,
@@ -22,7 +22,7 @@
     "missingHstsRule": 0
   },
   "findings": {
-    "pages": 288,
+    "pages": 290,
     "missingTitle": [],
     "emptyHtml": [],
     "longTitles": [],
@@ -136,9 +136,9 @@
       },
       {
         "route": "/blog/28-36-rule-explained-lender-standards",
-        "ratio": 9.32,
-        "textChars": 12416,
-        "htmlBytes": 133252
+        "ratio": 9.29,
+        "textChars": 12376,
+        "htmlBytes": 133200
       },
       {
         "route": "/blog/30-year-vs-15-year-mortgage-2026",
@@ -148,9 +148,9 @@
       },
       {
         "route": "/blog/4-percent-rule-safe-withdrawal-rate",
-        "ratio": 8.58,
-        "textChars": 11195,
-        "htmlBytes": 130460
+        "ratio": 8.57,
+        "textChars": 11176,
+        "htmlBytes": 130428
       },
       {
         "route": "/blog/aca-open-enrollment-2027",
@@ -233,14 +233,14 @@
       {
         "route": "/blog/closing-costs-itemized-breakdown-2026",
         "ratio": 8.31,
-        "textChars": 12521,
-        "htmlBytes": 150623
+        "textChars": 12519,
+        "htmlBytes": 150596
       },
       {
         "route": "/blog/coast-fire-vs-barista-fire-2026",
         "ratio": 9.04,
-        "textChars": 12004,
-        "htmlBytes": 132813
+        "textChars": 12001,
+        "htmlBytes": 132779
       },
       {
         "route": "/blog/commercial-real-estate-reset-2026",
@@ -400,9 +400,9 @@
       },
       {
         "route": "/blog/forbearance-deferment-loan-modification-2026",
-        "ratio": 8.73,
-        "textChars": 11225,
-        "htmlBytes": 128584
+        "ratio": 8.72,
+        "textChars": 11216,
+        "htmlBytes": 128551
       },
       {
         "route": "/blog/fractional-real-estate-investing-2026",
@@ -437,8 +437,8 @@
       {
         "route": "/blog/heloc-draw-period-repayment-2026",
         "ratio": 9.46,
-        "textChars": 10482,
-        "htmlBytes": 110779
+        "textChars": 10484,
+        "htmlBytes": 110771
       },
       {
         "route": "/blog/heloc-vs-home-equity-loan-2026",
@@ -610,9 +610,9 @@
       },
       {
         "route": "/blog/mega-backdoor-roth-ira-guide-2026",
-        "ratio": 8.24,
-        "textChars": 8179,
-        "htmlBytes": 99239
+        "ratio": 8.25,
+        "textChars": 8193,
+        "htmlBytes": 99291
       },
       {
         "route": "/blog/mortgage-amortization-schedule-guide",
@@ -983,14 +983,14 @@
       {
         "route": "/blog/va-funding-fee-2026",
         "ratio": 9.81,
-        "textChars": 11430,
-        "htmlBytes": 116556
+        "textChars": 11435,
+        "htmlBytes": 116581
       },
       {
         "route": "/blog/va-loan-benefits-2026-military-guide",
-        "ratio": 6.27,
-        "textChars": 7335,
-        "htmlBytes": 116982
+        "ratio": 6.26,
+        "textChars": 7326,
+        "htmlBytes": 116949
       },
       {
         "route": "/calculators/affordability/by-salary",
@@ -1126,9 +1126,9 @@
       },
       {
         "route": "/calculators/drip",
-        "ratio": 5.87,
-        "textChars": 6058,
-        "htmlBytes": 103177
+        "ratio": 5.88,
+        "textChars": 6072,
+        "htmlBytes": 103229
       },
       {
         "route": "/calculators/dti",
@@ -1139,8 +1139,8 @@
       {
         "route": "/calculators/escrow-shortage",
         "ratio": 4.76,
-        "textChars": 4165,
-        "htmlBytes": 87520
+        "textChars": 4167,
+        "htmlBytes": 87512
       },
       {
         "route": "/calculators/extra-payment",
@@ -1163,8 +1163,8 @@
       {
         "route": "/calculators/fire-planner",
         "ratio": 5.51,
-        "textChars": 5507,
-        "htmlBytes": 99855
+        "textChars": 5503,
+        "htmlBytes": 99835
       },
       {
         "route": "/calculators/florida",
@@ -1253,8 +1253,8 @@
       {
         "route": "/calculators/options-profit",
         "ratio": 5.32,
-        "textChars": 5057,
-        "htmlBytes": 95082
+        "textChars": 5066,
+        "htmlBytes": 95163
       },
       {
         "route": "/calculators/pennsylvania",
@@ -1300,9 +1300,9 @@
       },
       {
         "route": "/calculators/retirement",
-        "ratio": 7.26,
-        "textChars": 7149,
-        "htmlBytes": 98524
+        "ratio": 7.27,
+        "textChars": 7163,
+        "htmlBytes": 98576
       },
       {
         "route": "/calculators/student-loan",
