@@ -1,0 +1,40 @@
+{
+  "checked": "2026-10-21",
+  "results": [
+    {
+      "slug": "inherited-ira-10-year-rule-rmd-2026",
+      "renderedWords": 1925,
+      "faqCount": 6,
+      "h1Count": 1,
+      "descriptionLength": 132,
+      "internalLinks": 4,
+      "canonical": "https://usfinnexus.com/blog/inherited-ira-10-year-rule-rmd-2026",
+      "heroDimensions": [
+        1200,
+        630
+      ],
+      "heroBytes": 41710,
+      "heroSha256": "5258056c4067023b9cd6b59814dcfc885386884cbd58dfd0b72529a08eb0ecfd"
+    },
+    {
+      "slug": "mortgage-payoff-statement-escrow-refund-2026",
+      "renderedWords": 1739,
+      "faqCount": 6,
+      "h1Count": 1,
+      "descriptionLength": 143,
+      "internalLinks": 4,
+      "canonical": "https://usfinnexus.com/blog/mortgage-payoff-statement-escrow-refund-2026",
+      "heroDimensions": [
+        1200,
+        630
+      ],
+      "heroBytes": 58552,
+      "heroSha256": "addad41a4a9068f1b20318ac943a81ff2417224bd3375fa5f02562ae973ed2c6"
+    }
+  ],
+  "newestCards": [
+    "inherited-ira-10-year-rule-rmd-2026",
+    "mortgage-payoff-statement-escrow-refund-2026"
+  ],
+  "status": "passed"
+}
