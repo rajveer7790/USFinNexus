@@ -5,7 +5,7 @@ export function blogCategory(slug: string): string {
     if (/snap|benefits/.test(slug) && !/va-loan/.test(slug)) return 'Government Benefits';
     if (/medicare|social-security|retire|401k|(?:^|-)ira(?:-|$)|roth|rmd|fire|savers-credit/.test(slug)) return 'Retirement';
     if (/student-loan|fafsa|pell-grant/.test(slug)) return 'Education';
-    if (/fsa-contribution|flexible-spending/.test(slug)) return 'Employee Benefits';
+    if (/(?:^|-)fsa(?:-|$)|flexible-spending/.test(slug)) return 'Employee Benefits';
     if (/(?:^|-)cd(?:-|$)|certificate-of-deposit/.test(slug)) return 'Banking';
     if (/auto|(?:^|-)car(?:-|$)|vehicle|trade-in/.test(slug)) return 'Auto Loans';
     if (/credit-card|balance-transfer|deferred-interest|store-cards/.test(slug)) return 'Credit Cards';

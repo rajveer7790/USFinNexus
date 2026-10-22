@@ -1,0 +1,40 @@
+{
+  "checked": "2026-10-22",
+  "results": [
+    {
+      "slug": "fsa-use-it-or-lose-it-2026",
+      "renderedWords": 1857,
+      "faqCount": 6,
+      "h1Count": 1,
+      "descriptionLength": 145,
+      "internalLinks": 4,
+      "canonical": "https://usfinnexus.com/blog/fsa-use-it-or-lose-it-2026",
+      "heroDimensions": [
+        1200,
+        630
+      ],
+      "heroBytes": 49570,
+      "heroSha256": "31554eda9c8b64fa3572c03bf5358e529a49465197bec67d56fb51b41091738d"
+    },
+    {
+      "slug": "savers-match-2027-retirement-match",
+      "renderedWords": 1681,
+      "faqCount": 6,
+      "h1Count": 1,
+      "descriptionLength": 147,
+      "internalLinks": 4,
+      "canonical": "https://usfinnexus.com/blog/savers-match-2027-retirement-match",
+      "heroDimensions": [
+        1200,
+        630
+      ],
+      "heroBytes": 71044,
+      "heroSha256": "d69aefd29f0c2c6307ca77eea3e087bf63cf04e505f484baa23582dff122df7b"
+    }
+  ],
+  "newestCards": [
+    "fsa-use-it-or-lose-it-2026",
+    "savers-match-2027-retirement-match"
+  ],
+  "status": "passed"
+}

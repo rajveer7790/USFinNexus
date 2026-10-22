@@ -1,6 +1,6 @@
 {
   "counts": {
-    "pages": 292,
+    "pages": 294,
     "missingTitle": 0,
     "emptyHtml": 0,
     "longTitles": 0,
@@ -22,7 +22,7 @@
     "missingHstsRule": 0
   },
   "findings": {
-    "pages": 292,
+    "pages": 294,
     "missingTitle": [],
     "emptyHtml": [],
     "longTitles": [],
@@ -382,9 +382,9 @@
       },
       {
         "route": "/blog/fire-calculator-retirement-goal",
-        "ratio": 7.57,
-        "textChars": 9423,
-        "htmlBytes": 124497
+        "ratio": 7.56,
+        "textChars": 9409,
+        "htmlBytes": 124454
       },
       {
         "route": "/blog/first-time-homebuyer-mortgage-guide-2026",
@@ -1163,8 +1163,8 @@
       {
         "route": "/calculators/fire-planner",
         "ratio": 5.51,
-        "textChars": 5503,
-        "htmlBytes": 99835
+        "textChars": 5499,
+        "htmlBytes": 99831
       },
       {
         "route": "/calculators/florida",
