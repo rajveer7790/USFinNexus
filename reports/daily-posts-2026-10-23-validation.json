@@ -1,0 +1,40 @@
+{
+  "checked": "2026-10-23",
+  "results": [
+    {
+      "slug": "irs-ip-pin-2027",
+      "renderedWords": 1880,
+      "faqCount": 6,
+      "h1Count": 1,
+      "descriptionLength": 153,
+      "internalLinks": 2,
+      "canonical": "https://usfinnexus.com/blog/irs-ip-pin-2027",
+      "heroDimensions": [
+        1200,
+        630
+      ],
+      "heroBytes": 70998,
+      "heroSha256": "5800af637096d14950a96bf93000df59a420887ca9dc2ffe0040f38f31be97e2"
+    },
+    {
+      "slug": "social-security-earnings-test-2027",
+      "renderedWords": 1713,
+      "faqCount": 6,
+      "h1Count": 1,
+      "descriptionLength": 146,
+      "internalLinks": 3,
+      "canonical": "https://usfinnexus.com/blog/social-security-earnings-test-2027",
+      "heroDimensions": [
+        1200,
+        630
+      ],
+      "heroBytes": 54934,
+      "heroSha256": "d79a37a9561e9b6b111b91d7c78923ae0dfc93ba56ce0f0e71c46a10763be2df"
+    }
+  ],
+  "newestCards": [
+    "irs-ip-pin-2027",
+    "social-security-earnings-test-2027"
+  ],
+  "status": "passed"
+}

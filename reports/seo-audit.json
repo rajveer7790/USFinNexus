@@ -1,6 +1,6 @@
 {
   "counts": {
-    "pages": 294,
+    "pages": 296,
     "missingTitle": 0,
     "emptyHtml": 0,
     "longTitles": 0,
@@ -22,7 +22,7 @@
     "missingHstsRule": 0
   },
   "findings": {
-    "pages": 294,
+    "pages": 296,
     "missingTitle": [],
     "emptyHtml": [],
     "longTitles": [],
@@ -550,9 +550,9 @@
       },
       {
         "route": "/blog/irs-tax-payment-plan-2026",
-        "ratio": 9.83,
-        "textChars": 11546,
-        "htmlBytes": 117404
+        "ratio": 9.82,
+        "textChars": 11523,
+        "htmlBytes": 117301
       },
       {
         "route": "/blog/jumbo-mortgages-over-loan-limit",
@@ -875,14 +875,14 @@
       {
         "route": "/blog/social-security-cola-2027",
         "ratio": 8.44,
-        "textChars": 8539,
-        "htmlBytes": 101163
+        "textChars": 8534,
+        "htmlBytes": 101144
       },
       {
         "route": "/blog/social-security-cola-increase-2026",
         "ratio": 6.19,
-        "textChars": 7157,
-        "htmlBytes": 115636
+        "textChars": 7155,
+        "htmlBytes": 115607
       },
       {
         "route": "/blog/social-security-payment-schedule-2027",
