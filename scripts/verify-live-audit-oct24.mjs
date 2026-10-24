@@ -5,7 +5,17 @@ const exec=promisify(execFile),base=process.env.AUDIT_BASE||'https://usfinnexus.
 const get=async route=>{const {stdout}=await exec('curl',['-sS','-L','--max-time','45','-w','\n__AUDIT_STATUS__%{http_code}',base+route],{maxBuffer:16000000});const i=stdout.lastIndexOf('\n__AUDIT_STATUS__');return {body:stdout.slice(0,i),status:Number(stdout.slice(i+17))};};
 const decode=s=>s.replace(/&#x([0-9a-f]+);/gi,(_,x)=>String.fromCodePoint(parseInt(x,16))).replace(/&#(\d+);/g,(_,x)=>String.fromCodePoint(+x)).replaceAll('&amp;','&').replaceAll('&quot;','"').replace(/\s+/g,' ').trim();
 const plain=s=>decode(s.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'').replace(/<[^>]*>/g,' '));
-const map=async(items,fn)=>{let next=0;const result=[];await Promise.all(Array.from({length:6},async()=>{while(next<items.length){const i=next++;try{result[i]=await fn(items[i]);}catch(e){result[i]={route:items[i],error:e.message};}}}));return result;};
+const concurrency=Math.max(1,Math.min(12,Number(process.env.AUDIT_CONCURRENCY)||6));
+const map=async(items,fn)=>{
+ let next=0,done=0;const result=[];
+ await Promise.all(Array.from({length:concurrency},async()=>{
+  while(next<items.length){
+   const i=next++;
+   try{result[i]=await fn(items[i]);}catch(e){result[i]={route:items[i],error:e.message};}
+   if(++done%50===0)console.log('Checked '+done+'/'+items.length);
+  }
+ }));return result;
+};
 const sitemap=await get('/sitemap.xml');
 if(sitemap.status!==200)throw Error('Production sitemap HTTP '+sitemap.status);
 const routes=[...sitemap.body.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>new URL(m[1]).pathname);
@@ -23,5 +33,5 @@ const imageResults=await map([...images],async route=>{const {stdout}=await exec
 const discovery=await map(['/robots.txt','/sitemap-index.xml','/sitemap-blog.xml','/sitemap-calculators.xml','/sitemap-pages.xml','/llms.txt','/llms-full.txt','/refinance-calculator','/pmi-removal','/calculators/points'],async route=>{const r=await get(route);return {route,status:r.status};});
 const report={checkedAt:new Date().toISOString(),base,pagesChecked:pages.length,imagesChecked:imageResults.length,failures:pages.filter(p=>p.error||p.errors?.length),imageFailures:imageResults.filter(p=>p.error||p.status!==200||!p.contentType?.startsWith('image/')),discoveryFailures:discovery.filter(p=>p.error||p.status!==200),discovery,imageResults,pages};
 fs.writeFileSync('reports/audit-oct24-production.json',JSON.stringify(report,null,2)+'\n');
-console.log(JSON.stringify({...report,pages:undefined,discovery:undefined},null,2));
+console.log(JSON.stringify({...report,pages:undefined,discovery:undefined,imageResults:undefined},null,2));
 if(report.failures.length||report.imageFailures.length||report.discoveryFailures.length)process.exitCode=1;

@@ -1,0 +1,2347 @@
+{
+  "checkedAt": "2026-10-24T13:17:31.906Z",
+  "base": "https://usfinnexus.com",
+  "pagesChecked": 297,
+  "imagesChecked": 102,
+  "failures": [],
+  "imageFailures": [],
+  "discoveryFailures": [],
+  "discovery": [
+    {
+      "route": "/robots.txt",
+      "status": 200
+    },
+    {
+      "route": "/sitemap-index.xml",
+      "status": 200
+    },
+    {
+      "route": "/sitemap-blog.xml",
+      "status": 200
+    },
+    {
+      "route": "/sitemap-calculators.xml",
+      "status": 200
+    },
+    {
+      "route": "/sitemap-pages.xml",
+      "status": 200
+    },
+    {
+      "route": "/llms.txt",
+      "status": 200
+    },
+    {
+      "route": "/llms-full.txt",
+      "status": 200
+    },
+    {
+      "route": "/refinance-calculator",
+      "status": 200
+    },
+    {
+      "route": "/pmi-removal",
+      "status": 200
+    },
+    {
+      "route": "/calculators/points",
+      "status": 200
+    }
+  ],
+  "imageResults": [
+    {
+      "route": "/images/home-hero.png",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "route": "/images/real_estate_rule_hero_1772351582917.png",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "route": "/images/ny_llc_transparency_hero_1772351646909.png",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "route": "/images/tax_deduction_hero_1772351400720.png",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "route": "/images/state_rules_hero_1772351467101.png",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "route": "/images/401k-true-up-match-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/bank-account-bonus-taxes-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/irs-ip-pin-2027.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/social-security-earnings-test-2027.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/fsa-use-it-or-lose-it-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/savers-match-2027-retirement-match.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/inherited-ira-10-year-rule-rmd-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/mortgage-payoff-statement-escrow-refund-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/401k-loan-vs-hardship-withdrawal-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/closing-disclosure-three-day-rule-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/deferred-interest-vs-zero-apr-store-cards-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/medicare-advantage-plan-not-renewing-2027.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/cd-maturity-grace-period-auto-renewal-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/mortgage-servicing-transfer-checklist-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/mortgage-closing-wire-fraud-checklist-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/mortgage-recast-vs-refinance-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/loan-estimate-comparison-checklist-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/mortgage-cash-reserves-after-closing-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/emergency-fund-how-much-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/heloc-interest-tax-deductible-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/personal-loan-apr-origination-fees-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/bank-impersonation-scam-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/sipc-vs-fdic-protection-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/resilient-investor-checklist-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/save-plan-borrowers-repayment-options-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/federal-scholarship-tax-credit-2027.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/medicare-part-b-90-rebate-october-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/medicare-advantage-star-ratings-2027.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/credit-card-dispute-chargeback-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/mortgage-rates-october-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/treasury-bills-vs-high-yield-savings-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/charitable-tax-deduction-2026.svg",
+      "status": 200,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "route": "/images/student-loan-idr-recertification-2026.svg",
+      "status": 200,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "route": "/images/2026-federal-tax-brackets-standard-deduction.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/home-equity-line-vs-loan-2026.svg",
+      "status": 200,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "route": "/images/homeowners-insurance-mortgage-payment-2026.svg",
+      "status": 200,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "route": "/images/estimated-tax-january-15-2027.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/medicare-advantage-premiums-2027.svg",
+      "status": 200,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "route": "/images/medicare-part-b-premium-2027-what-to-know.svg",
+      "status": 200,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "route": "/images/medicare-plan-compare-2027-open-enrollment.svg",
+      "status": 200,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "route": "/images/rmd-qcd-deadline-2026.svg",
+      "status": 200,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "route": "/images/roth-conversion-tax-planning-2026.svg",
+      "status": 200,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "route": "/images/mortgage-rate-lock-before-fed-meeting-2026.svg",
+      "status": 200,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "route": "/images/social-security-payment-schedule-2027.svg",
+      "status": 200,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "route": "/images/tax-loss-harvesting-wash-sale-2026.svg",
+      "status": 200,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "route": "/images/401k-contribution-limits-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/credit-freeze-vs-fraud-alert-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/escrow-shortage-mortgage-payment-jump-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/excess-seller-credits-what-to-do-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/mortgage-payment-at-676-september-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/snap-benefits-2027.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/aca-open-enrollment-2027.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/social-security-cola-2027.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/fdic-deposit-insurance-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/tax-withholding-w4-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/fha-loan-limits-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/irs-tax-payment-plan-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/va-funding-fee-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/home-sale-tax-exclusion-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/medical-debt-credit-report-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/fafsa-2027-28.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/medicare-open-enrollment-2027.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/tax-extension-deadline-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/estimated-tax-payment-dates-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/medicare-part-b-premium-deductible-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/ev-tax-credit-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/i-bond-rate-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/social-security-spousal-benefits-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/adoption-tax-credit-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/student-loan-interest-deduction-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/fsa-contribution-limits-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/va-disability-pay-rates-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/pell-grant-2026-27.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/social-security-payment-schedule-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/estate-gift-tax-exemption-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/medicare-part-d-costs-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/required-minimum-distributions-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/savers-credit-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/capital-gains-tax-rates-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/earned-income-tax-credit-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/aca-premium-tax-credit-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/salt-deduction-limit-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/hsa-contribution-limits-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/child-tax-credit-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/no-tax-on-tips-deduction-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/irs-standard-mileage-rate-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/medicare-irmaa-brackets-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/roth-ira-income-limits-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/social-security-earnings-test-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/federal-student-loan-interest-rates-2026-27.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/car-loan-interest-tax-deduction-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/no-tax-on-overtime-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/trump-account-vs-529.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/trump-accounts-2026.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "route": "/images/home-hero-v2.png",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "route": "/images/heloc-vs-home-equity-loan-2026.svg",
+      "status": 200,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "route": "/images/small-business-savings.png",
+      "status": 200,
+      "contentType": "image/png"
+    }
+  ],
+  "pages": [
+    {
+      "route": "/",
+      "status": 200,
+      "h1": "Free U.S. Financial Calculators",
+      "errors": []
+    },
+    {
+      "route": "/calculators",
+      "status": 200,
+      "h1": "The Complete Calculator Library",
+      "errors": []
+    },
+    {
+      "route": "/canada",
+      "status": 200,
+      "h1": "Canadian mortgage tools built around Canadian rules",
+      "errors": []
+    },
+    {
+      "route": "/blog",
+      "status": 200,
+      "h1": "Mortgage & Finance Resources",
+      "errors": []
+    },
+    {
+      "route": "/guides",
+      "status": 200,
+      "h1": "Mortgage & Financing Guides",
+      "errors": []
+    },
+    {
+      "route": "/articles",
+      "status": 200,
+      "h1": "FinCEN & BOI Compliance Articles",
+      "errors": []
+    },
+    {
+      "route": "/mortgage-rates",
+      "status": 200,
+      "h1": "Current Mortgage Rates: October 2026",
+      "errors": []
+    },
+    {
+      "route": "/about",
+      "status": 200,
+      "h1": "About USFinNexus",
+      "errors": []
+    },
+    {
+      "route": "/methodology",
+      "status": 200,
+      "h1": "Financial Calculator Methodology & Data Sources",
+      "errors": []
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "h1": "Contact Us",
+      "errors": []
+    },
+    {
+      "route": "/disclaimer",
+      "status": 200,
+      "h1": "Disclaimer",
+      "errors": []
+    },
+    {
+      "route": "/privacy",
+      "status": 200,
+      "h1": "Privacy Policy",
+      "errors": []
+    },
+    {
+      "route": "/data/home-affordability-by-state",
+      "status": 200,
+      "h1": "How Much Income Do You Need to Buy a House in Every US State? (2026 Data)",
+      "errors": []
+    },
+    {
+      "route": "/data/home-affordability-by-city",
+      "status": 200,
+      "h1": "2026 Home Affordability Index by Major US City",
+      "errors": []
+    },
+    {
+      "route": "/privacy-focused-mortgage-calculator",
+      "status": 200,
+      "h1": "No-Spam Mortgage Calculator: No Email or Phone Required",
+      "errors": []
+    },
+    {
+      "route": "/why-we-dont-collect-data",
+      "status": 200,
+      "h1": "Calculator Input Privacy: What We Do and Do Not Collect",
+      "errors": []
+    },
+    {
+      "route": "/terms",
+      "status": 200,
+      "h1": "Terms of Service",
+      "errors": []
+    },
+    {
+      "route": "/calculators/mortgage",
+      "status": 200,
+      "h1": "Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/affordability",
+      "status": 200,
+      "h1": "How Much House Can I Afford? Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/refinance",
+      "status": 200,
+      "h1": "Refinance Savings Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/rent-vs-buy",
+      "status": 200,
+      "h1": "Rent vs. Buy Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/closing-costs",
+      "status": 200,
+      "h1": "Closing Costs Calculator 2026",
+      "errors": []
+    },
+    {
+      "route": "/calculators/dti",
+      "status": 200,
+      "h1": "Debt-to-Income (DTI) Ratio Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/amortization",
+      "status": 200,
+      "h1": "Mortgage Amortization Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/mortgage-payoff",
+      "status": 200,
+      "h1": "Mortgage Payoff Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/arm",
+      "status": 200,
+      "h1": "ARM Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/fha-va-usda",
+      "status": 200,
+      "h1": "FHA vs. VA vs. USDA Loan Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/debt-payoff",
+      "status": 200,
+      "h1": "Debt Payoff Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/budget",
+      "status": 200,
+      "h1": "Budget Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/income-tax",
+      "status": 200,
+      "h1": "2026 Federal Income Tax Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/down-payment",
+      "status": 200,
+      "h1": "Down Payment Savings Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/heloc",
+      "status": 200,
+      "h1": "HELOC & Home Equity Line of Credit Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/auto-loan",
+      "status": 200,
+      "h1": "Auto Loan Calculator 2026",
+      "errors": []
+    },
+    {
+      "route": "/calculators/rental-property",
+      "status": 200,
+      "h1": "Rental Property Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/comparison",
+      "status": 200,
+      "h1": "Side-by-Side Comparison",
+      "errors": []
+    },
+    {
+      "route": "/calculators/personal-loan",
+      "status": 200,
+      "h1": "Personal Loan Calculator 2026",
+      "errors": []
+    },
+    {
+      "route": "/calculators/retirement",
+      "status": 200,
+      "h1": "Retirement Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/investment",
+      "status": 200,
+      "h1": "Investment Growth Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/trump-account",
+      "status": 200,
+      "h1": "Trump Account Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/fire-planner",
+      "status": 200,
+      "h1": "FIRE Retirement Planner",
+      "errors": []
+    },
+    {
+      "route": "/calculators/points-buydown",
+      "status": 200,
+      "h1": "Mortgage Points Buy-Down Calculator 2026",
+      "errors": []
+    },
+    {
+      "route": "/calculators/interest-only",
+      "status": 200,
+      "h1": "Interest-Only Loan Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/student-loan",
+      "status": 200,
+      "h1": "Student Loan Repayment Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/credit-card",
+      "status": 200,
+      "h1": "Credit Card Debt Payoff Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/drip",
+      "status": 200,
+      "h1": "DRIP Calculator: Dividend Reinvestment Growth",
+      "errors": []
+    },
+    {
+      "route": "/calculators/crypto-tax",
+      "status": 200,
+      "h1": "Crypto Tax Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/california",
+      "status": 200,
+      "h1": "California Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/texas",
+      "status": 200,
+      "h1": "Texas Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/florida",
+      "status": 200,
+      "h1": "Florida Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/fha",
+      "status": 200,
+      "h1": "FHA Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/va",
+      "status": 200,
+      "h1": "VA Loan Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/options-profit",
+      "status": 200,
+      "h1": "Options Profit Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/pmi-removal",
+      "status": 200,
+      "h1": "PMI Removal Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/temporary-buydown",
+      "status": 200,
+      "h1": "Temporary Buydown Calculator (2-1, 3-2-1 & 1-0)",
+      "errors": []
+    },
+    {
+      "route": "/calculators/escrow-shortage",
+      "status": 200,
+      "h1": "Escrow Shortage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/affordability/by-salary",
+      "status": 200,
+      "h1": "How Much House Can I Afford by Salary?",
+      "errors": []
+    },
+    {
+      "route": "/calculators/affordability/salary-60000",
+      "status": 200,
+      "h1": "How Much House Can I Afford on $ 60,000 ?",
+      "errors": []
+    },
+    {
+      "route": "/calculators/affordability/salary-75000",
+      "status": 200,
+      "h1": "How Much House Can I Afford on $ 75,000 ?",
+      "errors": []
+    },
+    {
+      "route": "/calculators/affordability/salary-100000",
+      "status": 200,
+      "h1": "How Much House Can I Afford on $ 100,000 ?",
+      "errors": []
+    },
+    {
+      "route": "/calculators/affordability/salary-120000",
+      "status": 200,
+      "h1": "How Much House Can I Afford on $ 120,000 ?",
+      "errors": []
+    },
+    {
+      "route": "/calculators/affordability/salary-150000",
+      "status": 200,
+      "h1": "How Much House Can I Afford on $ 150,000 ?",
+      "errors": []
+    },
+    {
+      "route": "/calculators/affordability/salary-200000",
+      "status": 200,
+      "h1": "How Much House Can I Afford on $ 200,000 ?",
+      "errors": []
+    },
+    {
+      "route": "/calculators/extra-payment",
+      "status": 200,
+      "h1": "Extra Payment Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/biweekly-mortgage",
+      "status": 200,
+      "h1": "Biweekly Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/arizona",
+      "status": 200,
+      "h1": "Arizona Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/colorado",
+      "status": 200,
+      "h1": "Colorado Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/georgia",
+      "status": 200,
+      "h1": "Georgia Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/illinois",
+      "status": 200,
+      "h1": "Illinois Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/massachusetts",
+      "status": 200,
+      "h1": "Massachusetts Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/new-jersey",
+      "status": 200,
+      "h1": "New Jersey Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/new-york",
+      "status": 200,
+      "h1": "New York Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/north-carolina",
+      "status": 200,
+      "h1": "North Carolina Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/ohio",
+      "status": 200,
+      "h1": "Ohio Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/pennsylvania",
+      "status": 200,
+      "h1": "Pennsylvania Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/virginia",
+      "status": 200,
+      "h1": "Virginia Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/calculators/washington",
+      "status": 200,
+      "h1": "Washington Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/canada/mortgage-calculator",
+      "status": 200,
+      "h1": "Canadian Mortgage Calculator",
+      "errors": []
+    },
+    {
+      "route": "/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "status": 200,
+      "h1": "FinCEN Real Estate Reporting Rule: Vacatur and Current Status",
+      "errors": []
+    },
+    {
+      "route": "/articles/new-york-llc-transparency-act-2026-foreign-owners",
+      "status": 200,
+      "h1": "New York LLC Transparency Act 2026: Who Must File and When",
+      "errors": []
+    },
+    {
+      "route": "/articles/2026-tax-changes-20-percent-qbi-deduction-permanent",
+      "status": 200,
+      "h1": "2026 Tax Changes: 20% QBI Deduction Made Permanent - Save Big on Your LLC",
+      "errors": []
+    },
+    {
+      "route": "/articles/california-new-york-texas-state-boi-rules-2026",
+      "status": 200,
+      "h1": "California, New York and Texas: Separate State LLC Filing Checks",
+      "errors": []
+    },
+    {
+      "route": "/guides/boi-reporting-2026",
+      "status": 200,
+      "h1": "BOI Reporting in 2026: FinCEN Exemptions and Foreign-Entity Rules",
+      "errors": []
+    },
+    {
+      "route": "/guides/15-vs-30-year-mortgage",
+      "status": 200,
+      "h1": "15-Year vs. 30-Year Mortgage: The Ultimate Financial Breakdown",
+      "errors": []
+    },
+    {
+      "route": "/guides/first-time-homebuyer-guide",
+      "status": 200,
+      "h1": "The Ultimate Step-by-Step Guide to Buying Your First Home",
+      "errors": []
+    },
+    {
+      "route": "/guides/first-time-homebuyer-programs",
+      "status": 200,
+      "h1": "Best First-Time Homebuyer Programs & Grants in 2026",
+      "errors": []
+    },
+    {
+      "route": "/guides/mortgage-credit-score-requirements",
+      "status": 200,
+      "h1": "What Credit Score Do You Really Need to Buy a House?",
+      "errors": []
+    },
+    {
+      "route": "/blog/estimated-tax-payment-january-15-2027",
+      "status": 200,
+      "h1": "January 15, 2027 Estimated Tax Payment: Your 2026 Q4 Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/senior-tax-deduction-6000-2026-schedule-1a",
+      "status": 200,
+      "h1": "$6,000 Senior Tax Deduction 2026: Schedule 1-A Explained",
+      "errors": []
+    },
+    {
+      "route": "/blog/hsa-contribution-limits-2027",
+      "status": 200,
+      "h1": "2027 HSA Limits, Eligibility, and Contribution Planning",
+      "errors": []
+    },
+    {
+      "route": "/blog/medicare-part-d-costs-2027",
+      "status": 200,
+      "h1": "How to Compare 2027 Prescription Drug Plan Costs",
+      "errors": []
+    },
+    {
+      "route": "/blog/0-percent-apr-auto-loan-dealer-vs-bank",
+      "status": 200,
+      "h1": "0% APR Auto Loans in 2026: The Hidden Cost of Dealer Financing",
+      "errors": []
+    },
+    {
+      "route": "/blog/2-1-buydown-vs-price-cut-2026",
+      "status": 200,
+      "h1": "2-1 Buydown vs Price Cut vs Points: Fall 2026 Comparison",
+      "errors": []
+    },
+    {
+      "route": "/blog/20-percent-down-payment-standard-2026",
+      "status": 200,
+      "h1": "Is 20% Down Still the Golden Standard in 2026? (The PMI Myth)",
+      "errors": []
+    },
+    {
+      "route": "/blog/2026-federal-tax-brackets-standard-deduction",
+      "status": 200,
+      "h1": "2026 Federal Tax Brackets and Standard Deduction: Complete Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/2026-loan-limits-conforming",
+      "status": 200,
+      "h1": "2026 Conforming Loan Limits: Conventional, FHA, and VA Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/28-36-rule-explained-lender-standards",
+      "status": 200,
+      "h1": "The 28/36 Rule Explained: How Lenders Size Your Mortgage in 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/30-year-vs-15-year-mortgage-2026",
+      "status": 200,
+      "h1": "30-Year vs 15-Year Mortgage in 2026: Which Saves You More?",
+      "errors": []
+    },
+    {
+      "route": "/blog/4-percent-rule-safe-withdrawal-rate",
+      "status": 200,
+      "h1": "The 4% Rule Explained: Is it Still a Safe Withdrawal Rate in 2026?",
+      "errors": []
+    },
+    {
+      "route": "/blog/401k-contribution-limits-2026",
+      "status": 200,
+      "h1": "401(k) Contribution Limits 2026: How Much Can You Actually Save?",
+      "errors": []
+    },
+    {
+      "route": "/blog/401k-loan-vs-hardship-withdrawal-2026",
+      "status": 200,
+      "h1": "401(k) Loan vs. Hardship Withdrawal: Compare the Real Cost",
+      "errors": []
+    },
+    {
+      "route": "/blog/401k-true-up-match-2026",
+      "status": 200,
+      "h1": "401(k) True-Up Match: Check Before You Max Out Early",
+      "errors": []
+    },
+    {
+      "route": "/blog/aca-open-enrollment-2027",
+      "status": 200,
+      "h1": "ACA Open Enrollment 2027: Dates, Deadlines and Checklist",
+      "errors": []
+    },
+    {
+      "route": "/blog/aca-premium-tax-credit-2026",
+      "status": 200,
+      "h1": "ACA Premium Tax Credit 2026: Income Limits and Repayment Rules",
+      "errors": []
+    },
+    {
+      "route": "/blog/adjustable-rate-mortgage-trends-2026",
+      "status": 200,
+      "h1": "Adjustable-Rate Mortgage (ARM) Trends 2026: Is It Worth the Risk?",
+      "errors": []
+    },
+    {
+      "route": "/blog/adoption-tax-credit-2026",
+      "status": 200,
+      "h1": "Adoption Tax Credit 2026: $17,670 Limit, Income Phaseout and Filing Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/ai-personal-finance-investing-2026",
+      "status": 200,
+      "h1": "The AI Revolution in Personal Finance: Top Tools for Smart Investors in 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/appraisal-contingency-low-appraisal",
+      "status": 200,
+      "h1": "Appraisal Contingency: What Happens if Your Home Appraises Low?",
+      "errors": []
+    },
+    {
+      "route": "/blog/assumable-mortgages-2026-strategy",
+      "status": 200,
+      "h1": "Assumable Mortgages in 2026: How to Buy a Home with a 2.5% Rate",
+      "errors": []
+    },
+    {
+      "route": "/blog/auto-loan-calculator-car-affordability",
+      "status": 200,
+      "h1": "Auto Loan Calculator Guide: How Much Car Can You Really Afford in 2026?",
+      "errors": []
+    },
+    {
+      "route": "/blog/auto-loan-terms-60-72-84-month",
+      "status": 200,
+      "h1": "60 vs 72 vs 84-Month Auto Loan: The Hidden Dangers of Long-Term Financing",
+      "errors": []
+    },
+    {
+      "route": "/blog/balance-transfer-credit-cards-strategy",
+      "status": 200,
+      "h1": "Balance Transfer Credit Cards: The 0% APR Strategy Guide for 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/bank-account-bonus-taxes-2026",
+      "status": 200,
+      "h1": "Bank Account Bonus Taxes: What You Keep After the Offer",
+      "errors": []
+    },
+    {
+      "route": "/blog/bank-impersonation-scam-2026",
+      "status": 200,
+      "h1": "Bank Impersonation Scams in 2026: What to Do When a “Fraud Department” Calls",
+      "errors": []
+    },
+    {
+      "route": "/blog/biweekly-mortgage-payments-savings",
+      "status": 200,
+      "h1": "Biweekly Mortgage Payments: Do They Actually Save You Money?",
+      "errors": []
+    },
+    {
+      "route": "/blog/california-closing-costs-2026",
+      "status": 200,
+      "h1": "California Closing Cost Calculator 2026: Buyer, Seller and Refinance Fees",
+      "errors": []
+    },
+    {
+      "route": "/blog/capital-gains-tax-rates-2026",
+      "status": 200,
+      "h1": "Capital Gains Tax Rates 2026: Brackets, NIIT and Planning",
+      "errors": []
+    },
+    {
+      "route": "/blog/car-loan-interest-tax-deduction-2026",
+      "status": 200,
+      "h1": "Car Loan Interest Tax Deduction 2026: Who Qualifies for Up to $10,000?",
+      "errors": []
+    },
+    {
+      "route": "/blog/car-trade-in-value-auto-loan",
+      "status": 200,
+      "h1": "Trade-In Value and Auto Loans: How Dealerships Hide Negative Equity",
+      "errors": []
+    },
+    {
+      "route": "/blog/cash-out-refinance-guide-2026",
+      "status": 200,
+      "h1": "Cash-Out Refinance Guide 2026: When Is It Worth Losing Your Old Interest Rate?",
+      "errors": []
+    },
+    {
+      "route": "/blog/cd-maturity-grace-period-auto-renewal-2026",
+      "status": 200,
+      "h1": "CD Maturing Soon? Check the Grace Period Before It Renews",
+      "errors": []
+    },
+    {
+      "route": "/blog/charitable-tax-deduction-2026",
+      "status": 200,
+      "h1": "How to Document Charitable Giving for Your 2026 Tax Return",
+      "errors": []
+    },
+    {
+      "route": "/blog/chattel-mortgages-mobile-homes-financing",
+      "status": 200,
+      "h1": "Chattel Mortgages Explained: How to Finance a Mobile Home in 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/child-tax-credit-2026",
+      "status": 200,
+      "h1": "Child Tax Credit 2026: Can Your Family Claim $2,200 Per Child?",
+      "errors": []
+    },
+    {
+      "route": "/blog/closing-costs-itemized-breakdown-2026",
+      "status": 200,
+      "h1": "Mortgage Closing Costs: What Homebuyers Should Expect",
+      "errors": []
+    },
+    {
+      "route": "/blog/closing-disclosure-three-day-rule-2026",
+      "status": 200,
+      "h1": "Closing Disclosure 3-Day Rule: When Can You Actually Close?",
+      "errors": []
+    },
+    {
+      "route": "/blog/coast-fire-vs-barista-fire-2026",
+      "status": 200,
+      "h1": "Coast FIRE vs. Barista FIRE: Semi-Retirement Strategies for 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/commercial-real-estate-reset-2026",
+      "status": 200,
+      "h1": "Navigating the 2026 Commercial Real Estate Reset",
+      "errors": []
+    },
+    {
+      "route": "/blog/compound-interest-calculator-growth",
+      "status": 200,
+      "h1": "Compound Interest Calculator: How $10,000 Grows Over 30 Years",
+      "errors": []
+    },
+    {
+      "route": "/blog/conventional-fha-va-mortgages-guide",
+      "status": 200,
+      "h1": "Conventional vs. FHA vs. VA Mortgages: The Complete 2026 Comparison Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/credit-card-dispute-chargeback-2026",
+      "status": 200,
+      "h1": "How to Dispute a Credit Card Charge: Steps and Timelines",
+      "errors": []
+    },
+    {
+      "route": "/blog/credit-card-payoff-calculator-strategies",
+      "status": 200,
+      "h1": "Credit Card Payoff Calculator & Strategies: How to Escape the Trap in 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/credit-freeze-vs-fraud-alert-2026",
+      "status": 200,
+      "h1": "Credit Freeze vs. Fraud Alert: Which Should You Use in 2026?",
+      "errors": []
+    },
+    {
+      "route": "/blog/crypto-tax-guide-2026",
+      "status": 200,
+      "h1": "The 2026 Crypto Tax Guide: What the IRS New Rules Mean for You",
+      "errors": []
+    },
+    {
+      "route": "/blog/debt-consolidation-loan-when-worthwhile",
+      "status": 200,
+      "h1": "Debt Consolidation Loans: When Are They Actually Worthwhile?",
+      "errors": []
+    },
+    {
+      "route": "/blog/debt-payoff-avalanche-vs-snowball-method",
+      "status": 200,
+      "h1": "Debt Payoff Methods: The Math vs. The Psychology of Avalanche & Snowball",
+      "errors": []
+    },
+    {
+      "route": "/blog/debt-to-income-ratio-dti-calculator-2026",
+      "status": 200,
+      "h1": "What Is Debt-to-Income Ratio (DTI) and Why Does It Matter?",
+      "errors": []
+    },
+    {
+      "route": "/blog/defense-cybersecurity-stocks-2026",
+      "status": 200,
+      "h1": "Defense & Cybersecurity Stocks: Investing in Global Security in 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/deferred-interest-vs-zero-apr-store-cards-2026",
+      "status": 200,
+      "h1": "Deferred Interest vs. 0% APR: Check Before You Finance a Purchase",
+      "errors": []
+    },
+    {
+      "route": "/blog/direct-indexing-tax-loss-harvesting-2026",
+      "status": 200,
+      "h1": "Direct Indexing & Tax-Loss Harvesting: The 2026 Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/dividend-vs-growth-investing-2026",
+      "status": 200,
+      "h1": "Dividend vs. Growth Investing: Which Strategy Wins in 2026?",
+      "errors": []
+    },
+    {
+      "route": "/blog/down-payment-assistance-dpa-programs",
+      "status": 200,
+      "h1": "Down Payment Assistance (DPA) Programs: The 2026 Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/down-payment-strategies-comparison-2026",
+      "status": 200,
+      "h1": "Down Payment Strategies 2026: 3% vs. 20% Mathematical Breakdown",
+      "errors": []
+    },
+    {
+      "route": "/blog/earned-income-tax-credit-2026",
+      "status": 200,
+      "h1": "Earned Income Tax Credit 2026: Income Limits and Amounts",
+      "errors": []
+    },
+    {
+      "route": "/blog/emergency-fund-how-much-2026",
+      "status": 200,
+      "h1": "How Much Emergency Fund Do You Need in 2026? A Practical U.S. Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/energy-market-investing-crisis-2026",
+      "status": 200,
+      "h1": "Energy Market Investing: Navigating the 2026 Grid Crisis",
+      "errors": []
+    },
+    {
+      "route": "/blog/escrow-shortage-mortgage-payment-jump-2026",
+      "status": 200,
+      "h1": "Escrow Shortage: Why Your Mortgage Payment Jumped in 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/estate-gift-tax-exemption-2026",
+      "status": 200,
+      "h1": "Estate and Gift Tax Exemption 2026: Limits, Filing and Planning",
+      "errors": []
+    },
+    {
+      "route": "/blog/estimated-tax-payment-dates-2026",
+      "status": 200,
+      "h1": "2026 Estimated Tax Payment Dates: IRS Deadlines, Safe Harbor and Payment Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/ev-tax-credit-2026",
+      "status": 200,
+      "h1": "EV Tax Credit 2026: What Ended, Who Can Still Claim and Available Alternatives",
+      "errors": []
+    },
+    {
+      "route": "/blog/excess-seller-credits-what-to-do-2026",
+      "status": 200,
+      "h1": "Excess Seller Credits: 7 Smart Ways to Use Them in 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/fafsa-2027-28",
+      "status": 200,
+      "h1": "FAFSA 2027–28: Opening Date, Deadlines and Complete Checklist",
+      "errors": []
+    },
+    {
+      "route": "/blog/fdic-deposit-insurance-limits-2026",
+      "status": 200,
+      "h1": "FDIC Deposit Insurance Limits 2026: How Much Is Protected?",
+      "errors": []
+    },
+    {
+      "route": "/blog/fed-rates-unchanged-april-2026",
+      "status": 200,
+      "h1": "Fed Holds Rates Unchanged in April 2026: What It Means For You",
+      "errors": []
+    },
+    {
+      "route": "/blog/fed-vs-mortgage-rates-10-year-treasury-2026",
+      "status": 200,
+      "h1": "Why the Fed Does Not Set Your 30-Year Mortgage Rate (2026)",
+      "errors": []
+    },
+    {
+      "route": "/blog/federal-scholarship-tax-credit-2027",
+      "status": 200,
+      "h1": "Federal Scholarship Tax Credit 2027: $1,700 SGO Donation Rules",
+      "errors": []
+    },
+    {
+      "route": "/blog/federal-student-loan-interest-rates-2026-27",
+      "status": 200,
+      "h1": "Federal Student Loan Interest Rates 2026–27: What College Will Really Cost",
+      "errors": []
+    },
+    {
+      "route": "/blog/fha-loan-limits-2026",
+      "status": 200,
+      "h1": "FHA Loan Limits 2026: How County Limits Affect Your Home-Buying Budget",
+      "errors": []
+    },
+    {
+      "route": "/blog/fha-loans-first-time-homebuyers-2026",
+      "status": 200,
+      "h1": "FHA Loans: The Ultimate 2026 Guide for First-Time Homebuyers",
+      "errors": []
+    },
+    {
+      "route": "/blog/fha-mortgage-calculator-pmi-mip-2026",
+      "status": 200,
+      "h1": "FHA Mortgage Calculator With PMI/MIP 2026: Full Payment Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/fha-mortgage-pmi-mip-2026",
+      "status": 200,
+      "h1": "FHA Mortgage Calculator With PMI/MIP 2026: What Your Payment Really Includes",
+      "errors": []
+    },
+    {
+      "route": "/blog/fire-calculator-retirement-goal",
+      "status": 200,
+      "h1": "FIRE Calculator: How to Mathematically Retire 20 Years Early",
+      "errors": []
+    },
+    {
+      "route": "/blog/first-time-homebuyer-mortgage-guide-2026",
+      "status": 200,
+      "h1": "The Complete First-Time Homebuyer Mortgage Guide (2026)",
+      "errors": []
+    },
+    {
+      "route": "/blog/first-time-homebuyer-programs-grants-2026",
+      "status": 200,
+      "h1": "First-Time Homebuyer Grants 2026: How to Find Free Money",
+      "errors": []
+    },
+    {
+      "route": "/blog/forbearance-deferment-loan-modification-2026",
+      "status": 200,
+      "h1": "Mortgage Forbearance vs. Deferment vs. Modification (2026 Guide)",
+      "errors": []
+    },
+    {
+      "route": "/blog/fractional-real-estate-investing-2026",
+      "status": 200,
+      "h1": "Fractional Real Estate Investing: How to Buy a Rental Property for $100",
+      "errors": []
+    },
+    {
+      "route": "/blog/front-end-vs-back-end-dti-2026",
+      "status": 200,
+      "h1": "Front-End vs Back-End DTI: CFPB Guidelines for 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/fsa-contribution-limits-2026",
+      "status": 200,
+      "h1": "FSA Contribution Limits 2026: $3,400 Health FSA Maximum and Planning Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/fsa-use-it-or-lose-it-2026",
+      "status": 200,
+      "h1": "FSA Use-It-or-Lose-It 2026: Carryover and Deadline Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/gifted-down-payment-rules-documentation",
+      "status": 200,
+      "h1": "Gifted Down Payment Rules: The 2026 Guide to IRS & Underwriting Requirements",
+      "errors": []
+    },
+    {
+      "route": "/blog/global-conflict-real-estate-impact-2026",
+      "status": 200,
+      "h1": "How Global Conflicts Are Impacting US Real Estate in 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/health-savings-account-hsa-investment-guide",
+      "status": 200,
+      "h1": "HSA Investment Guide 2026: Turn Your Health Savings Account Into a Wealth-Building Machine",
+      "errors": []
+    },
+    {
+      "route": "/blog/heloc-draw-period-repayment-2026",
+      "status": 200,
+      "h1": "HELOC Draw Period vs Repayment 2026: How to Model the Payment Jump",
+      "errors": []
+    },
+    {
+      "route": "/blog/heloc-interest-tax-deductible-2026",
+      "status": 200,
+      "h1": "Is HELOC Interest Tax Deductible in 2026? Qualified Uses, Limits and Records",
+      "errors": []
+    },
+    {
+      "route": "/blog/heloc-vs-home-equity-loan-2026",
+      "status": 200,
+      "h1": "HELOC vs. Home Equity Loan: Which is Better in 2026?",
+      "errors": []
+    },
+    {
+      "route": "/blog/high-yield-checking-accounts-2026",
+      "status": 200,
+      "h1": "High-Yield Checking Accounts: Beating Inflation Without Locking Up Your Cash",
+      "errors": []
+    },
+    {
+      "route": "/blog/high-yield-savings-vs-cd-2026",
+      "status": 200,
+      "h1": "High-Yield Savings vs. CDs: Where to Hide Your Cash in 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/high-yield-savings-vs-index-funds-2026",
+      "status": 200,
+      "h1": "High-Yield Savings vs. Index Funds: Where to Park Your Cash in 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/home-equity-investment-agreements-heai",
+      "status": 200,
+      "h1": "Home Equity Investment Agreements (HEAI) Explained: 2026 Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/home-equity-line-vs-loan-2026",
+      "status": 200,
+      "h1": "Choosing Between a HELOC and a Home Equity Loan",
+      "errors": []
+    },
+    {
+      "route": "/blog/home-sale-tax-exclusion-2026",
+      "status": 200,
+      "h1": "Home Sale Tax Exclusion 2026: How the $250,000 and $500,000 Rules Work",
+      "errors": []
+    },
+    {
+      "route": "/blog/homeowner-tax-deductions-2026",
+      "status": 200,
+      "h1": "Every Homeowner Tax Deduction You Can Claim in 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/homeowners-insurance-mortgage-payment-2026",
+      "status": 200,
+      "h1": "Why Home Insurance Can Raise Your Monthly Mortgage Bill",
+      "errors": []
+    },
+    {
+      "route": "/blog/house-hacking-guide-2026",
+      "status": 200,
+      "h1": "House Hacking in 2026: The Ultimate Guide to Living for Free",
+      "errors": []
+    },
+    {
+      "route": "/blog/how-does-mortgage-escrow-work",
+      "status": 200,
+      "h1": "How Does Mortgage Escrow Work? (And Why Your Payment Just Went Up)",
+      "errors": []
+    },
+    {
+      "route": "/blog/how-much-house-can-i-afford-2026",
+      "status": 200,
+      "h1": "How Much House Can I Afford Based on My Income?",
+      "errors": []
+    },
+    {
+      "route": "/blog/how-to-buy-a-house-with-bad-credit",
+      "status": 200,
+      "h1": "How to Buy a House with Bad Credit in 2026: FHA & Manual Underwriting",
+      "errors": []
+    },
+    {
+      "route": "/blog/how-to-calculate-monthly-mortgage-payment",
+      "status": 200,
+      "h1": "How to Calculate Your Mortgage Payment by Hand",
+      "errors": []
+    },
+    {
+      "route": "/blog/hsa-contribution-limits-2026",
+      "status": 200,
+      "h1": "HSA Contribution Limits 2026: New Eligibility and HDHP Rules",
+      "errors": []
+    },
+    {
+      "route": "/blog/i-bond-rate-2026",
+      "status": 200,
+      "h1": "I Bond Rate 2026: 4.26% Current Rate, Formula, Limits, Taxes and Buying Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/inflation-reduction-act-home-upgrades-2026",
+      "status": 200,
+      "h1": "Home Energy Rebates in 2026: Check Eligibility Before You Buy",
+      "errors": []
+    },
+    {
+      "route": "/blog/inherited-ira-10-year-rule-rmd-2026",
+      "status": 200,
+      "h1": "Inherited IRA 10-Year Rule: Do You Need an RMD in 2026?",
+      "errors": []
+    },
+    {
+      "route": "/blog/interest-only-mortgage-pros-cons",
+      "status": 200,
+      "h1": "Interest-Only Mortgages: The Wealthy Investor's Cheat Code",
+      "errors": []
+    },
+    {
+      "route": "/blog/investing-during-geopolitical-conflict-2026",
+      "status": 200,
+      "h1": "Investing During Geopolitical Conflict: Finding Safe Havens in 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/investment-property-mortgage-rates-2026",
+      "status": 200,
+      "h1": "Investment Property Mortgage Rates 2026: The DSCR Loophole",
+      "errors": []
+    },
+    {
+      "route": "/blog/irs-ip-pin-2027",
+      "status": 200,
+      "h1": "IRS IP PIN for 2027: Get One Before the System Closes",
+      "errors": []
+    },
+    {
+      "route": "/blog/irs-standard-mileage-rate-2026",
+      "status": 200,
+      "h1": "IRS Standard Mileage Rate 2026: Use the New July Rate Correctly",
+      "errors": []
+    },
+    {
+      "route": "/blog/irs-tax-payment-plan-2026",
+      "status": 200,
+      "h1": "IRS Tax Payment Plan 2026: What to Do When You Cannot Pay in Full",
+      "errors": []
+    },
+    {
+      "route": "/blog/jumbo-mortgages-over-loan-limit",
+      "status": 200,
+      "h1": "Jumbo Mortgages Explained: Financing the $1M+ Home",
+      "errors": []
+    },
+    {
+      "route": "/blog/lender-paid-pmi-vs-borrower-paid",
+      "status": 200,
+      "h1": "Lender-Paid PMI (LPMI) vs Borrower-Paid PMI (BPMI): Which Costs Less?",
+      "errors": []
+    },
+    {
+      "route": "/blog/lender-quote-vs-online-calculator",
+      "status": 200,
+      "h1": "Why Your Lender's Quote is $800 Higher Than the Online Calculator",
+      "errors": []
+    },
+    {
+      "route": "/blog/loan-estimate-comparison-checklist-2026",
+      "status": 200,
+      "h1": "A Practical Checklist for Comparing Mortgage Offers",
+      "errors": []
+    },
+    {
+      "route": "/blog/medical-debt-credit-report-2026",
+      "status": 200,
+      "h1": "Medical Debt on Credit Reports in 2026: Current Rules and Dispute Steps",
+      "errors": []
+    },
+    {
+      "route": "/blog/medicare-advantage-plan-not-renewing-2027",
+      "status": 200,
+      "h1": "Medicare Advantage Plan Not Renewing for 2027? Your Next Steps",
+      "errors": []
+    },
+    {
+      "route": "/blog/medicare-advantage-premiums-2027",
+      "status": 200,
+      "h1": "How to Read CMS’s 2027 Medicare Advantage Premium Projection",
+      "errors": []
+    },
+    {
+      "route": "/blog/medicare-advantage-star-ratings-2027",
+      "status": 200,
+      "h1": "Using CMS Star Ratings to Compare Your 2027 Medicare Options",
+      "errors": []
+    },
+    {
+      "route": "/blog/medicare-irmaa-brackets-2026",
+      "status": 200,
+      "h1": "Medicare IRMAA Brackets 2026: How Much Will Part B and Part D Cost?",
+      "errors": []
+    },
+    {
+      "route": "/blog/medicare-open-enrollment-2027",
+      "status": 200,
+      "h1": "Medicare Open Enrollment 2027: Dates, Choices and Complete Checklist",
+      "errors": []
+    },
+    {
+      "route": "/blog/medicare-part-b-90-rebate-october-2026",
+      "status": 200,
+      "h1": "Medicare $90 Part B Rebate October 2026: Eligibility and Scam Checks",
+      "errors": []
+    },
+    {
+      "route": "/blog/medicare-part-b-premium-2027-what-to-know",
+      "status": 200,
+      "h1": "Planning for Medicare Part B Costs in 2027",
+      "errors": []
+    },
+    {
+      "route": "/blog/medicare-part-b-premium-deductible-2026",
+      "status": 200,
+      "h1": "Medicare Part B Premium and Deductible 2026: Complete Cost Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/medicare-part-d-costs-2026",
+      "status": 200,
+      "h1": "Medicare Part D Costs 2026: Deductible, Coverage and the $2,100 Cap",
+      "errors": []
+    },
+    {
+      "route": "/blog/medicare-plan-compare-2027-open-enrollment",
+      "status": 200,
+      "h1": "A Step-by-Step Medicare Open Enrollment Review for 2027",
+      "errors": []
+    },
+    {
+      "route": "/blog/mega-backdoor-roth-ira-guide-2026",
+      "status": 200,
+      "h1": "Mega Backdoor Roth in 2026: Plan Rules and Contribution Room",
+      "errors": []
+    },
+    {
+      "route": "/blog/mortgage-amortization-schedule-guide",
+      "status": 200,
+      "h1": "How Does Mortgage Amortization Work?",
+      "errors": []
+    },
+    {
+      "route": "/blog/mortgage-broker-fees",
+      "status": 200,
+      "h1": "How Much Does a Mortgage Broker Cost?",
+      "errors": []
+    },
+    {
+      "route": "/blog/mortgage-calculator-comparison-2026",
+      "status": 200,
+      "h1": "Mortgage Calculator Comparison: The 5 Key Numbers Your App is Missing",
+      "errors": []
+    },
+    {
+      "route": "/blog/mortgage-cash-reserves-after-closing-2026",
+      "status": 200,
+      "h1": "How Much Cash Should You Keep After Closing on a House in 2026?",
+      "errors": []
+    },
+    {
+      "route": "/blog/mortgage-closing-wire-fraud-checklist-2026",
+      "status": 200,
+      "h1": "Mortgage Closing Wire Fraud: A 2026 Safety Checklist",
+      "errors": []
+    },
+    {
+      "route": "/blog/mortgage-interest-tax-deduction-2026",
+      "status": 200,
+      "h1": "Mortgage Interest Tax Deduction 2026: How Much Can You Save?",
+      "errors": []
+    },
+    {
+      "route": "/blog/mortgage-payment-at-676-september-2026",
+      "status": 200,
+      "h1": "Mortgage Payment at 6.76%: What $300K, $400K and $500K Loans Cost",
+      "errors": []
+    },
+    {
+      "route": "/blog/mortgage-payoff-statement-escrow-refund-2026",
+      "status": 200,
+      "h1": "Mortgage Payoff Statement and Escrow Refund: What Happens Next?",
+      "errors": []
+    },
+    {
+      "route": "/blog/mortgage-points-buydown-calculator",
+      "status": 200,
+      "h1": "Are Mortgage Points Worth Buying? Break-Even Guide 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/mortgage-preapproval-prequalification",
+      "status": 200,
+      "h1": "Mortgage Pre-Approval vs Pre-Qualification: The 2026 Buyer's Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/mortgage-rate-lock-before-fed-meeting-2026",
+      "status": 200,
+      "h1": "Mortgage Rate Locks: A Decision Framework for Fed Weeks",
+      "errors": []
+    },
+    {
+      "route": "/blog/mortgage-rates-october-2026",
+      "status": 200,
+      "h1": "What October’s Published Mortgage Rate Averages Tell You",
+      "errors": []
+    },
+    {
+      "route": "/blog/mortgage-recast-vs-refinance-2026",
+      "status": 200,
+      "h1": "Mortgage Recast vs. Refinance: Keep Your Rate in 2026?",
+      "errors": []
+    },
+    {
+      "route": "/blog/mortgage-refinance-break-even-2026",
+      "status": 200,
+      "h1": "Mortgage Refinance Break-Even Calculator Guide 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/mortgage-servicing-transfer-checklist-2026",
+      "status": 200,
+      "h1": "Mortgage Servicing Transfer: What to Check Before You Pay",
+      "errors": []
+    },
+    {
+      "route": "/blog/multifamily-real-estate-investing-2026",
+      "status": 200,
+      "h1": "Multifamily Real Estate Investing 2026: The House Hacking Blueprint",
+      "errors": []
+    },
+    {
+      "route": "/blog/negative-equity-upside-down-car-loan",
+      "status": 200,
+      "h1": "Negative Equity (Upside-Down Car Loan): How to Escape It",
+      "errors": []
+    },
+    {
+      "route": "/blog/new-vs-used-car-total-cost-ownership",
+      "status": 200,
+      "h1": "New vs Used Car: Total Cost of Ownership Analysis",
+      "errors": []
+    },
+    {
+      "route": "/blog/no-down-payment-mortgages-va-usda-fha",
+      "status": 200,
+      "h1": "No Down Payment Mortgages: VA, USDA, and FHA Loans in 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/no-pmi-mortgages-down-payment",
+      "status": 200,
+      "h1": "No PMI Mortgages: How to Buy a House Without 20% Down",
+      "errors": []
+    },
+    {
+      "route": "/blog/no-tax-on-overtime-deduction-2026",
+      "status": 200,
+      "h1": "No Tax on Overtime 2026: What Workers Can Actually Deduct",
+      "errors": []
+    },
+    {
+      "route": "/blog/no-tax-on-tips-deduction-2026",
+      "status": 200,
+      "h1": "No Tax on Tips 2026: Who Qualifies for the $25,000 Deduction?",
+      "errors": []
+    },
+    {
+      "route": "/blog/opportunity-zones-real-estate-investing",
+      "status": 200,
+      "h1": "Opportunity Zones Explained: How Real Estate Investors Avoid Taxes",
+      "errors": []
+    },
+    {
+      "route": "/blog/pay-mortgage-with-credit-card",
+      "status": 200,
+      "h1": "Can You Pay a Mortgage With a Credit Card?",
+      "errors": []
+    },
+    {
+      "route": "/blog/pay-off-car-loan-early-vs-invest",
+      "status": 200,
+      "h1": "Pay Off Car Loan Early: The Math on Prepayment vs Investing",
+      "errors": []
+    },
+    {
+      "route": "/blog/pay-off-mortgage-early-strategy",
+      "status": 200,
+      "h1": "How to Pay Off Your Mortgage in 10 Years (Without Refinancing)",
+      "errors": []
+    },
+    {
+      "route": "/blog/pay-off-student-loans-vs-invest-decision",
+      "status": 200,
+      "h1": "Pay Off Student Loans or Invest? After-Tax Math",
+      "errors": []
+    },
+    {
+      "route": "/blog/pell-grant-2026-27",
+      "status": 200,
+      "h1": "Federal Pell Grant 2026–27: Maximum Award, Eligibility and FAFSA Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/personal-loan-apr-origination-fees-2026",
+      "status": 200,
+      "h1": "Personal Loan APR and Origination Fees in 2026: How to Compare the Real Cost",
+      "errors": []
+    },
+    {
+      "route": "/blog/personal-loan-vs-credit-card-comparison",
+      "status": 200,
+      "h1": "Personal Loan vs Credit Card: Compare Total Cost Before Borrowing",
+      "errors": []
+    },
+    {
+      "route": "/blog/piggyback-mortgage-80-10-10-strategy",
+      "status": 200,
+      "h1": "Piggyback Mortgages (80/10/10): The Loophole to Avoid PMI in 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/pmi-explained-cost-removal-2026",
+      "status": 200,
+      "h1": "PMI Explained: What It Is, How Much It Costs, and When It Ends",
+      "errors": []
+    },
+    {
+      "route": "/blog/portfolio-loans-non-qm-mortgages-2026",
+      "status": 200,
+      "h1": "Portfolio Loans & Non-QM Mortgages: The 2026 Freelancer Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/rate-and-term-vs-cashout-refinance",
+      "status": 200,
+      "h1": "Rate-and-Term vs. Cash-Out Refinance: Which Strategy Wins in 2026?",
+      "errors": []
+    },
+    {
+      "route": "/blog/refinancing-costs-2026-breakdown",
+      "status": 200,
+      "h1": "Refinancing Costs 2026: Itemized Breakdown of Hidden Fees",
+      "errors": []
+    },
+    {
+      "route": "/blog/rent-vs-buy-calculator-2026-housing-market",
+      "status": 200,
+      "h1": "Rent vs Buy in 2026: Why Renting is NOT Throwing Money Away",
+      "errors": []
+    },
+    {
+      "route": "/blog/required-minimum-distributions-2026",
+      "status": 200,
+      "h1": "Required Minimum Distributions 2026: Ages, Deadlines and Rules",
+      "errors": []
+    },
+    {
+      "route": "/blog/resilient-investor-checklist-2026",
+      "status": 200,
+      "h1": "Build an Investing Process That Can Hold Up Over Time",
+      "errors": []
+    },
+    {
+      "route": "/blog/reverse-mortgage-hecm-pros-cons-2026",
+      "status": 200,
+      "h1": "Reverse Mortgages Explained (2026): The Good, The Bad, and The Scam",
+      "errors": []
+    },
+    {
+      "route": "/blog/rmd-qcd-deadline-2026",
+      "status": 200,
+      "h1": "2026 Year-End IRA and Charitable Distribution Checklist",
+      "errors": []
+    },
+    {
+      "route": "/blog/roth-conversion-tax-planning-2026",
+      "status": 200,
+      "h1": "A 2026 Checklist for Evaluating a Roth Conversion",
+      "errors": []
+    },
+    {
+      "route": "/blog/roth-ira-income-limits-2026",
+      "status": 200,
+      "h1": "Roth IRA Income Limits 2026: Can You Make the Full Contribution?",
+      "errors": []
+    },
+    {
+      "route": "/blog/roth-ira-vs-401k-comparison-2026",
+      "status": 200,
+      "h1": "Roth IRA vs 401(k) in 2026: Limits, Taxes and What to Fund First",
+      "errors": []
+    },
+    {
+      "route": "/blog/safe-yields-bonds-treasuries-2026",
+      "status": 200,
+      "h1": "Safe Yields: US Treasuries vs. Emerging Market Bonds in 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/salt-deduction-limit-2026",
+      "status": 200,
+      "h1": "SALT Deduction Limit 2026: $40,400 Cap and Phaseout Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/save-for-down-payment-faster-strategies",
+      "status": 200,
+      "h1": "5 Proven Ways to Save for a Down Payment Faster in 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/save-plan-borrowers-repayment-options-2026",
+      "status": 200,
+      "h1": "Steps to Choose a New Federal Repayment Plan",
+      "errors": []
+    },
+    {
+      "route": "/blog/savers-credit-2026",
+      "status": 200,
+      "h1": "Saver's Credit 2026: Income Limits, Rates and Eligibility",
+      "errors": []
+    },
+    {
+      "route": "/blog/savers-match-2027-retirement-match",
+      "status": 200,
+      "h1": "Saver's Match 2027: Who Qualifies for the $1,000 Match?",
+      "errors": []
+    },
+    {
+      "route": "/blog/second-mortgage-guide",
+      "status": 200,
+      "h1": "How to Get a Second Mortgage: HELOC vs Home Equity Loan",
+      "errors": []
+    },
+    {
+      "route": "/blog/selling-house-with-mortgage",
+      "status": 200,
+      "h1": "Selling a House With a Mortgage: Payoff, Equity and Closing",
+      "errors": []
+    },
+    {
+      "route": "/blog/short-term-rental-regulations-2026",
+      "status": 200,
+      "h1": "Short-Term Rental Regulations in 2026: Is the \"Airbnb Arbitrage\" Dead?",
+      "errors": []
+    },
+    {
+      "route": "/blog/should-i-refinance-2026",
+      "status": 200,
+      "h1": "Should You Refinance in 2026? Calculator + Break-Even Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/silver-tsunami-housing-shift-2026",
+      "status": 200,
+      "h1": "The \"Silver Tsunami\" Housing Shift: How Aging Boomers are Unlocking 2026 Inventory",
+      "errors": []
+    },
+    {
+      "route": "/blog/sipc-vs-fdic-protection-2026",
+      "status": 200,
+      "h1": "SIPC vs. FDIC Protection in 2026: What Your Brokerage and Bank Accounts Actually Cover",
+      "errors": []
+    },
+    {
+      "route": "/blog/snap-benefits-2027",
+      "status": 200,
+      "h1": "SNAP Benefits 2027: Maximum Allotments, Income Limits and Eligibility Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/snap-cola-increase-2027-chart",
+      "status": 200,
+      "h1": "SNAP Increase 2027 Chart: Maximum Benefits and COLA",
+      "errors": []
+    },
+    {
+      "route": "/blog/social-security-cola-2027",
+      "status": 200,
+      "h1": "Social Security COLA 2027: Confirmed 3.6% Increase and Payment Planning",
+      "errors": []
+    },
+    {
+      "route": "/blog/social-security-cola-increase-2026",
+      "status": 200,
+      "h1": "Social Security COLA Increase 2026: Why Your Check Might Be Smaller",
+      "errors": []
+    },
+    {
+      "route": "/blog/social-security-earnings-test-2026",
+      "status": 200,
+      "h1": "Social Security Earnings Test 2026: How Working Changes Your Benefits",
+      "errors": []
+    },
+    {
+      "route": "/blog/social-security-earnings-test-2027",
+      "status": 200,
+      "h1": "Social Security Earnings Test 2027: New Work Limits",
+      "errors": []
+    },
+    {
+      "route": "/blog/social-security-payment-schedule-2026",
+      "status": 200,
+      "h1": "Social Security Payment Schedule 2026: Complete Calendar by Birthday",
+      "errors": []
+    },
+    {
+      "route": "/blog/social-security-payment-schedule-2027",
+      "status": 200,
+      "h1": "Monthly Social Security and SSI Payment Dates for 2027",
+      "errors": []
+    },
+    {
+      "route": "/blog/social-security-spousal-benefits-2026",
+      "status": 200,
+      "h1": "Social Security Spousal Benefits 2026: Eligibility, 50% Maximum, Reductions and Ex-Spouse Rules",
+      "errors": []
+    },
+    {
+      "route": "/blog/sp500-vs-real-estate-investing-2026",
+      "status": 200,
+      "h1": "S&P 500 vs. Real Estate: The Ultimate 2026 Investing Showdown",
+      "errors": []
+    },
+    {
+      "route": "/blog/spring-2026-housing-market-forecast",
+      "status": 200,
+      "h1": "Spring 2026 Housing Market Forecast: Rates, Prices & What Buyers Should Expect",
+      "errors": []
+    },
+    {
+      "route": "/blog/streamline-refinance-fha-va-usda",
+      "status": 200,
+      "h1": "Streamline Refinance 2026: Fast Track for FHA, VA, & USDA Loans",
+      "errors": []
+    },
+    {
+      "route": "/blog/student-loan-idr-recertification-2026",
+      "status": 200,
+      "h1": "How to Prepare for IDR Recertification in 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/student-loan-interest-deduction-2026",
+      "status": 200,
+      "h1": "Student Loan Interest Deduction 2026: $2,500 Limit, MAGI Phaseout and Examples",
+      "errors": []
+    },
+    {
+      "route": "/blog/student-loan-repayment-plans-2026-income-driven",
+      "status": 200,
+      "h1": "Student Loan Repayment Plans 2026: Income-Driven vs Standard",
+      "errors": []
+    },
+    {
+      "route": "/blog/tariffs-housing-market-impact-2026",
+      "status": 200,
+      "h1": "How Tariffs Are Raising Home Prices in 2026 (And What You Can Do)",
+      "errors": []
+    },
+    {
+      "route": "/blog/tax-extension-deadline-2026",
+      "status": 200,
+      "h1": "Tax Extension Deadline 2026: October 15 Filing and Payment Guide",
+      "errors": []
+    },
+    {
+      "route": "/blog/tax-loss-harvesting-calculator-strategy",
+      "status": 200,
+      "h1": "Tax-Loss Harvesting Explained: Turn Your Losing Stocks Into Cash",
+      "errors": []
+    },
+    {
+      "route": "/blog/tax-loss-harvesting-wash-sale-2026",
+      "status": 200,
+      "h1": "Tax-Loss Harvesting: Timing and Wash-Sale Checks",
+      "errors": []
+    },
+    {
+      "route": "/blog/tax-withholding-w4-2026",
+      "status": 200,
+      "h1": "Tax Withholding 2026: How to Check Your W-4 and Paycheck",
+      "errors": []
+    },
+    {
+      "route": "/blog/top-sunbelt-real-estate-markets-2026",
+      "status": 200,
+      "h1": "Top 5 Sunbelt Cities for Real Estate Investment in 2026",
+      "errors": []
+    },
+    {
+      "route": "/blog/treasury-bills-vs-high-yield-savings-2026",
+      "status": 200,
+      "h1": "How to Compare T-Bills with High-Yield Savings",
+      "errors": []
+    },
+    {
+      "route": "/blog/trump-account-vs-529-plan",
+      "status": 200,
+      "h1": "Trump Account vs. 529 Plan: Which Should Parents Fund First in 2026?",
+      "errors": []
+    },
+    {
+      "route": "/blog/trump-accounts-2026-guide",
+      "status": 200,
+      "h1": "Trump Accounts 2026: $1,000 Seed, Eligibility, Contribution Rules and How to Start",
+      "errors": []
+    },
+    {
+      "route": "/blog/usa-people-search-finance",
+      "status": 200,
+      "h1": "How to Find Unclaimed Money in the USA (2026 Guide)",
+      "errors": []
+    },
+    {
+      "route": "/blog/usda-loans-rural-suburban-financing",
+      "status": 200,
+      "h1": "USDA Loans 2026: The Secret 100% Financing Zero Down Mortgage",
+      "errors": []
+    },
+    {
+      "route": "/blog/va-disability-pay-rates-2026",
+      "status": 200,
+      "h1": "VA Disability Pay Rates 2026: Official Monthly Compensation Chart",
+      "errors": []
+    },
+    {
+      "route": "/blog/va-funding-fee-2026",
+      "status": 200,
+      "h1": "VA Funding Fee 2026: Rates, Exemptions and the Real Cost of a VA Loan",
+      "errors": []
+    },
+    {
+      "route": "/blog/va-loan-benefits-2026-military-guide",
+      "status": 200,
+      "h1": "VA Loan Benefits 2026: The Ultimate Military Housing Guide",
+      "errors": []
+    }
+  ]
+}

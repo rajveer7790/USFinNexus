@@ -145,3 +145,11 @@ These are explicitly accounted for. Existing/partial means the named capability 
 - Restored student-loan decision guide exceeds 1,800 rendered words. Existing Roth-versus-401(k) guide currently renders about 1,500 words; the historical empty-body report is not current for that URL.
 - Added one-hop aliases for `/refinance-calculator`, `/pmi-removal` and `/calculators/points`. Actual Google-selected canonical and recrawl status remain unverified without GSC.
 - Production accessibility/deployment is a separate acceptance gate; see `audit-oct24-production.json` after the live crawl. The `www` host and account-level Cloudflare settings are not claimed fixed by a source-code deployment.
+
+## Production cross-check, October 24
+
+Core audit fixes deployed in `8d64cb99fa76e00454997548d54425a2e995cdbd`; two additional original posts deployed in `fc8dc5abf44b481385164b8fae2d5332e78caa00`. Cloudflare Pages reported successful builds. The first production crawl covered 295 pages and 100 unique images; its sole canonical finding was a verifier false positive treating the equivalent homepage URLs with/without the optional root slash as different. The checker now compares normalized URLs.
+
+The second full production crawl completed at 2026-10-24 13:17:31 UTC: **297 canonical pages, 102 unique image resources, 10 discovery/alias checks; zero page, image/MIME or discovery failures**. It checks one H1 before the footer, self-canonical, absence of a meta noindex directive, parseable JSON-LD and FAQ answer parity. It does not impersonate verified Googlebot, inspect private GSC decisions, or prove that every financial sentence in the entire legacy library has been reviewed. The new three aliases independently resolve in one redirect to their intended calculators.
+
+The daily editorial release report includes live article word counts, image dimensions/hashes, source research and image prompts. All pending/partial rows above remain pending/partial: production accessibility does not turn future-product ideas, long-description rewrites, specialized underwriting/tax models, named professional review, or unavailable GSC/DNS controls into completed work.

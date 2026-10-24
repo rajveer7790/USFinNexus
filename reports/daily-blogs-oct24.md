@@ -43,3 +43,16 @@ Use case: photorealistic-natural. Asset: professional US consumer-banking editor
 Each article must exceed 1,200 rendered words, have one H1, six visible/schema-matched FAQs, BlogPosting schema, canonical, article OG/Twitter metadata, publish/modified dates, descriptive image alt, primary citations, contextual links and disclaimer. Both must appear first on the date-sorted directory and in the canonical and segmented sitemaps. Build, type/SEO/document regressions and production page/image checks are recorded separately; creating source files alone is not publication success.
 
 Local checks passed: retirement article 1,764 rendered main-content words; banking article 1,958. Each has six matched FAQ entities, one H1 and all required metadata. Meta descriptions are 142 and 148 characters. Both are first in the blog directory and included in segmented and canonical sitemaps. Updated full regression covers 297 canonical URLs and 843 FAQ answers; the 298-HTML SEO audit has zero blocking findings. See the production report for live acceptance, rather than inferring it from these local results.
+
+## Production release verified
+
+GitHub source commit: `fc8dc5abf44b481385164b8fae2d5332e78caa00`. Cloudflare Pages check completed successfully October 24, 2026 at 13:11:05 UTC.
+
+- [401(k) article](https://usfinnexus.com/blog/401k-true-up-match-2026): HTTP 200; 1,764 words in live main content; six FAQ entities; BlogPosting schema; expected canonical and hero present.
+- [Banking article](https://usfinnexus.com/blog/bank-account-bonus-taxes-2026): HTTP 200; 1,958 words in live main content; six FAQ entities; BlogPosting schema; expected canonical and hero present.
+- Both first on the live blog index, in the same order as the source release. Both included in the live segmented blog sitemap.
+- Both live heroes return HTTP 200 and `image/webp`, decode at 1200×630, and match the optimized repository files byte-for-byte.
+- Retirement hero SHA-256: `814c9cd00576be36e8c8068e5fc993122d2cd18704b45762c4b04acdb58d9280`.
+- Banking hero SHA-256: `4aac195a178393d0651ad007894f0145dcbe1fe2550cfbbfa8602588d77d00c1`.
+
+This establishes publication and technical checks, not Google indexing, rankings, search volume, AI citations or engagement gains. Those require actual Search Console/analytics evidence.
