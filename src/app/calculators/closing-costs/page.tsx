@@ -1,12 +1,11 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import ClosingCostsSeoContent from './ClosingCostsSeoContent';
 
-const ClosingCostsClient = nextDynamic(() => import('./ClosingCostsClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import ClosingCostsClient from './ClosingCostsClient';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -68,10 +67,10 @@ export default function ClosingCostsPage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Closing Cost Calculator', item: '/calculators/closing-costs' }]} />
             <ClosingCostsClient />
-            <ClosingCostsSeoContent />
+
             <SemrushIntentSection slug="closing-costs" />
             <CalculatorFAQ faqs={CLOSING_COSTS_FAQS} title="Closing Cost Calculator FAQs" />
         <ContextualInternalLinks currentSlug="closing-costs" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="closing-costs" /></main>
     );
 }

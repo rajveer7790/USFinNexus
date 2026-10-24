@@ -1,3 +1,4 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
@@ -9,9 +10,7 @@ import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 import HelocSeoContent from './HelocSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 
-const HELOCClient = nextDynamic(() => import('./HELOCClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import HELOCClient from './HELOCClient';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -19,7 +18,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
     title: 'Free HELOC Calculator 2026 - Home Equity Line of Credit',
     description:
-        'Calculate your HELOC payments, available equity, and total interest. See draw-period vs repayment-period costs instantly. Free, no signup required.',
+        'Calculate your HELOC payments, available equity, and total interest. See draw-period vs repayment-period costs instantly. Free, no signup required.',
     openGraph: {
         type: 'website',
         title: 'Free HELOC Calculator 2026 - Home Equity Line of Credit',
@@ -62,10 +61,10 @@ export default function HELOCPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'HELOC Calculator', item: '/calculators/heloc' }]} />
             <HELOCClient />
             <SemrushIntentSection slug="heloc" />
-            <HelocSeoContent />
+
             <p className="mx-auto mt-6 max-w-4xl text-sm text-slate-600">Compare HELOCs with other second-lien options in our <Link className="font-semibold text-blue-700 hover:underline" href="/blog/second-mortgage-guide">second-mortgage guide</Link>.</p>
             <CalculatorFAQ faqs={HELOC_FAQS} title="HELOC — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="heloc" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="heloc" /></main>
     );
 }

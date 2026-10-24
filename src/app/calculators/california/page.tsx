@@ -1,3 +1,4 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
@@ -5,9 +6,7 @@ import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import CaliforniaSeoContent from './CaliforniaSeoContent';
 import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
-const MortgageCalculator = nextDynamic(() => import('../mortgage/MortgageCalculatorClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import MortgageCalculator from '../mortgage/MortgageCalculatorClient';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
 
@@ -16,7 +15,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'California Mortgage Calculator 2026 — Prop 13, Jumbo Loans & Taxes',
-    description: 'Free California mortgage calculator. Includes Proposition 13 property tax protection, CA jumbo loan limits, and 2026 conforming limits for high-cost CA counties.',
+    description: 'Free California mortgage calculator. Includes Proposition 13 property tax protection, CA jumbo loan limits, and 2026 conforming limits for high-cost CA counties.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/california' },
     openGraph: {
         type: 'website',
@@ -42,10 +41,10 @@ export default function CaliforniaPage() {
                 url="https://usfinnexus.com/calculators/california"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'California Mortgage', item: '/calculators/california' }]} />
-                <MortgageCalculator heading="California Mortgage Calculator" intro="Model a California mortgage using your own tax and insurance assumptions." />
+                <MortgageCalculator initialState="CA" heading="California Mortgage Calculator" intro="Model a California mortgage using your own tax and insurance assumptions." />
             <CaliforniaSeoContent />
             <SemrushIntentSection slug="california" />
         <ContextualInternalLinks currentSlug="california" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="california" /></main>
     );
 }

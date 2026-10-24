@@ -42,7 +42,6 @@ const STATE_LINKS = [
 ];
 
 const RESOURCE_LINKS = [
-    { href: '/canada', label: 'Canada Finance Hub' },
     { href: '/blog/mortgage-broker-fees', label: 'Mortgage Broker Fees' },
     { href: '/blog/pay-off-student-loans-vs-invest-decision', label: 'Student Loans vs. Investing' },
     { href: '/data/home-affordability-by-state', label: 'Affordability by State' },

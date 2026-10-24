@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is the 4% rule in retirement?', acceptedAnswer: { '@type': 'Answer', text: 'The 4% rule is a rule of thumb stating that you can safely withdraw 4% of your total retirement portfolio in your first year of retirement, and then adjust that amount for inflation each subsequent year, without running out of money over a 30-year period.' } },
-    { '@type': 'Question', name: 'Does the 4% rule account for inflation?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. You only withdraw exactly 4% in the first year. In year two, you take the dollar amount you withdrew in year one and increase it by the inflation rate. You do not recalculate 4% of your new portfolio balance every year.' } },
-    { '@type': 'Question', name: 'Is the 4% rule still safe in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Many modern economists and financial planners argue the 4% rule is too aggressive for 2026 due to prolonged inflation, lower anticipated bond yields, and longer life expectancies. Many experts now recommend a more conservative 3.2% to 3.5% Safe Withdrawal Rate (SWR).' } },
-] }) }} />
         <ArticleSchema
             title="The 4% Rule Explained: Is it Still a Safe Withdrawal Rate in 2026?"
             description="The 4% rule has guided retirees for decades, but soaring inflation and sequence of returns risk have experts recommending a 3.5% rate."

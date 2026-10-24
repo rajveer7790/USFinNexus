@@ -18,24 +18,24 @@ export default function CryptoTaxSeoContent() {
 
             <h3 className="text-xl font-semibold text-gray-800 mt-8">Short-Term vs. Long-Term Capital Gains</h3>
             <p className="text-gray-600">The length of time you hold your cryptocurrency dictates your tax rate:</p>
-            
+
             <div className="bg-orange-50 border-l-4 border-orange-500 p-4 mt-4">
-                <h4 className="font-semibold text-orange-900 m-0">Short-Term Capital Gains (Held Less Than 1 Year)</h4>
+                <h4 className="font-semibold text-orange-900 m-0">Short-Term Capital Gains (Held One Year or Less)</h4>
                 <p className="text-orange-800 text-sm mt-1 mb-0">
-                    If you hold a coin for less than 365 days before selling or trading it, any profit is taxed at your <strong>ordinary income tax rate</strong>. This is the same rate applied to your day job\'s salary and can be as high as 37%.
+                    If you hold a coin for one year or less before selling or trading it, any profit is taxed at your <strong>ordinary income tax rate</strong>. This is the same rate applied to your day job\'s salary and can be as high as 37%.
                 </p>
             </div>
 
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mt-4">
-                <h4 className="font-semibold text-blue-900 m-0">Long-Term Capital Gains (Held 1 Year or More)</h4>
+                <h4 className="font-semibold text-blue-900 m-0">Long-Term Capital Gains (Held More Than 1 Year)</h4>
                 <p className="text-blue-800 text-sm mt-1 mb-0">
                     If you hold a coin for over a year, you are rewarded with significantly lower tax rates. Depending on your total income, your long-term capital gains tax rate will be 0%, 15%, or 20%.
                 </p>
             </div>
 
-            <h3 className="text-xl font-semibold text-gray-800 mt-8">Tax-Loss Harvesting</h3>
+            <h3 className="text-xl font-semibold text-gray-800 mt-8">2026 reporting, basis and additional tax</h3><p>Form 1099-DA reporting can involve different gross-proceeds and covered-asset basis rules depending on acquisition and transaction dates. A broker form does not establish that all basis is known, and transferred assets can require your own records. Reconcile transaction history, wallet transfers, fees and holding periods. See <a href="https://www.irs.gov/businesses/small-businesses-self-employed/digital-assets">IRS digital-asset guidance</a> and <a href="https://www.irs.gov/newsroom/questions-and-answers-on-the-net-investment-income-tax">IRS NIIT thresholds</a>. This estimator uses the lesser of modeled investment gains or MAGI excess for NIIT; other investment income and loss carryovers are excluded.</p><h3 className="text-xl font-semibold text-gray-800 mt-8">Tax-Loss Harvesting</h3>
             <p className="text-gray-600">
-                If you sell cryptocurrency for a loss, you can use those losses to offset your gains. If your total losses exceed your total gains for the year, you can use up to $3,000 of the remaining loss to offset your ordinary income (like your salary). Any losses beyond that $3,000 can be carried forward to future tax years. Unlike stocks, the IRS "Wash Sale" rule currently does not explicitly apply to cryptocurrencies, making crypto tax-loss harvesting a powerful tool.
+                If you sell cryptocurrency for a loss, you can use those losses to offset your gains. If your total losses exceed your total gains for the year, you can use up to $3,000 ($1,500 if married filing separately) of the remaining loss to offset your ordinary income (like your salary). Any losses beyond that $3,000 can be carried forward to future tax years. Unlike stocks, the IRS "Wash Sale" rule currently does not explicitly apply to cryptocurrencies, making crypto tax-loss harvesting a powerful tool.
             </p>
         </article>
     );

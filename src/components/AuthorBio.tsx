@@ -13,7 +13,7 @@ export const USFinNexusEditorialTeam: Author = {
     name: 'USFinNexus Editorial Team',
     title: 'Finance & Mortgage Research Team',
     credentials: 'Based on CFPB, HUD, FHFA & Tax Foundation data',
-    bio: 'The USFinNexus editorial team researches and writes mortgage and personal finance guides using data sourced directly from the Consumer Financial Protection Bureau (CFPB), the U.S. Department of Housing and Urban Development (HUD), the Federal Housing Finance Agency (FHFA), and the Tax Foundation. All calculator formulas are reviewed for accuracy against official federal guidelines.',
+    bio: 'The USFinNexus editorial team researches and writes mortgage and personal finance guides using data sourced directly from the Consumer Financial Protection Bureau (CFPB), the U.S. Department of Housing and Urban Development (HUD), the Federal Housing Finance Agency (FHFA), and the Tax Foundation. Calculator results are educational estimates; no government endorsement or licensed professional review is implied.',
     initials: 'UF',
     accentColor: '#0da6f2',
 };
@@ -41,7 +41,7 @@ export default function AuthorBio({ author = USFinNexusEditorialTeam, updatedDat
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         '@context': 'https://schema.org',
-                        '@type': 'Person',
+                        '@type': author.name === 'USFinNexus Editorial Team' ? 'Organization' : 'Person',
                         name: author.name,
                         jobTitle: author.title,
                         description: author.bio,
@@ -68,7 +68,7 @@ export default function AuthorBio({ author = USFinNexusEditorialTeam, updatedDat
                             className="px-2 py-0.5 rounded text-xs font-black uppercase tracking-widest"
                             style={{ background: `${author.accentColor || '#0da6f2'}15`, color: author.accentColor || '#0da6f2' }}
                         >
-                            Fact-Checked
+                            Source-based research
                         </span>
                     </div>
                     <p className="text-xs font-semibold mb-1" style={{ color: author.accentColor || '#0da6f2' }}>{author.title}</p>

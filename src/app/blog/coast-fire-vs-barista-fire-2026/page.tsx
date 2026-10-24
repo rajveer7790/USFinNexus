@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is Coast FIRE?', acceptedAnswer: { '@type': 'Answer', text: 'Coast FIRE is a financial strategy where you aggressively save and invest early in your career until your portfolio is large enough that, through the power of compound interest, it will grow to your full retirement number by age 65 without you ever needing to invest another dollar. Once you hit this milestone, you can "coast," allowing you to downshift to a lower-stress, lower-paying job that just covers your daily living expenses.' } },
-    { '@type': 'Question', name: 'What is Barista FIRE?', acceptedAnswer: { '@type': 'Answer', text: 'Barista FIRE is a semi-retirement strategy where your investment portfolio is large enough to cover your basic living expenses, but you still need (or want) employer-sponsored health insurance. You quit your stressful corporate job and take a part-time job (historically at places like Starbucks, hence the name) specifically for the health benefits and to cover luxury spending.' } },
-    { '@type': 'Question', name: 'How do I calculate my Coast FIRE number?', acceptedAnswer: { '@type': 'Answer', text: 'Your Coast FIRE number is calculated by taking your ultimate retirement target (e.g., $1.5 million) and working backward using a compound interest formula based on the number of years you have left until age 65. If you are 30 years old and need $1.5M at 65, your Coast FIRE number (assuming a 7% real return) is roughly $140,000.' } },
-] }) }} />
         <ArticleSchema
             title="Coast FIRE vs. Barista FIRE: Semi-Retirement Strategies for 2026"
             description="You do not need $2 million to escape the corporate grind. Learn the exact mathematical formulas behind Coast FIRE and Barista FIRE."
@@ -60,11 +55,11 @@ export default function BlogPost() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    The original FIRE movement (Financial Independence, Retire Early) was mathematically brutal. It required millennials and Gen Z to save 50% to 70% of their income, live frugally for a decade, amass $2 million in an index fund, and then completely quit working at age 35. 
+                    The original FIRE movement (Financial Independence, Retire Early) was mathematically brutal. It required millennials and Gen Z to save 50% to 70% of their income, live frugally for a decade, amass $2 million in an index fund, and then completely quit working at age 35.
                 </p>
 
                 <p>
-                    By 2026, the rigid rules of traditional FIRE have largely been abandoned. In an era of high inflation and skyrocketing housing costs, saving $2 million in ten years is impossible for most Americans. 
+                    By 2026, the rigid rules of traditional FIRE have largely been abandoned. In an era of high inflation and skyrocketing housing costs, saving $2 million in ten years is impossible for most Americans.
                 </p>
                 <p>
                     Instead, the financial independence movement has evolved into <strong>Semi-Retirement</strong>. Rather than suffering in a corporate cubicle until you have millions, you use math to escape the grind much earlier. The two most popular strategies are <strong>Coast FIRE</strong> and <strong>Barista FIRE</strong>. Here is exactly how the math works for each.
@@ -72,7 +67,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Is the Philosophy of Coast FIRE?</h2>
                 <p>
-                    <strong>Coast FIRE</strong> focuses on front-loading your retirement investments as early in life as possible. 
+                    <strong>Coast FIRE</strong> focuses on front-loading your retirement investments as early in life as possible.
                 </p>
                 <p>
                     The goal is to aggressively invest during your 20s and early 30s until your portfolio reaches a specific mathematical threshold. Once you hit that number, you stop investing entirely. You let the power of compound interest carry (or "coast") that money for the next 30 years until it grows into a massive traditional retirement fund by age 65.
@@ -117,7 +112,7 @@ export default function BlogPost() {
                     If you retire completely at age 45, you cannot qualify for Medicare (which starts at 65). Buying private health insurance on the open market for a family of four can easily cost $20,000 to $30,000 a year. This massive expense prevents millions of people with large portfolios from retiring early.
                 </p>
                 <p>
-                    Barista FIRE is a compromise. You build a portfolio large enough that the 4% Safe Withdrawal Rule covers your basic living expenses (mortgage, food, utilities). But instead of retiring fully, you take a part-time job that explicitly offers corporate health benefits to part-time workers. 
+                    Barista FIRE is a compromise. You build a portfolio large enough that the 4% Safe Withdrawal Rule covers your basic living expenses (mortgage, food, utilities). But instead of retiring fully, you take a part-time job that explicitly offers corporate health benefits to part-time workers.
                 </p>
                 <p>
                     The strategy is named after Starbucks, one of the first major corporations to offer full health insurance to employees working just 20 hours a week.
@@ -193,9 +188,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Considerations for Semi-Retirement?</h2>
                     <p className="text-lg text-slate-700 mb-6">
@@ -228,7 +223,7 @@ export default function BlogPost() {
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">What Are Hybrid Strategies Like "Flamingo FIRE"?</h3>
                     <p className="text-slate-700 mb-4">
-                        If Barista FIRE sounds too risky, and Coast FIRE takes too long to fully retire, some investors adopt <strong>Flamingo FIRE</strong>. 
+                        If Barista FIRE sounds too risky, and Coast FIRE takes too long to fully retire, some investors adopt <strong>Flamingo FIRE</strong>.
                     </p>
                     <p className="text-slate-700 mb-4">
                         In Flamingo FIRE, you aggressively save until your portfolio hits exactly <em>half</em> of your final FIRE number. For example, if your goal is $2 million, you save $1 million. You then semi-retire, working just enough to cover your current living expenses without touching the portfolio. You let the $1 million compound untouched for exactly one "doubling cycle" (usually 7-10 years), at which point it hits $2 million, and you fully retire.

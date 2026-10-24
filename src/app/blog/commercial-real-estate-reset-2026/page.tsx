@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is the "extend and pretend" commercial real estate crisis?', acceptedAnswer: { '@type': 'Answer', text: 'During the 2023-2025 period of high interest rates, many commercial landlords could not afford to refinance their maturing loans. Banks, not wanting to foreclose on empty office buildings, simply "extended" the loan terms and "pretended" the buildings were still highly valuable. In 2026, those extensions are expiring, forcing a massive wave of forced sales and defaults.' } },
-    { '@type': 'Question', name: 'Is all commercial real estate crashing in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'No. The crash is highly concentrated in Class B and Class C office buildings in major downtown metros (due to remote work). Conversely, industrial warehouses, data centers, and Sunbelt multifamily apartments are seeing record growth and massive institutional investment.' } },
-    { '@type': 'Question', name: 'How can retail investors profit from the CRE reset?', acceptedAnswer: { '@type': 'Answer', text: 'Retail investors should avoid direct ownership of struggling office properties. Instead, they can invest in specialized Real Estate Investment Trusts (REITs) that focus strictly on booming sectors like data centers, or use fractional real estate platforms to invest in high-yield multifamily syndications.' } },
-] }) }} />
         <ArticleSchema
             title="Navigating the 2026 Commercial Real Estate Reset"
             description="The 2026 commercial real estate crash is highly localized. While office spaces collapse, data centers and industrial logistics are booming. Learn how to navigate the reset."
@@ -78,7 +73,7 @@ export default function BlogPost() {
                     Between 2023 and 2025, a massive problem emerged: <strong>Remote Work and High Interest Rates.</strong>
                 </p>
                 <p>
-                    Thousands of aging, Class B and Class C office buildings in cities like San Francisco, Chicago, and New York were sitting half-empty. Because the buildings were generating significantly less rental income, their appraised valuations plummeted. At the exact same time, interest rates doubled. 
+                    Thousands of aging, Class B and Class C office buildings in cities like San Francisco, Chicago, and New York were sitting half-empty. Because the buildings were generating significantly less rental income, their appraised valuations plummeted. At the exact same time, interest rates doubled.
                 </p>
 
                 <div className="card p-6 mb-8 border-l-4 border-red-500 bg-red-50">
@@ -101,7 +96,7 @@ export default function BlogPost() {
 
                 <h3 className="text-xl font-bold mt-8 mb-3">Why Are Data Centers Booming From the AI Explosion?</h3>
                 <p>
-                    The explosion of Artificial Intelligence requires massive physical infrastructure. AI models require enormous servers, which require specialized buildings with heavy-duty power grids and industrial cooling systems. 
+                    The explosion of Artificial Intelligence requires massive physical infrastructure. AI models require enormous servers, which require specialized buildings with heavy-duty power grids and industrial cooling systems.
                 </p>
                 <p>
                     In 2026, Data Center real estate is the most lucrative and highly constrained CRE sector on the planet. Vacancy rates are near zero, and landlords are charging premium, long-term lease rates to tech giants like Amazon, Microsoft, and Google.
@@ -109,7 +104,7 @@ export default function BlogPost() {
 
                 <h3 className="text-xl font-bold mt-8 mb-3">Why Is Industrial and Logistics Real Estate Thriving?</h3>
                 <p>
-                    The permanent shift toward e-commerce and the "reshoring" of American manufacturing has created insatiable demand for industrial real estate. Mega-warehouses, last-mile delivery distribution centers, and cold-storage facilities near major interstate highways are seeing record rent growth. 
+                    The permanent shift toward e-commerce and the "reshoring" of American manufacturing has created insatiable demand for industrial real estate. Mega-warehouses, last-mile delivery distribution centers, and cold-storage facilities near major interstate highways are seeing record rent growth.
                 </p>
 
                 <h3 className="text-xl font-bold mt-8 mb-3">Why Is Sunbelt Multifamily Real Estate Seeing Record Growth?</h3>
@@ -147,9 +142,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Strategies for the 2026 CRE Reset?</h2>
                     <p className="text-lg text-slate-700 mb-6">

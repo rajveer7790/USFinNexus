@@ -1,3 +1,4 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
@@ -8,9 +9,7 @@ import PersonalLoanSeoContent from './PersonalLoanSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
-const PersonalLoanClient = nextDynamic(() => import('./PersonalLoanClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import PersonalLoanClient from './PersonalLoanClient';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -59,10 +58,10 @@ export default function PersonalLoanPage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Personal Loan Calculator', item: '/calculators/personal-loan' }]} />
             <PersonalLoanClient />
-            <PersonalLoanSeoContent />
+
             <SemrushIntentSection slug="personal-loan" />
             <CalculatorFAQ faqs={PERSONAL_LOAN_FAQS} title="Personal Loans — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="personal-loan" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="personal-loan" /></main>
     );
 }

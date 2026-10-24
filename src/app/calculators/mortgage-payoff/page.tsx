@@ -1,3 +1,4 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
@@ -7,9 +8,8 @@ import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
 import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
-const MortgageCalculator = dynamic(() => import('../mortgage/MortgageCalculatorClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import PayoffClient from './PayoffClient';
+import CalculatorFAQ from '@/components/CalculatorFAQ';
 
 export const metadata: Metadata = {
     title: "Mortgage Payoff Calculator 2026: Extra Payment Savings",
@@ -39,17 +39,13 @@ export default function MortgagePayoffPage() {
                 dateModified="2026-08-09"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Mortgage Payoff', item: '/calculators/mortgage-payoff' }]} />
-            <MortgageCalculator
-                initialTab="extra"
-                heading="Mortgage Payoff Calculator"
-                intro="Add a recurring principal payment to estimate a faster payoff date and lower lifetime interest."
-            />
+            <PayoffClient />
             <SemrushIntentSection slug="mortgage-payoff" />
 
             <article className="prose prose-slate max-w-4xl mx-auto mt-12">
                 <h2>How to calculate a faster mortgage payoff</h2>
                 <p>
-                    Enter the current loan balance as the home price, set the down payment to zero, then enter the note rate, remaining term and extra monthly principal. The extra-payment view compares the scheduled loan with the accelerated plan. Results are estimates; your servicer&apos;s daily interest, payment timing and escrow handling can create small differences.
+                    Enter the current principal balance, remaining months, note rate and extra principal directly. Monthly, annual and immediate one-time payments are modeled without reducing the original required payment. The extra-payment view compares the scheduled loan with the accelerated plan. Results are estimates; your servicer&apos;s daily interest, payment timing and escrow handling can create small differences.
                 </p>
                 <h2>Extra-payment scenarios worth comparing</h2>
                 <ul>
@@ -67,6 +63,6 @@ export default function MortgagePayoffPage() {
                 </p>
             </article>
         <ContextualInternalLinks currentSlug="mortgage-payoff" showBlogs showCalculators />
-        </main>
+        <CalculatorFAQ faqs={[{question:"Does an extra payment lower my required payment?",answer:"Not automatically. Extra principal generally shortens payoff and reduces interest while the contractual payment remains due. A servicer-approved recast is a different transaction."},{question:"Can I enter a one-time lump sum?",answer:"Yes. This model applies it immediately to principal while keeping the original required payment. An annual extra payment is applied every 12 months."},{question:"Does this include escrow?",answer:"No. Taxes, homeowners insurance and escrow refunds are separate from loan principal and interest. They do not disappear when you make extra principal payments."},{question:"Is this a payoff statement?",answer:"No. Obtain a dated payoff statement from your servicer for daily interest, fees and exact good-through dates before paying the balance in full."},{question:"Should I pay fees for a biweekly program?",answer:"Compare the quoted setup and debit fees with making extra principal yourself. One extra monthly payment per year can be approximated by adding one-twelfth of the monthly P&I each month, without claiming the timing is identical."}]} /><CalculatorBenchmarks slug="mortgage-payoff" /></main>
     );
 }

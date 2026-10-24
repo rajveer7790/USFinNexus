@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is the conforming loan limit for 2026?', acceptedAnswer: { '@type': 'Answer', text: 'For 2026, the baseline conforming loan limit for one-unit properties in most of the United States has increased to $806,500. In designated high-cost areas, the limit can reach up to $1,209,750.' } },
-    { '@type': 'Question', name: 'What are the FHA loan limits for 2026?', acceptedAnswer: { '@type': 'Answer', text: 'The 2026 FHA loan limit "floor" (the lowest limit for low-cost areas) is $524,225. The FHA "ceiling" (the maximum limit in high-cost areas) is $1,209,750.' } },
-    { '@type': 'Question', name: 'Do VA loans have a maximum limit in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'No. For veterans with full entitlement, there is no maximum VA loan limit. You can borrow as much as a lender is willing to approve based on your income and credit, with $0 down payment.' } },
-] }) }} />
         <ArticleSchema
             title="2026 Conforming Loan Limits: Conventional, FHA, and VA Guide"
             description="The FHFA has announced the 2026 conforming loan limits. See how much you can borrow before needing a Jumbo loan."

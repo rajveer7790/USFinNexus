@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'Can I trade in a car if I still owe money on the loan?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The dealership will pay off your remaining loan balance to your current bank. However, if you owe more on the loan than the car is worth, that negative equity does not magically disappear. The dealership will roll that debt into your new car loan.' } },
-    { '@type': 'Question', name: 'Does trading in a car lower my sales tax?', acceptedAnswer: { '@type': 'Answer', text: 'In most states, yes. If you buy a new car for $30,000 and the dealer gives you $10,000 for your trade-in, you are only taxed on the $20,000 difference. This is a legitimate financial benefit of trading in rather than selling the car privately.' } },
-    { '@type': 'Question', name: 'Why should I negotiate the trade-in separately?', acceptedAnswer: { '@type': 'Answer', text: 'If you negotiate both at the same time, the dealer will play a "shell game." If you demand more money for your trade-in, the dealer will agree, but they will secretly raise the interest rate or the purchase price of the new car to compensate. Always finalize the out-the-door price of the new car before mentioning you have a trade-in.' } },
-] }) }} />
         <ArticleSchema
             title="Trade-In Value and Auto Loans: How Dealerships Hide Negative Equity"
             description="Learn how dealerships use the 'Trade-In Shell Game' to trap buyers in negative equity auto loans."
@@ -64,7 +59,7 @@ export default function BlogPost() {
                 </p>
 
                 <p>
-                    Dealerships love trade-ins. They make a massive profit margin by buying your old car below wholesale value and flipping it on their used lot. To convince you to accept their lowball offer, they deploy a tactic known as the <strong>Trade-In Shell Game</strong>. 
+                    Dealerships love trade-ins. They make a massive profit margin by buying your old car below wholesale value and flipping it on their used lot. To convince you to accept their lowball offer, they deploy a tactic known as the <strong>Trade-In Shell Game</strong>.
                 </p>
                 <p>
                     Here is exactly how the math works, how negative equity destroys your new loan, and the unbreakable rule for negotiating a trade-in in 2026.
@@ -72,7 +67,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">How Does the Mathematics of a Trade-In Work?</h2>
                 <p>
-                    When you trade in a car, you are executing two entirely separate financial transactions simultaneously: you are selling a used car to a business, and you are buying a different car from that same business. 
+                    When you trade in a car, you are executing two entirely separate financial transactions simultaneously: you are selling a used car to a business, and you are buying a different car from that same business.
                 </p>
                 <p>
                     The financial impact of the trade-in depends entirely on whether you have <strong>Positive Equity</strong> or <strong>Negative Equity</strong> in your old car.
@@ -108,7 +103,7 @@ export default function BlogPost() {
                     If you complain that they are only offering you $12,000 for your trade-in when Kelley Blue Book says it is worth $14,000, the salesman will say: <em>"You know what, I'll talk to my manager. We really want your business. We will give you the full $14,000 for your trade-in."</em>
                 </p>
                 <p>
-                    You feel like you just won. But while you were celebrating, the salesman walked into the back room and increased the interest rate on your new loan from 6% to 8%, or they secretly removed a $2,000 rebate from the price of the new car. 
+                    You feel like you just won. But while you were celebrating, the salesman walked into the back room and increased the interest rate on your new loan from 6% to 8%, or they secretly removed a $2,000 rebate from the price of the new car.
                 </p>
                 <p>
                     The dealership still made their exact same profit margin. They just moved the numbers around on the paper to make you feel victorious. This is the shell game.
@@ -119,13 +114,13 @@ export default function BlogPost() {
                     Before you decide to skip the dealership and sell your car privately on Facebook Marketplace or Craigslist, you must calculate the <strong>Sales Tax Shield</strong>.
                 </p>
                 <p>
-                    In the vast majority of U.S. states, when you trade in a vehicle, you only pay sales tax on the <em>difference</em> between the new car's price and your trade-in's value. 
+                    In the vast majority of U.S. states, when you trade in a vehicle, you only pay sales tax on the <em>difference</em> between the new car's price and your trade-in's value.
                 </p>
                 <p>
-                    If you buy a $40,000 car, and your state sales tax is 7%, you would normally owe $2,800 in tax. However, if you trade in a car worth $15,000, you are only taxed on the $25,000 difference. Your tax bill drops to $1,750. 
+                    If you buy a $40,000 car, and your state sales tax is 7%, you would normally owe $2,800 in tax. However, if you trade in a car worth $15,000, you are only taxed on the $25,000 difference. Your tax bill drops to $1,750.
                 </p>
                 <p>
-                    By trading the car in, you saved <strong>$1,050 in taxes</strong>. If you try to sell the car privately to a stranger, you must sell it for <em>at least</em> $1,050 more than the dealer offered you just to break even mathematically. 
+                    By trading the car in, you saved <strong>$1,050 in taxes</strong>. If you try to sell the car privately to a stranger, you must sell it for <em>at least</em> $1,050 more than the dealer offered you just to break even mathematically.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Are the Unbreakable Rules of Trade-Ins?</h2>
@@ -157,9 +152,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">How Do You Master the Dealership Negotiation?</h2>
                     <p className="text-lg text-slate-700 mb-6">

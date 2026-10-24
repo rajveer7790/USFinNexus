@@ -1,3 +1,4 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
@@ -5,9 +6,7 @@ import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import AffordabilitySeoContentV2 from './AffordabilitySeoContentV2';
 
-const AffordabilityClient = nextDynamic(() => import('./AffordabilityClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import AffordabilityClient from './AffordabilityClient';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
@@ -87,6 +86,6 @@ export default function AffordabilityPage() {
             <AffordabilitySeoContentV2 />
             <CalculatorFAQ faqs={AFFORDABILITY_FAQS} title="Home Affordability Calculator FAQs" />
         <ContextualInternalLinks currentSlug="affordability" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="affordability" /></main>
     );
 }

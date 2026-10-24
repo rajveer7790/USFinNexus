@@ -34,38 +34,6 @@ export default function PostComponent() {
                 keywords={['pre-approval', 'pre-qualification', 'mortgage process']}
             />
 
-            <script type="application/ld+json" dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": "What is the difference between pre-qualification and pre-approval?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Pre-qualification is an informal estimate of how much you might be able to borrow based on unverified information you provide to a lender. Pre-approval is a formal process where the lender pulls your credit and verifies your tax returns, pay stubs, and bank statements to issue a binding commitment to lend you money."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Does getting pre-approved hurt my credit score?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes, but only slightly. A pre-approval requires a hard credit pull, which typically drops your score by 3 to 5 points. However, if you shop with multiple lenders within a 45-day window, the credit bureaus treat all those pulls as a single inquiry, minimizing the impact."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Can I make an offer on a house with just a pre-qualification?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "You can try, but in today's competitive real estate market, sellers and listing agents will almost certainly reject your offer. They require a verified pre-approval letter to prove you actually have the funding secured."
-                            }
-                        }
-                    ]
-                })
-            }} />
 
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[

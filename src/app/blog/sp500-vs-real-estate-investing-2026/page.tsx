@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'Which has better historical returns: Stocks or Real Estate?', acceptedAnswer: { '@type': 'Answer', text: 'On paper, the S&P 500 wins. Historically, the U.S. stock market averages roughly 10% annual returns over a 30-year period. Real estate (residential housing) historically appreciates at roughly 4% to 5% per year. However, this simple math completely ignores the massive power of real estate leverage, which entirely changes the equation.' } },
-    { '@type': 'Question', name: 'Why does Real Estate create more millionaires?', acceptedAnswer: { '@type': 'Answer', text: 'Because of Leverage. If you invest $50,000 in the stock market, you earn returns on $50,000. But if you take that same $50,000 and use it as a 10% down payment on a $500,000 rental property, you capture the appreciation on the entire $500,000 asset. If the house goes up 5% in value, you just made $25,000, which is a massive 50% return on your actual cash investment.' } },
-    { '@type': 'Question', name: 'What is the biggest downside to Real Estate investing?', acceptedAnswer: { '@type': 'Answer', text: 'Real estate is highly illiquid and requires physical labor. If you own the S&P 500 and want to sell $10,000 to pay for a medical bill, you click a button on your phone and the cash is in your bank account in 24 hours. If you own a house, you cannot sell just the kitchen. You must sell the entire house, pay 6% to realtors, and wait 45 days to get your money.' } },
-] }) }} />
         <ArticleSchema
             title="S&P 500 vs. Real Estate: The Ultimate 2026 Investing Showdown"
             description="Should you buy an index fund or a rental property? Learn the mathematical difference between compound interest and real estate leverage."

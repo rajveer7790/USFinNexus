@@ -32,44 +32,6 @@ export const metadata: Metadata = {
 export default function GlobalConflictRealEstateBlog() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
-                {
-                    '@type': 'Question',
-                    name: 'How does global conflict affect the US real estate market?',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'Global conflict affects the US real estate market through three main channels: supply chain disruptions that raise building material costs (lumber, steel, copper, semiconductors), "safe haven" capital flight where wealthy foreign investors park money in US property driving up prices in luxury markets, and interest rate paradoxes where short-term Treasury demand can initially push mortgage rates down before sustained conflict-driven inflation forces the Fed to raise rates. The net effect tends to be higher home prices over the medium term.',
-                    },
-                },
-                {
-                    '@type': 'Question',
-                    name: 'Is real estate a safe haven during geopolitical crises?',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'US real estate is widely considered one of the premier safe-haven assets during geopolitical crises. Unlike stocks or bonds that can lose value rapidly, real estate provides a tangible, income-generating asset whose value is underpinned by housing demand. Historically, US home prices have appreciated during and after major global conflicts. The key caveat is that liquidity is limited—you cannot sell a property overnight like a stock—making it a better store of value than a crisis hedge for most individual investors.',
-                    },
-                },
-                {
-                    '@type': 'Question',
-                    name: 'Do housing prices rise or fall during periods of conflict?',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'In the United States, housing prices have historically risen during periods of international conflict. The primary drivers are supply chain disruptions that increase the cost of new construction (reducing new supply), foreign capital inflows seeking a safe haven, and inflation that increases the nominal value of hard assets like real estate. However, if a conflict triggers a severe domestic recession, local job losses can temporarily depress prices in affected metropolitan areas.',
-                    },
-                },
-                {
-                    '@type': 'Question',
-                    name: 'How does foreign buyer activity change during global conflicts?',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'During global conflicts, foreign buyer activity in US real estate typically increases as wealthy individuals and institutional investors from affected or proximate regions seek to preserve wealth in stable assets. Cities like Miami, New York, and Los Angeles historically see the largest influxes. This cash-heavy demand—often all-cash purchases at or above asking price—disproportionately impacts luxury and upper-mid-tier markets, which can eventually cascade down to more affordable housing segments as sellers at higher price points trade up.',
-                    },
-                },
-            ],
-        }) }} />
         <ArticleSchema
             title="How Global Conflicts Are Impacting US Real Estate in 2026"
             description="Think a war across the globe doesn't affect your local housing market? Think again. Here is how supply chains and foreign capital alter US real estate."
@@ -161,9 +123,9 @@ export default function GlobalConflictRealEstateBlog() {
                     </div>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Strategies for Navigating Real Estate During Global Instability?</h2>
                     <p className="text-lg text-slate-700 mb-6">

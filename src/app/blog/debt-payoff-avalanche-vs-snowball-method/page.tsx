@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'Does the Debt Avalanche save you more money?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, absolutely. By mathematically targeting the debt with the highest interest rate first, you minimize the amount of compound interest the bank can charge you over time. This strategy will always result in paying the least amount of total interest.' } },
-    { '@type': 'Question', name: 'Why do financial advisors recommend the Debt Snowball?', acceptedAnswer: { '@type': 'Answer', text: 'Humans are not robots. Getting out of $50,000 of debt takes years of painful sacrifice. The Debt Snowball targets the smallest balances first, completely ignoring interest rates. Paying off a small debt in month two provides a massive psychological dopamine hit, which studies show increases the probability of the person actually finishing the multi-year journey.' } },
-    { '@type': 'Question', name: 'Can I switch between Avalanche and Snowball?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. A hybrid approach is very common. You might use the Snowball method initially to quickly wipe out two tiny $500 medical bills, getting them out of your life. Once you only have massive debts left (like a $20,000 car loan and a $15,000 student loan), you switch to the Avalanche method to attack the highest interest rate.' } },
-] }) }} />
         <ArticleSchema
             title="Debt Payoff Methods: The Math vs. The Psychology of Avalanche & Snowball"
             description="Are you trying to pay off student loans, car notes, and credit cards? Understand the exact mathematical difference between the Debt Avalanche and Debt Snowball."
@@ -60,11 +55,11 @@ export default function BlogPost() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    If you have $40,000 in consumer debt scattered across a car loan, student loans, and credit cards, your monthly minimum payments are suffocating your ability to build wealth. 
+                    If you have $40,000 in consumer debt scattered across a car loan, student loans, and credit cards, your monthly minimum payments are suffocating your ability to build wealth.
                 </p>
 
                 <p>
-                    When you finally decide to get out of debt, you will encounter two fiercely debated strategies: <strong>The Debt Avalanche</strong> and <strong>The Debt Snowball</strong>. 
+                    When you finally decide to get out of debt, you will encounter two fiercely debated strategies: <strong>The Debt Avalanche</strong> and <strong>The Debt Snowball</strong>.
                 </p>
                 <p>
                     The Avalanche is championed by mathematicians and spreadsheets. The Snowball is championed by behavioral psychologists and personal finance gurus like Dave Ramsey. Here is a deep dive into the exact mechanics of both strategies, complete with real-world math, so you can decide which one fits your personality.
@@ -72,7 +67,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Is the Baseline Rule About Minimum Payments on Everything?</h2>
                 <p>
-                    Regardless of which strategy you choose, the first step is identical: <strong>You must pay the bare minimum on every single debt you owe.</strong> Missing a minimum payment triggers late fees, destroys your credit score, and results in penalty APRs. 
+                    Regardless of which strategy you choose, the first step is identical: <strong>You must pay the bare minimum on every single debt you owe.</strong> Missing a minimum payment triggers late fees, destroys your credit score, and results in penalty APRs.
                 </p>
                 <p>
                     The strategy begins when you find <em>extra</em> money in your budget. If you cut your dining-out budget and pick up a side hustle, you might generate an extra $500 a month. The debate is simply: <strong>Where do you deploy that extra $500?</strong>
@@ -102,7 +97,7 @@ export default function BlogPost() {
                 </ol>
 
                 <p>
-                    <strong>Execution:</strong> You deploy the extra $500 directly at the Credit Card. You are paying $650 a month toward the card, while paying the minimums on the car and medical bill. 
+                    <strong>Execution:</strong> You deploy the extra $500 directly at the Credit Card. You are paying $650 a month toward the card, while paying the minimums on the car and medical bill.
                 </p>
                 <p>
                     Once the credit card is paid off, you take that massive $650 payment and roll it directly into the Car Loan (paying $950 a month toward the car).
@@ -142,7 +137,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Is the Hybrid Debt Payoff Approach?</h2>
                 <p>
-                    What if you want the best of both worlds? Many successful borrowers use a Hybrid Approach. 
+                    What if you want the best of both worlds? Many successful borrowers use a Hybrid Approach.
                 </p>
                 <p>
                     If you have several tiny "nuisance" debts (like a $200 store credit card or a $300 doctor bill), use the <strong>Snowball</strong> method to instantly wipe them out in the first few months. Get them out of your life to simplify your finances and score your quick psychological wins.
@@ -164,9 +159,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">How Do You Maximize Your Chosen Debt Payoff Strategy?</h2>
                     <p className="text-lg text-slate-700 mb-6">

@@ -18,11 +18,6 @@ export const metadata: Metadata = {
 export default function HomeownerTaxDeductionsBlog() {
     return (
         <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-                { '@type': 'Question', name: 'Is PMI tax deductible in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'No under the current IRS homeowner guidance. The itemized deduction for mortgage insurance premiums expired, so PMI premiums cannot currently be claimed as an itemized deduction.' } },
-                { '@type': 'Question', name: 'What is the SALT deduction limit for tax year 2026?', acceptedAnswer: { '@type': 'Answer', text: 'For tax year 2026, the overall SALT limit is $40,400, or $20,200 for married taxpayers filing separately. A phaseout begins above specified modified adjusted gross income levels, with a statutory floor.' } },
-                { '@type': 'Question', name: 'What is the enhanced senior deduction?', acceptedAnswer: { '@type': 'Answer', text: 'For tax years 2025 through 2028, an eligible taxpayer age 65 or older may claim an additional deduction of up to $6,000 per person. Income phaseouts apply, and homeownership is not required.' } }
-            ] }) }} />
 
             <ArticleSchema
                 title="Every Homeowner Tax Deduction You Can Claim in 2026"

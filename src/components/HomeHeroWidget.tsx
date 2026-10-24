@@ -1,4 +1,5 @@
 'use client';
+import { PMMS } from '@/lib/market-data';
 
 import { useState } from 'react';
 import Link from 'next/link';
@@ -23,7 +24,7 @@ function fmt(n: number): string {
 export default function HomeHeroWidget() {
     const [price, setPrice] = useState(450000);
     const [dp, setDp] = useState(20);
-    const [rate, setRate] = useState(7.40);
+    const [rate, setRate] = useState<number>(PMMS.thirtyYear);
     const [term, setTerm] = useState(30);
 
     const loanAmt = price * (1 - dp / 100);

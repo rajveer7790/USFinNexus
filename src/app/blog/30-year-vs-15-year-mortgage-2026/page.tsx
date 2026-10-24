@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'Why are 15-year mortgage rates lower than 30-year rates?', acceptedAnswer: { '@type': 'Answer', text: '15-year mortgage rates are typically 0.5% to 0.75% lower than 30-year rates because they carry less risk for the lender. The lender gets their money back twice as fast, reducing the chance of default and mitigating the risk of inflation eating away at the value of the loan over three decades.' } },
-    { '@type': 'Question', name: 'Is the monthly payment on a 15-year mortgage double?', acceptedAnswer: { '@type': 'Answer', text: 'No. Because the interest rate is lower and you are paying less total interest, the monthly payment on a 15-year mortgage is usually only 40% to 50% higher than a 30-year mortgage, not double.' } },
-    { '@type': 'Question', name: 'Can I pay a 30-year mortgage like a 15-year mortgage?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. You can take out a 30-year mortgage and make extra principal payments each month to pay it off in 15 years. This gives you the flexibility to revert to the lower 30-year payment if you lose your job or face an emergency, though you will pay a slightly higher interest rate compared to locking in a true 15-year term.' } },
-] }) }} />
         <ArticleSchema
             title="30-Year vs 15-Year Mortgage in 2026: Which Saves You More?"
             description="A 15-year mortgage saves you massive amounts of interest, but is it the smartest financial move? Compare the exact math for 2026."
@@ -60,7 +55,7 @@ export default function BlogPost() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    It is the great debate of personal finance: Should you lock in a 15-year mortgage to save hundreds of thousands of dollars in interest, or should you take the 30-year mortgage to maximize your monthly cash flow? 
+                    It is the great debate of personal finance: Should you lock in a 15-year mortgage to save hundreds of thousands of dollars in interest, or should you take the 30-year mortgage to maximize your monthly cash flow?
                 </p>
 
                 <p>
@@ -69,7 +64,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">How Does a 15-Year Mortgage Differ from a 30-Year Mortgage?</h2>
                 <p>
-                    When you apply for a mortgage, the 30-year fixed rate is the default. It is the benchmark product that nearly 90% of American homebuyers choose because it offers the lowest possible mandatory monthly payment. 
+                    When you apply for a mortgage, the 30-year fixed rate is the default. It is the benchmark product that nearly 90% of American homebuyers choose because it offers the lowest possible mandatory monthly payment.
                 </p>
                 <p>
                     However, lenders are eager to offer 15-year terms, and they incentivize buyers to choose them in two specific ways:
@@ -132,7 +127,7 @@ export default function BlogPost() {
                 </div>
 
                 <p>
-                    <strong>The Verdict on the Surface:</strong> The 15-year mortgage requires you to pay an extra $794 per month. But by doing so, you save a staggering <strong>$312,142 in interest</strong>. For many debt-averse individuals, looking at that $510k total interest figure on the 30-year loan is enough to make them instantly choose the 15-year option. 
+                    <strong>The Verdict on the Surface:</strong> The 15-year mortgage requires you to pay an extra $794 per month. But by doing so, you save a staggering <strong>$312,142 in interest</strong>. For many debt-averse individuals, looking at that $510k total interest figure on the 30-year loan is enough to make them instantly choose the 15-year option.
                 </p>
                 <p>
                     But personal finance is never just about avoiding interest. It is about <em>Opportunity Cost</em>.
@@ -140,10 +135,10 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Should You Invest the Difference Instead of Getting a 15-Year Mortgage?</h2>
                 <p>
-                    Financial advisors rarely recommend the 15-year mortgage. Why? Because locking up all of your cash flow inside the walls of your house is generally an inefficient use of capital. 
+                    Financial advisors rarely recommend the 15-year mortgage. Why? Because locking up all of your cash flow inside the walls of your house is generally an inefficient use of capital.
                 </p>
                 <p>
-                    Let's look at the "Invest the Difference" strategy. 
+                    Let's look at the "Invest the Difference" strategy.
                 </p>
                 <p>
                     Assume you take the 30-year mortgage. Your required monthly payment is $794 lower than the 15-year option. Instead of spending that $794 on lifestyle inflation, you diligently invest it every single month into a low-cost S&P 500 index fund inside a tax-advantaged retirement account (like a Roth IRA or 401k).
@@ -210,9 +205,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">Advanced Rate Optimization: Maximizing Your Mortgage</h2>
                     <p className="text-lg text-slate-700 mb-6">
@@ -221,7 +216,7 @@ export default function BlogPost() {
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">1. The 780 FICO Threshold</h3>
                     <p className="text-slate-700 mb-4">
-                        Conventional lenders use "Loan-Level Price Adjustments" (LLPAs) to alter your interest rate based on your credit score and down payment. While a 740 used to be the gold standard, the Federal Housing Finance Agency (FHFA) recently revamped the pricing matrix. 
+                        Conventional lenders use "Loan-Level Price Adjustments" (LLPAs) to alter your interest rate based on your credit score and down payment. While a 740 used to be the gold standard, the Federal Housing Finance Agency (FHFA) recently revamped the pricing matrix.
                     </p>
                     <p className="text-slate-700 mb-4">
                         Today, to secure the absolute lowest published rate without paying massive junk fees, you must hit a FICO score of <strong>780 or higher</strong>. If you are sitting at 750, delaying your application by three months to aggressively pay down credit card balances (lowering your credit utilization below 10%) can bump you over the 780 threshold, saving you thousands over the life of the loan.
@@ -237,7 +232,7 @@ export default function BlogPost() {
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">3. The Broker vs. Retail Bank Dynamic</h3>
                     <p className="text-slate-700 mb-4">
-                        Never accept the first rate quote you receive, especially if it is from your primary retail bank. Retail banks (Chase, Bank of America, Wells Fargo) have massive overhead and often bake higher margins into their mortgage rates. 
+                        Never accept the first rate quote you receive, especially if it is from your primary retail bank. Retail banks (Chase, Bank of America, Wells Fargo) have massive overhead and often bake higher margins into their mortgage rates.
                     </p>
                     <p className="text-slate-700 mb-4">
                         Independent Mortgage Brokers, conversely, operate on thinner margins and wholesale pricing. You should aggressively shop your loan by getting a Loan Estimate from one retail bank, one direct lender (like Rocket Mortgage), and one local mortgage broker. Force them to compete against each other by sending the lowest written estimate to the competitors and asking them to beat it.

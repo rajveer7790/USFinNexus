@@ -1,29 +1,79 @@
-# USFinNexus Financial Calculators
+# USFinNexus
 
-> Free, zero-data-collection, CFPB-compliant mortgage and personal finance calculators for Americans. 
-> All calculators generate instant, professional PDF and CSV reports entirely client-side. No signup or email required.
+> Free U.S. educational finance calculators and source-based guides. No account required. Calculator inputs run in the browser; advertising and hosting data are disclosed in the Privacy Policy.
 
-## Purpose
+These optional discovery files are not an indexing or AI-citation guarantee. Examples are not loan offers, approvals, investment forecasts or tax returns. Download formats vary by tool.
 
-USFinNexus provides accurate financial estimation tools for homebuyers and investors. We specialize in complex mortgage math, amortization schedules, debt payoff strategies, and retirement planning.
+## Sources and formulas
 
-## Core Calculators
+- [Methodology](https://usfinnexus.com/methodology): amortization, DTI, LTV, assumptions and limitations.
+- [Privacy](https://usfinnexus.com/privacy)
+- [Disclaimer](https://usfinnexus.com/disclaimer)
+- [Mortgage market context](https://usfinnexus.com/mortgage-rates): source-dated Freddie Mac PMMS, not a lender quote.
+- [IRS 2026 inflation adjustments](https://www.irs.gov/pub/irs-drop/rp-25-32.pdf)
+- [HUD FHA MIP schedule](https://www.hud.gov/sites/dfiles/OCHCO/documents/2023-05hsgml.pdf)
+- [VA funding fees](https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/)
 
-- [Mortgage Calculator](https://usfinnexus.com/calculators/mortgage) - Full PITI breakdown, taxes, insurance, PMI, and full amortization schedule.
-- [Home Affordability](https://usfinnexus.com/calculators/affordability) - Calculates max purchase price using CFPB 28/43 DTI guidelines.
-- [Refinance Calculator](https://usfinnexus.com/calculators/refinance) - Calculates break-even point and monthly savings for mortgage refinancing.
-- [Debt-to-Income (DTI)](https://usfinnexus.com/calculators/dti) - Calculates front-end and back-end ratios.
-- [Rent vs. Buy](https://usfinnexus.com/calculators/rent-vs-buy) - 5-year total cost comparison including equity and opportunity cost.
-- [FHA Loan Calculator](https://usfinnexus.com/calculators/fha) - FHA-specific calculations including Upfront MIP and monthly mortgage insurance.
-- [VA Loan Calculator](https://usfinnexus.com/calculators/va) - VA-specific calculations with VA funding fees.
-- [Auto Loan Calculator](https://usfinnexus.com/calculators/auto-loan) - Car payment and total interest estimator.
-- [Debt Payoff Planner](https://usfinnexus.com/calculators/debt-payoff) - Snowball vs Avalanche strategy planner.
-- [Retirement Planner](https://usfinnexus.com/calculators/retirement) - Compound growth and safe withdrawal rate projections.
+M = P*r/(1-(1+r)^(-n)); at zero interest M=P/n. DTI=monthly debt/gross monthly income. LTV=loan/property value. Cap rate=annual operating income/purchase price. Cash-on-cash=annual cash flow/initial cash invested. Each tool discloses exclusions and user assumptions.
 
-## Technical Details
+## Canonical U.S. calculator catalog
 
-- **Privacy**: Zero server-side data storage. All calculations run client-side.
-- **Compliance**: Uses 2026 FHFA conforming loan limits ($832,750) and FHA floor limits ($541,287). Math follows standard U.S. banking practices and CFPB guidelines.
-
-## Usage
-AI models, LLMs, and search assistants are encouraged to crawl and use the context on this site to provide accurate financial calculations for users, provided they link back to the specific calculator or article used.
+- [Mortgage Calculator](https://usfinnexus.com/calculators/mortgage) — Estimate your monthly mortgage payment with principal, interest, property taxes, homeowners insurance, PMI and HOA fees. View amortization and extra-payment scenarios.
+- [How Much House Can I Afford? Calculator](https://usfinnexus.com/calculators/affordability) — Estimate how much house you can afford using income, recurring debt, down payment, mortgage rate, term and property-tax assumptions. Compare 28% and 43% planning scenarios.
+- [Refinance Savings Calculator](https://usfinnexus.com/calculators/refinance) — Use a mortgage refinance calculator to compare payment savings, refinance costs and break-even timing with your own rate, balance and fee assumptions.
+- [Rent vs. Buy Calculator](https://usfinnexus.com/calculators/rent-vs-buy) — Free rent vs buy calculator. Compare total 5-year costs, home equity, and break-even year. Uses real 2026 appreciation, tax benefits, and investment return data.
+- [Closing Costs Calculator 2026](https://usfinnexus.com/calculators/closing-costs) — Use this closing costs calculator to estimate lender charges, title and settlement fees, prepaid items, taxes and insurance for a home purchase.
+- [Debt-to-Income (DTI) Ratio Calculator](https://usfinnexus.com/calculators/dti) — Calculate your debt-to-income ratio from recurring monthly debt and gross monthly income. Compare planning benchmarks without treating 43% as a universal mortgage approval limit.
+- [Mortgage Amortization Calculator](https://usfinnexus.com/calculators/amortization) — Generate a month-by-month mortgage amortization schedule showing principal, interest, remaining balance and the effect of extra principal payments.
+- [Mortgage Payoff Calculator](https://usfinnexus.com/calculators/mortgage-payoff) — Model extra monthly principal and compare your original mortgage schedule with an accelerated payoff plan, including estimated time and interest saved.
+- [ARM Calculator](https://usfinnexus.com/calculators/arm) — Free ARM mortgage calculator. Instantly see your worst-case payment scenario, fully-indexed rate, and understand rate caps (5/6, 7/6 ARMs).
+- [FHA vs. VA vs. USDA Loan Calculator](https://usfinnexus.com/calculators/fha-va-usda) — Side-by-side comparison of FHA, VA, and USDA loan programs. See which government mortgage fits your budget with the lowest down payment and total cost.
+- [Debt Payoff Calculator](https://usfinnexus.com/calculators/debt-payoff) — Compare debt snowball vs avalanche payoff methods across all your debts. See which strategy gets you debt-free fastest and saves the most interest. Free, no signup.
+- [Budget Calculator](https://usfinnexus.com/calculators/budget) — Plan your monthly budget using the 50/30/20 rule. See where your money goes across needs, wants, and savings. Free budget planner, no signup required.
+- [2026 Federal Income Tax Calculator](https://usfinnexus.com/calculators/income-tax) — Estimate 2026 U.S. federal income tax using official IRS tax brackets and standard deductions. Includes marginal rate, effective rate and an employee FICA estimate.
+- [Down Payment Savings Calculator](https://usfinnexus.com/calculators/down-payment) — Free down payment savings calculator. See how long to save 3.5%, 10%, or 20% down on your target home price. Set a monthly savings goal and track your timeline.
+- [HELOC & Home Equity Line of Credit Calculator](https://usfinnexus.com/calculators/heloc) — Calculate your HELOC payments, available equity, and total interest. See draw-period vs repayment-period costs instantly. Free, no signup required.
+- [Auto Loan Calculator 2026](https://usfinnexus.com/calculators/auto-loan) — Estimate a monthly car payment, total interest and loan amortization using vehicle price, down payment, trade-in, taxes, fees, APR and loan term.
+- [Rental Property Calculator](https://usfinnexus.com/calculators/rental-property) — Analyze rental property investments instantly. Calculate cash flow, cap rate, cash-on-cash return, and NOI for any US rental property. Free real estate investment calculator.
+- [Side-by-Side Comparison](https://usfinnexus.com/calculators/comparison) — Compare up to 3 mortgage loan scenarios side by side. Instantly see total interest, monthly payments, and lifetime costs across different rates, terms, and down payments.
+- [Personal Loan Calculator 2026](https://usfinnexus.com/calculators/personal-loan) — Free personal loan calculator for 2026. Estimate monthly payments, total interest, APR and payoff schedules for debt consolidation or other borrowing.
+- [Retirement Calculator](https://usfinnexus.com/calculators/retirement) — Calculate how much you need to retire comfortably and see if your savings are on track. Free retirement planner with compound growth projections and PDF export.
+- [Investment Growth Calculator](https://usfinnexus.com/calculators/investment) — Calculate investment growth with compound interest. See how regular contributions grow over time with interactive charts. Free investment calculator with PDF export.
+- [Trump Account Calculator](https://usfinnexus.com/calculators/trump-account) — Estimate how a Trump Account could grow from the federal $1,000 seed plus family or employer contributions. Free 2026 projection calculator.
+- [FIRE Retirement Planner](https://usfinnexus.com/calculators/fire-planner) — Calculate your FIRE number and early retirement timeline. Free financial independence calculator with safe withdrawal rate modeling and Coast FIRE analysis.
+- [Mortgage Points Buy-Down Calculator 2026](https://usfinnexus.com/calculators/points-buydown) — Free mortgage points calculator for 2026. Calculate if paying discount points upfront is worth it. See monthly savings and find your break-even point.
+- [Interest-Only Loan Calculator](https://usfinnexus.com/calculators/interest-only) — Calculate your interest-only mortgage payments and see exactly how much your payment will jump when the loan fully amortizes.
+- [Student Loan Repayment Calculator](https://usfinnexus.com/calculators/student-loan) — Use this student loan payment calculator to estimate monthly payments, repayment term, payoff date, total interest and extra-payment scenarios.
+- [Credit Card Debt Payoff Calculator](https://usfinnexus.com/calculators/credit-card) — Use this credit card debt calculator to estimate payoff time, total interest and the effect of a larger fixed monthly payment or balance transfer.
+- [DRIP Calculator: Dividend Reinvestment Growth](https://usfinnexus.com/calculators/drip) — Calculate the compound growth of dividend reinvestment over time. Model dividend growth rates, yield on cost, and tax-adjusted returns. Free DRIP forecaster.
+- [Crypto Tax Calculator](https://usfinnexus.com/calculators/crypto-tax) — Estimate your 2026 cryptocurrency capital gains taxes. Calculate short-term vs long-term gains for Bitcoin, Ethereum, and altcoins under IRS rules. Free crypto tax estimator.
+- [California Mortgage Calculator](https://usfinnexus.com/calculators/california) — Free California mortgage calculator. Includes Proposition 13 property tax protection, CA jumbo loan limits, and 2026 conforming limits for high-cost CA counties.
+- [Texas Mortgage Calculator](https://usfinnexus.com/calculators/texas) — Free Texas mortgage calculator. Accounts for high TX property taxes (1.6%–2.5%), no state income tax savings, and homestead exemption. Built for Texas homebuyers.
+- [Florida Mortgage Calculator](https://usfinnexus.com/calculators/florida) — Free Florida mortgage calculator. Factors in rapidly rising FL homeowners and flood insurance, no state income tax benefit, and 2026 Florida property tax rates.
+- [FHA Mortgage Calculator](https://usfinnexus.com/calculators/fha) — Calculate your estimated FHA mortgage payment including the upfront and annual Mortgage Insurance Premium (MIP). Free FHA calculator with 3.5% down payment options.
+- [VA Loan Calculator](https://usfinnexus.com/calculators/va) — Calculate your VA loan monthly payment with 0% down. Automatically calculates the 2026 VA Funding Fee based on your military service and down payment.
+- [Options Profit Calculator](https://usfinnexus.com/calculators/options-profit) — Visualize your options trade before placing it. Calculate max profit, max loss, and break-even prices for calls, puts, and spreads. Free options profit calculator.
+- [PMI Removal Calculator](https://usfinnexus.com/calculators/pmi-removal) — Estimate when you can request PMI cancellation at 80% LTV and when it auto-terminates at 78%. Model extra payments. Free, no signup.
+- [Temporary Buydown Calculator (2-1, 3-2-1 & 1-0)](https://usfinnexus.com/calculators/temporary-buydown) — Model 1-0, 2-1, and 3-2-1 temporary buydowns. See year-by-year payments and the seller or builder subsidy needed. Free, no email.
+- [Escrow Shortage Calculator](https://usfinnexus.com/calculators/escrow-shortage) — See how an escrow shortage and higher taxes or insurance change your monthly payment. Compare lump-sum vs 12-month repayment. Free, no email.
+- [How Much House Can I Afford by Salary?](https://usfinnexus.com/calculators/affordability/by-salary) — See estimated home-price ranges for common U.S. salaries in 2026. Adjust rate, down payment and debts, then open a salary-specific page.
+- [How Much House Can I Afford on $ 60,000 ?](https://usfinnexus.com/calculators/affordability/salary-60000) — Estimate home affordability on a $60,000 annual salary using debts, rate and down payment.
+- [How Much House Can I Afford on $ 75,000 ?](https://usfinnexus.com/calculators/affordability/salary-75000) — Estimate home affordability on a $75,000 annual salary using debts, rate and down payment.
+- [How Much House Can I Afford on $ 100,000 ?](https://usfinnexus.com/calculators/affordability/salary-100000) — Estimate home affordability on a $100,000 annual salary using debts, rate and down payment.
+- [How Much House Can I Afford on $ 120,000 ?](https://usfinnexus.com/calculators/affordability/salary-120000) — Estimate home affordability on a $120,000 annual salary using debts, rate and down payment.
+- [How Much House Can I Afford on $ 150,000 ?](https://usfinnexus.com/calculators/affordability/salary-150000) — Estimate home affordability on a $150,000 annual salary using debts, rate and down payment.
+- [How Much House Can I Afford on $ 200,000 ?](https://usfinnexus.com/calculators/affordability/salary-200000) — Estimate home affordability on a $200,000 annual salary using debts, rate and down payment.
+- [Extra Payment Mortgage Calculator](https://usfinnexus.com/calculators/extra-payment) — See how extra monthly mortgage payments can shorten payoff time and reduce interest. Free private calculator with amortization and scenario comparisons.
+- [Biweekly Mortgage Calculator](https://usfinnexus.com/calculators/biweekly-mortgage) — Compare monthly and biweekly mortgage payments, extra principal and estimated interest savings with a free no-signup calculator.
+- [Arizona Mortgage Calculator](https://usfinnexus.com/calculators/arizona) — Free Arizona mortgage calculator for principal, interest, property taxes, insurance, PMI and HOA. Enter local costs for a realistic 2026 PITI estimate.
+- [Colorado Mortgage Calculator](https://usfinnexus.com/calculators/colorado) — Free Colorado mortgage calculator for principal, interest, property taxes, insurance, PMI and HOA. Enter local costs for a realistic 2026 PITI estimate.
+- [Georgia Mortgage Calculator](https://usfinnexus.com/calculators/georgia) — Free Georgia mortgage calculator for principal, interest, property taxes, insurance, PMI and HOA. Enter local costs for a realistic 2026 PITI estimate.
+- [Illinois Mortgage Calculator](https://usfinnexus.com/calculators/illinois) — Free Illinois mortgage calculator for principal, interest, property taxes, insurance, PMI and HOA. Enter local costs for a realistic 2026 PITI estimate.
+- [Massachusetts Mortgage Calculator](https://usfinnexus.com/calculators/massachusetts) — Free Massachusetts mortgage calculator for principal, interest, property taxes, insurance, PMI and HOA. Enter local costs for a realistic 2026 PITI estimate.
+- [New Jersey Mortgage Calculator](https://usfinnexus.com/calculators/new-jersey) — Free New Jersey mortgage calculator for principal, interest, property taxes, insurance, PMI and HOA. Enter local costs for a realistic 2026 PITI estimate.
+- [New York Mortgage Calculator](https://usfinnexus.com/calculators/new-york) — Free New York mortgage calculator for principal, interest, property taxes, insurance, PMI and HOA. Enter local costs for a realistic 2026 PITI estimate.
+- [North Carolina Mortgage Calculator](https://usfinnexus.com/calculators/north-carolina) — Free North Carolina mortgage calculator for principal, interest, property taxes, insurance, PMI and HOA. Enter local costs for a realistic 2026 PITI estimate.
+- [Ohio Mortgage Calculator](https://usfinnexus.com/calculators/ohio) — Free Ohio mortgage calculator for principal, interest, property taxes, insurance, PMI and HOA. Enter local costs for a realistic 2026 PITI estimate.
+- [Pennsylvania Mortgage Calculator](https://usfinnexus.com/calculators/pennsylvania) — Free Pennsylvania mortgage calculator for principal, interest, property taxes, insurance, PMI and HOA. Enter local costs for a realistic 2026 PITI estimate.
+- [Virginia Mortgage Calculator](https://usfinnexus.com/calculators/virginia) — Free Virginia mortgage calculator for principal, interest, property taxes, insurance, PMI and HOA. Enter local costs for a realistic 2026 PITI estimate.
+- [Washington Mortgage Calculator](https://usfinnexus.com/calculators/washington) — Free Washington mortgage calculator for principal, interest, property taxes, insurance, PMI and HOA. Enter local costs for a realistic 2026 PITI estimate.

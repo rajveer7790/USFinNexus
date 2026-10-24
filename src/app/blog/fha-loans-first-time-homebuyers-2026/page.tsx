@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is an FHA loan?', acceptedAnswer: { '@type': 'Answer', text: 'An FHA loan is a mortgage issued by a private bank but heavily insured by the Federal Housing Administration. Because the federal government promises to pay the bank if you default, the bank is willing to lend you hundreds of thousands of dollars with extremely relaxed credit and down payment requirements.' } },
-    { '@type': 'Question', name: 'What credit score do I need for an FHA loan in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'To qualify for the maximum 96.5% financing (meaning a 3.5% down payment), you only need a FICO credit score of 580. If your credit score is between 500 and 579, you can still get an FHA loan, but you will be required to put 10% down.' } },
-    { '@type': 'Question', name: 'What is the catch with an FHA loan?', acceptedAnswer: { '@type': 'Answer', text: 'The catch is the Mortgage Insurance Premium (MIP). Unlike Conventional loans where PMI can eventually be canceled, FHA loans require you to pay a permanent monthly MIP for the entire 30-year life of the loan (if you put less than 10% down). The only way to remove it is to completely refinance into a Conventional loan years later.' } },
-] }) }} />
         <ArticleSchema
             title="FHA Loans: The Ultimate 2026 Guide for First-Time Homebuyers"
             description="A 580 credit score and a 3.5% down payment are all you need to buy a house in 2026. Learn how the FHA loan program bypasses strict bank requirements."
@@ -64,14 +59,14 @@ export default function BlogPost() {
                 </p>
 
                 <p>
-                    But the federal government believes that homeownership stabilizes society. To encourage banks to lend to working-class Americans, the government created the <strong>Federal Housing Administration (FHA)</strong>. 
+                    But the federal government believes that homeownership stabilizes society. To encourage banks to lend to working-class Americans, the government created the <strong>Federal Housing Administration (FHA)</strong>.
                 </p>
                 <p>
                     The FHA does not actually lend you money. Instead, they provide <em>insurance</em> to your local bank. The FHA tells the bank: "Give this person a mortgage, and if they stop paying, the US Government will reimburse you." Because the bank faces zero risk, they suddenly become very happy to give you a house. Here are the exact requirements to trigger this government loophole in 2026.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Are the Mathematical Requirements?</h2>
-                
+
                 <h3 className="text-xl font-bold mt-8 mb-3">What Is the 3.5% Down Payment Requirement?</h3>
                 <p>
                     The most famous benefit of the FHA loan is the tiny down payment requirement. You only need to put down <strong>3.5%</strong> of the purchase price. For a $400,000 house, that is just $14,000 (instead of the $80,000 required for a 20% down payment).
@@ -82,7 +77,7 @@ export default function BlogPost() {
 
                 <h3 className="text-xl font-bold mt-8 mb-3">What Is the 580 Credit Score Requirement?</h3>
                 <p>
-                    Conventional mortgages typically require a pristine 620+ credit score just to apply, and a 740 to get a good interest rate. The FHA requires a bare minimum FICO score of <strong>580</strong> to qualify for the 3.5% down payment. 
+                    Conventional mortgages typically require a pristine 620+ credit score just to apply, and a 740 to get a good interest rate. The FHA requires a bare minimum FICO score of <strong>580</strong> to qualify for the 3.5% down payment.
                 </p>
                 <p>
                     If your credit score is heavily damaged (between 500 and 579), the FHA will still approve you, but they require you to increase your down payment to 10% to offset the extreme risk.
@@ -99,7 +94,7 @@ export default function BlogPost() {
                         <div>
                             <h3 className="font-bold mb-2">What Is the Catch: Permanent Mortgage Insurance?</h3>
                             <p className="text-sm m-0 text-gray-700">
-                                The government does not provide this insurance for free. To fund the FHA program, you must pay a <strong>Mortgage Insurance Premium (MIP)</strong>. 
+                                The government does not provide this insurance for free. To fund the FHA program, you must pay a <strong>Mortgage Insurance Premium (MIP)</strong>.
                                 <br/><br/>
                                 First, you pay a 1.75% upfront fee at closing. Then, you pay a monthly MIP fee (usually 0.55% of the loan balance annually) every single month. Unlike a Conventional loan where PMI falls off once you reach 20% equity, <strong>FHA MIP is permanent</strong> for the entire 30-year life of the loan. The only way to remove it is to refinance the entire house years later.
                             </p>
@@ -145,7 +140,7 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
 
                 <div className="bg-white p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">

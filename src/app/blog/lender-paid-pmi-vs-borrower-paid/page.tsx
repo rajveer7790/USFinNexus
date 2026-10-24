@@ -30,12 +30,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-                { '@type': 'Question', name: 'What is Lender-Paid PMI (LPMI)?', acceptedAnswer: { '@type': 'Answer', text: 'Lender-Paid PMI is a mortgage structure where the bank pays the private mortgage insurance premium upfront on your behalf. In exchange, they charge you a slightly higher interest rate for the entire life of the loan.' } },
-                { '@type': 'Question', name: 'What is Borrower-Paid PMI (BPMI)?', acceptedAnswer: { '@type': 'Answer', text: 'Borrower-Paid PMI is the standard form of mortgage insurance. You pay a separate fee every month on top of your principal and interest payment. Under federal law, this fee drops off once you reach 20% equity.' } },
-                { '@type': 'Question', name: 'Is LPMI cheaper than standard PMI?', acceptedAnswer: { '@type': 'Answer', text: 'In the short term, LPMI often results in a lower total monthly payment. However, because the higher interest rate is permanent, LPMI becomes significantly more expensive if you stay in the loan for more than 10 years without refinancing.' } },
-                { '@type': 'Question', name: 'Can I cancel Lender-Paid PMI?', acceptedAnswer: { '@type': 'Answer', text: 'No. Because LPMI is baked directly into your interest rate, you cannot simply request that it be canceled once you reach 20% equity. The only way to remove the higher interest rate is to refinance the entire mortgage.' } }
-            ] }) }} />
 
             <ArticleSchema
                 title="Lender-Paid PMI (LPMI) vs Borrower-Paid PMI (BPMI): Which Costs Less?"

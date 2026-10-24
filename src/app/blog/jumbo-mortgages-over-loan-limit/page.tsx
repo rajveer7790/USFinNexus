@@ -34,38 +34,6 @@ export default function PostComponent() {
                 keywords={['jumbo loan', 'conforming limit', 'luxury real estate']}
             />
 
-            <script type="application/ld+json" dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": "What is a Jumbo Mortgage?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "A jumbo mortgage is a home loan that exceeds the conforming loan limits set by the Federal Housing Finance Agency (FHFA). Because these loans cannot be purchased by Fannie Mae or Freddie Mac, they carry higher risk for the lender."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "What is the Jumbo Loan Limit for 2026?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "For 2026, the baseline conforming loan limit for most of the U.S. is expected to be around $800,000 for a one-unit property. In designated 'high-cost' areas like San Francisco or New York City, the limit can exceed $1.2 million before a loan is considered Jumbo."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Are Jumbo mortgage rates higher than conventional rates?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Historically, yes. However, in recent years, Jumbo rates are often highly competitive and can sometimes be lower than conventional rates, because lenders want the business of high-net-worth individuals."
-                            }
-                        }
-                    ]
-                })
-            }} />
 
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[

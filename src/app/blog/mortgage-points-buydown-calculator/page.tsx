@@ -36,38 +36,6 @@ export default function PostComponent() {
                 keywords={['mortgage points', 'discount points', 'interest rate buydown']}
             />
 
-            <script type="application/ld+json" dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": "How much does 1 mortgage point cost?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "One mortgage point always costs exactly 1% of your total loan amount. If you are borrowing $400,000, one point will cost you $4,000 in upfront cash at closing."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "How much does 1 point lower my interest rate?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "One point costs 1% of the loan amount, but the rate reduction is not fixed. Compare each lender’s written par-rate and points options because the credit, loan type, term and market can change the pricing."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Are mortgage points tax deductible?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Points may be deductible as prepaid mortgage interest when IRS requirements are met, but limits apply. Review IRS Publication 936 and ask a tax professional; refinancing points are generally spread over the loan term rather than deducted all at once."
-                            }
-                        }
-                    ]
-                })
-            }} />
 
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[

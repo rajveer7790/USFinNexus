@@ -25,11 +25,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'Why is the energy market booming in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'The massive proliferation of Artificial Intelligence has created an unprecedented demand for electricity. Modern AI data centers require 10 to 50 times more power than traditional internet servers. This massive surge in demand is severely straining the aging global power grid, forcing trillions of dollars in new energy investments.' } },
-    { '@type': 'Question', name: 'Why are nuclear stocks going up?', acceptedAnswer: { '@type': 'Answer', text: 'Tech giants like Microsoft and Amazon require "baseload" power—electricity that runs 24/7 without interruption. Solar and wind cannot provide baseload power because the sun sets and the wind stops. Nuclear energy is the only carbon-free energy source capable of powering AI data centers around the clock, sparking a massive global nuclear renaissance.' } },
-    { '@type': 'Question', name: 'What are the best energy ETFs for retail investors?', acceptedAnswer: { '@type': 'Answer', text: 'Retail investors looking for broad exposure usually buy the Energy Select Sector SPDR Fund (XLE) for massive oil and natural gas dividends. For exposure to the nuclear boom, investors look toward specialized ETFs like the Global X Uranium ETF (URA) or the Sprott Uranium Miners ETF (URNM).' } },
-] }) }} />
         <ArticleSchema
             title="Energy Market Investing: Navigating the 2026 Grid Crisis"
             description="Artificial Intelligence is consuming massive amounts of electricity, sparking a historic nuclear renaissance. Learn how to invest in the 2026 energy sector."
@@ -117,7 +112,7 @@ export default function BlogPost() {
 
                 <h3 className="text-xl font-bold mt-8 mb-3">2. Natural Gas Infrastructure</h3>
                 <p>
-                    While nuclear is the long-term solution, it takes 5 to 10 years to build a reactor. In the short term, the only way to keep the grid from collapsing today is Natural Gas. It burns twice as clean as coal and can be turned on instantly to meet spikes in demand. 
+                    While nuclear is the long-term solution, it takes 5 to 10 years to build a reactor. In the short term, the only way to keep the grid from collapsing today is Natural Gas. It burns twice as clean as coal and can be turned on instantly to meet spikes in demand.
                 </p>
                 <p>
                     Investors are heavily targeting <strong>Midstream Energy Companies</strong> (the companies that own the physical pipelines transporting the gas). These pipeline companies operate like toll roads, collecting cash regardless of the price of the gas inside the pipe, making them incredible dividend generators.
@@ -125,7 +120,7 @@ export default function BlogPost() {
 
                 <h3 className="text-xl font-bold mt-8 mb-3">3. The Traditional Oil Giants (XLE)</h3>
                 <p>
-                    Despite the green energy transition, global demand for oil in 2026 remains at record highs, driven by emerging markets and the petrochemicals required to build modern technology. 
+                    Despite the green energy transition, global demand for oil in 2026 remains at record highs, driven by emerging markets and the petrochemicals required to build modern technology.
                 </p>
                 <p>
                     The <strong>Energy Select Sector SPDR Fund (XLE)</strong> holds the biggest American oil titans (ExxonMobil, Chevron). Because these companies have become highly disciplined—choosing to pay massive cash dividends to shareholders rather than aggressively drilling new speculative wells—they act as powerful inflation hedges and cash-flow generators for retirees.
@@ -133,7 +128,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">The Geopolitical Risk</h2>
                 <p>
-                    Energy investing carries one massive risk that software investing does not: Geopolitics. 
+                    Energy investing carries one massive risk that software investing does not: Geopolitics.
                 </p>
                 <p>
                     The price of oil, gas, and uranium is heavily manipulated by foreign governments, OPEC cartels, and global supply chain disruptions. If a major war breaks out, or if a government unexpectedly bans the export of a critical metal, your energy ETF can swing violently overnight. Never allocate your entire portfolio to a single commodity sector.
@@ -152,9 +147,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">Advanced Considerations for the 2026 Energy Market</h2>
                     <p className="text-lg text-slate-700 mb-6">

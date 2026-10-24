@@ -1,12 +1,11 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import TexasSeoContent from './TexasSeoContent';
 
-const MortgageCalculator = nextDynamic(() => import('../mortgage/MortgageCalculatorClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import MortgageCalculator from '../mortgage/MortgageCalculatorClient';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
 
@@ -15,7 +14,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Texas Mortgage Calculator 2026 — Property Taxes & No Income Tax',
-    description: 'Free Texas mortgage calculator. Accounts for high TX property taxes (1.6%–2.5%), no state income tax savings, and homestead exemption. Built for Texas homebuyers.',
+    description: 'Free Texas mortgage calculator. Accounts for high TX property taxes (1.6%–2.5%), no state income tax savings, and homestead exemption. Built for Texas homebuyers.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/texas' },
     openGraph: {
         type: 'website',
@@ -41,9 +40,9 @@ export default function TexasPage() {
                 url="https://usfinnexus.com/calculators/texas"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Texas Mortgage', item: '/calculators/texas' }]} />
-                <MortgageCalculator heading="Texas Mortgage Calculator" intro="Model a Texas mortgage using your own tax and insurance assumptions." />
+                <MortgageCalculator initialState="TX" heading="Texas Mortgage Calculator" intro="Model a Texas mortgage using your own tax and insurance assumptions." />
             <TexasSeoContent />
         <ContextualInternalLinks currentSlug="texas" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="texas" /></main>
     );
 }

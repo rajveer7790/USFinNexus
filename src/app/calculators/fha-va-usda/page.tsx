@@ -1,3 +1,4 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
@@ -8,16 +9,14 @@ import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 import FhaVaUsdaSeoContent from './FhaVaUsdaSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 
-const GovLoanClient = nextDynamic(() => import('./GovLoanClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import GovLoanClient from './GovLoanClient';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'FHA vs VA vs USDA Loan Calculator 2026 — Compare Government Loans',
-    description: 'Side-by-side comparison of FHA, VA, and USDA loan programs. See which government mortgage fits your budget with the lowest down payment and total cost.',
+    description: 'Side-by-side comparison of FHA, VA, and USDA loan programs. See which government mortgage fits your budget with the lowest down payment and total cost.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/fha-va-usda' },
     openGraph: {
         type: 'website',
@@ -58,11 +57,11 @@ export default function GovLoanComparisonPage() {
                 url="https://usfinnexus.com/calculators/fha-va-usda"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Gov Loan Comparison', item: '/calculators/fha-va-usda' }]} />
-            <GovLoanClient heading="FHA vs. VA vs. USDA Loan Calculator" />
+            <GovLoanClient compare heading="FHA vs. VA vs. USDA Loan Calculator" />
             <SemrushIntentSection slug="fha-va-usda" />
-            <FhaVaUsdaSeoContent />
+
             <CalculatorFAQ faqs={GOV_LOAN_FAQS} title="Government Loans — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="fha-va-usda" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="fha-va-usda" /></main>
     );
 }

@@ -34,38 +34,6 @@ export default function PostComponent() {
                 keywords={['streamline refinance', 'fha streamline', 'va irrrl']}
             />
 
-            <script type="application/ld+json" dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": "What is a Streamline Refinance?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "A Streamline Refinance is a special government program for existing FHA, VA, and USDA loans that allows borrowers to lower their interest rate with virtually no paperwork. It typically requires no appraisal and no income verification."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Does an FHA Streamline require an appraisal?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "No. The primary benefit of a streamline refinance is that it waives the appraisal requirement. Even if your home has lost value and you are 'underwater' on your mortgage, you can still refinance to a lower rate."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "What is the Net Tangible Benefit rule?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "To prevent predatory lending, the government requires lenders to prove the refinance provides a 'Net Tangible Benefit.' Usually, this means your new interest rate must drop by at least 0.5%, preventing lenders from charging thousands in fees for a negligible rate drop."
-                            }
-                        }
-                    ]
-                })
-            }} />
 
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[

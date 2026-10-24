@@ -1,12 +1,11 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import AmortizationSeoContent from './AmortizationSeoContent';
 
-const MortgageCalculator = nextDynamic(() => import('../mortgage/MortgageCalculatorClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import MortgageCalculator from '../mortgage/MortgageCalculatorClient';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
 import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
@@ -47,6 +46,6 @@ export default function AmortizationPage() {
             <SemrushIntentSection slug="amortization" />
             <AmortizationSeoContent />
         <ContextualInternalLinks currentSlug="amortization" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="amortization" /></main>
     );
 }

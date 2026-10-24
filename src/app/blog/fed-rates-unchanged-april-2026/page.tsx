@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'Why did the Federal Reserve hold rates unchanged in April 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Despite Wall Street projections that the Fed would begin aggressively cutting rates in early 2026, recent economic data showed that "core inflation" (especially in housing and services) remained stubbornly stuck around 3.2%, refusing to drop to the Fed\'s strict 2.0% target. As a result, Chairman Powell announced rates would remain "higher for longer" to fully crush inflation.' } },
-    { '@type': 'Question', name: 'Will mortgage rates ever drop?', acceptedAnswer: { '@type': 'Answer', text: 'Mortgage rates are not directly set by the Fed, but they closely follow the 10-Year Treasury yield, which spiked after the Fed\'s announcement. As long as the Fed holds the baseline rate high, 30-year mortgage rates will likely remain trapped in the high 6% to low 7% range for the foreseeable future.' } },
-    { '@type': 'Question', name: 'Who benefits from the Fed keeping rates high?', acceptedAnswer: { '@type': 'Answer', text: 'Savers and retirees are the massive winners. Because the Fed rate remains high, banks are forced to continue offering 4.5% to 5.0% APY on High-Yield Savings Accounts (HYSAs) and Certificates of Deposit (CDs), allowing conservative investors to generate massive risk-free cash flow.' } },
-] }) }} />
         <ArticleSchema
             title="Fed Holds Rates Unchanged in April 2026: What It Means For You"
             description="The Federal Reserve shocked the market by holding interest rates flat in April 2026. Here is exactly what this means for your mortgage and savings."
@@ -64,7 +59,7 @@ export default function BlogPost() {
                 </p>
 
                 <p>
-                    They were all wrong. 
+                    They were all wrong.
                 </p>
                 <p>
                     In a sobering press conference following the April FOMC meeting, Federal Reserve Chairman Jerome Powell announced that the benchmark federal funds rate would remain entirely unchanged. The much-anticipated "rate cuts of 2026" have officially been delayed.
@@ -78,7 +73,7 @@ export default function BlogPost() {
                     The Federal Reserve operates on a dual mandate: Maximize employment and keep prices stable. Their official target for price stability is a <strong>2.0% annual inflation rate</strong>.
                 </p>
                 <p>
-                    For the last several months, headline inflation has plummeted from its pandemic-era highs. However, in Q1 of 2026, the data stalled. Core inflation (which strips out volatile food and energy prices) became stubbornly "sticky" at roughly 3.2%. 
+                    For the last several months, headline inflation has plummeted from its pandemic-era highs. However, in Q1 of 2026, the data stalled. Core inflation (which strips out volatile food and energy prices) became stubbornly "sticky" at roughly 3.2%.
                 </p>
                 <p>
                     The primary culprit? <strong>Services and Shelter.</strong> While the price of physical goods (like TVs and used cars) has dropped, the cost of car insurance, healthcare, and rent has continued to rise. Because the economy is still running too hot, the Fed realized that cutting interest rates now would risk reigniting the inflation fire.
@@ -100,10 +95,10 @@ export default function BlogPost() {
 
                 <h3 className="text-xl font-bold mt-8 mb-3">How Does the Fed Pause Affect Homebuyers?</h3>
                 <p>
-                    The Federal Reserve does not directly set the 30-year fixed mortgage rate. However, mortgages closely track the <strong>10-Year Treasury Yield</strong>, which spiked heavily the moment the Fed announced the pause. 
+                    The Federal Reserve does not directly set the 30-year fixed mortgage rate. However, mortgages closely track the <strong>10-Year Treasury Yield</strong>, which spiked heavily the moment the Fed announced the pause.
                 </p>
                 <p>
-                    As a result, 30-year mortgage rates will likely remain trapped in the upper 6% to low 7% range through the summer of 2026. 
+                    As a result, 30-year mortgage rates will likely remain trapped in the upper 6% to low 7% range through the summer of 2026.
                 </p>
                 <p>
                     <em>Advice for Buyers:</em> Stop waiting for the mythical "rate drop." If you find a home you can afford at today's rates, buy it. If rates miraculously drop in 2027, you can simply refinance. But if you wait, you risk home prices appreciating even further out of your reach.
@@ -111,10 +106,10 @@ export default function BlogPost() {
 
                 <h3 className="text-xl font-bold mt-8 mb-3">What Does the Fed Pause Mean for Savers?</h3>
                 <p>
-                    The absolute biggest winners of the April Fed decision are savers and retirees. 
+                    The absolute biggest winners of the April Fed decision are savers and retirees.
                 </p>
                 <p>
-                    Because the Fed rate remains high, commercial banks must compete for your deposits. High-Yield Savings Accounts (HYSAs), Certificates of Deposit (CDs), and Money Market Funds will continue to offer highly lucrative <strong>4.5% to 5.0% APY</strong> yields. 
+                    Because the Fed rate remains high, commercial banks must compete for your deposits. High-Yield Savings Accounts (HYSAs), Certificates of Deposit (CDs), and Money Market Funds will continue to offer highly lucrative <strong>4.5% to 5.0% APY</strong> yields.
                 </p>
                 <p>
                     <em>Advice for Savers:</em> If you have $50,000 sitting in a traditional brick-and-mortar checking account earning 0.01%, you are literally losing money to inflation every day. Move your emergency fund to an online HYSA immediately to capture these massive, risk-free yields while they last.
@@ -141,7 +136,7 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
 
                 <div className="bg-white p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">

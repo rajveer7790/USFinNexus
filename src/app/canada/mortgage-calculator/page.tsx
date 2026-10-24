@@ -9,9 +9,9 @@ export const dynamic = 'force-static';
 export const metadata: Metadata = {
     title: 'Canadian Mortgage Calculator 2026: CMHC & Stress Test',
     description: 'Free Canadian mortgage calculator with CAD payments, minimum down payment, CMHC insurance estimate and federal mortgage stress test. No signup.',
-    alternates: { canonical: 'https://usfinnexus.com/canada/mortgage-calculator' },
+    alternates: { canonical: 'https://usfinnexus.com/canada/mortgage-calculator', languages: { 'en-CA': 'https://usfinnexus.com/canada/mortgage-calculator' } },
     openGraph: {
-        type: 'website',
+        type: 'website', locale: 'en_CA',
         title: 'Canadian Mortgage Calculator 2026',
         description: 'Estimate Canadian mortgage payments, default-insurance premium and stress-test payment.',
         url: 'https://usfinnexus.com/canada/mortgage-calculator',

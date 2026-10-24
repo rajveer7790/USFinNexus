@@ -1,3 +1,4 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
@@ -8,9 +9,7 @@ import IncomeTaxSeoContent from './IncomeTaxSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
-const IncomeTaxClient = nextDynamic(() => import('./IncomeTaxClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import IncomeTaxClient from './IncomeTaxClient';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -71,6 +70,6 @@ export default function IncomeTaxPage() {
             <SemrushIntentSection slug="income-tax" />
             <CalculatorFAQ faqs={INCOME_TAX_FAQS} title="2026 Federal Income Tax Calculator FAQs" />
         <ContextualInternalLinks currentSlug="income-tax" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="income-tax" /></main>
     );
 }

@@ -34,38 +34,6 @@ export default function PostComponent() {
                 keywords={['rate and term', 'cash out refinance', 'home equity']}
             />
 
-            <script type="application/ld+json" dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": "What is the difference between a rate-and-term refinance and a cash-out refinance?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "A rate-and-term refinance simply replaces your current mortgage with a new one to get a lower interest rate or change the loan length, but your total debt stays the same. A cash-out refinance replaces your current mortgage with a larger one, and you receive the difference in cash, increasing your total debt."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Are interest rates higher on a cash-out refinance?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes. Because a cash-out refinance increases the lender's risk by stripping equity from the home, lenders typically charge an interest rate that is 0.125% to 0.5% higher than a standard rate-and-term refinance."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Can I deduct the interest on a cash-out refinance?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Under current IRS rules, you can only deduct the interest on the 'cash-out' portion of the loan if you use the money to 'buy, build, or substantially improve' the home that secures the loan. If you use the cash to pay off credit card debt or buy a car, the interest on that specific portion is not tax-deductible."
-                            }
-                        }
-                    ]
-                })
-            }} />
 
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[

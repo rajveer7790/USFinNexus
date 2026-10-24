@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is a Debt-to-Income (DTI) ratio?', acceptedAnswer: { '@type': 'Answer', text: 'Your Debt-to-Income (DTI) ratio is the percentage of your gross monthly income (before taxes) that goes toward paying your monthly debt obligations, including your future mortgage payment. It is the primary metric banks use to determine if you can actually afford a home.' } },
-    { '@type': 'Question', name: 'What is the maximum DTI allowed for a mortgage in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'There is no universal maximum that applies to every mortgage. The General Qualified Mortgage definition uses price-based thresholds rather than the former fixed 43% DTI cap. Program rules, automated underwriting, documented income, credit, assets and compensating factors can change the result.' } },
-    { '@type': 'Question', name: 'How can I lower my DTI quickly before buying a house?', acceptedAnswer: { '@type': 'Answer', text: 'The fastest way to lower your DTI is to completely pay off an installment loan that has a high monthly payment but a low total balance (like a car loan with $4,000 left). Wiping out a $400/month car payment instantly frees up $400 in your DTI calculation, drastically increasing your mortgage purchasing power.' } },
-] }) }} />
         <ArticleSchema
             title="What Is Debt-to-Income Ratio (DTI) and Why Does It Matter?"
             description="Calculate DTI, understand what lenders count and learn practical ways to improve your ratio before applying."
@@ -64,7 +59,7 @@ export default function BlogPost() {
                 </p>
 
                 <p>
-                    A perfect credit score proves you are <em>willing</em> to pay your debts. It does not prove you have the <em>capacity</em> to pay a new $3,000-a-month mortgage. 
+                    A perfect credit score proves you are <em>willing</em> to pay your debts. It does not prove you have the <em>capacity</em> to pay a new $3,000-a-month mortgage.
                 </p>
                 <p>
                     DTI is one underwriting input, not an automatic pass-or-fail score. A lower ratio generally gives a borrower more room for a proposed housing payment, while a higher ratio can limit options or require stronger compensating factors.
@@ -114,7 +109,7 @@ export default function BlogPost() {
                 <p>
                     DTI remains an important underwriting input, but the CFPB&apos;s current General Qualified Mortgage definition does not impose the former universal 43% cap. Program rules and automated underwriting can produce different acceptable ranges:
                 </p>
-                
+
                 <ul className="list-disc pl-6 space-y-4 mb-8">
                     <li>
                         <strong>Conventional Loans:</strong> Fannie Mae and Freddie Mac strongly prefer a DTI below <strong>36% to 43%</strong>. If you have excellent credit and large cash reserves, their automated underwriting software may occasionally approve a DTI up to 50%.
@@ -146,7 +141,7 @@ export default function BlogPost() {
                 <p>
                     Because getting a massive raise at work takes time, decreasing debt is the fastest strategy. However, you must do it correctly. <strong>You must target the monthly payment, not the total balance.</strong>
                 </p>
-                
+
                 <h3 className="text-xl font-bold mt-8 mb-3">The Auto Loan Hack</h3>
                 <p>
                     Imagine you have $10,000 sitting in a savings account. You have two debts:
@@ -175,9 +170,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">Advanced DTI Strategies for Homebuyers</h2>
                     <p className="text-lg text-slate-700 mb-6">

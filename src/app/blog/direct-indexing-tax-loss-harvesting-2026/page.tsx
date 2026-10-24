@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is Direct Indexing?', acceptedAnswer: { '@type': 'Answer', text: 'Instead of buying a single share of an S&P 500 ETF (like SPY), direct indexing uses algorithmic software and fractional shares to simultaneously purchase all 500 individual stocks that make up the index. You own the exact same assets, but you hold 500 separate micro-positions instead of one ETF share.' } },
-    { '@type': 'Question', name: 'How does Direct Indexing save money on taxes?', acceptedAnswer: { '@type': 'Answer', text: 'Even in a year where the overall S&P 500 goes up 15%, roughly 100 to 150 individual companies within the index will have gone down in value. Direct indexing software automatically sells those specific 150 losing stocks to capture the tax loss, and immediately replaces them with similar companies. You keep the overall market gain, but harvest massive tax deductions.' } },
-    { '@type': 'Question', name: 'Can regular investors use Direct Indexing in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Historically, this strategy required a $5 million minimum balance at a private wealth management firm. However, due to zero-commission trading and the invention of fractional shares, robo-advisors in 2026 now offer direct indexing to retail investors with balances as low as $100,000.' } },
-] }) }} />
         <ArticleSchema
             title="Direct Indexing & Tax-Loss Harvesting: The 2026 Guide"
             description="Why are wealthy investors abandoning traditional ETFs? Learn how Direct Indexing algorithms use micro-losses to generate massive tax deductions."
@@ -75,7 +70,7 @@ export default function BlogPost() {
                     Assume you buy $100,000 worth of an S&P 500 ETF (like Vanguard's VOO). You own a single financial product that represents 500 different companies.
                 </p>
                 <p>
-                    If the stock market has a great year, your ETF might go up 15%. Your portfolio is now worth $115,000. 
+                    If the stock market has a great year, your ETF might go up 15%. Your portfolio is now worth $115,000.
                 </p>
                 <p>
                     However, beneath the surface, all 500 companies did not go up. Usually, about 350 companies went up significantly, while 150 companies actually <em>lost</em> money. Because you own the ETF as a single packaged wrapper, you are completely blind to those 150 losers. You simply see a net +15% gain on your screen. You cannot use those 150 losers to offset your taxes.
@@ -83,21 +78,21 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Is Direct Indexing and How Does It Solve the ETF Problem?</h2>
                 <p>
-                    <strong>Direct Indexing</strong> shatters the ETF wrapper. Instead of buying one share of VOO, your brokerage account uses algorithmic software to simultaneously buy fractional shares of <em>all 500 individual companies</em>. 
+                    <strong>Direct Indexing</strong> shatters the ETF wrapper. Instead of buying one share of VOO, your brokerage account uses algorithmic software to simultaneously buy fractional shares of <em>all 500 individual companies</em>.
                 </p>
                 <p>
-                    You own the exact same assets in the exact same proportions. Your portfolio will still go up 15%. But now, your account holds 500 separate, distinct positions. 
+                    You own the exact same assets in the exact same proportions. Your portfolio will still go up 15%. But now, your account holds 500 separate, distinct positions.
                 </p>
-                
+
                 <h3 className="text-xl font-bold mt-8 mb-3">How Does Direct Indexing Unlock Tax-Loss Harvesting?</h3>
                 <p>
-                    Because you hold the companies individually, the algorithm can now hunt for tax deductions on a daily basis. 
+                    Because you hold the companies individually, the algorithm can now hunt for tax deductions on a daily basis.
                 </p>
                 <p>
-                    Let's say the overall market is booming, but a specific airline stock in the S&P 500 crashes by 20% on a Tuesday. The algorithm instantly sells your fractional shares of that airline stock, capturing a real, legally recognized financial loss. 
+                    Let's say the overall market is booming, but a specific airline stock in the S&P 500 crashes by 20% on a Tuesday. The algorithm instantly sells your fractional shares of that airline stock, capturing a real, legally recognized financial loss.
                 </p>
                 <p>
-                    The algorithm then instantly takes that cash and buys a <em>competitor's</em> airline stock to maintain your portfolio's balance (carefully navigating the IRS "Wash-Sale" rule). 
+                    The algorithm then instantly takes that cash and buys a <em>competitor's</em> airline stock to maintain your portfolio's balance (carefully navigating the IRS "Wash-Sale" rule).
                 </p>
 
                 <div className="card p-6 mb-8 border-l-4 border-green-500 bg-green-50">
@@ -106,7 +101,7 @@ export default function BlogPost() {
                         <div>
                             <h3 className="font-bold mb-2">What Is the IRS Benefit of Direct Indexing?</h3>
                             <p className="text-sm m-0 text-gray-700">
-                                Over the course of the year, the software will harvest hundreds of these micro-losses across the 150 failing companies. By December, you might have generated <strong>$3,000 in harvested losses</strong>. 
+                                Over the course of the year, the software will harvest hundreds of these micro-losses across the 150 failing companies. By December, you might have generated <strong>$3,000 in harvested losses</strong>.
                                 <br/><br/>
                                 You can use those losses to offset capital gains on other investments (like selling real estate or crypto). Even better, the IRS allows you to use up to $3,000 of harvested losses to directly reduce your ordinary W-2 income. If you are in the 24% tax bracket, a $3,000 deduction instantly saves you <strong>$720 in cash on your tax return</strong>, even though your actual portfolio went up 15% that year!
                             </p>
@@ -181,9 +176,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">Is Direct Indexing Right for You?</h2>
                     <p className="text-lg text-slate-700 mb-6">

@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is an AI wealth manager?', acceptedAnswer: { '@type': 'Answer', text: 'An AI wealth manager goes beyond a traditional robo-advisor (which just balances a few ETFs). True AI wealth managers in 2026 use large language models and predictive algorithms to optimize asset allocation, execute direct indexing, and monitor global news sentiment in real-time to adjust portfolio risk.' } },
-    { '@type': 'Question', name: 'Is it safe to let AI manage my investments?', acceptedAnswer: { '@type': 'Answer', text: 'While algorithmic trading is highly efficient, retail AI wealth managers operate with strict "guardrails" regulated by the SEC. The AI cannot make wild, speculative bets (like short-selling meme stocks) with your retirement funds. It operates strictly within your pre-defined risk tolerance.' } },
-    { '@type': 'Question', name: 'How does AI improve tax-loss harvesting?', acceptedAnswer: { '@type': 'Answer', text: 'AI systems can monitor thousands of individual stocks simultaneously. If one stock in your portfolio drops, the AI can instantaneously sell it to harvest the tax loss, and immediately buy a highly correlated (but mathematically distinct) stock to maintain your exact market exposure, saving you thousands on your tax bill.' } },
-] }) }} />
         <ArticleSchema
             title="The AI Revolution in Personal Finance: Top Tools for Smart Investors in 2026"
             description="How AI wealth managers and algorithmic direct indexing are fundamentally disrupting retail investing in 2026."
@@ -64,7 +59,7 @@ export default function BlogPost() {
                 </p>
 
                 <p>
-                    In 2026, Artificial Intelligence has moved aggressively past chatbots and basic automation. We are now in the era of <strong>Generative AI Wealth Management</strong>. Algorithms are democratizing the ultra-complex tax and investment strategies that were previously locked behind the doors of Wall Street hedge funds and family offices, making them available to retail investors with just $5,000 to their name. 
+                    In 2026, Artificial Intelligence has moved aggressively past chatbots and basic automation. We are now in the era of <strong>Generative AI Wealth Management</strong>. Algorithms are democratizing the ultra-complex tax and investment strategies that were previously locked behind the doors of Wall Street hedge funds and family offices, making them available to retail investors with just $5,000 to their name.
                 </p>
                 <p>
                     Here is exactly how AI is rewiring the personal finance landscape in 2026, and how you can leverage these tools to rapidly scale your net worth.
@@ -85,7 +80,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Is AI-Powered Direct Indexing?</h2>
                 <p>
-                    If there is one specific technology defining 2026 retail investing, it is algorithmic Direct Indexing. 
+                    If there is one specific technology defining 2026 retail investing, it is algorithmic Direct Indexing.
                 </p>
                 <p>
                     Historically, if you wanted to invest in the S&P 500, you bought a single ETF (like VOO or SPY). The problem? If the overall ETF goes up, you owe taxes on the gains when you sell. You cannot claim a tax loss on the individual underlying companies within the ETF that went down.
@@ -108,7 +103,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">How Does AI Enable Hyper-Personalized ESG and Value Alignment?</h2>
                 <p>
-                    Because AI allows for direct indexing at scale, investors no longer have to settle for the moral compromises of broad ETFs. 
+                    Because AI allows for direct indexing at scale, investors no longer have to settle for the moral compromises of broad ETFs.
                 </p>
                 <p>
                     In 2026, you can simply type a prompt into your AI brokerage interface: <em>"Build me a portfolio that tracks the Russell 1000, but completely exclude any companies involved in fossil fuels, private prisons, or tobacco, and overweight companies with high female board representation."</em>
@@ -127,7 +122,7 @@ export default function BlogPost() {
                         <Cpu className="w-8 h-8 text-blue-500 mb-3" />
                         <h4 className="font-bold text-lg mb-2">Algorithmic Hallucinations</h4>
                         <p className="text-gray-600 text-sm">
-                            Generative AI models are predictive text engines; they are prone to "hallucinations" (stating falsehoods with absolute confidence). If a retail investor asks an AI chatbot for tax advice on a complex real estate transaction, a hallucinated answer could result in severe IRS penalties. 
+                            Generative AI models are predictive text engines; they are prone to "hallucinations" (stating falsehoods with absolute confidence). If a retail investor asks an AI chatbot for tax advice on a complex real estate transaction, a hallucinated answer could result in severe IRS penalties.
                         </p>
                     </div>
                     <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
@@ -157,9 +152,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Is the Future of AI in Wealth Building?</h2>
                     <p className="text-lg text-slate-700 mb-6">

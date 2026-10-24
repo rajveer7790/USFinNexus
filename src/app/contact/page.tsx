@@ -39,23 +39,18 @@ export default function ContactPage() {
                     </div>
                     <h2 className="text-lg font-bold mb-2" style={{ color: 'var(--color-text)' }}>Email Us</h2>
                     <p className="text-sm mb-4 leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>
-                        For all inquiries, please reach out to us via email. We strive to respond to all messages within 24-48 hours.
+                        For corrections, include the affected URL and the issue. Never send SSNs, account numbers, tax returns or login credentials.
                     </p>
-                    <p className="text-sm font-bold" style={{ color: '#00C853' }}>
-                        contact [at] usfinnexus [dot] com
-                    </p>
+                    <a href="mailto:contact@usfinnexus.com" className="text-sm font-bold text-blue-700">contact@usfinnexus.com</a>
                 </div>
 
                 <div className="card p-6 flex flex-col items-center text-center">
                     <div className="w-12 h-12 rounded-full flex justify-center items-center mb-4" style={{ backgroundColor: 'rgba(0, 200, 83, 0.1)' }}>
                         <MapPin className="w-6 h-6" style={{ color: '#00C853' }} />
                     </div>
-                    <h2 className="text-lg font-bold mb-2" style={{ color: 'var(--color-text)' }}>Mailing Address</h2>
+                    <h2 className="text-lg font-bold mb-2" style={{ color: 'var(--color-text)' }}>Online Publication</h2>
                     <p className="text-sm mb-4 leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>
-                        USFinNexus<br />
-                        Suite 100, Financial District<br />
-                        New York, NY 10005<br />
-                        United States
+                        USFinNexus is an online educational publisher serving U.S. readers. We do not publish an unverified U.S. office or mailing address. Contact us by email for website corrections.
                     </p>
                 </div>
             </div>

@@ -1,12 +1,11 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import RentVsBuySeoContent from './RentVsBuySeoContent';
 
-const RentVsBuyClient = nextDynamic(() => import('./RentVsBuyClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import RentVsBuyClient from './RentVsBuyClient';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
 
@@ -15,7 +14,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Rent vs Buy Calculator 2026 — Should I Rent or Buy a Home?',
-    description: 'Free rent vs buy calculator. Compare total 5-year costs, home equity, and break-even year. Uses real 2026 appreciation, tax benefits, and investment return data.',
+    description: 'Free rent vs buy calculator. Compare total 5-year costs, home equity, and break-even year. Uses real 2026 appreciation, tax benefits, and investment return data.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/rent-vs-buy' },
     openGraph: {
         type: 'website',
@@ -44,6 +43,6 @@ export default function RentVsBuyPage() {
             <RentVsBuyClient />
             <RentVsBuySeoContent />
         <ContextualInternalLinks currentSlug="rent-vs-buy" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="rent-vs-buy" /></main>
     );
 }

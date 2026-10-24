@@ -18,11 +18,6 @@ export const metadata: Metadata = {
 export default function UnclaimedMoneyGuideBlog() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'How do I find unclaimed money from the government?', acceptedAnswer: { '@type': 'Answer', text: 'The primary free resources for finding unclaimed money: (1) MissingMoney.com — searches all state unclaimed property databases simultaneously; (2) USA.gov/unclaimed-money — government resource directory; (3) PBGC.gov — for lost pension benefits; (4) DOL.gov/agencies/ebsa — for forgotten 401(k) accounts; (5) HUD.gov/fha — for FHA mortgage insurance refunds; (6) IRS.gov/refunds — for uncashed federal tax refunds.' } },
-    { '@type': 'Question', name: 'Is it really free to search for unclaimed money?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, completely free. All legitimate unclaimed property searches are provided free by state and federal governments. Never pay a company to search for unclaimed money on your behalf — if they find something, they are legally entitled to charge up to 10-15% of the value as a fee, but the search itself is always free through official government sites.' } },
-    { '@type': 'Question', name: 'How much unclaimed money is there in the USA?', acceptedAnswer: { '@type': 'Answer', text: 'State governments currently hold over $70 billion in unclaimed property, according to the National Association of Unclaimed Property Administrators (NAUPA). Approximately 1 in 10 Americans has unclaimed money waiting for them. The average unclaimed property claim is $1,780, but some claims can be worth tens or hundreds of thousands of dollars from old investment accounts or life insurance policies.' } },
-] }) }} />
         <ArticleSchema
             title="How to Find Unclaimed Money in the USA (2026 Guide)"
             description="Step-by-step guide to finding unclaimed money, forgotten 401(k) accounts, pension benefits, and lost bank accounts using free government databases."

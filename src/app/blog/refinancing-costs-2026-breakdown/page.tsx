@@ -34,38 +34,6 @@ export default function PostComponent() {
                 keywords={['refinancing costs', 'mortgage fees', 'closing costs 2026']}
             />
 
-            <script type="application/ld+json" dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": "How much does it cost to refinance a mortgage in 2026?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "On average, refinancing a mortgage costs between 2% and 5% of the total loan amount. For a $400,000 loan, expect to pay between $8,000 and $20,000 in closing costs, though many of these fees can be rolled into the loan balance."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "What is a 'No Closing Cost' refinance?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "A 'No Closing Cost' refinance is a marketing trick. The lender simply charges you a slightly higher interest rate and uses the premium to pay the fees on your behalf, or they roll the fees directly into your principal balance. You still pay the costs, just over time instead of upfront."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Which refinance fees are negotiable?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "You can negotiate the Loan Origination Fee, Application Fee, and Underwriting Fee directly with the lender. You can also shop around for your own Title Insurance company to get a better rate."
-                            }
-                        }
-                    ]
-                })
-            }} />
 
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[

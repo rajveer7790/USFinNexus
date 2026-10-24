@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is a 5/1 ARM?', acceptedAnswer: { '@type': 'Answer', text: 'A 5/1 Adjustable-Rate Mortgage (ARM) offers a fixed, heavily discounted interest rate for the first 5 years of the loan. After the initial 5-year period ends, the interest rate will adjust every 1 year based on a specific financial index (like the SOFR) plus a margin.' } },
-    { '@type': 'Question', name: 'Can my ARM payment double overnight?', acceptedAnswer: { '@type': 'Answer', text: 'No. Modern ARMs are heavily regulated and feature strict rate caps. For example, a 2/2/5 cap structure means your rate can only increase by a maximum of 2% in the first adjustment, 2% in subsequent years, and a maximum of 5% over the entire life of the loan.' } },
-    { '@type': 'Question', name: 'Is an ARM a good idea in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'An ARM is an excellent strategic tool if you absolutely know you are going to sell the house or refinance before the fixed period ends (e.g., within 5 to 7 years). If you plan to live in the house forever, the risk of rates adjusting upward in the future often outweighs the initial discount.' } },
-] }) }} />
         <ArticleSchema
             title="Adjustable-Rate Mortgage (ARM) Trends 2026: Is It Worth the Risk?"
             description="Adjustable-Rate Mortgages are surging in popularity. But how dangerous is an ARM in the 2026 economic climate? We break down the math and rate caps."
@@ -64,7 +59,7 @@ export default function BlogPost() {
                 </p>
 
                 <p>
-                    Lenders are aggressively marketing 5/1 and 7/1 ARMs by offering "teaser" rates that are substantially lower than standard 30-year fixed mortgages. The pitch is incredibly compelling: save hundreds of dollars a month right now, and simply refinance or sell before the rate adjusts. 
+                    Lenders are aggressively marketing 5/1 and 7/1 ARMs by offering "teaser" rates that are substantially lower than standard 30-year fixed mortgages. The pitch is incredibly compelling: save hundreds of dollars a month right now, and simply refinance or sell before the rate adjusts.
                 </p>
                 <p>
                     Is it truly that simple? In this comprehensive guide, we tear down the complex mechanics of modern ARMs, explain how federal regulations have changed them, and outline exactly when taking an ARM in 2026 is a brilliant financial maneuver—and when it is a catastrophic mistake.
@@ -72,7 +67,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">How Does an Adjustable-Rate Mortgage (ARM) Work in 2026?</h2>
                 <p>
-                    An Adjustable-Rate Mortgage is exactly what it sounds like: a loan where the interest rate can move up or down over time. However, modern ARMs are "hybrid" products. They do not start adjusting immediately. 
+                    An Adjustable-Rate Mortgage is exactly what it sounds like: a loan where the interest rate can move up or down over time. However, modern ARMs are "hybrid" products. They do not start adjusting immediately.
                 </p>
                 <p>
                     When you look at loan options, you will see numbers like <strong>5/1, 7/1, or 10/1</strong>. These numbers dictate the exact timeline of your risk.
@@ -170,9 +165,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">Advanced ARM Optimization Tactics</h2>
                     <p className="text-lg text-slate-700 mb-6">

@@ -18,11 +18,6 @@ export const metadata: Metadata = {
 export default function TariffsHousingMarketBlog() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'How much are tariffs adding to new home prices in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'The National Association of Home Builders (NAHB) estimates tariffs on steel, aluminum, lumber, and imported building materials added $9,200–$10,900 to the average new home cost in 2026. This primarily affects new construction — existing home prices are less directly impacted but are supported by reduced new supply.' } },
-    { '@type': 'Question', name: 'Do tariffs affect mortgage rates?', acceptedAnswer: { '@type': 'Answer', text: 'Indirectly, yes. Tariffs contribute to inflation by raising construction costs. Higher inflation generally pushes bond yields up, which correlates with higher mortgage rates. Additionally, tariff-related economic uncertainty can cause investors to demand higher risk premiums, further pressuring mortgage-backed securities and rates.' } },
-    { '@type': 'Question', name: 'Should I buy a new or existing home given tariff impacts in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Existing homes are generally a better value in a high-tariff environment since their prices are not directly impacted by construction cost increases. However, existing home inventory is also limited. For new construction, negotiate hard on builder incentives — many are offering mortgage rate buydowns, closing cost assistance, or upgrades to move homes.' } },
-] }) }} />
         <ArticleSchema
             title="How Tariffs Are Raising Home Prices in 2026 (And What You Can Do)"
             description="Tariffs on steel, lumber, and aluminum are adding $9,200–$10,900 to new home costs in 2026. Learn how trade policy impacts your mortgage rate, home price, and buying power."

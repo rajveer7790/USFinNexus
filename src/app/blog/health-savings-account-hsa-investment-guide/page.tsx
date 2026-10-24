@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'Can I invest my HSA funds in stocks and ETFs?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — most HSA providers let you invest your balance in mutual funds, ETFs, and sometimes individual stocks once your account exceeds a minimum cash threshold, typically $500 to $2,000. Growth is completely tax-free as long as you use the money for qualified medical expenses.' } },
-    { '@type': 'Question', name: 'What are the HSA contribution limits for 2026?', acceptedAnswer: { '@type': 'Answer', text: 'For 2026, the IRS set HSA contribution limits at $4,400 for self-only HDHP coverage and $8,750 for family coverage. If you are 55 or older you can contribute an additional $1,000 catch-up contribution on top of those limits.' } },
-    { '@type': 'Question', name: 'What happens to my HSA after age 65?', acceptedAnswer: { '@type': 'Answer', text: 'After age 65 your HSA works like a traditional IRA for non-medical withdrawals — you pay ordinary income tax but no penalty. For qualified medical expenses, including Medicare premiums, withdrawals remain completely tax-free, making the HSA one of the most powerful retirement accounts available.' } },
-] }) }} />
         <ArticleSchema
             title="HSA Investment Guide 2026: Turn Your Health Savings Account Into a Wealth-Building Tool"
             description="Learn how to invest your HSA for triple tax-free growth in 2026. Contribution limits, investment options, Medicare strategy, and step-by-step instructions inside."

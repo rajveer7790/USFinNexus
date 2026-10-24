@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { calcGovLoan, formatCurrency, formatPercent, type GovLoanType } from '@/lib/formulas';
+import { calcGovLoan, calcMonthlyPI, formatCurrency, formatPercent, type GovLoanType } from '@/lib/formulas';
 import { exportGenericCSV } from '@/lib/csvExporter';
 import DisclaimerBanner from '@/components/DisclaimerBanner';
 import { Shield, Info, Table2, Zap } from 'lucide-react';
@@ -14,7 +14,7 @@ const TABS: { key: GovLoanType; label: string; icon: string; color: string }[] =
 
 const LOAN_TERMS = [15, 20, 30];
 
-export default function GovLoanClient({ initialTab = 'fha', heading }: { initialTab?: GovLoanType; heading?: string }) {
+export default function GovLoanClient({ initialTab = 'fha', heading, compare = false }: { initialTab?: GovLoanType; heading?: string; compare?: boolean }) {
     const [loanType, setLoanType] = useState<GovLoanType>(initialTab);
     const [homePrice, setHomePrice] = useState(350000);
     const [downPct, setDownPct] = useState(initialTab === 'fha' ? 3.5 : 0);
@@ -39,10 +39,12 @@ export default function GovLoanClient({ initialTab = 'fha', heading }: { initial
         });
     }, [loanType, homePrice, effectiveDown, rate, term, propTax, insurance, vaFirstTime, vaDisability]);
 
+    const comparison = ['fha','va','usda'].map(type => ({type,down:type==='fha'?3.5:0,result:calcGovLoan({loanType:type as GovLoanType,homePrice,downPaymentPercent:type==='fha'?3.5:0,annualInterestRate:rate,loanTermYears:term,annualPropertyTax:propTax,annualInsurance:insurance,vaFirstTimeUse:vaFirstTime,vaDisabilityExempt:vaDisability})}));
     const activeTab = TABS.find(t => t.key === loanType)!;
 
     return (
         <div className="relative min-h-screen bg-white text-navy-900 pb-20">
+
             {/* Ambient Background Glows */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#0da6f2]/10 rounded-full blur-[120px]" />
@@ -70,9 +72,9 @@ export default function GovLoanClient({ initialTab = 'fha', heading }: { initial
                     {TABS.map(tab => (
                         <button
                             key={tab.key}
-                            onClick={() => { 
-                                setLoanType(tab.key); 
-                                if (tab.key !== 'fha' && downPct < 0) setDownPct(0); 
+                            onClick={() => {
+                                setLoanType(tab.key);
+                                if (tab.key !== 'fha' && downPct < 0) setDownPct(0);
                             }}
                             className={`flex-1 flex items-center justify-center gap-3 px-6 py-4 rounded-xl text-sm font-black transition-all duration-300 ${loanType === tab.key ? 'bg-[#0da6f2] text-white shadow-[0_0_20px_rgba(13,166,242,0.4)]' : 'text-gray-500 hover:bg-white/5'}`}
                         >
@@ -82,7 +84,9 @@ export default function GovLoanClient({ initialTab = 'fha', heading }: { initial
                     ))}
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
+                            {compare && <section className="mx-auto max-w-6xl p-5 overflow-x-auto"><h2 className="text-xl font-bold mb-3">Same-price loan comparison</h2><table className="w-full text-sm"><caption>Same illustrative rate, tax and insurance; program eligibility and lender pricing differ. Conventional PMI uses an illustrative 0.5% of the base loan annually.</caption><thead><tr><th>Scenario</th>{comparison.map(x=><th key={x.type}>{x.type.toUpperCase()}</th>)}<th>Conventional 5% down</th></tr></thead><tbody><tr><th>Down payment</th>{comparison.map(x=><td key={x.type}>{formatCurrency(homePrice*x.down/100)}</td>)}<td>{formatCurrency(homePrice*.05)}</td></tr><tr><th>Starting monthly payment</th>{comparison.map(x=><td key={x.type}>{formatCurrency(x.result.totalMonthly)}</td>)}<td>{formatCurrency(calcMonthlyPI(homePrice*.95,rate,term)+propTax/12+insurance/12+homePrice*.95*.005/12)}</td></tr><tr><th>Financed upfront fee</th>{comparison.map(x=><td key={x.type}>{formatCurrency(x.result.upfrontFee)}</td>)}<td>None modeled</td></tr></tbody></table></section>}
+            <p className="mx-auto max-w-5xl p-3 text-sm">Starting insurance/guarantee fee is estimated from the base balance. Lifetime cost holds that fee constant over the modeled charge period, so actual declining-balance annual charges can differ. FHA MIP generally lasts 11 years at original LTV of 90% or less, otherwise the mortgage term. Eligibility and exemptions require lender verification.</p>
+<div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
                     {/* LEFT: Inputs */}
                     <div className="lg:col-span-2 space-y-6">
                         <div className="glass-card p-4 sm:p-6">
@@ -98,25 +102,25 @@ export default function GovLoanClient({ initialTab = 'fha', heading }: { initial
                                     <label className="input-label">Home Price</label>
                                     <div className="relative group">
                                         <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">$</span>
-                                        <input 
-                                            type="number" 
-                                            className="glass-input pl-8" 
-                                            value={homePrice} 
-                                            onChange={e => setHomePrice(+e.target.value)} 
-                                            min={50000} 
-                                            step={5000} 
+                                        <input
+                                            type="number"
+                                            className="glass-input pl-8"
+                                            value={homePrice}
+                                            onChange={e => setHomePrice(+e.target.value)}
+                                            min={50000}
+                                            step={5000}
                                         />
                                     </div>
                                     <div className="mt-6 px-1">
-                                        <input 
-                                            type="range" 
-                                            min={100000} 
-                                            max={1500000} 
-                                            step={5000} 
-                                            value={homePrice} 
-                                            onChange={e => setHomePrice(+e.target.value)} 
-                                            className="glass-slider" 
-                                            style={{ '--value': `${((homePrice - 100000) / 1400000) * 100}%` } as React.CSSProperties} 
+                                        <input
+                                            type="range"
+                                            min={100000}
+                                            max={1500000}
+                                            step={5000}
+                                            value={homePrice}
+                                            onChange={e => setHomePrice(+e.target.value)}
+                                            className="glass-slider"
+                                            style={{ '--value': `${((homePrice - 100000) / 1400000) * 100}%` } as React.CSSProperties}
                                         />
                                     </div>
                                 </div>
@@ -124,14 +128,14 @@ export default function GovLoanClient({ initialTab = 'fha', heading }: { initial
                                 <div>
                                     <label className="input-label">Down Payment (%)</label>
                                     <div className="relative group">
-                                        <input 
-                                            type="number" 
-                                            className="glass-input pr-8" 
-                                            value={effectiveDown} 
-                                            onChange={e => setDownPct(+e.target.value)} 
-                                            min={minDown} 
-                                            max={99} 
-                                            step={0.5} 
+                                        <input
+                                            type="number"
+                                            className="glass-input pr-8"
+                                            value={effectiveDown}
+                                            onChange={e => setDownPct(+e.target.value)}
+                                            min={minDown}
+                                            max={99}
+                                            step={0.5}
                                         />
                                         <span className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">%</span>
                                     </div>
@@ -143,21 +147,21 @@ export default function GovLoanClient({ initialTab = 'fha', heading }: { initial
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                                     <div>
                                         <label className="input-label">Rate (%)</label>
-                                        <input 
-                                            type="number" 
-                                            className="glass-input" 
-                                            value={rate} 
-                                            onChange={e => setRate(+e.target.value)} 
-                                            min={1} 
-                                            max={15} 
-                                            step={0.125} 
+                                        <input
+                                            type="number"
+                                            className="glass-input"
+                                            value={rate}
+                                            onChange={e => setRate(+e.target.value)}
+                                            min={1}
+                                            max={15}
+                                            step={0.125}
                                         />
                                     </div>
                                     <div>
                                         <label className="input-label">Term (Years)</label>
-                                        <select 
-                                            className="glass-input appearance-none" 
-                                            value={term} 
+                                        <select
+                                            className="glass-input appearance-none"
+                                            value={term}
                                             onChange={e => setTerm(+e.target.value)}
                                         >
                                             {LOAN_TERMS.map(t => (
@@ -170,24 +174,24 @@ export default function GovLoanClient({ initialTab = 'fha', heading }: { initial
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                                     <div>
                                         <label className="input-label">Taxes/yr</label>
-                                        <input 
-                                            type="number" 
-                                            className="glass-input" 
-                                            value={propTax} 
-                                            onChange={e => setPropTax(+e.target.value)} 
-                                            min={0} 
-                                            step={100} 
+                                        <input
+                                            type="number"
+                                            className="glass-input"
+                                            value={propTax}
+                                            onChange={e => setPropTax(+e.target.value)}
+                                            min={0}
+                                            step={100}
                                         />
                                     </div>
                                     <div>
                                         <label className="input-label">Insurance/yr</label>
-                                        <input 
-                                            type="number" 
-                                            className="glass-input" 
-                                            value={insurance} 
-                                            onChange={e => setInsurance(+e.target.value)} 
-                                            min={0} 
-                                            step={100} 
+                                        <input
+                                            type="number"
+                                            className="glass-input"
+                                            value={insurance}
+                                            onChange={e => setInsurance(+e.target.value)}
+                                            min={0}
+                                            step={100}
                                         />
                                     </div>
                                 </div>
@@ -199,21 +203,21 @@ export default function GovLoanClient({ initialTab = 'fha', heading }: { initial
                                         <div className="space-y-3">
                                             <label className="flex items-center gap-4 cursor-pointer group">
                                                 <div className="relative flex items-center">
-                                                    <input 
-                                                        type="checkbox" 
-                                                        checked={vaFirstTime} 
-                                                        onChange={e => setVaFirstTime(e.target.checked)} 
-                                                        className="w-5 h-5 rounded border-2 border-white/20 bg-transparent accent-[#0da6f2] transition-all cursor-pointer" 
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={vaFirstTime}
+                                                        onChange={e => setVaFirstTime(e.target.checked)}
+                                                        className="w-5 h-5 rounded border-2 border-white/20 bg-transparent accent-[#0da6f2] transition-all cursor-pointer"
                                                     />
                                                 </div>
                                                 <span className="text-sm font-semibold text-gray-600 group-hover:text-white transition-colors">First-time VA use</span>
                                             </label>
                                             <label className="flex items-center gap-4 cursor-pointer group">
-                                                <input 
-                                                    type="checkbox" 
-                                                    checked={vaDisability} 
-                                                    onChange={e => setVaDisability(e.target.checked)} 
-                                                    className="w-5 h-5 rounded border-2 border-white/20 bg-transparent accent-[#0da6f2] transition-all cursor-pointer" 
+                                                <input
+                                                    type="checkbox"
+                                                    checked={vaDisability}
+                                                    onChange={e => setVaDisability(e.target.checked)}
+                                                    className="w-5 h-5 rounded border-2 border-white/20 bg-transparent accent-[#0da6f2] transition-all cursor-pointer"
                                                 />
                                                 <span className="text-sm font-semibold text-gray-600 group-hover:text-white transition-colors">Service Disability (No fee)</span>
                                             </label>
@@ -234,7 +238,7 @@ export default function GovLoanClient({ initialTab = 'fha', heading }: { initial
                                         <span className="text-xs font-black uppercase tracking-widest text-[#0da6f2] mb-1">Status</span>
                                         <span className="text-lg font-black text-[#00C853] flex items-center gap-2">READY <Zap size={16} /></span>
                                     </div>
-                                    
+
                                     <div className="text-center relative z-10">
                                         <p className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-4">Projected Monthly Payment</p>
                                         <div className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter text-glow tabular-nums transition-all hover:scale-105 duration-500">
@@ -305,8 +309,8 @@ export default function GovLoanClient({ initialTab = 'fha', heading }: { initial
                                         { key: 'va', icon: '🎖️', label: 'VA', detail: '0% Down • Veteran Benefit' },
                                         { key: 'usda', icon: '🌾', label: 'USDA', detail: '0% Down • Rural Housing' },
                                     ].map(item => (
-                                        <div 
-                                            key={item.key} 
+                                        <div
+                                            key={item.key}
                                             className={`glass-panel p-5 border-2 transition-all duration-500 ${loanType === item.key ? 'border-[#0da6f2] bg-[#0da6f2]/10 ring-4 ring-[#0da6f2]/10 scale-105' : 'border-transparent opacity-60 hover:opacity-100'}`}
                                         >
                                             <div className="flex items-center gap-3 mb-2">
@@ -329,7 +333,7 @@ export default function GovLoanClient({ initialTab = 'fha', heading }: { initial
                                             <p className="text-xs uppercase font-bold text-gray-500">CSV / Excel Format</p>
                                         </div>
                                     </div>
-                                    <button 
+                                    <button
                                         className="btn-primary bg-[#0da6f2] hover:bg-[#0da6f2]/90 px-8 py-3 rounded-xl shadow-lg shadow-[#0da6f2]/20"
                                         onClick={() => {
                                             const headers = ['Metric', 'Value'];

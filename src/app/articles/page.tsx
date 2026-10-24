@@ -48,7 +48,7 @@ export default function ArticlesPage() {
                     FinCEN &amp; BOI Compliance Articles
                 </h1>
                 <p className="text-base md:text-lg max-w-2xl" style={{ color: 'var(--color-text-muted)' }}>
-                    Stay ahead of 2026 updates - March 1 Real Estate Reporting Rule, domestic BOI exemptions, NY Transparency Act, and TCJA tax changes.
+                    Read source-dated reporting-status, BOI, New York disclosure and federal tax explainers. Older announced deadlines may have changed; open the current status guide before acting.
                 </p>
                 <p className="mt-2 text-sm font-medium text-gray-400">{ALL_ARTICLES.length} articles</p>
             </header>

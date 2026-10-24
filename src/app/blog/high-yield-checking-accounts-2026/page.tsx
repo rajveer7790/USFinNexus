@@ -32,44 +32,6 @@ export const metadata: Metadata = {
 export default function CheckingBlog() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
-                {
-                    '@type': 'Question',
-                    name: 'What is the highest interest rate on a checking account in 2026?',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'In 2026, the highest-yielding checking accounts offer between 4% and 6% APY, typically from online banks and credit unions using the Kasasa platform. These rates are usually capped at a certain balance (e.g., the first $10,000–$15,000) and require monthly qualifying activity such as direct deposit and a minimum number of debit card transactions. Traditional banks still average 0.01%–0.08% APY on checking accounts.',
-                    },
-                },
-                {
-                    '@type': 'Question',
-                    name: 'Are high-yield checking accounts safe?',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'Yes. High-yield checking accounts at FDIC-insured banks or NCUA-insured credit unions are just as safe as any traditional bank account. Your deposits are insured up to $250,000 per depositor, per institution. Always verify that any bank or credit union offering a high-yield checking account is FDIC or NCUA insured before opening an account.',
-                    },
-                },
-                {
-                    '@type': 'Question',
-                    name: 'How is a high-yield checking account different from a high-yield savings account?',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'A high-yield savings account (HYSA) limits withdrawals (typically 6 per month under federal guidelines) and is designed for money you do not need immediately. A high-yield checking account has no withdrawal limits and comes with a debit card, making it usable for daily spending. The trade-off is that checking accounts usually require monthly qualifying activities (debit swipes, direct deposits) to earn the highest APY, while savings accounts typically require no such activity.',
-                    },
-                },
-                {
-                    '@type': 'Question',
-                    name: 'What are the requirements for high-yield checking account rates?',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'Most high-yield checking accounts require: (1) a monthly direct deposit of at least $500–$1,000, (2) 10–15 debit card transactions per month, and sometimes (3) enrollment in eStatements. If you meet all requirements, you earn the high APY on your balance up to a cap (often $10,000–$25,000). If you miss requirements in a given month, you typically earn a base rate (0.01%–0.25%) for that month only, then qualify again the following month.',
-                    },
-                },
-            ],
-        }) }} />
         <ArticleSchema
             title="High-Yield Checking Accounts: Beating Inflation Without Locking Up Cash"
             description="Stop settling for 0.01% APY on your checking account. Discover the best high-yield checking accounts in 2026 that pay you to hold your money."
@@ -140,9 +102,9 @@ export default function CheckingBlog() {
                     </div>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Strategies for Maximizing High-Yield Checking in 2026?</h2>
                     <p className="text-lg text-slate-700 mb-6">

@@ -1,3 +1,4 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
@@ -8,9 +9,7 @@ import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 import StudentLoanSeoContent from './StudentLoanSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 
-const StudentLoanClient = nextDynamic(() => import('./StudentLoanClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import StudentLoanClient from './StudentLoanClient';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -60,9 +59,9 @@ export default function StudentLoanPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Student Loan', item: '/calculators/student-loan' }]} />
             <StudentLoanClient />
             <SemrushIntentSection slug="student-loan" />
-            <StudentLoanSeoContent />
+
             <CalculatorFAQ faqs={STUDENT_LOAN_FAQS} title="Student Loans — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="student-loan" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="student-loan" /></main>
     );
 }

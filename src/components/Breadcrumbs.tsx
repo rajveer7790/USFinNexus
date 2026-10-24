@@ -15,7 +15,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
     // Add Home as the first item if not present
     const allItems = [
         { name: 'Home', item: '/' },
-        ...items
+        ...items.filter(item => item.item !== '/')
     ];
 
     const jsonLd = {

@@ -12,7 +12,7 @@ import {
 const HomeHeroWidget = dynamic(() => import('@/components/HomeHeroWidget'));
 
 export const metadata: Metadata = {
-    title: 'Financial Calculators for Mortgages, Loans & Money',
+    title: 'Free U.S. Mortgage & Finance Calculators 2026',
     description: 'Free U.S. financial calculators for mortgages, home affordability, refinancing, debt, loans, retirement and federal taxes. No account required.',
     alternates: { canonical: '/' },
     openGraph: {
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
         locale: 'en_US',
         url: 'https://usfinnexus.com/',
         siteName: 'USFinNexus',
-        title: 'Financial Calculators for Mortgages, Loans & Money',
+        title: 'Free U.S. Mortgage & Finance Calculators 2026',
         description: 'Free U.S. mortgage and personal-finance calculators with clear assumptions and no account required.',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus financial calculators' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Financial Calculators for Mortgages, Loans & Money',
+        title: 'Free U.S. Mortgage & Finance Calculators 2026',
         description: 'Free U.S. mortgage and personal-finance calculators with clear assumptions and no account required.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -77,9 +77,9 @@ const TOOLS = [
     { href: '/calculators/crypto-tax', icon: FileText, title: 'Crypto Tax Estimator', desc: 'Estimate capital-gain scenarios; verify filing treatment with current IRS guidance.', cat: 'wealth' },
     { href: '/calculators/options-profit', icon: BarChart2, title: 'Options Profit Calculator', desc: 'Visualize call and put payoff scenarios.', cat: 'wealth' },
     { href: '/calculators/budget', icon: PiggyBank, title: 'Budget Calculator', desc: 'Explore a 50/30/20 budgeting scenario.', cat: 'wealth' },
-    { href: '/calculators/california', icon: Map, title: 'California Closing Cost Calculator', desc: 'Estimate California-specific closing-cost assumptions.', cat: 'regional' },
-    { href: '/calculators/texas', icon: Map, title: 'Texas Closing Cost Calculator', desc: 'Estimate Texas-specific closing-cost assumptions.', cat: 'regional' },
-    { href: '/calculators/florida', icon: Map, title: 'Florida Closing Cost Calculator', desc: 'Estimate Florida-specific closing-cost assumptions.', cat: 'regional' },
+    { href: '/calculators/california', icon: Map, title: 'California Mortgage Calculator', desc: 'Estimate California mortgage payments, taxes and insurance.', cat: 'regional' },
+    { href: '/calculators/texas', icon: Map, title: 'Texas Mortgage Calculator', desc: 'Estimate Texas mortgage payments, taxes and insurance.', cat: 'regional' },
+    { href: '/calculators/florida', icon: Map, title: 'Florida Mortgage Calculator', desc: 'Estimate Florida mortgage payments, taxes and insurance.', cat: 'regional' },
 ];
 
 const QUICK_TOOLS = [
@@ -184,7 +184,7 @@ export default function HomePage() {
                     <div className="neo-hero-left">
                         <div className="neo-status neo-reveal"><span className="neo-status-pulse" /> U.S. Financial Planning Tools</div>
                         <h1 className="neo-h1">
-                            <span className="neo-h1-w1">Free U.S. Financial</span>
+                            <span className="neo-h1-w1">Free U.S. Financial</span>{' '}
                             <span className="neo-h1-w3">Calculators</span>
                         </h1>
                         <p className="neo-hero-p neo-reveal neo-reveal--d2">
@@ -219,7 +219,7 @@ export default function HomePage() {
 
             <div className="neo-ticker">
                 <div className="neo-ticker-track">
-                    {[...VERIFIED_2026, ...VERIFIED_2026].map((item, index) => <span key={index} className="neo-ticker-item"><span className="neo-ticker-dot" />{item.l} <strong>{item.v}</strong></span>)}
+                    {VERIFIED_2026.map((item, index) => <span key={index} className="neo-ticker-item"><span className="neo-ticker-dot" />{item.l} <strong>{item.v}</strong></span>)}
                 </div>
             </div>
 

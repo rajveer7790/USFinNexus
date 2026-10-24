@@ -25,11 +25,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'Why are cybersecurity stocks growing faster than traditional defense stocks in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'In 2026, geopolitical conflicts are increasingly fought online before any physical shots are fired. State-sponsored hackers routinely target power grids, water systems, and banking infrastructure. As a result, global governments and Fortune 500 companies are pouring trillions of dollars into software-based cybersecurity firms (like CrowdStrike and Palo Alto Networks) at a faster rate than they are buying traditional fighter jets.' } },
-    { '@type': 'Question', name: 'What is the safest way to invest in the defense sector?', acceptedAnswer: { '@type': 'Answer', text: 'The safest approach is to avoid picking individual companies (which can lose massive government contracts overnight) and instead invest in sector-specific Exchange Traded Funds (ETFs). Examples include ITA (iShares U.S. Aerospace & Defense ETF) and CIBR (First Trust NASDAQ Cybersecurity ETF).' } },
-    { '@type': 'Question', name: 'What are the risks of investing in defense contractors?', acceptedAnswer: { '@type': 'Answer', text: 'Defense companies are entirely dependent on federal government budgets. If Congress fails to pass a budget or actively cuts defense spending to balance the national debt, the revenue of these companies can crash. Furthermore, they face massive regulatory scrutiny and strict export controls.' } },
-] }) }} />
         <ArticleSchema
             title="Defense & Cybersecurity Stocks: Investing in Global Security in 2026"
             description="As geopolitical tensions rise in 2026, defense and cybersecurity stocks are surging. Learn how to invest in the companies protecting global infrastructure."
@@ -76,14 +71,14 @@ export default function BlogPost() {
                     Historically, the "Defense Sector" meant five massive hardware companies: Lockheed Martin, Boeing, General Dynamics, Raytheon, and Northrop Grumman. These companies operate as near-monopolies, securing multi-decade, trillion-dollar hardware contracts from the Pentagon.
                 </p>
                 <p>
-                    In 2026, warfare is asymmetric. Before a physical conflict begins, state-sponsored actors launch massive cyberattacks against critical infrastructure—power grids, banking systems, and water treatment plants. 
+                    In 2026, warfare is asymmetric. Before a physical conflict begins, state-sponsored actors launch massive cyberattacks against critical infrastructure—power grids, banking systems, and water treatment plants.
                 </p>
                 <p>
                     Because of this, the fastest-growing "defense" companies are actually Silicon Valley software firms. Companies like Palantir and Anduril are using Artificial Intelligence to analyze battlefield data, while cybersecurity giants like CrowdStrike, Palo Alto Networks, and Fortinet are securing the digital perimeter of NATO allies and Fortune 500 corporations.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Why Invest in Defense and Cyber?</h2>
-                
+
                 <h3 className="text-xl font-bold mt-8 mb-3">1. Recession Resistance</h3>
                 <p>
                     When the economy crashes and consumers stop buying iPhones and Teslas, consumer tech stocks plummet. But the US Government does not stop buying missiles or cybersecurity software during a recession. Because their revenue is guaranteed by sovereign federal budgets, defense stocks act as a powerful anchor during economic downturns.
@@ -133,7 +128,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">The Ethical Consideration (ESG)</h2>
                 <p>
-                    It is important to note that many modern "ESG" (Environmental, Social, and Governance) index funds strictly exclude defense contractors. If you hold a rigid ethical stance against profiting from weapons manufacturing, you must actively exclude traditional defense stocks from your portfolio. 
+                    It is important to note that many modern "ESG" (Environmental, Social, and Governance) index funds strictly exclude defense contractors. If you hold a rigid ethical stance against profiting from weapons manufacturing, you must actively exclude traditional defense stocks from your portfolio.
                 </p>
                 <p>
                     However, many ESG funds <em>do</em> allow investments in pure-play cybersecurity companies, viewing digital defense and data privacy as a social good.
@@ -152,9 +147,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">Advanced Strategies for Defense & Cyber Investing in 2026</h2>
                     <p className="text-lg text-slate-700 mb-6">
@@ -163,7 +158,7 @@ export default function BlogPost() {
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">1. The Rise of AI in the Battlespace</h3>
                     <p className="text-slate-700 mb-4">
-                        The defining technological shift in 2026 is the integration of Artificial Intelligence into the defense sector. The Pentagon is actively transitioning from expensive, human-operated hardware (like legacy fighter jets) to swarms of AI-piloted drones and predictive battlefield software. 
+                        The defining technological shift in 2026 is the integration of Artificial Intelligence into the defense sector. The Pentagon is actively transitioning from expensive, human-operated hardware (like legacy fighter jets) to swarms of AI-piloted drones and predictive battlefield software.
                     </p>
                     <p className="text-slate-700 mb-4">
                         Companies like Palantir Technologies (PLTR) and Anduril Industries are leading this revolution. Palantir's AI Platform (AIP) is actively used by allied forces to process massive amounts of satellite imagery, drone feeds, and intercepted communications in real-time. For investors, software companies operating in the defense sector offer significantly higher gross margins (often 70-80%) compared to traditional hardware manufacturers (10-15%).

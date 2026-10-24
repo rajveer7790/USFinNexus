@@ -127,10 +127,10 @@ export default function RentVsBuyClient() {
                                 {/* Metrics Grid */}
                                 <div className="grid grid-cols-2 gap-4 sm:gap-6">
                                     {[
-                                        { label: 'Net Buy Cost', value: formatCurrency(Math.abs(result.netBuyCost)), color: 'text-[#0da6f2]' },
+                                        { label: 'Net Buy Cost', value: formatCurrency(result.netBuyCost), color: 'text-[#0da6f2]' },
                                         { label: 'Net Rent Cost', value: formatCurrency(result.netRentCost), color: 'text-purple-400' },
                                         { label: 'Home Equity Built', value: formatCurrency(result.homeEquity), color: 'text-emerald-500' },
-                                        { label: 'Break-Even Year', value: `Year ${result.breakEvenYear}`, color: 'text-amber-500' },
+                                        { label: 'Break-Even Year', value: result.breakEvenYear ? "Year " + result.breakEvenYear : "Not reached", color: 'text-amber-500' },
                                     ].map(s => (
                                         <div key={s.label} className="glass-card p-4 sm:p-6 text-center group">
                                             <p className="text-xs font-black uppercase tracking-[0.3em] text-gray-500 mb-4">{s.label}</p>
@@ -141,8 +141,8 @@ export default function RentVsBuyClient() {
 
                                 {/* Chart */}
                                 <div className="glass-card p-8">
-                                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-gray-500 mb-6">Cumulative Cost Comparison</h3>
-                                    <RentVsBuyChart yearlyData={result.yearlyData} />
+                                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-gray-500 mb-6">Net Cost Comparison</h3>
+                                    <p className="text-sm mb-3">Includes illustrative 3% buying costs, selected selling costs and return on the renter&apos;s initial down-payment/cost reserve. Future monthly savings investments, tax deductions and rent/buy insurance differences are excluded.</p><RentVsBuyChart yearlyData={result.yearlyData} /><details><summary className="cursor-pointer mt-4">Annual net-cost comparison</summary><table className="w-full text-sm"><thead><tr><th>Year</th><th>Buy net cost</th><th>Rent net cost</th></tr></thead><tbody>{result.yearlyData.map(row=><tr key={row.year}><td>{row.year}</td><td>{formatCurrency(row.buyCumulative)}</td><td>{formatCurrency(row.rentCumulative)}</td></tr>)}</tbody></table></details>
                                 </div>
 
                                 <div className="glass-panel p-5 border-[#0da6f2]/20 bg-[#0da6f2]/5">

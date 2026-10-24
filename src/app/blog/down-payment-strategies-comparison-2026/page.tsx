@@ -30,13 +30,7 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-                { '@type': 'Question', name: 'Do I really need a 20% down payment to buy a house?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely not. The 20% rule is a myth perpetuated by outdated financial advice. In 2026, first-time homebuyers can secure a conventional mortgage with as little as 3% down, and FHA loans require just 3.5% down.' } },
-                { '@type': 'Question', name: 'What is the penalty for putting less than 20% down?', acceptedAnswer: { '@type': 'Answer', text: 'If you put down less than 20%, the bank considers you a higher risk and will charge you a monthly fee called Private Mortgage Insurance (PMI). This fee protects the bank if you default on the loan, and it usually costs between $100 and $300 a month depending on your credit score.' } },
-                { '@type': 'Question', name: 'Mathematically, is it better to put 3% or 20% down?', acceptedAnswer: { '@type': 'Answer', text: 'It depends entirely on the interest rate environment. If mortgage rates are 3%, it is mathematically superior to put 3% down and invest your extra cash in the stock market to earn an 8% return. However, if mortgage rates are 7%, putting 20% down guarantees a massive 7% tax-free return by avoiding that high-interest debt, making it highly attractive.' } },
-                { '@type': 'Question', name: 'What happens if I wait to save 20% down?', acceptedAnswer: { '@type': 'Answer', text: 'Waiting to save 20% is often a costly mistake in an appreciating market. For instance, if you wait 5 years to save $80,000 for a $400,000 house, the house might appreciate to $486,000 in that time. You effectively lost purchasing power and missed out on $86,000 of equity.' } }
-            ] }) }} />
-            
+
             <ArticleSchema
                 title="Down Payment Strategies 2026: 3% vs. 20% Mathematical Breakdown"
                 description="Should you drain your life savings to put 20% down, or put 3% down and invest the difference? We break down the exact mathematical opportunity cost."
@@ -46,7 +40,7 @@ export default function BlogPost() {
                 authorName="USFinNexus Editorial Team"
                 keywords={['Home Buying', 'Mortgage', 'Down Payment', '2026', 'PMI']}
             />
-            
+
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Down Payment Math', item: '/blog/down-payment-strategies-comparison-2026' }]} />
                 <article className="prose prose-slate prose-lg max-w-none">
@@ -122,7 +116,7 @@ export default function BlogPost() {
                     </h2>
 
                     <p>
-                        Putting 3% down on a $400,000 house requires just $12,000. 
+                        Putting 3% down on a $400,000 house requires just $12,000.
                     </p>
                     <p>
                         If you happen to have $80,000 in the bank, but you <em>choose</em> to only put down $12,000, you are making a highly aggressive mathematical bet known as <strong>Opportunity Cost</strong>. You are intentionally accepting PMI and a higher monthly mortgage payment so that you can keep $68,000 liquid in your bank account.
@@ -133,12 +127,12 @@ export default function BlogPost() {
 
                     <h3 className="text-2xl font-bold mt-8 mb-4">What Is the S&P 500 Arbitrage Bet?</h3>
                     <p>
-                        The core argument for a low down payment relies on the concept of arbitrage. 
+                        The core argument for a low down payment relies on the concept of arbitrage.
                     </p>
                     <p>
-                        If your mortgage rate is 4%, and the S&P 500 returns a historical average of 8% to 10% a year, handing your cash to the mortgage lender is a mathematical loss. By keeping your $68,000 and investing it in a broad market index fund, your money earns 10%, while your mortgage only costs you 4%. You are making a 6% spread on the bank's money. 
+                        If your mortgage rate is 4%, and the S&P 500 returns a historical average of 8% to 10% a year, handing your cash to the mortgage lender is a mathematical loss. By keeping your $68,000 and investing it in a broad market index fund, your money earns 10%, while your mortgage only costs you 4%. You are making a 6% spread on the bank's money.
                     </p>
-                    
+
                     <div className="bg-red-50 p-6 rounded-xl border border-red-200 my-8 shadow-sm">
                         <h4 className="text-lg font-bold text-red-900 flex items-center gap-2 mb-2">
                             <AlertCircle className="w-5 h-5" /> The Interest Rate Caveat
@@ -167,7 +161,7 @@ export default function BlogPost() {
                             <div>
                                 <h3 className="font-bold mb-2 text-xl text-yellow-900">What Is the Danger of the 3% Strategy?</h3>
                                 <p className="text-yellow-900">
-                                    The 3% down strategy ONLY works mathematically if you actually take the remaining $68,000 and invest it in income-producing assets (like Index Funds or High-Yield Savings). 
+                                    The 3% down strategy ONLY works mathematically if you actually take the remaining $68,000 and invest it in income-producing assets (like Index Funds or High-Yield Savings).
                                     <br/><br/>
                                     If you put 3% down just so you can use your remaining cash to buy a brand new F-150 truck, take luxury vacations to Europe, or buy depreciating consumer electronics, you have completely failed the math test. You are simply overleveraging yourself to buy consumer junk, and the PMI and high interest will slowly bleed your wealth dry over 30 years.
                                 </p>
@@ -191,7 +185,7 @@ export default function BlogPost() {
                     <p>
                         Assume you want to buy a $400,000 house, and assume home prices appreciate by a conservative 4% a year. If you wait five years to buy that house while you save cash, the house will cost <strong>$486,000</strong> by the time you are ready to buy it.
                     </p>
-                    
+
                     <ul className="space-y-4 my-8 list-none pl-0">
                         <li className="flex gap-3">
                             <ArrowRight className="w-6 h-6 text-red-500 shrink-0" />
@@ -214,7 +208,7 @@ export default function BlogPost() {
                     <h2 className="text-3xl font-bold mt-16 mb-6 text-navy-900">What Is the Middle Ground: 10% Down?</h2>
 
                     <p>
-                        For many buyers in 2026, 10% down represents the perfect middle ground between the extreme liquidity of 3% and the capital drain of 20%. 
+                        For many buyers in 2026, 10% down represents the perfect middle ground between the extreme liquidity of 3% and the capital drain of 20%.
                     </p>
                     <ul className="list-disc pl-6 space-y-3 mb-8">
                         <li>It shows sellers you are a serious, well-qualified buyer.</li>
@@ -239,7 +233,7 @@ export default function BlogPost() {
                 </article>
 
                 <div className="mt-16">
-                    
+
                 <hr className="my-12 border-gray-200" />
 
                 <div className="bg-white p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">

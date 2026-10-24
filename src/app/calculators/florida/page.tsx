@@ -1,12 +1,11 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import FloridaSeoContent from './FloridaSeoContent';
 
-const MortgageCalculator = nextDynamic(() => import('../mortgage/MortgageCalculatorClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import MortgageCalculator from '../mortgage/MortgageCalculatorClient';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
 
@@ -15,7 +14,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Florida Mortgage Calculator 2026 — Hurricane Insurance & Property Taxes',
-    description: 'Free Florida mortgage calculator. Factors in rapidly rising FL homeowners and flood insurance, no state income tax benefit, and 2026 Florida property tax rates.',
+    description: 'Free Florida mortgage calculator. Factors in rapidly rising FL homeowners and flood insurance, no state income tax benefit, and 2026 Florida property tax rates.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/florida' },
     openGraph: {
         type: 'website',
@@ -41,9 +40,9 @@ export default function FloridaPage() {
                 url="https://usfinnexus.com/calculators/florida"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Florida Mortgage', item: '/calculators/florida' }]} />
-                <MortgageCalculator heading="Florida Mortgage Calculator" intro="Model a Florida mortgage using your own tax and insurance assumptions." />
+                <MortgageCalculator initialState="FL" heading="Florida Mortgage Calculator" intro="Model a Florida mortgage using your own tax and insurance assumptions." />
             <FloridaSeoContent />
         <ContextualInternalLinks currentSlug="florida" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="florida" /></main>
     );
 }

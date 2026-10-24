@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is Down Payment Assistance (DPA)?', acceptedAnswer: { '@type': 'Answer', text: 'Down Payment Assistance (DPA) programs are specialized funds provided by state governments, local municipalities, and non-profits to help low-to-moderate income buyers cover the upfront cash required to buy a home. They can cover your down payment, closing costs, or both.' } },
-    { '@type': 'Question', name: 'Do I have to pay back Down Payment Assistance?', acceptedAnswer: { '@type': 'Answer', text: 'It depends entirely on the type of DPA. If you receive a "Grant," it is pure free money that never has to be repaid. If you receive a "Forgivable Loan," you do not have to pay it back as long as you live in the house for a required number of years (usually 5 to 10 years). If you receive a "Deferred Loan," you do not make monthly payments, but you must repay the full amount when you eventually sell or refinance the house.' } },
-    { '@type': 'Question', name: 'How do DPA programs affect my mortgage interest rate?', acceptedAnswer: { '@type': 'Answer', text: 'Because state housing finance agencies are taking on extra risk by lending you the down payment, they often require you to use a specific partner lender. Consequently, mortgages bundled with DPA often carry a slightly higher interest rate (e.g., 6.75% instead of 6.25%) than standard market rates.' } },
-] }) }} />
         <ArticleSchema
             title="Down Payment Assistance (DPA) Programs: The 2026 Guide"
             description="Stop waiting years to save 20%. Learn how state and federal Down Payment Assistance (DPA) programs can give you free grants or forgivable loans."
@@ -64,7 +59,7 @@ export default function BlogPost() {
                 </p>
 
                 <p>
-                    Most Americans assume that if they do not have $15,000 saved up, they are banned from the housing market. They are completely unaware that every single state in the US operates a Housing Finance Agency (HFA) tasked with giving away millions of dollars to homebuyers every year. 
+                    Most Americans assume that if they do not have $15,000 saved up, they are banned from the housing market. They are completely unaware that every single state in the US operates a Housing Finance Agency (HFA) tasked with giving away millions of dollars to homebuyers every year.
                 </p>
                 <p>
                     These are <strong>Down Payment Assistance (DPA)</strong> programs. Depending on your income and location, you could receive a $10,000 grant that never has to be repaid. Here is the definitive guide to how DPA works in 2026, how to qualify, and the hidden traps you must avoid.
@@ -82,10 +77,10 @@ export default function BlogPost() {
 
                 <h3 className="text-xl font-bold mt-8 mb-3">What Are Forgivable Loans (The Golden Handcuffs)?</h3>
                 <p>
-                    This is the most common form of DPA. The state loans you the down payment (e.g., $10,000) and places a second lien on your house. However, this loan has a 0% interest rate, and you do not make any monthly payments on it. 
+                    This is the most common form of DPA. The state loans you the down payment (e.g., $10,000) and places a second lien on your house. However, this loan has a 0% interest rate, and you do not make any monthly payments on it.
                 </p>
                 <p>
-                    Instead, the loan is <strong>forgiven over time</strong>. For example, a 5-year forgivable loan will forgive 20% of the balance every year you live in the house. If you stay in the house for 5 years, the balance hits $0, and the lien vanishes. 
+                    Instead, the loan is <strong>forgiven over time</strong>. For example, a 5-year forgivable loan will forgive 20% of the balance every year you live in the house. If you stay in the house for 5 years, the balance hits $0, and the lien vanishes.
                 </p>
                 <p>
                     <em>The Catch:</em> If you sell the house, refinance the mortgage, or move out during year 3, you must instantly repay the remaining unforgiven balance.
@@ -93,7 +88,7 @@ export default function BlogPost() {
 
                 <h3 className="text-xl font-bold mt-8 mb-3">What Are Deferred Repayment Loans?</h3>
                 <p>
-                    This is a true second mortgage, but with deferred payments. The state loans you $15,000 at 0% interest to cover your down payment. You do not make any monthly payments on this second loan. 
+                    This is a true second mortgage, but with deferred payments. The state loans you $15,000 at 0% interest to cover your down payment. You do not make any monthly payments on this second loan.
                 </p>
                 <p>
                     However, the loan is <strong>never forgiven</strong>. It just sits quietly in the background. Years later, when you finally sell the house or refinance it, you must pay the entire $15,000 back to the state out of your home's equity.
@@ -122,7 +117,7 @@ export default function BlogPost() {
                         <div>
                             <h3 className="font-bold mb-2">What Is the Trade-Off: Higher Interest Rates?</h3>
                             <p className="text-sm m-0 text-gray-700">
-                                Nothing in finance is truly free. When you use a state-sponsored DPA program, you are required to use a specific primary mortgage tied to that program. 
+                                Nothing in finance is truly free. When you use a state-sponsored DPA program, you are required to use a specific primary mortgage tied to that program.
                                 <br/><br/>
                                 Because the state is absorbing the massive risk of your 0% down payment, they usually charge a slightly higher interest rate on your main 30-year mortgage. If the current market rate is 6.25%, a DPA mortgage might charge 6.75%. You must run the math to see if getting $10,000 upfront is worth paying a higher interest rate for the next decade.
                             </p>
@@ -162,7 +157,7 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
 
                 <div className="bg-white p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">

@@ -10,14 +10,23 @@ export default function PersonalLoanClient() {
     const [principal, setPrincipal] = useState(15000);
     const [rate, setRate] = useState(10.5);
     const [termMonths, setTermMonths] = useState(36);
+    const [originationFee, setOriginationFee] = useState(3);
+    const netProceeds = principal * (1 - originationFee / 100);
 
     const monthlyPayment = useMemo(() => {
-        if (principal <= 0 || rate <= 0) return 0;
+        if (principal <= 0 || rate < 0) return 0;
         return calcMonthlyPI(principal, rate, termMonths / 12);
     }, [principal, rate, termMonths]);
 
     const totalInterest = monthlyPayment * termMonths - principal;
     const totalCost = monthlyPayment * termMonths;
+    let low = 0, high = 10;
+    for (let i = 0; i < 100; i++) {
+        const mid = (low + high) / 2;
+        const pv = monthlyPayment * (1 - Math.pow(1 + mid, -termMonths)) / mid;
+        if (pv > netProceeds) low = mid; else high = mid;
+    }
+    const estimatedApr = originationFee === 0 ? rate : (low + high) / 2 * 1200;
 
     const amortization = useMemo(() => {
         const r = rate / 100 / 12;
@@ -57,7 +66,7 @@ export default function PersonalLoanClient() {
                     </div>
 
                     <div>
-                        <label className="input-label">Annual Interest Rate (APR)</label>
+                        <label className="input-label">Annual Note Interest Rate (excludes fees)</label>
                         <div className="relative">
                             <input type="number" className="input-field pr-8" value={rate} onChange={e => setRate(+e.target.value)} step={0.1} min={0.1} max={36} />
                             <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">%</span>
@@ -81,7 +90,7 @@ export default function PersonalLoanClient() {
                         </div>
                     </div>
 
-                    {/* Payoff visual */}
+                    <div><label className="input-label" htmlFor="origination-fee">Origination fee withheld (%)</label><input id="origination-fee" type="number" min={0} max={50} step={0.1} value={originationFee} onChange={e => setOriginationFee(Math.max(0, Math.min(50, +e.target.value)))} className="input-field" /><p className="text-xs mt-2">Net proceeds: {formatCurrency(netProceeds)}. Estimated actuarial APR: {estimatedApr.toFixed(2)}%. Assumes fee deducted upfront; compare the lender&apos;s legally disclosed APR, which may include other charges.</p></div>{/* Payoff visual */}
                     <div className="mt-4 p-4 rounded-xl" style={{ background: 'var(--color-bg-secondary)' }}>
                         <div className="flex justify-between text-xs mb-2" style={{ color: 'var(--color-text-muted)' }}>
                             <span>Principal</span>
@@ -119,7 +128,7 @@ export default function PersonalLoanClient() {
                         <button onClick={() => exportGenericCSV(['Month', 'Payment', 'Principal', 'Interest', 'Balance'], amortization.map(r => [r.month, r.payment.toFixed(2), r.principal.toFixed(2), r.interest.toFixed(2), r.balance.toFixed(2)]), 'USFinNexus-PersonalLoan.csv')} className="btn-outline w-full mb-4">
                             <Table2 size={16} /> Download Payoff Schedule (CSV)
                         </button>
-                        <div className="overflow-x-auto rounded-xl border" style={{ borderColor: 'var(--color-border)', maxHeight: '280px' }}>
+                        <details><summary className="cursor-pointer py-3 font-semibold">View monthly payoff schedule</summary><div className="overflow-x-auto rounded-xl border" style={{ borderColor: 'var(--color-border)', maxHeight: '280px' }}>
                             <table className="data-table">
                                 <thead><tr><th>#</th><th>Payment</th><th>Principal</th><th>Interest</th><th>Balance</th></tr></thead>
                                 <tbody>
@@ -135,7 +144,7 @@ export default function PersonalLoanClient() {
                                 </tbody>
                             </table>
                         </div>
-                    </div>
+                    </details></div>
                     <DisclaimerBanner calculatorName="the Personal Loan Calculator" />
                 </div>
             </div>

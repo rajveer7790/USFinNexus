@@ -5,9 +5,14 @@ import { Percent, TrendingUp, AlertCircle, CheckCircle } from 'lucide-react';
 
 export default function DtiClient() {
     const [grossIncome, setGrossIncome] = useState(8000);
-    const [monthlyDebt, setMonthlyDebt] = useState(1200);
+    const [housing,setHousing]=useState(2000);
+    const [auto,setAuto]=useState(350);
+    const [student,setStudent]=useState(250);
+    const [cards,setCards]=useState(100);
+    const [monthlyDebt, setMonthlyDebt] = useState(500);
+    const frontEnd=grossIncome>0?housing/grossIncome*100:0;
 
-    const dti = grossIncome > 0 ? (monthlyDebt / grossIncome) * 100 : 0;
+    const dti = grossIncome > 0 ? ((monthlyDebt+housing+auto+student+cards) / grossIncome) * 100 : 0;
 
     const getStatus = () => {
         if (dti <= 28) return { label: 'Low DTI', color: 'text-emerald-500', border: 'border-emerald-500/30', bg: 'bg-emerald-500/5', icon: CheckCircle, advice: 'Your current recurring debt is low relative to gross monthly income. Actual mortgage qualification still depends on the loan program, housing payment, credit, assets and lender underwriting.' };
@@ -46,7 +51,7 @@ export default function DtiClient() {
 
                 <div className="space-y-6">
                     <div className="glass-card p-10">
-                        <div className="space-y-6">
+                        <div className="space-y-6">{[{id:"dti-housing",label:"Proposed housing PITI + HOA",v:housing,set:setHousing},{id:"dti-auto",label:"Auto loan payments",v:auto,set:setAuto},{id:"dti-student",label:"Student loan payments",v:student,set:setStudent},{id:"dti-cards",label:"Credit card minimums",v:cards,set:setCards}].map(f=><label key={f.id} htmlFor={f.id} className="block"><span className="input-label">{f.label}</span><input id={f.id} type="number" min={0} value={f.v} onChange={e=>f.set(Math.max(0,+e.target.value))} className="glass-input" /></label>)}<p className="text-sm">Front-end housing DTI: {frontEnd.toFixed(1)}%. The total DTI below includes housing, auto, student loans, cards and other debt; avoid counting an obligation twice.</p>
                             <div>
                                 <label className="input-label">Gross Monthly Income (Before Taxes)</label>
                                 <div className="relative group">
@@ -55,7 +60,7 @@ export default function DtiClient() {
                                 </div>
                             </div>
                             <div>
-                                <label className="input-label">Total Monthly Debt Payments</label>
+                                <label className="input-label">Other Monthly Debt Payments</label>
                                 <p className="text-xs text-gray-400 mb-3 font-medium">Include recurring obligations such as auto loans, student loans and required minimum debt payments. For mortgage underwriting, the exact debts counted can depend on program rules.</p>
                                 <div className="relative group">
                                     <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">$</span>

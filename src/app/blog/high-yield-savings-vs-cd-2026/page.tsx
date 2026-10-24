@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is a High-Yield Savings Account (HYSA)?', acceptedAnswer: { '@type': 'Answer', text: 'A HYSA is a fully liquid bank account (usually offered by online-only banks like Ally or Marcus) that pays an incredibly high interest rate, often around 4.5% to 5.0% APY. You can withdraw your money at any time without penalty, but the interest rate is variable and can drop if the Federal Reserve cuts rates.' } },
-    { '@type': 'Question', name: 'What is a Certificate of Deposit (CD)?', acceptedAnswer: { '@type': 'Answer', text: 'A CD is a locked savings account. You agree to leave your money untouched at the bank for a specific time period (e.g., 12 months, 5 years). In exchange for locking up your money, the bank guarantees a fixed interest rate. If you buy a 12-month CD at 5.5%, you will earn exactly 5.5% for the entire year, even if the Fed slashes interest rates tomorrow.' } },
-    { '@type': 'Question', name: 'What is the penalty for withdrawing from a CD early?', acceptedAnswer: { '@type': 'Answer', text: 'If you need to break your CD contract and withdraw your money before the maturity date, the bank will charge an Early Withdrawal Penalty. This usually costs you roughly 3 to 6 months worth of the interest you earned, meaning you surrender a massive portion of your profits back to the bank.' } },
-] }) }} />
         <ArticleSchema
             title="High-Yield Savings vs. CDs: Where to Hide Your Cash in 2026"
             description="If you have cash sitting in a traditional checking account earning 0.01%, you are losing money to inflation. Discover the mathematical difference between a HYSA and a CD."
@@ -60,7 +55,7 @@ export default function BlogPost() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    If you have $20,000 sitting in a traditional brick-and-mortar bank like Chase or Wells Fargo, you are likely earning 0.01% interest. At the end of the year, the bank will pay you roughly $2.00. 
+                    If you have $20,000 sitting in a traditional brick-and-mortar bank like Chase or Wells Fargo, you are likely earning 0.01% interest. At the end of the year, the bank will pay you roughly $2.00.
                 </p>
 
                 <p>
@@ -82,15 +77,15 @@ export default function BlogPost() {
 
                 <h3 className="text-xl font-bold mt-8 mb-3">What Are the Cons: The Risk of Variable Interest Rates?</h3>
                 <p>
-                    The fatal flaw of a HYSA is that the interest rate is <strong>Variable</strong>. You are completely at the mercy of the Federal Reserve. 
+                    The fatal flaw of a HYSA is that the interest rate is <strong>Variable</strong>. You are completely at the mercy of the Federal Reserve.
                 </p>
                 <p>
-                    If the economy enters a recession next month and the Fed panics, they will immediately slash interest rates to zero. The very next morning, your online bank will email you to announce that your 5.0% HYSA is now only paying 1.2%. 
+                    If the economy enters a recession next month and the Fed panics, they will immediately slash interest rates to zero. The very next morning, your online bank will email you to announce that your 5.0% HYSA is now only paying 1.2%.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Is the Certificate of Deposit (CD)?</h2>
                 <p>
-                    A Certificate of Deposit is a legally binding contract. You agree to lock your money inside the bank vault for a specific period of time (e.g., 6 months, 12 months, or 5 years). 
+                    A Certificate of Deposit is a legally binding contract. You agree to lock your money inside the bank vault for a specific period of time (e.g., 6 months, 12 months, or 5 years).
                 </p>
                 <p>
                     Because the bank knows exactly how long they get to keep your money, they reward you by locking in a <strong>Fixed Interest Rate</strong>.
@@ -110,7 +105,7 @@ export default function BlogPost() {
 
                 <h3 className="text-xl font-bold mt-8 mb-3">What Are the Cons: How Does the Illiquidity Trap Work?</h3>
                 <p>
-                    The massive drawback of a CD is the <strong>Early Withdrawal Penalty</strong>. 
+                    The massive drawback of a CD is the <strong>Early Withdrawal Penalty</strong>.
                 </p>
                 <p>
                     If you lock your $20,000 into a 5-year CD, but lose your job in year two and desperately need the cash, the bank will punish you for breaking the contract. The penalty usually equals 3 to 6 months' worth of the interest you earned. You will not lose your original $20,000 deposit, but you will surrender a massive chunk of your profits.
@@ -145,9 +140,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Strategies for Optimizing Safe Yields in 2026?</h2>
                     <p className="text-lg text-slate-700 mb-6">

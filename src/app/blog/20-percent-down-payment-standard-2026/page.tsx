@@ -30,13 +30,7 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-                { '@type': 'Question', name: 'Do I really need a 20% down payment to buy a house in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'No. The 20% down payment requirement is a persistent myth. In 2026, the average first-time homebuyer puts down between 6% and 8%. You can secure a Conventional mortgage with as little as 3% down, an FHA loan with 3.5% down, and VA or USDA loans with 0% down.' } },
-                { '@type': 'Question', name: 'What happens if I put down less than 20%?', acceptedAnswer: { '@type': 'Answer', text: 'If you put down less than 20% on a conventional loan, you will be required to pay Private Mortgage Insurance (PMI). PMI typically costs between 0.5% and 1.5% of your original loan amount annually, added to your monthly payment. However, PMI automatically drops off once you reach 78% equity in the home.' } },
-                { '@type': 'Question', name: 'Is it better to pay PMI or wait to save 20%?', acceptedAnswer: { '@type': 'Answer', text: 'In most appreciating markets, it is mathematically better to pay PMI than to wait. For example, if you spend 3 years saving an extra $40,000 to avoid $150/month in PMI, the price of the home you want to buy will likely have increased by $50,000+ during those 3 years, wiping out all your savings.' } },
-                { '@type': 'Question', name: 'Will putting 20% down lower my interest rate?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, a 20% down payment reduces the risk for the lender, which generally allows you to secure a lower interest rate compared to putting down 3% or 5%. However, the difference in the rate is often small (e.g., 0.125% to 0.25%), so it may not be worth depleting your savings.' } }
-            ] }) }} />
-            
+
             <ArticleSchema
                 title="Is 20% Down Still the Golden Standard in 2026?"
                 description="Waiting to save a full 20% down payment is costing first-time buyers thousands of dollars in lost equity. Here is why the 20% rule is dead."
@@ -46,7 +40,7 @@ export default function BlogPost() {
                 authorName="USFinNexus Editorial Team"
                 keywords={['Mortgage', 'Down Payment', 'PMI', '2026']}
             />
-            
+
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'The 20% Down Payment Myth', item: '/blog/20-percent-down-payment-standard-2026' }]} />
                 <article className="prose prose-slate prose-lg max-w-none">
@@ -72,7 +66,7 @@ export default function BlogPost() {
                     </p>
 
                     <p>
-                        With the median home price in the United States currently sitting at <strong>$420,000</strong>, saving a "standard" 20% down payment requires hoarding over <strong>$84,000 in cash</strong>—and that doesn't even include closing costs, moving expenses, or a post-move emergency fund. 
+                        With the median home price in the United States currently sitting at <strong>$420,000</strong>, saving a "standard" 20% down payment requires hoarding over <strong>$84,000 in cash</strong>—and that doesn't even include closing costs, moving expenses, or a post-move emergency fund.
                     </p>
                     <p>
                         For the vast majority of Millennials and Gen Z buyers, accumulating nearly $100,000 in cash while simultaneously paying record-high monthly rent is a mathematical impossibility. By the time they finally save $84,000, that same median home will likely cost $500,000, moving the 20% goalpost to $100,000. It is a treadmill you cannot outrun.
@@ -148,7 +142,7 @@ export default function BlogPost() {
                     <div className="bg-blue-50 p-8 rounded-2xl border border-blue-200 my-8 shadow-sm">
                         <h3 className="text-xl font-bold mb-4 text-navy-900 border-b border-blue-200 pb-2">How much does PMI actually cost?</h3>
                         <p className="text-slate-800 mb-4">
-                            PMI is not a flat fee. It varies based on your credit score, your down payment percentage, and the size of your loan. In 2026, excellent-credit borrowers might pay as little as 0.3% of the loan amount annually, while lower-credit borrowers might pay up to 1.5%. 
+                            PMI is not a flat fee. It varies based on your credit score, your down payment percentage, and the size of your loan. In 2026, excellent-credit borrowers might pay as little as 0.3% of the loan amount annually, while lower-credit borrowers might pay up to 1.5%.
                         </p>
                         <p className="text-slate-800 font-medium">
                             For a $400,000 loan with a 740 credit score and 5% down, PMI typically costs around <strong>$140 to $180 per month</strong>.
@@ -203,7 +197,7 @@ export default function BlogPost() {
                         The best part about conventional PMI is that it is not permanent. Under the federal Homeowners Protection Act, your lender is legally required to automatically terminate your PMI on the date your loan principal balance reaches 78% of the <em>original</em> value of your home.
                     </p>
                     <p>
-                        Even better, you don't have to wait for your standard amortization schedule to reach 78%. If your home appreciates in value, or if you make significant renovations, you can request a new appraisal from your lender. If the new appraisal proves that your loan balance is now less than 80% of the <em>current</em> market value of the home, you can petition the lender to cancel your PMI early. 
+                        Even better, you don't have to wait for your standard amortization schedule to reach 78%. If your home appreciates in value, or if you make significant renovations, you can request a new appraisal from your lender. If the new appraisal proves that your loan balance is now less than 80% of the <em>current</em> market value of the home, you can petition the lender to cancel your PMI early.
                     </p>
                     <p>
                         During the rapid appreciation years of 2020-2022, many buyers who put 5% down were able to get their PMI removed in less than 24 months simply because their home values skyrocketed.
@@ -256,9 +250,9 @@ export default function BlogPost() {
                 </article>
 
                 <div className="mt-16">
-                    
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Considerations Around Liquidity vs. Equity?</h2>
                     <p className="text-lg text-slate-700 mb-6">
@@ -275,7 +269,7 @@ export default function BlogPost() {
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">What Is the Leverage Effect of Real Estate?</h3>
                     <p className="text-slate-700 mb-4">
-                        Real estate is one of the only asset classes where the average person can safely use massive leverage. When you put 5% down on a $400,000 house ($20,000), you control a $400,000 asset. If the home appreciates by 5% over the next year, the total value increases to $420,000. 
+                        Real estate is one of the only asset classes where the average person can safely use massive leverage. When you put 5% down on a $400,000 house ($20,000), you control a $400,000 asset. If the home appreciates by 5% over the next year, the total value increases to $420,000.
                     </p>
                     <p className="text-slate-700 mb-4">
                         That $20,000 gain represents a <strong>100% Return on Investment (ROI)</strong> on your initial $20,000 down payment in just a single year. This magnified return profile is why real estate is such a powerful wealth-building engine for the middle class. Putting 20% down simply dilutes this leverage effect.

@@ -1,3 +1,4 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
@@ -8,9 +9,7 @@ import AutoLoanSeoContent from './AutoLoanSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
-const AutoLoanClient = nextDynamic(() => import('./AutoLoanClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import AutoLoanClient from './AutoLoanClient';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -64,10 +63,10 @@ export default function AutoLoanPage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Auto Loan Calculator', item: '/calculators/auto-loan' }]} />
             <AutoLoanClient />
-            <AutoLoanSeoContent />
+
             <SemrushIntentSection slug="auto-loan" />
             <CalculatorFAQ faqs={AUTO_LOAN_FAQS} title="Auto Loan Calculator FAQs" />
         <ContextualInternalLinks currentSlug="auto-loan" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="auto-loan" /></main>
     );
 }

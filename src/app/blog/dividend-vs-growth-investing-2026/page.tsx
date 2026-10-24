@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is a dividend stock?', acceptedAnswer: { '@type': 'Answer', text: 'A dividend stock is a share of a mature, highly profitable company (like Coca-Cola or AT&T) that distributes a portion of its corporate profits directly to its shareholders in cash, usually every three months. You earn money simply for holding the stock, even if the stock price never goes up.' } },
-    { '@type': 'Question', name: 'What is a growth stock?', acceptedAnswer: { '@type': 'Answer', text: 'A growth stock is a share of a rapidly expanding company (like an AI software startup) that pays zero dividends. Instead of giving profits back to shareholders as cash, the company reinvests 100% of its cash back into the business to build new products and capture market share. You only make money if the stock price goes up and you sell.' } },
-    { '@type': 'Question', name: 'What is the "tax drag" problem with dividends?', acceptedAnswer: { '@type': 'Answer', text: 'When a company pays you a cash dividend, the IRS taxes that money immediately in the year you receive it, even if you reinvest the cash. This constant taxation is called "tax drag," and it significantly slows down the mathematical compounding of your portfolio over a 30-year period compared to a pure growth stock that is never taxed until you finally sell.' } },
-] }) }} />
         <ArticleSchema
             title="Dividend vs. Growth Investing: Which Strategy Wins in 2026?"
             description="Should you invest for immediate cash flow or long-term stock appreciation? We break down the math between Dividend and Growth investing."
@@ -60,11 +55,11 @@ export default function BlogPost() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    When you enter the stock market in 2026, you face a massive fork in the road. You can invest to generate immediate, tangible cash flow today. Or, you can invest to build massive capital appreciation a decade from now. 
+                    When you enter the stock market in 2026, you face a massive fork in the road. You can invest to generate immediate, tangible cash flow today. Or, you can invest to build massive capital appreciation a decade from now.
                 </p>
 
                 <p>
-                    These two opposing philosophies are known as <strong>Dividend Investing</strong> and <strong>Growth Investing</strong>. 
+                    These two opposing philosophies are known as <strong>Dividend Investing</strong> and <strong>Growth Investing</strong>.
                 </p>
                 <p>
                     While both strategies can make you incredibly wealthy, they are designed for entirely different stages of life, and they are taxed by the IRS in entirely different ways. Here is the mathematical breakdown of how they compare, and why your current age dictates which strategy you should choose.
@@ -108,7 +103,7 @@ export default function BlogPost() {
                         <div>
                             <h3 className="font-bold mb-2">What Is the Dividend &quot;Tax Drag&quot; Problem?</h3>
                             <p className="text-sm m-0 text-gray-700">
-                                This is the fatal flaw of dividend investing in a regular brokerage account. Every single time a company pays you a dividend, the IRS taxes that cash (usually at 15%). 
+                                This is the fatal flaw of dividend investing in a regular brokerage account. Every single time a company pays you a dividend, the IRS taxes that cash (usually at 15%).
                                 <br/><br/>
                                 Even if you instantly reinvest the cash using a DRIP, <strong>you still have to pay taxes on it that year out of your own pocket.</strong> Over a 30-year timeframe, this constant annual taxation creates "Tax Drag," heavily slowing down the compound growth of your portfolio compared to a pure growth stock.
                             </p>
@@ -174,7 +169,7 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
 
                 <div className="bg-white p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">

@@ -136,8 +136,14 @@ export function getTaxEstimate(zip: string, stateCode?: string): TaxEstimate {
 /** Simplified ZIP-to-state mapping based on ZIP prefix ranges */
 function zipToState(zip: string): string {
     const prefix = parseInt(zip.slice(0, 3));
-    if (prefix >= 5 && prefix <= 9) return 'CT';        // CT 006-009
-    if (prefix >= 10 && prefix <= 149) return 'NY';
+    if (prefix >= 60 && prefix <= 69) return 'CT';
+    if (prefix >= 70 && prefix <= 89) return 'NJ';
+    if (prefix >= 10 && prefix <= 27) return 'MA';
+    if (prefix >= 28 && prefix <= 29) return 'RI';
+    if (prefix >= 30 && prefix <= 38) return 'NH';
+    if (prefix >= 39 && prefix <= 49) return 'ME';
+    if (prefix >= 50 && prefix <= 59) return 'VT';
+    if (prefix >= 100 && prefix <= 149 || prefix === 5 || prefix === 63) return 'NY';
     if (prefix >= 150 && prefix <= 196) return 'PA';
     if (prefix >= 197 && prefix <= 199) return 'DE';
     if (prefix >= 200 && prefix <= 205) return 'DC';
@@ -151,9 +157,11 @@ function zipToState(zip: string): string {
     if (prefix >= 350 && prefix <= 369) return 'AL';
     if (prefix >= 370 && prefix <= 385) return 'TN';
     if (prefix >= 386 && prefix <= 397) return 'MS';
-    if (prefix >= 398 && prefix <= 432) return 'TX';
-    if (prefix >= 433 && prefix <= 433) return 'OK';
-    if (prefix >= 440 && prefix <= 489) return 'OH';
+    if (prefix >= 398 && prefix <= 399) return 'GA';
+    if (prefix >= 400 && prefix <= 427) return 'KY';
+    if (prefix >= 430 && prefix <= 459) return 'OH';
+    if (prefix >= 460 && prefix <= 479) return 'IN';
+    if (prefix >= 480 && prefix <= 489) return 'MI';
     if (prefix >= 490 && prefix <= 499) return 'MI';
     if (prefix >= 500 && prefix <= 528) return 'IA';
     if (prefix >= 530 && prefix <= 549) return 'WI';
@@ -180,6 +188,7 @@ function zipToState(zip: string): string {
     if (prefix >= 970 && prefix <= 979) return 'OR';
     if (prefix >= 980 && prefix <= 994) return 'WA';
     if (prefix >= 995 && prefix <= 999) return 'AK';
-    if (prefix >= 96701 && prefix <= 96898) return 'HI';
-    return 'TX'; // Texas as default (high traffic state)
+    if (prefix >= 967 && prefix <= 968) return 'HI';
+    if (prefix === 885) return 'TX';
+    return ''; // Unknown ranges use a neutral fallback, never an unrelated state
 }

@@ -9,8 +9,8 @@ interface WebApplicationSchemaProps {
 /**
  * Calculator pages are free browser tools, but Google requires a genuine
  * aggregateRating or review for SoftwareApplication rich results. USFinNexus
- * does not publish fabricated ratings, so calculators use accurate WebPage
- * markup instead of ineligible SoftwareApplication markup.
+ * does not publish fabricated ratings. A truthful SoftwareApplication is nested
+ * in WebPage as the tool entity, without promising eligibility for review-rich results.
  */
 export default function WebApplicationSchema({
     name,
@@ -34,9 +34,11 @@ export default function WebApplicationSchema({
             name: 'USFinNexus',
             url: 'https://usfinnexus.com/',
         },
-        about: {
-            '@type': 'Thing',
-            name: 'Financial calculator',
+        mainEntity: {
+            '@type': 'SoftwareApplication', name, description, url,
+            applicationCategory: 'FinanceApplication', operatingSystem: 'Any',
+            isAccessibleForFree: true,
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         },
         publisher: {
             '@id': 'https://usfinnexus.com/#organization',

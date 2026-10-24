@@ -25,11 +25,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is the 28/36 Rule?', acceptedAnswer: { '@type': 'Answer', text: 'The 28/36 Rule is a financial guideline stating that no more than 28% of your gross monthly income should go toward housing expenses (mortgage, taxes, insurance), and no more than 36% of your gross monthly income should go toward ALL debts combined (housing plus car loans, student loans, and credit cards).' } },
-    { '@type': 'Question', name: 'Why can a lender approve more than my personal budget?', acceptedAnswer: { '@type': 'Answer', text: 'Mortgage underwriting uses documented gross income, qualifying debts and program rules. Your personal budget also needs taxes, childcare, utilities, maintenance, savings and lifestyle goals, so a preapproval is a borrowing ceiling—not a recommendation to spend the maximum.' } },
-    { '@type': 'Question', name: 'What hidden costs should I include in my home budget?', acceptedAnswer: { '@type': 'Answer', text: 'When budgeting for a house, you must include the full PITI (Principal, Interest, Taxes, Insurance), plus mandatory HOA fees, Private Mortgage Insurance (PMI) if you put less than 20% down, and an annual maintenance fund equal to roughly 1% of the home\'s total value.' } },
-] }) }} />
         <ArticleSchema
             title="How Much House Can I Afford Based on My Income?"
             description="Estimate a realistic home price from income, debts, down payment and total monthly housing costs."
@@ -81,7 +76,7 @@ export default function BlogPost() {
                     The rule dictates that your absolute maximum housing payment should never exceed <strong>28% of your Gross Monthly Income</strong>.
                 </p>
                 <p>
-                    Let's assume you make $10,000 a month before taxes. 
+                    Let's assume you make $10,000 a month before taxes.
                     <br/>
                     <em>$10,000 × 0.28 = $2,800.</em>
                 </p>
@@ -94,7 +89,7 @@ export default function BlogPost() {
                     The second half of the rule is even more critical. Your total debt obligations (your new $2,800 mortgage, plus your student loans, car payments, and minimum credit card bills) must never exceed <strong>36% of your Gross Monthly Income</strong>.
                 </p>
                 <p>
-                    If you make $10,000 a month, your maximum allowed debt is $3,600. 
+                    If you make $10,000 a month, your maximum allowed debt is $3,600.
                     <br/>
                     If your car payment is $700 and your student loan is $400, you are already spending $1,100 on debt. You only have $2,500 left over for housing ($3,600 - $1,100). The car loan literally forces you to buy a cheaper house.
                 </p>
@@ -116,7 +111,7 @@ export default function BlogPost() {
                     When you rent an apartment, your monthly rent is the <em>maximum</em> amount you will pay for housing that month. If the AC unit breaks, the landlord pays the $5,000 replacement cost.
                 </p>
                 <p>
-                    When you own a house, your mortgage is the <em>minimum</em> amount you will pay. If the AC unit breaks, you pay the $5,000. 
+                    When you own a house, your mortgage is the <em>minimum</em> amount you will pay. If the AC unit breaks, you pay the $5,000.
                 </p>
                 <p>
                     To calculate true affordability, you must use the <strong>1% Maintenance Rule</strong>. You should save 1% of the home's total value every year for repairs. If you buy a $400,000 house, you must secretly add $4,000 a year (or $333 a month) to your true housing budget to ensure you can afford the inevitable broken pipes and roof leaks.
@@ -145,9 +140,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">Advanced Strategies: The Brutal Math of House Affordability</h2>
                     <p className="text-lg text-slate-700 mb-6">

@@ -1,12 +1,11 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import VaSeoContent from './VaSeoContent';
 
-const GovLoanClient = nextDynamic(() => import('../fha-va-usda/GovLoanClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import GovLoanClient from '../fha-va-usda/GovLoanClient';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
 
@@ -16,7 +15,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
     title: 'VA Loan Calculator 2026 - VA Funding Fee and Payments',
     description:
-        'Calculate your VA loan monthly payment with 0% down. Automatically calculates the 2026 VA Funding Fee based on your military service and down payment.',
+        'Calculate your VA loan monthly payment with 0% down. Automatically calculates the 2026 VA Funding Fee based on your military service and down payment.',
     openGraph: {
         type: 'website',
         title: 'VA Loan Calculator 2026 - Zero Down Payment',
@@ -45,6 +44,6 @@ export default function VaLoanPage() {
                             <GovLoanClient initialTab="va" heading="VA Loan Calculator" />
             <VaSeoContent />
         <ContextualInternalLinks currentSlug="va" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="va" /></main>
     );
 }

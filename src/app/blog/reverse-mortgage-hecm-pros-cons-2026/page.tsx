@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is a Reverse Mortgage?', acceptedAnswer: { '@type': 'Answer', text: 'A traditional mortgage requires you to write a check to the bank every month. A Reverse Mortgage is the exact opposite. If you are 62 or older and have massive equity in your home, the bank will literally write YOU a check every month. They are slowly buying the equity out of your house to fund your retirement.' } },
-    { '@type': 'Question', name: 'Do I have to make monthly payments on a Reverse Mortgage?', acceptedAnswer: { '@type': 'Answer', text: 'No. The entire point of a reverse mortgage is that you never make a monthly payment to the bank as long as you live in the house. The loan balance simply grows larger and larger every month as the bank charges you interest and sends you cash.' } },
-    { '@type': 'Question', name: 'What happens when I die with a Reverse Mortgage?', acceptedAnswer: { '@type': 'Answer', text: 'When you die (or move into a nursing home), the reverse mortgage immediately becomes due. The bank will demand your heirs pay back the entire massive loan balance. If your heirs cannot afford to pay off the loan, the bank will legally seize the house, sell it, keep their money, and give your heirs whatever tiny fraction of equity is left over.' } },
-] }) }} />
         <ArticleSchema
             title="Reverse Mortgages Explained (2026): The Good, The Bad, and The Scam"
             description="A reverse mortgage can save a retiree from bankruptcy, or it can destroy their family's inheritance. Learn the terrifying math behind HECM loans."

@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is the Social Security COLA?', acceptedAnswer: { '@type': 'Answer', text: 'The Cost of Living Adjustment (COLA) is an annual increase added to all Social Security checks. It was created by Congress in the 1970s to ensure that retirees do not lose purchasing power when inflation causes the price of groceries and healthcare to skyrocket.' } },
-    { '@type': 'Question', name: 'How is the COLA mathematically calculated?', acceptedAnswer: { '@type': 'Answer', text: 'The government does not guess. They use a strict mathematical formula tied to the Consumer Price Index for Urban Wage Earners and Clerical Workers (CPI-W). They compare the CPI-W data from July, August, and September of the current year to the same three months of the previous year. If inflation went up 3%, your Social Security check goes up exactly 3% in January.' } },
-    { '@type': 'Question', name: 'Why will my actual check be smaller than the announced COLA percentage?', acceptedAnswer: { '@type': 'Answer', text: 'Before the government sends you your Social Security check, they automatically deduct your Medicare Part B premium. Medicare premiums usually increase every single year. If your COLA bump gives you an extra $50 a month, but Medicare increases their premium by $20 a month, your actual net raise is only $30.' } },
-] }) }} />
         <ArticleSchema
             title="Social Security COLA Increase 2026: Why Your Check Might Be Smaller"
             description="Inflation is cooling down, which means the massive Social Security COLA bumps of the last three years are over. Learn exactly how the 2026 COLA is calculated."

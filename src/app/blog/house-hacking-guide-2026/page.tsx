@@ -32,44 +32,6 @@ export const metadata: Metadata = {
 export default function HouseHackingBlog() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
-                {
-                    '@type': 'Question',
-                    name: 'What is house hacking and how does it work?',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'House hacking is a real estate strategy where you purchase a property, live in one portion of it, and rent out the remaining units or rooms to generate income that offsets your mortgage and housing costs. Common approaches include buying a duplex or triplex and renting the other units, adding an ADU (accessory dwelling unit), or renting out spare bedrooms in a single-family home.'
-                    }
-                },
-                {
-                    '@type': 'Question',
-                    name: 'Can I use an FHA loan for house hacking?',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'Yes, FHA loans are one of the best financing tools for house hacking. The FHA allows you to purchase a property with up to 4 units with as little as 3.5% down, as long as you occupy one of the units as your primary residence. This low down payment requirement makes it much easier for first-time buyers to enter the multi-family market.'
-                    }
-                },
-                {
-                    '@type': 'Question',
-                    name: 'How much money can I save by house hacking?',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'The savings from house hacking vary widely, but many investors reduce their out-of-pocket housing costs by 50% to 100%. For example, if your mortgage payment is $2,800 per month and you collect $2,000 in rent from tenants, your net housing cost drops to just $800. In strong rental markets with multi-family properties, some house hackers live completely free.'
-                    }
-                },
-                {
-                    '@type': 'Question',
-                    name: 'What are the best house hacking strategies for 2026?',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'The three most effective house hacking strategies in 2026 are: buying a duplex or small multi-family property and renting the other units, purchasing or building an ADU (accessory dwelling unit) to rent separately, and renting out individual rooms in a large single-family home. With Fannie Mae now allowing 5% down on 2-4 unit properties, the multi-family duplex strategy has become especially accessible for first-time buyers.'
-                    }
-                }
-            ]
-        }) }} />
         <ArticleSchema
             title="House Hacking in 2026: The Ultimate Guide to Living for Free"
             description="Learn how to offset your mortgage or live for free in 2026 using house hacking strategies like duplexes, ADUs, and roommate renting."
@@ -183,9 +145,9 @@ export default function HouseHackingBlog() {
                     </div>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Strategies for House Hacking in 2026?</h2>
                     <p className="text-lg text-slate-700 mb-6">

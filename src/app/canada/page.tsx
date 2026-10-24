@@ -6,9 +6,9 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 export const metadata: Metadata = {
     title: 'Canada Finance Tools & Mortgage Guides',
     description: 'Free Canada-focused mortgage calculators and plain-language home financing guides. CAD results, federal rules, primary sources and no signup.',
-    alternates: { canonical: 'https://usfinnexus.com/canada' },
+    alternates: { canonical: 'https://usfinnexus.com/canada', languages: { 'en-CA': 'https://usfinnexus.com/canada' } },
     openGraph: {
-        type: 'website',
+        type: 'website', locale: 'en_CA',
         title: 'Canada Finance Tools & Mortgage Guides',
         description: 'Canada-focused mortgage tools with CAD results and official-source methodology.',
         url: 'https://usfinnexus.com/canada',
@@ -30,7 +30,7 @@ export default function CanadaHubPage() {
                 <span className="rounded-full bg-red-600 px-3 py-1 text-xs font-black uppercase tracking-widest">Canada</span>
                 <h1 className="mt-5 max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">Canadian mortgage tools built around Canadian rules</h1>
                 <p className="mt-4 max-w-2xl text-lg text-slate-300">
-                    Free CAD calculators using federal qualification rules and primary Canadian sources. No account, email or personal-data collection.
+                    Free CAD calculators using federal qualification rules and primary Canadian sources. No account or email required for calculator inputs; advertising and hosting data are disclosed in the Privacy Policy.
                 </p>
             </header>
 

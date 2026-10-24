@@ -1,12 +1,11 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import DripSeoContent from './DripSeoContent';
 
-const DripClient = nextDynamic(() => import('./DripClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import DripClient from './DripClient';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
@@ -17,7 +16,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'DRIP Calculator 2026 — Dividend Reinvestment Forecaster',
-    description: 'Calculate the compound growth of dividend reinvestment over time. Model dividend growth rates, yield on cost, and tax-adjusted returns. Free DRIP forecaster.',
+    description: 'Calculate the compound growth of dividend reinvestment over time. Model dividend growth rates, yield on cost, and tax-adjusted returns. Free DRIP forecaster.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/drip' },
     openGraph: {
         type: 'website',
@@ -70,6 +69,6 @@ export default function DripPage() {
             <SemrushIntentSection slug="drip" />
             <CalculatorFAQ faqs={DRIP_FAQS} title="Dividend Investing — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="drip" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="drip" /></main>
     );
 }

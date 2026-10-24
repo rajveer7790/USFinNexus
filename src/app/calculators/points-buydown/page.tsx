@@ -1,3 +1,4 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
@@ -7,16 +8,14 @@ import WebApplicationSchema from '@/components/WebApplicationSchema';
 import PointsBuydownSeoContent from './PointsBuydownSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 
-const PointsBuyDownClient = nextDynamic(() => import('./PointsBuyDownClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import PointsBuyDownClient from './PointsBuyDownClient';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Mortgage Points Buy-Down Calculator 2026 - Break-Even Analysis',
-    description: 'Free mortgage points calculator for 2026. Calculate if paying discount points upfront is worth it. See monthly savings and find your break-even point.',
+    description: 'Free mortgage points calculator for 2026. Calculate if paying discount points upfront is worth it. See monthly savings and find your break-even point.',
     openGraph: {
         type: 'website',
         title: 'Mortgage Points Buy-Down Calculator 2026',
@@ -61,6 +60,6 @@ export default function PointsBuyDownPage() {
             <PointsBuydownSeoContent />
             <CalculatorFAQ faqs={POINTS_FAQS} title="Mortgage Points — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="points-buydown" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="points-buydown" /></main>
     );
 }

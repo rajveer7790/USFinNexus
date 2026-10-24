@@ -1,3 +1,4 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
@@ -7,16 +8,14 @@ import WebApplicationSchema from '@/components/WebApplicationSchema';
 import RetirementSeoContent from './RetirementSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 
-const RetirementClient = nextDynamic(() => import('./RetirementClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import RetirementClient from './RetirementClient';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Free Retirement Calculator 2026 — Plan Your Nest Egg',
-    description: 'Calculate how much you need to retire comfortably and see if your savings are on track. Free retirement planner with compound growth projections and PDF export.',
+    description: 'Calculate how much you need to retire comfortably and see if your savings are on track. Free retirement planner with compound growth projections and PDF export.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/retirement' },
     openGraph: {
         type: 'website',
@@ -61,6 +60,6 @@ export default function RetirementPage() {
             <RetirementSeoContent />
             <CalculatorFAQ faqs={RETIREMENT_FAQS} title="Retirement Planning — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="retirement" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="retirement" /></main>
     );
 }

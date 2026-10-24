@@ -7,9 +7,9 @@ import DisclaimerBanner from '@/components/DisclaimerBanner';
 import { Plus, X, TrendingDown, Table2, Zap } from 'lucide-react';
 
 const DEFAULT_DEBTS: DebtItem[] = [
-    { name: 'Credit Card', balance: 5000, rate: 22.99, minPayment: 150 },
+    { name: 'Credit Card', balance: 8000, rate: 24.99, minPayment: 200 },
     { name: 'Car Loan', balance: 12000, rate: 6.5, minPayment: 350 },
-    { name: 'Student Loan', balance: 25000, rate: 5.5, minPayment: 280 },
+    { name: 'Student Loan', balance: 2500, rate: 5, minPayment: 100 },
 ];
 
 export default function DebtPayoffClient() {

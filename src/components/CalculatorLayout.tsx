@@ -1,9 +1,10 @@
 'use client';
 
 import React from 'react';
+import { PMMS } from '@/lib/market-data';
 import Link from 'next/link';
-import { 
-    Clock, AlertCircle, ChevronRight, Share2, 
+import {
+    Clock, AlertCircle, ChevronRight, Share2,
     Printer, Shield, Bookmark, Info
 } from 'lucide-react';
 import RelatedCalculators from './RelatedCalculators';
@@ -23,10 +24,10 @@ const LATEST_INSIGHTS = [
     { href: '/guides/mortgage-credit-score-requirements', tag: 'Guide', title: 'What Credit Score Do You Need to Buy a House?', time: '6 min' },
 ];
 
-export default function CalculatorLayout({ 
-    title, 
-    description, 
-    children, 
+export default function CalculatorLayout({
+    title,
+    description,
+    children,
     expertSummary,
     lastUpdated = 'March 2026'
 }: CalculatorLayoutProps) {
@@ -43,7 +44,7 @@ export default function CalculatorLayout({
                             <ChevronRight size={10} className="text-slate-300" />
                             <Link href="/calculators" className="text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-[#0da6f2] transition-colors">Calculators</Link>
                         </div>
-                        
+
                         <h1 className="text-2xl sm:text-3xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-3 sm:mb-4">
                             {title}
                         </h1>
@@ -58,7 +59,7 @@ export default function CalculatorLayout({
                             </div>
                             <div className="flex items-center gap-2 text-xs font-bold text-slate-400">
                                 <Shield size={14} className="text-[#0da6f2]" />
-                                CFPB Compliant
+                                Source-based estimates
                             </div>
                             <div className="flex items-center gap-4 ml-auto">
                                 <button className="p-2 text-slate-400 hover:text-[#0da6f2] transition-colors" title="Print Report">
@@ -79,10 +80,10 @@ export default function CalculatorLayout({
             {/* ── MAIN GRID ── */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
                 <div className="flex flex-col lg:flex-row gap-6 lg:gap-10">
-                    
+
                     {/* LEFT: Calculator Engine */}
                     <main className="flex-1 min-w-0">
-                        
+
                         {/* EXPERT SUMMARY (ABOVE THE FOLD SEO) */}
                         {expertSummary && (
                             <div className="mb-6 p-4 bg-blue-50/50 border border-blue-100 rounded-xl flex items-start gap-3">
@@ -111,7 +112,7 @@ export default function CalculatorLayout({
 
                     {/* RIGHT: Sidebar (Sticky) */}
                     <aside className="w-full lg:w-[300px] flex-shrink-0 space-y-5">
-                        
+
                         {/* ── TOP SIDEBAR AD SLOT (hidden on mobile) ── */}
                         <div className="hidden lg:flex bg-slate-50 border border-slate-200 rounded-2xl flex-col items-center justify-center p-4 min-h-[280px]">
                             <p className="text-xs font-black text-slate-300 uppercase tracking-widest mb-4">Advertisement</p>
@@ -131,8 +132,8 @@ export default function CalculatorLayout({
                             </div>
                             <div className="space-y-3">
                                 {[
-                                    { k: '30-Yr Avg · Oct 8', v: '7.40%' },
-                                    { k: '15-Yr Avg · Oct 8', v: '6.73%' },
+                                    { k: '30-Yr Avg · Oct 22', v: PMMS.thirtyYear.toFixed(2) + '%' },
+                                    { k: '15-Yr Avg · Oct 22', v: PMMS.fifteenYear.toFixed(2) + '%' },
                                     { k: 'Primary Residence DTI', v: '43%' },
                                     { k: 'PMI Required below', v: '20% Down' },
                                 ].map(bench => (

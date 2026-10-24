@@ -9,10 +9,15 @@ export default function DownPaymentClient() {
     const [downPct, setDownPct] = useState(20);
     const [monthlySavings, setMonthlySavings] = useState(1000);
     const [currentSavings, setCurrentSavings] = useState(5000);
+    const [savingsApy, setSavingsApy] = useState(0);
 
     const targetDownPayment = (homePrice * downPct) / 100;
     const remainingToSave = Math.max(0, targetDownPayment - currentSavings);
-    const monthsToSave = monthlySavings > 0 ? Math.ceil(remainingToSave / monthlySavings) : 0;
+    let monthsToSave = 0, projectedSavings = Math.max(0, currentSavings);
+    const monthlyYield = Math.pow(1 + Math.max(0, savingsApy) / 100, 1 / 12) - 1;
+    while (projectedSavings < targetDownPayment && monthsToSave < 1200 && (monthlySavings > 0 || monthlyYield > 0)) {
+        projectedSavings = projectedSavings * (1 + monthlyYield) + Math.max(0, monthlySavings); monthsToSave++;
+    }
     const years = Math.floor(monthsToSave / 12);
     const months = monthsToSave % 12;
     const progressPct = Math.min(100, (currentSavings / targetDownPayment) * 100) || 0;
@@ -33,7 +38,7 @@ export default function DownPaymentClient() {
                         <span className="text-xs font-black uppercase tracking-[0.3em] text-emerald-500">Savings Goal</span>
                     </div>
                     <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight bg-gradient-to-r from-navy-900 via-emerald-500 to-navy-900 bg-clip-text text-transparent">
-                        Down Payment Goal
+                        Down Payment Savings Calculator
                     </h1>
                     <p className="text-gray-500 font-medium text-lg">
                         See how long it will take to save for your dream home.
@@ -79,7 +84,7 @@ export default function DownPaymentClient() {
                         </div>
 
                         <div>
-                            <label className="input-label">Monthly Contributions</label>
+                            <label className="input-label" htmlFor="savings-apy">Illustrative savings APY (%)</label><input id="savings-apy" type="number" min={0} max={20} step={0.1} value={savingsApy} onChange={e => setSavingsApy(Math.max(0, Math.min(20, +e.target.value)))} className="glass-input mb-3" /><p className="text-xs mb-3">User assumption, not a current savings offer. Monthly end-of-period deposits; interest tax and future yield changes excluded.</p><label className="input-label">Monthly Contributions</label>
                             <div className="relative group">
                                 <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-emerald-500 transition-colors">$</span>
                                 <input type="number" value={monthlySavings || ''} onChange={(e) => setMonthlySavings(Number(e.target.value))} className="glass-input pl-8" />

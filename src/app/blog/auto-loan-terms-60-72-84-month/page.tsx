@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'Why are 84-month auto loans becoming so popular?', acceptedAnswer: { '@type': 'Answer', text: 'As car prices have skyrocketed, buyers can no longer afford the monthly payments on standard 48 or 60-month loans. To keep cars "affordable" on a monthly basis, dealerships stretch the loan term out to 72 or 84 months, lowering the payment but drastically increasing the total interest paid.' } },
-    { '@type': 'Question', name: 'What is the highest interest rate on an 84-month car loan?', acceptedAnswer: { '@type': 'Answer', text: 'Lenders charge significantly higher interest rates for 84-month loans compared to 60-month loans because the risk of default is higher. If a 60-month loan is offered at 6.5%, the 84-month loan might be offered at 8.5% or 9%.' } },
-    { '@type': 'Question', name: 'What happens if I total my car during an 84-month loan?', acceptedAnswer: { '@type': 'Answer', text: 'If you take out an 84-month loan, you will likely be "upside down" (owing more than the car is worth) for the first 4 to 5 years. If the car is totaled during this time, your insurance will only pay the current market value of the car. You will be personally responsible for paying the bank the remaining loan balance out of your own pocket.' } },
-] }) }} />
         <ArticleSchema
             title="60 vs 72 vs 84-Month Auto Loan: The Hidden Dangers of Long-Term Car Loans"
             description="Dealers are pushing 84-month auto loans to lower your monthly payment. See the exact math on how long-term car loans destroy your wealth."
@@ -72,7 +67,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">How Does the Math Compare on a $35,000 Car Loan at Different Terms?</h2>
                 <p>
-                    To understand the trap, you must look beyond the monthly payment and focus on the <strong>Total Cost of Ownership</strong>. 
+                    To understand the trap, you must look beyond the monthly payment and focus on the <strong>Total Cost of Ownership</strong>.
                 </p>
                 <p>
                     Assume you are financing exactly $35,000. Crucially, lenders charge <em>higher</em> interest rates for longer terms because you are carrying the risk for a longer period of time.
@@ -123,7 +118,7 @@ export default function BlogPost() {
                     The extra interest is terrible, but it is not the most dangerous part of an 84-month loan. The real danger is <strong>Depreciation</strong>.
                 </p>
                 <p>
-                    Cars lose value rapidly. A new car loses roughly 20% of its value in the first year, and 15% every year after that. 
+                    Cars lose value rapidly. A new car loses roughly 20% of its value in the first year, and 15% every year after that.
                 </p>
                 <p>
                     When you take an 84-month loan, your monthly payments are so small that they barely cover the interest. Very little money is actually paying down the principal balance of the loan. As a result, the car is losing value <em>faster</em> than you are paying off the debt.
@@ -152,7 +147,7 @@ export default function BlogPost() {
                     There is a psychological threshold that buyers cross with 84-month loans. Most bumper-to-bumper manufacturer warranties expire after 3 years or 36,000 miles. Powertrain warranties usually expire after 5 years or 60,000 miles.
                 </p>
                 <p>
-                    If you take an 84-month (7-year) loan, you will spend <strong>Years 6 and 7</strong> making payments on a car that is entirely out of warranty. 
+                    If you take an 84-month (7-year) loan, you will spend <strong>Years 6 and 7</strong> making payments on a car that is entirely out of warranty.
                 </p>
                 <p>
                     In Year 6, the car might need a new alternator, a timing belt, and a fresh set of tires—a $2,500 repair bill. But you still have a mandatory $554 monthly car payment due to the bank. Millions of Americans are forced to put massive repair bills on high-interest credit cards because all of their cash flow is tied up in a 7-year auto loan.
@@ -185,9 +180,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Is the Psychology Behind Long-Term Auto Loans?</h2>
                     <p className="text-lg text-slate-700 mb-6">

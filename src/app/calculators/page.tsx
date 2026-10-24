@@ -63,9 +63,9 @@ const TOOLS = [
     { href: '/calculators/budget', icon: PiggyBank, title: 'Budget 50/30/20', desc: 'Needs, wants, savings split.', cat: 'wealth' },
     // Canada & Regional
     { href: '/canada/mortgage-calculator', icon: Map, title: 'Canada Mortgage', desc: 'CAD payment, insurance & stress test.', badge: 'new', cat: 'regional' },
-    { href: '/calculators/california', icon: Map, title: 'California Closing', desc: 'CA-specific costs.', cat: 'regional' },
-    { href: '/calculators/texas', icon: Map, title: 'Texas Closing', desc: 'TX-specific costs.', cat: 'regional' },
-    { href: '/calculators/florida', icon: Map, title: 'Florida Closing', desc: 'FL-specific costs.', cat: 'regional' },
+    { href: '/calculators/california', icon: Map, title: 'California Mortgage', desc: 'Editable California tax and insurance assumptions.', cat: 'regional' },
+    { href: '/calculators/texas', icon: Map, title: 'Texas Mortgage', desc: 'Editable Texas tax and insurance assumptions.', cat: 'regional' },
+    { href: '/calculators/florida', icon: Map, title: 'Florida Mortgage', desc: 'Editable Florida tax and insurance assumptions.', cat: 'regional' },
     { href: '/calculators/closing-costs', icon: FileText, title: 'General Closing', desc: 'National average estimate.', cat: 'regional' },
 ];
 
@@ -74,7 +74,7 @@ export default function CalculatorsPage() {
         <main className="neo-root">
             <section className="neo-light-zone py-12">
                 <div className="neo-container">
-                    <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }]} />
+                    <p className="mb-4 text-sm">Looking for Canadian rules? Visit the separate <Link href="/canada" className="underline">Canada tools hub</Link>; U.S. loan rules below are not Canadian qualification rules.</p><Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }]} />
 
                     <header className="mb-12">
                         <div className="neo-sec-tag"><span className="neo-sec-dot" /> All Tools</div>

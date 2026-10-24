@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is Mortgage Forbearance?', acceptedAnswer: { '@type': 'Answer', text: 'Forbearance is a temporary pause on your mortgage payments, usually granted for 3 to 6 months if you experience a sudden hardship (like losing your job or a medical emergency). It is NOT free money; the missed payments still accrue interest, and you must pay them back when the forbearance period ends.' } },
-    { '@type': 'Question', name: 'What is a Mortgage Deferment?', acceptedAnswer: { '@type': 'Answer', text: 'Deferment is what happens at the end of a forbearance period. If you paused your mortgage for 6 months and now owe the bank $12,000, they will take that $12,000 balance and "defer" it to the very end of your 30-year loan. You simply resume making your normal monthly payments today, and pay the $12,000 when you eventually sell or refinance the house decades later.' } },
-    { '@type': 'Question', name: 'What is a Loan Modification?', acceptedAnswer: { '@type': 'Answer', text: 'If your financial hardship is permanent (e.g., you took a new job that pays $20,000 less per year), you cannot afford your original mortgage payment anymore. A Loan Modification permanently rewrites your mortgage contract. The bank will lower your interest rate, extend your loan to 40 years, or forgive a portion of the principal to permanently lower your monthly payment to an affordable level.' } },
-] }) }} />
         <ArticleSchema
             title="Mortgage Forbearance vs. Deferment vs. Modification (2026 Guide)"
             description="If you lose your job and cannot pay your mortgage, learn the exact difference between Forbearance, Deferment, and Loan Modification to save your home."
@@ -64,7 +59,7 @@ export default function BlogPost() {
                 </p>
 
                 <p>
-                    Most homeowners panic. They drain their retirement accounts, max out their credit cards, and eventually miss a payment, destroying their credit score and triggering the foreclosure process. 
+                    Most homeowners panic. They drain their retirement accounts, max out their credit cards, and eventually miss a payment, destroying their credit score and triggering the foreclosure process.
                 </p>
                 <p>
                     <strong>Do not panic.</strong> Banks do not want to foreclose on your house. Foreclosures are incredibly expensive and legally exhausting for lenders. To avoid this, banks offer a suite of "Loss Mitigation" programs designed specifically to keep you in your home. You simply have to know which one to ask for: Forbearance, Deferment, or Modification.
@@ -84,7 +79,7 @@ export default function BlogPost() {
                         <div>
                             <h3 className="font-bold mb-2">What Is the Forbearance Trap?</h3>
                             <p className="text-sm m-0 text-gray-700">
-                                Forbearance is NOT free money. It is a pause button. If your mortgage is $2,000 a month, and you pause it for 6 months, you now owe the bank $12,000. 
+                                Forbearance is NOT free money. It is a pause button. If your mortgage is $2,000 a month, and you pause it for 6 months, you now owe the bank $12,000.
                                 <br/><br/>
                                 In the past, predatory banks would demand you pay that entire $12,000 in one massive lump sum on Month 7 (a "balloon payment"), instantly bankrupting the homeowner. Fortunately, federal regulations in 2026 have largely outlawed this practice for government-backed loans, leading us directly to the next option: Deferment.
                             </p>
@@ -100,7 +95,7 @@ export default function BlogPost() {
                     Assume you found a new job. You can easily afford your normal $2,000 monthly payment again. However, you do not have $12,000 in cash to pay back the 6 months you missed during your forbearance.
                 </p>
                 <p>
-                    Through a Deferment (often called a "Partial Claim" for FHA loans), the bank takes that $12,000 balance and silently moves it to the absolute end of your 30-year mortgage. 
+                    Through a Deferment (often called a "Partial Claim" for FHA loans), the bank takes that $12,000 balance and silently moves it to the absolute end of your 30-year mortgage.
                 </p>
                 <p>
                     You simply resume making your normal $2,000 payments as if nothing happened. That $12,000 balance sits quietly at 0% interest as a silent second lien on your house. You will only have to pay it back decades from now when you finally sell the house, refinance the mortgage, or make your very last payment in year 30.
@@ -134,7 +129,7 @@ export default function BlogPost() {
                     The absolute biggest mistake homeowners make is waiting until they are already 60 days late on their mortgage before calling the bank.
                 </p>
                 <p>
-                    The moment you lose your job, while your credit score is still perfect, you must call the 1-800 number on your mortgage statement and say: <em>"I need to speak to the Loss Mitigation Department."</em> 
+                    The moment you lose your job, while your credit score is still perfect, you must call the 1-800 number on your mortgage statement and say: <em>"I need to speak to the Loss Mitigation Department."</em>
                 </p>
                 <p>
                     They will assign you a caseworker. You will have to submit a "Hardship Letter" explaining why you cannot pay, along with your new bank statements and proof of unemployment. If you act proactively, you can secure a forbearance before a single late payment hits your credit report, keeping your financial reputation completely pristine.
@@ -153,9 +148,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Strategies for Navigating Loss Mitigation in 2026?</h2>
                     <p className="text-lg text-slate-700 mb-6">

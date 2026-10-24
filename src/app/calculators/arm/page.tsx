@@ -1,12 +1,11 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import ArmSeoContent from './ArmSeoContent';
 
-const ArmCalculatorClient = nextDynamic(() => import('./ArmCalculatorClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import ArmCalculatorClient from './ArmCalculatorClient';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
 import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
@@ -16,11 +15,12 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'ARM Calculator 2026 - Adjustable Rate Mortgage Worst-Case Analysis',
-    description: 'Free ARM mortgage calculator. Instantly see your worst-case payment scenario, fully-indexed rate, and understand rate caps (5/1, 7/1 ARMs).',
+    description: 'Free ARM mortgage calculator. Instantly see your worst-case payment scenario, fully-indexed rate, and understand rate caps (5/6, 7/6 ARMs).',
+
     openGraph: {
         type: 'website',
         title: 'ARM Calculator 2026 - Adjustable Rate Mortgage Worst-Case Analysis',
-        description: 'Adjustable rate mortgage calculator with worst-case payment scenarios and rate cap analysis for 5/1 and 7/1 ARMs. Free, no signup required.',
+        description: 'Adjustable rate mortgage calculator with worst-case payment scenarios and rate cap analysis for 5/6 and 7/6 ARMs. Free, no signup required.',
         url: 'https://usfinnexus.com/calculators/arm',
         images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'ARM Adjustable Rate Mortgage Calculator 2026 - USFinNexus' }],
     },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'ARM Calculator 2026 - Adjustable Rate Mortgage Worst-Case Analysis',
-        description: 'See your worst-case ARM payment, fully-indexed rate, and rate cap scenarios for 5/1, 7/1 ARMs. Free calculator.',
+        description: 'See your worst-case ARM payment, fully-indexed rate, and rate cap scenarios for 5/6, 7/6 ARMs. Free calculator.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
 };
@@ -46,6 +46,6 @@ export default function ArmCalculatorPage() {
             <SemrushIntentSection slug="arm" />
             <ArmSeoContent />
         <ContextualInternalLinks currentSlug="arm" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="arm" /></main>
     );
 }

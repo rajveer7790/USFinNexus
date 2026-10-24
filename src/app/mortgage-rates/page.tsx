@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
-const SOURCE_DATE = 'October 8, 2026';
+import { PMMS } from '@/lib/market-data';
+import { calcMonthlyPI } from '@/lib/formulas';
+const SOURCE_DATE = PMMS.label;
 
 export const metadata: Metadata = {
     title: 'Current Mortgage Rates: October 2026 Data & Context',
@@ -30,12 +32,12 @@ export default function MortgageRatesPage() {
                 <div className="not-prose grid sm:grid-cols-2 gap-4 my-8">
                     <section className="rounded-2xl border border-blue-200 bg-blue-50 p-6">
                         <p className="text-sm text-gray-600">30-year fixed average</p>
-                        <p className="text-4xl font-black text-navy-900">7.40%</p>
+                        <p className="text-4xl font-black text-navy-900">{PMMS.thirtyYear.toFixed(2)}%</p>
                         <p className="text-sm text-gray-600">Freddie Mac PMMS, {SOURCE_DATE}</p>
                     </section>
                     <section className="rounded-2xl border border-blue-200 bg-blue-50 p-6">
                         <p className="text-sm text-gray-600">15-year fixed average</p>
-                        <p className="text-4xl font-black text-navy-900">6.73%</p>
+                        <p className="text-4xl font-black text-navy-900">{PMMS.fifteenYear.toFixed(2)}%</p>
                         <p className="text-sm text-gray-600">Freddie Mac PMMS, {SOURCE_DATE}</p>
                     </section>
                 </div>
@@ -45,10 +47,10 @@ export default function MortgageRatesPage() {
                     Freddie Mac&apos;s Primary Mortgage Market Survey uses mortgage-rate information from thousands of conventional, conforming purchase applications submitted through Loan Product Advisor. The published figure is a national weekly average. Your quote can differ based on credit, loan-to-value ratio, property, occupancy, loan size, points, lender and lock period.
                 </p>
                 <p>
-                    Freddie Mac&apos;s October 8, 2026 weekly average was 7.40% for a 30-year fixed loan and 6.73% for a 15-year fixed loan. A one-week move is not a forecast. Compare a lender&apos;s annual percentage rate, points, lender fees and cash to close—not only the note rate.
+                    Freddie Mac&apos;s {SOURCE_DATE} weekly average was {PMMS.thirtyYear.toFixed(2)}% for a 30-year fixed loan and {PMMS.fifteenYear.toFixed(2)}% for a 15-year fixed loan. A one-week move is not a forecast. Compare a lender&apos;s annual percentage rate, points, lender fees and cash to close—not only the note rate.
                 </p>
                 <p>
-                    See the <a href="https://www.freddiemac.com/pmms" target="_blank" rel="noopener noreferrer">Freddie Mac Primary Mortgage Market Survey</a> for the latest weekly release; this page reflects the October 8 data available when reviewed.
+                    See the <a href="https://www.freddiemac.com/pmms" target="_blank" rel="noopener noreferrer">Freddie Mac Primary Mortgage Market Survey</a> for the latest weekly release; this page reflects the source-dated weekly data available when reviewed.
                 </p>
 
                 <h2>How a rate change affects a payment</h2>
@@ -56,7 +58,7 @@ export default function MortgageRatesPage() {
                     A higher rate increases principal-and-interest expense for the same balance and term. Taxes, homeowners insurance, mortgage insurance and HOA fees must be added separately. Use the <Link href="/calculators/mortgage">mortgage calculator</Link> to test a quoted rate and the <Link href="/calculators/affordability">affordability calculator</Link> to keep debt and cash assumptions visible.
                 </p>
 
-                <h2>When a refinance deserves a closer look</h2>
+                <h2>Monthly principal and interest by loan amount</h2><p>Illustrative fixed 30-year loans, rounded to the nearest dollar. Taxes, insurance, mortgage insurance, HOA and closing costs are excluded. These are not lender quotes.</p><div className="overflow-x-auto"><table><thead><tr><th scope="col">Rate</th>{[300000,400000,500000].map(p => <th scope="col" key={p}>{p.toLocaleString("en-US")} dollar loan</th>)}</tr></thead><tbody>{[5.75,6,6.25,6.5,6.75,7,7.25,7.5].map(rate => <tr key={rate}><th scope="row">{rate.toFixed(2)}%</th>{[300000,400000,500000].map(p => <td key={p}>{Math.round(calcMonthlyPI(p,rate,30)).toLocaleString("en-US")} dollars</td>)}</tr>)}</tbody></table></div><h2>When a refinance deserves a closer look</h2>
                 <p>
                     A lower proposed rate is only one input. Compare closing costs, points, payment savings, remaining loan term and how long you expect to keep the loan. The <Link href="/calculators/refinance">refinance calculator</Link> estimates a simple break-even month from your own quote and cost assumptions.
                 </p>

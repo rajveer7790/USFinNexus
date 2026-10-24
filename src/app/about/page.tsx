@@ -4,18 +4,18 @@ import { Shield, CheckCircle2, BookOpen, Database, Lock } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-    title: 'About USFinNexus | Financial Calculator Methodology',
+    title: 'About USFinNexus: Mission & Editorial Standards',
     description: 'Learn how USFinNexus builds free U.S. mortgage and finance calculators, documents assumptions, uses government sources, and handles calculator inputs and advertising.',
     alternates: { canonical: '/about' },
     openGraph: {
         type: 'website',
-        title: 'About USFinNexus | Financial Calculator Methodology',
+        title: 'About USFinNexus: Mission & Editorial Standards',
         description: 'Learn about USFinNexus calculator methodology, primary data sources, privacy approach and editorial standards.',
         url: 'https://usfinnexus.com/about',
     },
     twitter: {
         card: 'summary',
-        title: 'About USFinNexus | Financial Calculator Methodology',
+        title: 'About USFinNexus: Mission & Editorial Standards',
         description: 'How USFinNexus builds and documents its U.S. mortgage and finance calculators.',
     },
 };
@@ -54,7 +54,7 @@ export default function AboutPage() {
 
                 <div className="space-y-8 text-sm leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>
                     <section>
-                        <h2 className="text-lg font-bold mb-2" style={{ color: 'var(--color-text)' }}>What We Build</h2>
+                        <h2 className="text-lg font-bold mb-2">Editorial responsibility</h2><p>USFinNexus publishes under an organizational editorial byline. We do not represent that articles have been reviewed by a licensed CFP, CPA, enrolled agent or NMLS loan officer unless a named, verifiable reviewer is identified on the article. Primary-source research and software checks do not replace personalized advice.</p><p>Request corrections at <a href="mailto:contact@usfinnexus.com">contact@usfinnexus.com</a>. A review date does not imply government endorsement. We distinguish examples, market observations and legal rules.</p><h2 className="text-lg font-bold mb-2">What We Build</h2>
                         <p>USFinNexus focuses on calculators for mortgage payments, home affordability, refinancing, amortization, debt planning, taxes and related personal-finance questions. Calculator outputs are estimates, not lender offers, underwriting decisions, tax returns or professional advice.</p>
                     </section>
 

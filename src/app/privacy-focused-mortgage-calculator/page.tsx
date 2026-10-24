@@ -1,83 +1,10 @@
 import type { Metadata } from 'next';
-import nextDynamic from 'next/dynamic';
-import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
-import Breadcrumbs from '@/components/Breadcrumbs';
-import WebApplicationSchema from '@/components/WebApplicationSchema';
 import Link from 'next/link';
-
-// Reuse the exact same client component so we don't duplicate code
-const MortgageCalculatorClient = nextDynamic(() => import('@/app/calculators/mortgage/MortgageCalculatorClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
-
-export const dynamic = 'force-static';
-export const revalidate = 86400;
-
-export const metadata: Metadata = {
-    title: 'Privacy Focused Mortgage Calculator — Free & No Signup Required',
-    description: 'A truly privacy-first mortgage calculator. All math runs locally on your device. We collect zero data, require no email, and send no spam. 100% free.',
-    alternates: { canonical: 'https://usfinnexus.com/privacy-focused-mortgage-calculator' },
-    openGraph: {
-        type: 'website',
-        title: 'Privacy Focused Mortgage Calculator — Free & No Signup Required',
-        description: 'A truly privacy-first mortgage calculator. All math runs locally on your device. We collect zero data, require no email, and send no spam.',
-        url: 'https://usfinnexus.com/privacy-focused-mortgage-calculator',
-        images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Privacy Focused Mortgage Calculator' }],
-    },
-};
-
-export default function PrivacyMortgagePage() {
-    return (
-        <main className="neo-root">
-            <section className="neo-light-zone py-8 border-b border-[var(--color-border)] bg-blue-50/30">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <Breadcrumbs items={[{ name: 'Privacy Focused Mortgage Calculator', item: '/privacy-focused-mortgage-calculator' }]} />
-                    <div className="inline-flex items-center gap-2 px-3 py-1 mt-4 rounded-full bg-green-100 text-green-800 text-xs font-bold uppercase tracking-wider">
-                        <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                        100% Secure & Private
-                    </div>
-                    <h1 className="text-4xl md:text-5xl font-black mt-4 mb-4" style={{ color: 'var(--color-text)' }}>
-                        The Privacy-First <br className="hidden sm:block" /> Mortgage Calculator
-                    </h1>
-                    <p className="text-lg md:text-xl max-w-2xl mx-auto" style={{ color: 'var(--color-text-muted)' }}>
-                        Why give away your phone number just to do math? Our calculator runs entirely on your device. <strong>No data collected. No emails required. No lender spam.</strong>
-                    </p>
-                </div>
-            </section>
-
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <WebApplicationSchema
-                    name="Privacy Focused Mortgage Calculator"
-                    description="A truly privacy-first mortgage calculator. All math runs locally on your device. We collect zero data, require no email, and send no spam."
-                    url="https://usfinnexus.com/privacy-focused-mortgage-calculator"
-                    dateModified="2026-05-15"
-                />
-                
-                <div className="mb-12">
-                    <MortgageCalculatorClient showHeading={false} />
-                </div>
-
-                <div className="prose prose-slate max-w-4xl mx-auto" style={{ color: 'var(--color-text)' }}>
-                    <h2 className="text-2xl font-bold mb-4">Why Privacy Matters When Shopping for a Mortgage</h2>
-                    <p className="mb-4">
-                        The mortgage calculator space is dominated by lead-generation companies. Most "free" calculators are designed to harvest your personal information — your IP address, your estimated home value, your down payment savings, and your contact details. This data is then sold as a "lead" to multiple mortgage brokers, resulting in endless spam calls and emails.
-                    </p>
-                    <p className="mb-4">
-                        At <Link href="/" className="text-blue-600 hover:underline">USFinNexus</Link>, we believe financial math should be completely free and private. That's why we built this privacy-focused calculator:
-                    </p>
-                    <ul className="list-disc pl-6 mb-8 space-y-2">
-                        <li><strong>Client-Side Processing:</strong> Every calculation happens right here in your web browser. The numbers you enter never leave your device.</li>
-                        <li><strong>Zero Data Collection:</strong> We do not track your financial inputs or save them to any database.</li>
-                        <li><strong>No Signup or Email Required:</strong> You don't need to create an account or provide an email address to see your full amortization schedule or download the PDF report.</li>
-                        <li><strong>No Affiliate Spam:</strong> We don't sell your data to lenders. Period.</li>
-                    </ul>
-
-                    <h2 className="text-2xl font-bold mb-4">How Does It Work Without Servers?</h2>
-                    <p className="mb-4">
-                        Modern web browsers are incredibly powerful. When you load this page, you download the calculator's logic directly to your device. When you adjust the home price, down payment, or interest rate, your computer or phone does the math instantly. There is no need for your inputs to be sent back to our servers, ensuring your privacy is guaranteed by the architecture itself.
-                    </p>
-                </div>
-            </div>
-        </main>
-    );
-}
+import MortgageCalculator from '@/app/calculators/mortgage/MortgageCalculatorClient';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import CalculatorFAQ from '@/components/CalculatorFAQ';
+const title='No-Spam Mortgage Calculator: No Email or Phone Required';
+const description='Estimate mortgage PITI without a lender lead form. Calculator inputs run in your browser; advertising and hosting data are disclosed separately.';
+export const metadata:Metadata={title,description,alternates:{canonical:'https://usfinnexus.com/privacy-focused-mortgage-calculator'},openGraph:{type:'website',title,description,url:'https://usfinnexus.com/privacy-focused-mortgage-calculator',images:['https://usfinnexus.com/icon-512.png']}};
+const faqs=[{question:'Do I need to enter an email or phone number?',answer:'No. The mortgage calculator does not require an account, email address or phone number. You can calculate a payment without submitting a lender inquiry.'},{question:'Does no calculator input collection mean no website data is processed?',answer:'No. Advertising providers and hosting services may process cookies, IP addresses and technical information. Our narrower promise concerns calculator inputs, not all data associated with visiting a website. Read the Privacy Policy.'},{question:'Can I get a loan quote from this tool?',answer:'No. The output is a planning estimate using your assumptions, not a lender offer, underwriting decision or rate lock. Contact a licensed lender separately if you choose to apply.'}];
+export default function Page(){return <div className="mx-auto max-w-7xl px-4 py-8"><Breadcrumbs items={[{name:'No-spam calculator',item:'/privacy-focused-mortgage-calculator'}]} /><h1 className="text-3xl font-bold mb-4">{title}</h1><p className="text-lg mb-5">Answer first: you do not need to submit contact details to estimate a mortgage payment. The calculator runs its financial math in your browser. That is different from claiming the entire website collects no data: ads, hosting logs and technical services are explained in our <Link href="/privacy">Privacy Policy</Link>.</p><MortgageCalculator showHeading={false} /><article className="prose max-w-4xl mx-auto"><h2>Compare the workflow, not a blanket claim about competitors</h2><table><thead><tr><th>Step</th><th>This calculator</th><th>A lender inquiry form</th></tr></thead><tbody><tr><td>Contact details</td><td>Not required</td><td>Often needed to respond to an application or inquiry</td></tr><tr><td>Result</td><td>Illustrative payment estimate</td><td>May lead to a quote or application review</td></tr><tr><td>Credit decision</td><td>No</td><td>Depends on the lender and application process</td></tr><tr><td>Advertising data</td><td>See the Privacy Policy</td><td>See that service&apos;s disclosures</td></tr></tbody></table><h2>What stays in the calculation</h2><p>Home price, down payment, rate, term and local tax or insurance assumptions are used by browser-side calculation code. The tool does not submit these as a lender lead. Do not put an SSN, bank account number or other sensitive identifier into a numeric field. A browser extension, compromised device or third-party service has its own security behavior outside this calculator&apos;s control.</p><h2>Local outputs and realistic limits</h2><p>Where available, print or download controls generate an output from the displayed scenario. Export formats differ by tool; there is no promise that every calculator supplies a PDF. Check the displayed assumptions before sharing a report. Downloaded files can contain the financial figures you entered, so store them with appropriate care.</p><h2>How to make a useful estimate</h2><p>Use a current lender quote for the rate and the actual annual property tax, insurance premium and HOA dues for the property. A national default does not establish a county tax bill. PMI, escrow cushions, prepaid interest and lender fees can make a real disclosure different from this estimate. See <Link href="/methodology">formulas and source notes</Link>, and compare the main <Link href="/calculators/mortgage">mortgage payment calculator</Link> for general PITI guidance.</p><h2>Advertising is separate from lender lead collection</h2><p>USFinNexus displays advertising. Ad and infrastructure providers may process technical data as described in the policy; an ad click can take you to another company with its own terms. No-spam describes the absence of a contact-information requirement in this tool, not a guarantee about every unrelated message a visitor may receive.</p></article><CalculatorFAQ faqs={faqs} /></div>;}

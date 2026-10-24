@@ -59,6 +59,7 @@ interface MortgageCalculatorProps {
     heading?: string;
     intro?: string;
     showHeading?: boolean;
+    initialState?: string;
 }
 
 export default function MortgageCalculator({
@@ -66,6 +67,7 @@ export default function MortgageCalculator({
     heading = 'Mortgage Calculator',
     intro = 'Estimate principal, interest, property taxes, insurance, PMI and HOA fees using your own assumptions.',
     showHeading = true,
+    initialState,
 }: MortgageCalculatorProps = {}) {
     const [homePrice, setHomePrice] = useState(DEFAULT.homePrice);
     const [downDollar, setDownDollar] = useState(DEFAULT.downPaymentDollar);
@@ -74,8 +76,8 @@ export default function MortgageCalculator({
     const [term, setTerm] = useState(DEFAULT.loanTerm);
     const [customTerm, setCustomTerm] = useState('');
     const [zip, setZip] = useState('');
-    const [propTax, setPropTax] = useState(DEFAULT.propertyTax);
-    const [insurance, setInsurance] = useState(DEFAULT.insurance);
+    const [propTax, setPropTax] = useState(initialState ? Math.round(DEFAULT.homePrice * getTaxEstimate("", initialState).rate / 100) : DEFAULT.propertyTax);
+    const [insurance, setInsurance] = useState(initialState ? getTaxEstimate("", initialState).insurance : DEFAULT.insurance);
     const [hoa, setHoa] = useState(0);
     const [extraMonthly, setExtraMonthly] = useState(0);
     const [biWeekly, setBiWeekly] = useState(false);
@@ -83,7 +85,7 @@ export default function MortgageCalculator({
     const [tab, setTab] = useState<TabKey>(initialTab);
     const [, startTabTransition] = useTransition();
     const switchTab = (t: TabKey) => startTabTransition(() => setTab(t));
-    const [showYearly, setShowYearly] = useState(false);
+    const [showYearly, setShowYearly] = useState(true);
     const [amortFilter, setAmortFilter] = useState('all');
 
     // Sync down payment ↔ percent
@@ -454,8 +456,8 @@ export default function MortgageCalculator({
                                     {summary.totalMonthly.toFixed(0)}
                                 </div>
                                 <p className="text-xs sm:text-sm mt-3 sm:mt-4 font-medium text-gray-400">
-                                    P&I: <strong className="text-gray-700">{formatCurrency(summary.principalAndInterest)}</strong> 
-                                    <span className="mx-2 opacity-50">|</span> 
+                                    P&I: <strong className="text-gray-700">{formatCurrency(summary.principalAndInterest)}</strong>
+                                    <span className="mx-2 opacity-50">|</span>
                                     Taxes, Ins, & Fees: <strong className="text-gray-700">{formatCurrency(summary.monthlyPropertyTax + summary.monthlyInsurance + summary.monthlyHOA + summary.monthlyPMI)}</strong>
                                 </p>
                             </div>
@@ -558,7 +560,7 @@ export default function MortgageCalculator({
                                         {/* FHA Badge */}
                                         <div className={`p-3 rounded-xl border ${summary.loanAmount <= US_MORTGAGE_CONSTANTS.FHA_FLOOR && summary.downPaymentPercent >= 3.5 ? 'border-green-300 bg-green-50' : 'border-gray-200 bg-gray-50'}`}>
                                             <h4 className="text-xs font-bold mb-1 flex items-center gap-1">
-                                                {summary.loanAmount <= US_MORTGAGE_CONSTANTS.FHA_FLOOR && summary.downPaymentPercent >= 3.5 ? <span className="text-green-600 font-bold">✅ FHA Eligible</span> : <span className="text-gray-500 font-bold">❌ FHA Ineligible</span>}
+                                                {summary.loanAmount <= US_MORTGAGE_CONSTANTS.FHA_FLOOR && summary.downPaymentPercent >= 3.5 ? <span className="text-green-600 font-bold">Compare FHA costs</span> : <span className="text-gray-500 font-bold">Check county limits</span>}
                                             </h4>
                                             <p className="text-xs text-gray-500">
                                                 FHA loans require 3.5% down and loan amounts under the floor. {summary.downPaymentPercent < 3.5 ? 'Increase down payment to 3.5%.' : ''}
@@ -639,13 +641,13 @@ export default function MortgageCalculator({
                                         const extraLast = extraAmort[extraAmort.length - 1];
                                         const monthsSaved = baseAmort.length - extraAmort.length;
                                         const interestSaved = (baseLast?.cumulativeInterest || 0) - (extraLast?.cumulativeInterest || 0);
-                                        
+
                                         if (monthsSaved <= 0) return null;
 
                                         return (
                                             <div className="p-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/5 shadow-[0_0_30px_rgba(16,185,129,0.1)] relative overflow-hidden">
                                                 <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none" />
-                                                
+
                                                 <div className="flex items-center gap-2 mb-6 z-10 relative">
                                                     <TrendingDown size={20} className="text-emerald-500" />
                                                     <p className="font-bold text-emerald-600 uppercase tracking-wider text-sm">Potential Savings Impact</p>

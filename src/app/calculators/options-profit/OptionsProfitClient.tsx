@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
 
 type OptionsChartPoint = { price: number; profit: number };
@@ -13,16 +13,7 @@ export default function OptionsProfitClient() {
     const [premium, setPremium] = useState<number>(3.50);
     const [contracts, setContracts] = useState<number>(1);
 
-    const [chartData, setChartData] = useState<OptionsChartPoint[]>([]);
-    const [maxProfit, setMaxProfit] = useState<number | string>(0);
-    const [maxLoss, setMaxLoss] = useState<number | string>(0);
-    const [breakEven, setBreakEven] = useState<number>(0);
-
-    useEffect(() => {
-        calculateOptions();
-    }, [strategy, stockPrice, strikePrice, premium, contracts]);
-
-    const calculateOptions = () => {
+    const { chartData, maxProfit, maxLoss, breakEven } = useMemo(() => {
         const numShares = contracts * 100;
         const totalPremium = premium * numShares;
 
@@ -36,7 +27,8 @@ export default function OptionsProfitClient() {
         const endPrice = stockPrice * 1.5;
         const step = (endPrice - startPrice) / 50;
 
-        for (let p = startPrice; p <= endPrice; p += step) {
+        for (let i = 0; i <= 50; i++) {
+            const p = startPrice + i * step;
             let profit = 0;
 
             if (strategy === 'long_call') {
@@ -74,11 +66,8 @@ export default function OptionsProfitClient() {
             calculatedBreakEven = strikePrice - premium;
         }
 
-        setChartData(data);
-        setMaxProfit(calculatedMaxProfit);
-        setMaxLoss(calculatedMaxLoss);
-        setBreakEven(calculatedBreakEven);
-    };
+        return { chartData: data, maxProfit: calculatedMaxProfit, maxLoss: calculatedMaxLoss, breakEven: calculatedBreakEven };
+    }, [strategy, stockPrice, strikePrice, premium, contracts]);
 
     const CustomTooltip = ({ active, payload, label }: OptionsTooltipProps) => {
         if (active && payload && payload.length) {
@@ -102,15 +91,15 @@ export default function OptionsProfitClient() {
                 <h2 className="text-2xl font-bold mb-2">Options Profit/Loss Visualizer</h2>
                 <p className="text-blue-100">Visualize potential returns and break-even points for basic options strategies.</p>
             </div>
-            
+
             <div className="p-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="lg:col-span-1 space-y-6">
                     <div className="space-y-4">
                         <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Strategy Setup</h3>
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1">Strategy</label>
-                            <select 
-                                value={strategy} 
+                            <select
+                                value={strategy}
                                 onChange={(e) => setStrategy(e.target.value)}
                                 className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                             >
@@ -171,28 +160,28 @@ export default function OptionsProfitClient() {
                         <ResponsiveContainer width="100%" height="100%">
                             <LineChart data={chartData} margin={{ top: 5, right: 20, left: 20, bottom: 20 }}>
                                 <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                                <XAxis 
-                                    dataKey="price" 
-                                    type="number" 
-                                    domain={['dataMin', 'dataMax']} 
-                                    name="Stock Price" 
+                                <XAxis
+                                    dataKey="price"
+                                    type="number"
+                                    domain={['dataMin', 'dataMax']}
+                                    name="Stock Price"
                                     label={{ value: 'Underlying Stock Price at Expiration', position: 'insideBottom', offset: -10 }}
                                 />
-                                <YAxis 
-                                    tickFormatter={(value) => `$${value}`} 
+                                <YAxis
+                                    tickFormatter={(value) => `$${value}`}
                                     domain={['auto', 'auto']}
                                 />
                                 <RechartsTooltip content={<CustomTooltip />} />
                                 <ReferenceLine y={0} stroke="#64748b" strokeWidth={2} />
                                 <ReferenceLine x={currentStockPriceMarker(stockPrice)} stroke="#3b82f6" strokeDasharray="3 3" label={{ position: 'top', value: 'Current Price', fill: '#3b82f6', fontSize: 12 }} />
                                 <ReferenceLine x={breakEven} stroke="#10b981" strokeDasharray="3 3" label={{ position: 'top', value: 'Break-Even', fill: '#10b981', fontSize: 12 }} />
-                                
-                                <Line 
-                                    type="monotone" 
-                                    dataKey="profit" 
-                                    stroke={chartData.length > 0 && chartData[chartData.length - 1].profit > chartData[0].profit ? "#10b981" : "#3b82f6"} 
-                                    strokeWidth={3} 
-                                    dot={false} 
+
+                                <Line
+                                    type="monotone"
+                                    dataKey="profit"
+                                    stroke={chartData.length > 0 && chartData[chartData.length - 1].profit > chartData[0].profit ? "#10b981" : "#3b82f6"}
+                                    strokeWidth={3}
+                                    dot={false}
                                 />
                             </LineChart>
                         </ResponsiveContainer>

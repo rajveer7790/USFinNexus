@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is the FIRE Movement?', acceptedAnswer: { '@type': 'Answer', text: 'FIRE stands for Financial Independence, Retire Early. It is a mathematical lifestyle movement where individuals aggressively save 50% to 70% of their income in their 20s and 30s, invest it in total market index funds, and build a massive portfolio that allows them to officially retire decades before the traditional age of 65.' } },
-    { '@type': 'Question', name: 'How do I calculate my FIRE Number?', acceptedAnswer: { '@type': 'Answer', text: 'Your FIRE Number is the total portfolio value required to never work again. To calculate it, simply take your estimated annual expenses in retirement and multiply by 25. For example, if you need $80,000 a year to live comfortably, your FIRE Number is $2,000,000 ($80,000 x 25).' } },
-    { '@type': 'Question', name: 'What is the 4% Rule?', acceptedAnswer: { '@type': 'Answer', text: 'The 4% Rule (based on the Trinity Study) states that if your money is invested in a 50/50 mix of stocks and bonds, you can safely withdraw exactly 4% of your portfolio every single year, adjusted for inflation, without ever running out of money over a 30-year period.' } },
-] }) }} />
         <ArticleSchema
             title="FIRE Calculator: How to Mathematically Retire 20 Years Early"
             description="Stop waiting until you are 65. Learn the exact mathematical formula to calculate your FIRE number and escape the rat race."
@@ -64,7 +59,7 @@ export default function BlogPost() {
                 </p>
 
                 <p>
-                    The <strong>FIRE (Financial Independence, Retire Early)</strong> movement fundamentally rejects that narrative. 
+                    The <strong>FIRE (Financial Independence, Retire Early)</strong> movement fundamentally rejects that narrative.
                 </p>
                 <p>
                     Retirement is not an age. Retirement is a mathematical equation. The moment the passive income from your investments exceeds your annual living expenses, you are financially independent. You can quit your job at age 35, 42, or 50. Here is the exact, unarguable math required to buy back your freedom.
@@ -78,7 +73,7 @@ export default function BlogPost() {
                     In 1998, a famous financial research paper called the Trinity Study analyzed stock and bond market returns dating all the way back to 1925 (including the Great Depression). They wanted to answer one question: <em>How much money can you pull out of your portfolio every year without going broke?</em>
                 </p>
                 <p>
-                    The answer was 4%. 
+                    The answer was 4%.
                 </p>
                 <p>
                     If you have your money invested in broad market index funds, you can safely withdraw 4% of your total portfolio every single year (adjusting that withdrawal for inflation annually), and mathematically, your money will last for at least 30 years without running out.
@@ -86,12 +81,12 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">How Do You Calculate Your FIRE Number?</h2>
                 <p>
-                    Because of the 4% rule, calculating your exact "Retirement Number" is incredibly simple. 
+                    Because of the 4% rule, calculating your exact "Retirement Number" is incredibly simple.
                 </p>
                 <p>
                     First, you must determine exactly how much money you spend in a year. Be brutally honest. If your mortgage, groceries, car insurance, travel, and healthcare cost $80,000 a year, that is your target.
                 </p>
-                
+
                 <div className="bg-orange-50 p-6 rounded-xl border border-orange-200 my-8">
                     <h3 className="font-bold text-navy-900 mb-4">What Is the FIRE Formula?</h3>
                     <p className="font-mono text-xl text-center font-bold text-orange-900">
@@ -155,7 +150,7 @@ export default function BlogPost() {
                     How do you actually reach $2 million in your 30s? It has very little to do with your investment returns, and everything to do with your <strong>Savings Rate</strong>.
                 </p>
                 <p>
-                    If you save the standard 10% of your income, it will mathematically take you 51 years to reach retirement. 
+                    If you save the standard 10% of your income, it will mathematically take you 51 years to reach retirement.
                 </p>
                 <p>
                     If you aggressively cut your expenses, house hack, and increase your income so that you can save <strong>50% of your income</strong>, you will reach Financial Independence in just <strong>17 years</strong>. If you start at age 22, you will be permanently retired at age 39.
@@ -174,7 +169,7 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
 
                 <div className="bg-white p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">

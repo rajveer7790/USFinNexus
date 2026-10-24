@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is the 28/36 rule for mortgages?', acceptedAnswer: { '@type': 'Answer', text: 'The 28/36 rule is a financial guideline used by conventional mortgage lenders to assess your borrowing risk. It states that your maximum monthly housing payment should not exceed 28% of your gross monthly income, and your total monthly debt payments (housing + car loans + credit cards) should not exceed 36%.' } },
-    { '@type': 'Question', name: 'Is the 28/36 rule a strict law?', acceptedAnswer: { '@type': 'Answer', text: 'No. The 28/36 rule is a budgeting guideline, not a universal approval rule. The CFPB General Qualified Mortgage definition uses price-based thresholds rather than the former fixed 43% DTI cap. Loan programs, automated underwriting systems and lenders apply their own requirements.' } },
-    { '@type': 'Question', name: 'Does the 28% housing ratio include property taxes and insurance?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The 28% limit applies to your PITI payment: Principal, Interest, Property Taxes, and Homeowners Insurance. If you are buying a condo or into an HOA, the monthly HOA dues are also included in this 28% limit.' } },
-] }) }} />
         <ArticleSchema
             title="The 28/36 Rule Explained: How Lenders Size Your Mortgage in 2026"
             description="Learn exactly how mortgage lenders use the 28/36 rule to determine your borrowing limit in 2026."

@@ -1,12 +1,11 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import RefinanceSeoContentV2 from './RefinanceSeoContentV2';
 
-const RefinanceClient = nextDynamic(() => import('./RefinanceClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import RefinanceClient from './RefinanceClient';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
@@ -73,6 +72,6 @@ export default function RefinancePage() {
             <RefinanceSeoContentV2 />
             <CalculatorFAQ faqs={REFINANCE_FAQS} title="Mortgage Refinance Calculator FAQs" />
         <ContextualInternalLinks currentSlug="refinance" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="refinance" /></main>
     );
 }

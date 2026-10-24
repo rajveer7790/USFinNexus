@@ -30,16 +30,6 @@ export const metadata: Metadata = {
 export default function STRRegulationsBlog() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
-                { '@type': 'Question', name: 'What is Airbnb arbitrage?', acceptedAnswer: { '@type': 'Answer', text: 'Airbnb arbitrage is a real estate strategy where an investor signs a long-term lease on a property (with the landlord\'s permission) and then lists that same property on short-term rental platforms like Airbnb or VRBO for a higher nightly rate, capturing the spread as profit without actually owning the property.' } },
-                { '@type': 'Question', name: 'Why are cities banning short-term rentals in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Municipalities are cracking down on short-term rentals to combat severe housing shortages and rising rents for local residents. By forcing properties off short-term markets, cities hope to return them to the long-term rental pool, thereby increasing housing supply and lowering costs.' } },
-                { '@type': 'Question', name: 'What is a mid-term rental (MTR)?', acceptedAnswer: { '@type': 'Answer', text: 'A mid-term rental is a fully furnished property rented out for stays typically ranging from 30 days to 6 months. This model caters to traveling nurses, corporate relocations, and digital nomads, and is legally exempt from the 30-day minimum stay restrictions that are currently devastating the short-term rental market.' } },
-                { '@type': 'Question', name: 'Is Airbnb arbitrage dead in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'In major metropolitan areas and strict regulatory zones (like NYC, Dallas, and parts of California), traditional Airbnb arbitrage is effectively dead. However, the strategy has evolved; investors are now pivoting to the mid-term rental arbitrage model to bypass 30-day minimum stay regulations.' } }
-            ]
-        }) }} />
 
         <ArticleSchema
             title="Short-Term Rental Regulations in 2026: Is the Airbnb Arbitrage Dead?"

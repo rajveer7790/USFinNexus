@@ -1,12 +1,11 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import DownPaymentSeoContent from './DownPaymentSeoContent';
 
-const DownPaymentClient = nextDynamic(() => import('./DownPaymentClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import DownPaymentClient from './DownPaymentClient';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
 
@@ -15,7 +14,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Down Payment Calculator 2026 — Savings Goal Tracker',
-    description: 'Free down payment savings calculator. See how long to save 3.5%, 10%, or 20% down on your target home price. Set a monthly savings goal and track your timeline.',
+    description: 'Free down payment savings calculator. See how long to save 3.5%, 10%, or 20% down on your target home price. Set a monthly savings goal and track your timeline.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/down-payment' },
     openGraph: {
         type: 'website',
@@ -50,6 +49,6 @@ export default function DownPaymentPage() {
                 </div>
             <DownPaymentSeoContent />
         <ContextualInternalLinks currentSlug="down-payment" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="down-payment" /></main>
     );
 }

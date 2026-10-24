@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is the definition of compound interest?', acceptedAnswer: { '@type': 'Answer', text: 'Compound interest is the interest you earn on your initial investment, PLUS the interest you earn on the interest that has already accumulated. It is mathematically defined as "interest on interest," causing your wealth to grow at an exponential rate rather than a linear rate.' } },
-    { '@type': 'Question', name: 'What is the Rule of 72?', acceptedAnswer: { '@type': 'Answer', text: 'The Rule of 72 is a quick mathematical formula used to estimate how long it will take an investment to double in value. You simply divide the number 72 by your expected annual interest rate. For example, if you expect an 8% annual return, your money will double every 9 years (72 ÷ 8 = 9).' } },
-    { '@type': 'Question', name: 'Why is investing early so important?', acceptedAnswer: { '@type': 'Answer', text: 'Because compound interest is exponential, time is far more important than the amount of money you invest. A 25-year-old who invests $5,000 a year for just ten years (and then stops completely) will usually have more money at age 65 than a 35-year-old who invests $5,000 a year for 30 consecutive years.' } },
-] }) }} />
         <ArticleSchema
             title="Compound Interest Calculator: How $10,000 Grows Over 30 Years"
             description="Understand the mathematical miracle of compound interest. Learn the Rule of 72 and see how early investing builds wealth."
@@ -72,11 +67,11 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Is the Difference Between Linear Growth and Exponential Growth?</h2>
                 <p>
-                    If you put $10,000 in a glass jar under your bed, and you add exactly $1,000 to that jar every single year for 30 years, you will end up with exactly $40,000. 
-                    <br/>($10,000 initial + 30 years of $1,000 additions). 
+                    If you put $10,000 in a glass jar under your bed, and you add exactly $1,000 to that jar every single year for 30 years, you will end up with exactly $40,000.
+                    <br/>($10,000 initial + 30 years of $1,000 additions).
                 </p>
                 <p>
-                    This is <strong>Linear Growth</strong>. The growth is flat and perfectly predictable. Your wealth only increases by the exact amount of physical labor (savings) you put into it. 
+                    This is <strong>Linear Growth</strong>. The growth is flat and perfectly predictable. Your wealth only increases by the exact amount of physical labor (savings) you put into it.
                 </p>
 
                 <p>
@@ -126,7 +121,7 @@ export default function BlogPost() {
                 </div>
 
                 <p>
-                    Look closely at the final decade. In the first ten years, your money generated $11,589 in profit. But in the final ten years (Year 20 to Year 30), that exact same initial investment generated a staggering <strong>$54,017 in profit</strong>. 
+                    Look closely at the final decade. In the first ten years, your money generated $11,589 in profit. But in the final ten years (Year 20 to Year 30), that exact same initial investment generated a staggering <strong>$54,017 in profit</strong>.
                 </p>
                 <p>
                     This is the exponential curve. The longer the money sits, the more violently it grows. By Year 30, you have 10 times your original money, and 90% of your wealth was generated entirely by the math, not by your own labor.
@@ -134,7 +129,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Is the Rule of 72 Mental Shortcut?</h2>
                 <p>
-                    If you want to quickly calculate compound interest in your head without a spreadsheet, use <strong>The Rule of 72</strong>. 
+                    If you want to quickly calculate compound interest in your head without a spreadsheet, use <strong>The Rule of 72</strong>.
                 </p>
                 <p>
                     To find out how many years it will take for your investment to double in size, simply take the number 72 and divide it by your expected interest rate.
@@ -187,9 +182,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Compounding Strategies?</h2>
                     <p className="text-lg text-slate-700 mb-6">
@@ -201,7 +196,7 @@ export default function BlogPost() {
                         If your $100,000 portfolio generates $8,000 in dividends and interest this year, the IRS generally expects a cut of that profit. Paying taxes on your gains every single year mathematically destroys the compounding curve because you have less capital to re-invest the following year.
                     </p>
                     <p className="text-slate-700 mb-4">
-                        This is why maximizing a <strong>Roth IRA</strong> or a <strong>Roth 401(k)</strong> is critical. In a Roth account, your money compounds completely tax-free forever. If your $10,000 investment grows to $1.5 million over 30 years, you will not owe a single penny of federal income tax when you withdraw that $1.5 million in retirement. 
+                        This is why maximizing a <strong>Roth IRA</strong> or a <strong>Roth 401(k)</strong> is critical. In a Roth account, your money compounds completely tax-free forever. If your $10,000 investment grows to $1.5 million over 30 years, you will not owe a single penny of federal income tax when you withdraw that $1.5 million in retirement.
                     </p>
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">What Is the Devastating Impact of Investment Fees on Compounding?</h3>

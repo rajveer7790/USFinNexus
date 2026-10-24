@@ -24,7 +24,7 @@ export default function RefinanceClient() {
         } catch { return null; }
     }, [currentBalance, currentRate, currentMonthlyPayment, monthsRemaining, newRate, newTerm, closingCosts]);
 
-    const isWorthIt = result && result.monthlySavings > 0 && result.breakEvenMonths !== Infinity && result.breakEvenMonths <= 60;
+    const isWorthIt = result && result.monthlySavings > 0 && result.netSavings > 0 && result.breakEvenMonths !== Infinity && result.breakEvenMonths <= 60;
     void Shield; void DollarSign;
 
     return (
@@ -87,6 +87,8 @@ export default function RefinanceClient() {
                             </div>
                         </div>
 
+                        <button type="button" onClick={() => setNewTerm(monthsRemaining / 12)} className="btn-outline w-full">Match remaining term ({monthsRemaining} months)</button>
+                        <p className="text-sm text-slate-600">A lower payment can still cost more over the full loan. Compare lifetime net savings and your planned holding period.</p>
                         {/* New Loan Terms */}
                         <div className="glass-card p-4 sm:p-6">
                             <div className="flex justify-between items-center mb-5 sm:mb-8">

@@ -1,13 +1,9 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import dynamic from 'next/dynamic';
+import CreditCardChart from './CreditCardChart';
 import CalculatorLayout from '@/components/ui/CalculatorLayout';
 
-const CreditCardChart = dynamic(() => import('./CreditCardChart'), {
-    ssr: false,
-    loading: () => <div className="flex items-center justify-center h-full text-gray-400 text-sm">Loading chart…</div>,
-});
 import LabeledInput from '@/components/ui/LabeledInput';
 import CustomSlider from '@/components/ui/CustomSlider';
 
@@ -41,7 +37,7 @@ export default function CreditCardClient() {
 
         while (currentBalance > 0 && months < 600) { // Max 50 years to cap infinite loop
             const interest = currentBalance * monthlyRate;
-            
+
             // Adjust final payment
             if (currentBalance + interest < actualPayment) {
                 actualPayment = currentBalance + interest;
@@ -78,7 +74,7 @@ export default function CreditCardClient() {
                 value={balance}
                 onChange={(e) => setBalance(Number(e.target.value))}
             />
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <LabeledInput
                     label="Interest Rate (APR)"

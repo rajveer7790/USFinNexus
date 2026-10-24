@@ -1,3 +1,4 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
@@ -7,16 +8,14 @@ import WebApplicationSchema from '@/components/WebApplicationSchema';
 import ComparisonSeoContent from './ComparisonSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 
-const ComparisonClient = nextDynamic(() => import('./ComparisonClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import ComparisonClient from './ComparisonClient';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Mortgage Loan Comparison Calculator 2026 — Side-by-Side Analysis',
-    description: 'Compare up to 3 mortgage loan scenarios side by side. Instantly see total interest, monthly payments, and lifetime costs across different rates, terms, and down payments.',
+    description: 'Compare up to 3 mortgage loan scenarios side by side. Instantly see total interest, monthly payments, and lifetime costs across different rates, terms, and down payments.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/comparison' },
     openGraph: {
         type: 'website',
@@ -63,6 +62,6 @@ export default function ComparisonPage() {
             <ComparisonSeoContent />
             <CalculatorFAQ faqs={COMPARISON_FAQS} title="Loan Comparison — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="comparison" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="comparison" /></main>
     );
 }

@@ -30,11 +30,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What credit score is required for a 0% APR auto loan?', acceptedAnswer: { '@type': 'Answer', text: 'To qualify for a 0% APR auto loan from a captive dealer finance company, you typically need a "super prime" credit score, which is generally defined as a FICO score of 750 or higher. Some dealers may occasionally approve scores in the 720-749 range, but it requires substantial income verification and a strong debt-to-income ratio.' } },
-    { '@type': 'Question', name: 'Should I take the 0% APR or the cash rebate?', acceptedAnswer: { '@type': 'Answer', text: 'It depends entirely on the math. Taking the cash rebate lowers your principal balance immediately. If you pair a $3,000 cash rebate with a standard credit union loan at 6%, your monthly payment and total cost to own the vehicle is often thousands of dollars lower than taking the 0% APR offer on the full MSRP of the vehicle.' } },
-    { '@type': 'Question', name: 'How do car dealers make money on 0% APR loans?', acceptedAnswer: { '@type': 'Answer', text: 'Dealers make money on 0% APR loans through captive finance arms (like Toyota Financial or Ford Credit) by effectively subsidizing the interest rate through the price of the car. When you take 0% APR, you forfeit manufacturer cash rebates. You also pay full MSRP, and the dealership often up-sells high-margin add-ons like extended warranties and gap insurance.' } },
-] }) }} />
         <ArticleSchema
             title="0% APR Auto Loans in 2026: The Hidden Cost of Dealer Financing"
             description="Is a 0% APR auto loan actually a good deal? Learn the hidden math behind captive dealer financing vs. traditional bank auto loans in 2026."
@@ -66,7 +61,7 @@ export default function BlogPost() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    You see the commercials every holiday weekend: glossy new cars tearing down mountain roads, overlaid with the ultimate financial siren song—<strong>0% APR for 72 Months</strong>. In the 2026 auto market, where standard bank auto loan rates hover between 6% and 8%, a zero-percent interest rate feels like hitting the lottery. But is it actually a good deal? 
+                    You see the commercials every holiday weekend: glossy new cars tearing down mountain roads, overlaid with the ultimate financial siren song—<strong>0% APR for 72 Months</strong>. In the 2026 auto market, where standard bank auto loan rates hover between 6% and 8%, a zero-percent interest rate feels like hitting the lottery. But is it actually a good deal?
                 </p>
 
                 <p>
@@ -110,7 +105,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">How Do You Run the Math on a Real 2026 Scenario?</h2>
                 <p>
-                    Let's look at a realistic scenario in the 2026 auto market. You are looking at a new SUV with a sticker price of <strong>$45,000</strong>. You have a down payment of $5,000. 
+                    Let's look at a realistic scenario in the 2026 auto market. You are looking at a new SUV with a sticker price of <strong>$45,000</strong>. You have a down payment of $5,000.
                 </p>
                 <p>
                     The dealer offers you the ultimatum: <strong>0% APR for 60 months</strong> OR a <strong>$4,500 Cash Rebate</strong>. You are pre-approved at your local credit union for a 60-month loan at 6.0%. Let's run the numbers.
@@ -176,7 +171,7 @@ export default function BlogPost() {
                 </div>
 
                 <p>
-                    In this specific scenario, the 0% APR offer actually <strong>wins</strong>. By taking the 0% APR, you save $1,183 over the life of the loan compared to taking the rebate and a 6.0% bank loan. 
+                    In this specific scenario, the 0% APR offer actually <strong>wins</strong>. By taking the 0% APR, you save $1,183 over the life of the loan compared to taking the rebate and a 6.0% bank loan.
                 </p>
                 <p>
                     However, let's look at what happens if the manufacturer only offers a $2,000 rebate, or if you plan to pay the car off early.
@@ -269,9 +264,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Auto Loan Strategies for 2026?</h2>
                     <p className="text-lg text-slate-700 mb-6">
@@ -280,7 +275,7 @@ export default function BlogPost() {
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">What Is the &quot;Invest the Difference&quot; Strategy?</h3>
                     <p className="text-slate-700 mb-4">
-                        If you are fortunate enough to secure a true 0% APR auto loan without forfeiting a massive cash rebate, the mathematically optimal move is to stretch the loan out for as long as possible and pay only the minimum monthly payment. 
+                        If you are fortunate enough to secure a true 0% APR auto loan without forfeiting a massive cash rebate, the mathematically optimal move is to stretch the loan out for as long as possible and pay only the minimum monthly payment.
                     </p>
                     <p className="text-slate-700 mb-4">
                         Why? Because inflation erodes the real value of fixed debt. A $500 monthly payment feels like $500 today, but in five years, due to inflation, that $500 represents significantly less purchasing power. By holding onto your cash instead of paying down the 0% loan early, you can invest those funds in a high-yield savings account (earning ~4-5%) or an S&P 500 index fund (averaging 7-10%). You are effectively engaging in arbitrage—borrowing for free and earning a yield on the borrowed capital.

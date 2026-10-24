@@ -1,3 +1,4 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
@@ -8,16 +9,14 @@ import InvestmentSeoContent from './InvestmentSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
-const InvestmentClient = nextDynamic(() => import('./InvestmentClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import InvestmentClient from './InvestmentClient';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Compound Interest & Investment Growth Calculator 2026',
-    description: 'Calculate investment growth with compound interest. See how regular contributions grow over time with interactive charts. Free investment calculator with PDF export.',
+    description: 'Calculate investment growth with compound interest. See how regular contributions grow over time with interactive charts. Free investment calculator with PDF export.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/investment' },
     openGraph: {
         type: 'website',
@@ -59,10 +58,10 @@ export default function InvestmentPage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Compound Interest', item: '/calculators/investment' }]} />
             <InvestmentClient />
-            <InvestmentSeoContent />
+
             <SemrushIntentSection slug="investment" />
             <CalculatorFAQ faqs={INVESTMENT_FAQS} title="Compound Interest — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="investment" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="investment" /></main>
     );
 }

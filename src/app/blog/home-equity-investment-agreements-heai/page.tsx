@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is a Home Equity Investment Agreement (HEAI)?', acceptedAnswer: { '@type': 'Answer', text: 'A HEAI (or Shared Equity Agreement) is NOT a loan. It is a legal contract where an investment company gives you a massive lump sum of cash today (e.g., $50,000) in exchange for the right to own a specific percentage of your home\'s future value when you eventually sell it.' } },
-    { '@type': 'Question', name: 'Are there monthly payments with a HEAI?', acceptedAnswer: { '@type': 'Answer', text: 'No. The primary appeal of a HEAI is that because it is not a loan, there are absolutely zero monthly payments and zero interest rates. You simply take the cash today, and you do not owe the investor a single dollar until you sell the house 10 or 20 years later.' } },
-    { '@type': 'Question', name: 'What happens if my house doubles in value?', acceptedAnswer: { '@type': 'Answer', text: 'This is the danger of a HEAI. If the investor bought 15% of your home\'s future value, and your house doubles in price, the investor makes a massive profit. When you sell the house, you must mathematically surrender 15% of the total sale price to the investor, severely eating into your own generational wealth.' } },
-] }) }} />
         <ArticleSchema
             title="Home Equity Investment Agreements (HEAI) Explained: 2026 Guide"
             description="Companies like Hometap and Point will give you $100,000 today with zero monthly payments. Learn the hidden costs of selling a percentage of your home."
@@ -75,13 +70,13 @@ export default function BlogPost() {
                     A HEAI is <strong>NOT a loan</strong>. There is no interest rate. There is no monthly payment. There is no Debt-to-Income (DTI) requirement.
                 </p>
                 <p>
-                    Instead, a HEAI is an equity transaction. You are literally selling a percentage of your house to a Wall Street investment firm. 
+                    Instead, a HEAI is an equity transaction. You are literally selling a percentage of your house to a Wall Street investment firm.
                 </p>
                 <p>
                     For example, assume your house is currently worth $500,000. You contact an HEAI company like Hometap and ask for $50,000 in cash to pay off medical debt. Hometap will agree to give you the $50,000 in cash today, and in exchange, you sign a contract giving Hometap the legal right to <strong>15% of the future value of your house</strong>.
                 </p>
                 <p>
-                    You take the $50,000. You pay off your debt. You continue living in your house as normal. You do not send Hometap a single monthly payment. 
+                    You take the $50,000. You pay off your debt. You continue living in your house as normal. You do not send Hometap a single monthly payment.
                 </p>
 
                 <h3 className="text-xl font-bold mt-8 mb-3">What Is the Payoff and the 10-Year Deadline?</h3>
@@ -89,7 +84,7 @@ export default function BlogPost() {
                     The catch is the maturity deadline. Most HEAI contracts expire after 10 or 30 years. When the contract expires, or when you decide to sell the house, the investor must be paid.
                 </p>
                 <p>
-                    Let's assume ten years pass, and you sell the house for $800,000. 
+                    Let's assume ten years pass, and you sell the house for $800,000.
                 </p>
                 <p>
                     Because Hometap owns 15% of the future value, they legally get to take 15% of the $800,000 sale price. That is <strong>$120,000</strong>. You traded $50,000 in cash a decade ago, and it ultimately cost you $120,000 in lost equity. The investor made a massive $70,000 profit off your home appreciation.
@@ -101,7 +96,7 @@ export default function BlogPost() {
                         <div>
                             <h3 className="font-bold mb-2">What if the housing market crashes?</h3>
                             <p className="text-sm m-0 text-gray-700">
-                                Because a HEAI is an equity partnership, the investor shares your downside risk. If the housing market crashes, and you sell your house for only $400,000, Hometap still takes their 15% share, which is $60,000. You still lose money overall, but the investor takes a massive haircut on their expected profits. 
+                                Because a HEAI is an equity partnership, the investor shares your downside risk. If the housing market crashes, and you sell your house for only $400,000, Hometap still takes their 15% share, which is $60,000. You still lose money overall, but the investor takes a massive haircut on their expected profits.
                             </p>
                         </div>
                     </div>
@@ -121,7 +116,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">How Do You Get Out of a HEAI?</h2>
                 <p>
-                    You do not actually have to sell your house to escape the contract. 
+                    You do not actually have to sell your house to escape the contract.
                 </p>
                 <p>
                     If you sign a 10-year HEAI, but in year five you get a massive promotion at work, you can simply "buy out" the investor. You hire an independent appraiser to value the home, calculate the investor's 15% share at today's price, and write them a check to legally terminate the contract and restore 100% of the equity back to your name.
@@ -140,9 +135,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Strategies for Decoding Home Equity Investment Agreements?</h2>
                     <p className="text-lg text-slate-700 mb-6">

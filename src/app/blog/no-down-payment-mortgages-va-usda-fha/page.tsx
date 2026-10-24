@@ -30,12 +30,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-                { '@type': 'Question', name: 'Can I really buy a house with no down payment?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, if you qualify. The federal government backs two major loan programs that require absolutely zero down payment: the VA loan (for military and veterans) and the USDA loan (for rural and suburban homebuyers).' } },
-                { '@type': 'Question', name: 'Does an FHA loan require a down payment?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, standard FHA loans require a minimum down payment of 3.5%. However, many state and local governments offer Down Payment Assistance (DPA) grants that cover this 3.5%, effectively making it a zero-down transaction.' } },
-                { '@type': 'Question', name: 'Do 0% down mortgages have higher interest rates?', acceptedAnswer: { '@type': 'Answer', text: 'Surprisingly, no. Because VA and USDA loans are guaranteed by the federal government, they actually tend to have lower interest rates than conventional mortgages that require a 20% down payment.' } },
-                { '@type': 'Question', name: 'What is the catch with a 0% down mortgage?', acceptedAnswer: { '@type': 'Answer', text: 'The catch is the fees. VA loans charge an upfront "Funding Fee," and USDA loans charge a "Guarantee Fee." Furthermore, because you are borrowing 100% of the home\'s value, your monthly payments will be significantly higher than if you put money down.' } }
-            ] }) }} />
 
             <ArticleSchema
                 title="No Down Payment Mortgages: VA, USDA, and FHA Loans in 2026"

@@ -34,38 +34,6 @@ export default function PostComponent() {
                 keywords={['piggyback mortgage', 'avoid PMI', '80 10 10 loan']}
             />
 
-            <script type="application/ld+json" dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": "What is an 80/10/10 piggyback loan?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "An 80/10/10 loan is a creative financing strategy where you take out a primary mortgage for 80% of the home's value, a second mortgage (a HELOC or home equity loan) for 10% of the value, and put down a 10% cash down payment. This structure allows you to avoid paying Private Mortgage Insurance (PMI)."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Why does a piggyback loan avoid PMI?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "PMI is legally required when a primary mortgage exceeds 80% of the home's value (an 80% Loan-to-Value ratio). By keeping the primary mortgage strictly at 80% and borrowing the remaining funds through a separate second mortgage, the primary loan avoids the PMI requirement."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Are piggyback loans hard to qualify for?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes. Because you are taking out two loans simultaneously and minimizing your cash down payment, lenders require excellent credit (usually 720+) and a low Debt-to-Income (DTI) ratio to approve a piggyback structure."
-                            }
-                        }
-                    ]
-                })
-            }} />
 
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[

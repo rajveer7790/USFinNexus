@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is the difference between pre-qualification and pre-approval?', acceptedAnswer: { '@type': 'Answer', text: 'Pre-qualification is a useless marketing term where you simply tell the bank how much you make, and they print a generic letter. Pre-approval is a formal, legally binding process where the bank pulls your hard credit report, verifies your W-2 tax returns, and guarantees they will lend you a specific amount of money.' } },
-    { '@type': 'Question', name: 'What are the 4 Cs of mortgage underwriting?', acceptedAnswer: { '@type': 'Answer', text: 'Underwriters analyze four factors: Capacity (your Debt-to-Income ratio to ensure you can make the monthly payments), Capital (your liquid cash reserves for the down payment and emergencies), Collateral (the physical appraisal of the house), and Credit (your FICO score and history of paying debts on time).' } },
-    { '@type': 'Question', name: 'Can I buy furniture on a credit card before closing?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely not. This is the #1 reason mortgages are denied at the last minute. The bank pulls your credit report again the morning of your closing date. If they see you just took out a $5,000 loan to buy a couch, your Debt-to-Income ratio changes, and they will immediately cancel your mortgage.' } },
-] }) }} />
         <ArticleSchema
             title="The Complete First-Time Homebuyer Mortgage Guide (2026)"
             description="A step-by-step guide to getting approved for your first mortgage in 2026. Learn how underwriters analyze your finances."
@@ -72,7 +67,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Is the Difference Between Mortgage Pre-Approval and Pre-Qualification?</h2>
                 <p>
-                    Before you ever log onto Zillow or talk to a real estate agent, you must secure a <strong>Pre-Approval Letter</strong>. 
+                    Before you ever log onto Zillow or talk to a real estate agent, you must secure a <strong>Pre-Approval Letter</strong>.
                 </p>
                 <p>
                     Do not confuse this with a "Pre-Qualification." A pre-qualification is a useless piece of paper where you simply tell an app how much money you make, and they print a generic estimate. No seller will accept an offer based on a pre-qualification.
@@ -112,7 +107,7 @@ export default function BlogPost() {
                         <div>
                             <h3 className="font-bold mb-2">The Golden Rule: Freeze Your Finances</h3>
                             <p className="text-sm m-0 text-gray-700">
-                                Once you are pre-approved, your financial life must completely freeze until the day you get the keys. 
+                                Once you are pre-approved, your financial life must completely freeze until the day you get the keys.
                                 <br/><br/>
                                 <strong>DO NOT:</strong> Open a new credit card to buy a couch, co-sign a student loan for your child, quit your job, change careers, or buy a new car. The underwriter runs a final credit check the morning of your closing day. If they see a new $500 monthly car payment, your DTI is destroyed, and your mortgage will be canceled hours before you were supposed to get the keys.
                             </p>
@@ -141,7 +136,7 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
 
                 <div className="bg-white p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">

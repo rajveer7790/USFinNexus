@@ -30,13 +30,7 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-                { '@type': 'Question', name: 'How much are mortgage closing costs?', acceptedAnswer: { '@type': 'Answer', text: 'There is no universal dollar amount. Closing costs vary by loan, location, lender, property and prepaid items. Use the lender’s Loan Estimate and Closing Disclosure; a percentage rule of thumb is only a starting point and is not a quote.' } },
-                { '@type': 'Question', name: 'Can I negotiate my closing costs?', acceptedAnswer: { '@type': 'Answer', text: 'Yes and no. You cannot negotiate government taxes or third-party appraisal fees. However, you can absolutely negotiate "Lender Fees" (like the origination fee or underwriting fee) and you can legally shop around for your own Title Insurance company to save hundreds of dollars.' } },
-                { '@type': 'Question', name: 'What are prepaid closing costs?', acceptedAnswer: { '@type': 'Answer', text: 'Prepaids are not actually fees paid to the lender. They are your own future bills—specifically property taxes and homeowners insurance—that the lender forces you to pay upfront at closing to fund your Escrow Account for the first year.' } },
-                { '@type': 'Question', name: 'Can I roll closing costs into my loan?', acceptedAnswer: { '@type': 'Answer', text: 'Sometimes. If you are doing a rate-and-term refinance, you can usually roll the costs into the loan balance. If you are buying a house, you generally cannot roll closing costs into the loan, but you can ask for "Seller Concessions" where the seller pays them for you.' } }
-            ] }) }} />
-            
+
             <ArticleSchema
                 title="Mortgage Closing Costs: What Homebuyers Should Expect"
                 description="Understand lender, title, prepaid and government charges and compare your Loan Estimate with the Closing Disclosure."
@@ -46,7 +40,7 @@ export default function BlogPost() {
                 authorName="USFinNexus Editorial Team"
                 keywords={['Home Buying', 'Mortgage', 'Closing Costs', '2026', 'Loan Estimate']}
             />
-            
+
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Closing Costs Breakdown', item: '/blog/closing-costs-itemized-breakdown-2026' }]} />
                 <article className="prose prose-slate prose-lg max-w-none">
@@ -72,7 +66,7 @@ export default function BlogPost() {
                     </p>
 
                     <p>
-                        Closing costs are the array of fees paid to the lender, the title company, the appraisers, and the local government to officially execute your mortgage and legally transfer the real estate into your name. 
+                        Closing costs are the array of fees paid to the lender, the title company, the appraisers, and the local government to officially execute your mortgage and legally transfer the real estate into your name.
                     </p>
                     <p>
                         These costs can be substantial, but they are not a fixed 2026 rate. A lender quote may include origination, appraisal, title and recording charges plus prepaid interest, taxes and insurance reserves. Keep the down payment, closing costs and cash reserves as separate lines in your buying plan.
@@ -91,7 +85,7 @@ export default function BlogPost() {
                     <p>
                         Section A of your Loan Estimate lists the fees the bank charges you directly for the privilege of borrowing their money. Because these fees go straight into the lender's profit margin and pay the loan officer's commission, they are highly negotiable. You should aggressively compare Section A across multiple lenders.
                     </p>
-                    
+
                     <ul className="space-y-6 my-8">
                         <li className="flex gap-4">
                             <span className="flex-shrink-0 w-8 h-8 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center font-bold">1</span>
@@ -169,15 +163,15 @@ export default function BlogPost() {
                     </h2>
 
                     <p>
-                        Before a bank gives you $400,000, they must ensure the seller <em>actually</em> owns the house and that there are no secret liens (like unpaid contractor bills, unpaid HOA dues, or IRS tax liens) attached to the property. This extensive legal research is handled by a Title Company. 
+                        Before a bank gives you $400,000, they must ensure the seller <em>actually</em> owns the house and that there are no secret liens (like unpaid contractor bills, unpaid HOA dues, or IRS tax liens) attached to the property. This extensive legal research is handled by a Title Company.
                     </p>
-                    
+
                     <div className="bg-purple-50 p-8 rounded-2xl border border-purple-200 my-8 shadow-sm">
                         <h3 className="text-xl font-bold mb-4 text-purple-900 border-b border-purple-200 pb-2 flex items-center gap-2">
                             <HandCoins className="w-6 h-6" /> The Ultimate Title Shopping Hack
                         </h3>
                         <p className="text-purple-900 mb-4">
-                            Your lender or real estate agent will highly recommend a specific Title Company. <strong>You are not legally required to use them.</strong> 
+                            Your lender or real estate agent will highly recommend a specific Title Company. <strong>You are not legally required to use them.</strong>
                         </p>
                         <p className="text-purple-900">
                             Title fees can easily run from $1,500 to $3,500 depending on the state. By taking 30 minutes to call three independent, local title companies in your city and asking for a "Title Fee Quote," you can often save $500 to $1,000 on this line item alone. The bank must accept your choice of title company.
@@ -274,10 +268,10 @@ export default function BlogPost() {
                 </article>
 
                 <div className="mt-16">
-                    
+
                 <hr className="my-12 border-gray-200" />
                            <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">Advanced Closing Cost Negotiation Strategies</h2>
                     <p className="text-lg text-slate-700 mb-6">

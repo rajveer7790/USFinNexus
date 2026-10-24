@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is an Opportunity Zone?', acceptedAnswer: { '@type': 'Answer', text: 'An Opportunity Zone is an economically distressed census tract designated by the federal government. To encourage wealthy people to invest in these poor neighborhoods, the IRS offers massive, unprecedented tax breaks to anyone who buys real estate or opens a business inside the boundary lines.' } },
-    { '@type': 'Question', name: 'How do Opportunity Zones save me money on taxes?', acceptedAnswer: { '@type': 'Answer', text: 'If you sell a stock or a business and make a $500,000 profit, you normally owe massive capital gains taxes. But if you take that $500,000 and invest it into an Opportunity Zone, the IRS lets you defer those taxes for years. More importantly, if you hold the Opportunity Zone property for 10 years and then sell it, any new profit you made on the property is 100% permanently tax-free.' } },
-    { '@type': 'Question', name: 'What is a Qualified Opportunity Fund (QOF)?', acceptedAnswer: { '@type': 'Answer', text: 'You cannot personally buy a house in an Opportunity Zone and claim the tax breaks. The IRS strictly requires you to place your money into a formalized LLC or Corporation designated as a Qualified Opportunity Fund (QOF). The QOF then buys and heavily renovates the real estate on your behalf.' } },
-] }) }} />
         <ArticleSchema
             title="Opportunity Zones Explained: How Real Estate Investors Avoid Taxes"
             description="Billionaires do not pay capital gains taxes. Learn how the 2026 Opportunity Zone program allows you to legally shelter your real estate profits from the IRS."

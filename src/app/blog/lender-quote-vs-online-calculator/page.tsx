@@ -34,38 +34,6 @@ export default function PostComponent() {
                 keywords={['lender quote', 'mortgage calculator', 'loan estimate']}
             />
 
-            <script type="application/ld+json" dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": "Why is my Loan Estimate higher than the online calculator?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Online calculators often only show Principal and Interest. Your official Loan Estimate is legally required to include Property Taxes, Homeowners Insurance, Private Mortgage Insurance (PMI), and any HOA dues, which can add $500+ to your monthly payment."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Can a lender change the interest rate after they quote me?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes, unless you have specifically signed a 'Rate Lock' agreement. Until the rate is locked, the quoted interest rate floats with the daily bond market and can go up or down."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Are the closing costs on an online calculator accurate?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Rarely. Closing costs vary wildly by state and county. Your official Loan Estimate includes exact local figures for title insurance, state transfer taxes, and local appraisal fees, which a generic online calculator cannot predict."
-                            }
-                        }
-                    ]
-                })
-            }} />
 
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[

@@ -1,12 +1,11 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import OptionsProfitSeoContent from './OptionsProfitSeoContent';
 
-const OptionsProfitClient = nextDynamic(() => import('./OptionsProfitClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import OptionsProfitClient from './OptionsProfitClient';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
@@ -16,7 +15,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Options Profit & Loss Calculator — Call & Put Payoff Visualizer',
-    description: 'Visualize your options trade before placing it. Calculate max profit, max loss, and break-even prices for calls, puts, and spreads. Free options profit calculator.',
+    description: 'Visualize your options trade before placing it. Calculate max profit, max loss, and break-even prices for calls, puts, and spreads. Free options profit calculator.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/options-profit' },
     openGraph: {
         type: 'website',
@@ -64,6 +63,6 @@ export default function OptionsProfitPage() {
             <OptionsProfitSeoContent />
             <CalculatorFAQ faqs={OPTIONS_FAQS} title="Options Trading — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="options-profit" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="options-profit" /></main>
     );
 }

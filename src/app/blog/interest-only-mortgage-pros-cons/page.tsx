@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is an Interest-Only Mortgage?', acceptedAnswer: { '@type': 'Answer', text: 'On a standard 30-year mortgage, every monthly payment covers both interest and a tiny slice of the principal balance. On an Interest-Only loan, you are completely legally excused from paying the principal for the first 5 to 10 years. Your monthly payment strictly covers the bank\'s interest profit, drastically lowering your required monthly payment.' } },
-    { '@type': 'Question', name: 'Why do wealthy people use interest-only loans?', acceptedAnswer: { '@type': 'Answer', text: 'Wealthy investors use them to maximize liquid cash flow. If an interest-only loan drops their monthly payment by $800, they take that $800 in cash and aggressively invest it into the stock market or buy another rental property, earning a much higher return than if they had trapped that cash in home equity.' } },
-    { '@type': 'Question', name: 'What is Payment Shock?', acceptedAnswer: { '@type': 'Answer', text: 'Payment Shock is the trap that destroyed millions of homeowners in 2008. When the 10-year interest-only period ends, the bank forces you to start paying back the principal. Because you only have 20 years left on the loan instead of 30, the bank mathematically compresses the entire principal balance into a shorter timeframe, causing your monthly payment to instantly skyrocket by 50% or more.' } },
-] }) }} />
         <ArticleSchema
             title="Interest-Only Mortgages: The Wealthy Investor's Cheat Code"
             description="Why do millionaires refuse to pay down their mortgage principal? Learn the dangerous math behind Interest-Only loans and the Payment Shock trap."

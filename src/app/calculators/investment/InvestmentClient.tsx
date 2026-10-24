@@ -16,13 +16,15 @@ export default function InvestmentClient() {
     const [monthlyDeposit, setMonthlyDeposit] = useState(500);
     const [interestRate, setInterestRate] = useState(8);
     const [years, setYears] = useState(20);
+    const [frequency,setFrequency]=useState(12);
+    const [expenseRatio,setExpenseRatio]=useState(0);
 
     // Calculate growth
     const chartData = useMemo(() => {
         let balance = initialDeposit;
         let totalPrincipal = initialDeposit;
-        const monthlyRate = interestRate / 100 / 12;
-        
+        const monthlyRate = Math.pow(Math.pow(1 + interestRate / 100 / frequency, frequency) * (1 - expenseRatio / 100), 1 / 12) - 1;
+
         const data = [];
         data.push({ year: 0, balance, principal: totalPrincipal, interest: 0 });
 
@@ -39,12 +41,12 @@ export default function InvestmentClient() {
             });
         }
         return data;
-    }, [initialDeposit, monthlyDeposit, interestRate, years]);
+    }, [initialDeposit, monthlyDeposit, interestRate, years, frequency, expenseRatio]);
 
     const finalData = chartData[chartData.length - 1];
 
     const InputSection = (
-        <div className="glass-card p-4 sm:p-6 space-y-6">
+        <div className="glass-card p-4 sm:p-6 space-y-6"><label htmlFor="compound-frequency">Compounding frequency<select id="compound-frequency" value={frequency} onChange={e=>setFrequency(+e.target.value)} className="input-field">{[[1,"Annual"],[4,"Quarterly"],[12,"Monthly"],[365,"Daily"]].map(([v,label])=><option key={v} value={v}>{label}</option>)}</select></label><label htmlFor="expense-ratio">Annual investment expense ratio (%)<input id="expense-ratio" type="number" min={0} max={10} step={.01} value={expenseRatio} onChange={e=>setExpenseRatio(Math.max(0,Math.min(10,+e.target.value)))} className="input-field" /></label><p className="text-xs">Nominal annual return compounded at the selected frequency; fees applied as annual percentage drag and contributions at month end. Not a forecast. Taxes and inflation excluded.</p>
             <div className="space-y-4">
                 <LabeledInput
                     label="Initial Deposit"

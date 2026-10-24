@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is Tax-Loss Harvesting?', acceptedAnswer: { '@type': 'Answer', text: 'Tax-Loss Harvesting is a legal IRS loophole used by wealthy investors to lower their taxes. If you own a stock that crashed in value, you intentionally sell it to "realize" the loss on paper. You then use that mathematical loss to completely cancel out the taxes you owe on the stocks that actually made you money.' } },
-    { '@type': 'Question', name: 'Can I deduct stock market losses from my regular income?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, but there is a strict limit. If your stock market losses for the year are larger than your gains, the IRS allows you to deduct up to $3,000 of those losses directly against your ordinary W-2 income, lowering your overall tax bracket.' } },
-    { '@type': 'Question', name: 'What is the Wash-Sale Rule?', acceptedAnswer: { '@type': 'Answer', text: 'The Wash-Sale Rule is the IRS catching onto the trick. If you sell a stock for a loss to claim the tax break, you are legally forbidden from buying that exact same stock again for 30 days. If you buy it back on day 15, the IRS triggers a "wash sale," and you completely lose the tax deduction.' } },
-] }) }} />
         <ArticleSchema
             title="Tax-Loss Harvesting in 2026: IRS Wash-Sale Rules & Examples"
             description="Learn how tax-loss harvesting offsets capital gains, the wash-sale rule, the $3,000 net-loss limit, and carryforwards."

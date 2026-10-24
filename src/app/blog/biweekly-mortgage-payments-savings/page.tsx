@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'How do biweekly mortgage payments save money?', acceptedAnswer: { '@type': 'Answer', text: 'By paying half of your mortgage every two weeks, you end up making 26 half-payments in a year. Because 26 halves equal 13 full payments, you are effectively making one extra full principal payment every year. This accelerates your amortization and drastically reduces total interest.' } },
-    { '@type': 'Question', name: 'Do I have to pay a company to set up biweekly payments?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely not. Many third-party companies charge a $300 setup fee and $2 per transaction to manage biweekly payments. This is a scam. You can achieve the exact same result for free by logging into your mortgage servicer portal and dividing your monthly payment by 12, then adding that amount to your principal payment each month.' } },
-    { '@type': 'Question', name: 'Can I switch to biweekly payments at any time?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Most major mortgage servicers allow you to switch your automated payment schedule to biweekly through their online portal at no cost, though some lenders only process partial payments at the end of the month.' } },
-] }) }} />
         <ArticleSchema
             title="Biweekly Mortgage Payments: Do They Actually Save You Money?"
             description="Switching to biweekly mortgage payments can shave years off your loan and save you thousands in interest. Here is how to do it for free."
@@ -64,7 +59,7 @@ export default function BlogPost() {
                 </p>
 
                 <p>
-                    By making a minor change to the cadence of how you pay your bills, you can shave anywhere from 4 to 6 years off your mortgage term without feeling a squeeze in your monthly budget. But the strategy has become a target for scammers and predatory third-party companies. 
+                    By making a minor change to the cadence of how you pay your bills, you can shave anywhere from 4 to 6 years off your mortgage term without feeling a squeeze in your monthly budget. But the strategy has become a target for scammers and predatory third-party companies.
                 </p>
                 <p>
                     Here is the exact math on how biweekly payments destroy mortgage interest, and how to execute the strategy for free.
@@ -72,13 +67,13 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">How Do Biweekly Mortgage Payments Save You Money?</h2>
                 <p>
-                    A standard mortgage requires one full payment every month (12 payments per year). 
+                    A standard mortgage requires one full payment every month (12 payments per year).
                 </p>
                 <p>
-                    If you switch to a biweekly schedule, you take your monthly payment, cut it exactly in half, and send that half-payment to the bank every two weeks. 
+                    If you switch to a biweekly schedule, you take your monthly payment, cut it exactly in half, and send that half-payment to the bank every two weeks.
                 </p>
                 <p>
-                    Because there are 52 weeks in a year, paying every two weeks results in exactly <strong>26 half-payments</strong>. 
+                    Because there are 52 weeks in a year, paying every two weeks results in exactly <strong>26 half-payments</strong>.
                     <br/>26 halves = <strong>13 full payments</strong>.
                 </p>
                 <p>
@@ -145,7 +140,7 @@ export default function BlogPost() {
 
                 <h3 className="text-xl font-bold mt-8 mb-3">Method 1: Direct Servicer Automation</h3>
                 <p>
-                    Log into your mortgage servicer's online portal (e.g., Chase, Rocket Mortgage, PennyMac). Navigate to the "Autopay" settings. Most modern servicers have a dropdown menu that allows you to change your payment frequency from "Monthly" to "Biweekly" for free. They will automatically withdraw half the payment from your checking account every 14 days. 
+                    Log into your mortgage servicer's online portal (e.g., Chase, Rocket Mortgage, PennyMac). Navigate to the "Autopay" settings. Most modern servicers have a dropdown menu that allows you to change your payment frequency from "Monthly" to "Biweekly" for free. They will automatically withdraw half the payment from your checking account every 14 days.
                 </p>
 
                 <h3 className="text-xl font-bold mt-8 mb-3">Method 2: The "Divide by 12" DIY Strategy</h3>
@@ -178,9 +173,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">Advanced Mortgage Payoff Strategies</h2>
                     <p className="text-lg text-slate-700 mb-6">

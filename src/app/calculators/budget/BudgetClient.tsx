@@ -38,6 +38,7 @@ const CAT_CONFIG: Record<CatGroup, { title: string; emoji: string; rule: string;
 
 export default function BudgetClient() {
     const [income, setIncome] = useState(5000);
+    const [highCost,setHighCost]=useState(false);
     const [needs, setNeeds] = useState<BudgetCategory[]>(DEFAULT_NEEDS);
     const [wants, setWants] = useState<BudgetCategory[]>(DEFAULT_WANTS);
     const [savings, setSavings] = useState<BudgetCategory[]>(DEFAULT_SAVINGS);
@@ -66,7 +67,7 @@ export default function BudgetClient() {
         setItems(updated);
     };
 
-    const result = useMemo(() => calcBudget({ monthlyIncome: income, needs, wants, savings }), [income, needs, wants, savings]);
+    const result = useMemo(() => ({...calcBudget({ monthlyIncome: income, needs, wants, savings }),targetNeeds:income*(highCost?.6:.5),targetWants:income*(highCost?.2:.3),targetSavings:income*.2}), [income, needs, wants, savings,highCost]);
 
     const totalSpending = result.actualNeeds + result.actualWants + result.actualSavings;
     const remaining = income - totalSpending;
@@ -85,7 +86,7 @@ export default function BudgetClient() {
                     <div className="flex items-center gap-2">
                         <span className="text-xl">{config.emoji}</span>
                         <div>
-                            <h3 className="text-sm font-bold" style={{ color: 'var(--color-text)' }}>{config.title} ({config.rule})</h3>
+                            <h3 className="text-sm font-bold" style={{ color: 'var(--color-text)' }}>{config.title} ({highCost ? group === "needs" ? "60%" : "20%" : config.rule})</h3>
                             <p className="text-xs text-gray-400">{config.target}</p>
                         </div>
                     </div>
@@ -158,7 +159,7 @@ export default function BudgetClient() {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
+            <button type="button" aria-pressed={highCost} onClick={()=>setHighCost(!highCost)} className="btn-outline">{highCost ? "60/20/20 high-cost mode" : "50/30/20 mode"} — switch targets</button><div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
                 {/* LEFT: Income + Categories */}
                 <div className="lg:col-span-3 space-y-4">
                     {/* Income */}
@@ -201,8 +202,8 @@ export default function BudgetClient() {
                         {/* Details */}
                         <div className="space-y-3 mb-6">
                             {([
-                                { label: '🏠 Needs', actual: result.actualNeeds, target: result.targetNeeds, pct: result.needsPercent, rule: '50%' },
-                                { label: '🎮 Wants', actual: result.actualWants, target: result.targetWants, pct: result.wantsPercent, rule: '30%' },
+                                { label: '🏠 Needs', actual: result.actualNeeds, target: result.targetNeeds, pct: result.needsPercent, rule: highCost ? '60%' : '50%' },
+                                { label: '🎮 Wants', actual: result.actualWants, target: result.targetWants, pct: result.wantsPercent, rule: highCost ? '20%' : '30%' },
                                 { label: '💰 Savings', actual: result.actualSavings, target: result.targetSavings, pct: result.savingsPercent, rule: '20%' },
                             ]).map(row => (
                                 <div key={row.label} className="p-3 rounded-xl" style={{ background: 'var(--color-bg-secondary)' }}>

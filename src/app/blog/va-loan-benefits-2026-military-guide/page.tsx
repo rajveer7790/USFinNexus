@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is a VA Loan?', acceptedAnswer: { '@type': 'Answer', text: 'A VA Loan is a highly specialized mortgage created by the Department of Veterans Affairs. It is exclusively available to active-duty military personnel, veterans, and eligible surviving spouses. The government guarantees the loan, allowing private banks to offer veterans unprecedented financing terms that are completely illegal in the civilian market.' } },
-    { '@type': 'Question', name: 'Do I need a down payment for a VA Loan?', acceptedAnswer: { '@type': 'Answer', text: 'No. The defining feature of a VA loan is that it requires absolutely zero down payment (0% down). A civilian buying a $400,000 house might need to save $80,000 in cash. A veteran can walk into the same house on the exact same day without spending a single dollar from their savings account.' } },
-    { '@type': 'Question', name: 'What is the VA Funding Fee?', acceptedAnswer: { '@type': 'Answer', text: 'While a VA loan requires no down payment and charges zero PMI, the government does charge a one-time "Funding Fee" to keep the program operational. For first-time users, the fee is typically 2.15% of the loan amount. However, you do not have to pay this fee in cash; it is simply rolled into your total mortgage balance.' } },
-] }) }} />
         <ArticleSchema
             title="VA Loan Benefits 2026: The Ultimate Military Housing Guide"
             description="The VA Loan is the most powerful mortgage in America. Learn how veterans can buy a house with $0 down and zero PMI."

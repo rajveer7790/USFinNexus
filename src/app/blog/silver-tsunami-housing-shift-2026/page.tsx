@@ -30,16 +30,6 @@ export const metadata: Metadata = {
 export default function SilverTsunamiBlog() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
-                { '@type': 'Question', name: 'What is the Silver Tsunami in real estate?', acceptedAnswer: { '@type': 'Answer', text: 'The Silver Tsunami refers to the massive demographic shift where the Baby Boomer generation (born 1946-1964) reaches advanced ages, leading them to downsize, move to assisted living, or pass away, thereby releasing millions of homes back into the housing market inventory.' } },
-                { '@type': 'Question', name: 'Will the Silver Tsunami cause a housing crash in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'No. Economists agree that the Silver Tsunami is a gradual demographic shift, not a sudden event. It will provide a much-needed slow drip of inventory into the market throughout the late 2020s and 2030s, easing price appreciation rather than causing a sudden crash.' } },
-                { '@type': 'Question', name: 'Where are the most Silver Tsunami homes hitting the market?', acceptedAnswer: { '@type': 'Answer', text: 'The inventory unlock is highly regional. Traditional retirement hubs in the Sunbelt (Florida, Arizona) are seeing increased inventory. Additionally, older Rust Belt and Midwest suburbs, where boomers have aged in place in 4-bedroom homes, are seeing significant turnover.' } },
-                { '@type': 'Question', name: 'What is Aging in Place?', acceptedAnswer: { '@type': 'Answer', text: 'Aging in Place is the decision by seniors to remain in their current, long-term homes rather than downsizing or moving to retirement communities. This trend significantly delayed the Silver Tsunami through the early 2020s, but is now reversing due to the physical realities of aging in large properties.' } }
-            ]
-        }) }} />
 
         <ArticleSchema
             title="The Silver Tsunami Housing Shift: Aging Boomers in 2026"

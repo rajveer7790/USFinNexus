@@ -31,44 +31,6 @@ export const metadata: Metadata = {
 export default function GeopoliticalConflictBlog() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
-                {
-                    '@type': 'Question',
-                    name: 'How should I invest during geopolitical uncertainty?',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'During geopolitical uncertainty, the most important move is to avoid panic selling your core long-term holdings, as markets historically recover after initial conflict-driven drops. Consider diversifying into safe haven assets like gold, US Treasury bonds, and defensive equity sectors such as utilities and consumer staples. Reviewing your asset allocation to ensure it matches your true risk tolerance is more valuable than attempting to time the market around news events.'
-                    }
-                },
-                {
-                    '@type': 'Question',
-                    name: 'What are the best safe haven assets during geopolitical crisis?',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: "The most reliable safe haven assets during geopolitical crises are US Treasury bonds, gold and precious metals, the US dollar, and Swiss franc. US Treasuries benefit from a global flight-to-safety as foreign capital floods into them, driving prices up. Gold serves as a store of value immune to currency debasement, while the USD strengthens as the world\'s reserve currency during periods of global stress."
-                    }
-                },
-                {
-                    '@type': 'Question',
-                    name: 'Should I buy gold when there is geopolitical conflict?',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'Gold has historically performed well during geopolitical crises due to its status as a universal store of value with no counterparty risk. Most financial advisors recommend a strategic allocation of 5-10% of a portfolio in gold or gold ETFs as a permanent hedge, rather than trying to time purchases around specific events. Buying reactively after a crisis has already driven gold prices sharply higher can reduce your potential returns.'
-                    }
-                },
-                {
-                    '@type': 'Question',
-                    name: 'How does geopolitical risk affect the stock market?',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'Geopolitical risk typically causes an initial sharp sell-off in broad equity markets as uncertainty spikes the VIX fear index and investors de-risk. However, historical analysis of major conflicts over the past 50 years shows that the US stock market usually recovers within weeks to months of the initial shock, and often ends the conflict year higher than it started. The sectors most sensitive to geopolitical risk include energy, travel, and globally-exposed multinationals, while defense, cybersecurity, and domestic consumer staples tend to outperform.'
-                    }
-                }
-            ]
-        }) }} />
         <ArticleSchema
             title="Investing During Geopolitical Conflict: Safe Havens in 2026"
             description="When global tensions rise, markets react. Discover how smart investors are protecting their portfolios during international conflicts in 2026."

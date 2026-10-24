@@ -1,12 +1,11 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import DtiSeoContentV2 from './DtiSeoContentV2';
 
-const DtiClient = nextDynamic(() => import('./DtiClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import DtiClient from './DtiClient';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
@@ -73,6 +72,6 @@ export default function DtiPage() {
             <DtiSeoContentV2 />
             <CalculatorFAQ faqs={DTI_FAQS} title="Debt-to-Income Ratio Calculator FAQs" />
         <ContextualInternalLinks currentSlug="dti" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="dti" /></main>
     );
 }

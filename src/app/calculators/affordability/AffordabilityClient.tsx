@@ -12,6 +12,8 @@ export default function AffordabilityClient({ initialMonthlyIncome = 7500, showH
     const [rate, setRate] = useState(6.75);
     const [term, setTerm] = useState(30);
     const [propTaxRate, setPropTaxRate] = useState(1.2);
+    const [annualInsurance,setAnnualInsurance]=useState(1800);
+    const [monthlyHOA,setMonthlyHOA]=useState(0);
     const [creditScore, setCreditScore] = useState<'excellent' | 'good' | 'fair' | 'poor'>('good');
 
     const result = useMemo(() => {
@@ -24,14 +26,14 @@ export default function AffordabilityClient({ initialMonthlyIncome = 7500, showH
                 annualInterestRate: rate,
                 loanTermYears: term,
                 annualPropertyTax: propTaxRate,
-                annualInsurance: 0,
-                monthlyHOA: 0,
+                annualInsurance,
+                monthlyHOA,
                 creditScore,
             });
         } catch {
             return null;
         }
-    }, [income, debts, downPayment, rate, term, propTaxRate, creditScore]);
+    }, [income, debts, downPayment, rate, term, propTaxRate, creditScore, annualInsurance, monthlyHOA]);
 
     return (
         <div className="relative bg-white text-navy-900 pb-16">
@@ -81,7 +83,14 @@ export default function AffordabilityClient({ initialMonthlyIncome = 7500, showH
                             </div>
 
                             <label className="block">
-                                <span className="input-label">Credit Profile</span>
+                                <span className="input-label">Annual homeowners insurance ($)</span>
+                                <input type="number" min={0} value={annualInsurance} onChange={e=>setAnnualInsurance(Math.max(0,+e.target.value))} className="glass-input" />
+                            </label>
+                            <label className="block"><span className="input-label">Monthly HOA ($)</span>
+                                <input type="number" min={0} value={monthlyHOA} onChange={e=>setMonthlyHOA(Math.max(0,+e.target.value))} className="glass-input" />
+                            </label>
+                            <p className="text-xs">Includes illustrative 0.5% annual PMI above 80% LTV. Obtain a lender quote; credit profile is informational and not a pricing or approval model.</p>
+                            <label className="block"><span className="input-label">Credit Profile</span>
                                 <select className="glass-input" value={creditScore} onChange={(e) => setCreditScore(e.target.value as typeof creditScore)}>
                                     <option value="excellent">Excellent (750+)</option>
                                     <option value="good">Good (700–749)</option>

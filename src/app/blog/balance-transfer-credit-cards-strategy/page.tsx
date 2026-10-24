@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'How does a balance transfer work?', acceptedAnswer: { '@type': 'Answer', text: 'A balance transfer involves applying for a new credit card that offers a promotional 0% APR period. Once approved, the new credit card company pays off the debt on your old high-interest card, and moves that balance over to the new 0% APR card, allowing you to pay down the principal without accruing interest.' } },
-    { '@type': 'Question', name: 'Are balance transfers completely free?', acceptedAnswer: { '@type': 'Answer', text: 'No. Almost all balance transfer cards charge an upfront "Balance Transfer Fee," which is typically 3% to 5% of the total amount transferred. If you transfer $10,000, you will be charged a $300 to $500 fee immediately.' } },
-    { '@type': 'Question', name: 'What happens if I don\'t pay off the balance before the 0% APR ends?', acceptedAnswer: { '@type': 'Answer', text: 'If the promotional period ends (e.g., after 15 months) and you still have a remaining balance, the card will instantly revert to its standard, high interest rate (often 20% to 29%). On some store-branded cards, you may even be hit with "deferred interest," meaning you are retroactively charged interest for the entire 15-month period.' } },
-] }) }} />
         <ArticleSchema
             title="Balance Transfer Credit Cards: The 0% APR Strategy Guide for 2026"
             description="A 0% APR balance transfer credit card can save you thousands in interest, but only if you avoid the traps."
@@ -64,7 +59,7 @@ export default function BlogPost() {
                 </p>
 
                 <p>
-                    The fastest mathematical way to stop the bleeding is a <strong>0% APR Balance Transfer Credit Card</strong>. These cards offer a promotional window (usually 12 to 21 months) where you pay absolutely zero interest on your debt. 
+                    The fastest mathematical way to stop the bleeding is a <strong>0% APR Balance Transfer Credit Card</strong>. These cards offer a promotional window (usually 12 to 21 months) where you pay absolutely zero interest on your debt.
                 </p>
                 <p>
                     But banks are not charities. They offer these 0% deals because they know mathematically that most consumers will fail to use them correctly. Here is exactly how to execute a balance transfer to crush your debt, and the three massive traps you must avoid.
@@ -141,13 +136,13 @@ export default function BlogPost() {
 
                 <h3 className="text-xl font-bold mt-8 mb-4">What Is Trap 3: The Deferred Interest Nightmare?</h3>
                 <p>
-                    This is the most dangerous trap in consumer finance. 
+                    This is the most dangerous trap in consumer finance.
                 </p>
                 <p>
                     Most major bank cards (like Chase, Citi, Discover) offer a "true" 0% APR. If you reach the end of the 15-month promotional period and still owe $2,000, the bank simply starts charging normal interest (24%) on the remaining $2,000 balance moving forward.
                 </p>
                 <p>
-                    However, many <strong>Store-Branded Credit Cards</strong> (like furniture stores or electronics retailers) offer "Deferred Interest." Their fine print says: <em>"No interest IF paid in full within 15 months."</em> 
+                    However, many <strong>Store-Branded Credit Cards</strong> (like furniture stores or electronics retailers) offer "Deferred Interest." Their fine print says: <em>"No interest IF paid in full within 15 months."</em>
                 </p>
                 <p>
                     If you reach month 15 and owe even $1 on a deferred interest card, the bank will retroactively calculate all the interest you <em>would have paid</em> on the original $10,000 over the last 15 months, and instantly hit you with a massive $1,500 interest charge overnight.
@@ -179,9 +174,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Balance Transfer Tactics?</h2>
                     <p className="text-lg text-slate-700 mb-6">

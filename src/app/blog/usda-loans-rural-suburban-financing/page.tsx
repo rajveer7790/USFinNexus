@@ -34,38 +34,6 @@ export default function PostComponent() {
                 keywords={['usda loan', 'rural development loan', 'zero down payment']}
             />
 
-            <script type="application/ld+json" dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": "Do I have to buy a farm to get a USDA loan?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "No. This is the biggest myth regarding USDA loans. While they are technically 'Rural Development' loans, the USDA's definition of 'rural' is extremely broad. Millions of suburban homes located just outside major city limits qualify for USDA financing."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "What is the down payment for a USDA loan?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "USDA loans offer 100% financing, meaning the down payment requirement is exactly 0%. You can finance the entire purchase price of the home."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Are there income limits for a USDA loan?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes. Unlike conventional loans, the USDA enforces strict income caps. If your household makes too much money (usually over 115% of the median income for the area), you will be disqualified. This loan is specifically designed for low-to-moderate-income families."
-                            }
-                        }
-                    ]
-                })
-            }} />
 
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[

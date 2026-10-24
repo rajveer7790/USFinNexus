@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is an assumable mortgage?', acceptedAnswer: { '@type': 'Answer', text: 'An assumable mortgage allows a homebuyer to take over the seller\'s exact existing mortgage—including the original loan balance, repayment schedule, and most importantly, the original interest rate.' } },
-    { '@type': 'Question', name: 'Are conventional loans assumable?', acceptedAnswer: { '@type': 'Answer', text: 'Generally, no. Almost all conventional loans (Fannie Mae/Freddie Mac) contain a "Due-on-Sale" clause that prevents assumptions. However, government-backed loans—specifically FHA, VA, and USDA loans—are legally required to be assumable.' } },
-    { '@type': 'Question', name: 'Do I have to qualify for the seller\'s mortgage?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. You cannot simply shake hands with the seller. You must submit a full application to the seller\'s mortgage servicer and prove you meet the strict credit score, DTI, and income requirements to take over the loan.' } },
-] }) }} />
         <ArticleSchema
             title="Assumable Mortgages in 2026: FHA, VA & USDA Rules"
             description="Learn how assumptions work, including eligibility, equity-gap funding, servicer approval, fees and timelines."

@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'Why do freelancers get denied for traditional mortgages?', acceptedAnswer: { '@type': 'Answer', text: 'Traditional mortgages (like Conventional and FHA loans) are heavily regulated by the government. The rules demand highly predictable, steady income, which is easily proven by a corporate W-2 form. If you are a freelancer or entrepreneur, your income fluctuates wildly from month to month, and you legally write off massive business expenses to lower your taxable income. The bank\'s automated software sees your artificially low tax return and instantly denies you.' } },
-    { '@type': 'Question', name: 'What is a Non-QM Mortgage?', acceptedAnswer: { '@type': 'Answer', text: 'A Non-Qualified Mortgage (Non-QM) is a loan that intentionally breaks the government\'s strict underwriting rules. Because the government will not insure these risky loans, the bank keeps the loan entirely on their own balance sheet (called a Portfolio Loan). This allows the bank to use common sense and create their own custom rules to approve you.' } },
-    { '@type': 'Question', name: 'How does a Bank Statement Loan work?', acceptedAnswer: { '@type': 'Answer', text: 'This is the most popular Non-QM loan for entrepreneurs. Instead of demanding your tax returns and W-2s, the bank asks for your last 12 to 24 months of business bank statements. They simply look at all the gross deposits entering your account. If the massive deposits prove you run a highly profitable business, they approve the loan.' } },
-] }) }} />
         <ArticleSchema
             title="Portfolio Loans & Non-QM Mortgages: The 2026 Freelancer Guide"
             description="If you are self-employed or a freelancer, traditional banks will deny your mortgage. Learn how to use Bank Statement Loans and Non-QM mortgages."

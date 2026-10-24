@@ -18,11 +18,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'Why does a mortgage payment include more interest at first?', acceptedAnswer: { '@type': 'Answer', text: 'Monthly interest is calculated from the outstanding principal balance. At the start of a fully amortizing loan, the balance is largest, so the interest portion is largest. As principal falls, more of the fixed payment goes toward principal. The exact split depends on the loan amount, rate and term.' } },
-    { '@type': 'Question', name: 'How much can extra mortgage payments save?', acceptedAnswer: { '@type': 'Answer', text: 'Extra principal can shorten the term and reduce total interest, but the amount depends on the balance, rate, term, timing and payment size. Model your exact scenario in an amortization calculator and confirm that your servicer applies extra money to principal.' } },
-    { '@type': 'Question', name: 'How do I get a free amortization schedule for my mortgage?', acceptedAnswer: { '@type': 'Answer', text: 'USFinNexus offers a free amortization schedule calculator that generates a full month-by-month table with extra payment modeling. Enter your loan amount, interest rate, term, and any extra monthly payments, and download a free PDF or CSV. No signup or email required.' } },
-] }) }} />
         <ArticleSchema
             title="How Does Mortgage Amortization Work? 2026 Guide"
             description="Learn how each mortgage payment splits between principal and interest and how extra payments change the schedule."

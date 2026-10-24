@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is Fractional Real Estate Investing?', acceptedAnswer: { '@type': 'Answer', text: 'Fractional real estate platforms buy a physical rental property (like a $400,000 house in Texas), put it into an LLC, and divide the ownership of that LLC into thousands of digital "shares." You can buy one share for just $100. Because you own a percentage of the house, you receive a percentage of the monthly rent the tenant pays.' } },
-    { '@type': 'Question', name: 'How do I make money from fractional real estate?', acceptedAnswer: { '@type': 'Answer', text: 'You make money in two ways: 1) Cash Flow: Every month or quarter, the platform deposits your share of the tenant\'s rent directly into your bank account. 2) Capital Appreciation: If the house goes up in value over five years and the platform decides to sell it, you receive your exact percentage of the profits from the sale.' } },
-    { '@type': 'Question', name: 'What is the biggest risk of fractional real estate?', acceptedAnswer: { '@type': 'Answer', text: 'The biggest risk is extreme illiquidity. Unlike a stock (which you can sell instantly on Robinhood), a fractional share of a house cannot be easily sold. If you invest $5,000 into a property on a platform like Arrived Homes, you must assume your money is completely locked up for 5 to 7 years until the platform officially sells the house.' } },
-] }) }} />
         <ArticleSchema
             title="Fractional Real Estate Investing: How to Buy a Rental Property for $100"
             description="You no longer need an $80,000 down payment to become a landlord. Learn how fractional platforms allow you to buy shares of rental properties."
@@ -64,7 +59,7 @@ export default function BlogPost() {
                 </p>
 
                 <p>
-                    A new wave of financial technology has completely shattered that barrier to entry. 
+                    A new wave of financial technology has completely shattered that barrier to entry.
                 </p>
                 <p>
                     Through <strong>Fractional Real Estate Investing</strong>, tech platforms allow you to buy shares of an actual, physical rental property for as little as $100. You earn monthly rental income and benefit from property appreciation, all without ever fixing a toilet or screening a tenant. Here is how the math works, and the hidden risks you must know before investing.
@@ -75,25 +70,25 @@ export default function BlogPost() {
                     Imagine a beautiful, newly constructed 3-bedroom house in Austin, Texas. It costs $500,000. You do not have $500,000.
                 </p>
                 <p>
-                    A fractional investing platform (like Arrived Homes or Fundrise) buys that house in cash. They place the deed to the house inside a specialized legal entity (an LLC). Then, the SEC allows them to slice the ownership of that LLC into exactly 50,000 digital shares. 
+                    A fractional investing platform (like Arrived Homes or Fundrise) buys that house in cash. They place the deed to the house inside a specialized legal entity (an LLC). Then, the SEC allows them to slice the ownership of that LLC into exactly 50,000 digital shares.
                 </p>
                 <p>
-                    They list those shares on their app for <strong>$10 each</strong>. 
+                    They list those shares on their app for <strong>$10 each</strong>.
                 </p>
                 <p>
-                    If you buy 10 shares for $100, you legally own a tiny fraction of that specific Austin house. The platform handles everything: they find the tenant, collect the rent, pay the property taxes, and fix the leaky roof. 
+                    If you buy 10 shares for $100, you legally own a tiny fraction of that specific Austin house. The platform handles everything: they find the tenant, collect the rent, pay the property taxes, and fix the leaky roof.
                 </p>
 
                 <h3 className="text-xl font-bold mt-8 mb-3">How Do You Get Paid?</h3>
                 <p>
-                    Every month, the tenant in Austin pays $2,500 in rent. The platform deducts property management fees and maintenance costs. The remaining profit (the "Cash Flow") is distributed to the 50,000 shares. 
+                    Every month, the tenant in Austin pays $2,500 in rent. The platform deducts property management fees and maintenance costs. The remaining profit (the "Cash Flow") is distributed to the 50,000 shares.
                 </p>
                 <p>
                     As a shareholder, your precise fraction of that rent is automatically deposited into your bank account as a dividend. Furthermore, if the platform decides to sell the house 5 years later for $650,000, the massive capital gain is distributed directly to the shareholders.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Are the Massive Advantages?</h2>
-                
+
                 <h3 className="text-xl font-bold mt-8 mb-3">What Is True Passive Income?</h3>
                 <p>
                     Traditional landlords are not passive investors; they hold a highly stressful part-time job. They get phone calls at 2 AM when a pipe bursts. Fractional investing completely isolates you from the physical asset. You are purely a silent financial backer.
@@ -101,7 +96,7 @@ export default function BlogPost() {
 
                 <h3 className="text-xl font-bold mt-8 mb-3">What Is Hyper-Diversification?</h3>
                 <p>
-                    If you buy one $500,000 rental property yourself, all your eggs are in one basket. If your tenant stops paying rent and requires a 6-month eviction process, your personal income goes to zero, but you still have to pay the mortgage. 
+                    If you buy one $500,000 rental property yourself, all your eggs are in one basket. If your tenant stops paying rent and requires a 6-month eviction process, your personal income goes to zero, but you still have to pay the mortgage.
                 </p>
                 <p>
                     With fractional investing, you can take $10,000 and spread it across 100 different houses in 20 different states. If one tenant in Ohio stops paying rent, the other 99 houses continue to deposit cash into your account seamlessly.
@@ -113,7 +108,7 @@ export default function BlogPost() {
                         <div>
                             <h3 className="font-bold mb-2">What Is the Critical Flaw: Illiquidity?</h3>
                             <p className="text-sm m-0 text-gray-700">
-                                This is the primary reason many financial advisors warn against fractional real estate. If you buy a stock on Monday, you can legally sell it on Tuesday and have your cash back in seconds. 
+                                This is the primary reason many financial advisors warn against fractional real estate. If you buy a stock on Monday, you can legally sell it on Tuesday and have your cash back in seconds.
                                 <br/><br/>
                                 Fractional shares of houses are <strong>highly illiquid</strong>. While some platforms are attempting to build "secondary trading markets," they are often heavily restricted. When you buy shares in a house, you must mathematically assume that your principal investment is completely locked up and unreachable for 5 to 7 years until the platform officially decides to sell the property. Do not invest emergency funds into fractional real estate.
                             </p>
@@ -126,7 +121,7 @@ export default function BlogPost() {
                     The fractional market is splitting into two factions in 2026. The traditional faction (Arrived, Fundrise) uses standard SEC-regulated LLC shares.
                 </p>
                 <p>
-                    The aggressive new faction (like Lofty AI) uses <strong>Blockchain Tokenization</strong>. Instead of traditional shares, ownership of the house is represented by digital tokens on a blockchain. 
+                    The aggressive new faction (like Lofty AI) uses <strong>Blockchain Tokenization</strong>. Instead of traditional shares, ownership of the house is represented by digital tokens on a blockchain.
                 </p>
                 <p>
                     The massive advantage of tokenization is that rent is paid out <em>daily</em> via smart contracts, and the tokens can theoretically be traded instantly 24/7 on decentralized exchanges, solving the massive "illiquidity" problem of traditional fractional platforms. However, blockchain platforms carry significantly higher regulatory and technological risks.
@@ -145,9 +140,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Strategies for Optimizing Fractional Real Estate in 2026?</h2>
                     <p className="text-lg text-slate-700 mb-6">

@@ -1,11 +1,10 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import RentalPropertySeoContent from './RentalPropertySeoContent';
 
-const RentalPropertyClient = nextDynamic(() => import('./RentalPropertyClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import RentalPropertyClient from './RentalPropertyClient';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
@@ -67,10 +66,10 @@ export default function RentalPropertyPage() {
             <h1 className="sr-only">Rental Property Calculator</h1>
             <p className="text-xs text-gray-500 mt-1 mb-4">Last updated: March 2026</p>
             <RentalPropertyClient />
-            <RentalPropertySeoContent />
+
             <SemrushIntentSection slug="rental-property" />
             <ContextualInternalLinks currentSlug="rental-property" showBlogs showCalculators />
             <CalculatorFAQ faqs={RENTAL_FAQS} title="Rental Property Investment — Frequently Asked Questions" />
-        </main>
+        <CalculatorBenchmarks slug="rental-property" /></main>
     );
 }

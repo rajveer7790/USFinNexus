@@ -31,7 +31,7 @@ const SOURCES = [
     },
     {
         org: 'Federal Housing Finance Agency (FHFA)',
-        url: 'https://www.fhfa.gov/data/conforming-loan-limit',
+        url: 'https://www.fhfa.gov/news/news-release/fhfa-announces-conforming-loan-limit-values-for-2026',
         description: 'Conforming loan limits. For 2026, the one-unit baseline is $832,750 and the one-unit high-cost ceiling can reach $1,249,125 depending on location.',
         icon: '🏦',
     },
@@ -43,13 +43,13 @@ const SOURCES = [
     },
     {
         org: 'Internal Revenue Service (IRS)',
-        url: 'https://www.irs.gov/',
+        url: 'https://www.irs.gov/pub/irs-drop/rp-25-32.pdf',
         description: 'Federal tax brackets, standard deductions and other tax-year-specific figures. The 2026 federal income-tax calculator uses IRS Revenue Procedure 2025-32 and related IRS 2026 guidance.',
         icon: '🧾',
     },
     {
         org: 'Social Security Administration (SSA)',
-        url: 'https://www.ssa.gov/',
+        url: 'https://www.ssa.gov/oact/cola/cbb.html',
         description: 'Social Security contribution and benefit base. The 2026 employee FICA estimate uses the official $184,500 Social Security taxable wage base.',
         icon: '📘',
     },

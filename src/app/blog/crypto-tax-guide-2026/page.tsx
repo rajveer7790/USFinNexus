@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is the new Form 1099-DA for crypto?', acceptedAnswer: { '@type': 'Answer', text: 'Starting in 2026, the IRS requires all digital asset brokers (like Coinbase, Kraken, and certain decentralized exchanges) to issue Form 1099-DA. This form reports your gross proceeds from crypto sales directly to the IRS, meaning the government now has an exact, automated record of your trading activity, similar to how they track traditional stock market trades.' } },
-    { '@type': 'Question', name: 'Do I have to pay taxes if I buy coffee with Bitcoin?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. In the eyes of the IRS, cryptocurrency is treated as "property," not currency. If you use Bitcoin to buy a $5 coffee, you are technically "selling" that Bitcoin. If the Bitcoin you used has gone up in value since you originally bought it, you owe capital gains tax on that fraction of a profit, even though you just bought a coffee.' } },
-    { '@type': 'Question', name: 'How is crypto staking and mining taxed?', acceptedAnswer: { '@type': 'Answer', text: 'When you earn crypto through staking, mining, or an airdrop, it is taxed as Ordinary Income based on the Fair Market Value of the token on the exact day you received it. Later, if you sell that token for a profit, you will also owe Capital Gains tax on the price increase from the day you received it.' } },
-] }) }} />
         <ArticleSchema
             title="The 2026 Crypto Tax Guide: What the IRS New Rules Mean for You"
             description="The Wild West is officially over. Learn how the new IRS Form 1099-DA changes crypto taxes in 2026, and how staking, mining, and airdrops are taxed."
@@ -75,7 +70,7 @@ export default function BlogPost() {
                     Before 2026, crypto exchanges were notoriously inconsistent with tax reporting. The IRS relied heavily on the "honor system," asking a simple yes/no question at the top of Form 1040: <em>"At any time during 2025, did you receive, sell, send, exchange, or otherwise acquire any financial interest in any digital asset?"</em>
                 </p>
                 <p>
-                    In 2026, the honor system is dead. 
+                    In 2026, the honor system is dead.
                 </p>
                 <p>
                     Under new regulations, every <strong>Digital Asset Broker</strong> (including centralized exchanges like Coinbase, Kraken, and Robinhood, as well as certain decentralized protocols and Bitcoin ATM operators) must now issue a <strong>Form 1099-DA (Digital Asset Proceeds From Broker Transactions)</strong>.
@@ -89,7 +84,7 @@ export default function BlogPost() {
                     To understand how crypto is taxed, you must understand how the IRS classifies it. The IRS does not view Bitcoin as currency (like the US Dollar). They view it as <strong>Property</strong> (like real estate or a rare painting).
                 </p>
                 <p>
-                    Because it is property, every time you dispose of it, you trigger a <strong>Capital Gains Tax Event</strong>. 
+                    Because it is property, every time you dispose of it, you trigger a <strong>Capital Gains Tax Event</strong>.
                 </p>
 
                 <ul className="list-disc pl-6 space-y-4 mb-8">
@@ -97,7 +92,7 @@ export default function BlogPost() {
                         <strong>Short-Term Capital Gains:</strong> If you buy Ethereum and sell it less than 365 days later, your profits are taxed at your standard Income Tax Bracket rate (which can be as high as 37%).
                     </li>
                     <li>
-                        <strong>Long-Term Capital Gains:</strong> If you hold the asset for longer than one year, you are rewarded with a much lower tax rate (usually 15%, maxing out at 20%). 
+                        <strong>Long-Term Capital Gains:</strong> If you hold the asset for longer than one year, you are rewarded with a much lower tax rate (usually 15%, maxing out at 20%).
                     </li>
                 </ul>
 
@@ -139,7 +134,7 @@ export default function BlogPost() {
                     </li>
                 </ul>
                 <p>
-                    <strong>The Double Tax:</strong> If you receive a staking reward worth $100 today, you pay income tax on that $100. If you hold that token for a year and its value rises to $150, and then you sell it, you will also pay Capital Gains tax on the $50 profit. 
+                    <strong>The Double Tax:</strong> If you receive a staking reward worth $100 today, you pay income tax on that $100. If you hold that token for a year and its value rises to $150, and then you sell it, you will also pay Capital Gains tax on the $50 profit.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Is the Silver Lining of Crypto Tax-Loss Harvesting?</h2>
@@ -147,10 +142,10 @@ export default function BlogPost() {
                     The IRS property rules swing both ways. If the market crashes and you sell your crypto at a loss, you can use those losses to offset your gains. This is known as <strong>Tax-Loss Harvesting</strong>.
                 </p>
                 <p>
-                    If you made a $10,000 profit selling Bitcoin, but you took a $10,000 loss selling an obscure altcoin, your net capital gain is $0. You owe no taxes. 
+                    If you made a $10,000 profit selling Bitcoin, but you took a $10,000 loss selling an obscure altcoin, your net capital gain is $0. You owe no taxes.
                 </p>
                 <p>
-                    Even better, if your crypto losses exceed your crypto gains, you can use up to $3,000 of those losses to offset your ordinary W-2 income from your day job. Any losses beyond $3,000 can be rolled over to future tax years indefinitely. 
+                    Even better, if your crypto losses exceed your crypto gains, you can use up to $3,000 of those losses to offset your ordinary W-2 income from your day job. Any losses beyond $3,000 can be rolled over to future tax years indefinitely.
                 </p>
 
                 <hr className="my-10 border-gray-200" />
@@ -166,9 +161,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Crypto Tax Filing Strategies?</h2>
                     <p className="text-lg text-slate-700 mb-6">

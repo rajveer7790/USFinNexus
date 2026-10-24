@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is a chattel mortgage?', acceptedAnswer: { '@type': 'Answer', text: 'A chattel mortgage is a loan used to purchase movable personal property (chattel), such as a manufactured home, RV, or heavy machinery, rather than real estate. The property itself serves as collateral for the loan.' } },
-    { '@type': 'Question', name: 'Can I get a traditional mortgage for a mobile home?', acceptedAnswer: { '@type': 'Answer', text: 'You can only get a traditional mortgage if you are buying the manufactured home AND the land it sits on, and the home is permanently affixed to a foundation. If you are buying a home in a trailer park where you rent the land, you must use a chattel mortgage.' } },
-    { '@type': 'Question', name: 'Are interest rates higher on chattel mortgages?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, significantly higher. Because personal property depreciates in value and is easier to repossess but harder to sell than real estate, lenders view chattel loans as high-risk. Expect interest rates to be 2% to 5% higher than traditional mortgage rates.' } },
-] }) }} />
         <ArticleSchema
             title="Chattel Mortgages Explained: How to Finance a Mobile Home in 2026"
             description="Traditional mortgages do not apply to mobile homes on rented land. Learn how chattel mortgages work and the interest rate trap."
@@ -103,13 +98,13 @@ export default function BlogPost() {
                     Because chattel is movable and generally depreciates in value over time, banks consider chattel loans to be exceptionally high risk. If you default on a traditional mortgage, the bank forecloses on the house, which has likely gone up in value. They sell it and get their money back.
                 </p>
                 <p>
-                    If you default on a chattel mortgage, the bank has to hire a repossession crew to tow away a depreciating mobile home. 
+                    If you default on a chattel mortgage, the bank has to hire a repossession crew to tow away a depreciating mobile home.
                 </p>
                 <p>
-                    To compensate for this massive risk, lenders charge much higher interest rates. In 2026, if a traditional 30-year mortgage rate is 6.5%, a chattel mortgage rate for a borrower with identical credit will typically be <strong>9% to 11%</strong>. 
+                    To compensate for this massive risk, lenders charge much higher interest rates. In 2026, if a traditional 30-year mortgage rate is 6.5%, a chattel mortgage rate for a borrower with identical credit will typically be <strong>9% to 11%</strong>.
                 </p>
                 <p>
-                    Over a 20-year loan, that 4% difference will cost you tens of thousands of dollars in extra interest. 
+                    Over a 20-year loan, that 4% difference will cost you tens of thousands of dollars in extra interest.
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Why Are Chattel Loan Terms Shorter?</h2>
@@ -117,7 +112,7 @@ export default function BlogPost() {
                     You cannot get a 30-year term on a chattel loan. Because manufactured homes depreciate (and physically degrade) faster than traditional stick-built homes, lenders want their money back quickly.
                 </p>
                 <p>
-                    Most chattel mortgages are capped at <strong>15 or 20-year terms</strong>. 
+                    Most chattel mortgages are capped at <strong>15 or 20-year terms</strong>.
                 </p>
                 <p>
                     When you combine a higher interest rate with a shorter repayment term, the monthly payment on a $100,000 chattel loan can be significantly higher than a $100,000 traditional mortgage. You must run these numbers carefully before assuming a mobile home is mathematically more affordable.
@@ -162,7 +157,7 @@ export default function BlogPost() {
                     Because the private chattel market is often predatory, the Federal Housing Administration (FHA) offers a specific loan program to protect mobile home buyers: <strong>The FHA Title I program</strong>.
                 </p>
                 <p>
-                    FHA Title I loans are specifically designed for financing manufactured homes on rented land (or purchasing the land and the home simultaneously). 
+                    FHA Title I loans are specifically designed for financing manufactured homes on rented land (or purchasing the land and the home simultaneously).
                 </p>
                 <ul className="list-disc pl-6 space-y-2 mb-8">
                     <li><strong>Lower Down Payments:</strong> As low as 5% down.</li>
@@ -178,7 +173,7 @@ export default function BlogPost() {
                     If you are taking out a chattel loan to place a home in a trailer park, you must factor <strong>Lot Rent</strong> into your financial calculations.
                 </p>
                 <p>
-                    In 2026, private equity firms have aggressively bought up mobile home parks across the country, drastically raising lot rents. If your chattel loan payment is $900 a month, and the private equity firm raises your dirt rent from $400 to $800 a month, your total housing cost is suddenly $1,700. 
+                    In 2026, private equity firms have aggressively bought up mobile home parks across the country, drastically raising lot rents. If your chattel loan payment is $900 a month, and the private equity firm raises your dirt rent from $400 to $800 a month, your total housing cost is suddenly $1,700.
                 </p>
                 <p>
                     Because your home is extremely expensive to move (often costing $5,000 to $10,000 just to transport it to a new park), you are economically trapped. You cannot afford to stay, and you cannot afford to leave.
@@ -197,11 +192,11 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Mobile Home Purchasing Strategies?</h2>
                     <p className="text-lg text-slate-700 mb-6">

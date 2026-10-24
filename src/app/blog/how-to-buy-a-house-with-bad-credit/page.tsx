@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'Can I buy a house with a 500 credit score?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, but you must use a specific government program. The Federal Housing Administration (FHA) legally allows borrowers with credit scores between 500 and 579 to qualify for a mortgage. The catch is that you are required to put a 10% down payment on the house instead of the standard 3.5%.' } },
-    { '@type': 'Question', name: 'What is Manual Underwriting?', acceptedAnswer: { '@type': 'Answer', text: 'Most mortgages are approved or denied instantly by an automated computer algorithm. If your credit is terrible, the computer will automatically deny you. Manual Underwriting bypasses the computer entirely. A human underwriter will look at your life context (e.g., you pay rent on time, you had a medical emergency that ruined your credit but you have a massive down payment) and manually approve the loan.' } },
-    { '@type': 'Question', name: 'What is a Rapid Rescore?', acceptedAnswer: { '@type': 'Answer', text: 'If your credit score is 578, you are 2 points away from unlocking the 3.5% FHA down payment tier. A Rapid Rescore is a service provided by your mortgage lender. If you pay off a $500 credit card balance today, the lender can force the credit bureaus to update your score in 72 hours (instead of waiting 30 days), instantly boosting your score and saving your mortgage approval.' } },
-] }) }} />
         <ArticleSchema
             title="How to Buy a House with Bad Credit in 2026: FHA & Manual Underwriting"
             description="You do not need a 700 credit score to buy a home. Learn the exact government loan loopholes and rapid rescore strategies designed for buyers with bad credit."
@@ -64,7 +59,7 @@ export default function BlogPost() {
                 </p>
 
                 <p>
-                    But a low credit score is not a permanent death sentence for homeownership. 
+                    But a low credit score is not a permanent death sentence for homeownership.
                 </p>
                 <p>
                     Whether your credit was destroyed by medical debt, a bitter divorce, or youthful mistakes with credit cards, there are three highly specific loopholes built into the 2026 mortgage system designed specifically to get you into a house. Here is the exact playbook to bypass the bank's strict credit algorithms.
@@ -117,7 +112,7 @@ export default function BlogPost() {
                         <div>
                             <h3 className="font-bold mb-2">What Is the Cost of Bad Credit?</h3>
                             <p className="text-sm m-0 text-gray-700">
-                                You can buy a house with bad credit, but it will be incredibly expensive. 
+                                You can buy a house with bad credit, but it will be incredibly expensive.
                                 <br/><br/>
                                 Borrowers with a 600 credit score will be assigned an interest rate roughly 1.0% to 1.5% higher than a borrower with a 750 credit score. On a $400,000 mortgage, that bad credit score will cost you an extra <strong>$350 every single month</strong> in pure interest penalties. Your first priority should be to buy the house, but your second priority must be fixing your credit so you can eventually refinance to a cheaper rate.
                             </p>
@@ -138,9 +133,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Strategies for Securing a Mortgage with Bad Credit?</h2>
                     <p className="text-lg text-slate-700 mb-6">

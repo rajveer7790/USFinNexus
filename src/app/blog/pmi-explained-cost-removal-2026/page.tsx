@@ -30,12 +30,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-                { '@type': 'Question', name: 'What exactly is Private Mortgage Insurance (PMI)?', acceptedAnswer: { '@type': 'Answer', text: 'PMI is an insurance policy that you, the borrower, are forced to pay for. However, it does not protect you. It strictly protects the lender in case you default on the loan and the house goes into foreclosure.' } },
-                { '@type': 'Question', name: 'How much does PMI typically cost?', acceptedAnswer: { '@type': 'Answer', text: 'PMI usually costs between 0.3% and 1.5% of your total loan amount per year. On a $400,000 mortgage, you can expect to pay anywhere from $100 to $500 every single month just for PMI, depending on your credit score and down payment.' } },
-                { '@type': 'Question', name: 'Can I avoid paying PMI?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The traditional way to avoid PMI is to make a 20% down payment. Other strategies include taking out an 80-10-10 piggyback loan, finding a No-PMI loan program, or accepting a slightly higher interest rate with Lender-Paid PMI.' } },
-                { '@type': 'Question', name: 'Does FHA have PMI?', acceptedAnswer: { '@type': 'Answer', text: 'FHA loans do not have PMI; instead, they have MIP (Mortgage Insurance Premium). MIP functions similarly but is strictly required for the entire 30-year life of the loan if you put down less than 10%, whereas conventional PMI can be canceled once you reach 20% equity.' } }
-            ] }) }} />
 
             <ArticleSchema
                 title="PMI Explained: What It Is, How Much It Costs, and When It Ends"

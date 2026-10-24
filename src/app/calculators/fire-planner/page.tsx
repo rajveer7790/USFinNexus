@@ -1,12 +1,11 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import FirePlannerSeoContent from './FirePlannerSeoContent';
 
-const FirePlannerClient = nextDynamic(() => import('./FirePlannerClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import FirePlannerClient from './FirePlannerClient';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
@@ -16,7 +15,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'FIRE Calculator 2026 — Financial Independence Retire Early',
-    description: 'Calculate your FIRE number and early retirement timeline. Free financial independence calculator with safe withdrawal rate modeling and Coast FIRE analysis.',
+    description: 'Calculate your FIRE number and early retirement timeline. Free financial independence calculator with safe withdrawal rate modeling and Coast FIRE analysis.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/fire-planner' },
     openGraph: {
         type: 'website',
@@ -68,6 +67,6 @@ export default function FirePlannerPage() {
             <FirePlannerSeoContent />
             <CalculatorFAQ faqs={FIRE_FAQS} title="FIRE Movement — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="fire-planner" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="fire-planner" /></main>
     );
 }

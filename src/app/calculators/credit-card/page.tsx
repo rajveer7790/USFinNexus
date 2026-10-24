@@ -1,3 +1,4 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
@@ -8,9 +9,7 @@ import CreditCardSeoContent from './CreditCardSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 
-const CreditCardClient = nextDynamic(() => import('./CreditCardClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import CreditCardClient from './CreditCardClient';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -59,10 +58,10 @@ export default function CreditCardPage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Credit Card', item: '/calculators/credit-card' }]} />
             <CreditCardClient />
-            <CreditCardSeoContent />
+
             <SemrushIntentSection slug="credit-card" />
             <CalculatorFAQ faqs={CREDIT_CARD_FAQS} title="Credit Card Payoff — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="credit-card" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="credit-card" /></main>
     );
 }

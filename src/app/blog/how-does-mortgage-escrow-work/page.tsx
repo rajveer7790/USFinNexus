@@ -34,38 +34,6 @@ export default function BlogPost() {
                 keywords={['Mortgage', 'Escrow', 'Property Taxes', '2026']}
             />
 
-            <script type="application/ld+json" dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": "What is a mortgage escrow account?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "An escrow account is a forced savings account managed by your mortgage lender. Every month, the bank takes a portion of your mortgage payment and deposits it into this account. When your annual property taxes and homeowners insurance bills are due, the bank uses the money in the escrow account to pay those bills on your behalf."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Why does the bank force me to have an escrow account?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Banks force you to use escrow to protect their collateral. If you fail to pay your property taxes, the local government can legally seize your house and auction it off, which means the bank loses all their money. By forcing you to pay into an escrow account every month, the bank guarantees the taxes are paid on time."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "I have a fixed-rate mortgage, so why did my monthly payment increase?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "While your actual loan (the Principal and Interest) is permanently fixed, the taxes and insurance portion of your payment are not. If your local government increases your property taxes, or your insurance company raises your premium, your bank must collect more money from you every month to cover the difference. This causes an 'Escrow Shortage' and forces your monthly payment to rise."
-                            }
-                        }
-                    ]
-                })
-            }} />
 
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[
@@ -91,11 +59,11 @@ export default function BlogPost() {
                     </header>
 
                     <p className="lead text-2xl text-gray-700 mb-10 font-light leading-relaxed">
-                        You spent months finding the perfect house. You locked in a 30-year fixed-rate mortgage. You carefully budgeted for your exact $2,500 monthly payment. 
+                        You spent months finding the perfect house. You locked in a 30-year fixed-rate mortgage. You carefully budgeted for your exact $2,500 monthly payment.
                     </p>
 
                     <p>
-                        Then, two years later, you receive a letter in the mail from your bank. Your new monthly payment is $2,800. 
+                        Then, two years later, you receive a letter in the mail from your bank. Your new monthly payment is $2,800.
                     </p>
                     <p>
                         How is this possible? The loan officer promised that a fixed-rate mortgage meant the payment would never change. The answer to this terrifying paradox lies entirely within a deeply misunderstood banking mechanism: <strong>The Escrow Account</strong>.
@@ -141,15 +109,15 @@ export default function BlogPost() {
                         Property taxes and homeowners insurance are typically billed as massive lump sums once a year. For example, your county might send you a single $6,000 tax bill every December.
                     </p>
                     <p>
-                        Banks know that the average American does not have the discipline to save $6,000 throughout the year. If you fail to pay your property taxes, the local government will legally seize your house and auction it off. If that happens, the bank loses all of their collateral. 
+                        Banks know that the average American does not have the discipline to save $6,000 throughout the year. If you fail to pay your property taxes, the local government will legally seize your house and auction it off. If that happens, the bank loses all of their collateral.
                     </p>
                     <p>
-                        To protect themselves from your financial irresponsibility, the bank forces you to open an <strong>Escrow Account</strong>. 
+                        To protect themselves from your financial irresponsibility, the bank forces you to open an <strong>Escrow Account</strong>.
                     </p>
 
                     <h3 className="text-2xl font-bold mt-8 mb-4">How Do the Mechanics of Escrow Work?</h3>
                     <p>
-                        Every single month, the bank takes exactly 1/12th of your estimated annual tax and insurance bills out of your mortgage payment and places it into this forced savings account. 
+                        Every single month, the bank takes exactly 1/12th of your estimated annual tax and insurance bills out of your mortgage payment and places it into this forced savings account.
                     </p>
                     <p>
                         If your taxes are $6,000 a year, the bank takes $500 from your monthly payment and locks it in the escrow account. By December, there is exactly $6,000 sitting in the account. When the tax bill arrives, the bank withdraws the $6,000 and pays the county on your behalf. You never have to write a massive check yourself.
@@ -161,7 +129,7 @@ export default function BlogPost() {
                     </h2>
 
                     <p>
-                        This system works flawlessly until your property taxes or insurance premiums suddenly increase. 
+                        This system works flawlessly until your property taxes or insurance premiums suddenly increase.
                     </p>
 
                     <div className="bg-red-50 p-8 rounded-2xl border border-red-200 my-8 shadow-sm">
@@ -201,7 +169,7 @@ export default function BlogPost() {
                     </h2>
 
                     <p>
-                        Escrow math can occasionally work in your favor. 
+                        Escrow math can occasionally work in your favor.
                     </p>
                     <p>
                         If you shop around for a cheaper homeowners insurance policy, and your annual premium drops by $1,000, your bank will suddenly find themselves collecting too much money from you every month.
@@ -219,7 +187,7 @@ export default function BlogPost() {
                         Many financially disciplined homeowners hate escrow. They would rather keep that $6,000 in a High-Yield Savings Account, earn 5% interest on it all year, and pay the tax bill themselves. Can you legally waive escrow?
                     </p>
                     <p>
-                        Yes, but it is difficult. 
+                        Yes, but it is difficult.
                     </p>
 
                     <ul className="space-y-6 my-6">
@@ -229,7 +197,7 @@ export default function BlogPost() {
                         </li>
                         <li>
                             <strong className="text-xl text-navy-800">Conventional Loans:</strong><br/>
-                            If you use a standard Conventional loan, you can request an "Escrow Waiver." However, banks view this as a massive risk. They will typically only allow you to waive escrow if you have excellent credit (720+) and you have at least <strong>20% equity</strong> in the home. 
+                            If you use a standard Conventional loan, you can request an "Escrow Waiver." However, banks view this as a massive risk. They will typically only allow you to waive escrow if you have excellent credit (720+) and you have at least <strong>20% equity</strong> in the home.
                         </li>
                     </ul>
 
@@ -253,7 +221,7 @@ export default function BlogPost() {
 
                 <div className="mt-16">
                                    <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Strategies for Mastering Your Mortgage Escrow Account?</h2>
                     <p className="text-lg text-slate-700 mb-6">
@@ -292,7 +260,7 @@ export default function BlogPost() {
                         </div>
                     </div>
                 </div>
-                
+
                 <div className="mt-16">
                     <RelatedCalculators />
                     <RelatedArticles currentSlug="how-does-mortgage-escrow-work" />

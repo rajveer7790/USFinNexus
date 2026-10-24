@@ -1,3 +1,4 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
@@ -7,9 +8,7 @@ import WebApplicationSchema from '@/components/WebApplicationSchema';
 import BudgetSeoContent from './BudgetSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 
-const BudgetClient = nextDynamic(() => import('./BudgetClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import BudgetClient from './BudgetClient';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -17,7 +16,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
     title: 'Budget Calculator 2026 - 50/30/20 Rule Planner',
     description:
-        'Plan your monthly budget using the 50/30/20 rule. See where your money goes across needs, wants, and savings. Free budget planner, no signup required.',
+        'Plan your monthly budget using the 50/30/20 rule. See where your money goes across needs, wants, and savings. Free budget planner, no signup required.',
     openGraph: {
         type: 'website',
         title: '50/30/20 Budget Calculator 2026',
@@ -66,6 +65,6 @@ export default function BudgetPage() {
             <BudgetSeoContent />
             <CalculatorFAQ faqs={BUDGET_FAQS} title="Budget Planner — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="budget" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="budget" /></main>
     );
 }

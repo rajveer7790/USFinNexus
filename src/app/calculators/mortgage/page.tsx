@@ -1,3 +1,4 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
@@ -5,9 +6,7 @@ import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import MortgageSeoContentV2 from './MortgageSeoContentV2';
 
-const MortgageCalculatorClient = nextDynamic(() => import('./MortgageCalculatorClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import MortgageCalculatorClient from './MortgageCalculatorClient';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
@@ -82,6 +81,6 @@ export default function MortgagePage() {
             </section>
             <CalculatorFAQ faqs={MORTGAGE_FAQS} title="Mortgage Calculator FAQs" />
         <ContextualInternalLinks currentSlug="mortgage" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="mortgage" /></main>
     );
 }

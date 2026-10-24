@@ -409,65 +409,14 @@ export function calcYearlyAmortization(rows: AmortizationRow[]): {
  * Affordability calculator - CFPB standard 28%/43% DTI guidelines.
  */
 export function calcAffordability(inputs: AffordabilityInputs): AffordabilityResult {
-    const { grossMonthlyIncome, monthlyDebts, downPayment, annualInterestRate, loanTermYears } = inputs;
-    const C = US_MORTGAGE_CONSTANTS;
-
-    // Max housing payment per CFPB front-end (28%) and back-end (43%) DTI
-    const maxFrontEnd = grossMonthlyIncome * C.FRONT_END_DTI_MAX;
-    const maxBackEnd = (grossMonthlyIncome * C.BACK_END_DTI_MAX) - monthlyDebts;
-    const maxHousingPayment = Math.min(maxFrontEnd, maxBackEnd);
-
-    // Estimate monthly non-PI costs (tax ~1.2%, insurance ~$1,200/yr default)
-    const estimatedNonPI = (inputs.annualInsurance / 12) + inputs.monthlyHOA;
-
-    const maxPI = maxHousingPayment - estimatedNonPI;
-    if (maxPI <= 0) {
-        return {
-            maxHomePrice: 0, conservativeHomePrice: 0, aggressiveHomePrice: 0,
-            maxLoanAmount: 0, monthlyPaymentAtMax: 0, frontEndDTI: 0, backEndDTI: 0,
-            loanType: 'Conventional', conformingLimit: C.CONFORMING_LOAN_LIMIT, fhaFloor: C.FHA_FLOOR,
-        };
-    }
-
-    // Reverse-engineer max loan amount from max P&I payment
-    const r = annualInterestRate / 100 / 12;
-    const n = loanTermYears * 12;
-    const maxLoanAmount = r > 0
-        ? maxPI * (Math.pow(1 + r, n) - 1) / (r * Math.pow(1 + r, n))
-        : maxPI * n;
-
-    const maxHomePrice = maxLoanAmount + downPayment;
-
-    // Tax-adjusted conservative estimate (28% front-end with property tax)
-    const conservativeTaxCost = maxHomePrice * (inputs.annualPropertyTax / 100) / 12;
-    const conservativePI = maxFrontEnd - estimatedNonPI - conservativeTaxCost;
-    const conservativeLoan = r > 0
-        ? conservativePI * (Math.pow(1 + r, n) - 1) / (r * Math.pow(1 + r, n))
-        : conservativePI * n;
-    const conservativeHomePrice = Math.max(0, conservativeLoan + downPayment);
-
-    const monthlyPaymentAtMax = calcMonthlyPI(maxLoanAmount, annualInterestRate, loanTermYears) + estimatedNonPI;
-    const frontEndDTI = (monthlyPaymentAtMax / grossMonthlyIncome) * 100;
-    const backEndDTI = ((monthlyPaymentAtMax + monthlyDebts) / grossMonthlyIncome) * 100;
-
-    // Loan type
-    let loanType = 'Conventional';
-    if (maxLoanAmount > C.CONFORMING_HIGH_COST_LIMIT) loanType = 'Jumbo';
-    else if (maxLoanAmount > C.CONFORMING_LOAN_LIMIT) loanType = 'High-Cost Conventional';
-    else if (maxLoanAmount <= C.FHA_FLOOR) loanType = 'FHA Eligible';
-
-    return {
-        maxHomePrice,
-        conservativeHomePrice,
-        aggressiveHomePrice: maxHomePrice,
-        maxLoanAmount,
-        monthlyPaymentAtMax,
-        frontEndDTI,
-        backEndDTI,
-        loanType,
-        conformingLimit: C.CONFORMING_LOAN_LIMIT,
-        fhaFloor: C.FHA_FLOOR,
-    };
+    const C=US_MORTGAGE_CONSTANTS;
+    const {grossMonthlyIncome:income, monthlyDebts:debts, downPayment:down, annualInterestRate:rate, loanTermYears:years}=inputs;
+    const costs=(price:number)=>{ const loan=Math.max(0,price-down); const ltv=price>0?loan/price*100:0; const mi=ltv>80?loan*.005/12:0; return calcMonthlyPI(loan,rate,years)+price*inputs.annualPropertyTax/1200+inputs.annualInsurance/12+inputs.monthlyHOA+mi; };
+    const solve=(budget:number)=>{if(budget<=0)return 0;let low=Math.max(0,down), high=100000000; for(let i=0;i<80;i++){const mid=(low+high)/2;if(costs(mid)>budget)high=mid;else low=mid;}return costs(low)<=budget?low:0;};
+    const conservative=solve(Math.min(income*.28,income*.36-debts));
+    const stretch=solve(income*.43-debts);
+    const payment=costs(conservative);
+    return {maxHomePrice:conservative,conservativeHomePrice:conservative,aggressiveHomePrice:stretch,maxLoanAmount:Math.max(0,conservative-down),monthlyPaymentAtMax:conservative>0?payment:0,frontEndDTI:income>0&&conservative>0?payment/income*100:0,backEndDTI:income>0&&conservative>0?(payment+debts)/income*100:0,loanType:"Conventional planning scenario",conformingLimit:C.CONFORMING_LOAN_LIMIT,fhaFloor:C.FHA_FLOOR};
 }
 
 /**
@@ -543,7 +492,8 @@ export function calcRentVsBuy(inputs: RentVsBuyInputs): RentVsBuyResult {
     const monthlyTax = (homePrice * (annualPropertyTax / 100)) / 12;
     const monthlyIns = annualInsurance / 12;
 
-    let buyTotal = 0;
+    const purchaseCosts = homePrice * 0.03; // explicit illustrative 3% acquisition cost
+    let buyTotal = purchaseCosts;
     let rentTotal = 0;
     let homeValue = homePrice;
     let balance = loanAmount;
@@ -551,7 +501,8 @@ export function calcRentVsBuy(inputs: RentVsBuyInputs): RentVsBuyResult {
     const yearlyData = [];
 
     // Investment growth on down payment (opportunity cost for buyer)
-    let investmentBalance = downPayment;
+    let investmentBalance = downPayment + purchaseCosts;
+    let firstBreakEven = 0;
 
     for (let year = 1; year <= yearsToStay; year++) {
         const monthlyMaintenance = (homeValue * 0.01) / 12; // 1% annual maintenance
@@ -559,10 +510,10 @@ export function calcRentVsBuy(inputs: RentVsBuyInputs): RentVsBuyResult {
         for (let m = 0; m < 12; m++) {
             const monthlyRate = mortgageRate / 100 / 12;
             const interest = balance * monthlyRate;
-            const principal = monthlyPI - interest;
+            const principal = Math.min(balance, Math.max(0, monthlyPI - interest));
             balance = Math.max(0, balance - principal);
 
-            buyTotal += monthlyPI + monthlyTax + monthlyIns + monthlyHOA + monthlyMaintenance;
+            buyTotal += principal + interest + monthlyTax + monthlyIns + monthlyHOA + monthlyMaintenance;
             rentTotal += rent;
         }
         rent *= (1 + annualRentIncrease / 100);
@@ -570,14 +521,17 @@ export function calcRentVsBuy(inputs: RentVsBuyInputs): RentVsBuyResult {
         investmentBalance *= (1 + investmentReturn / 100);
 
         const equity = homeValue - balance - homeValue * (sellingCostPercent / 100);
-        yearlyData.push({ year, buyCumulative: buyTotal, rentCumulative: rentTotal, equity });
+        const netBuy = buyTotal - equity + downPayment;
+        const netRent = rentTotal - (investmentBalance - downPayment - purchaseCosts);
+        if (!firstBreakEven && netBuy <= netRent) firstBreakEven = year;
+        yearlyData.push({ year, buyCumulative: netBuy, rentCumulative: netRent, equity });
     }
 
     const homeEquity = homeValue - balance - homeValue * (sellingCostPercent / 100);
     const netBuyCost = buyTotal - homeEquity + downPayment;
-    const netRentCost = rentTotal - (investmentBalance - downPayment); // renter gains investment reduce the net cost
+    const netRentCost = rentTotal - (investmentBalance - downPayment - purchaseCosts); // renter gains investment reduce the net cost
 
-    const breakEvenYear = yearlyData.findIndex(d => d.equity > d.rentCumulative - d.buyCumulative) + 1;
+    const breakEvenYear = firstBreakEven;
 
     return {
         buyTotalCost: buyTotal,
@@ -586,7 +540,7 @@ export function calcRentVsBuy(inputs: RentVsBuyInputs): RentVsBuyResult {
         netBuyCost,
         netRentCost,
         winner: netBuyCost < netRentCost ? 'buy' : netRentCost < netBuyCost ? 'rent' : 'tie',
-        breakEvenYear: breakEvenYear || yearsToStay,
+        breakEvenYear,
         yearlyData,
     };
 }
@@ -821,7 +775,10 @@ export function calcGovLoan(inputs: GovLoanInputs): GovLoanResult {
     if (loanType === 'fha') {
         // FHA: 1.75% upfront MIP, 0.55% annual MIP (for 30yr, LTV > 95%)
         upfrontFeePercent = 1.75;
-        annualFeePercent = downPaymentPercent >= 10 ? 0.50 : 0.55;
+        const ltv = 100 - downPaymentPercent;
+        annualFeePercent = loanTermYears > 15
+            ? (baseLoanAmount <= 726200 ? (ltv > 95 ? .55 : .50) : (ltv > 95 ? .75 : .70))
+            : (baseLoanAmount <= 726200 ? (ltv > 90 ? .40 : .15) : (ltv > 90 ? .65 : ltv > 78 ? .40 : .15));
     } else if (loanType === 'va') {
         // VA funding fee tiers (2026)
         if (inputs.vaDisabilityExempt) {
@@ -856,7 +813,9 @@ export function calcGovLoan(inputs: GovLoanInputs): GovLoanResult {
     const n = loanTermYears * 12;
     const totalPaid = monthlyPI * n;
     const totalInterest = totalPaid - loanAmount;
-    const totalCost = totalPaid + (monthlyMIP * n) + upfrontFee;
+    const feeMonths = loanType === "fha" && downPaymentPercent >= 10 ? Math.min(n,132) : n;
+    // Upfront fee is already financed in totalPaid; do not count it twice.
+    const totalCost = totalPaid + monthlyMIP * feeMonths;
 
     return {
         loanAmount, baseLoanAmount, upfrontFee, upfrontFeePercent,

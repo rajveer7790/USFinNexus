@@ -1,12 +1,11 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
 import CalculatorSkeleton from '@/components/ui/CalculatorSkeleton';
 import CryptoTaxSeoContent from './CryptoTaxSeoContent';
 
-const CryptoTaxClient = nextDynamic(() => import('./CryptoTaxClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import CryptoTaxClient from './CryptoTaxClient';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WebApplicationSchema from '@/components/WebApplicationSchema';
@@ -16,7 +15,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Crypto Tax Calculator 2026 — Capital Gains on Bitcoin & Crypto',
-    description: 'Estimate your 2026 cryptocurrency capital gains taxes. Calculate short-term vs long-term gains for Bitcoin, Ethereum, and altcoins under IRS rules. Free crypto tax estimator.',
+    description: 'Estimate your 2026 cryptocurrency capital gains taxes. Calculate short-term vs long-term gains for Bitcoin, Ethereum, and altcoins under IRS rules. Free crypto tax estimator.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/crypto-tax' },
     openGraph: {
         type: 'website',
@@ -68,6 +67,6 @@ export default function CryptoTaxPage() {
             <CryptoTaxSeoContent />
             <CalculatorFAQ faqs={CRYPTO_FAQS} title="Cryptocurrency Taxes — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="crypto-tax" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="crypto-tax" /></main>
     );
 }

@@ -1,3 +1,4 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
@@ -8,16 +9,14 @@ import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 import InterestOnlySeoContent from './InterestOnlySeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 
-const InterestOnlyClient = nextDynamic(() => import('./InterestOnlyClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import InterestOnlyClient from './InterestOnlyClient';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Interest-Only Mortgage Calculator 2026',
-    description: 'Calculate your interest-only mortgage payments and see exactly how much your payment will jump when the loan fully amortizes.',
+    description: 'Calculate your interest-only mortgage payments and see exactly how much your payment will jump when the loan fully amortizes.',
     openGraph: {
         type: 'website',
         title: 'Interest-Only Mortgage Calculator 2026',
@@ -63,6 +62,6 @@ export default function InterestOnlyPage() {
             <InterestOnlySeoContent />
             <CalculatorFAQ faqs={INTEREST_ONLY_FAQS} title="Interest-Only Mortgages — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="interest-only" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="interest-only" /></main>
     );
 }

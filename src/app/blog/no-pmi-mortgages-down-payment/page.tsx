@@ -34,38 +34,6 @@ export default function PostComponent() {
                 keywords={['no PMI mortgage', 'avoid PMI', 'lender paid PMI']}
             />
 
-            <script type="application/ld+json" dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": "Can I get a mortgage without PMI if I don't have 20% down?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes. There are several ways to avoid PMI with less than 20% down, including VA loans for veterans, Physician Loans for doctors, Lender-Paid PMI (LPMI) structures, and 80/10/10 piggyback loans."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "What is Lender Paid Mortgage Insurance (LPMI)?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "LPMI is a structure where the bank pays your PMI for you. In exchange, the bank charges you a slightly higher interest rate for the entire life of the loan. While it eliminates the monthly PMI fee, the higher rate means you might pay more in the long run."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Do FHA loans have PMI?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "FHA loans do not technically have PMI, but they have something mathematically identical: Mortgage Insurance Premium (MIP). Unlike PMI, which can be canceled once you reach 20% equity, FHA MIP is permanent for the life of the loan if you put down less than 10%."
-                            }
-                        }
-                    ]
-                })
-            }} />
 
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[

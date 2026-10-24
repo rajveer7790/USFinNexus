@@ -5,9 +5,11 @@ import { ALL_GUIDES } from '@/lib/guides';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-    title: 'Financial Guides 2026 - Mortgage & Cross-Border',
-    description: 'Expert guides on US & Canadian real estate, cross-border mortgages, first-time home buying, and credit requirements.',
+    title: 'U.S. Homebuying & Mortgage Guides 2026',
+    description: 'U.S. homebuying, mortgage, credit and financial planning guides with source notes and calculator links.',
     alternates: { canonical: 'https://usfinnexus.com/guides' },
+    openGraph: {type:'website',title:'U.S. Homebuying & Mortgage Guides 2026',description:'U.S. mortgage and homebuying guides with clear assumptions and source notes.',url:'https://usfinnexus.com/guides',images:['https://usfinnexus.com/icon-512.png']},
+    twitter:{card:'summary_large_image',title:'U.S. Homebuying & Mortgage Guides 2026',description:'Source-based U.S. mortgage and homebuying guidance.',images:['https://usfinnexus.com/icon-512.png']},
 };
 
 const CATEGORY_ICONS: Record<string, React.ReactNode> = {
@@ -20,21 +22,21 @@ export default function GuidesPage() {
     return (
         <div className="max-w-6xl mx-auto px-4 py-7 sm:py-9">
             <Breadcrumbs items={[{ name: 'Guides', item: '/guides' }]} />
-            
+
             <header className="mb-12 text-center md:text-left">
                 <span className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-blue-100 text-blue-700">
-                    Expert Financial Handbook
+                    U.S. Financial Handbook
                 </span>
                 <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight" style={{ color: 'var(--color-text)' }}>
                     Mortgage & Financing Guides
                 </h1>
                 <p className="text-lg max-w-2xl" style={{ color: 'var(--color-text-muted)' }}>
-                    Deep dives into complex financial topics, designed to give you professional-level clarity on home buying and cross-border investing.
+                    Deep dives into complex financial topics, designed to give you clear explanations of U.S. home buying and mortgage decisions.
                 </p>
             </header>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {ALL_GUIDES.map((guide) => (
+                {[...ALL_GUIDES].sort((a,b) => Number(a.category === "Cross-Border") - Number(b.category === "Cross-Border")).map((guide) => (
                     <Link href={`/guides/${guide.slug}`} key={guide.slug} className="group flex flex-col h-full card hover:border-[var(--color-navy)] transition-colors overflow-hidden">
                         <div className="p-6 flex flex-col flex-1">
                             <div className="flex items-center gap-2 mb-4">

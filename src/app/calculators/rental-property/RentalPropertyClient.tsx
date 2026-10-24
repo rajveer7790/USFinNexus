@@ -1,47 +1,31 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
 export default function RentalPropertyClient() {
     const [purchasePrice, setPurchasePrice] = useState<number>(300000);
-    const [downPaymentPercent, setDownPaymentPercent] = useState<number>(20);
+    const [downPaymentPercent, setDownPaymentPercent] = useState<number>(25);
     const [interestRate, setInterestRate] = useState<number>(6.5);
-    const [loanTerm, setLoanTerm] = useState<number>(30);
-    
-    const [monthlyRent, setMonthlyRent] = useState<number>(2500);
+    const [loanTerm] = useState<number>(30);
+
+    const [monthlyRent, setMonthlyRent] = useState<number>(2600);
     const [vacancyRate, setVacancyRate] = useState<number>(5);
     const [propertyManagement, setPropertyManagement] = useState<number>(8);
     const [maintenance, setMaintenance] = useState<number>(5);
     const [capEx, setCapEx] = useState<number>(5);
-    
+
     const [annualTaxes, setAnnualTaxes] = useState<number>(3600);
     const [annualInsurance, setAnnualInsurance] = useState<number>(1200);
-    const [monthlyHoa, setMonthlyHoa] = useState<number>(0);
+    const [monthlyHoa] = useState<number>(0);
 
-    const [closingCosts, setClosingCosts] = useState<number>(0);
+    const [closingCosts, setClosingCosts] = useState<number>(6000);
     const [repairCosts, setRepairCosts] = useState<number>(10000); // Initial rehab
 
-    // Calculated values
-    const [mortgagePayment, setMortgagePayment] = useState<number>(0);
-    const [totalMonthlyExpenses, setTotalMonthlyExpenses] = useState<number>(0);
-    const [netOperatingIncome, setNetOperatingIncome] = useState<number>(0);
-    const [monthlyCashFlow, setMonthlyCashFlow] = useState<number>(0);
-    const [capRate, setCapRate] = useState<number>(0);
-    const [cashOnCashReturn, setCashOnCashReturn] = useState<number>(0);
-
-    useEffect(() => {
-        calculateReturns();
-    }, [
-        purchasePrice, downPaymentPercent, interestRate, loanTerm,
-        monthlyRent, vacancyRate, propertyManagement, maintenance, capEx,
-        annualTaxes, annualInsurance, monthlyHoa, closingCosts, repairCosts
-    ]);
-
-    const calculateReturns = () => {
+    const { mortgagePayment, netOperatingIncome, monthlyCashFlow, capRate, cashOnCashReturn, dscr } = useMemo(() => {
         const downPayment = purchasePrice * (downPaymentPercent / 100);
         const loanAmount = purchasePrice - downPayment;
-        
+
         // Mortgage Math
         const monthlyRate = (interestRate / 100) / 12;
         const numPayments = loanTerm * 12;
@@ -63,9 +47,9 @@ export default function RentalPropertyClient() {
         const monthlyMgmt = effectiveGrossIncome * (propertyManagement / 100);
         const monthlyMaint = effectiveGrossIncome * (maintenance / 100);
         const monthlyCapEx = effectiveGrossIncome * (capEx / 100);
-        
+
         const totalOperatingExpenses = monthlyTaxes + monthlyIns + monthlyHoa + monthlyMgmt + monthlyMaint + monthlyCapEx;
-        
+
         // Net Operating Income (NOI) - Monthly and Annual
         const monthlyNOI = effectiveGrossIncome - totalOperatingExpenses;
         const annualNOI = monthlyNOI * 12;
@@ -80,13 +64,8 @@ export default function RentalPropertyClient() {
         const currentCapRate = purchasePrice > 0 ? (annualNOI / purchasePrice) * 100 : 0;
         const cocReturn = totalInvestment > 0 ? ((cashFlow * 12) / totalInvestment) * 100 : 0;
 
-        setMortgagePayment(monthlyPI);
-        setTotalMonthlyExpenses(totalOperatingExpenses + monthlyPI);
-        setNetOperatingIncome(monthlyNOI);
-        setMonthlyCashFlow(cashFlow);
-        setCapRate(currentCapRate);
-        setCashOnCashReturn(cocReturn);
-    };
+        return { mortgagePayment: monthlyPI, netOperatingIncome: monthlyNOI, monthlyCashFlow: cashFlow, capRate: currentCapRate, cashOnCashReturn: cocReturn, dscr: monthlyPI > 0 ? monthlyNOI / monthlyPI : null };
+    }, [purchasePrice, downPaymentPercent, interestRate, loanTerm, monthlyRent, vacancyRate, propertyManagement, maintenance, capEx, annualTaxes, annualInsurance, monthlyHoa, closingCosts, repairCosts]);
 
     const expenseData = [
         { name: 'Mortgage (P&I)', value: mortgagePayment },
@@ -106,11 +85,11 @@ export default function RentalPropertyClient() {
                 <h2 className="text-2xl font-bold mb-2">Rental Property ROI Analyzer</h2>
                 <p className="text-blue-100">Calculate cash flow, cap rate, and cash-on-cash return for your real estate investment.</p>
             </div>
-            
+
             <div className="p-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="lg:col-span-1 space-y-6">
                     <div className="space-y-4">
-                        <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Property & Loan</h3>
+                        <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Property & Loan</h3><div><label htmlFor="rental-closing" className="block text-sm font-medium">Purchase closing costs ($)</label><input id="rental-closing" type="number" min={0} value={closingCosts} onChange={e => setClosingCosts(Math.max(0,+e.target.value))} className="w-full border rounded-md p-2" /><p className="text-xs">Upfront cash includes down payment, closing costs and initial repairs. NOI-based DSCR: {dscr === null ? "No debt" : dscr.toFixed(2) + "x"}. This is not a lender rent/PITIA qualification ratio. Replacement reserves are included in this conservative operating estimate.</p></div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1">Purchase Price ($)</label>
                             <input type="number" value={purchasePrice} onChange={(e) => setPurchasePrice(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />

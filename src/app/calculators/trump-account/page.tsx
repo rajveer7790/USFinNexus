@@ -1,3 +1,4 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
@@ -69,6 +70,6 @@ export default function TrumpAccountPage() {
                 <CalculatorFAQ faqs={FAQS} title="Trump Account Calculator FAQs" />
             </div>
         <ContextualInternalLinks currentSlug="trump-account" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="trump-account" /></main>
     );
 }

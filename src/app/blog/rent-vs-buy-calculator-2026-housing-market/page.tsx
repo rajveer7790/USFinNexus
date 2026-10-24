@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'Is renting throwing money away?', acceptedAnswer: { '@type': 'Answer', text: 'No. Renting is paying for a necessary service (shelter) at a fixed, predictable cost. When you buy a house, you "throw away" massive amounts of money on unrecoverable costs like property taxes, mortgage interest, homeowners insurance, and maintenance—none of which build any equity.' } },
-    { '@type': 'Question', name: 'What is the 5-Year Rule for buying a house?', acceptedAnswer: { '@type': 'Answer', text: 'When you buy a house, you lose roughly 10% of the home\'s value instantly to closing costs and realtor fees. To break even on those massive sunk costs, your house needs time to appreciate in value. The 5-Year Rule states that if you plan to move or sell the house in less than 5 years, you will almost certainly lose money, and you should rent instead.' } },
-    { '@type': 'Question', name: 'Why is renting cheaper in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Because of massive 7% mortgage rates combined with record-high home prices, the monthly mortgage payment on a starter home is now often 50% to 80% higher than the cost of renting the exact same house in the same neighborhood. If you rent and invest the difference in the S&P 500, you will likely build wealth faster than the homeowner.' } },
-] }) }} />
         <ArticleSchema
             title="Rent vs Buy in 2026: Why Renting is NOT Throwing Money Away"
             description="In 2026, renting is mathematically cheaper than buying a house in 80% of US cities. Learn the unrecoverable costs of homeownership."

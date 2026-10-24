@@ -30,13 +30,7 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-                { '@type': 'Question', name: 'Can I use gifted money for my down payment?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Most major loan programs (including FHA, VA, and Conventional loans) allow you to use a cash gift from a family member to cover 100% of your down payment and closing costs. However, the bank will heavily scrutinize the transaction to ensure it is legally documented.' } },
-                { '@type': 'Question', name: 'Who is legally allowed to give me a down payment gift?', acceptedAnswer: { '@type': 'Answer', text: 'Banks are very strict about this. The gift must come from an immediate family member (parents, grandparents, siblings, or spouse). You generally cannot use a gift from a friend, a cousin, or your employer, as banks view these as "unsecured loans" in disguise.' } },
-                { '@type': 'Question', name: 'What is a Mortgage Gift Letter?', acceptedAnswer: { '@type': 'Answer', text: 'A Gift Letter is a legally binding document signed by both you and the person giving you the money. It explicitly states the exact dollar amount of the gift and explicitly declares that the money is a true gift and that NO repayment is expected or required. This proves to the bank that the money is not a secret loan.' } },
-                { '@type': 'Question', name: 'Will my parents have to pay taxes on the gift?', acceptedAnswer: { '@type': 'Answer', text: 'Usually no. In 2026, the IRS allows an individual to gift up to $18,000 to another person completely tax-free without even filing a form. For amounts over $18,000, they must file a form, but it simply counts against their lifetime exemption (which is over $13 million), meaning they still likely will not pay actual tax.' } }
-            ] }) }} />
-            
+
             <ArticleSchema
                 title="Gifted Down Payment Rules: The 2026 Guide to IRS & Underwriting Requirements"
                 description="If your parents give you $20,000 to buy a house, the bank might reject your mortgage. Learn the strict IRS gift tax rules and how to write a legal Gift Letter."
@@ -46,7 +40,7 @@ export default function BlogPost() {
                 authorName="USFinNexus Editorial Team"
                 keywords={['Mortgage', 'Down Payment', 'IRS', '2026', 'Gift Letter']}
             />
-            
+
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Gifted Down Payment Rules', item: '/blog/gifted-down-payment-rules-documentation' }]} />
                 <article className="prose prose-slate prose-lg max-w-none">
@@ -72,10 +66,10 @@ export default function BlogPost() {
                     </p>
 
                     <p>
-                        However, the mortgage industry is heavily regulated, and you cannot simply have your parents wire $20,000 into your checking account three days before you apply for a mortgage. 
+                        However, the mortgage industry is heavily regulated, and you cannot simply have your parents wire $20,000 into your checking account three days before you apply for a mortgage.
                     </p>
                     <p>
-                        If a mortgage underwriter sees a massive, sudden influx of cash in your bank statements without a legally documented paper trail, they will immediately freeze and likely reject your mortgage application. Because of strict federal anti-money laundering laws and risk assessment protocols, every single dollar you use to buy a house must be fully documented, legally sourced, and cleared by the IRS. 
+                        If a mortgage underwriter sees a massive, sudden influx of cash in your bank statements without a legally documented paper trail, they will immediately freeze and likely reject your mortgage application. Because of strict federal anti-money laundering laws and risk assessment protocols, every single dollar you use to buy a house must be fully documented, legally sourced, and cleared by the IRS.
                     </p>
                     <p>
                         In this comprehensive guide, we will break down the exact rules for using gifted down payment funds without destroying your mortgage approval, including the crucial Gift Letter, the IRS limits, and the strategy of "seasoning" funds.
@@ -92,7 +86,7 @@ export default function BlogPost() {
                         Why does the bank care so much about where your down payment came from? After all, cash is cash, right?
                     </p>
                     <p>
-                        When a mortgage underwriter evaluates your application, their primary job is to calculate your Debt-to-Income (DTI) ratio. They need to ensure you can comfortably afford the new monthly mortgage payment on top of your existing car loans, student loans, and credit card minimums. 
+                        When a mortgage underwriter evaluates your application, their primary job is to calculate your Debt-to-Income (DTI) ratio. They need to ensure you can comfortably afford the new monthly mortgage payment on top of your existing car loans, student loans, and credit card minimums.
                     </p>
                     <p>
                         If your parents gave you a $20,000 "gift," but they secretly expect you to pay them back $500 a month, that is not a true gift. That is a secret, unsecured loan. If you have an undisclosed $500/month liability to your parents, your DTI is artificially destroyed. You are mathematically at a much higher risk of defaulting on the bank's mortgage because your monthly budget is stretched thinner than the bank realizes.
@@ -155,7 +149,7 @@ export default function BlogPost() {
                     </h2>
 
                     <p>
-                        Once you clear the bank's underwriting rules, you must navigate the Internal Revenue Service (IRS). 
+                        Once you clear the bank's underwriting rules, you must navigate the Internal Revenue Service (IRS).
                     </p>
                     <p>
                         In the United States, if you give someone a massive amount of cash, the person <em>giving</em> the money (e.g., your parents) may owe a "Gift Tax" to the IRS. However, the IRS provides a massive loophole called the <strong>Annual Exclusion Limit</strong>.
@@ -167,7 +161,7 @@ export default function BlogPost() {
                             For 2026, the annual exclusion limit is roughly <strong>$18,000 to $19,000 per person</strong>.
                         </p>
                         <p className="text-slate-800 font-medium">
-                            This means your father can give you $18,000 entirely tax-free. Your mother can also give you $18,000 entirely tax-free. If you are married, your father can give your spouse $18,000, and your mother can give your spouse $18,000. 
+                            This means your father can give you $18,000 entirely tax-free. Your mother can also give you $18,000 entirely tax-free. If you are married, your father can give your spouse $18,000, and your mother can give your spouse $18,000.
                         </p>
                         <p className="text-slate-800 font-bold mt-4">
                             By combining these exclusions, a married couple can legally receive over $72,000 in tax-free down payment gifts from a single set of parents without triggering a single IRS form!
@@ -176,7 +170,7 @@ export default function BlogPost() {
 
                     <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-900">What if the gift is larger than the limit?</h3>
                     <p>
-                        If a single parent gives a single child a $50,000 gift (which exceeds the $18,000 limit), they will have to file IRS Form 709 with their taxes. However, <strong>they likely still will not pay any actual tax</strong>. 
+                        If a single parent gives a single child a $50,000 gift (which exceeds the $18,000 limit), they will have to file IRS Form 709 with their taxes. However, <strong>they likely still will not pay any actual tax</strong>.
                     </p>
                     <p>
                         The amount over the limit ($32,000) simply deducts from their <strong>Lifetime Gift Tax Exemption</strong>. In 2026, the lifetime exemption is well over $13 million per person. Unless your parents plan on giving away more than $13 million during their lifetime, they will never pay a penny in gift taxes. The IRS just wants to track it.
@@ -197,7 +191,7 @@ export default function BlogPost() {
                     <div className="card p-8 mb-8 border-l-4 border-emerald-500 bg-emerald-50">
                         <h3 className="text-xl font-bold mb-4 text-emerald-900">What Is the Seasoning Timeline Strategy?</h3>
                         <p className="text-emerald-900">
-                            If you know you are buying a house in July, have your parents wire you the gift money in February or March. Let it sit quietly in your savings account for three or four full months. 
+                            If you know you are buying a house in July, have your parents wire you the gift money in February or March. Let it sit quietly in your savings account for three or four full months.
                             <br/><br/>
                             When you apply for the mortgage in July, the underwriter will only look back to May. They will see a steady $20,000 balance, they will assume you saved it yourself over the years, and they will <em>never ask for a single Gift Letter</em>. You skip the entire documentation nightmare.
                         </p>
@@ -252,9 +246,9 @@ export default function BlogPost() {
                 </article>
 
                 <div className="mt-16">
-                    
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Strategies for Mastering Gifted Down Payments in 2026?</h2>
                     <p className="text-lg text-slate-700 mb-6">

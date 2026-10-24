@@ -34,38 +34,6 @@ export default function PostComponent() {
                 keywords={['mortgage calculator', 'comparison', 'hidden costs']}
             />
 
-            <script type="application/ld+json" dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": "Why is my actual mortgage payment higher than what the calculator said?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Basic calculators only calculate 'Principal and Interest' (P&I). They completely ignore Property Taxes, Homeowners Insurance, HOA fees, and Private Mortgage Insurance (PMI). These hidden costs can add $500 to $1,000 to your actual monthly payment."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "What is PITI in a mortgage calculator?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "PITI stands for Principal, Interest, Taxes, and Insurance. A good mortgage calculator will always include inputs for all four of these components to give you an accurate, real-world monthly payment estimate."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Do I need a calculator that includes PMI?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes, absolutely. If you are putting down less than 20% on a conventional loan, you will be required to pay Private Mortgage Insurance (PMI). If a calculator does not factor this in, it is useless for your financial planning."
-                            }
-                        }
-                    ]
-                })
-            }} />
 
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[

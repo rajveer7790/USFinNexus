@@ -1,125 +1,22 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { cryptoTax2026, type CryptoStatus } from '@/lib/crypto-tax-2026';
+import React, { useState, useMemo } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip } from 'recharts';
 
 export default function CryptoTaxClient() {
-    const [filingStatus, setFilingStatus] = useState<string>('single');
+    const [filingStatus, setFilingStatus] = useState<CryptoStatus>('single');
     const [ordinaryIncome, setOrdinaryIncome] = useState<number>(85000); // W2 income, etc.
-    
+
     // Transactions
     const [shortTermGains, setShortTermGains] = useState<number>(5000);
     const [shortTermLosses, setShortTermLosses] = useState<number>(2000);
     const [longTermGains, setLongTermGains] = useState<number>(10000);
     const [longTermLosses, setLongTermLosses] = useState<number>(1000);
 
-    // Results
-    const [netShortTerm, setNetShortTerm] = useState<number>(0);
-    const [netLongTerm, setNetLongTerm] = useState<number>(0);
-    const [shortTermTax, setShortTermTax] = useState<number>(0);
-    const [longTermTax, setLongTermTax] = useState<number>(0);
-    const [totalTaxLiability, setTotalTaxLiability] = useState<number>(0);
-    const [effectiveTaxRate, setEffectiveTaxRate] = useState<number>(0);
-
-    useEffect(() => {
-        calculateCryptoTax();
-    }, [filingStatus, ordinaryIncome, shortTermGains, shortTermLosses, longTermGains, longTermLosses]);
-
-    const calculateCryptoTax = () => {
-        // 1. Calculate Net Gains/Losses
-        let nst = shortTermGains - shortTermLosses;
-        let nlt = longTermGains - longTermLosses;
-
-        // 2. Netting them together if they are opposite signs
-        if (nst < 0 && nlt > 0) {
-            // Apply short term loss to long term gain
-            nlt = nlt + nst; // nst is negative
-            nst = 0;
-            if (nlt < 0) {
-                nst = nlt;
-                nlt = 0;
-            }
-        } else if (nlt < 0 && nst > 0) {
-            // Apply long term loss to short term gain
-            nst = nst + nlt; // nlt is negative
-            nlt = 0;
-            if (nst < 0) {
-                nlt = nst;
-                nst = 0;
-            }
-        }
-
-        // At this point, either both are positive, both are negative, or one is zero.
-        // For tax purposes, we only care if they are > 0.
-        // If net total is negative, up to $3000 can be deducted against ordinary income.
-        
-        const taxableShortTerm = Math.max(0, nst);
-        const taxableLongTerm = Math.max(0, nlt);
-
-        setNetShortTerm(nst);
-        setNetLongTerm(nlt);
-
-        // 3. Calculate Short Term Tax (Taxes as Ordinary Income)
-        // 2026 federal ordinary-income marginal-rate thresholds; estimator only. Verify IRS tables before filing.
-        // We find the marginal rate based on ordinary income.
-        let stMarginalRate = 0;
-        const totalIncome = ordinaryIncome + taxableShortTerm;
-        
-        if (filingStatus === 'single') {
-            if (totalIncome <= 12400) stMarginalRate = 0.10;
-            else if (totalIncome <= 50400) stMarginalRate = 0.12;
-            else if (totalIncome <= 105700) stMarginalRate = 0.22;
-            else if (totalIncome <= 201775) stMarginalRate = 0.24;
-            else if (totalIncome <= 256225) stMarginalRate = 0.32;
-            else if (totalIncome <= 640600) stMarginalRate = 0.35;
-            else stMarginalRate = 0.37;
-        } else { // married
-            if (totalIncome <= 24800) stMarginalRate = 0.10;
-            else if (totalIncome <= 100800) stMarginalRate = 0.12;
-            else if (totalIncome <= 211400) stMarginalRate = 0.22;
-            else if (totalIncome <= 403550) stMarginalRate = 0.24;
-            else if (totalIncome <= 512450) stMarginalRate = 0.32;
-            else if (totalIncome <= 768700) stMarginalRate = 0.35;
-            else stMarginalRate = 0.37;
-        }
-
-        const calculatedStTax = taxableShortTerm * stMarginalRate;
-        setShortTermTax(calculatedStTax);
-
-        // 4. Calculate Long Term Tax (0%, 15%, or 20% based on total taxable income)
-        let ltRate = 0;
-        const incomeForLt = totalIncome; // Income including ordinary and ST gains
-        
-        if (filingStatus === 'single') {
-            if (incomeForLt <= 49450) ltRate = 0;
-            else if (incomeForLt <= 545500) ltRate = 0.15;
-            else ltRate = 0.20;
-        } else { // married
-            if (incomeForLt <= 98800) ltRate = 0;
-            else if (incomeForLt <= 613700) ltRate = 0.15;
-            else ltRate = 0.20;
-        }
-
-        const calculatedLtTax = taxableLongTerm * ltRate;
-        setLongTermTax(calculatedLtTax);
-
-        // 5. Net Investment Income Tax (NIIT) - 3.8% for high earners
-        let niit = 0;
-        const threshold = filingStatus === 'single' ? 200000 : 250000;
-        const magi = totalIncome + taxableLongTerm;
-        if (magi > threshold) {
-            const excess = magi - threshold;
-            const netInvestmentIncome = taxableShortTerm + taxableLongTerm;
-            niit = Math.min(excess, netInvestmentIncome) * 0.038;
-        }
-
-        const finalTax = calculatedStTax + calculatedLtTax + niit;
-        setTotalTaxLiability(finalTax);
-
-        const totalGains = taxableShortTerm + taxableLongTerm;
-        setEffectiveTaxRate(totalGains > 0 ? (finalTax / totalGains) * 100 : 0);
-    };
-
+    const [magiBefore, setMagiBefore] = useState(101100);
+    const result = useMemo(() => cryptoTax2026(filingStatus, ordinaryIncome, magiBefore, shortTermGains, shortTermLosses, longTermGains, longTermLosses), [filingStatus, ordinaryIncome, magiBefore, shortTermGains, shortTermLosses, longTermGains, longTermLosses]);
+    const { st: netShortTerm, lt: netLongTerm, shortTax: shortTermTax, longTax: longTermTax, total: totalTaxLiability, effective: effectiveTaxRate } = result;
     const totalNetGains = Math.max(0, netShortTerm) + Math.max(0, netLongTerm);
     const chartData = [
         { name: 'Estimated Tax', value: totalTaxLiability },
@@ -133,31 +30,31 @@ export default function CryptoTaxClient() {
                 <h2 className="text-2xl font-bold mb-2">Crypto Capital Gains Tax Estimator</h2>
                 <p className="text-orange-100">Estimate your US federal tax liability on cryptocurrency trades.</p>
             </div>
-            
+
             <div className="p-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="lg:col-span-1 space-y-6">
                     <div className="space-y-4">
-                        <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Your Profile</h3>
+                        <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Your Profile</h3><div><label htmlFor="crypto-magi" className="block text-sm font-medium">MAGI before these crypto gains ($)</label><input id="crypto-magi" type="number" min={0} value={magiBefore} onChange={e => setMagiBefore(Math.max(0,+e.target.value))} className="w-full border rounded-md p-2" /><p className="text-xs">Estimated NIIT: {result.niit.toFixed(2)} dollars. Other net investment income, carryovers, deductions, state tax and special assets are excluded. Net-loss tax benefits are not modeled.</p></div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1">Filing Status</label>
-                            <select 
-                                value={filingStatus} 
-                                onChange={(e) => setFilingStatus(e.target.value)}
+                            <select
+                                value={filingStatus}
+                                onChange={(e) => setFilingStatus(e.target.value as CryptoStatus)}
                                 className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
                             >
-                                <option value="single">Single / Married Filing Separately</option>
-                                <option value="married">Married Filing Jointly</option>
+                                <option value="single">Single</option>
+                                <option value="married">Married Filing Jointly</option><option value="separate">Married Filing Separately</option><option value="hoh">Head of Household</option>
                             </select>
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">Other Ordinary Income ($)</label>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">Other Taxable Ordinary Income, After Deductions ($)</label>
                             <input type="number" value={ordinaryIncome} onChange={(e) => setOrdinaryIncome(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500" />
-                            <p className="text-xs text-gray-500 mt-1">W-2 Salary, business income, etc. Determines your tax bracket.</p>
+                            <p className="text-xs text-gray-500 mt-1">Enter taxable ordinary income after deductions, excluding these crypto gains. This is not gross salary.</p>
                         </div>
                     </div>
 
                     <div className="space-y-4">
-                        <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Short-Term (Held &lt; 1 Year)</h3>
+                        <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Short-Term (Held 1 Year or Less)</h3>
                         <div className="grid grid-cols-2 gap-4">
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1">Gains ($)</label>
@@ -171,7 +68,7 @@ export default function CryptoTaxClient() {
                     </div>
 
                     <div className="space-y-4">
-                        <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Long-Term (Held &ge; 1 Year)</h3>
+                        <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Long-Term (Held More Than 1 Year)</h3>
                         <div className="grid grid-cols-2 gap-4">
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1">Gains ($)</label>

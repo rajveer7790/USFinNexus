@@ -1,3 +1,4 @@
+import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import nextDynamic from 'next/dynamic';
@@ -7,16 +8,14 @@ import WebApplicationSchema from '@/components/WebApplicationSchema';
 import DebtPayoffSeoContent from './DebtPayoffSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 
-const DebtPayoffClient = nextDynamic(() => import('./DebtPayoffClient'), {
-    loading: () => <CalculatorSkeleton />,
-});
+import DebtPayoffClient from './DebtPayoffClient';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Debt Payoff Calculator 2026 — Snowball vs Avalanche Strategy',
-    description: 'Compare debt snowball vs avalanche payoff methods across all your debts. See which strategy gets you debt-free fastest and saves the most interest. Free, no signup.',
+    description: 'Compare debt snowball vs avalanche payoff methods across all your debts. See which strategy gets you debt-free fastest and saves the most interest. Free, no signup.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/debt-payoff' },
     openGraph: {
         type: 'website',
@@ -61,6 +60,6 @@ export default function DebtPayoffPage() {
             <DebtPayoffSeoContent />
             <CalculatorFAQ faqs={DEBT_PAYOFF_FAQS} title="Debt Payoff — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="debt-payoff" showBlogs showCalculators />
-        </main>
+        <CalculatorBenchmarks slug="debt-payoff" /></main>
     );
 }

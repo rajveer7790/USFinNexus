@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is the 20/4/10 rule for buying a car?', acceptedAnswer: { '@type': 'Answer', text: 'The 20/4/10 rule is a financial guideline stating you should put at least 20% down, finance the car for no more than 4 years (48 months), and keep your total monthly vehicle expenses (loan + insurance + gas) under 10% of your gross monthly income.' } },
-    { '@type': 'Question', name: 'Why should I never negotiate the monthly car payment?', acceptedAnswer: { '@type': 'Answer', text: 'If you tell a car salesman you want a $400 monthly payment, they will easily give it to you—by secretly extending the loan term to 84 months and charging you an exorbitant interest rate. You will end up paying $10,000 more for the car over the life of the loan. Always negotiate the total out-the-door price.' } },
-    { '@type': 'Question', name: 'How much should my car loan payment be based on my salary?', acceptedAnswer: { '@type': 'Answer', text: 'Most financial advisors recommend that your car loan payment alone should not exceed 8% of your gross monthly income, allowing the remaining 2% to cover insurance, gas, and maintenance to stay within the 10% overall transportation budget limit.' } },
-] }) }} />
         <ArticleSchema
             title="Auto Loan Calculator Guide: How Much Car Can You Really Afford in 2026?"
             description="Learn the 20/4/10 rule of car affordability and how to calculate your true auto loan budget in 2026."
@@ -64,7 +59,7 @@ export default function BlogPost() {
                 </p>
 
                 <p>
-                    Buying "too much car" is the number one reason young professionals fail to save for a down payment on a house or fund their retirement accounts. A depreciating asset with a high-interest loan is a wealth destroyer. 
+                    Buying "too much car" is the number one reason young professionals fail to save for a down payment on a house or fund their retirement accounts. A depreciating asset with a high-interest loan is a wealth destroyer.
                 </p>
                 <p>
                     Before you step foot in a dealership, you must calculate your exact affordability limits. Here is the definitive guide to the 20/4/10 rule, the hidden costs of ownership, and why you must never let a car salesman ask you: <em>"So, what monthly payment are you looking for?"</em>
@@ -184,9 +179,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Advanced Car Affordability Strategies?</h2>
                     <p className="text-lg text-slate-700 mb-6">

@@ -30,12 +30,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-                { '@type': 'Question', name: 'What is an appraisal contingency?', acceptedAnswer: { '@type': 'Answer', text: 'An appraisal contingency is a clause in a real estate contract that states the buyer will only purchase the home if it appraises for an amount equal to or greater than the agreed-upon purchase price. If the appraisal comes in low, the buyer can walk away and get their earnest money deposit back.' } },
-                { '@type': 'Question', name: 'Will a bank lend more than the appraised value?', acceptedAnswer: { '@type': 'Answer', text: 'No. The bank will only lend a percentage of the appraised value or the purchase price, whichever is lower. If you offer $500,000 but the home appraises for $450,000, the bank calculates your loan based on the $450,000 valuation.' } },
-                { '@type': 'Question', name: 'What is an appraisal gap?', acceptedAnswer: { '@type': 'Answer', text: 'An appraisal gap is the difference between your accepted offer price and the lower appraised value. If you want to proceed with the purchase, you must bridge this gap by bringing extra cash to the closing table, or by successfully negotiating the price down with the seller.' } },
-                { '@type': 'Question', name: 'Should I ever waive my appraisal contingency?', acceptedAnswer: { '@type': 'Answer', text: 'Waiving an appraisal contingency increases the buyer’s risk. If the appraisal is low, the contract may require the buyer to proceed, renegotiate, bring cash, or risk a contract dispute; the exact result depends on the signed agreement and state law. Review it with a qualified real-estate professional before waiving protection.' } }
-            ] }) }} />
 
             <ArticleSchema
                 title="Appraisal Contingency: What Happens if Your Home Appraises Low?"

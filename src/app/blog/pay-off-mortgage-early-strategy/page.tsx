@@ -36,38 +36,6 @@ export default function PostComponent() {
                 keywords={['mortgage payoff', 'extra payments', 'finance strategy']}
             />
 
-            <script type="application/ld+json" dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": "How much extra do I need to pay to pay off my mortgage in 10 years?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "It depends on your balance and interest rate. As a general rule of thumb, to pay off a 30-year mortgage in 10 years, you must roughly double your current monthly principal and interest payment."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Is it better to pay extra on the mortgage or invest the money?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "This depends on your interest rate. If your mortgage rate is 3%, mathematically, you are better off investing the extra cash in an index fund yielding 8%. However, if your mortgage rate is 7% or higher, paying off the mortgage guarantees a risk-free 7% return, making early payoff highly attractive."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Does making biweekly payments pay off a mortgage faster?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes. By making half a payment every two weeks, you end up making 26 half-payments a year, which equals 13 full payments. That one extra payment per year can shave 4 to 5 years off a 30-year mortgage."
-                            }
-                        }
-                    ]
-                })
-            }} />
 
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
                 <Breadcrumbs items={[

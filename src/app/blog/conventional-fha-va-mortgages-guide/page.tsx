@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is the main difference between Conventional and FHA loans?', acceptedAnswer: { '@type': 'Answer', text: 'Conventional loans reward buyers with high credit scores (620+) and offer Private Mortgage Insurance (PMI) that automatically falls off once you reach 20% equity. FHA loans are designed for buyers with lower credit scores (down to 580) and smaller down payments (3.5%), but they permanently attach Mortgage Insurance Premiums (MIP) to the loan for the entire 30 years.' } },
-    { '@type': 'Question', name: 'Do I have to put 20% down on a Conventional loan?', acceptedAnswer: { '@type': 'Answer', text: 'No. The 20% rule is a myth. First-time homebuyers can secure a Conventional loan with as little as 3% down. However, any down payment under 20% requires you to pay monthly Private Mortgage Insurance (PMI).' } },
-    { '@type': 'Question', name: 'Who qualifies for a zero-down-payment mortgage?', acceptedAnswer: { '@type': 'Answer', text: 'Only two groups qualify for 0% down mortgages: Military veterans and active-duty service members using a VA loan, and buyers purchasing homes in federally designated rural areas using a USDA loan. Both programs allow you to finance 100% of the home\'s purchase price.' } },
-] }) }} />
         <ArticleSchema
             title="Conventional vs. FHA vs. VA Mortgages: The Complete 2026 Comparison Guide"
             description="Compare the exact down payment, credit score, and PMI requirements for Conventional, FHA, VA, and USDA loans."
@@ -60,7 +55,7 @@ export default function BlogPost() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    Walking into a bank and asking for "a mortgage" is like walking into a dealership and asking for "a vehicle." Are you looking for a sports car, a minivan, or an 18-wheeler? 
+                    Walking into a bank and asking for "a mortgage" is like walking into a dealership and asking for "a vehicle." Are you looking for a sports car, a minivan, or an 18-wheeler?
                 </p>
 
                 <p>
@@ -72,7 +67,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Are the Requirements for a Conventional Mortgage?</h2>
                 <p>
-                    Conventional loans are the most common type of mortgage in America. They are not backed by the federal government; instead, they are governed by private corporations known as Fannie Mae and Freddie Mac. 
+                    Conventional loans are the most common type of mortgage in America. They are not backed by the federal government; instead, they are governed by private corporations known as Fannie Mae and Freddie Mac.
                 </p>
                 <p>
                     Because the government is not insuring the lender against loss, conventional loans have the strictest qualification requirements, but they reward strong borrowers with the lowest overall costs.
@@ -89,7 +84,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Are the Requirements for an FHA Loan?</h2>
                 <p>
-                    FHA loans are insured by the Federal Housing Administration. This means that if you stop paying your mortgage, the US Government steps in and reimburses the bank. 
+                    FHA loans are insured by the Federal Housing Administration. This means that if you stop paying your mortgage, the US Government steps in and reimburses the bank.
                 </p>
                 <p>
                     Because the bank faces zero risk, they are willing to lend to buyers with bad credit, bankruptcies, or very small down payments.
@@ -191,9 +186,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">Advanced Mortgage Selection Strategies</h2>
                     <p className="text-lg text-slate-700 mb-6">

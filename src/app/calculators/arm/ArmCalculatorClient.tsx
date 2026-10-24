@@ -36,7 +36,7 @@ export default function ArmCalculatorClient() {
 
     return (
         <div className="relative min-h-screen bg-white text-navy-900 pb-20">
-            {/* Ambient Glows */}
+            <p className="mx-auto max-w-5xl p-3 text-sm">5/6, 7/6 and 10/6 identify the initial fixed years followed by six-month adjustment intervals. This model estimates the first reset and lifetime-cap stress payment, not a complete sequence of later six-month resets. Read the index, margin and periodic caps in the loan documents.</p>{/* Ambient Glows */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-amber-500/6 rounded-full blur-[140px]" />
                 <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#0da6f2]/8 rounded-full blur-[120px]" />
@@ -77,9 +77,9 @@ export default function ArmCalculatorClient() {
                                     <div className="glass-tab-list p-1 flex gap-1">
                                         {[
                                             { label: '3/1', val: 3 },
-                                            { label: '5/1', val: 5 },
-                                            { label: '7/1', val: 7 },
-                                            { label: '10/1', val: 10 },
+                                            { label: '5/6', val: 5 },
+                                            { label: '7/6', val: 7 },
+                                            { label: '10/6', val: 10 },
                                         ].map(t => (
                                             <button key={t.val} onClick={() => setInitialTerm(t.val)}
                                                 className={`flex-1 py-3 rounded-lg text-xs font-black transition-all ${initialTerm === t.val ? 'bg-amber-500 text-white shadow-lg' : 'text-gray-500 hover:bg-white/5'}`}>

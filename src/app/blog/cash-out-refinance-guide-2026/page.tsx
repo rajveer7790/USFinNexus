@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is a cash-out refinance?', acceptedAnswer: { '@type': 'Answer', text: 'A cash-out refinance involves replacing your existing mortgage with a completely new, larger mortgage. The new loan pays off the old loan, and the difference between the two (the "cash out") is wired directly to your bank account as liquid cash.' } },
-    { '@type': 'Question', name: 'Do I have to pay taxes on the cash I pull out of my house?', acceptedAnswer: { '@type': 'Answer', text: 'No. The IRS does not consider the money from a cash-out refinance to be taxable income. It is borrowed money (a debt) that you must pay back, not income you earned, so it is 100% tax-free.' } },
-    { '@type': 'Question', name: 'Is a cash-out refinance better than a HELOC?', acceptedAnswer: { '@type': 'Answer', text: 'It depends entirely on your current interest rate. If you currently have a 3% mortgage rate, a cash-out refinance is usually a terrible idea because it destroys that low rate and replaces your entire loan with a modern 6.5% rate. In that scenario, keeping your 3% loan and taking out a secondary HELOC is mathematically superior.' } },
-] }) }} />
         <ArticleSchema
             title="Cash-Out Refinance Guide 2026: When Is It Worth Losing Your Old Interest Rate?"
             description="A cash-out refinance allows you to turn your home equity into liquid cash, but it resets your entire mortgage. Here is the exact math."
@@ -64,7 +59,7 @@ export default function BlogPost() {
                 </p>
 
                 <p>
-                    If you have $30,000 in credit card debt, or you desperately need $50,000 for a kitchen remodel, that home equity is incredibly tempting. Lenders will gladly offer you a <strong>Cash-Out Refinance</strong> to turn the drywall of your house into liquid cash in your bank account. 
+                    If you have $30,000 in credit card debt, or you desperately need $50,000 for a kitchen remodel, that home equity is incredibly tempting. Lenders will gladly offer you a <strong>Cash-Out Refinance</strong> to turn the drywall of your house into liquid cash in your bank account.
                 </p>
                 <p>
                     But tapping your home equity in 2026 comes with a massive, dangerous catch. Here is exactly how a cash-out refinance works, the hidden IRS tax rules, and the mathematical reality of sacrificing your old interest rate.
@@ -123,7 +118,7 @@ export default function BlogPost() {
                 </p>
                 <ul className="list-disc pl-6 space-y-4 mb-8">
                     <li>
-                        <strong>Home Equity Loan:</strong> You take out a separate $50,000 loan. You receive the cash as a lump sum. You now have two monthly payments: your original mortgage at 3%, and a new $50,000 loan at current market rates (usually around 8% or 9%). 
+                        <strong>Home Equity Loan:</strong> You take out a separate $50,000 loan. You receive the cash as a lump sum. You now have two monthly payments: your original mortgage at 3%, and a new $50,000 loan at current market rates (usually around 8% or 9%).
                     </li>
                     <li>
                         <strong>HELOC (Home Equity Line of Credit):</strong> The bank gives you a $50,000 credit card tied to the equity in your house. You only pay interest on the money you actually spend. It is a second lien on your house, leaving your primary 3% mortgage completely untouched.
@@ -153,7 +148,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">Is Cash-Out Refinance Money Tax-Free?</h2>
                 <p>
-                    One of the greatest benefits of a cash-out refinance is the tax treatment by the IRS. 
+                    One of the greatest benefits of a cash-out refinance is the tax treatment by the IRS.
                 </p>
                 <p>
                     If you sell a stock and make a $50,000 profit, you owe the IRS capital gains taxes. But if your house appreciates by $100,000 and you pull $50,000 out via a refinance, <strong>you owe zero taxes on that money.</strong>
@@ -175,11 +170,11 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">Advanced Cash-Out Refinance Strategies</h2>
                     <p className="text-lg text-slate-700 mb-6">
@@ -196,7 +191,7 @@ export default function BlogPost() {
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">The Seasoning Requirement</h3>
                     <p className="text-slate-700 mb-4">
-                        In 2026, Fannie Mae and Freddie Mac require "seasoning" before you can execute a cash-out refinance. You must have owned the property for at least 12 months before applying. This rule was implemented to stop speculative investors from "flipping" houses with cash-out loans. 
+                        In 2026, Fannie Mae and Freddie Mac require "seasoning" before you can execute a cash-out refinance. You must have owned the property for at least 12 months before applying. This rule was implemented to stop speculative investors from "flipping" houses with cash-out loans.
                     </p>
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">Impact on Your Debt-to-Income (DTI) Ratio</h3>

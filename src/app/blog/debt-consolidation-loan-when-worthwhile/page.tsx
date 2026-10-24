@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is a debt consolidation loan?', acceptedAnswer: { '@type': 'Answer', text: 'A debt consolidation loan is a large, unsecured personal loan that you take out from a bank or credit union for the specific purpose of paying off multiple smaller, high-interest debts (like credit cards or medical bills). You are left with just one monthly payment at a lower interest rate.' } },
-    { '@type': 'Question', name: 'Does debt consolidation hurt my credit score?', acceptedAnswer: { '@type': 'Answer', text: 'In the short term, applying for a new loan causes a minor dip in your credit score due to the hard inquiry. However, in the long term, using the loan to instantly pay off maxed-out credit cards drastically lowers your "credit utilization ratio," which will significantly boost your credit score within a few months.' } },
-    { '@type': 'Question', name: 'What is the biggest risk of a debt consolidation loan?', acceptedAnswer: { '@type': 'Answer', text: 'The biggest risk is the psychological trap. When you use the loan to pay off $20,000 in credit card debt, your credit cards suddenly have a $0 balance. If you do not fix your spending habits, you will slowly start using those credit cards again. Within two years, you will have $20,000 in credit card debt PLUS the $20,000 personal loan you still owe.' } },
-] }) }} />
         <ArticleSchema
             title="Debt Consolidation Loans: When Are They Actually Worthwhile?"
             description="A debt consolidation loan can lower your monthly payments, but only if you avoid the psychological trap."
@@ -60,7 +55,7 @@ export default function BlogPost() {
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    Managing multiple high-interest debts is exhausting. Keeping track of four different credit card due dates, a medical bill, and a payday loan feels like a full-time job. 
+                    Managing multiple high-interest debts is exhausting. Keeping track of four different credit card due dates, a medical bill, and a payday loan feels like a full-time job.
                 </p>
 
                 <p>
@@ -72,7 +67,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Is the Mathematical Justification for Debt Consolidation?</h2>
                 <p>
-                    A debt consolidation loan is only worthwhile if it mathematically lowers your <strong>Total Cost of Debt</strong>. 
+                    A debt consolidation loan is only worthwhile if it mathematically lowers your <strong>Total Cost of Debt</strong>.
                 </p>
                 <p>
                     Let's assume you have $20,000 in credit card debt spread across three different cards, all charging an average of 25% APR. If you are paying $700 a month toward those cards, an enormous chunk of that payment is evaporating into pure interest. It will take you years to pay them off.
@@ -111,7 +106,7 @@ export default function BlogPost() {
                 </div>
 
                 <p>
-                    By consolidating the debt, you cut your monthly cash flow burden from $700 down to $445, giving your household budget massive relief. Furthermore, you save over <strong>$5,300 in total interest</strong> over the life of the loan. 
+                    By consolidating the debt, you cut your monthly cash flow burden from $700 down to $445, giving your household budget massive relief. Furthermore, you save over <strong>$5,300 in total interest</strong> over the life of the loan.
                 </p>
 
                 <div className="card p-6 mb-8 border-l-4 border-red-500 bg-red-50">
@@ -120,7 +115,7 @@ export default function BlogPost() {
                         <div>
                             <h3 className="font-bold mb-2">What Is the Psychological Trap of Doubling the Debt?</h3>
                             <p className="text-sm m-0 text-gray-700">
-                                Here is where the math meets human nature. The day your consolidation loan pays off your credit cards, your credit card balances drop to $0. You suddenly have $20,000 in available credit limit sitting in your wallet. 
+                                Here is where the math meets human nature. The day your consolidation loan pays off your credit cards, your credit card balances drop to $0. You suddenly have $20,000 in available credit limit sitting in your wallet.
                                 <br/><br/>
                                 If you did not fix the overspending habit that caused the debt in the first place, you will start swiping those cards again. Fast forward two years: You have maxed out the $20,000 in credit cards again, AND you still owe $15,000 on the consolidation loan. You now have $35,000 in debt, and bankruptcy is imminent.
                             </p>
@@ -135,12 +130,12 @@ export default function BlogPost() {
 
                 <h3 className="text-xl font-bold mt-8 mb-3">Why Must the Consolidation Interest Rate Be Significantly Lower?</h3>
                 <p>
-                    If your credit cards charge 25% APR, and a bank offers you a consolidation loan at 22% APR, <strong>do not take the loan.</strong> Lenders charge "origination fees" (usually 1% to 8% of the loan amount). If the interest rate drop is only a few percentage points, the upfront origination fee will completely wipe out any potential interest savings. 
+                    If your credit cards charge 25% APR, and a bank offers you a consolidation loan at 22% APR, <strong>do not take the loan.</strong> Lenders charge "origination fees" (usually 1% to 8% of the loan amount). If the interest rate drop is only a few percentage points, the upfront origination fee will completely wipe out any potential interest savings.
                 </p>
 
                 <h3 className="text-xl font-bold mt-8 mb-3">Should You Cut Up Your Cards Without Closing the Accounts?</h3>
                 <p>
-                    The moment the credit cards are paid off by the loan, take the physical plastic cards and cut them in half with scissors. Delete them from your Apple Pay and Amazon accounts. 
+                    The moment the credit cards are paid off by the loan, take the physical plastic cards and cut them in half with scissors. Delete them from your Apple Pay and Amazon accounts.
                 </p>
                 <p>
                     However, <strong>do not officially close the accounts.</strong> Closing a credit card drastically lowers your Total Available Credit, which will tank your credit score. Leave the accounts open with a $0 balance to reap the massive credit score boost.
@@ -148,7 +143,7 @@ export default function BlogPost() {
 
                 <h3 className="text-xl font-bold mt-8 mb-3">Why Should You Maintain the Old Payment Amount if Possible?</h3>
                 <p>
-                    In our mathematical example, the new loan payment was only $445 (down from $700). 
+                    In our mathematical example, the new loan payment was only $445 (down from $700).
                 </p>
                 <p>
                     If your budget can handle it, do not drop your payment to $445. Continue paying the full $700 every month, applying the extra $255 directly to the principal of the new loan. By keeping your payment the exact same, but at a 12% interest rate instead of 25%, you will crush the loan in less than 3 years and save thousands more.
@@ -167,9 +162,9 @@ export default function BlogPost() {
                     </Link>
                 </div>
 
-                
+
                 <hr className="my-12 border-gray-200" />
-                
+
                 <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
                     <h2 className="text-3xl font-black mb-6 text-slate-900">What Are the Alternative Options to Personal Loans for Debt Consolidation?</h2>
                     <p className="text-lg text-slate-700 mb-6">

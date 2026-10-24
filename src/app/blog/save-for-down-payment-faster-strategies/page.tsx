@@ -30,11 +30,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-                { '@type': 'Question', name: 'How much should I save for a down payment?', acceptedAnswer: { '@type': 'Answer', text: 'While 20% is the traditional gold standard to avoid Private Mortgage Insurance (PMI), it is not required. You can buy a house with a Conventional loan for as little as 3% down, or an FHA loan for 3.5% down. If you qualify for a VA or USDA loan, you need 0% down.' } },
-                { '@type': 'Question', name: 'Where is the best place to keep my down payment savings?', acceptedAnswer: { '@type': 'Answer', text: 'If you plan to buy a house within the next 3 years, you should never put your down payment in the stock market. It should be parked in a High-Yield Savings Account (HYSA) or a Certificate of Deposit (CD) where the principal is federally insured and generates guaranteed risk-free interest.' } },
-                { '@type': 'Question', name: 'Can I use my 401(k) to buy a house?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, the IRS allows first-time homebuyers to withdraw up to $10,000 from an IRA penalty-free. Additionally, many 401(k) plans allow you to take out a loan against your own retirement balance to fund a down payment, though this carries significant financial risks if you lose your job.' } }
-            ] }) }} />
 
             <ArticleSchema
                 title="5 Proven Ways to Save for a Down Payment Faster in 2026"

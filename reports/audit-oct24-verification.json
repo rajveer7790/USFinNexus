@@ -1,0 +1,2075 @@
+{
+  "checked": "2026-10-24",
+  "pagesChecked": 295,
+  "faqAnswersChecked": 831,
+  "benchmarkPages": 51,
+  "financialRegressionTests": "passed",
+  "failures": [],
+  "pages": [
+    {
+      "route": "/",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1024
+    },
+    {
+      "route": "/calculators",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 430
+    },
+    {
+      "route": "/canada",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 102
+    },
+    {
+      "route": "/blog",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 8803
+    },
+    {
+      "route": "/guides",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 191
+    },
+    {
+      "route": "/articles",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 204
+    },
+    {
+      "route": "/mortgage-rates",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 415
+    },
+    {
+      "route": "/about",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 529
+    },
+    {
+      "route": "/methodology",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 648
+    },
+    {
+      "route": "/contact",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 162
+    },
+    {
+      "route": "/disclaimer",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 276
+    },
+    {
+      "route": "/privacy",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 449
+    },
+    {
+      "route": "/data/home-affordability-by-state",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 315
+    },
+    {
+      "route": "/data/home-affordability-by-city",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 298
+    },
+    {
+      "route": "/privacy-focused-mortgage-calculator",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": false,
+      "words": 708
+    },
+    {
+      "route": "/why-we-dont-collect-data",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 293
+    },
+    {
+      "route": "/terms",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 256
+    },
+    {
+      "route": "/calculators/mortgage",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": true,
+      "words": 1413
+    },
+    {
+      "route": "/calculators/affordability",
+      "h1BeforeFooter": true,
+      "faqAnswers": 5,
+      "benchmark": true,
+      "words": 1283
+    },
+    {
+      "route": "/calculators/refinance",
+      "h1BeforeFooter": true,
+      "faqAnswers": 5,
+      "benchmark": true,
+      "words": 973
+    },
+    {
+      "route": "/calculators/rent-vs-buy",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1000
+    },
+    {
+      "route": "/calculators/closing-costs",
+      "h1BeforeFooter": true,
+      "faqAnswers": 5,
+      "benchmark": true,
+      "words": 990
+    },
+    {
+      "route": "/calculators/dti",
+      "h1BeforeFooter": true,
+      "faqAnswers": 5,
+      "benchmark": true,
+      "words": 928
+    },
+    {
+      "route": "/calculators/amortization",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": true,
+      "words": 800
+    },
+    {
+      "route": "/calculators/mortgage-payoff",
+      "h1BeforeFooter": true,
+      "faqAnswers": 5,
+      "benchmark": true,
+      "words": 777
+    },
+    {
+      "route": "/calculators/arm",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": true,
+      "words": 980
+    },
+    {
+      "route": "/calculators/fha-va-usda",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 787
+    },
+    {
+      "route": "/calculators/debt-payoff",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 1228
+    },
+    {
+      "route": "/calculators/budget",
+      "h1BeforeFooter": true,
+      "faqAnswers": 4,
+      "benchmark": true,
+      "words": 1159
+    },
+    {
+      "route": "/calculators/income-tax",
+      "h1BeforeFooter": true,
+      "faqAnswers": 5,
+      "benchmark": true,
+      "words": 1133
+    },
+    {
+      "route": "/calculators/down-payment",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": true,
+      "words": 780
+    },
+    {
+      "route": "/calculators/heloc",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 852
+    },
+    {
+      "route": "/calculators/auto-loan",
+      "h1BeforeFooter": true,
+      "faqAnswers": 4,
+      "benchmark": true,
+      "words": 927
+    },
+    {
+      "route": "/calculators/rental-property",
+      "h1BeforeFooter": true,
+      "faqAnswers": 4,
+      "benchmark": true,
+      "words": 644
+    },
+    {
+      "route": "/calculators/comparison",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 1072
+    },
+    {
+      "route": "/calculators/personal-loan",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 808
+    },
+    {
+      "route": "/calculators/retirement",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 714
+    },
+    {
+      "route": "/calculators/investment",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 543
+    },
+    {
+      "route": "/calculators/trump-account",
+      "h1BeforeFooter": true,
+      "faqAnswers": 4,
+      "benchmark": true,
+      "words": 528
+    },
+    {
+      "route": "/calculators/fire-planner",
+      "h1BeforeFooter": true,
+      "faqAnswers": 4,
+      "benchmark": true,
+      "words": 822
+    },
+    {
+      "route": "/calculators/points-buydown",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 997
+    },
+    {
+      "route": "/calculators/interest-only",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 1259
+    },
+    {
+      "route": "/calculators/student-loan",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 534
+    },
+    {
+      "route": "/calculators/credit-card",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 542
+    },
+    {
+      "route": "/calculators/drip",
+      "h1BeforeFooter": true,
+      "faqAnswers": 4,
+      "benchmark": true,
+      "words": 850
+    },
+    {
+      "route": "/calculators/crypto-tax",
+      "h1BeforeFooter": true,
+      "faqAnswers": 4,
+      "benchmark": true,
+      "words": 978
+    },
+    {
+      "route": "/calculators/california",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": true,
+      "words": 980
+    },
+    {
+      "route": "/calculators/texas",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": true,
+      "words": 762
+    },
+    {
+      "route": "/calculators/florida",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": true,
+      "words": 818
+    },
+    {
+      "route": "/calculators/fha",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": true,
+      "words": 1172
+    },
+    {
+      "route": "/calculators/va",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": true,
+      "words": 1006
+    },
+    {
+      "route": "/calculators/options-profit",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 696
+    },
+    {
+      "route": "/calculators/pmi-removal",
+      "h1BeforeFooter": true,
+      "faqAnswers": 5,
+      "benchmark": true,
+      "words": 597
+    },
+    {
+      "route": "/calculators/temporary-buydown",
+      "h1BeforeFooter": true,
+      "faqAnswers": 5,
+      "benchmark": true,
+      "words": 480
+    },
+    {
+      "route": "/calculators/escrow-shortage",
+      "h1BeforeFooter": true,
+      "faqAnswers": 5,
+      "benchmark": true,
+      "words": 506
+    },
+    {
+      "route": "/calculators/affordability/by-salary",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 222
+    },
+    {
+      "route": "/calculators/affordability/salary-60000",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": false,
+      "words": 475
+    },
+    {
+      "route": "/calculators/affordability/salary-75000",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": false,
+      "words": 475
+    },
+    {
+      "route": "/calculators/affordability/salary-100000",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": false,
+      "words": 475
+    },
+    {
+      "route": "/calculators/affordability/salary-120000",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": false,
+      "words": 475
+    },
+    {
+      "route": "/calculators/affordability/salary-150000",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": false,
+      "words": 475
+    },
+    {
+      "route": "/calculators/affordability/salary-200000",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": false,
+      "words": 475
+    },
+    {
+      "route": "/calculators/extra-payment",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 504
+    },
+    {
+      "route": "/calculators/biweekly-mortgage",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 486
+    },
+    {
+      "route": "/calculators/arizona",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 620
+    },
+    {
+      "route": "/calculators/colorado",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 620
+    },
+    {
+      "route": "/calculators/georgia",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 621
+    },
+    {
+      "route": "/calculators/illinois",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 622
+    },
+    {
+      "route": "/calculators/massachusetts",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 622
+    },
+    {
+      "route": "/calculators/new-jersey",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 628
+    },
+    {
+      "route": "/calculators/new-york",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 630
+    },
+    {
+      "route": "/calculators/north-carolina",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 639
+    },
+    {
+      "route": "/calculators/ohio",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 620
+    },
+    {
+      "route": "/calculators/pennsylvania",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 638
+    },
+    {
+      "route": "/calculators/virginia",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 618
+    },
+    {
+      "route": "/calculators/washington",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": true,
+      "words": 620
+    },
+    {
+      "route": "/canada/mortgage-calculator",
+      "h1BeforeFooter": true,
+      "faqAnswers": 5,
+      "benchmark": false,
+      "words": 507
+    },
+    {
+      "route": "/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "h1BeforeFooter": true,
+      "faqAnswers": 4,
+      "benchmark": false,
+      "words": 728
+    },
+    {
+      "route": "/articles/new-york-llc-transparency-act-2026-foreign-owners",
+      "h1BeforeFooter": true,
+      "faqAnswers": 4,
+      "benchmark": false,
+      "words": 667
+    },
+    {
+      "route": "/articles/2026-tax-changes-20-percent-qbi-deduction-permanent",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 585
+    },
+    {
+      "route": "/articles/california-new-york-texas-state-boi-rules-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": false,
+      "words": 635
+    },
+    {
+      "route": "/guides/boi-reporting-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 4,
+      "benchmark": false,
+      "words": 663
+    },
+    {
+      "route": "/guides/15-vs-30-year-mortgage",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 623
+    },
+    {
+      "route": "/guides/first-time-homebuyer-guide",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 642
+    },
+    {
+      "route": "/guides/first-time-homebuyer-programs",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 641
+    },
+    {
+      "route": "/guides/mortgage-credit-score-requirements",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 748
+    },
+    {
+      "route": "/blog/estimated-tax-payment-january-15-2027",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1433
+    },
+    {
+      "route": "/blog/senior-tax-deduction-6000-2026-schedule-1a",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1251
+    },
+    {
+      "route": "/blog/hsa-contribution-limits-2027",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 680
+    },
+    {
+      "route": "/blog/medicare-part-d-costs-2027",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 643
+    },
+    {
+      "route": "/blog/0-percent-apr-auto-loan-dealer-vs-bank",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 2360
+    },
+    {
+      "route": "/blog/2-1-buydown-vs-price-cut-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": false,
+      "words": 526
+    },
+    {
+      "route": "/blog/20-percent-down-payment-standard-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1901
+    },
+    {
+      "route": "/blog/2026-federal-tax-brackets-standard-deduction",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1654
+    },
+    {
+      "route": "/blog/2026-loan-limits-conforming",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1512
+    },
+    {
+      "route": "/blog/28-36-rule-explained-lender-standards",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1688
+    },
+    {
+      "route": "/blog/30-year-vs-15-year-mortgage-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1660
+    },
+    {
+      "route": "/blog/4-percent-rule-safe-withdrawal-rate",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1506
+    },
+    {
+      "route": "/blog/401k-contribution-limits-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1792
+    },
+    {
+      "route": "/blog/401k-loan-vs-hardship-withdrawal-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1721
+    },
+    {
+      "route": "/blog/aca-open-enrollment-2027",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1596
+    },
+    {
+      "route": "/blog/aca-premium-tax-credit-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1889
+    },
+    {
+      "route": "/blog/adjustable-rate-mortgage-trends-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1508
+    },
+    {
+      "route": "/blog/adoption-tax-credit-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1942
+    },
+    {
+      "route": "/blog/ai-personal-finance-investing-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1308
+    },
+    {
+      "route": "/blog/appraisal-contingency-low-appraisal",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1834
+    },
+    {
+      "route": "/blog/assumable-mortgages-2026-strategy",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1438
+    },
+    {
+      "route": "/blog/auto-loan-calculator-car-affordability",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1435
+    },
+    {
+      "route": "/blog/auto-loan-terms-60-72-84-month",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1387
+    },
+    {
+      "route": "/blog/balance-transfer-credit-cards-strategy",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1303
+    },
+    {
+      "route": "/blog/bank-impersonation-scam-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1851
+    },
+    {
+      "route": "/blog/biweekly-mortgage-payments-savings",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1172
+    },
+    {
+      "route": "/blog/california-closing-costs-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1468
+    },
+    {
+      "route": "/blog/capital-gains-tax-rates-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1967
+    },
+    {
+      "route": "/blog/car-loan-interest-tax-deduction-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1677
+    },
+    {
+      "route": "/blog/car-trade-in-value-auto-loan",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1444
+    },
+    {
+      "route": "/blog/cash-out-refinance-guide-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1377
+    },
+    {
+      "route": "/blog/cd-maturity-grace-period-auto-renewal-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1796
+    },
+    {
+      "route": "/blog/charitable-tax-deduction-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 848
+    },
+    {
+      "route": "/blog/chattel-mortgages-mobile-homes-financing",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1397
+    },
+    {
+      "route": "/blog/child-tax-credit-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1951
+    },
+    {
+      "route": "/blog/closing-costs-itemized-breakdown-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1776
+    },
+    {
+      "route": "/blog/closing-disclosure-three-day-rule-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1624
+    },
+    {
+      "route": "/blog/coast-fire-vs-barista-fire-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1654
+    },
+    {
+      "route": "/blog/commercial-real-estate-reset-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1281
+    },
+    {
+      "route": "/blog/compound-interest-calculator-growth",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1491
+    },
+    {
+      "route": "/blog/conventional-fha-va-mortgages-guide",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1406
+    },
+    {
+      "route": "/blog/credit-card-dispute-chargeback-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1489
+    },
+    {
+      "route": "/blog/credit-card-payoff-calculator-strategies",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1396
+    },
+    {
+      "route": "/blog/credit-freeze-vs-fraud-alert-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1600
+    },
+    {
+      "route": "/blog/crypto-tax-guide-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1452
+    },
+    {
+      "route": "/blog/debt-consolidation-loan-when-worthwhile",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1219
+    },
+    {
+      "route": "/blog/debt-payoff-avalanche-vs-snowball-method",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1279
+    },
+    {
+      "route": "/blog/debt-to-income-ratio-dti-calculator-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1201
+    },
+    {
+      "route": "/blog/defense-cybersecurity-stocks-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1510
+    },
+    {
+      "route": "/blog/deferred-interest-vs-zero-apr-store-cards-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1589
+    },
+    {
+      "route": "/blog/direct-indexing-tax-loss-harvesting-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1255
+    },
+    {
+      "route": "/blog/dividend-vs-growth-investing-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1356
+    },
+    {
+      "route": "/blog/down-payment-assistance-dpa-programs",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1441
+    },
+    {
+      "route": "/blog/down-payment-strategies-comparison-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1855
+    },
+    {
+      "route": "/blog/earned-income-tax-credit-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 2071
+    },
+    {
+      "route": "/blog/emergency-fund-how-much-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1275
+    },
+    {
+      "route": "/blog/energy-market-investing-crisis-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1369
+    },
+    {
+      "route": "/blog/escrow-shortage-mortgage-payment-jump-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1511
+    },
+    {
+      "route": "/blog/estate-gift-tax-exemption-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 2136
+    },
+    {
+      "route": "/blog/estimated-tax-payment-dates-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1800
+    },
+    {
+      "route": "/blog/ev-tax-credit-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 2090
+    },
+    {
+      "route": "/blog/excess-seller-credits-what-to-do-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1581
+    },
+    {
+      "route": "/blog/fafsa-2027-28",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 2007
+    },
+    {
+      "route": "/blog/fdic-deposit-insurance-limits-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1464
+    },
+    {
+      "route": "/blog/fed-rates-unchanged-april-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1176
+    },
+    {
+      "route": "/blog/fed-vs-mortgage-rates-10-year-treasury-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": false,
+      "words": 588
+    },
+    {
+      "route": "/blog/federal-scholarship-tax-credit-2027",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1717
+    },
+    {
+      "route": "/blog/federal-student-loan-interest-rates-2026-27",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1819
+    },
+    {
+      "route": "/blog/fha-loan-limits-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1638
+    },
+    {
+      "route": "/blog/fha-loans-first-time-homebuyers-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1197
+    },
+    {
+      "route": "/blog/fha-mortgage-calculator-pmi-mip-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 4,
+      "benchmark": false,
+      "words": 483
+    },
+    {
+      "route": "/blog/fha-mortgage-pmi-mip-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1268
+    },
+    {
+      "route": "/blog/fire-calculator-retirement-goal",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1239
+    },
+    {
+      "route": "/blog/first-time-homebuyer-mortgage-guide-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1261
+    },
+    {
+      "route": "/blog/first-time-homebuyer-programs-grants-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1457
+    },
+    {
+      "route": "/blog/forbearance-deferment-loan-modification-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1505
+    },
+    {
+      "route": "/blog/fractional-real-estate-investing-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1439
+    },
+    {
+      "route": "/blog/front-end-vs-back-end-dti-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1066
+    },
+    {
+      "route": "/blog/fsa-contribution-limits-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1808
+    },
+    {
+      "route": "/blog/fsa-use-it-or-lose-it-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1860
+    },
+    {
+      "route": "/blog/gifted-down-payment-rules-documentation",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 2093
+    },
+    {
+      "route": "/blog/global-conflict-real-estate-impact-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1186
+    },
+    {
+      "route": "/blog/health-savings-account-hsa-investment-guide",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1694
+    },
+    {
+      "route": "/blog/heloc-draw-period-repayment-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1357
+    },
+    {
+      "route": "/blog/heloc-interest-tax-deductible-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1800
+    },
+    {
+      "route": "/blog/heloc-vs-home-equity-loan-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1461
+    },
+    {
+      "route": "/blog/high-yield-checking-accounts-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1104
+    },
+    {
+      "route": "/blog/high-yield-savings-vs-cd-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1515
+    },
+    {
+      "route": "/blog/high-yield-savings-vs-index-funds-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1390
+    },
+    {
+      "route": "/blog/home-equity-investment-agreements-heai",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1538
+    },
+    {
+      "route": "/blog/home-equity-line-vs-loan-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1182
+    },
+    {
+      "route": "/blog/home-sale-tax-exclusion-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1880
+    },
+    {
+      "route": "/blog/homeowner-tax-deductions-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 2011
+    },
+    {
+      "route": "/blog/homeowners-insurance-mortgage-payment-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1086
+    },
+    {
+      "route": "/blog/house-hacking-guide-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1389
+    },
+    {
+      "route": "/blog/how-does-mortgage-escrow-work",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1895
+    },
+    {
+      "route": "/blog/how-much-house-can-i-afford-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1661
+    },
+    {
+      "route": "/blog/how-to-buy-a-house-with-bad-credit",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1588
+    },
+    {
+      "route": "/blog/how-to-calculate-monthly-mortgage-payment",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1690
+    },
+    {
+      "route": "/blog/hsa-contribution-limits-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1883
+    },
+    {
+      "route": "/blog/i-bond-rate-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 2161
+    },
+    {
+      "route": "/blog/inflation-reduction-act-home-upgrades-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 4,
+      "benchmark": false,
+      "words": 885
+    },
+    {
+      "route": "/blog/inherited-ira-10-year-rule-rmd-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1938
+    },
+    {
+      "route": "/blog/interest-only-mortgage-pros-cons",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 922
+    },
+    {
+      "route": "/blog/investing-during-geopolitical-conflict-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 820
+    },
+    {
+      "route": "/blog/investment-property-mortgage-rates-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 994
+    },
+    {
+      "route": "/blog/irs-ip-pin-2027",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1885
+    },
+    {
+      "route": "/blog/irs-standard-mileage-rate-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1900
+    },
+    {
+      "route": "/blog/irs-tax-payment-plan-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1529
+    },
+    {
+      "route": "/blog/jumbo-mortgages-over-loan-limit",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 957
+    },
+    {
+      "route": "/blog/lender-paid-pmi-vs-borrower-paid",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1202
+    },
+    {
+      "route": "/blog/lender-quote-vs-online-calculator",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 817
+    },
+    {
+      "route": "/blog/loan-estimate-comparison-checklist-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1328
+    },
+    {
+      "route": "/blog/medical-debt-credit-report-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1800
+    },
+    {
+      "route": "/blog/medicare-advantage-plan-not-renewing-2027",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1708
+    },
+    {
+      "route": "/blog/medicare-advantage-premiums-2027",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1179
+    },
+    {
+      "route": "/blog/medicare-advantage-star-ratings-2027",
+      "h1BeforeFooter": true,
+      "faqAnswers": 4,
+      "benchmark": false,
+      "words": 543
+    },
+    {
+      "route": "/blog/medicare-irmaa-brackets-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1920
+    },
+    {
+      "route": "/blog/medicare-open-enrollment-2027",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 2265
+    },
+    {
+      "route": "/blog/medicare-part-b-90-rebate-october-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1561
+    },
+    {
+      "route": "/blog/medicare-part-b-premium-2027-what-to-know",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1063
+    },
+    {
+      "route": "/blog/medicare-part-b-premium-deductible-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 2060
+    },
+    {
+      "route": "/blog/medicare-part-d-costs-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 2025
+    },
+    {
+      "route": "/blog/medicare-plan-compare-2027-open-enrollment",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1022
+    },
+    {
+      "route": "/blog/mega-backdoor-roth-ira-guide-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 4,
+      "benchmark": false,
+      "words": 919
+    },
+    {
+      "route": "/blog/mortgage-amortization-schedule-guide",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 698
+    },
+    {
+      "route": "/blog/mortgage-broker-fees",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": false,
+      "words": 352
+    },
+    {
+      "route": "/blog/mortgage-calculator-comparison-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 960
+    },
+    {
+      "route": "/blog/mortgage-cash-reserves-after-closing-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1157
+    },
+    {
+      "route": "/blog/mortgage-closing-wire-fraud-checklist-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1427
+    },
+    {
+      "route": "/blog/mortgage-interest-tax-deduction-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 186
+    },
+    {
+      "route": "/blog/mortgage-payment-at-676-september-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1550
+    },
+    {
+      "route": "/blog/mortgage-payoff-statement-escrow-refund-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1750
+    },
+    {
+      "route": "/blog/mortgage-points-buydown-calculator",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 880
+    },
+    {
+      "route": "/blog/mortgage-preapproval-prequalification",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 948
+    },
+    {
+      "route": "/blog/mortgage-rate-lock-before-fed-meeting-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1077
+    },
+    {
+      "route": "/blog/mortgage-rates-october-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 4,
+      "benchmark": false,
+      "words": 496
+    },
+    {
+      "route": "/blog/mortgage-recast-vs-refinance-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1462
+    },
+    {
+      "route": "/blog/mortgage-refinance-break-even-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 4,
+      "benchmark": false,
+      "words": 513
+    },
+    {
+      "route": "/blog/mortgage-servicing-transfer-checklist-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1624
+    },
+    {
+      "route": "/blog/multifamily-real-estate-investing-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 951
+    },
+    {
+      "route": "/blog/negative-equity-upside-down-car-loan",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 199
+    },
+    {
+      "route": "/blog/new-vs-used-car-total-cost-ownership",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 239
+    },
+    {
+      "route": "/blog/no-down-payment-mortgages-va-usda-fha",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1430
+    },
+    {
+      "route": "/blog/no-pmi-mortgages-down-payment",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 899
+    },
+    {
+      "route": "/blog/no-tax-on-overtime-deduction-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1754
+    },
+    {
+      "route": "/blog/no-tax-on-tips-deduction-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1885
+    },
+    {
+      "route": "/blog/opportunity-zones-real-estate-investing",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 898
+    },
+    {
+      "route": "/blog/pay-mortgage-with-credit-card",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": false,
+      "words": 380
+    },
+    {
+      "route": "/blog/pay-off-car-loan-early-vs-invest",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 248
+    },
+    {
+      "route": "/blog/pay-off-mortgage-early-strategy",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 913
+    },
+    {
+      "route": "/blog/pay-off-student-loans-vs-invest-decision",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 2127
+    },
+    {
+      "route": "/blog/pell-grant-2026-27",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1849
+    },
+    {
+      "route": "/blog/personal-loan-apr-origination-fees-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1533
+    },
+    {
+      "route": "/blog/personal-loan-vs-credit-card-comparison",
+      "h1BeforeFooter": true,
+      "faqAnswers": 4,
+      "benchmark": false,
+      "words": 1144
+    },
+    {
+      "route": "/blog/piggyback-mortgage-80-10-10-strategy",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1022
+    },
+    {
+      "route": "/blog/pmi-explained-cost-removal-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1150
+    },
+    {
+      "route": "/blog/portfolio-loans-non-qm-mortgages-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 800
+    },
+    {
+      "route": "/blog/rate-and-term-vs-cashout-refinance",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1056
+    },
+    {
+      "route": "/blog/refinancing-costs-2026-breakdown",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1044
+    },
+    {
+      "route": "/blog/rent-vs-buy-calculator-2026-housing-market",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 931
+    },
+    {
+      "route": "/blog/required-minimum-distributions-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1947
+    },
+    {
+      "route": "/blog/resilient-investor-checklist-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 4,
+      "benchmark": false,
+      "words": 558
+    },
+    {
+      "route": "/blog/reverse-mortgage-hecm-pros-cons-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 997
+    },
+    {
+      "route": "/blog/rmd-qcd-deadline-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1140
+    },
+    {
+      "route": "/blog/roth-conversion-tax-planning-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1049
+    },
+    {
+      "route": "/blog/roth-ira-income-limits-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1849
+    },
+    {
+      "route": "/blog/roth-ira-vs-401k-comparison-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 5,
+      "benchmark": false,
+      "words": 1500
+    },
+    {
+      "route": "/blog/safe-yields-bonds-treasuries-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 676
+    },
+    {
+      "route": "/blog/salt-deduction-limit-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1745
+    },
+    {
+      "route": "/blog/save-for-down-payment-faster-strategies",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1321
+    },
+    {
+      "route": "/blog/save-plan-borrowers-repayment-options-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 4,
+      "benchmark": false,
+      "words": 648
+    },
+    {
+      "route": "/blog/savers-credit-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1887
+    },
+    {
+      "route": "/blog/savers-match-2027-retirement-match",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1668
+    },
+    {
+      "route": "/blog/second-mortgage-guide",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": false,
+      "words": 358
+    },
+    {
+      "route": "/blog/selling-house-with-mortgage",
+      "h1BeforeFooter": true,
+      "faqAnswers": 3,
+      "benchmark": false,
+      "words": 416
+    },
+    {
+      "route": "/blog/short-term-rental-regulations-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1078
+    },
+    {
+      "route": "/blog/should-i-refinance-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 661
+    },
+    {
+      "route": "/blog/silver-tsunami-housing-shift-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1219
+    },
+    {
+      "route": "/blog/sipc-vs-fdic-protection-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1595
+    },
+    {
+      "route": "/blog/snap-benefits-2027",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1780
+    },
+    {
+      "route": "/blog/snap-cola-increase-2027-chart",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 999
+    },
+    {
+      "route": "/blog/social-security-cola-2027",
+      "h1BeforeFooter": true,
+      "faqAnswers": 5,
+      "benchmark": false,
+      "words": 1033
+    },
+    {
+      "route": "/blog/social-security-cola-increase-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 869
+    },
+    {
+      "route": "/blog/social-security-earnings-test-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1815
+    },
+    {
+      "route": "/blog/social-security-earnings-test-2027",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1718
+    },
+    {
+      "route": "/blog/social-security-payment-schedule-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1723
+    },
+    {
+      "route": "/blog/social-security-payment-schedule-2027",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1197
+    },
+    {
+      "route": "/blog/social-security-spousal-benefits-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 2377
+    },
+    {
+      "route": "/blog/sp500-vs-real-estate-investing-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 914
+    },
+    {
+      "route": "/blog/spring-2026-housing-market-forecast",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1578
+    },
+    {
+      "route": "/blog/streamline-refinance-fha-va-usda",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1065
+    },
+    {
+      "route": "/blog/student-loan-idr-recertification-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 880
+    },
+    {
+      "route": "/blog/student-loan-interest-deduction-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 2109
+    },
+    {
+      "route": "/blog/student-loan-repayment-plans-2026-income-driven",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 187
+    },
+    {
+      "route": "/blog/tariffs-housing-market-impact-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1360
+    },
+    {
+      "route": "/blog/tax-extension-deadline-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1849
+    },
+    {
+      "route": "/blog/tax-loss-harvesting-calculator-strategy",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 867
+    },
+    {
+      "route": "/blog/tax-loss-harvesting-wash-sale-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1166
+    },
+    {
+      "route": "/blog/tax-withholding-w4-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1484
+    },
+    {
+      "route": "/blog/top-sunbelt-real-estate-markets-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 928
+    },
+    {
+      "route": "/blog/treasury-bills-vs-high-yield-savings-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1516
+    },
+    {
+      "route": "/blog/trump-account-vs-529-plan",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1302
+    },
+    {
+      "route": "/blog/trump-accounts-2026-guide",
+      "h1BeforeFooter": true,
+      "faqAnswers": 5,
+      "benchmark": false,
+      "words": 1237
+    },
+    {
+      "route": "/blog/usa-people-search-finance",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1148
+    },
+    {
+      "route": "/blog/usda-loans-rural-suburban-financing",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 1013
+    },
+    {
+      "route": "/blog/va-disability-pay-rates-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1704
+    },
+    {
+      "route": "/blog/va-funding-fee-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1522
+    },
+    {
+      "route": "/blog/va-loan-benefits-2026-military-guide",
+      "h1BeforeFooter": true,
+      "faqAnswers": 0,
+      "benchmark": false,
+      "words": 937
+    }
+  ]
+}

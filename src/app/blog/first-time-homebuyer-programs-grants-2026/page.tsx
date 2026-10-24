@@ -24,11 +24,6 @@ export const metadata: Metadata = {
 export default function BlogPost() {
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: 'What is the difference between a homebuyer grant and a loan?', acceptedAnswer: { '@type': 'Answer', text: 'A loan (even a 0% interest forgivable loan) creates a lien on your property that you may have to repay if you sell the house early. A grant is pure free cash. It is legally a gift given to you by a government agency or non-profit to help cover your down payment. You never have to repay a grant.' } },
-    { '@type': 'Question', name: 'What are FHLB Grants?', acceptedAnswer: { '@type': 'Answer', text: 'The Federal Home Loan Bank (FHLB) system gives massive block grants to local community banks and credit unions. These local banks then distribute the cash to first-time homebuyers as $5,000 to $15,000 grants, usually on a first-come, first-served basis starting in January of each year.' } },
-    { '@type': 'Question', name: 'How do I find local municipal housing grants?', acceptedAnswer: { '@type': 'Answer', text: 'Virtually every mid-sized city and county in America receives Community Development Block Grants (CDBG) from the federal government. You can find these by simply googling your specific city or county name followed by "first time homebuyer grant" or "neighborhood revitalization grant."' } },
-] }) }} />
         <ArticleSchema
             title="First-Time Homebuyer Grants 2026: How to Find Free Money"
             description="A mortgage is a loan you have to pay back. A grant is free money. Learn how to locate municipal block grants and FHLB funds."
