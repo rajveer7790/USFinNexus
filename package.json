@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "npm run lint && next build",
+    "build": "npm run lint && next build && node scripts/generate-discovery.mjs",
     "dev": "next dev --turbo",
     "start": "next start",
     "lint": "ESLINT_USE_FLAT_CONFIG=false eslint src",

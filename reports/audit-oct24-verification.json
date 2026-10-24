@@ -1,7 +1,7 @@
 {
   "checked": "2026-10-24",
-  "pagesChecked": 295,
-  "faqAnswersChecked": 831,
+  "pagesChecked": 297,
+  "faqAnswersChecked": 843,
   "benchmarkPages": 51,
   "financialRegressionTests": "passed",
   "failures": [],
@@ -32,7 +32,7 @@
       "h1BeforeFooter": true,
       "faqAnswers": 0,
       "benchmark": false,
-      "words": 8803
+      "words": 8888
     },
     {
       "route": "/guides",
@@ -697,7 +697,7 @@
       "h1BeforeFooter": true,
       "faqAnswers": 6,
       "benchmark": false,
-      "words": 1792
+      "words": 1788
     },
     {
       "route": "/blog/401k-loan-vs-hardship-withdrawal-2026",
@@ -705,6 +705,13 @@
       "faqAnswers": 6,
       "benchmark": false,
       "words": 1721
+    },
+    {
+      "route": "/blog/401k-true-up-match-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1764
     },
     {
       "route": "/blog/aca-open-enrollment-2027",
@@ -775,6 +782,13 @@
       "faqAnswers": 0,
       "benchmark": false,
       "words": 1303
+    },
+    {
+      "route": "/blog/bank-account-bonus-taxes-2026",
+      "h1BeforeFooter": true,
+      "faqAnswers": 6,
+      "benchmark": false,
+      "words": 1958
     },
     {
       "route": "/blog/bank-impersonation-scam-2026",
@@ -1782,7 +1796,7 @@
       "h1BeforeFooter": true,
       "faqAnswers": 5,
       "benchmark": false,
-      "words": 1500
+      "words": 1498
     },
     {
       "route": "/blog/safe-yields-bonds-treasuries-2026",

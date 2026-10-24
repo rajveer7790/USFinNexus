@@ -1,6 +1,6 @@
 {
   "counts": {
-    "pages": 296,
+    "pages": 298,
     "missingTitle": 0,
     "emptyHtml": 0,
     "longTitles": 0,
@@ -22,7 +22,7 @@
     "missingHstsRule": 0
   },
   "findings": {
-    "pages": 296,
+    "pages": 298,
     "missingTitle": [],
     "emptyHtml": [],
     "longTitles": [],
@@ -1028,8 +1028,8 @@
       {
         "route": "/calculators/drip",
         "ratio": 7.25,
-        "textChars": 7300,
-        "htmlBytes": 100674
+        "textChars": 7294,
+        "htmlBytes": 100620
       },
       {
         "route": "/calculators/dti",
@@ -1154,8 +1154,8 @@
       {
         "route": "/calculators/options-profit",
         "ratio": 6.44,
-        "textChars": 5941,
-        "htmlBytes": 92244
+        "textChars": 5935,
+        "htmlBytes": 92190
       },
       {
         "route": "/calculators/pennsylvania",
@@ -1201,9 +1201,9 @@
       },
       {
         "route": "/calculators/retirement",
-        "ratio": 6.79,
-        "textChars": 6580,
-        "htmlBytes": 96957
+        "ratio": 6.78,
+        "textChars": 6574,
+        "htmlBytes": 96903
       },
       {
         "route": "/calculators/student-loan",

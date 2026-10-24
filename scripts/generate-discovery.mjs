@@ -12,4 +12,6 @@ const sources='## Sources and formulas\n\n- [Methodology](https://usfinnexus.com
 const catalog='## Canonical U.S. calculator catalog\n\n'+tools.map(t=>'- ['+t.title+']('+t.url+') — '+t.description).join('\n')+'\n';
 fs.writeFileSync('public/llms.txt',intro+sources+catalog);
 fs.writeFileSync('public/llms-full.txt',intro+sources+catalog+'\n## Editorial library\n\n'+groups.blog.map(e=>'- '+e.url).join('\n')+'\n');
+// Static export has already copied public/; keep this build's output and next source build in sync.
+for(const file of ['sitemap-blog.xml','sitemap-calculators.xml','sitemap-pages.xml','sitemap-index.xml','llms.txt','llms-full.txt'])fs.copyFileSync(path.join('public',file),path.join('out',file));
 console.log(JSON.stringify({sitemapEntries:entries.length,calculators:tools.length,segments:Object.fromEntries(Object.entries(groups).map(([k,v])=>[k,v.length]))},null,2));

@@ -94,6 +94,7 @@ M = P*r/(1-(1+r)^(-n)); at zero interest M=P/n. DTI=monthly debt/gross monthly i
 - https://usfinnexus.com/blog/4-percent-rule-safe-withdrawal-rate
 - https://usfinnexus.com/blog/401k-contribution-limits-2026
 - https://usfinnexus.com/blog/401k-loan-vs-hardship-withdrawal-2026
+- https://usfinnexus.com/blog/401k-true-up-match-2026
 - https://usfinnexus.com/blog/aca-open-enrollment-2027
 - https://usfinnexus.com/blog/aca-premium-tax-credit-2026
 - https://usfinnexus.com/blog/adjustable-rate-mortgage-trends-2026
@@ -104,6 +105,7 @@ M = P*r/(1-(1+r)^(-n)); at zero interest M=P/n. DTI=monthly debt/gross monthly i
 - https://usfinnexus.com/blog/auto-loan-calculator-car-affordability
 - https://usfinnexus.com/blog/auto-loan-terms-60-72-84-month
 - https://usfinnexus.com/blog/balance-transfer-credit-cards-strategy
+- https://usfinnexus.com/blog/bank-account-bonus-taxes-2026
 - https://usfinnexus.com/blog/bank-impersonation-scam-2026
 - https://usfinnexus.com/blog/biweekly-mortgage-payments-savings
 - https://usfinnexus.com/blog/california-closing-costs-2026

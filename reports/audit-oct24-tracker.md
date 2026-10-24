@@ -68,6 +68,7 @@ Source: the supplied 22-page SEO/AEO/GEO PDF, read in layout and raw-text passes
 | E06 | Benchmarks across tools | Shared server-rendered scenario tables added across supported calculator intents with units, assumptions and exclusions. A missing specialized table is not silently replaced by irrelevant loan math. |
 | E07 | Outreach / authority | No external outreach sent. Requires verified recipients, approved message and owner direction. Claimed backlink counts/KD/citation probabilities in the PDF lack a reproducible dataset and are not accepted as measured facts. |
 | E08 | GSC indexation / success metrics | Live accessibility is testable; actual index counts, selected canonical, clicks/impressions and recrawl require Search Console access/export. Indexing, rankings, snippets and backlinks are not guaranteed engineering acceptance tests. |
+| E09 | Description-length recommendation | A separate decoded-output scan finds 78 descriptions longer than 160 characters in the current library. These need individual editorial rewrites; this run does not blindly cut sentences or claim the recommendation is complete. Length is not itself a robots/indexing block. |
 
 ## All 50 opportunity rows (PDF pages 16–20)
 
