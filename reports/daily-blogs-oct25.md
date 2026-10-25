@@ -53,4 +53,11 @@ Both images were generated specifically for this release with the built-in image
 - Blog index: both October 25 pages precede the October 24 pages.
 - Discovery: both URLs present in `sitemap-blog.xml`, `llms.txt`/`llms-full.txt` output and the generated root sitemap set.
 
-Production URL and image checks must be completed after the Cloudflare Pages deployment for the GitHub commit succeeds.
+## Production verification
+
+- GitHub content commit: `72ea7d85bb7a6c87fe32f027a2ce6f747489a53d` on `main`.
+- Cloudflare Pages build `e689b857-547f-4915-aed6-37a4b3c5d4bc`: completed successfully October 25, 2026.
+- Both canonical article URLs, the blog index and `sitemap-blog.xml` returned HTTP 200.
+- Both hero URLs returned HTTP 200 with `image/webp`; live files decoded to exactly 1200×630 and matched the repository SHA-256 hashes byte for byte.
+- Live HTML retained one H1, six FAQ entities, BlogPosting schema, self-canonical URLs, the expected word counts and hero references for each article.
+- Both October 25 posts appeared ahead of the October 24 posts on the live blog index and were present in the live segmented sitemap.
