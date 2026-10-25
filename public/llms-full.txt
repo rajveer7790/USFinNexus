@@ -234,6 +234,7 @@ M = P*r/(1-(1+r)^(-n)); at zero interest M=P/n. DTI=monthly debt/gross monthly i
 - https://usfinnexus.com/blog/pay-off-car-loan-early-vs-invest
 - https://usfinnexus.com/blog/pay-off-mortgage-early-strategy
 - https://usfinnexus.com/blog/pay-off-student-loans-vs-invest-decision
+- https://usfinnexus.com/blog/payment-app-scam-refund-rights
 - https://usfinnexus.com/blog/pell-grant-2026-27
 - https://usfinnexus.com/blog/personal-loan-apr-origination-fees-2026
 - https://usfinnexus.com/blog/personal-loan-vs-credit-card-comparison
@@ -247,6 +248,7 @@ M = P*r/(1-(1+r)^(-n)); at zero interest M=P/n. DTI=monthly debt/gross monthly i
 - https://usfinnexus.com/blog/resilient-investor-checklist-2026
 - https://usfinnexus.com/blog/reverse-mortgage-hecm-pros-cons-2026
 - https://usfinnexus.com/blog/rmd-qcd-deadline-2026
+- https://usfinnexus.com/blog/roth-401k-catch-up-rule-2026
 - https://usfinnexus.com/blog/roth-conversion-tax-planning-2026
 - https://usfinnexus.com/blog/roth-ira-income-limits-2026
 - https://usfinnexus.com/blog/roth-ira-vs-401k-comparison-2026
