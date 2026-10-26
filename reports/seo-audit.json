@@ -1,6 +1,6 @@
 {
   "counts": {
-    "pages": 300,
+    "pages": 302,
     "missingTitle": 0,
     "emptyHtml": 0,
     "longTitles": 0,
@@ -22,7 +22,7 @@
     "missingHstsRule": 0
   },
   "findings": {
-    "pages": 300,
+    "pages": 302,
     "missingTitle": [],
     "emptyHtml": [],
     "longTitles": [],
@@ -362,8 +362,8 @@
       {
         "route": "/blog/fha-mortgage-pmi-mip-2026",
         "ratio": 9.73,
-        "textChars": 9888,
-        "htmlBytes": 101619
+        "textChars": 9885,
+        "htmlBytes": 101577
       },
       {
         "route": "/blog/fire-calculator-retirement-goal",
@@ -565,15 +565,15 @@
       },
       {
         "route": "/blog/mortgage-broker-fees",
-        "ratio": 5.5,
-        "textChars": 4113,
-        "htmlBytes": 74725
+        "ratio": 5.51,
+        "textChars": 4115,
+        "htmlBytes": 74693
       },
       {
         "route": "/blog/mortgage-calculator-comparison-2026",
-        "ratio": 7.39,
-        "textChars": 7735,
-        "htmlBytes": 104610
+        "ratio": 7.4,
+        "textChars": 7737,
+        "htmlBytes": 104578
       },
       {
         "route": "/blog/mortgage-cash-reserves-after-closing-2026",
@@ -595,9 +595,9 @@
       },
       {
         "route": "/blog/mortgage-preapproval-prequalification",
-        "ratio": 7.16,
-        "textChars": 7662,
-        "htmlBytes": 106991
+        "ratio": 7.17,
+        "textChars": 7664,
+        "htmlBytes": 106959
       },
       {
         "route": "/blog/mortgage-rate-lock-before-fed-meeting-2026",
@@ -680,8 +680,8 @@
       {
         "route": "/blog/piggyback-mortgage-80-10-10-strategy",
         "ratio": 7.33,
-        "textChars": 8193,
-        "htmlBytes": 111723
+        "textChars": 8190,
+        "htmlBytes": 111681
       },
       {
         "route": "/blog/pmi-explained-cost-removal-2026",
@@ -757,15 +757,15 @@
       },
       {
         "route": "/blog/second-mortgage-guide",
-        "ratio": 5.54,
-        "textChars": 4151,
-        "htmlBytes": 74904
+        "ratio": 5.55,
+        "textChars": 4153,
+        "htmlBytes": 74872
       },
       {
         "route": "/blog/selling-house-with-mortgage",
         "ratio": 5.87,
-        "textChars": 4444,
-        "htmlBytes": 75737
+        "textChars": 4446,
+        "htmlBytes": 75705
       },
       {
         "route": "/blog/short-term-rental-regulations-2026",
@@ -980,8 +980,8 @@
       {
         "route": "/calculators/california",
         "ratio": 7.53,
-        "textChars": 8123,
-        "htmlBytes": 107904
+        "textChars": 8125,
+        "htmlBytes": 107872
       },
       {
         "route": "/calculators/closing-costs",
@@ -1070,8 +1070,8 @@
       {
         "route": "/calculators/florida",
         "ratio": 6.95,
-        "textChars": 7039,
-        "htmlBytes": 101298
+        "textChars": 7041,
+        "htmlBytes": 101266
       },
       {
         "route": "/calculators/georgia",
@@ -1190,8 +1190,8 @@
       {
         "route": "/calculators/rent-vs-buy",
         "ratio": 8.43,
-        "textChars": 8059,
-        "htmlBytes": 95586
+        "textChars": 8056,
+        "htmlBytes": 95544
       },
       {
         "route": "/calculators/rental-property",
@@ -1220,8 +1220,8 @@
       {
         "route": "/calculators/texas",
         "ratio": 6.62,
-        "textChars": 6639,
-        "htmlBytes": 100344
+        "textChars": 6641,
+        "htmlBytes": 100312
       },
       {
         "route": "/calculators/trump-account",
