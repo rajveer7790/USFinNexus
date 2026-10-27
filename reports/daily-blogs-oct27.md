@@ -55,4 +55,11 @@ Built-in image generation was used for two separate, original, brand-free assets
 - Each article: one H1, six visible FAQ answers plus six FAQPage entities, BlogPosting schema, self-canonical, article OG metadata, Twitter large-card metadata and meta description below 160 characters.
 - Both articles are newest-first on the generated blog index and included in the segmented blog sitemap and discovery output.
 
-Production verification will be appended after the GitHub commit deploys successfully through Cloudflare Pages.
+## Production verification
+
+- Content commit: `555a6b7f1305d5fdffde13cebafccf1f008c8ee6`.
+- Cloudflare Pages build `c9c94adb-5c89-42e0-b494-f082ce62b409`: completed successfully.
+- Both article URLs, both WebP assets, `/blog` and `/sitemap-blog.xml` return HTTP 200 in production.
+- Live article checks: 2,322 and 2,246 main-content words respectively; exactly one H1, six FAQPage entities, BlogPosting schema, the expected self-canonical and absolute Open Graph image on each page.
+- The blog index lists both October 27 articles ahead of the October 26 entries, and the segmented blog sitemap contains both canonical URLs.
+- Live image checks: WebP MIME type, exact 1200×630 dimensions and byte-for-byte SHA-256 matches to the committed assets.
