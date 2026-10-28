@@ -1,6 +1,6 @@
 {
   "counts": {
-    "pages": 304,
+    "pages": 306,
     "missingTitle": 0,
     "emptyHtml": 0,
     "longTitles": 0,
@@ -9,7 +9,7 @@
     "missingCanonical": 0,
     "canonicalMismatch": 0,
     "duplicateH1Title": 0,
-    "matchingTitleAndH1": 12,
+    "matchingTitleAndH1": 14,
     "lowTextHtmlRatio": 213,
     "brokenInternalLinks": 0,
     "brokenInternalImages": 0,
@@ -22,7 +22,7 @@
     "missingHstsRule": 0
   },
   "findings": {
-    "pages": 304,
+    "pages": 306,
     "missingTitle": [],
     "emptyHtml": [],
     "longTitles": [],
@@ -46,6 +46,11 @@
         "route": "/articles/new-york-llc-transparency-act-2026-foreign-owners",
         "title": "New York LLC Transparency Act 2026: Who Must File and When",
         "h1": "New York LLC Transparency Act 2026: Who Must File and When"
+      },
+      {
+        "route": "/blog/fha-alternative-credit-scores-2027",
+        "title": "FHA Alternative Credit Scores in 2027: Buyer Guide",
+        "h1": "FHA Alternative Credit Scores in 2027: Buyer Guide"
       },
       {
         "route": "/blog/fomc-october-2026-mortgage-rates",
@@ -81,6 +86,11 @@
         "route": "/blog/social-security-cola-2027",
         "title": "Social Security COLA 2027: Confirmed 3.6% Increase and Payment Planning",
         "h1": "Social Security COLA 2027: Confirmed 3.6% Increase and Payment Planning"
+      },
+      {
+        "route": "/blog/year-end-tax-planning-checklist-2026",
+        "title": "Year-End Tax Planning Checklist for 2026",
+        "h1": "Year-End Tax Planning Checklist for 2026"
       },
       {
         "route": "/privacy-focused-mortgage-calculator",
@@ -367,8 +377,8 @@
       {
         "route": "/blog/fha-mortgage-pmi-mip-2026",
         "ratio": 9.72,
-        "textChars": 9872,
-        "htmlBytes": 101515
+        "textChars": 9868,
+        "htmlBytes": 101519
       },
       {
         "route": "/blog/fire-calculator-retirement-goal",
@@ -402,9 +412,9 @@
       },
       {
         "route": "/blog/front-end-vs-back-end-dti-2026",
-        "ratio": 8.05,
-        "textChars": 8536,
-        "htmlBytes": 106062
+        "ratio": 8.03,
+        "textChars": 8743,
+        "htmlBytes": 108918
       },
       {
         "route": "/blog/global-conflict-real-estate-impact-2026",
@@ -828,9 +838,9 @@
       },
       {
         "route": "/blog/streamline-refinance-fha-va-usda",
-        "ratio": 7.65,
-        "textChars": 8305,
-        "htmlBytes": 108507
+        "ratio": 7.64,
+        "textChars": 8289,
+        "htmlBytes": 108508
       },
       {
         "route": "/blog/student-loan-idr-recertification-2026",
@@ -1014,9 +1024,9 @@
       },
       {
         "route": "/calculators/crypto-tax",
-        "ratio": 7.71,
-        "textChars": 7738,
-        "htmlBytes": 100405
+        "ratio": 7.68,
+        "textChars": 7702,
+        "htmlBytes": 100339
       },
       {
         "route": "/calculators/debt-payoff",
@@ -1038,9 +1048,9 @@
       },
       {
         "route": "/calculators/dti",
-        "ratio": 7.92,
-        "textChars": 8103,
-        "htmlBytes": 102348
+        "ratio": 7.91,
+        "textChars": 8097,
+        "htmlBytes": 102327
       },
       {
         "route": "/calculators/escrow-shortage",
