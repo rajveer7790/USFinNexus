@@ -55,4 +55,10 @@ Built-in image generation was used in `photorealistic-natural` editorial mode. B
 
 ## Production verification
 
-Pending publication at the time of the content commit. The final verification commit records GitHub, Cloudflare, live URL, image, sitemap and blog-index results.
+- Content commit: `d9e61d0e5891b782d92d339462c167c9ceb0f7ce`.
+- Cloudflare Pages deployment `59afc33f-6165-4524-9705-e9a326c3a150`: completed successfully.
+- Both article URLs, both WebP assets, `/blog` and `/sitemap-blog.xml` return HTTP 200 in production.
+- Live main-content counts are 1,940 words for the tax guide and 1,947 words for the FHA guide.
+- Each live article has exactly one H1, six FAQPage entities, BlogPosting schema, the expected self-canonical and absolute Open Graph image.
+- The live blog index places both October 28 posts ahead of the October 27 posts; the segmented blog sitemap contains both canonical URLs and October 28 last-modified dates.
+- Live images are WebP, exactly 1200×630 and byte-for-byte SHA-256 matches to the committed assets.
