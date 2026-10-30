@@ -1,6 +1,6 @@
 {
   "counts": {
-    "pages": 306,
+    "pages": 308,
     "missingTitle": 0,
     "emptyHtml": 0,
     "longTitles": 0,
@@ -9,7 +9,7 @@
     "missingCanonical": 0,
     "canonicalMismatch": 0,
     "duplicateH1Title": 0,
-    "matchingTitleAndH1": 14,
+    "matchingTitleAndH1": 16,
     "lowTextHtmlRatio": 213,
     "brokenInternalLinks": 0,
     "brokenInternalImages": 0,
@@ -22,7 +22,7 @@
     "missingHstsRule": 0
   },
   "findings": {
-    "pages": 306,
+    "pages": 308,
     "missingTitle": [],
     "emptyHtml": [],
     "longTitles": [],
@@ -46,6 +46,16 @@
         "route": "/articles/new-york-llc-transparency-act-2026-foreign-owners",
         "title": "New York LLC Transparency Act 2026: Who Must File and When",
         "h1": "New York LLC Transparency Act 2026: Who Must File and When"
+      },
+      {
+        "route": "/blog/bank-closed-account-what-to-do",
+        "title": "Bank Closed Your Account? What to Do Next",
+        "h1": "Bank Closed Your Account? What to Do Next"
+      },
+      {
+        "route": "/blog/employer-closed-401k-what-to-do",
+        "title": "Employer Closed? What Happens to Your 401(k)",
+        "h1": "Employer Closed? What Happens to Your 401(k)"
       },
       {
         "route": "/blog/fha-alternative-credit-scores-2027",
@@ -1042,9 +1052,9 @@
       },
       {
         "route": "/calculators/drip",
-        "ratio": 7.24,
-        "textChars": 7279,
-        "htmlBytes": 100579
+        "ratio": 7.23,
+        "textChars": 7273,
+        "htmlBytes": 100576
       },
       {
         "route": "/calculators/dti",
@@ -1169,8 +1179,8 @@
       {
         "route": "/calculators/options-profit",
         "ratio": 6.42,
-        "textChars": 5920,
-        "htmlBytes": 92151
+        "textChars": 5914,
+        "htmlBytes": 92148
       },
       {
         "route": "/calculators/pennsylvania",
@@ -1217,8 +1227,8 @@
       {
         "route": "/calculators/retirement",
         "ratio": 6.77,
-        "textChars": 6559,
-        "htmlBytes": 96863
+        "textChars": 6553,
+        "htmlBytes": 96860
       },
       {
         "route": "/calculators/student-loan",
