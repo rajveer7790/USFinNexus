@@ -44,4 +44,10 @@ Built-in image generation mode was used. Both assets are original, logo-free edi
 
 ## Production verification
 
-Pending GitHub publication and Cloudflare deployment at the time this report was created.
+- Content commit: `08545386826099ae7b2b08051439948bd1aeb208` on GitHub `main`.
+- Cloudflare Pages deployment `1670d01a-f13e-4ae2-a4e4-cbd46f9ba174`: completed successfully.
+- Both article URLs, both WebP assets, `/blog` and `/sitemap-blog.xml` return HTTP 200 in production.
+- Live main-content counts are 1,779 words for the 401(k) guide and 1,842 words for the bank-account guide.
+- Each live article has exactly one H1, six FAQPage entities, BlogPosting schema and the expected self-canonical.
+- The live blog index places both October 30 posts ahead of older posts; the segmented blog sitemap contains both canonical URLs and October 30 last-modified dates.
+- Live images are WebP, exactly 1200×630, and byte-for-byte SHA-256 matches to the committed assets.
