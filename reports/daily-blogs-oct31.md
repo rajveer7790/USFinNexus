@@ -31,6 +31,12 @@
 - Each article has one H1, six FAQ entities, FAQPage and BlogPosting schema, self-referencing canonical, Open Graph and Twitter metadata, answer-first copy, official citations, disclaimer and contextual internal links.
 - Both URLs are present in `public/sitemap-blog.xml` and the generated blog index lists them before October 30 posts.
 
-## Production status
+## Production verification
 
-Pending GitHub publication and Cloudflare verification at the time of this local report.
+- Content commit: `a8963f71017ede2348760d7fd977592c62e4c1ee` on GitHub `main`.
+- Cloudflare Pages deployment `a854644f-d9f6-4b01-b75d-d44b317d161e`: completed successfully.
+- Both article URLs, both WebP assets, `/blog` and `/sitemap-blog.xml` return HTTP 200 in production.
+- Live main-content counts are 2,053 words for the COBRA-versus-ACA guide and 1,841 words for the PBM guide.
+- Each live article has exactly one H1, six FAQPage entities, BlogPosting schema and the expected self-canonical.
+- The live blog index places both October 31 posts ahead of October 30 posts; the segmented blog sitemap contains both canonical URLs.
+- Live images are WebP, exactly 1,200×630, and byte-for-byte SHA-256 matches to the committed assets.
