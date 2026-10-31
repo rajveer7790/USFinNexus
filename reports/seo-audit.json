@@ -1,6 +1,6 @@
 {
   "counts": {
-    "pages": 308,
+    "pages": 310,
     "missingTitle": 0,
     "emptyHtml": 0,
     "longTitles": 0,
@@ -9,7 +9,7 @@
     "missingCanonical": 0,
     "canonicalMismatch": 0,
     "duplicateH1Title": 0,
-    "matchingTitleAndH1": 16,
+    "matchingTitleAndH1": 18,
     "lowTextHtmlRatio": 213,
     "brokenInternalLinks": 0,
     "brokenInternalImages": 0,
@@ -22,7 +22,7 @@
     "missingHstsRule": 0
   },
   "findings": {
-    "pages": 308,
+    "pages": 310,
     "missingTitle": [],
     "emptyHtml": [],
     "longTitles": [],
@@ -53,6 +53,11 @@
         "h1": "Bank Closed Your Account? What to Do Next"
       },
       {
+        "route": "/blog/cobra-vs-aca-after-job-loss-2027",
+        "title": "COBRA vs. ACA After Job Loss: 2027 Decision Guide",
+        "h1": "COBRA vs. ACA After Job Loss: 2027 Decision Guide"
+      },
+      {
         "route": "/blog/employer-closed-401k-what-to-do",
         "title": "Employer Closed? What Happens to Your 401(k)",
         "h1": "Employer Closed? What Happens to Your 401(k)"
@@ -81,6 +86,11 @@
         "route": "/blog/pay-off-student-loans-vs-invest-decision",
         "title": "Pay Off Student Loans or Invest? After-Tax Math",
         "h1": "Pay Off Student Loans or Invest? After-Tax Math"
+      },
+      {
+        "route": "/blog/pbm-transparency-rule-2026",
+        "title": "New PBM Transparency Rule: What Workers Should Know",
+        "h1": "New PBM Transparency Rule: What Workers Should Know"
       },
       {
         "route": "/blog/personal-loan-vs-credit-card-comparison",
@@ -188,9 +198,9 @@
       },
       {
         "route": "/blog/aca-open-enrollment-2027",
-        "ratio": 9.94,
-        "textChars": 12630,
-        "htmlBytes": 127119
+        "ratio": 9.95,
+        "textChars": 12659,
+        "htmlBytes": 127218
       },
       {
         "route": "/blog/adjustable-rate-mortgage-trends-2026",
@@ -542,9 +552,9 @@
       },
       {
         "route": "/blog/lender-quote-vs-online-calculator",
-        "ratio": 6.5,
-        "textChars": 6817,
-        "htmlBytes": 104948
+        "ratio": 6.49,
+        "textChars": 6812,
+        "htmlBytes": 104944
       },
       {
         "route": "/blog/medicare-advantage-premiums-2027",
@@ -896,9 +906,9 @@
       },
       {
         "route": "/blog/trump-accounts-2026-guide",
-        "ratio": 9.89,
-        "textChars": 10148,
-        "htmlBytes": 102657
+        "ratio": 9.88,
+        "textChars": 10143,
+        "htmlBytes": 102653
       },
       {
         "route": "/blog/usa-people-search-finance",
