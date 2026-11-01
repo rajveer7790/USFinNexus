@@ -34,4 +34,9 @@
 
 ## Production verification
 
-Pending GitHub publication and Cloudflare deployment at the time of this report.
+- Content commit: `f40fa029a1a872bffe52de2f145c29fee9a04b63` on GitHub `main`.
+- Cloudflare Pages deployment `ef566df1-5178-4930-91cd-92ec90fbf3c4`: completed successfully.
+- Both article URLs, both WebP images, `/blog` and `/sitemap-blog.xml` return HTTP 200.
+- Live article counts are 1,526 and 1,503 words; each has one H1, six FAQ entities, BlogPosting, FAQPage and its expected self-canonical.
+- The live blog index places both November 1 posts ahead of October 31 posts, and the live blog sitemap contains both canonical URLs.
+- Both live images are WebP, exactly 1,200×630, and match the repository assets byte-for-byte by SHA-256.
