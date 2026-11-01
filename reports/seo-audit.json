@@ -1,6 +1,6 @@
 {
   "counts": {
-    "pages": 310,
+    "pages": 312,
     "missingTitle": 0,
     "emptyHtml": 0,
     "longTitles": 0,
@@ -9,7 +9,7 @@
     "missingCanonical": 0,
     "canonicalMismatch": 0,
     "duplicateH1Title": 0,
-    "matchingTitleAndH1": 18,
+    "matchingTitleAndH1": 20,
     "lowTextHtmlRatio": 213,
     "brokenInternalLinks": 0,
     "brokenInternalImages": 0,
@@ -22,7 +22,7 @@
     "missingHstsRule": 0
   },
   "findings": {
-    "pages": 310,
+    "pages": 312,
     "missingTitle": [],
     "emptyHtml": [],
     "longTitles": [],
@@ -46,6 +46,11 @@
         "route": "/articles/new-york-llc-transparency-act-2026-foreign-owners",
         "title": "New York LLC Transparency Act 2026: Who Must File and When",
         "h1": "New York LLC Transparency Act 2026: Who Must File and When"
+      },
+      {
+        "route": "/blog/aca-marketplace-plan-prices-2027",
+        "title": "2027 ACA Marketplace Plan Prices: How to Compare Costs",
+        "h1": "2027 ACA Marketplace Plan Prices: How to Compare Costs"
       },
       {
         "route": "/blog/bank-closed-account-what-to-do",
@@ -96,6 +101,11 @@
         "route": "/blog/personal-loan-vs-credit-card-comparison",
         "title": "Personal Loan vs Credit Card: Compare Total Cost Before Borrowing",
         "h1": "Personal Loan vs Credit Card: Compare Total Cost Before Borrowing"
+      },
+      {
+        "route": "/blog/prime-rate-7-percent-credit-cards-heloc",
+        "title": "Prime Rate at 7%: Credit Card and HELOC Cost Guide",
+        "h1": "Prime Rate at 7%: Credit Card and HELOC Cost Guide"
       },
       {
         "route": "/blog/roth-ira-vs-401k-comparison-2026",
@@ -192,15 +202,15 @@
       },
       {
         "route": "/blog/4-percent-rule-safe-withdrawal-rate",
-        "ratio": 9.23,
-        "textChars": 11057,
-        "htmlBytes": 119812
+        "ratio": 9.22,
+        "textChars": 11051,
+        "htmlBytes": 119868
       },
       {
         "route": "/blog/aca-open-enrollment-2027",
         "ratio": 9.95,
-        "textChars": 12659,
-        "htmlBytes": 127218
+        "textChars": 12653,
+        "htmlBytes": 127216
       },
       {
         "route": "/blog/adjustable-rate-mortgage-trends-2026",
@@ -240,9 +250,9 @@
       },
       {
         "route": "/blog/balance-transfer-credit-cards-strategy",
-        "ratio": 8.32,
-        "textChars": 9611,
-        "htmlBytes": 115527
+        "ratio": 8.29,
+        "textChars": 9568,
+        "htmlBytes": 115415
       },
       {
         "route": "/blog/biweekly-mortgage-payments-savings",
@@ -552,9 +562,9 @@
       },
       {
         "route": "/blog/lender-quote-vs-online-calculator",
-        "ratio": 6.49,
-        "textChars": 6812,
-        "htmlBytes": 104944
+        "ratio": 6.5,
+        "textChars": 6817,
+        "htmlBytes": 104954
       },
       {
         "route": "/blog/medicare-advantage-premiums-2027",
@@ -690,9 +700,9 @@
       },
       {
         "route": "/blog/pay-mortgage-with-credit-card",
-        "ratio": 5.72,
-        "textChars": 4312,
-        "htmlBytes": 75376
+        "ratio": 5.7,
+        "textChars": 4297,
+        "htmlBytes": 75346
       },
       {
         "route": "/blog/pay-off-car-loan-early-vs-invest",
@@ -907,8 +917,8 @@
       {
         "route": "/blog/trump-accounts-2026-guide",
         "ratio": 9.88,
-        "textChars": 10143,
-        "htmlBytes": 102653
+        "textChars": 10148,
+        "htmlBytes": 102663
       },
       {
         "route": "/blog/usa-people-search-finance",
@@ -1070,7 +1080,7 @@
         "route": "/calculators/dti",
         "ratio": 7.91,
         "textChars": 8097,
-        "htmlBytes": 102327
+        "htmlBytes": 102342
       },
       {
         "route": "/calculators/escrow-shortage",
