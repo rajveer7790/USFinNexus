@@ -22,8 +22,11 @@
 - Blog index: both articles appear before November 1 posts
 - Sitemap: 313 entries; both new URLs present
 - Images: two original, logo-free 1200×630 WebP assets
-- Production deployment: pending
-- Live URL and image verification: pending
+- Content commit: `921d16097f41d958b43d3d43677cac7958a3dd03` on GitHub `main`
+- Cloudflare Pages deployment: `1770a79e-0d10-4c01-bde2-085fde89213c`, completed successfully
+- Live verification: both articles, both WebP images, `/blog` and `/sitemap-blog.xml` return HTTP 200
+- Live article checks: 1,315 and 1,339 rendered words; one H1, six FAQ entities, BlogPosting, FAQPage and self-canonical on each page
+- Live discovery checks: both URLs are in the blog sitemap and appear newest-first ahead of November 1 posts
 
 ## Editorial image generation
 
