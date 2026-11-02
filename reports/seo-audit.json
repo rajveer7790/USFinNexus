@@ -1,6 +1,6 @@
 {
   "counts": {
-    "pages": 312,
+    "pages": 314,
     "missingTitle": 0,
     "emptyHtml": 0,
     "longTitles": 0,
@@ -9,7 +9,7 @@
     "missingCanonical": 0,
     "canonicalMismatch": 0,
     "duplicateH1Title": 0,
-    "matchingTitleAndH1": 20,
+    "matchingTitleAndH1": 22,
     "lowTextHtmlRatio": 213,
     "brokenInternalLinks": 0,
     "brokenInternalImages": 0,
@@ -22,7 +22,7 @@
     "missingHstsRule": 0
   },
   "findings": {
-    "pages": 312,
+    "pages": 314,
     "missingTitle": [],
     "emptyHtml": [],
     "longTitles": [],
@@ -56,6 +56,11 @@
         "route": "/blog/bank-closed-account-what-to-do",
         "title": "Bank Closed Your Account? What to Do Next",
         "h1": "Bank Closed Your Account? What to Do Next"
+      },
+      {
+        "route": "/blog/catastrophic-health-insurance-plans-2027",
+        "title": "Catastrophic Health Insurance in 2027: Who Qualifies?",
+        "h1": "Catastrophic Health Insurance in 2027: Who Qualifies?"
       },
       {
         "route": "/blog/cobra-vs-aca-after-job-loss-2027",
@@ -111,6 +116,11 @@
         "route": "/blog/roth-ira-vs-401k-comparison-2026",
         "title": "Roth IRA vs 401(k) in 2026: Limits, Taxes and What to Fund First",
         "h1": "Roth IRA vs 401(k) in 2026: Limits, Taxes and What to Fund First"
+      },
+      {
+        "route": "/blog/series-ee-savings-bond-rate-november-2026",
+        "title": "Series EE Bond Rate Is 2.90%: Should You Buy Now?",
+        "h1": "Series EE Bond Rate Is 2.90%: Should You Buy Now?"
       },
       {
         "route": "/blog/social-security-cola-2027",
@@ -377,8 +387,8 @@
       {
         "route": "/blog/fdic-deposit-insurance-limits-2026",
         "ratio": 9.48,
-        "textChars": 11359,
-        "htmlBytes": 119775
+        "textChars": 11358,
+        "htmlBytes": 119817
       },
       {
         "route": "/blog/fed-rates-unchanged-april-2026",
@@ -562,9 +572,9 @@
       },
       {
         "route": "/blog/lender-quote-vs-online-calculator",
-        "ratio": 6.5,
-        "textChars": 6817,
-        "htmlBytes": 104954
+        "ratio": 6.49,
+        "textChars": 6816,
+        "htmlBytes": 104976
       },
       {
         "route": "/blog/medicare-advantage-premiums-2027",
@@ -917,8 +927,8 @@
       {
         "route": "/blog/trump-accounts-2026-guide",
         "ratio": 9.88,
-        "textChars": 10148,
-        "htmlBytes": 102663
+        "textChars": 10147,
+        "htmlBytes": 102685
       },
       {
         "route": "/blog/usa-people-search-finance",
@@ -1199,8 +1209,8 @@
       {
         "route": "/calculators/options-profit",
         "ratio": 6.42,
-        "textChars": 5914,
-        "htmlBytes": 92148
+        "textChars": 5921,
+        "htmlBytes": 92204
       },
       {
         "route": "/calculators/pennsylvania",
