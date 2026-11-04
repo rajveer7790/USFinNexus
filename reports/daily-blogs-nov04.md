@@ -28,4 +28,8 @@
 - SEO audit: **316 pages; zero broken internal links, broken images, canonical mismatches, sitemap errors or invalid application schema**
 - Each article: **one H1, six FAQ entities, FAQPage schema, BlogPosting schema, canonical, Open Graph and Twitter metadata**
 - Sitemap: both routes included and ordered newest-first
-- Production deployment and live URL checks: pending GitHub push
+- GitHub production commit: `91988393d6e7af0810e8b13733e97b4c10e3ac1b`
+- Cloudflare Pages deployment: `a0bf6c05-5271-4a8e-96e6-e882e5d85071` — successful
+- Live verification: both article URLs, both WebP images, blog index and blog sitemap returned HTTP 200
+- Live HTML: 1,358 and 1,362 rendered words; one H1, six FAQ entities, FAQPage and BlogPosting schema, and self-referencing canonical on each article
+- Live discovery: both posts are newest-first on the blog index and present in the blog sitemap
