@@ -1,6 +1,6 @@
 {
   "counts": {
-    "pages": 314,
+    "pages": 316,
     "missingTitle": 0,
     "emptyHtml": 0,
     "longTitles": 0,
@@ -9,7 +9,7 @@
     "missingCanonical": 0,
     "canonicalMismatch": 0,
     "duplicateH1Title": 0,
-    "matchingTitleAndH1": 22,
+    "matchingTitleAndH1": 24,
     "lowTextHtmlRatio": 213,
     "brokenInternalLinks": 0,
     "brokenInternalImages": 0,
@@ -22,7 +22,7 @@
     "missingHstsRule": 0
   },
   "findings": {
-    "pages": 314,
+    "pages": 316,
     "missingTitle": [],
     "emptyHtml": [],
     "longTitles": [],
@@ -113,6 +113,11 @@
         "h1": "Prime Rate at 7%: Credit Card and HELOC Cost Guide"
       },
       {
+        "route": "/blog/retirement-income-taxes-2026",
+        "title": "How Retirement Income Is Taxed: 2026 Planning Guide",
+        "h1": "How Retirement Income Is Taxed: 2026 Planning Guide"
+      },
+      {
         "route": "/blog/roth-ira-vs-401k-comparison-2026",
         "title": "Roth IRA vs 401(k) in 2026: Limits, Taxes and What to Fund First",
         "h1": "Roth IRA vs 401(k) in 2026: Limits, Taxes and What to Fund First"
@@ -126,6 +131,11 @@
         "route": "/blog/social-security-cola-2027",
         "title": "Social Security COLA 2027: Confirmed 3.6% Increase and Payment Planning",
         "h1": "Social Security COLA 2027: Confirmed 3.6% Increase and Payment Planning"
+      },
+      {
+        "route": "/blog/tax-credit-refund-scams-2026",
+        "title": "Tax Credit and Refund Scams: 2026 Red-Flag Guide",
+        "h1": "Tax Credit and Refund Scams: 2026 Red-Flag Guide"
       },
       {
         "route": "/blog/year-end-tax-planning-checklist-2026",
@@ -422,9 +432,9 @@
       },
       {
         "route": "/blog/fire-calculator-retirement-goal",
-        "ratio": 8.27,
-        "textChars": 9428,
-        "htmlBytes": 113954
+        "ratio": 8.24,
+        "textChars": 9388,
+        "htmlBytes": 113872
       },
       {
         "route": "/blog/first-time-homebuyer-mortgage-guide-2026",
@@ -1065,8 +1075,8 @@
       {
         "route": "/calculators/crypto-tax",
         "ratio": 7.68,
-        "textChars": 7702,
-        "htmlBytes": 100339
+        "textChars": 7710,
+        "htmlBytes": 100331
       },
       {
         "route": "/calculators/debt-payoff",
@@ -1118,9 +1128,9 @@
       },
       {
         "route": "/calculators/fire-planner",
-        "ratio": 7.02,
-        "textChars": 6868,
-        "htmlBytes": 97868
+        "ratio": 7.01,
+        "textChars": 6861,
+        "htmlBytes": 97827
       },
       {
         "route": "/calculators/florida",
@@ -1149,8 +1159,8 @@
       {
         "route": "/calculators/income-tax",
         "ratio": 8.96,
-        "textChars": 9308,
-        "htmlBytes": 103901
+        "textChars": 9309,
+        "htmlBytes": 103933
       },
       {
         "route": "/calculators/interest-only",
