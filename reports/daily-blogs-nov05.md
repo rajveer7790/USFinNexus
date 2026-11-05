@@ -30,4 +30,9 @@ The existing 249-post source library was checked before drafting. Medicare, ACA,
 - SEO audit: **318 pages; zero broken internal links, broken images, H1 errors, canonical mismatches, schema errors or sitemap errors**
 - Each article: **one H1, six FAQ entities, FAQPage schema, BlogPosting schema, canonical, Open Graph and Twitter metadata**
 - Blog sitemap: both routes included with November 5, 2026 dates
-- Production deployment and live URL verification: pending GitHub push
+- GitHub content commit: `53f7ace2f99c58a188834b0b7358631dbe4ef5ae` on `main`
+- Cloudflare Pages deployment: **successful** at 2026-11-05 13:05:46 UTC
+- Production pages: both returned **HTTP 200** with the expected canonical, one H1, FAQPage schema, BlogPosting schema and hero image reference
+- Production images: both returned **HTTP 200**, `image/webp`, at the exact optimized source sizes
+- Production blog index: both new routes are the newest entries
+- Production blog sitemap: both new routes are present with November 5, 2026 dates
