@@ -289,9 +289,11 @@ M = P*r/(1-(1+r)^(-n)); at zero interest M=P/n. DTI=monthly debt/gross monthly i
 - https://usfinnexus.com/blog/social-security-spousal-benefits-2026
 - https://usfinnexus.com/blog/sp500-vs-real-estate-investing-2026
 - https://usfinnexus.com/blog/spring-2026-housing-market-forecast
+- https://usfinnexus.com/blog/ssi-benefits-2027-payment-amounts
 - https://usfinnexus.com/blog/streamline-refinance-fha-va-usda
 - https://usfinnexus.com/blog/student-loan-idr-recertification-2026
 - https://usfinnexus.com/blog/student-loan-interest-deduction-2026
+- https://usfinnexus.com/blog/student-loan-rap-vs-tiered-standard-2026
 - https://usfinnexus.com/blog/student-loan-repayment-plans-2026-income-driven
 - https://usfinnexus.com/blog/tariffs-housing-market-impact-2026
 - https://usfinnexus.com/blog/tax-credit-refund-scams-2026
