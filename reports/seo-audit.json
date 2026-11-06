@@ -1,6 +1,6 @@
 {
   "counts": {
-    "pages": 318,
+    "pages": 320,
     "missingTitle": 0,
     "emptyHtml": 0,
     "longTitles": 0,
@@ -9,7 +9,7 @@
     "missingCanonical": 0,
     "canonicalMismatch": 0,
     "duplicateH1Title": 0,
-    "matchingTitleAndH1": 26,
+    "matchingTitleAndH1": 28,
     "lowTextHtmlRatio": 213,
     "brokenInternalLinks": 0,
     "brokenInternalImages": 0,
@@ -22,7 +22,7 @@
     "missingHstsRule": 0
   },
   "findings": {
-    "pages": 318,
+    "pages": 320,
     "missingTitle": [],
     "emptyHtml": [],
     "longTitles": [],
@@ -73,6 +73,11 @@
         "h1": "Employer Closed? What Happens to Your 401(k)"
       },
       {
+        "route": "/blog/federal-tax-brackets-standard-deduction-2027",
+        "title": "2027 Tax Brackets and Standard Deduction: IRS Tables",
+        "h1": "2027 Tax Brackets and Standard Deduction: IRS Tables"
+      },
+      {
         "route": "/blog/fha-alternative-credit-scores-2027",
         "title": "FHA Alternative Credit Scores in 2027: Buyer Guide",
         "h1": "FHA Alternative Credit Scores in 2027: Buyer Guide"
@@ -111,6 +116,11 @@
         "route": "/blog/prime-rate-7-percent-credit-cards-heloc",
         "title": "Prime Rate at 7%: Credit Card and HELOC Cost Guide",
         "h1": "Prime Rate at 7%: Credit Card and HELOC Cost Guide"
+      },
+      {
+        "route": "/blog/qualified-opportunity-zones-2027-map-designations",
+        "title": "2027 Opportunity Zone Map: New Designations Explained",
+        "h1": "2027 Opportunity Zone Map: New Designations Explained"
       },
       {
         "route": "/blog/retirement-income-taxes-2026",
@@ -594,7 +604,7 @@
         "route": "/blog/lender-quote-vs-online-calculator",
         "ratio": 6.49,
         "textChars": 6816,
-        "htmlBytes": 104976
+        "htmlBytes": 105003
       },
       {
         "route": "/blog/medicare-advantage-premiums-2027",
@@ -948,7 +958,7 @@
         "route": "/blog/trump-accounts-2026-guide",
         "ratio": 9.88,
         "textChars": 10147,
-        "htmlBytes": 102685
+        "htmlBytes": 102712
       },
       {
         "route": "/blog/usa-people-search-finance",
@@ -1085,8 +1095,8 @@
       {
         "route": "/calculators/crypto-tax",
         "ratio": 7.68,
-        "textChars": 7710,
-        "htmlBytes": 100331
+        "textChars": 7714,
+        "htmlBytes": 100387
       },
       {
         "route": "/calculators/debt-payoff",

@@ -155,6 +155,7 @@ M = P*r/(1-(1+r)^(-n)); at zero interest M=P/n. DTI=monthly debt/gross monthly i
 - https://usfinnexus.com/blog/fed-vs-mortgage-rates-10-year-treasury-2026
 - https://usfinnexus.com/blog/federal-scholarship-tax-credit-2027
 - https://usfinnexus.com/blog/federal-student-loan-interest-rates-2026-27
+- https://usfinnexus.com/blog/federal-tax-brackets-standard-deduction-2027
 - https://usfinnexus.com/blog/fha-alternative-credit-scores-2027
 - https://usfinnexus.com/blog/fha-loan-limits-2026
 - https://usfinnexus.com/blog/fha-loans-first-time-homebuyers-2026
@@ -253,6 +254,7 @@ M = P*r/(1-(1+r)^(-n)); at zero interest M=P/n. DTI=monthly debt/gross monthly i
 - https://usfinnexus.com/blog/pmi-explained-cost-removal-2026
 - https://usfinnexus.com/blog/portfolio-loans-non-qm-mortgages-2026
 - https://usfinnexus.com/blog/prime-rate-7-percent-credit-cards-heloc
+- https://usfinnexus.com/blog/qualified-opportunity-zones-2027-map-designations
 - https://usfinnexus.com/blog/rate-and-term-vs-cashout-refinance
 - https://usfinnexus.com/blog/refinancing-costs-2026-breakdown
 - https://usfinnexus.com/blog/rent-vs-buy-calculator-2026-housing-market
