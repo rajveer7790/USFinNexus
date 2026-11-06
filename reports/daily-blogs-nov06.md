@@ -39,4 +39,10 @@ Both images were visually reviewed, converted from the generated originals, stri
 
 ## Deployment
 
-GitHub and production verification will be recorded after deployment completes.
+- GitHub `main` content commit: `43f8e1078b28d898f57bcc9c5774b622f937db59`
+- Cloudflare Pages check: completed successfully
+- Both article URLs: HTTP 200, correct self-canonical, exactly one H1, one BlogPosting schema and one FAQPage schema
+- Both WebP image URLs: HTTP 200 with `image/webp` content type and expected byte sizes
+- Blog index: the two new posts occupy positions 1 and 2
+- Production blog sitemap: HTTP 200 with exactly one entry for each new URL
+- Verified November 6, 2026 after the Cloudflare deployment completed
