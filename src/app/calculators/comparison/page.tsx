@@ -15,8 +15,8 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Mortgage Loan Comparison Calculator 2026 — Side-by-Side Analysis',
-    description: 'Compare up to 3 mortgage loan scenarios side by side. Instantly see total interest, monthly payments, and lifetime costs across different rates, terms, and down payments.',
+    title: 'Compare Mortgage Loans Side by Side | USFinNexus',
+    description: 'Compare up to three mortgage loans by monthly payment, lifetime interest and total cost. Test different rates, terms and down payments, then export a PDF.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/comparison' },
     openGraph: {
         type: 'website',

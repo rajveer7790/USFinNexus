@@ -38,5 +38,6 @@ export default function Page() {
  'Source: https://dos.ny.gov/beneficial-ownership-disclosure-frequently-asked-questions',
 ]} />
 <p>Business changes can create separate update obligations. Review the latest state instructions when an owner, control arrangement or entity status changes. Do not rely on a third-party article's old headline as your compliance calendar.</p>
+ <p>If the LLC is buying property, use the <Link href="/calculators/mortgage">mortgage payment calculator</Link> to estimate financing costs separately from ownership disclosure.</p>
  </ReviewedGuide>;
 }

@@ -16,7 +16,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Auto Loan Calculator: Monthly Car Payment & Total Interest',
+    title: 'Auto Loan Calculator: Car Payment With Tax & Trade-In',
     description: 'Estimate a monthly car payment, total interest and loan amortization using vehicle price, down payment, trade-in, taxes, fees, APR and loan term.',
     alternates: { canonical: '/calculators/auto-loan' },
     openGraph: {

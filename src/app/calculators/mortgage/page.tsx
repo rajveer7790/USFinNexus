@@ -18,7 +18,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Mortgage Payment Calculator 2026: Monthly PITI & Amortization',
-    description: 'Estimate your monthly mortgage payment with principal, interest, property taxes, homeowners insurance, PMI and HOA fees. View amortization and extra-payment scenarios.',
+    description: 'Estimate your monthly mortgage payment with principal, interest, property taxes, homeowners insurance, PMI and HOA fees. View amortization and export PDF or CSV.',
     alternates: { canonical: '/calculators/mortgage' },
     openGraph: {
         type: 'website',
@@ -78,7 +78,8 @@ export default function MortgagePage() {
             <SemrushIntentSection slug="mortgage" />
             <MortgageSeoContentV2 />
             <section className="mx-auto my-10 max-w-4xl rounded-2xl border border-blue-100 bg-blue-50 p-6">
-                <h2 className="text-xl font-bold text-slate-950">Plan beyond the first payment</h2>
+                <h2 className="text-xl font-bold text-slate-950">Compare your home budget, loan offers and refinance costs</h2>
+                <p className="mt-2 text-slate-700">Start with <Link className="underline" href="/calculators/affordability">how much house you can afford</Link>, then check the <Link className="underline" href="/calculators/amortization">monthly amortization schedule</Link>. Use the <Link className="underline" href="/blog/loan-estimate-comparison-checklist-2026">Loan Estimate comparison checklist</Link> to compare lender quotes. If you already own the home, use the <Link className="underline" href="/calculators/refinance">mortgage refinance calculator</Link> to test closing costs and monthly savings.</p>
                 <p className="mt-2 text-slate-700">If taxes or insurance changed after an escrow analysis, use the <Link className="font-semibold text-blue-700 underline" href="/calculators/escrow-shortage">escrow shortage calculator</Link>. Comparing a current market-rate example? Read the <Link className="font-semibold text-blue-700 underline" href="/blog/mortgage-payment-at-676-september-2026">6.76% mortgage payment guide</Link>.</p>
             </section>
             <CalculatorFAQ faqs={MORTGAGE_FAQS} title="Mortgage Calculator FAQs" />

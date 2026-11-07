@@ -8,11 +8,11 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata: Metadata = {
-    title: '2026 Tax Changes: 20% QBI Deduction Made Permanent',
-    description: 'The One Big Beautiful Bill locked in LLC tax savings permanently. Learn what the permanent 20% QBI deduction means for your LLC in 2026.',
+    title: '2026 QBI Deduction: Section 199A Rules and Limits',
+    description: 'See who qualifies for the 2026 Section 199A QBI deduction, the IRS taxable-income thresholds and a worked example of the regular 20% calculation.',
     openGraph: {
-        title: '2026 Tax Changes: 20% QBI Deduction Made Permanent',
-        description: 'The One Big Beautiful Bill locked in LLC tax savings permanently. Learn what the permanent 20% QBI deduction means for your LLC in 2026.',
+        title: '2026 QBI Deduction: Section 199A Rules and Limits',
+        description: 'See who qualifies for the 2026 Section 199A QBI deduction, the IRS taxable-income thresholds and a worked example of the regular 20% calculation.',
         url: 'https://usfinnexus.com/articles/2026-tax-changes-20-percent-qbi-deduction-permanent',
         type: 'article',
         siteName: 'USFinNexus',
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: '2026 Tax Changes: 20% QBI Deduction Made Permanent',
-        description: 'The One Big Beautiful Bill locked in LLC tax savings permanently. Learn what the permanent 20% QBI deduction means for your LLC in 2026.',
+        title: '2026 QBI Deduction: Section 199A Rules and Limits',
+        description: 'See who qualifies for the 2026 Section 199A QBI deduction, the IRS taxable-income thresholds and a worked example of the regular 20% calculation.',
         images: ['https://usfinnexus.com/images/tax_deduction_hero_1772351400720.png'],
     },
     alternates: {
@@ -33,11 +33,11 @@ export default function ArticlePage() {
     return (
         <>
             <ArticleSchema
-                title="2026 Tax Changes: 20% QBI Deduction Made Permanent"
-                description="The One Big Beautiful Bill locked in LLC tax savings permanently. Learn what the permanent 20% QBI deduction means for your LLC in 2026."
+                title="2026 QBI Deduction: Section 199A Rules and Limits"
+                description="See who qualifies for the 2026 Section 199A QBI deduction, the IRS taxable-income thresholds and a worked example of the regular 20% calculation."
                 url="https://usfinnexus.com/articles/2026-tax-changes-20-percent-qbi-deduction-permanent"
                 datePublished="2026-02-25"
-                dateModified="2026-02-25"
+                dateModified="2026-11-07"
                 authorName="USFinNexus Compliance Team"
             />
         <article className="max-w-4xl mx-auto px-4 py-7 sm:py-9 lg:px-8">
@@ -48,15 +48,15 @@ export default function ArticlePage() {
                     <span className="inline-block px-3 py-1 rounded bg-yellow-100 text-yellow-800 text-xs font-bold uppercase tracking-wider">
                         Tax
                     </span>
-                    <span className="text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>Updated: February 25, 2026</span>
+                    <span className="text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>Updated: November 7, 2026</span>
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight tracking-tight" style={{ color: 'var(--color-text)' }}>
-                    2026 Tax Changes: 20% QBI Deduction Made Permanent - Save Big on Your LLC
+                    2026 QBI Deduction: Section 199A Rules and Income Limits
                 </h1>
 
                 <p className="text-xl leading-relaxed mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    The One Big Beautiful Bill locked in LLC tax savings permanently. The 20% Qualified Business Income (QBI) deduction, originally set to expire in 2025, is now a permanent fixture of the U.S. tax code. Here is what it means for you.
+                    <strong>Quick answer:</strong> Section 199A generally allows eligible self-employed and pass-through business owners to deduct up to 20% of qualified business income. Taxable income, business type, wages and qualified property can affect the amount. The deduction reduces taxable income.
                 </p>
 
                 <div className="flex items-center gap-4 border-t border-b py-4 border-gray-200">
@@ -78,13 +78,13 @@ export default function ArticlePage() {
                     <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-gray-100">
                         <Image src="/images/tax_deduction_hero_1772351400720.png" alt="20% QBI deduction tax savings for LLCs" fill className="object-cover" priority />
                     </div>
-                    <figcaption className="text-center text-sm mt-3 text-gray-500">The permanent 20% QBI deduction is one of the biggest tax wins for small businesses in a decade.</figcaption>
+                    <figcaption className="text-center text-sm mt-3 text-gray-500">Section 199A eligibility and the deduction amount depend on your business and taxable income.</figcaption>
                 </figure>
 
                 <div className="not-prose my-8 p-5 rounded-2xl border border-[#00C853]/30 bg-green-50 flex flex-col sm:flex-row items-start sm:items-center gap-4">
                     <div className="flex-1">
-                        <p className="font-bold text-[#0A192F] text-base mb-1">How much will the QBI deduction save you?</p>
-                        <p className="text-sm text-gray-600">Use our free income tax calculator to see your exact 2026 tax savings from the permanent 20% QBI deduction.</p>
+                        <p className="font-bold text-[#0A192F] text-base mb-1">Estimate your federal income tax</p>
+                        <p className="text-sm text-gray-600">Use the federal tool to model individual brackets and deductions. The separate QBI illustration below estimates the regular deduction component in eligible scenarios.</p>
                     </div>
                     <Link href="/calculators/income-tax" className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#00C853] hover:bg-[#00a844] text-white text-sm font-bold rounded-xl transition-colors whitespace-nowrap flex-shrink-0">
                         <TrendingUp size={15} /> Free Tax Calculator

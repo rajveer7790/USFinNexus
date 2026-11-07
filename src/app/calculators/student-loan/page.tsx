@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     openGraph: {
         type: 'website',
         title: 'Student Loan Payment Calculator 2026: Repayment & Payoff',
-        description: 'See your exact student loan payoff date and how much extra payments save. Free calculator with PDF export.',
+        description: 'Estimate your student loan payoff date and how much extra payments could save. Free calculator with PDF export.',
         url: 'https://usfinnexus.com/calculators/student-loan',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Student Loan Calculator 2026 — USFinNexus' }],
     },

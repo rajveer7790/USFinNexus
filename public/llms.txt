@@ -18,7 +18,7 @@ M = P*r/(1-(1+r)^(-n)); at zero interest M=P/n. DTI=monthly debt/gross monthly i
 
 ## Canonical U.S. calculator catalog
 
-- [Mortgage Calculator](https://usfinnexus.com/calculators/mortgage) — Estimate your monthly mortgage payment with principal, interest, property taxes, homeowners insurance, PMI and HOA fees. View amortization and extra-payment scenarios.
+- [Mortgage Calculator](https://usfinnexus.com/calculators/mortgage) — Estimate your monthly mortgage payment with principal, interest, property taxes, homeowners insurance, PMI and HOA fees. View amortization and export PDF or CSV.
 - [How Much House Can I Afford? Calculator](https://usfinnexus.com/calculators/affordability) — Estimate how much house you can afford using income, recurring debt, down payment, mortgage rate, term and property-tax assumptions. Compare 28% and 43% planning scenarios.
 - [Refinance Savings Calculator](https://usfinnexus.com/calculators/refinance) — Use a mortgage refinance calculator to compare payment savings, refinance costs and break-even timing with your own rate, balance and fee assumptions.
 - [Rent vs. Buy Calculator](https://usfinnexus.com/calculators/rent-vs-buy) — Free rent vs buy calculator. Compare total 5-year costs, home equity, and break-even year. Uses real 2026 appreciation, tax benefits, and investment return data.
@@ -35,9 +35,9 @@ M = P*r/(1-(1+r)^(-n)); at zero interest M=P/n. DTI=monthly debt/gross monthly i
 - [HELOC & Home Equity Line of Credit Calculator](https://usfinnexus.com/calculators/heloc) — Calculate your HELOC payments, available equity, and total interest. See draw-period vs repayment-period costs instantly. Free, no signup required.
 - [Auto Loan Calculator 2026](https://usfinnexus.com/calculators/auto-loan) — Estimate a monthly car payment, total interest and loan amortization using vehicle price, down payment, trade-in, taxes, fees, APR and loan term.
 - [Rental Property Calculator](https://usfinnexus.com/calculators/rental-property) — Analyze rental property investments instantly. Calculate cash flow, cap rate, cash-on-cash return, and NOI for any US rental property. Free real estate investment calculator.
-- [Mortgage Loan Comparison Calculator](https://usfinnexus.com/calculators/comparison) — Compare up to 3 mortgage loan scenarios side by side. Instantly see total interest, monthly payments, and lifetime costs across different rates, terms, and down payments.
+- [Mortgage Loan Comparison Calculator](https://usfinnexus.com/calculators/comparison) — Compare up to three mortgage loans by monthly payment, lifetime interest and total cost. Test different rates, terms and down payments, then export a PDF.
 - [Personal Loan Calculator 2026](https://usfinnexus.com/calculators/personal-loan) — Free personal loan calculator for 2026. Estimate monthly payments, total interest, APR and payoff schedules for debt consolidation or other borrowing.
-- [Retirement Calculator](https://usfinnexus.com/calculators/retirement) — Calculate how much you need to retire comfortably and see if your savings are on track. Free retirement planner with compound growth projections and PDF export.
+- [Retirement Calculator](https://usfinnexus.com/calculators/retirement) — Project your retirement savings using current savings, monthly contributions, investment returns and inflation. See an illustrative 4% withdrawal scenario.
 - [Investment Growth Calculator](https://usfinnexus.com/calculators/investment) — Calculate investment growth with compound interest. See how regular contributions grow over time with interactive charts. Free investment calculator with PDF export.
 - [CD Ladder Calculator](https://usfinnexus.com/calculators/cd-ladder) — Compare three certificate of deposit terms. Enter deposits, APYs and terms to estimate interest and see when each CD becomes available.
 - [Trump Account Calculator](https://usfinnexus.com/calculators/trump-account) — Estimate how a Trump Account could grow from the federal $1,000 seed plus family or employer contributions. Free 2026 projection calculator.
