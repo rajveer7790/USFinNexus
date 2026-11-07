@@ -40,4 +40,9 @@ Both generated images were visually reviewed, copied into the project, converted
 
 ## Deployment
 
-GitHub and production verification will be recorded after deployment completes.
+- GitHub `main` content commit: `722f1393f7321503d8f6669e3fc6cbb656950406`
+- Cloudflare Pages: deployed successfully
+- Both production article URLs return HTTP 200 with exactly one H1, a self-referencing canonical, BlogPosting schema, FAQPage schema and the expected hero-image reference.
+- Both production hero images return HTTP 200 as `image/webp`; verified sizes are 61,826 bytes and 80,052 bytes.
+- The live blog index lists the Child Tax Credit guide first and the mortgage-payment guide second.
+- Each new URL appears exactly once in the live blog sitemap.
