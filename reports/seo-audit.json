@@ -1,6 +1,6 @@
 {
   "counts": {
-    "pages": 320,
+    "pages": 322,
     "missingTitle": 0,
     "emptyHtml": 0,
     "longTitles": 0,
@@ -22,7 +22,7 @@
     "missingHstsRule": 0
   },
   "findings": {
-    "pages": 320,
+    "pages": 322,
     "missingTitle": [],
     "emptyHtml": [],
     "longTitles": [],
@@ -381,8 +381,8 @@
       {
         "route": "/blog/debt-to-income-ratio-dti-calculator-2026",
         "ratio": 8.09,
-        "textChars": 9307,
-        "htmlBytes": 114992
+        "textChars": 9308,
+        "htmlBytes": 115061
       },
       {
         "route": "/blog/direct-indexing-tax-loss-harvesting-2026",
@@ -447,8 +447,8 @@
       {
         "route": "/blog/fha-mortgage-pmi-mip-2026",
         "ratio": 9.72,
-        "textChars": 9868,
-        "htmlBytes": 101519
+        "textChars": 9865,
+        "htmlBytes": 101537
       },
       {
         "route": "/blog/fire-calculator-retirement-goal",
@@ -650,15 +650,15 @@
       },
       {
         "route": "/blog/mortgage-broker-fees",
-        "ratio": 5.5,
-        "textChars": 4108,
-        "htmlBytes": 74649
+        "ratio": 5.48,
+        "textChars": 4092,
+        "htmlBytes": 74605
       },
       {
         "route": "/blog/mortgage-calculator-comparison-2026",
-        "ratio": 7.39,
-        "textChars": 7730,
-        "htmlBytes": 104534
+        "ratio": 7.38,
+        "textChars": 7714,
+        "htmlBytes": 104490
       },
       {
         "route": "/blog/mortgage-cash-reserves-after-closing-2026",
@@ -680,9 +680,9 @@
       },
       {
         "route": "/blog/mortgage-preapproval-prequalification",
-        "ratio": 7.16,
-        "textChars": 7657,
-        "htmlBytes": 106915
+        "ratio": 7.15,
+        "textChars": 7641,
+        "htmlBytes": 106871
       },
       {
         "route": "/blog/mortgage-rate-lock-before-fed-meeting-2026",
@@ -728,9 +728,9 @@
       },
       {
         "route": "/blog/no-pmi-mortgages-down-payment",
-        "ratio": 7.01,
-        "textChars": 7242,
-        "htmlBytes": 103281
+        "ratio": 7,
+        "textChars": 7232,
+        "htmlBytes": 103255
       },
       {
         "route": "/blog/opportunity-zones-real-estate-investing",
@@ -764,9 +764,9 @@
       },
       {
         "route": "/blog/piggyback-mortgage-80-10-10-strategy",
-        "ratio": 7.33,
-        "textChars": 8177,
-        "htmlBytes": 111619
+        "ratio": 7.32,
+        "textChars": 8170,
+        "htmlBytes": 111635
       },
       {
         "route": "/blog/pmi-explained-cost-removal-2026",
@@ -842,15 +842,15 @@
       },
       {
         "route": "/blog/second-mortgage-guide",
-        "ratio": 5.54,
-        "textChars": 4146,
-        "htmlBytes": 74828
+        "ratio": 5.52,
+        "textChars": 4130,
+        "htmlBytes": 74784
       },
       {
         "route": "/blog/selling-house-with-mortgage",
-        "ratio": 5.87,
-        "textChars": 4439,
-        "htmlBytes": 75661
+        "ratio": 5.85,
+        "textChars": 4423,
+        "htmlBytes": 75617
       },
       {
         "route": "/blog/short-term-rental-regulations-2026",
@@ -1022,9 +1022,9 @@
       },
       {
         "route": "/calculators/affordability",
-        "ratio": 9.14,
-        "textChars": 10564,
-        "htmlBytes": 115598
+        "ratio": 9.13,
+        "textChars": 10555,
+        "htmlBytes": 115577
       },
       {
         "route": "/calculators/amortization",
@@ -1059,14 +1059,14 @@
       {
         "route": "/calculators/budget",
         "ratio": 7.83,
-        "textChars": 8857,
-        "htmlBytes": 113163
+        "textChars": 8867,
+        "htmlBytes": 113213
       },
       {
         "route": "/calculators/california",
-        "ratio": 7.53,
-        "textChars": 8118,
-        "htmlBytes": 107828
+        "ratio": 7.52,
+        "textChars": 8102,
+        "htmlBytes": 107784
       },
       {
         "route": "/calculators/closing-costs",
@@ -1082,9 +1082,9 @@
       },
       {
         "route": "/calculators/comparison",
-        "ratio": 8.42,
-        "textChars": 8324,
-        "htmlBytes": 98899
+        "ratio": 8.41,
+        "textChars": 8314,
+        "htmlBytes": 98873
       },
       {
         "route": "/calculators/credit-card",
@@ -1094,8 +1094,8 @@
       },
       {
         "route": "/calculators/crypto-tax",
-        "ratio": 7.68,
-        "textChars": 7714,
+        "ratio": 7.69,
+        "textChars": 7717,
         "htmlBytes": 100387
       },
       {
@@ -1106,9 +1106,9 @@
       },
       {
         "route": "/calculators/down-payment",
-        "ratio": 6.92,
-        "textChars": 6508,
-        "htmlBytes": 94028
+        "ratio": 6.91,
+        "textChars": 6498,
+        "htmlBytes": 94002
       },
       {
         "route": "/calculators/drip",
@@ -1154,9 +1154,9 @@
       },
       {
         "route": "/calculators/florida",
-        "ratio": 6.95,
-        "textChars": 7034,
-        "htmlBytes": 101222
+        "ratio": 6.94,
+        "textChars": 7018,
+        "htmlBytes": 101178
       },
       {
         "route": "/calculators/georgia",
@@ -1178,9 +1178,9 @@
       },
       {
         "route": "/calculators/income-tax",
-        "ratio": 8.96,
-        "textChars": 9309,
-        "htmlBytes": 103933
+        "ratio": 8.95,
+        "textChars": 9302,
+        "htmlBytes": 103940
       },
       {
         "route": "/calculators/interest-only",
@@ -1274,9 +1274,9 @@
       },
       {
         "route": "/calculators/rent-vs-buy",
-        "ratio": 8.42,
-        "textChars": 8043,
-        "htmlBytes": 95482
+        "ratio": 8.41,
+        "textChars": 8036,
+        "htmlBytes": 95498
       },
       {
         "route": "/calculators/rental-property",
@@ -1304,9 +1304,9 @@
       },
       {
         "route": "/calculators/texas",
-        "ratio": 6.62,
-        "textChars": 6634,
-        "htmlBytes": 100268
+        "ratio": 6.6,
+        "textChars": 6618,
+        "htmlBytes": 100224
       },
       {
         "route": "/calculators/trump-account",
