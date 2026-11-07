@@ -1,3 +1,4 @@
+import CalculatorAnswer from '@/components/CalculatorAnswer';
 import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -16,7 +17,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: "Mortgage Calculator | Free Tool",
+    title: 'Mortgage Payment Calculator 2026: Monthly PITI & Amortization',
     description: 'Estimate your monthly mortgage payment with principal, interest, property taxes, homeowners insurance, PMI and HOA fees. View amortization and extra-payment scenarios.',
     alternates: { canonical: '/calculators/mortgage' },
     openGraph: {
@@ -72,6 +73,7 @@ export default function MortgagePage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Mortgage Calculator', item: '/calculators/mortgage' }]} />
             <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 9, 2026 &middot; 2026 FHFA and HUD loan limits referenced where applicable</p>
+            <CalculatorAnswer>Estimate monthly mortgage principal and interest from the loan amount, rate and term. Add annual property tax and homeowners insurance divided by 12 to get PITI. Budget for applicable mortgage insurance and HOA dues separately. For a biweekly comparison, open the <Link href="/calculators/biweekly-mortgage" className="underline">biweekly mortgage calculator</Link>.</CalculatorAnswer>
             <MortgageCalculatorClient />
             <SemrushIntentSection slug="mortgage" />
             <MortgageSeoContentV2 />

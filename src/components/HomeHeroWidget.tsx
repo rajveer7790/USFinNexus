@@ -123,7 +123,7 @@ export default function HomeHeroWidget() {
                         style={{ accentColor: '#9B5CFF' }}
                     />
                     <p className="text-[9px]" style={{ color: 'rgba(255,255,255,0.45)' }}>
-                        Starting rate uses Freddie Mac&apos;s Oct. 8, 2026 average; your quote will vary.
+                        Starting rate uses Freddie Mac&apos;s {PMMS.label} average; your quote will vary.
                     </p>
                 </div>
 

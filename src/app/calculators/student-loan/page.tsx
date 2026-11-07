@@ -1,3 +1,4 @@
+import CalculatorAnswer from '@/components/CalculatorAnswer';
 import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
@@ -57,6 +58,7 @@ export default function StudentLoanPage() {
                 url="https://usfinnexus.com/calculators/student-loan"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Student Loan', item: '/calculators/student-loan' }]} />
+            <CalculatorAnswer>Compare student loan payment and payoff estimates based on your balance, interest rate and repayment assumptions. Extra principal can reduce interest over time. Confirm federal repayment eligibility, forgiveness and payment amounts with your servicer or Federal Student Aid before changing your plan.</CalculatorAnswer>
             <StudentLoanClient />
             <SemrushIntentSection slug="student-loan" />
 

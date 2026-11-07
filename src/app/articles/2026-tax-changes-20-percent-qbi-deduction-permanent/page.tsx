@@ -1,7 +1,8 @@
+import QbiEstimate from '@/components/QbiEstimate';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { CheckCircle2, DollarSign, TrendingUp, Info } from 'lucide-react';
+import { CheckCircle2, TrendingUp, Info } from 'lucide-react';
 import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -95,7 +96,7 @@ export default function ArticlePage() {
                     The Qualified Business Income (QBI) deduction, also known as the Section 199A deduction, allows owners of pass-through entities-such as LLCs, S-corporations, sole proprietorships, and partnerships-to deduct up to <strong>20% of their qualified business income</strong> from their personal tax returns.
                 </p>
                 <p>
-                    In practical terms, if your LLC generates $100,000 in qualified business income, you can deduct $20,000 before calculating your federal income tax. This can result in thousands of dollars in annual savings.
+                    In practical terms, if you have $100,000 in qualified business income, the regular 20% QBI component starts at $20,000 before the taxable-income cap and other limits. That amount is a deduction, not a tax credit.
                 </p>
 
                 <div className="bg-green-50 border-l-4 border-green-600 p-6 my-8 rounded-r-xl">
@@ -119,27 +120,11 @@ export default function ArticlePage() {
                     <li><strong>Sole proprietors</strong> and independent contractors.</li>
                 </ul>
                 <p>
-                    However, there are income thresholds and limitations for Specified Service Trades or Businesses (SSTBs)-such as doctors, lawyers, and consultants-once taxable income exceeds certain levels ($191,950 for single filers and $383,900 for joint filers in 2026).
+                    However, there are income thresholds and limitations for Specified Service Trades or Businesses (SSTBs)-such as doctors, lawyers, and consultants-once taxable income exceeds certain levels ($201,750 for single filers and $403,500 for joint filers in 2026).
                 </p>
 
-                <h2>How Much Can You Save?</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 not-prose">
-                    <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm text-center">
-                        <DollarSign className="w-8 h-8 text-green-500 mx-auto mb-3" />
-                        <h4 className="font-bold text-2xl mb-1" style={{ color: 'var(--color-navy)' }}>$10,000</h4>
-                        <p className="text-sm text-gray-600">Savings on $50K income at 22% bracket</p>
-                    </div>
-                    <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm text-center">
-                        <DollarSign className="w-8 h-8 text-green-500 mx-auto mb-3" />
-                        <h4 className="font-bold text-2xl mb-1" style={{ color: 'var(--color-navy)' }}>$4,400</h4>
-                        <p className="text-sm text-gray-600">Tax saved on $100K income at 22% bracket</p>
-                    </div>
-                    <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm text-center">
-                        <DollarSign className="w-8 h-8 text-green-500 mx-auto mb-3" />
-                        <h4 className="font-bold text-2xl mb-1" style={{ color: 'var(--color-navy)' }}>$7,200</h4>
-                        <p className="text-sm text-gray-600">Tax saved on $150K income at 24% bracket</p>
-                    </div>
-                </div>
+                <p>See the <a href="https://www.irs.gov/irb/2025-45_IRB">IRS 2026 inflation adjustments</a> and <a href="https://www.irs.gov/forms-pubs/about-form-8995">Form 8995 guidance</a> for filing rules, including when the separate minimum deduction may apply.</p>
+                <QbiEstimate />
 
                 <h2>Tips to Maximize Your QBI Deduction in 2026</h2>
                 <ul className="list-none pl-0 space-y-4 my-8 not-prose">

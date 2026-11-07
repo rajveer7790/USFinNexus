@@ -1,3 +1,4 @@
+import CalculatorAnswer from '@/components/CalculatorAnswer';
 import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
@@ -57,7 +58,8 @@ export default function ComparisonPage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Loan Comparison', item: '/calculators/comparison' }]} />
             <div className="pt-8">
-                <ComparisonClient />
+                <CalculatorAnswer>Compare loan offers using the same balance and holding period where possible. A lower payment can reflect a longer term and higher lifetime interest. Check origination charges, points, remaining balance, and cash needed up front alongside the rate and monthly payment.</CalculatorAnswer>
+            <ComparisonClient />
             </div>
             <ComparisonSeoContent />
             <CalculatorFAQ faqs={COMPARISON_FAQS} title="Loan Comparison — Frequently Asked Questions" />

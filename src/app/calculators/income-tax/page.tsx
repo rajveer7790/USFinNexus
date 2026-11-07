@@ -1,3 +1,4 @@
+import CalculatorAnswer from '@/components/CalculatorAnswer';
 import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
@@ -15,7 +16,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: "2026 Federal Income Tax Calculator | Free Tool",
+    title: '2026 Federal Income Tax Calculator: Brackets & Deductions',
     description: 'Estimate 2026 U.S. federal income tax using official IRS tax brackets and standard deductions. Includes marginal rate, effective rate and an employee FICA estimate.',
     alternates: { canonical: '/calculators/income-tax' },
     openGraph: {
@@ -65,7 +66,12 @@ export default function IncomeTaxPage() {
                 url="https://usfinnexus.com/calculators/income-tax"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Income Tax Calculator', item: '/calculators/income-tax' }]} />
+            <CalculatorAnswer>Estimate 2026 federal income tax from filing status, income and deductions using marginal brackets. Each bracket applies to the income that falls within it. State tax, payroll withholding and final filing liability can differ. Verify the deductions and credits that apply to you.</CalculatorAnswer>
             <IncomeTaxClient />
+            <p className="mx-auto max-w-5xl px-4 text-sm text-slate-700">
+                Payroll assumptions: <a className="underline" href="https://www.irs.gov/taxtopics/tc424">IRS traditional 401(k) guidance</a>{' '}
+                and <a className="underline" href="https://www.irs.gov/publications/p969">IRS HSA guidance</a>.
+            </p>
             <IncomeTaxSeoContent />
             <SemrushIntentSection slug="income-tax" />
             <CalculatorFAQ faqs={INCOME_TAX_FAQS} title="2026 Federal Income Tax Calculator FAQs" />

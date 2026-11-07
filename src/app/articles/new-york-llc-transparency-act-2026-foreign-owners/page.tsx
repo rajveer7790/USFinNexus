@@ -1,3 +1,4 @@
+import EditorialPdfButton from '@/components/EditorialPdfButton';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ReviewedGuide from '@/components/ReviewedGuide';
@@ -19,8 +20,23 @@ export default function Page() {
 <h2>Federal BOI, state disclosure and real estate reporting are separate</h2>
 <p>A federal exemption does not answer every state-law question. Conversely, a state business filing does not automatically satisfy a federal reporting rule. Keep a separate checklist for each obligation and use the official agency responsible for it.</p>
 <p>For the federal company-reporting framework, read our <Link href="/guides/boi-reporting-2026">BOI reporting guide</Link>. Property buyers should also see the <Link href="/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do">current FinCEN residential real estate rule status</Link>; it concerns a different rule and a court vacatur, not the same state filing.</p>
+<div className="overflow-x-auto">
+<table><caption>Federal CTA vs. New York beneficial ownership disclosure</caption><thead><tr><th scope="col">Issue</th><th scope="col">Federal FinCEN BOI</th><th scope="col">New York disclosure</th></tr></thead><tbody>
+<tr><th scope="row">U.S.-formed LLC</th><td>Exempt under current federal rules.</td><td>Outside this state disclosure requirement under current state guidance.</td></tr>
+<tr><th scope="row">Foreign-country LLC</th><td>Check federal registration, reporting-company definition and exemptions.</td><td>Check New York authorization and any applicable exemption attestation.</td></tr>
+<tr><th scope="row">Official instructions</th><td><a href="https://www.fincen.gov/boi">FinCEN BOI</a></td><td><a href="https://dos.ny.gov/beneficial-ownership-disclosure-frequently-asked-questions">New York Department of State FAQ</a></td></tr>
+</tbody></table></div>
 <h2>A practical review checklist</h2>
 <ol><li>Locate the formation jurisdiction and legal entity type.</li><li>Confirm New York authorization and its effective date.</li><li>Check the current state FAQ for reporting scope and any exemption attestation.</li><li>Document the filing deadline and who is responsible.</li><li>Use the state's official submission instructions; keep proof of any filing.</li></ol>
+<EditorialPdfButton title="Download NY LLC review checklist" filename="ny-llc-disclosure-review-checklist.pdf" lines={[
+ 'Educational checklist. Confirm current rules and your entity status before filing.',
+ '1. Locate the country of formation and confirm that the entity is an LLC.',
+ '2. Record the effective date of authorization to do business in New York.',
+ '3. Check whether you must file a disclosure or an exemption attestation.',
+ '4. Record the applicable deadline and assign a responsible person.',
+ '5. Use the official instructions and retain proof of any submission.',
+ 'Source: https://dos.ny.gov/beneficial-ownership-disclosure-frequently-asked-questions',
+]} />
 <p>Business changes can create separate update obligations. Review the latest state instructions when an owner, control arrangement or entity status changes. Do not rely on a third-party article's old headline as your compliance calendar.</p>
  </ReviewedGuide>;
 }

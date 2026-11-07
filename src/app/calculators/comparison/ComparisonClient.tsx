@@ -21,6 +21,7 @@ const DEFAULT_SCENARIOS: Scenario[] = [
 ];
 
 export default function ComparisonClient() {
+    const [exportStatus, setExportStatus] = useState('');
     const [scenarios, setScenarios] = useState<Scenario[]>(DEFAULT_SCENARIOS);
 
     const update = (i: number, field: keyof Scenario, val: string | number) => {
@@ -54,6 +55,27 @@ export default function ComparisonClient() {
         ['Total Payments', (_: Scenario, r: typeof results[0]) => r ? formatCurrency(r.totalPayments) : '-'],
     ] as [string, (s: Scenario, r: typeof results[0]) => string][];
 
+    async function downloadComparison() {
+        setExportStatus('');
+        try {
+            const [{ jsPDF }, { default: autoTable }] = await Promise.all([import('jspdf'), import('jspdf-autotable')]);
+            const doc = new jsPDF({ orientation: 'landscape' });
+            doc.setFontSize(17);
+            doc.text('USFinNexus mortgage comparison', 14, 18);
+            doc.setFontSize(10);
+            doc.text('Educational estimate. Review fees and assumptions with your lender.', 14, 25);
+            autoTable(doc, {
+                startY: 31,
+                head: [['Metric', ...dScenarios.map(scenario => scenario.label.slice(0, 70))]],
+                body: compareRows.map(([label, render]) => [label, ...dScenarios.map((scenario, index) => render(scenario, results[index]))]),
+            });
+            doc.save('USFinNexus-Mortgage-Comparison.pdf');
+            setExportStatus('Comparison PDF generated.');
+        } catch {
+            setExportStatus('Could not generate the comparison PDF.');
+        }
+    }
+
     const bestPayment = results.reduce((best, r, i) => {
         if (!r) return best;
         if (best === -1 || r.totalMonthly < (results[best]?.totalMonthly ?? Infinity)) return i;
@@ -75,7 +97,7 @@ export default function ComparisonClient() {
                     <span className="text-xs font-black uppercase tracking-[0.3em] text-[#0da6f2]">Scenario Analysis</span>
                 </div>
                 <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight bg-gradient-to-r from-navy-900 via-[#0da6f2] to-navy-900 bg-clip-text text-transparent">
-                    Side-by-Side Comparison
+                    Mortgage Loan Comparison Calculator
                 </h1>
                 <p className="text-gray-500 max-w-2xl font-medium text-lg">Compare up to 3 mortgage scenarios simultaneously. Edit any field to see results update instantly.</p>
             </div>
@@ -118,14 +140,14 @@ export default function ComparisonClient() {
                         <thead>
                             <tr>
                                 <th>Metric</th>
-                                {scenarios.map((s, i) => <th key={i} style={{ color: COLORS[i] }}>{s.label}</th>)}
+                                {dScenarios.map((s, i) => <th key={i} style={{ color: COLORS[i] }}>{s.label}</th>)}
                             </tr>
                         </thead>
                         <tbody>
                             {compareRows.map(([label, fn]) => (
                                 <tr key={String(label)}>
                                     <td className="font-semibold" style={{ color: 'var(--color-text-muted)' }}>{label}</td>
-                                    {scenarios.map((s, i) => <td key={i} className="font-bold">{fn(s, results[i])}</td>)}
+                                    {dScenarios.map((s, i) => <td key={i} className="font-bold">{fn(s, results[i])}</td>)}
                                 </tr>
                             ))}
                         </tbody>
@@ -133,6 +155,11 @@ export default function ComparisonClient() {
                 </div>
             </div>
 
+            <div className="my-4">
+                <button type="button" className="btn-outline" onClick={downloadComparison}
+                    disabled={scenarios !== dScenarios || results.some(result => !result)}>Download comparison PDF</button>
+                <p role="status" className="text-sm">{exportStatus}</p>
+            </div>
             <DisclaimerBanner calculatorName="the Loan Comparison Calculator" />
             </div>
         </div>

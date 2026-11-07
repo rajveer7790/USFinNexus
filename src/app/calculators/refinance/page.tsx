@@ -1,3 +1,4 @@
+import CalculatorAnswer from '@/components/CalculatorAnswer';
 import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
@@ -67,6 +68,7 @@ export default function RefinancePage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Mortgage Refinance Calculator', item: '/calculators/refinance' }]} />
             <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed September 9, 2026 &middot; Use a current lender quote for rate and fee assumptions</p>
+            <CalculatorAnswer>Compare your current and proposed mortgage principal-and-interest payments, closing costs and term. A simple payment break-even divides refinance costs by the monthly payment reduction. Cash-out proceeds are additional borrowing, and a longer term can increase total cost even when the monthly payment drops.</CalculatorAnswer>
             <RefinanceClient />
             <SemrushIntentSection slug="refinance" />
             <RefinanceSeoContentV2 />

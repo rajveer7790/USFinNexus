@@ -13,16 +13,19 @@ export default function RefinanceClient() {
     const [newRate, setNewRate] = useState(6.25);
     const [newTerm, setNewTerm] = useState(30);
     const [closingCosts, setClosingCosts] = useState(4500);
+    const [cashOut, setCashOut] = useState(0);
+    const [financeClosingCosts, setFinanceClosingCosts] = useState(false);
+    const complexScenario = cashOut > 0 || financeClosingCosts;
 
     const result = useMemo(() => {
-        if (currentBalance <= 0) return null;
+        if (currentBalance <= 0 || currentMonthlyPayment <= 0 || monthsRemaining < 1 || newRate < 0 || closingCosts < 0 || cashOut < 0) return null;
         try {
             return calcRefinance({
                 currentBalance, currentRate, currentMonthlyPayment,
-                currentMonthsRemaining: monthsRemaining, newRate, newTermYears: newTerm, closingCosts,
+                currentMonthsRemaining: monthsRemaining, newRate, newTermYears: newTerm, closingCosts, cashOut, financeClosingCosts,
             });
         } catch { return null; }
-    }, [currentBalance, currentRate, currentMonthlyPayment, monthsRemaining, newRate, newTerm, closingCosts]);
+    }, [currentBalance, currentRate, currentMonthlyPayment, monthsRemaining, newRate, newTerm, closingCosts, cashOut, financeClosingCosts]);
 
     const isWorthIt = result && result.monthlySavings > 0 && result.netSavings > 0 && result.breakEvenMonths !== Infinity && result.breakEvenMonths <= 60;
     void Shield; void DollarSign;
@@ -125,9 +128,19 @@ export default function RefinanceClient() {
                                         <input type="number" className="glass-input pl-8" value={closingCosts} onChange={e => setClosingCosts(+e.target.value)} step={500} min={0} />
                                     </div>
                                     <p className="text-xs mt-2 font-bold text-gray-400 uppercase tracking-tighter italic">
-                                        Typically $3,000-$6,000 (1-3% of loan amount)
+                                        Enter costs from your Loan Estimate.
                                     </p>
                                 </div>
+                                <label className="block text-sm font-semibold">
+                                    Cash out at closing ($)
+                                    <input type="number" min={0} step={500} className="glass-input mt-1 w-full"
+                                        value={cashOut} onChange={event => setCashOut(Number(event.target.value))} />
+                                </label>
+                                <label className="flex items-center gap-2 text-sm font-semibold">
+                                    <input type="checkbox" checked={financeClosingCosts}
+                                        onChange={event => setFinanceClosingCosts(event.target.checked)} />
+                                    Add closing costs to the new loan
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -144,12 +157,14 @@ export default function RefinanceClient() {
                                         </div>
                                         <div>
                                             <p className={`text-xl font-black mb-2 ${isWorthIt ? 'text-emerald-500' : 'text-amber-500'}`}>
-                                                {isWorthIt ? 'Potential Savings After Break-Even' : 'Review Break-Even Before Refinancing'}
+                                                {complexScenario ? 'Review the new loan and net cash flows' : isWorthIt ? 'Potential Savings After Break-Even' : 'Review Break-Even Before Refinancing'}
                                             </p>
                                             <p className="text-sm font-medium text-gray-500">
-                                                {result.monthlySavings > 0
-                                                    ? `You break-even in ${result.breakEvenMonths} months (${(result.breakEvenMonths / 12).toFixed(1)} yrs). After that, it's pure savings.`
-                                                    : 'Your new payment is higher than the current one. Consider a different term or rate.'}
+                                                {complexScenario
+                                                    ? 'Simple payment break-even is unavailable when you borrow extra cash or finance fees. Compare balances and cash flows over your intended holding period.'
+                                                    : Number.isFinite(result.breakEvenMonths)
+                                                        ? `Payment savings recover upfront costs in about ${result.breakEvenMonths} months. This ignores differences in equity and the time value of money.`
+                                                        : 'Payment savings do not recover closing costs within the overlapping loan terms.'}
                                             </p>
                                         </div>
                                     </div>
@@ -169,10 +184,10 @@ export default function RefinanceClient() {
                                     <div className="glass-card p-4 sm:p-6 text-center group">
                                         <p className="text-xs font-black uppercase tracking-[0.3em] text-[#0da6f2] mb-4">Break-Even</p>
                                         <div className="text-3xl sm:text-4xl font-black tracking-tighter tabular-nums transition-all group-hover:scale-105 duration-500">
-                                            {result.breakEvenMonths === Infinity ? '∞' : result.breakEvenMonths}
+                                            {result.breakEvenMonths === Infinity ? '—' : result.breakEvenMonths}
                                         </div>
                                         <p className="text-xs mt-3 font-bold uppercase tracking-widest text-gray-500 border-t border-white/5 pt-3">
-                                            {result.breakEvenMonths === Infinity ? 'Never breaks even' : `Months to recover closing costs`}
+                                            {result.breakEvenMonths === Infinity ? 'No simple break-even' : `Months to recover closing costs`}
                                         </p>
                                     </div>
                                 </div>
@@ -189,9 +204,11 @@ export default function RefinanceClient() {
                                         </div>
                                         {[
                                             { label: 'Monthly Payment', current: formatCurrency(currentMonthlyPayment), newVal: formatCurrency(result.newMonthlyPayment) },
-                                            { label: 'Total Cost', current: formatCurrency(result.totalCurrentCost), newVal: formatCurrency(result.totalNewCost) },
-                                            { label: 'Break-Even Date', current: '-', newVal: result.breakEvenMonths !== Infinity ? formatMonthYear(result.breakEvenDate) : 'Never' },
-                                            { label: 'Net Savings (lifetime)', current: '-', newVal: formatCurrency(result.netSavings) },
+                                            { label: 'New loan balance', current: formatCurrency(currentBalance), newVal: formatCurrency(result.newLoanAmount) },
+                                            { label: 'Closing costs paid upfront', current: '-', newVal: formatCurrency(result.upfrontClosingCosts) },
+                                            { label: 'Total payments and upfront costs', current: formatCurrency(result.totalCurrentCost), newVal: formatCurrency(result.totalNewCost) },
+                                            { label: 'Break-Even Date', current: '-', newVal: result.breakEvenMonths !== Infinity ? formatMonthYear(result.breakEvenDate) : 'Not applicable' },
+                                            { label: 'Lifetime net cash-flow difference', current: '-', newVal: formatCurrency(result.netSavings) },
                                         ].map(row => (
                                             <div key={row.label} className="grid grid-cols-3 gap-2 sm:gap-4 py-2 sm:py-3 border-b border-white/5 last:border-0 hover:bg-white/5 px-2 rounded-lg transition-colors group">
                                                 <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">{row.label}</span>
@@ -206,7 +223,7 @@ export default function RefinanceClient() {
                                     <div className="flex gap-4">
                                         <Info className="flex-shrink-0 text-emerald-400" size={20} />
                                         <p className="text-sm font-medium leading-relaxed text-gray-600">
-                                            A break-even under 24 months is typically excellent. Plan to stay in the home long enough to exceed the break-even point to realize savings. Factor in closing costs carefully.
+                                            The lifetime net difference offsets payments by cash received at closing. It compares full schedules of potentially different lengths and does not model appreciation, taxes, or the time value of money. Cash out increases the loan balance.
                                         </p>
                                     </div>
                                 </div>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { AlertTriangle } from 'lucide-react';
 
 interface DisclaimerBannerProps {
@@ -18,7 +19,9 @@ export default function DisclaimerBanner({
                 They do not constitute financial, tax, mortgage, or legal advice.
                 Actual payments, rates, taxes, and insurance will vary.{' '}
                 <strong>Always consult a licensed financial professional</strong> before making any financial decisions.
-                No personal data is transmitted by this calculator.
+                Calculator inputs are processed in your browser. See the{' '}
+                <Link href="/disclaimer" className="underline">full disclaimer</Link> and{' '}
+                <Link href="/privacy" className="underline">privacy policy</Link>.
             </p>
         </div>
     );

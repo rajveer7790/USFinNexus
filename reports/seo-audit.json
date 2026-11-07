@@ -1,6 +1,6 @@
 {
   "counts": {
-    "pages": 322,
+    "pages": 323,
     "missingTitle": 0,
     "emptyHtml": 0,
     "longTitles": 0,
@@ -10,7 +10,7 @@
     "canonicalMismatch": 0,
     "duplicateH1Title": 0,
     "matchingTitleAndH1": 28,
-    "lowTextHtmlRatio": 213,
+    "lowTextHtmlRatio": 214,
     "brokenInternalLinks": 0,
     "brokenInternalImages": 0,
     "invalidApplicationSchema": 0,
@@ -22,7 +22,7 @@
     "missingHstsRule": 0
   },
   "findings": {
-    "pages": 322,
+    "pages": 323,
     "missingTitle": [],
     "emptyHtml": [],
     "longTitles": [],
@@ -188,9 +188,9 @@
       },
       {
         "route": "/articles/2026-tax-changes-20-percent-qbi-deduction-permanent",
-        "ratio": 5.42,
-        "textChars": 5527,
-        "htmlBytes": 101921
+        "ratio": 6.05,
+        "textChars": 6017,
+        "htmlBytes": 99414
       },
       {
         "route": "/articles/california-new-york-texas-state-boi-rules-2026",
@@ -200,15 +200,15 @@
       },
       {
         "route": "/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
-        "ratio": 7.78,
-        "textChars": 6577,
-        "htmlBytes": 84567
+        "ratio": 7.94,
+        "textChars": 6777,
+        "htmlBytes": 85332
       },
       {
         "route": "/articles/new-york-llc-transparency-act-2026-foreign-owners",
-        "ratio": 7.38,
-        "textChars": 6231,
-        "htmlBytes": 84395
+        "ratio": 7.63,
+        "textChars": 6726,
+        "htmlBytes": 88115
       },
       {
         "route": "/articles",
@@ -986,105 +986,111 @@
       },
       {
         "route": "/calculators/affordability/salary-100000",
-        "ratio": 6.17,
-        "textChars": 4898,
-        "htmlBytes": 79413
+        "ratio": 6.21,
+        "textChars": 4940,
+        "htmlBytes": 79555
       },
       {
         "route": "/calculators/affordability/salary-120000",
-        "ratio": 6.17,
-        "textChars": 4898,
-        "htmlBytes": 79389
+        "ratio": 6.21,
+        "textChars": 4940,
+        "htmlBytes": 79531
       },
       {
         "route": "/calculators/affordability/salary-150000",
-        "ratio": 6.17,
-        "textChars": 4898,
-        "htmlBytes": 79389
+        "ratio": 6.21,
+        "textChars": 4940,
+        "htmlBytes": 79531
       },
       {
         "route": "/calculators/affordability/salary-200000",
-        "ratio": 6.17,
-        "textChars": 4898,
-        "htmlBytes": 79415
+        "ratio": 6.21,
+        "textChars": 4940,
+        "htmlBytes": 79557
       },
       {
         "route": "/calculators/affordability/salary-60000",
-        "ratio": 6.17,
-        "textChars": 4895,
-        "htmlBytes": 79367
+        "ratio": 6.21,
+        "textChars": 4937,
+        "htmlBytes": 79509
       },
       {
         "route": "/calculators/affordability/salary-75000",
-        "ratio": 6.17,
-        "textChars": 4895,
-        "htmlBytes": 79367
+        "ratio": 6.21,
+        "textChars": 4937,
+        "htmlBytes": 79509
       },
       {
         "route": "/calculators/affordability",
-        "ratio": 9.13,
-        "textChars": 10555,
-        "htmlBytes": 115577
+        "ratio": 9.33,
+        "textChars": 10983,
+        "htmlBytes": 117680
       },
       {
         "route": "/calculators/amortization",
-        "ratio": 6.85,
-        "textChars": 6973,
-        "htmlBytes": 101807
+        "ratio": 7.12,
+        "textChars": 7404,
+        "htmlBytes": 103942
       },
       {
         "route": "/calculators/arizona",
-        "ratio": 5.83,
-        "textChars": 5876,
-        "htmlBytes": 100733
+        "ratio": 5.87,
+        "textChars": 5918,
+        "htmlBytes": 100875
       },
       {
         "route": "/calculators/arm",
-        "ratio": 7.85,
-        "textChars": 7817,
-        "htmlBytes": 99579
+        "ratio": 7.88,
+        "textChars": 7859,
+        "htmlBytes": 99721
       },
       {
         "route": "/calculators/auto-loan",
-        "ratio": 6.91,
-        "textChars": 7349,
-        "htmlBytes": 106408
+        "ratio": 7.53,
+        "textChars": 8254,
+        "htmlBytes": 109569
       },
       {
         "route": "/calculators/biweekly-mortgage",
-        "ratio": 5.19,
-        "textChars": 5019,
-        "htmlBytes": 96623
+        "ratio": 5.23,
+        "textChars": 5061,
+        "htmlBytes": 96765
       },
       {
         "route": "/calculators/budget",
-        "ratio": 7.83,
-        "textChars": 8867,
-        "htmlBytes": 113213
+        "ratio": 7.86,
+        "textChars": 8909,
+        "htmlBytes": 113355
       },
       {
         "route": "/calculators/california",
-        "ratio": 7.52,
-        "textChars": 8102,
-        "htmlBytes": 107784
+        "ratio": 7.55,
+        "textChars": 8144,
+        "htmlBytes": 107926
+      },
+      {
+        "route": "/calculators/cd-ladder",
+        "ratio": 5.23,
+        "textChars": 4169,
+        "htmlBytes": 79779
       },
       {
         "route": "/calculators/closing-costs",
-        "ratio": 7.33,
-        "textChars": 7967,
-        "htmlBytes": 108665
+        "ratio": 7.36,
+        "textChars": 8009,
+        "htmlBytes": 108807
       },
       {
         "route": "/calculators/colorado",
-        "ratio": 5.85,
-        "textChars": 5897,
-        "htmlBytes": 100827
+        "ratio": 5.88,
+        "textChars": 5939,
+        "htmlBytes": 100969
       },
       {
         "route": "/calculators/comparison",
-        "ratio": 8.41,
-        "textChars": 8314,
-        "htmlBytes": 98873
+        "ratio": 8.68,
+        "textChars": 8785,
+        "htmlBytes": 101234
       },
       {
         "route": "/calculators/credit-card",
@@ -1100,15 +1106,15 @@
       },
       {
         "route": "/calculators/debt-payoff",
-        "ratio": 8.94,
-        "textChars": 9294,
-        "htmlBytes": 103976
+        "ratio": 8.97,
+        "textChars": 9336,
+        "htmlBytes": 104118
       },
       {
         "route": "/calculators/down-payment",
-        "ratio": 6.91,
-        "textChars": 6498,
-        "htmlBytes": 94002
+        "ratio": 7.19,
+        "textChars": 6901,
+        "htmlBytes": 95997
       },
       {
         "route": "/calculators/drip",
@@ -1118,9 +1124,9 @@
       },
       {
         "route": "/calculators/dti",
-        "ratio": 7.91,
-        "textChars": 8097,
-        "htmlBytes": 102342
+        "ratio": 8.14,
+        "textChars": 8479,
+        "htmlBytes": 104123
       },
       {
         "route": "/calculators/escrow-shortage",
@@ -1130,21 +1136,21 @@
       },
       {
         "route": "/calculators/extra-payment",
-        "ratio": 5.25,
-        "textChars": 5117,
-        "htmlBytes": 97432
+        "ratio": 5.29,
+        "textChars": 5159,
+        "htmlBytes": 97574
       },
       {
         "route": "/calculators/fha-va-usda",
-        "ratio": 6.52,
-        "textChars": 6873,
-        "htmlBytes": 105370
+        "ratio": 6.55,
+        "textChars": 6915,
+        "htmlBytes": 105512
       },
       {
         "route": "/calculators/fha",
-        "ratio": 8.32,
-        "textChars": 8841,
-        "htmlBytes": 106216
+        "ratio": 8.35,
+        "textChars": 8883,
+        "htmlBytes": 106358
       },
       {
         "route": "/calculators/fire-planner",
@@ -1154,39 +1160,39 @@
       },
       {
         "route": "/calculators/florida",
-        "ratio": 6.94,
-        "textChars": 7018,
-        "htmlBytes": 101178
+        "ratio": 6.97,
+        "textChars": 7060,
+        "htmlBytes": 101320
       },
       {
         "route": "/calculators/georgia",
-        "ratio": 5.85,
-        "textChars": 5894,
-        "htmlBytes": 100769
+        "ratio": 5.88,
+        "textChars": 5936,
+        "htmlBytes": 100911
       },
       {
         "route": "/calculators/heloc",
-        "ratio": 6.77,
-        "textChars": 7211,
-        "htmlBytes": 106530
+        "ratio": 6.8,
+        "textChars": 7253,
+        "htmlBytes": 106672
       },
       {
         "route": "/calculators/illinois",
-        "ratio": 5.85,
-        "textChars": 5897,
-        "htmlBytes": 100827
+        "ratio": 5.88,
+        "textChars": 5939,
+        "htmlBytes": 100969
       },
       {
         "route": "/calculators/income-tax",
-        "ratio": 8.95,
-        "textChars": 9302,
-        "htmlBytes": 103940
+        "ratio": 9.52,
+        "textChars": 10394,
+        "htmlBytes": 109125
       },
       {
         "route": "/calculators/interest-only",
-        "ratio": 9.4,
-        "textChars": 9597,
-        "htmlBytes": 102113
+        "ratio": 9.43,
+        "textChars": 9639,
+        "htmlBytes": 102255
       },
       {
         "route": "/calculators/investment",
@@ -1196,9 +1202,9 @@
       },
       {
         "route": "/calculators/massachusetts",
-        "ratio": 5.86,
-        "textChars": 5926,
-        "htmlBytes": 101158
+        "ratio": 5.89,
+        "textChars": 5968,
+        "htmlBytes": 101300
       },
       {
         "route": "/calculators/mortgage-payoff",
@@ -1208,33 +1214,33 @@
       },
       {
         "route": "/calculators/mortgage",
-        "ratio": 8.92,
-        "textChars": 11259,
-        "htmlBytes": 126244
+        "ratio": 9.12,
+        "textChars": 11720,
+        "htmlBytes": 128453
       },
       {
         "route": "/calculators/new-jersey",
-        "ratio": 5.84,
-        "textChars": 5890,
-        "htmlBytes": 100917
+        "ratio": 5.87,
+        "textChars": 5932,
+        "htmlBytes": 101059
       },
       {
         "route": "/calculators/new-york",
-        "ratio": 5.85,
-        "textChars": 5893,
-        "htmlBytes": 100819
+        "ratio": 5.88,
+        "textChars": 5935,
+        "htmlBytes": 100961
       },
       {
         "route": "/calculators/north-carolina",
-        "ratio": 5.9,
-        "textChars": 6028,
-        "htmlBytes": 102146
+        "ratio": 5.93,
+        "textChars": 6070,
+        "htmlBytes": 102288
       },
       {
         "route": "/calculators/ohio",
-        "ratio": 5.82,
-        "textChars": 5861,
-        "htmlBytes": 100785
+        "ratio": 5.85,
+        "textChars": 5903,
+        "htmlBytes": 100927
       },
       {
         "route": "/calculators/options-profit",
@@ -1244,15 +1250,15 @@
       },
       {
         "route": "/calculators/pennsylvania",
-        "ratio": 5.92,
-        "textChars": 6076,
-        "htmlBytes": 102580
+        "ratio": 5.96,
+        "textChars": 6118,
+        "htmlBytes": 102722
       },
       {
         "route": "/calculators/personal-loan",
-        "ratio": 6.6,
-        "textChars": 6732,
-        "htmlBytes": 101960
+        "ratio": 6.9,
+        "textChars": 7173,
+        "htmlBytes": 103921
       },
       {
         "route": "/calculators/pmi-removal",
@@ -1262,21 +1268,21 @@
       },
       {
         "route": "/calculators/points-buydown",
-        "ratio": 8.31,
-        "textChars": 7723,
-        "htmlBytes": 92956
+        "ratio": 8.34,
+        "textChars": 7765,
+        "htmlBytes": 93098
       },
       {
         "route": "/calculators/refinance",
-        "ratio": 7.4,
-        "textChars": 8137,
-        "htmlBytes": 109888
+        "ratio": 7.84,
+        "textChars": 8875,
+        "htmlBytes": 113202
       },
       {
         "route": "/calculators/rent-vs-buy",
-        "ratio": 8.41,
-        "textChars": 8036,
-        "htmlBytes": 95498
+        "ratio": 8.45,
+        "textChars": 8078,
+        "htmlBytes": 95640
       },
       {
         "route": "/calculators/rental-property",
@@ -1286,15 +1292,15 @@
       },
       {
         "route": "/calculators/retirement",
-        "ratio": 6.77,
-        "textChars": 6553,
-        "htmlBytes": 96860
+        "ratio": 7.05,
+        "textChars": 6964,
+        "htmlBytes": 98737
       },
       {
         "route": "/calculators/student-loan",
-        "ratio": 5.62,
-        "textChars": 5349,
-        "htmlBytes": 95160
+        "ratio": 5.95,
+        "textChars": 5774,
+        "htmlBytes": 97031
       },
       {
         "route": "/calculators/temporary-buydown",
@@ -1304,9 +1310,9 @@
       },
       {
         "route": "/calculators/texas",
-        "ratio": 6.6,
-        "textChars": 6618,
-        "htmlBytes": 100224
+        "ratio": 6.64,
+        "textChars": 6660,
+        "htmlBytes": 100366
       },
       {
         "route": "/calculators/trump-account",
@@ -1316,27 +1322,27 @@
       },
       {
         "route": "/calculators/va",
-        "ratio": 7.84,
-        "textChars": 8007,
-        "htmlBytes": 102087
+        "ratio": 7.87,
+        "textChars": 8049,
+        "htmlBytes": 102229
       },
       {
         "route": "/calculators/virginia",
-        "ratio": 5.83,
-        "textChars": 5876,
-        "htmlBytes": 100785
-      },
-      {
-        "route": "/calculators/washington",
-        "ratio": 5.84,
-        "textChars": 5894,
+        "ratio": 5.86,
+        "textChars": 5918,
         "htmlBytes": 100927
       },
       {
+        "route": "/calculators/washington",
+        "ratio": 5.87,
+        "textChars": 5936,
+        "htmlBytes": 101069
+      },
+      {
         "route": "/calculators",
-        "ratio": 2.7,
-        "textChars": 4911,
-        "htmlBytes": 181576
+        "ratio": 2.72,
+        "textChars": 5018,
+        "htmlBytes": 184290
       },
       {
         "route": "/canada/mortgage-calculator",
@@ -1413,8 +1419,8 @@
       {
         "route": "/",
         "ratio": 4.2,
-        "textChars": 9098,
-        "htmlBytes": 216555
+        "textChars": 9197,
+        "htmlBytes": 219091
       },
       {
         "route": "/methodology",
@@ -1425,14 +1431,14 @@
       {
         "route": "/mortgage-rates",
         "ratio": 6.02,
-        "textChars": 4459,
-        "htmlBytes": 74037
+        "textChars": 4460,
+        "htmlBytes": 74045
       },
       {
         "route": "/privacy-focused-mortgage-calculator",
-        "ratio": 6.81,
-        "textChars": 6281,
-        "htmlBytes": 92257
+        "ratio": 6.84,
+        "textChars": 6323,
+        "htmlBytes": 92399
       },
       {
         "route": "/privacy",

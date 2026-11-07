@@ -51,16 +51,23 @@ const SOCIAL_SECURITY_WAGE_BASE_2026 = 184_500;
 
 export default function IncomeTaxClient() {
     const [income, setIncome] = useState(100000);
+    const [traditional401k, setTraditional401k] = useState(0);
+    const [payrollHsa, setPayrollHsa] = useState(0);
+    const [payPeriods, setPayPeriods] = useState(26);
+    const [localWithholding, setLocalWithholding] = useState(0);
     const [status, setStatus] = useState<FilingStatus>('single');
     const [useItemized, setUseItemized] = useState('standard');
     const [itemizedAmount, setItemizedAmount] = useState(15000);
 
     const taxCalculation = useMemo(() => {
         const grossIncome = Math.max(0, income);
+        const hsa = Math.min(grossIncome, Math.max(0, payrollHsa));
+        const deferred = Math.min(grossIncome - hsa, Math.max(0, traditional401k));
+        const ficaWages = grossIncome - hsa;
         const deduction = useItemized === 'itemized'
             ? Math.max(0, itemizedAmount)
             : DEDUCTIONS_2026[status];
-        const taxableIncome = Math.max(0, grossIncome - deduction);
+        const taxableIncome = Math.max(0, grossIncome - hsa - deferred - deduction);
 
         let totalTax = 0;
         let prevLimit = 0;
@@ -79,16 +86,16 @@ export default function IncomeTaxClient() {
         const effectiveRate = grossIncome > 0 ? (totalTax / grossIncome) * 100 : 0;
 
         // Employee-side FICA estimate. This calculator does not model self-employment tax,
-        // credits, AMT, NIIT, pre-tax payroll deductions, or state/local taxes.
-        const ssTax = Math.min(grossIncome, SOCIAL_SECURITY_WAGE_BASE_2026) * 0.062;
-        const medicareTax = grossIncome * 0.0145;
+        // credits, AMT, NIIT or automatic state/local taxes.
+        const ssTax = Math.min(ficaWages, SOCIAL_SECURITY_WAGE_BASE_2026) * 0.062;
+        const medicareTax = ficaWages * 0.0145;
         const additionalMedicareThreshold = status === 'married' ? 250_000 : 200_000;
-        const additionalMedicare = Math.max(0, grossIncome - additionalMedicareThreshold) * 0.009;
+        const additionalMedicare = Math.max(0, ficaWages - additionalMedicareThreshold) * 0.009;
         const totalFica = ssTax + medicareTax + additionalMedicare;
-        const takeHomePay = Math.max(0, grossIncome - totalTax - totalFica);
+        const takeHomePay = Math.max(0, grossIncome - hsa - deferred - totalTax - totalFica);
 
         return { taxableIncome, totalTax, marginalRate: marginalRate * 100, effectiveRate, totalFica, takeHomePay };
-    }, [income, status, useItemized, itemizedAmount]);
+    }, [income, status, useItemized, itemizedAmount, traditional401k, payrollHsa]);
 
     const InputSection = (
         <div className="glass-card p-4 sm:p-6 space-y-5">
@@ -109,6 +116,21 @@ export default function IncomeTaxClient() {
                     onChange={(val) => setStatus(val as FilingStatus)}
                 />
             </div>
+
+            <details className="rounded-lg border p-3">
+                <summary className="cursor-pointer font-semibold">Pre-tax contributions and pay frequency</summary>
+                <div className="mt-3 space-y-3">
+                    <LabeledInput label="Annual traditional 401(k) deferrals" prefix="$" type="number" min={0} value={traditional401k} onChange={event => setTraditional401k(Number(event.target.value))} />
+                    <LabeledInput label="Annual eligible cafeteria-plan HSA payroll contributions" prefix="$" type="number" min={0} value={payrollHsa} onChange={event => setPayrollHsa(Number(event.target.value))} />
+                    <LabeledInput label="State and local taxes per paycheck (your estimate)" prefix="$" type="number" min={0} value={localWithholding} onChange={event => setLocalWithholding(Number(event.target.value))} />
+                    <label className="block text-sm font-semibold">Pay frequency
+                        <select className="glass-input mt-1 w-full" value={payPeriods} onChange={event => setPayPeriods(Number(event.target.value))}>
+                            <option value={52}>Weekly</option><option value={26}>Biweekly</option><option value={24}>Semimonthly</option><option value={12}>Monthly</option>
+                        </select>
+                    </label>
+                    <p className="text-xs">Enter only eligible amounts within applicable limits. Use gross wages before these contributions. Exclude Roth deferrals and HSA contributions made outside payroll.</p>
+                </div>
+            </details>
 
             <div className="pt-6 border-t border-gray-200 space-y-6">
                 <span className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2 block">Deduction type</span>
@@ -132,10 +154,15 @@ export default function IncomeTaxClient() {
     const ResultsSection = (
         <div className="space-y-6">
             <div className="glass-panel p-4 sm:p-6 border-l-4 border-l-[#00C853] relative overflow-hidden">
-                <p className="text-sm font-bold uppercase tracking-wider text-gray-500 mb-2">Estimated after federal income tax & employee FICA</p>
+                <p className="text-sm font-bold uppercase tracking-wider text-gray-500 mb-2">Annual amount after modeled contributions and federal taxes</p>
                 <p className="text-3xl sm:text-4xl md:text-5xl font-black text-navy-900 tabular-nums tracking-tighter">
                     ${taxCalculation.takeHomePay.toLocaleString('en-US', { maximumFractionDigits: 0 })}
                 </p>
+            </div>
+
+            <div className="glass-card p-4">
+                <p className="font-semibold">Estimated net per pay period: ${Math.max(0, taxCalculation.takeHomePay / payPeriods - Math.max(0, localWithholding)).toLocaleString('en-US', { maximumFractionDigits: 2 })}</p>
+                <p className="text-xs">Annual estimated liability divided by pay periods, less the state and local amount you entered. It does not calculate actual payroll withholding.</p>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
@@ -162,7 +189,7 @@ export default function IncomeTaxClient() {
 
             <div className="p-4 rounded-xl border border-blue-200 bg-blue-50 text-blue-900 text-xs font-medium space-y-1">
                 <p><strong>Tax year 2026:</strong> IRS rates remain 10%, 12%, 22%, 24%, 32%, 35% and 37%. The 2026 standard deduction is $16,100 single, $32,200 married filing jointly and $24,150 head of household.</p>
-                <p>This is an educational estimate, not a tax return. It excludes credits, AMT, investment taxes, most payroll adjustments, state/local tax and self-employment tax.</p>
+                <p>This is an educational estimate, not a tax return. It excludes credits, AMT, investment taxes, other payroll adjustments, automated state/local tax and self-employment tax.</p>
             </div>
         </div>
     );

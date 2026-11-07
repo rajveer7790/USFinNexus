@@ -1,3 +1,4 @@
+import CalculatorAnswer from '@/components/CalculatorAnswer';
 import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
@@ -56,6 +57,7 @@ export default function RetirementPage() {
                 url="https://usfinnexus.com/calculators/retirement"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Retirement Planner', item: '/calculators/retirement' }]} />
+            <CalculatorAnswer>Project retirement savings using a starting balance, contributions, years and an assumed return. Test different returns and inflation assumptions before using the projection for planning. A steady growth rate is an illustration and cannot show the order of real market gains and losses.</CalculatorAnswer>
             <RetirementClient />
             <RetirementSeoContent />
             <CalculatorFAQ faqs={RETIREMENT_FAQS} title="Retirement Planning — Frequently Asked Questions" />

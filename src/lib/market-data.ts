@@ -1,7 +1,7 @@
 /** Official, source-dated context. Calculator inputs remain editable scenarios. */
 export const PMMS = {
-    date: '2026-10-22', label: 'October 22, 2026',
-    thirtyYear: 7.32, fifteenYear: 6.68,
+    date: '2026-11-05', label: 'November 5, 2026',
+    thirtyYear: 7.18, fifteenYear: 6.57,
     source: 'https://www.freddiemac.com/pmms',
 } as const;
 

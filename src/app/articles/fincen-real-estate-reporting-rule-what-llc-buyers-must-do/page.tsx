@@ -22,6 +22,8 @@ export default function Page() {
 <h2>What to ask before closing</h2>
 <ol><li>Which exact filing or document is being requested?</li><li>Which current rule, agreement or underwriting requirement is the basis?</li><li>Who is responsible for collecting and protecting the information?</li><li>Does the request rely on a historical deadline that has since changed?</li><li>Has the adviser checked the current FinCEN notice and any subsequent court action?</li></ol>
 <p>Other closing requirements remain relevant. A vacated reporting rule does not eliminate title review, lender documentation or the need to verify payment instructions. Ask for a clear explanation and send sensitive documents through a verified channel.</p>
+<h2>Estimate the cost of financing separately</h2>
+<p>Use the <Link href="/calculators/mortgage">mortgage payment calculator</Link> for PITI or the <Link href="/calculators/affordability">affordability calculator</Link> to test a purchase budget. These tools cannot determine FinCEN reporting status.</p>
 <h2>How this page will be used</h2>
 <p>This page provides a dated status check rather than a prediction of the appeal. Recheck the official agency notice close to the transaction date. If a professional advises that a filing is required, ask them to identify the current authority and how it applies to the specific transfer.</p>
  </ReviewedGuide>;

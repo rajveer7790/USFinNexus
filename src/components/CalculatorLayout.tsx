@@ -132,10 +132,10 @@ export default function CalculatorLayout({
                             </div>
                             <div className="space-y-3">
                                 {[
-                                    { k: '30-Yr Avg · Oct 22', v: PMMS.thirtyYear.toFixed(2) + '%' },
-                                    { k: '15-Yr Avg · Oct 22', v: PMMS.fifteenYear.toFixed(2) + '%' },
-                                    { k: 'Primary Residence DTI', v: '43%' },
-                                    { k: 'PMI Required below', v: '20% Down' },
+                                    { k: `30-Yr Avg · ${PMMS.label}`, v: PMMS.thirtyYear.toFixed(2) + '%' },
+                                    { k: `15-Yr Avg · ${PMMS.label}`, v: PMMS.fifteenYear.toFixed(2) + '%' },
+                                    { k: 'DTI guidelines', v: 'Vary by program' },
+                                    { k: 'Conventional PMI', v: 'Often below 20% down' },
                                 ].map(bench => (
                                     <div key={bench.k} className="flex items-center justify-between pb-3 border-b border-slate-50 last:border-0 last:pb-0">
                                         <span className="text-xs font-bold text-slate-400 uppercase tracking-tight">{bench.k}</span>

@@ -1,3 +1,4 @@
+import CalculatorAnswer from '@/components/CalculatorAnswer';
 import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
@@ -57,6 +58,7 @@ export default function PersonalLoanPage() {
                 url="https://usfinnexus.com/calculators/personal-loan"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Personal Loan Calculator', item: '/calculators/personal-loan' }]} />
+            <CalculatorAnswer>Estimate a personal loan payment from the amount borrowed, interest rate and term. If an origination fee is withheld, you receive less cash even though repayment is based on the full loan amount. Compare proceeds, payment, total cost and estimated APR when reviewing offers.</CalculatorAnswer>
             <PersonalLoanClient />
 
             <SemrushIntentSection slug="personal-loan" />

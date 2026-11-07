@@ -30,6 +30,7 @@ const CALC_PRIORITY: Record<string, number> = {
     '/calculators/personal-loan': 0.80,
     '/calculators/retirement': 0.80,
     '/calculators/investment': 0.80,
+    '/calculators/cd-ladder': 0.80,
     '/calculators/trump-account': 0.90,
     '/calculators/fire-planner': 0.80,
     '/calculators/points-buydown': 0.78,
