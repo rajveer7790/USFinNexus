@@ -1,3 +1,4 @@
+import CalculatorAnswer from '@/components/CalculatorAnswer';
 import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
@@ -14,8 +15,8 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Free Retirement Calculator 2026 — Plan Your Nest Egg',
-    description: 'Calculate how much you need to retire comfortably and see if your savings are on track. Free retirement planner with compound growth projections and PDF export.',
+    title: 'Retirement Savings Calculator 2026: Project Your Nest Egg',
+    description: 'Project your retirement savings using current savings, monthly contributions, investment returns and inflation. See an illustrative 4% withdrawal scenario.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/retirement' },
     openGraph: {
         type: 'website',
@@ -56,6 +57,7 @@ export default function RetirementPage() {
                 url="https://usfinnexus.com/calculators/retirement"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Retirement Planner', item: '/calculators/retirement' }]} />
+            <CalculatorAnswer>Project retirement savings using a starting balance, contributions, years and an assumed return. Test different returns and inflation assumptions before using the projection for planning. A steady growth rate is an illustration and cannot show the order of real market gains and losses.</CalculatorAnswer>
             <RetirementClient />
             <RetirementSeoContent />
             <CalculatorFAQ faqs={RETIREMENT_FAQS} title="Retirement Planning — Frequently Asked Questions" />

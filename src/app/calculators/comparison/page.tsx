@@ -1,3 +1,4 @@
+import CalculatorAnswer from '@/components/CalculatorAnswer';
 import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
@@ -14,8 +15,8 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Mortgage Loan Comparison Calculator 2026 — Side-by-Side Analysis',
-    description: 'Compare up to 3 mortgage loan scenarios side by side. Instantly see total interest, monthly payments, and lifetime costs across different rates, terms, and down payments.',
+    title: 'Compare Mortgage Loans Side by Side | USFinNexus',
+    description: 'Compare up to three mortgage loans by monthly payment, lifetime interest and total cost. Test different rates, terms and down payments, then export a PDF.',
     alternates: { canonical: 'https://usfinnexus.com/calculators/comparison' },
     openGraph: {
         type: 'website',
@@ -57,7 +58,8 @@ export default function ComparisonPage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#calculators' }, { name: 'Loan Comparison', item: '/calculators/comparison' }]} />
             <div className="pt-8">
-                <ComparisonClient />
+                <CalculatorAnswer>Compare loan offers using the same balance and holding period where possible. A lower payment can reflect a longer term and higher lifetime interest. Check origination charges, points, remaining balance, and cash needed up front alongside the rate and monthly payment.</CalculatorAnswer>
+            <ComparisonClient />
             </div>
             <ComparisonSeoContent />
             <CalculatorFAQ faqs={COMPARISON_FAQS} title="Loan Comparison — Frequently Asked Questions" />

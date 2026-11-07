@@ -12,7 +12,7 @@ import {
 const HomeHeroWidget = dynamic(() => import('@/components/HomeHeroWidget'));
 
 export const metadata: Metadata = {
-    title: 'Free U.S. Mortgage & Finance Calculators 2026',
+    title: 'Free U.S. Mortgage & Tax Calculators 2026 | USFinNexus',
     description: 'Free U.S. financial calculators for mortgages, home affordability, refinancing, debt, loans, retirement and federal taxes. No account required.',
     alternates: { canonical: '/' },
     openGraph: {
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
         locale: 'en_US',
         url: 'https://usfinnexus.com/',
         siteName: 'USFinNexus',
-        title: 'Free U.S. Mortgage & Finance Calculators 2026',
+        title: 'Free U.S. Mortgage & Tax Calculators 2026 | USFinNexus',
         description: 'Free U.S. mortgage and personal-finance calculators with clear assumptions and no account required.',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus financial calculators' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Free U.S. Mortgage & Finance Calculators 2026',
+        title: 'Free U.S. Mortgage & Tax Calculators 2026 | USFinNexus',
         description: 'Free U.S. mortgage and personal-finance calculators with clear assumptions and no account required.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -71,6 +71,7 @@ const TOOLS = [
     { href: '/calculators/comparison', icon: Scale, title: 'Loan Comparison Calculator', desc: 'Compare loan offers side by side.', cat: 'loans' },
     { href: '/calculators/retirement', icon: TrendingUp, title: 'Retirement Calculator', desc: 'Project retirement savings under stated assumptions.', cat: 'wealth' },
     { href: '/calculators/fire-planner', icon: TrendingUp, title: 'FIRE Retirement Calculator', desc: 'Explore financial-independence scenarios.', cat: 'wealth' },
+    { href: '/calculators/cd-ladder', icon: PiggyBank, title: 'CD Ladder Calculator', desc: 'Compare CD maturity dates and estimated interest.', cat: 'wealth' },
     { href: '/calculators/investment', icon: LineChart, title: 'Compound Interest Calculator', desc: 'Project compounding with contributions.', cat: 'wealth' },
     { href: '/calculators/drip', icon: LineChart, title: 'Dividend Reinvestment Calculator', desc: 'Model dividend reinvestment assumptions.', cat: 'wealth' },
     { href: '/calculators/income-tax', icon: FileText, title: '2026 Federal Income Tax Calculator', desc: 'Uses official 2026 IRS brackets and standard deductions.', badge: 'new', cat: 'wealth' },
@@ -184,7 +185,7 @@ export default function HomePage() {
                     <div className="neo-hero-left">
                         <div className="neo-status neo-reveal"><span className="neo-status-pulse" /> U.S. Financial Planning Tools</div>
                         <h1 className="neo-h1">
-                            <span className="neo-h1-w1">Free U.S. Financial</span>{' '}
+                            <span className="neo-h1-w1">Free U.S. Mortgage &amp; Finance</span>{' '}
                             <span className="neo-h1-w3">Calculators</span>
                         </h1>
                         <p className="neo-hero-p neo-reveal neo-reveal--d2">
@@ -237,7 +238,7 @@ export default function HomePage() {
                     <p className="neo-sec-p">Each URL targets a distinct financial question to keep the site useful for people and clear for search engines.</p>
                     <Link href="/calculators/mortgage" className="neo-tool-hero">
                         <div><span className="neo-tool-badge neo-badge-hot">Most Popular</span><h3>Mortgage Calculator</h3><p>Estimate principal, interest, taxes, insurance, PMI and HOA, with amortization details.</p></div>
-                        <span className="neo-hero-launch"><Home size={15} /> Open Calculator <ArrowRight size={14} /></span>
+                        <span className="neo-hero-launch"><Home size={15} /> Estimate Monthly Mortgage PITI <ArrowRight size={14} /></span>
                     </Link>
                     <div className="neo-tools-grid">
                         {TOOLS.filter((tool) => tool.href !== '/calculators/mortgage').map((tool) => (

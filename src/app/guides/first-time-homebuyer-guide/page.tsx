@@ -1,3 +1,4 @@
+import HomeHeroWidget from '@/components/HomeHeroWidget';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -113,11 +114,15 @@ export default function FirstTimeHomebuyerGuidePage() {
                     <div>
                         <h3 className="text-2xl font-bold text-navy-900 mt-0 mb-2">Clear to Close (CTC) & Closing Day</h3>
                         <p className="mb-0">
-                            Usually three days before closing, your lender issues the &quot;Clear to Close&quot; and sends you the <strong>Closing Disclosure (CD)</strong>. This document tells you the exact, to-the-penny amount of cash you need to wire to the title company. On Closing Day, you arrive at the title attorney&apos;s office, sign 150 pages of legal documents until your hand cramps, hand over your massive wire transfer confirmation, and finally get the keys to your new home!
+                            For most mortgages, you must receive the <strong>Closing Disclosure (CD)</strong> at least three business days before closing. Review its cash-to-close amount and compare the final terms with your Loan Estimate. Confirm any wiring instructions by calling your closing agent at a verified number you already have.
                         </p>
                     </div>
                 </div>
 
+                <section className="not-prose mx-auto my-8 max-w-xl" aria-label="Quick mortgage payment estimate">
+                    <h2 className="mb-3 text-xl font-bold">Estimate your monthly mortgage payment</h2>
+                    <HomeHeroWidget />
+                </section>
                 <p className="text-center font-bold text-lg text-navy-900 mt-12 pt-8 border-t border-gray-200">
                     Ready to do the math? Run your scenarios through our <Link href="/calculators/mortgage" className="text-blue-600 hover:underline">Comprehensive Mortgage Calculator</Link>.
                 </p>

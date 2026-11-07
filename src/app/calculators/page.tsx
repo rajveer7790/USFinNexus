@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const TOOLS = [
     // Mortgage & Housing
     { href: '/calculators/mortgage', icon: Home, title: 'Mortgage Calculator', desc: 'Full PITI + amortization. Instant PDF export.', badge: 'hot', cat: 'mortgage' },
-    { href: '/calculators/affordability', icon: DollarSign, title: 'Home Affordability', desc: 'CFPB 28/43 DTI guidelines.', badge: 'hot', cat: 'mortgage' },
+    { href: '/calculators/affordability', icon: DollarSign, title: 'Home Affordability', desc: 'Compare purchase-price estimates at different DTI assumptions.', badge: 'hot', cat: 'mortgage' },
     { href: '/calculators/refinance', icon: TrendingUp, title: 'Refinance Calculator', desc: 'Monthly savings & break-even point.', badge: 'hot', cat: 'mortgage' },
     { href: '/calculators/rent-vs-buy', icon: ArrowLeftRight, title: 'Rent vs. Buy', desc: '5-year total cost comparison.', cat: 'mortgage' },
     { href: '/calculators/rental-property', icon: Home, title: 'Rental Property ROI', desc: 'Cash flow & Cap Rate analyzer.', badge: 'new', cat: 'mortgage' },
@@ -54,6 +54,7 @@ const TOOLS = [
     { href: '/calculators/temporary-buydown', icon: Percent, title: 'Temporary Buydown', desc: 'Model 1-0, 2-1 and 3-2-1 subsidies.', badge: 'new', cat: 'mortgage' },
     { href: '/calculators/escrow-shortage', icon: Home, title: 'Escrow Shortage', desc: 'Explain payment jumps and repayment.', badge: 'new', cat: 'mortgage' },
     { href: '/calculators/affordability/by-salary', icon: DollarSign, title: 'Affordability by Salary', desc: 'Compare home prices by income.', badge: 'new', cat: 'mortgage' },
+    { href: '/calculators/cd-ladder', icon: PiggyBank, title: 'CD Ladder Calculator', desc: 'Compare CD maturity dates and estimated interest.', cat: 'wealth' },
     { href: '/calculators/investment', icon: LineChart, title: 'Compound Interest', desc: 'Investment growth calculator.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/trump-account', icon: PiggyBank, title: 'Trump Account 2026', desc: '$1,000 seed + family contribution growth.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/drip', icon: LineChart, title: 'DRIP Forecaster', desc: 'Dividend reinvestment plan.', badge: 'new', cat: 'wealth' },

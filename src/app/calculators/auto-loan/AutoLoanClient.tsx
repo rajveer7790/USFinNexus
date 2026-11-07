@@ -14,8 +14,16 @@ export default function AutoLoanClient() {
     const [rate, setRate] = useState(7.5);
     const [termMonths, setTermMonths] = useState(60);
 
+    const [insurance, setInsurance] = useState(0);
+    const [fuel, setFuel] = useState(0);
+    const [maintenance, setMaintenance] = useState(0);
+    const [resale, setResale] = useState(0);
+    const ownershipInputs = [insurance, fuel, maintenance, resale];
+    const hasOwnershipInputs = ownershipInputs.some(value => value > 0);
+    const validOwnershipInputs = ownershipInputs.every(value => Number.isFinite(value) && value >= 0);
+
     const result = useMemo(() => {
-        if (vehiclePrice <= 0) return null;
+        if (vehiclePrice <= 0 || downPayment < 0 || tradeIn < 0 || tradeIn > vehiclePrice || salesTax < 0 || rate < 0 || downPayment + tradeIn > vehiclePrice + (vehiclePrice - tradeIn) * salesTax / 100) return null;
         try {
             return calcAutoLoan({ vehiclePrice, downPayment, tradeInValue: tradeIn, salesTaxRate: salesTax, annualInterestRate: rate, loanTermMonths: termMonths });
         } catch { return null; }
@@ -96,6 +104,29 @@ export default function AutoLoanClient() {
                                     </div>
                                 ))}
                             </div>
+                            <details className="my-4 rounded-xl border p-4">
+                                <summary className="cursor-pointer font-semibold">Estimate cost of ownership through loan payoff</summary>
+                                <p className="my-2 text-sm">Enter monthly costs and the estimated resale value at the end of the loan. Leave resale at zero to see total outlay before resale.</p>
+                                <div className="grid gap-3 sm:grid-cols-2">
+                                    {([
+                                        ['Monthly insurance ($)', insurance, setInsurance],
+                                        ['Monthly fuel or charging ($)', fuel, setFuel],
+                                        ['Monthly maintenance ($)', maintenance, setMaintenance],
+                                        ['Estimated resale value ($)', resale, setResale],
+                                    ] as const).map(([label, value, set]) => (
+                                        <label key={label} className="text-sm font-semibold">{label}
+                                            <input type="number" min={0} className="input-field mt-1" value={value}
+                                                onChange={event => set(Number(event.target.value))} />
+                                        </label>
+                                    ))}
+                                </div>
+                                {hasOwnershipInputs && validOwnershipInputs &&
+                                    <p className="mt-3 font-semibold" aria-live="polite">
+                                        Estimated net cost over {termMonths} months: {formatCurrency(result.totalCost + termMonths * (insurance + fuel + maintenance) - resale)}
+                                    </p>}
+                                {!validOwnershipInputs && <p role="status">Enter nonnegative ownership amounts.</p>}
+                                <p className="mt-2 text-sm">Includes the financed purchase, tax, down payment, trade-in value and the costs above. Subtracting resale accounts for value retained. Registration and other fees are excluded.</p>
+                            </details>
                             <button onClick={handleCSV} className="btn-outline w-full mb-4">
                                 <Table2 size={16} /> Download Amortization CSV
                             </button>

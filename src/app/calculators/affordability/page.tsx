@@ -1,3 +1,4 @@
+import CalculatorAnswer from '@/components/CalculatorAnswer';
 import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -68,6 +69,7 @@ export default function AffordabilityPage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Home Affordability Calculator', item: '/calculators/affordability' }]} />
             <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 9, 2026 &middot; 28% and 43% are planning scenarios, not universal approval limits</p>
+            <CalculatorAnswer>Estimate a purchase price from gross income, monthly debt, down payment, interest rate and ownership costs. The selected debt-to-income target is a planning assumption. Program rules, credit, cash reserves and the property can change what a lender will approve.</CalculatorAnswer>
             <AffordabilityClient />
             <section className="mx-auto my-6 max-w-3xl rounded-xl border border-slate-200 p-5" aria-labelledby="salary-examples-heading">
                 <h2 id="salary-examples-heading" className="text-lg font-semibold">Explore affordability by salary</h2>

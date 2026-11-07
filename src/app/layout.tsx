@@ -22,7 +22,6 @@ export const metadata: Metadata = {
     },
     description: 'Free U.S. mortgage and personal finance calculators for monthly payments, affordability, refinancing, amortization, debt, taxes and more. No account required.',
     applicationName: 'USFinNexus',
-    keywords: ['mortgage calculator', 'home affordability calculator', 'mortgage payment calculator', 'refinance calculator', 'amortization calculator', 'debt to income calculator', 'financial calculators'],
     icons: {
         icon: [
             { url: '/icon.svg', type: 'image/svg+xml' },

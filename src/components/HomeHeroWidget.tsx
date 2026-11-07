@@ -1,17 +1,10 @@
 'use client';
+import { calcMonthlyPI } from '@/lib/formulas';
 import { PMMS } from '@/lib/market-data';
 
 import { useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-
-function calcPI(price: number, dpPct: number, ratePct: number, termYr: number): number {
-    const P = price * (1 - dpPct / 100);
-    const r = ratePct / 100 / 12;
-    const n = termYr * 12;
-    if (r === 0 || n === 0) return P / (n || 1);
-    return (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-}
 
 function fmtK(n: number): string {
     return Math.round(n / 1000).toLocaleString('en-US');
@@ -28,16 +21,16 @@ export default function HomeHeroWidget() {
     const [term, setTerm] = useState(30);
 
     const loanAmt = price * (1 - dp / 100);
-    const monthly = calcPI(price, dp, rate, term);
+    const monthly = calcMonthlyPI(loanAmt, rate, term);
     const taxes = (price * 0.011) / 12;
     const insurance = (price * 0.005) / 12;
     const pmi = dp < 20 ? (loanAmt * 0.01) / 12 : 0;
-    const piti = monthly + taxes + insurance + pmi;
+    const housing = monthly + taxes + insurance + pmi;
     const totalInterest = monthly * term * 12 - loanAmt;
 
-    const piW = Math.max(1, Math.round((monthly / piti) * 100));
-    const txW = Math.max(1, Math.round((taxes / piti) * 100));
-    const insW = Math.max(1, Math.round((insurance / piti) * 100));
+    const piW = Math.max(1, Math.round((monthly / housing) * 100));
+    const txW = Math.max(1, Math.round((taxes / housing) * 100));
+    const insW = Math.max(1, Math.round((insurance / housing) * 100));
     const pmiW = Math.max(0, 100 - piW - txW - insW);
 
     return (
@@ -49,7 +42,7 @@ export default function HomeHeroWidget() {
                 </div>
                 <span className="neo-dash-title">QUICK CALCULATOR</span>
                 <span className="text-[10px] font-bold tracking-wide" style={{ color: '#4ade80' }}>
-                    ● LIVE
+                    ● INTERACTIVE
                 </span>
             </div>
 
@@ -58,8 +51,8 @@ export default function HomeHeroWidget() {
                 ${fmt(monthly)}<span>/mo</span>
             </div>
             <div className="neo-dash-sub" style={{ marginBottom: 0 }}>
-                Full PITI est:{' '}
-                <strong style={{ color: '#00E8FC' }}>${fmt(piti)}/mo</strong>
+                Housing cost estimate:{' '}
+                <strong style={{ color: '#00E8FC' }}>${fmt(housing)}/mo</strong>
                 {pmi > 0 && (
                     <span style={{ color: '#FFC23E', marginLeft: 6 }}>⚠ PMI included</span>
                 )}
@@ -123,7 +116,7 @@ export default function HomeHeroWidget() {
                         style={{ accentColor: '#9B5CFF' }}
                     />
                     <p className="text-[9px]" style={{ color: 'rgba(255,255,255,0.45)' }}>
-                        Starting rate uses Freddie Mac&apos;s Oct. 8, 2026 average; your quote will vary.
+                        Starting rate uses Freddie Mac&apos;s {PMMS.label} average; your quote will vary.
                     </p>
                 </div>
 
@@ -183,6 +176,8 @@ export default function HomeHeroWidget() {
                     <span className="neo-chip-lbl">Payments</span>
                 </div>
             </div>
+
+            <p className="mt-3 text-xs text-slate-300">Illustrative costs use annual property tax of 1.1% and homeowners insurance of 0.5% of price, plus 1% of the loan balance for PMI when shown. HOA dues are excluded.</p>
 
             {/* CTA */}
             <Link

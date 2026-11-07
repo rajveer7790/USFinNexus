@@ -107,9 +107,13 @@ export default function MortgageCalculator({
         setZip(z);
         if (z.length === 5) {
             const est = getTaxEstimate(z);
+            if (est.source !== 'zip') {
+                toast.info('No ZIP-specific sample for this code. Enter the property tax bill and insurance quote below.');
+                return;
+            }
             setPropTax(Math.round(homePrice * est.rate / 100));
             setInsurance(est.insurance);
-            toast.info(`📍 ${z}: Tax ${est.rate}% | Insurance ~${formatCurrency(est.insurance)}/yr (estimate)`);
+            toast.info(`📍 ${z}: Illustrative tax ${est.rate}% | Insurance ~${formatCurrency(est.insurance)}/yr. Replace with property-specific costs.`);
         }
     }, [homePrice]);
 

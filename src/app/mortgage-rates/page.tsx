@@ -7,13 +7,13 @@ import { calcMonthlyPI } from '@/lib/formulas';
 const SOURCE_DATE = PMMS.label;
 
 export const metadata: Metadata = {
-    title: 'Current Mortgage Rates: October 2026 Data & Context',
-    description: 'Freddie Mac weekly mortgage-rate averages for October 2026, with clear methodology, trend context and links to payment, affordability and refinance calculators.',
+    title: 'Current Mortgage Rates: November 2026 Data & Context',
+    description: 'Freddie Mac weekly mortgage-rate averages for November 2026, with clear methodology, trend context and links to payment, affordability and refinance calculators.',
     alternates: { canonical: '/mortgage-rates' },
     openGraph: {
         type: 'article',
         url: 'https://usfinnexus.com/mortgage-rates',
-        title: 'Current Mortgage Rates: October 2026',
+        title: 'Current Mortgage Rates: November 2026',
         description: 'Freddie Mac PMMS weekly averages, methodology and calculator links.',
     },
 };
@@ -25,7 +25,7 @@ export default function MortgageRatesPage() {
             <article className="prose prose-slate max-w-none">
                 <header className="not-prose my-8">
                     <p className="text-sm font-semibold text-blue-700">Data updated {SOURCE_DATE}</p>
-                    <h1 className="text-4xl font-black text-navy-900 mt-2">Current Mortgage Rates: October 2026</h1>
+                    <h1 className="text-4xl font-black text-navy-900 mt-2">Current Mortgage Rates: November 2026</h1>
                     <p className="text-lg text-gray-600 mt-3">National weekly averages are context, not a personalized lender quote.</p>
                 </header>
 

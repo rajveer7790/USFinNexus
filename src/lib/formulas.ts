@@ -87,10 +87,14 @@ export interface RefinanceInputs {
     newRate: number;
     newTermYears: number;
     closingCosts: number;
+    cashOut?: number;
+    financeClosingCosts?: boolean;
 }
 
 export interface RefinanceResult {
     newMonthlyPayment: number;
+    newLoanAmount: number;
+    upfrontClosingCosts: number;
     monthlySavings: number;
     breakEvenMonths: number;
     breakEvenDate: Date;
@@ -423,11 +427,15 @@ export function calcAffordability(inputs: AffordabilityInputs): AffordabilityRes
  * Refinance break-even analysis.
  */
 export function calcRefinance(inputs: RefinanceInputs): RefinanceResult {
-    const { currentBalance, currentMonthsRemaining, newRate, newTermYears, closingCosts } = inputs;
-    const newPayment = calcMonthlyPI(currentBalance, newRate, newTermYears);
+    const { currentBalance, currentMonthsRemaining, newRate, newTermYears, closingCosts, cashOut = 0, financeClosingCosts = false } = inputs;
+    const upfrontClosingCosts = financeClosingCosts ? 0 : closingCosts;
+    const newLoanAmount = currentBalance + cashOut + (financeClosingCosts ? closingCosts : 0);
+    const newPayment = calcMonthlyPI(newLoanAmount, newRate, newTermYears);
     const oldPayment = inputs.currentMonthlyPayment;
     const monthlySavings = oldPayment - newPayment;
-    const breakEvenMonths = monthlySavings > 0 ? Math.ceil(closingCosts / monthlySavings) : Infinity;
+    const simpleBreakEven = monthlySavings > 0 ? Math.ceil(closingCosts / monthlySavings) : Infinity;
+    const breakEvenMonths = cashOut === 0 && !financeClosingCosts &&
+        simpleBreakEven <= Math.min(currentMonthsRemaining, Math.round(newTermYears * 12)) ? simpleBreakEven : Infinity;
 
     const breakEvenDate = new Date();
     if (breakEvenMonths !== Infinity) {
@@ -435,12 +443,14 @@ export function calcRefinance(inputs: RefinanceInputs): RefinanceResult {
     }
 
     const totalCurrentCost = oldPayment * currentMonthsRemaining;
-    const totalNewCost = newPayment * newTermYears * 12 + closingCosts;
+    const totalNewCost = newPayment * Math.round(newTermYears * 12) + upfrontClosingCosts;
     const lifetimeSavings = totalCurrentCost - totalNewCost;
-    const netSavings = lifetimeSavings;
+    const netSavings = lifetimeSavings + cashOut;
 
     return {
         newMonthlyPayment: newPayment,
+        newLoanAmount,
+        upfrontClosingCosts,
         monthlySavings,
         breakEvenMonths,
         breakEvenDate,

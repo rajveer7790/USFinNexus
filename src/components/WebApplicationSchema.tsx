@@ -35,8 +35,8 @@ export default function WebApplicationSchema({
             url: 'https://usfinnexus.com/',
         },
         mainEntity: {
-            '@type': 'SoftwareApplication', name, description, url,
-            applicationCategory: 'FinanceApplication', operatingSystem: 'Any',
+            '@type': 'WebApplication', name, description, url,
+            applicationCategory: 'FinanceApplication', operatingSystem: 'Any modern browser',
             isAccessibleForFree: true,
             offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         },

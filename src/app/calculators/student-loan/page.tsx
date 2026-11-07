@@ -1,3 +1,4 @@
+import CalculatorAnswer from '@/components/CalculatorAnswer';
 import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     openGraph: {
         type: 'website',
         title: 'Student Loan Payment Calculator 2026: Repayment & Payoff',
-        description: 'See your exact student loan payoff date and how much extra payments save. Free calculator with PDF export.',
+        description: 'Estimate your student loan payoff date and how much extra payments could save. Free calculator with PDF export.',
         url: 'https://usfinnexus.com/calculators/student-loan',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Student Loan Calculator 2026 — USFinNexus' }],
     },
@@ -57,6 +58,7 @@ export default function StudentLoanPage() {
                 url="https://usfinnexus.com/calculators/student-loan"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Student Loan', item: '/calculators/student-loan' }]} />
+            <CalculatorAnswer>Compare student loan payment and payoff estimates based on your balance, interest rate and repayment assumptions. Extra principal can reduce interest over time. Confirm federal repayment eligibility, forgiveness and payment amounts with your servicer or Federal Student Aid before changing your plan.</CalculatorAnswer>
             <StudentLoanClient />
             <SemrushIntentSection slug="student-loan" />
 

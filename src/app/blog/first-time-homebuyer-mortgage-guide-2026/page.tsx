@@ -1,3 +1,4 @@
+import HomeHeroWidget from '@/components/HomeHeroWidget';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Target, CheckCircle2, ShieldAlert, FileText, Landmark, Calculator, Lock } from 'lucide-react';
@@ -65,7 +66,11 @@ export default function BlogPost() {
                     Do not apply for a loan blindly. Here is the step-by-step guide to perfectly preparing your finances so the bank has no choice but to approve your mortgage.
                 </p>
 
-                <h2 className="text-2xl font-bold mt-12 mb-4">What Is the Difference Between Mortgage Pre-Approval and Pre-Qualification?</h2>
+<section className="not-prose mx-auto my-8 max-w-xl" aria-label="Quick mortgage payment estimate">
+                    <h2 className="mb-3 text-xl font-bold">Estimate your monthly mortgage payment</h2>
+                    <HomeHeroWidget />
+                </section>
+                                <h2 className="text-2xl font-bold mt-12 mb-4">What Is the Difference Between Mortgage Pre-Approval and Pre-Qualification?</h2>
                 <p>
                     Before you ever log onto Zillow or talk to a real estate agent, you must secure a <strong>Pre-Approval Letter</strong>.
                 </p>
@@ -140,7 +145,7 @@ export default function BlogPost() {
                 <hr className="my-12 border-gray-200" />
 
                 <div className="bg-white p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
-                    <h2 className="text-3xl font-black mb-6 text-slate-900">Advanced Strategies to Guarantee Loan Approval</h2>
+                    <h2 className="text-3xl font-black mb-6 text-slate-900">Ways to Prepare a Stronger Mortgage Application</h2>
                     <p className="text-lg text-slate-700 mb-6">
                         Underwriters look for reasons to deny you. Here is how proactive buyers bulletproof their mortgage applications before the bank even asks.
                     </p>

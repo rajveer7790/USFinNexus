@@ -1,3 +1,4 @@
+import CalculatorAnswer from '@/components/CalculatorAnswer';
 import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -16,8 +17,8 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: "Mortgage Calculator | Free Tool",
-    description: 'Estimate your monthly mortgage payment with principal, interest, property taxes, homeowners insurance, PMI and HOA fees. View amortization and extra-payment scenarios.',
+    title: 'Mortgage Payment Calculator 2026: Monthly PITI & Amortization',
+    description: 'Estimate your monthly mortgage payment with principal, interest, property taxes, homeowners insurance, PMI and HOA fees. View amortization and export PDF or CSV.',
     alternates: { canonical: '/calculators/mortgage' },
     openGraph: {
         type: 'website',
@@ -72,11 +73,13 @@ export default function MortgagePage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Mortgage Calculator', item: '/calculators/mortgage' }]} />
             <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 9, 2026 &middot; 2026 FHFA and HUD loan limits referenced where applicable</p>
+            <CalculatorAnswer>Estimate monthly mortgage principal and interest from the loan amount, rate and term. Add annual property tax and homeowners insurance divided by 12 to get PITI. Budget for applicable mortgage insurance and HOA dues separately. For a biweekly comparison, open the <Link href="/calculators/biweekly-mortgage" className="underline">biweekly mortgage calculator</Link>.</CalculatorAnswer>
             <MortgageCalculatorClient />
             <SemrushIntentSection slug="mortgage" />
             <MortgageSeoContentV2 />
             <section className="mx-auto my-10 max-w-4xl rounded-2xl border border-blue-100 bg-blue-50 p-6">
-                <h2 className="text-xl font-bold text-slate-950">Plan beyond the first payment</h2>
+                <h2 className="text-xl font-bold text-slate-950">Compare your home budget, loan offers and refinance costs</h2>
+                <p className="mt-2 text-slate-700">Start with <Link className="underline" href="/calculators/affordability">how much house you can afford</Link>, then check the <Link className="underline" href="/calculators/amortization">monthly amortization schedule</Link>. Use the <Link className="underline" href="/blog/loan-estimate-comparison-checklist-2026">Loan Estimate comparison checklist</Link> to compare lender quotes. If you already own the home, use the <Link className="underline" href="/calculators/refinance">mortgage refinance calculator</Link> to test closing costs and monthly savings.</p>
                 <p className="mt-2 text-slate-700">If taxes or insurance changed after an escrow analysis, use the <Link className="font-semibold text-blue-700 underline" href="/calculators/escrow-shortage">escrow shortage calculator</Link>. Comparing a current market-rate example? Read the <Link className="font-semibold text-blue-700 underline" href="/blog/mortgage-payment-at-676-september-2026">6.76% mortgage payment guide</Link>.</p>
             </section>
             <CalculatorFAQ faqs={MORTGAGE_FAQS} title="Mortgage Calculator FAQs" />

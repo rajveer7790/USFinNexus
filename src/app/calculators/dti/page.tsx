@@ -1,3 +1,4 @@
+import CalculatorAnswer from '@/components/CalculatorAnswer';
 import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
@@ -15,7 +16,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: "Debt-to-Income Ratio Calculator | Free Tool",
+    title: 'Debt-to-Income Ratio Calculator: Front-End & Back-End DTI',
     description: 'Calculate your debt-to-income ratio from recurring monthly debt and gross monthly income. Compare planning benchmarks without treating 43% as a universal mortgage approval limit.',
     alternates: { canonical: '/calculators/dti' },
     openGraph: {
@@ -67,7 +68,8 @@ export default function DtiPage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Debt-to-Income Ratio Calculator', item: '/calculators/dti' }]} />
             <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed August 9, 2026 &middot; Current CFPB General Qualified Mortgage rule reflected</p>
-            <div className="pt-8"><DtiClient /></div>
+            <div className="pt-8"><CalculatorAnswer>Divide your monthly housing cost by gross monthly income for front-end DTI. Add recurring monthly debt payments to housing before dividing for back-end DTI. For example, $2,400 in total monthly obligations on $8,000 gross monthly income is 30% back-end DTI.</CalculatorAnswer>
+            <DtiClient /></div>
             <SemrushIntentSection slug="dti" />
             <DtiSeoContentV2 />
             <CalculatorFAQ faqs={DTI_FAQS} title="Debt-to-Income Ratio Calculator FAQs" />

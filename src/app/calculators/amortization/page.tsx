@@ -1,3 +1,4 @@
+import CalculatorAnswer from '@/components/CalculatorAnswer';
 import CalculatorBenchmarks from '@/components/CalculatorBenchmarks';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
@@ -42,6 +43,7 @@ export default function AmortizationPage() {
                 dateModified="2026-08-09"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Mortgage Amortization Calculator', item: '/calculators/amortization' }]} />
+            <CalculatorAnswer>An amortization schedule shows how each loan payment is allocated to principal and interest and how the remaining balance changes. Use the monthly or annual view to compare payments over time, and test extra principal to see its effect on payoff time and interest.</CalculatorAnswer>
             <MortgageCalculator initialTab="amortization" heading="Mortgage Amortization Calculator" intro="Calculate a mortgage payment and view the complete principal, interest and remaining-balance schedule." />
             <SemrushIntentSection slug="amortization" />
             <AmortizationSeoContent />
