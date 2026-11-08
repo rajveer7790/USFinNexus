@@ -1,6 +1,6 @@
 {
   "counts": {
-    "pages": 322,
+    "pages": 324,
     "missingTitle": 0,
     "emptyHtml": 0,
     "longTitles": 0,
@@ -22,7 +22,7 @@
     "missingHstsRule": 0
   },
   "findings": {
-    "pages": 322,
+    "pages": 324,
     "missingTitle": [],
     "emptyHtml": [],
     "longTitles": [],
@@ -380,9 +380,9 @@
       },
       {
         "route": "/blog/debt-to-income-ratio-dti-calculator-2026",
-        "ratio": 8.09,
-        "textChars": 9308,
-        "htmlBytes": 115061
+        "ratio": 8.05,
+        "textChars": 9255,
+        "htmlBytes": 114958
       },
       {
         "route": "/blog/direct-indexing-tax-loss-harvesting-2026",
@@ -1058,9 +1058,9 @@
       },
       {
         "route": "/calculators/budget",
-        "ratio": 7.83,
-        "textChars": 8867,
-        "htmlBytes": 113213
+        "ratio": 7.84,
+        "textChars": 8876,
+        "htmlBytes": 113267
       },
       {
         "route": "/calculators/california",
@@ -1095,8 +1095,8 @@
       {
         "route": "/calculators/crypto-tax",
         "ratio": 7.69,
-        "textChars": 7717,
-        "htmlBytes": 100387
+        "textChars": 7718,
+        "htmlBytes": 100392
       },
       {
         "route": "/calculators/debt-payoff",
@@ -1179,8 +1179,8 @@
       {
         "route": "/calculators/income-tax",
         "ratio": 8.95,
-        "textChars": 9302,
-        "htmlBytes": 103940
+        "textChars": 9310,
+        "htmlBytes": 104001
       },
       {
         "route": "/calculators/interest-only",
