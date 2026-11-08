@@ -58,6 +58,7 @@ const TOOLS = [
     { href: '/calculators/trump-account', icon: PiggyBank, title: 'Trump Account 2026', desc: '$1,000 seed + family contribution growth.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/drip', icon: LineChart, title: 'DRIP Forecaster', desc: 'Dividend reinvestment plan.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/income-tax', icon: FileText, title: 'Income Tax 2026', desc: '2026 brackets + One Big Beautiful Bill updates.', badge: 'new', cat: 'wealth' },
+    { href: '/calculators/paycheck', icon: DollarSign, title: 'Paycheck Take-Home Pay', desc: 'Estimate salary or hourly pay after withholding and deductions.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/crypto-tax', icon: FileText, title: 'Crypto Tax Estimator', desc: 'Capital gains tax estimator.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/options-profit', icon: BarChart2, title: 'Options Profit/Loss', desc: 'Visualizer for Calls/Puts.', badge: 'new', cat: 'wealth' },
     { href: '/calculators/budget', icon: PiggyBank, title: 'Budget 50/30/20', desc: 'Needs, wants, savings split.', cat: 'wealth' },

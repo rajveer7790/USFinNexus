@@ -1,9 +1,8 @@
 'use client';
 
-import React, { useState, useCallback, useMemo, useDeferredValue, useTransition } from 'react';
+import React, { useState, useMemo, useDeferredValue, useTransition } from 'react';
 import dynamic from 'next/dynamic';
 import { Loader2, TrendingDown, Info, MapPin } from 'lucide-react';
-import { toast } from 'sonner';
 
 const MortgageAmortTable = dynamic(() => import('./MortgageAmortTable'), {
     ssr: false,
@@ -30,7 +29,8 @@ import {
     type MortgageSummary, type AmortizationRow, US_MORTGAGE_CONSTANTS,
 } from '@/lib/formulas';
 import { calcPMIRate } from '@/lib/formulas';
-import { getTaxEstimate } from '@/lib/taxEstimates';
+import { getTaxEstimate, lookupMortgageZip } from '@/lib/taxEstimates';
+import { PMMS } from '@/lib/market-data';
 import DisclaimerBanner from '@/components/DisclaimerBanner';
 import DownloadButtons from '@/components/DownloadButtons';
 
@@ -76,6 +76,7 @@ export default function MortgageCalculator({
     const [term, setTerm] = useState(DEFAULT.loanTerm);
     const [customTerm, setCustomTerm] = useState('');
     const [zip, setZip] = useState('');
+    const [zipTaxRate, setZipTaxRate] = useState<number | null>(null);
     const [propTax, setPropTax] = useState(initialState ? Math.round(DEFAULT.homePrice * getTaxEstimate("", initialState).rate / 100) : DEFAULT.propertyTax);
     const [insurance, setInsurance] = useState(initialState ? getTaxEstimate("", initialState).insurance : DEFAULT.insurance);
     const [hoa, setHoa] = useState(0);
@@ -100,18 +101,20 @@ export default function MortgageCalculator({
     const syncFromHomePrice = (price: number) => {
         setHomePrice(price);
         setDownDollar(Math.round(price * downPct / 100));
+        if (zipTaxRate !== null) setPropTax(Math.round(price * zipTaxRate / 100));
     };
 
     // ZIP lookup
-    const handleZipChange = useCallback((z: string) => {
+    const zipEstimate = lookupMortgageZip(zip);
+    const handleZipChange = (z: string) => {
         setZip(z);
-        if (z.length === 5) {
-            const est = getTaxEstimate(z);
+        const est = lookupMortgageZip(z);
+        setZipTaxRate(est?.rate ?? null);
+        if (est) {
             setPropTax(Math.round(homePrice * est.rate / 100));
             setInsurance(est.insurance);
-            toast.info(`📍 ${z}: Tax ${est.rate}% | Insurance ~${formatCurrency(est.insurance)}/yr (estimate)`);
         }
-    }, [homePrice]);
+    };
 
     // Computed values
     const loanTermYears = customTerm ? parseInt(customTerm) || 30 : term;
@@ -140,7 +143,13 @@ export default function MortgageCalculator({
 
     const summary = useMemo<MortgageSummary | null>(() => {
         if (deferredInputs.homePrice <= 0 || deferredInputs.downPayment >= deferredInputs.homePrice || deferredInputs.annualInterestRate <= 0) return null;
-        try { return calcMortgageSummary(deferredInputs); } catch { return null; }
+        try {
+            const base = calcMortgageSummary(deferredInputs);
+            if (!deferredInputs.biWeekly && !deferredInputs.extraMonthly) return base;
+            const rows = calcAmortization(deferredInputs);
+            const last = rows[rows.length - 1];
+            return last ? { ...base, totalInterest: last.cumulativeInterest, totalPayments: base.loanAmount + last.cumulativeInterest, payoffDate: last.date } : base;
+        } catch { return null; }
     }, [deferredInputs]);
 
     const amortization = useMemo<AmortizationRow[]>(() => {
@@ -304,6 +313,10 @@ export default function MortgageCalculator({
                             <div className="flex justify-between text-xs mt-2 text-gray-400 font-medium">
                                 <span>1%</span><span>15%</span>
                             </div>
+                            <div className="mt-3 flex flex-wrap gap-2">
+                                {([15, 30] as const).map(years => <button key={years} type="button" className="btn-outline text-xs" onClick={() => { setRate(years === 15 ? PMMS.fifteenYear : PMMS.thirtyYear); setTerm(years); setCustomTerm(''); }}>Use {years}-year average · {years === 15 ? PMMS.fifteenYear : PMMS.thirtyYear}%</button>)}
+                            </div>
+                            <p className="mt-2 text-xs text-slate-600"><a href={PMMS.source} className="underline">Freddie Mac PMMS</a>, {PMMS.label}. Conventional market benchmark, not an APR or lender quote.</p>
                         </div>
 
                         {/* Loan Term */}
@@ -344,6 +357,7 @@ export default function MortgageCalculator({
                             </label>
                             <input
                                 type="text"
+                                inputMode="numeric"
                                 className="glass-input"
                                 placeholder="e.g., 78701"
                                 value={zip}
@@ -351,6 +365,10 @@ export default function MortgageCalculator({
                                 maxLength={5}
                                 aria-label="ZIP code for property tax estimate"
                             />
+                            <p className="mt-2 text-xs text-slate-600" aria-live="polite">{zipEstimate
+                                ? `${zipEstimate.label}. ${zipTaxRate === null ? 'Manual tax entry active.' : `Tax preset: ${zipEstimate.rate.toFixed(2)}%.`} Insurance is a rough state-level placeholder, not a ZIP quote.`
+                                : zip.length === 5 ? 'No estimate for this ZIP. Existing values are unchanged; enter taxes and insurance manually.'
+                                : 'Auto-fills available estimates after five digits. You can edit both costs below.'}</p>
                         </div>
                     </div>
 
@@ -370,7 +388,7 @@ export default function MortgageCalculator({
                                     type="number"
                                     className="glass-input pl-8"
                                     value={propTax}
-                                    onChange={e => setPropTax(parseFloat(e.target.value) || 0)}
+                                    onChange={e => { setZipTaxRate(null); setPropTax(parseFloat(e.target.value) || 0); }}
                                     min={0} step={100}
                                     aria-label="Annual property tax"
                                 />
@@ -628,14 +646,14 @@ export default function MortgageCalculator({
                                                 />
                                                 <div className="flex-1">
                                                     <span className="block text-sm font-bold text-gray-700 group-hover:text-[#0da6f2] transition-colors">Bi-weekly payments</span>
-                                                    <span className="text-xs text-gray-400">Half payment every 2 weeks (13 full payments per year)</span>
+                                                    <span className="text-xs text-gray-600">26 half-payments per year. Model spreads one extra P&amp;I payment over 12 monthly principal postings; ask your servicer how partial payments are credited.</span>
                                                 </div>
                                             </label>
                                         </div>
                                     </div>
 
-                                    {extraMonthly > 0 && summary && (() => {
-                                        const baseAmort = calcAmortization({ ...inputs, extraMonthly: 0 });
+                                    {(extraMonthly > 0 || biWeekly) && summary && (() => {
+                                        const baseAmort = calcAmortization({ ...inputs, extraMonthly: 0, biWeekly: false });
                                         const extraAmort = calcAmortization(inputs);
                                         const baseLast = baseAmort[baseAmort.length - 1];
                                         const extraLast = extraAmort[extraAmort.length - 1];
@@ -651,6 +669,7 @@ export default function MortgageCalculator({
                                                 <div className="flex items-center gap-2 mb-6 z-10 relative">
                                                     <TrendingDown size={20} className="text-emerald-500" />
                                                     <p className="font-bold text-emerald-600 uppercase tracking-wider text-sm">Potential Savings Impact</p>
+                                                    {biWeekly && <p className="text-sm">Budget {formatCurrency(summary.principalAndInterest / 2, 2)} per half-payment for P&amp;I only.</p>}
                                                 </div>
                                                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 z-10 relative">
                                                     <div>

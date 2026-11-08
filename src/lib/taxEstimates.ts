@@ -134,7 +134,8 @@ export function getTaxEstimate(zip: string, stateCode?: string): TaxEstimate {
 }
 
 /** Simplified ZIP-to-state mapping based on ZIP prefix ranges */
-function zipToState(zip: string): string {
+export function zipToState(zip: string): string {
+    if (!/^\d{5}$/.test(zip)) return '';
     const prefix = parseInt(zip.slice(0, 3));
     if (prefix >= 60 && prefix <= 69) return 'CT';
     if (prefix >= 70 && prefix <= 89) return 'NJ';
@@ -191,4 +192,21 @@ function zipToState(zip: string): string {
     if (prefix >= 967 && prefix <= 968) return 'HI';
     if (prefix === 885) return 'TX';
     return ''; // Unknown ranges use a neutral fallback, never an unrelated state
+}
+
+// ACS 2020–2024 five-year county medians (B25103 and B25077). This ratio
+// is a budgeting proxy, not an assessment or a statutory tax rate.
+const COUNTY_ZIPS: Record<string, { label: string; tax: number; value: number; state: string }> = {
+    '75201': { label: 'Dallas County, TX', tax: 4668, value: 277900, state: 'TX' },
+    '90025': { label: 'Los Angeles County, CA', tax: 5675, value: 834200, state: 'CA' },
+    '90210': { label: 'Los Angeles County, CA', tax: 5675, value: 834200, state: 'CA' },
+};
+
+export function lookupMortgageZip(zip: string) {
+    if (!/^\d{5}$/.test(zip)) return null;
+    const county = COUNTY_ZIPS[zip];
+    if (county) return { rate: county.tax / county.value * 100, insurance: STATE_TAX_RATES[county.state].insurance, label: county.label + ' · 2020–2024 ACS county proxy', county: true };
+    const state = zipToState(zip);
+    if (!state || !STATE_TAX_RATES[state]) return null;
+    return { ...STATE_TAX_RATES[state], label: state + ' · state-level scenario (ZIP prefix, not address verified)', county: false };
 }

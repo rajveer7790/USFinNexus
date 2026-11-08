@@ -1,10 +1,10 @@
 'use client';
 
 import {
-    PieChart, Pie, Cell, LineChart, Line, XAxis, YAxis,
-    CartesianGrid, Tooltip, ResponsiveContainer,
+    PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis,
+    CartesianGrid, Tooltip, ResponsiveContainer, Legend, ReferenceLine,
 } from 'recharts';
-import { formatCurrency, formatMonthYear, type AmortizationRow } from '@/lib/formulas';
+import { calcYearlyAmortization, formatCurrency, type AmortizationRow } from '@/lib/formulas';
 
 const PIE_COLORS = ['#0da6f2', '#10b981', '#6366f1', '#f59e0b', '#ef4444'];
 
@@ -14,6 +14,8 @@ interface MortgageChartsProps {
 }
 
 export default function MortgageCharts({ pieData, amortization }: MortgageChartsProps) {
+    const yearly = calcYearlyAmortization(amortization);
+    const flip = yearly.find(row => row.principalPaid > row.interestPaid);
     return (
         <div className="space-y-12">
             {/* Payment Pie */}
@@ -79,24 +81,17 @@ export default function MortgageCharts({ pieData, amortization }: MortgageCharts
                 </div>
             </div>
 
-            {/* Amortization Line */}
             <div>
                 <p className="text-xs font-bold uppercase tracking-[0.2em] mb-6 text-gray-500 text-center">
-                    Projected Equity Growth
+                    Equity flip: annual principal vs. interest
                 </p>
+                <p className="text-center mb-4 text-sm text-slate-600">{flip ? `Principal first exceeds interest in year ${flip.year} of this schedule.` : 'No annual crossover in this schedule.'} Extra principal is included; home-price changes and escrow are not.</p>
                 <div className="glass-panel p-6 overflow-hidden">
                     <ResponsiveContainer width="100%" height={300}>
-                        <LineChart data={amortization} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
-                            <defs>
-                                <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
-                                    <stop offset="0%" stopColor="#0da6f2" />
-                                    <stop offset="100%" stopColor="#10b981" />
-                                </linearGradient>
-                            </defs>
+                        <BarChart data={yearly} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
                             <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.05)" />
                             <XAxis
-                                dataKey="date"
-                                tickFormatter={(d) => formatMonthYear(new Date(d))}
+                                dataKey="year"
                                 minTickGap={60}
                                 tick={{ fontSize: 10, fill: '#64748b', fontWeight: 600 }}
                                 axisLine={false}
@@ -111,8 +106,8 @@ export default function MortgageCharts({ pieData, amortization }: MortgageCharts
                                 width={50}
                             />
                             <Tooltip
-                                labelFormatter={(label) => formatMonthYear(new Date(label))}
-                                formatter={(val: number) => [formatCurrency(val), 'Ending Balance']}
+                                labelFormatter={(label) => 'Year ' + label}
+                                formatter={(val: number, name: string) => [formatCurrency(val), name]}
                                 contentStyle={{ 
                                     background: 'rgba(15, 23, 42, 0.9)', 
                                     backdropFilter: 'blur(12px)',
@@ -125,15 +120,11 @@ export default function MortgageCharts({ pieData, amortization }: MortgageCharts
                                     padding: '12px 16px'
                                 }}
                             />
-                            <Line
-                                type="monotone"
-                                dataKey="endingBalance"
-                                stroke="url(#lineGradient)"
-                                strokeWidth={4}
-                                dot={false}
-                                activeDot={{ r: 6, fill: '#0da6f2', stroke: '#fff', strokeWidth: 2 }}
-                            />
-                        </LineChart>
+                            <Legend />
+                            <Bar dataKey="principalPaid" name="Principal" stackId="payment" fill="#059669" />
+                            <Bar dataKey="interestPaid" name="Interest" stackId="payment" fill="#2563eb" />
+                            {flip && <ReferenceLine x={flip.year} stroke="#0f172a" strokeDasharray="4 3" />}
+                        </BarChart>
                     </ResponsiveContainer>
                 </div>
             </div>

@@ -30,6 +30,7 @@ const LOAN_LINKS = [
     { href: '/calculators/retirement', label: 'Retirement Planner' },
     { href: '/calculators/investment', label: 'Compound Interest' },
     { href: '/calculators/income-tax', label: '2026 Federal Income Tax' },
+    { href: '/calculators/paycheck', label: 'Paycheck Calculator' },
     { href: '/calculators/budget', label: 'Budget 50/30/20' },
 ];
 

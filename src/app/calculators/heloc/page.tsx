@@ -16,12 +16,12 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Free HELOC Calculator 2026 - Home Equity Line of Credit',
+    title: 'HELOC & Home Equity Loan Calculator',
     description:
-        'Calculate your HELOC payments, available equity, and total interest. See draw-period vs repayment-period costs instantly. Free, no signup required.',
+        'Compare HELOC draw and repayment payments against a fixed home equity loan. Estimate available borrowing at your lender’s combined loan-to-value limit.',
     openGraph: {
         type: 'website',
-        title: 'Free HELOC Calculator 2026 - Home Equity Line of Credit',
+        title: 'HELOC & Home Equity Loan Calculator',
         description: 'Calculate your HELOC payments, available equity, and total interest. Compare draw-period interest-only payments vs full repayment period costs. Free, no signup.',
         url: 'https://usfinnexus.com/calculators/heloc',
         images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'HELOC Home Equity Line of Credit Calculator 2026 - USFinNexus' }],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     alternates: { canonical: 'https://usfinnexus.com/calculators/heloc' },
     twitter: {
         card: 'summary_large_image',
-        title: 'Free HELOC Calculator 2026 - Home Equity Line of Credit',
+        title: 'HELOC & Home Equity Loan Calculator',
         description: 'Calculate your HELOC available equity, draw-period payments, and repayment-period costs. Free, no signup.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -38,15 +38,15 @@ export const metadata: Metadata = {
 const HELOC_FAQS = [
     {
         question: 'What is the difference between the Draw Period and Repayment Period?',
-        answer: 'During the Draw Period (usually the first 10 years), you can withdraw money from your HELOC, and the bank only requires you to make interest-only payments. When the Draw Period ends, the Repayment Period begins (usually 20 years). You can no longer withdraw money, and your payment drastically jumps because you must now pay back the principal plus interest.',
+        answer: 'During the draw period you can usually withdraw up to your available limit. Some plans require only interest while others require principal payments too. In repayment, you generally stop drawing and repay principal and interest. The calculator defaults to a 10-year draw and 20-year repayment; check your contract.',
     },
     {
         question: 'Does a HELOC have a fixed or variable interest rate?',
-        answer: 'Almost all HELOCs have a variable interest rate tied to the Prime Rate. If the Federal Reserve raises interest rates, your HELOC payment will increase automatically. This makes them risky in an inflationary environment.',
+        answer: 'Many HELOCs have variable rates that track a published index plus a lender margin. The contract controls the index, reset frequency, caps and any fixed-rate options.',
     },
     {
         question: 'How much of my home equity can I borrow?',
-        answer: 'Most banks limit your total debt to a Combined Loan-to-Value (CLTV) ratio of 80% to 85%. If your home is worth $500,000, 80% is $400,000. If you owe $300,000 on your primary mortgage, the bank will only approve a HELOC for the remaining $100,000.',
+        answer: 'Multiply the home value by the lender’s CLTV cap and subtract all existing liens. At an illustrative 80% cap on a $500,000 home with $300,000 of existing debt, the modeled capacity is $100,000. This is not an approval.',
     },
 ];
 

@@ -18,7 +18,10 @@ export default function RentVsBuyClient() {
     const [loanTerm] = useState(30);
     const [propTax, setPropTax] = useState(1.2);
     const [insurance, setInsurance] = useState(1400);
-    const [hoa] = useState(0);
+    const [hoa, setHoa] = useState(0);
+    const [maintenance, setMaintenance] = useState(1);
+    const [buyingCosts, setBuyingCosts] = useState(3);
+    const [taxGrowth, setTaxGrowth] = useState(2);
     const [appreciation, setAppreciation] = useState(3.5);
     const [monthlyRent, setMonthlyRent] = useState(2200);
     const [rentIncrease, setRentIncrease] = useState(3);
@@ -27,16 +30,17 @@ export default function RentVsBuyClient() {
     const [sellingCosts, setSellingCosts] = useState(7);
 
     const result = useMemo(() => {
-        if (homePrice <= 0) return null;
+        if (homePrice <= 0 || downPayment < 0 || downPayment > homePrice || !Number.isInteger(yearsToStay) || yearsToStay < 1 || yearsToStay > 30 || Math.min(investmentReturn, appreciation, rentIncrease, taxGrowth) <= -100) return null;
         try {
             return calcRentVsBuy({
                 homePrice, downPayment, mortgageRate, loanTermYears: loanTerm,
                 annualPropertyTax: propTax, annualInsurance: insurance, monthlyHOA: hoa,
                 annualHomeAppreciation: appreciation, monthlyRent, annualRentIncrease: rentIncrease,
                 yearsToStay, investmentReturn, sellingCostPercent: sellingCosts,
+                buyingCostPercent: buyingCosts, annualMaintenancePercent: maintenance, annualPropertyTaxIncrease: taxGrowth,
             });
         } catch { return null; }
-    }, [homePrice, downPayment, mortgageRate, loanTerm, propTax, insurance, hoa, appreciation, monthlyRent, rentIncrease, yearsToStay, investmentReturn, sellingCosts]);
+    }, [homePrice, downPayment, mortgageRate, loanTerm, propTax, insurance, hoa, appreciation, monthlyRent, rentIncrease, yearsToStay, investmentReturn, sellingCosts, buyingCosts, maintenance, taxGrowth]);
 
     return (
         <div className="relative min-h-screen bg-white text-navy-900 pb-20">
@@ -75,13 +79,17 @@ export default function RentVsBuyClient() {
                                     { label: 'Mortgage Rate', v: mortgageRate, set: setMortgageRate, suffix: '%', step: 0.125 },
                                     { label: 'Annual Property Tax Rate', v: propTax, set: setPropTax, suffix: '%', step: 0.1 },
                                     { label: 'Annual Insurance', v: insurance, set: setInsurance, prefix: '$', step: 100 },
-                                    { label: 'Annual Home Appreciation', v: appreciation, set: setAppreciation, suffix: '%', step: 0.5 },
+                                    { label: 'Annual Home Appreciation', v: appreciation, set: setAppreciation, suffix: '%', step: 0.5, min: -99 },
+                                    { label: 'Annual Property Tax Growth', v: taxGrowth, set: setTaxGrowth, suffix: '%', step: 0.5, min: -99 },
+                                    { label: 'Annual Maintenance (% of home value)', v: maintenance, set: setMaintenance, suffix: '%', step: 0.25 },
+                                    { label: 'Monthly HOA', v: hoa, set: setHoa, prefix: '$', step: 10 },
+                                    { label: 'Buying Closing Costs (% of price)', v: buyingCosts, set: setBuyingCosts, suffix: '%', step: 0.25 },
                                 ].map(f => (
                                     <div key={f.label}>
                                         <label className="input-label">{f.label}</label>
                                         <div className="relative group">
                                             {f.prefix && <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">{f.prefix}</span>}
-                                            <input type="number" className={`glass-input ${f.prefix ? 'pl-8' : ''} ${f.suffix ? 'pr-8' : ''}`} value={f.v} onChange={e => f.set(+e.target.value)} step={f.step} min={0} />
+                                            <input aria-label={f.label} type="number" className={`glass-input ${f.prefix ? 'pl-8' : ''} ${f.suffix ? 'pr-8' : ''}`} value={f.v} onChange={e => f.set(Math.max(f.min ?? 0, +e.target.value))} step={f.step} min={f.min ?? 0} />
                                             {f.suffix && <span className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">{f.suffix}</span>}
                                         </div>
                                     </div>
@@ -96,14 +104,14 @@ export default function RentVsBuyClient() {
                                     { label: 'Monthly Rent', v: monthlyRent, set: setMonthlyRent, prefix: '$', step: 50 },
                                     { label: 'Annual Rent Increase', v: rentIncrease, set: setRentIncrease, suffix: '%', step: 0.5 },
                                     { label: 'Years to Stay', v: yearsToStay, set: setYearsToStay, step: 1, min: 1, max: 30 },
-                                    { label: 'Investment Return (if renting)', v: investmentReturn, set: setInvestmentReturn, suffix: '%', step: 0.5 },
+                                    { label: 'Annual Investment Return', v: investmentReturn, set: setInvestmentReturn, suffix: '%', step: 0.5, min: -99 },
                                     { label: 'Selling Costs (% of price)', v: sellingCosts, set: setSellingCosts, suffix: '%', step: 0.5 },
                                 ].map(f => (
                                     <div key={f.label}>
                                         <label className="input-label">{f.label}</label>
                                         <div className="relative group">
                                             {f.prefix && <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">{f.prefix}</span>}
-                                            <input type="number" className={`glass-input ${f.prefix ? 'pl-8' : ''} ${f.suffix ? 'pr-8' : ''}`} value={f.v} onChange={e => f.set(+e.target.value)} step={f.step} min={'min' in f ? f.min : 0} max={'max' in f ? f.max : undefined} />
+                                            <input aria-label={f.label} type="number" className={`glass-input ${f.prefix ? 'pl-8' : ''} ${f.suffix ? 'pr-8' : ''}`} value={f.v} onChange={e => f.set(+e.target.value)} step={f.step} min={f.min ?? 0} max={f.max} />
                                             {f.suffix && <span className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">{f.suffix}</span>}
                                         </div>
                                     </div>
@@ -119,7 +127,7 @@ export default function RentVsBuyClient() {
                                 <div className={`glass-card p-4 sm:p-6 animate-slide-up text-center border-2 ${result.winner === 'buy' ? 'border-emerald-500/40' : 'border-[#0da6f2]/40'}`}>
                                     <div className="text-4xl mb-4">{result.winner === 'buy' ? '🏠' : '🏢'}</div>
                                     <p className={`text-3xl font-black mb-3 ${result.winner === 'buy' ? 'text-emerald-500' : 'text-[#0da6f2]'}`}>
-                                        {result.winner === 'buy' ? 'Buying Wins!' : 'Renting Wins!'}
+                                        {result.winner === 'buy' ? 'Buying costs less' : result.winner === 'rent' ? 'Renting costs less' : 'Equal modeled costs'}
                                     </p>
                                     <p className="text-gray-500 font-medium">Over {yearsToStay} years, based on your inputs</p>
                                 </div>
@@ -130,7 +138,8 @@ export default function RentVsBuyClient() {
                                         { label: 'Net Buy Cost', value: formatCurrency(result.netBuyCost), color: 'text-[#0da6f2]' },
                                         { label: 'Net Rent Cost', value: formatCurrency(result.netRentCost), color: 'text-purple-400' },
                                         { label: 'Home Equity Built', value: formatCurrency(result.homeEquity), color: 'text-emerald-500' },
-                                        { label: 'Break-Even Year', value: result.breakEvenYear ? "Year " + result.breakEvenYear : "Not reached", color: 'text-amber-500' },
+                                        { label: 'First Year Buying Is No Costlier', value: result.breakEvenYear ? "Year " + result.breakEvenYear : "Not reached", color: 'text-amber-600' },
+                                        { label: 'Renter’s Upfront Cash, Invested', value: formatCurrency(result.renterInitialInvestmentValue), color: 'text-purple-600' },
                                     ].map(s => (
                                         <div key={s.label} className="glass-card p-4 sm:p-6 text-center group">
                                             <p className="text-xs font-black uppercase tracking-[0.3em] text-gray-500 mb-4">{s.label}</p>
@@ -142,14 +151,14 @@ export default function RentVsBuyClient() {
                                 {/* Chart */}
                                 <div className="glass-card p-8">
                                     <h3 className="text-xs font-black uppercase tracking-[0.3em] text-gray-500 mb-6">Net Cost Comparison</h3>
-                                    <p className="text-sm mb-3">Includes illustrative 3% buying costs, selected selling costs and return on the renter&apos;s initial down-payment/cost reserve. Future monthly savings investments, tax deductions and rent/buy insurance differences are excluded.</p><RentVsBuyChart yearlyData={result.yearlyData} /><details><summary className="cursor-pointer mt-4">Annual net-cost comparison</summary><table className="w-full text-sm"><thead><tr><th>Year</th><th>Buy net cost</th><th>Rent net cost</th></tr></thead><tbody>{result.yearlyData.map(row=><tr key={row.year}><td>{row.year}</td><td>{formatCurrency(row.buyCumulative)}</td><td>{formatCurrency(row.rentCumulative)}</td></tr>)}</tbody></table></details>
+                                    <p className="text-sm mb-3">Includes your transaction costs and tax growth. The renter invests the upfront cash difference; whichever option costs less each month invests the monthly difference. Net rent cost is adjusted by the investment gains difference. Assumptions are not forecasts. PMI, tax deductions and renter’s insurance are not modeled.</p><RentVsBuyChart yearlyData={result.yearlyData} /><details><summary className="cursor-pointer mt-4">Annual net-cost comparison</summary><table className="w-full text-sm"><thead><tr><th>Year</th><th>Buy net cost</th><th>Rent net cost</th></tr></thead><tbody>{result.yearlyData.map(row=><tr key={row.year}><td>{row.year}</td><td>{formatCurrency(row.buyCumulative)}</td><td>{formatCurrency(row.rentCumulative)}</td></tr>)}</tbody></table></details>
                                 </div>
 
                                 <div className="glass-panel p-5 border-[#0da6f2]/20 bg-[#0da6f2]/5">
                                     <div className="flex gap-3">
                                         <CheckCircle className="flex-shrink-0 text-[#0da6f2]" size={18} />
                                         <p className="text-sm font-medium text-gray-600">
-                                            The chart tracks equity minus costs over time. Closing costs typically make ownership cheaper after 3-7 years. Results vary greatly by local market.
+                                            Break-even is evaluated at each year-end through your chosen horizon. Try a lower investment return, a drop in home value, or a shorter stay to see how sensitive the result is.
                                         </p>
                                     </div>
                                 </div>
@@ -158,7 +167,7 @@ export default function RentVsBuyClient() {
                             <div className="glass-card p-4 sm:p-6 text-center">
                                 <ArrowLeftRight size={48} className="mx-auto mb-6 text-gray-400 opacity-20" />
                                 <p className="text-2xl font-black mb-4">Enter your details</p>
-                                <p className="text-gray-500 font-medium">Fill in both tabs to see a comprehensive rent vs. buy analysis.</p>
+                                <p className="text-gray-500 font-medium">Use a down payment no higher than the purchase price and a whole-number horizon of 1–30 years.</p>
                             </div>
                         )}
                         <DisclaimerBanner calculatorName="the Rent vs. Buy Calculator" />

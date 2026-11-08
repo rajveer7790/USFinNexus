@@ -24,10 +24,11 @@ export default function GovLoanClient({ initialTab = 'fha', heading, compare = f
     const [insurance, setInsurance] = useState(1400);
     const [vaFirstTime, setVaFirstTime] = useState(true);
     const [vaDisability, setVaDisability] = useState(false);
+    const [financeFee, setFinanceFee] = useState(true);
 
     // Auto-adjust min down when switching loan types
     const minDown = loanType === 'fha' ? 3.5 : 0;
-    const effectiveDown = Math.max(downPct, minDown);
+    const effectiveDown = Math.min(100, Math.max(downPct, minDown));
 
     const result = useMemo(() => {
         if (homePrice <= 0 || rate <= 0) return null;
@@ -36,8 +37,9 @@ export default function GovLoanClient({ initialTab = 'fha', heading, compare = f
             annualInterestRate: rate, loanTermYears: term,
             annualPropertyTax: propTax, annualInsurance: insurance,
             vaFirstTimeUse: vaFirstTime, vaDisabilityExempt: vaDisability,
+            financeUpfrontFee: financeFee,
         });
-    }, [loanType, homePrice, effectiveDown, rate, term, propTax, insurance, vaFirstTime, vaDisability]);
+    }, [loanType, homePrice, effectiveDown, rate, term, propTax, insurance, vaFirstTime, vaDisability, financeFee]);
 
     const comparison = ['fha','va','usda'].map(type => ({type,down:type==='fha'?3.5:0,result:calcGovLoan({loanType:type as GovLoanType,homePrice,downPaymentPercent:type==='fha'?3.5:0,annualInterestRate:rate,loanTermYears:term,annualPropertyTax:propTax,annualInsurance:insurance,vaFirstTimeUse:vaFirstTime,vaDisabilityExempt:vaDisability})}));
     const activeTab = TABS.find(t => t.key === loanType)!;
@@ -85,7 +87,7 @@ export default function GovLoanClient({ initialTab = 'fha', heading, compare = f
                 </div>
 
                             {compare && <section className="mx-auto max-w-6xl p-5 overflow-x-auto"><h2 className="text-xl font-bold mb-3">Same-price loan comparison</h2><table className="w-full text-sm"><caption>Same illustrative rate, tax and insurance; program eligibility and lender pricing differ. Conventional PMI uses an illustrative 0.5% of the base loan annually.</caption><thead><tr><th>Scenario</th>{comparison.map(x=><th key={x.type}>{x.type.toUpperCase()}</th>)}<th>Conventional 5% down</th></tr></thead><tbody><tr><th>Down payment</th>{comparison.map(x=><td key={x.type}>{formatCurrency(homePrice*x.down/100)}</td>)}<td>{formatCurrency(homePrice*.05)}</td></tr><tr><th>Starting monthly payment</th>{comparison.map(x=><td key={x.type}>{formatCurrency(x.result.totalMonthly)}</td>)}<td>{formatCurrency(calcMonthlyPI(homePrice*.95,rate,term)+propTax/12+insurance/12+homePrice*.95*.005/12)}</td></tr><tr><th>Financed upfront fee</th>{comparison.map(x=><td key={x.type}>{formatCurrency(x.result.upfrontFee)}</td>)}<td>None modeled</td></tr></tbody></table></section>}
-            <p className="mx-auto max-w-5xl p-3 text-sm">Starting insurance/guarantee fee is estimated from the base balance. Lifetime cost holds that fee constant over the modeled charge period, so actual declining-balance annual charges can differ. FHA MIP generally lasts 11 years at original LTV of 90% or less, otherwise the mortgage term. Eligibility and exemptions require lender verification.</p>
+            <p className="mx-auto max-w-5xl p-3 text-sm">Insurance and guarantee fees are estimated using scheduled declining balances. FHA MIP generally lasts 11 years at original LTV of 90% or less, otherwise the mortgage term. Eligibility and exemptions require lender verification.</p>
 <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
                     {/* LEFT: Inputs */}
                     <div className="lg:col-span-2 space-y-6">
@@ -219,11 +221,12 @@ export default function GovLoanClient({ initialTab = 'fha', heading, compare = f
                                                     onChange={e => setVaDisability(e.target.checked)}
                                                     className="w-5 h-5 rounded border-2 border-white/20 bg-transparent accent-[#0da6f2] transition-all cursor-pointer"
                                                 />
-                                                <span className="text-sm font-semibold text-gray-600 group-hover:text-white transition-colors">Service Disability (No fee)</span>
+                                                <span className="text-sm font-semibold text-gray-600">I qualify for a VA funding fee exemption</span>
                                             </label>
                                         </div>
                                     </div>
                                 )}
+                                <label className="flex items-center gap-2 text-sm font-semibold mt-4"><input type="checkbox" checked={financeFee} onChange={e => setFinanceFee(e.target.checked)} />Finance the upfront program fee</label>
                             </div>
                         </div>
                     </div>
@@ -289,7 +292,9 @@ export default function GovLoanClient({ initialTab = 'fha', heading, compare = f
                                         <h3 className="text-xs font-black uppercase tracking-[0.2em] mb-5 sm:mb-8 text-gray-400">Loan Lifecycle</h3>
                                         <div className="space-y-4">
                                             {[
-                                                { label: 'Upfront Guarantee Fee', value: formatCurrency(result.upfrontFee) },
+                                                { label: 'Upfront program fee', value: formatCurrency(result.upfrontFee) },
+                                                { label: 'Upfront program fee paid in cash', value: formatCurrency(result.upfrontCash) },
+                                                ...(result.feeMonths ? [{ label: 'Recurring fee duration', value: `${result.feeMonths / 12} years` }, { label: 'Total recurring program fees', value: formatCurrency(result.totalAnnualFees) }] : []),
                                                 { label: 'Total Interest Paid', value: formatCurrency(result.totalInterest) },
                                                 { label: 'Total Cost of Loan', value: formatCurrency(result.totalCost) },
                                             ].map(row => (
@@ -356,7 +361,7 @@ export default function GovLoanClient({ initialTab = 'fha', heading, compare = f
                                     <div className="flex gap-4">
                                         <Info className="flex-shrink-0 text-[#0da6f2]" size={20} />
                                         <p className="text-sm font-medium leading-relaxed text-gray-600">
-                                            {loanType === 'fha' ? 'FHA MIP is mandatory for the life of the loan in most cases. The upfront MIP (1.75%) is usually financed into the loan amount.' : loanType === 'va' ? 'VA loans do not require PMI. The Funding Fee is a one-time cost that can be waived for disabled veterans or financed into the loan.' : 'USDA loans require both upfront (1.0%) and annual (0.35%) guarantee fees. These apply for the life of the loan regardless of equity.'}
+                                            {loanType === 'fha' ? 'FHA MIP duration depends on original LTV. The 1.75% upfront premium can be financed or paid in cash.' : loanType === 'va' ? 'VA loans do not require PMI. The funding fee is a one-time cost. Check your exemption status with VA or your lender.' : 'USDA loans generally require upfront and annual guarantee fees.'}
                                         </p>
                                     </div>
                                 </div>

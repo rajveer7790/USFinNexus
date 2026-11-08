@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { calcClosingCosts, formatCurrency, formatPercent, type ClosingCostLineItem } from '@/lib/formulas';
+import { calcClosingCosts, formatCurrency, formatPercent, type ClosingCostInputs, type ClosingCostLineItem } from '@/lib/formulas';
 import { exportGenericCSV } from '@/lib/csvExporter';
 import DisclaimerBanner from '@/components/DisclaimerBanner';
 import { DollarSign, Table2 } from 'lucide-react';
@@ -46,15 +46,17 @@ export default function ClosingCostsClient() {
     const [downPct, setDownPct] = useState(20);
     const [state, setState] = useState('CA');
     const [loanType, setLoanType] = useState<'conventional' | 'fha' | 'va'>('conventional');
+    const [quote, setQuote] = useState<NonNullable<ClosingCostInputs['quote']>>({});
+    const [payFhaCash, setPayFhaCash] = useState(false);
 
-    const loanAmount = homePrice * (1 - downPct / 100);
+    const loanAmount = homePrice * (1 - Math.min(100, Math.max(0, downPct)) / 100);
 
     const result = useMemo(() => {
         if (homePrice <= 0) return null;
         return calcClosingCosts({
-            homePrice, loanAmount, state, loanType, isNewConstruction: false,
+            homePrice, loanAmount, state, loanType, isNewConstruction: false, quote, payFhaUpfrontInCash: payFhaCash,
         });
-    }, [homePrice, loanAmount, state, loanType]);
+    }, [homePrice, loanAmount, state, loanType, quote, payFhaCash]);
 
     const groupByCategory = (items: ClosingCostLineItem[]) => {
         const groups: Record<string, ClosingCostLineItem[]> = {};
@@ -83,7 +85,7 @@ export default function ClosingCostsClient() {
                     Closing Costs Calculator 2026
                 </h1>
                 <p className="text-gray-500 max-w-2xl font-medium text-lg">
-                    Estimate buyer and seller closing costs for any US home purchase. Includes state-specific transfer taxes for all 50 states + DC.
+                    Itemize buyer and seller costs and estimate cash to close. Default fees and transfer tax allocations are illustrative; replace them with your own figures.
                 </p>
             </div>
 
@@ -117,12 +119,26 @@ export default function ClosingCostsClient() {
 
                         <div className="mb-5">
                             <label className="input-label">State</label>
-                            <select value={state} onChange={e => setState(e.target.value)} className="input-field">
+                            <select aria-label="State" value={state} onChange={e => { setState(e.target.value); setQuote(q => ({ ...q, transfer: undefined })); }} className="input-field">
                                 {US_STATES.map(s => (
                                     <option key={s} value={s}>{STATE_NAMES[s]} ({s})</option>
                                 ))}
                             </select>
                         </div>
+                        {loanType === 'fha' && <label className="flex gap-2 text-sm mb-4"><input type="checkbox" checked={payFhaCash} onChange={e => setPayFhaCash(e.target.checked)} />Pay FHA upfront premium in cash</label>}
+                        {loanType === 'va' && <p className="text-sm mb-4">VA funding fee is not included. If paid in cash, add it to the lender fee estimate.</p>}
+                        <details className="border-t pt-3"><summary className="cursor-pointer font-semibold">Customize fees, prepaids and credits</summary>
+                            <p className="my-3 text-sm">Blank fields use scenario defaults. Enter 0 to override a fee with zero.</p>
+                            <div className="grid gap-3 sm:grid-cols-2">
+                                {([
+                                    ['origination','Origination and points ($)'], ['appraisal','Appraisal ($)'], ['titleSearch','Title search ($)'],
+                                    ['lenderTitle','Lender title insurance ($)'], ['ownerTitle','Owner title insurance ($)'], ['settlement','Settlement ($)'],
+                                    ['transfer','Buyer transfer taxes ($)'], ['recording','Recording ($)'], ['annualTax','Annual property tax ($)'],
+                                    ['taxMonths','Tax reserve (months)'], ['annualInsurance','Annual home insurance ($)'], ['insuranceReserveMonths','Insurance reserve (months)'],
+                                    ['rate','Interest rate (%)'], ['interestDays','Prepaid interest (days)'], ['credits','Seller and lender credits ($)'], ['deposit','Earnest money paid ($)'],
+                                ] as const).map(([key,label]) => <label key={key} className="text-sm font-semibold">{label}<input className="input-field mt-1" type="number" min={0} step="any" value={quote[key] ?? ''} placeholder="Default" onChange={e => { const value = e.target.value; setQuote(q => ({ ...q, [key]: value === '' ? undefined : Math.max(0, Number(value) || 0) })); }} /></label>)}
+                            </div>
+                        </details>
 
                         <div className="mb-5">
                             <label className="input-label">Loan Type</label>
@@ -143,6 +159,11 @@ export default function ClosingCostsClient() {
                 <div className="lg:col-span-3 space-y-6 lg:self-start">
                     {result ? (
                         <>
+                            <section className="glass-card p-5">
+                                <h2 className="text-lg font-bold">Estimated cash to close</h2>
+                                <p className="text-3xl font-black text-emerald-700">{formatCurrency(result.cashToClose)}</p>
+                                <p className="mt-2 text-sm">Down payment + buyer costs − credits − deposit. Compare with your lender’s <a className="underline" href="https://www.consumerfinance.gov/owning-a-home/loan-estimate/">Loan Estimate</a>. If credits or deposits exceed costs, verify the adjustment with your lender.</p>
+                            </section>
                             {/* Summary cards */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                                 <div className="glass-card p-4 sm:p-6 text-center animate-slide-up">

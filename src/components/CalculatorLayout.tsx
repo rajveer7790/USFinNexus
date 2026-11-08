@@ -132,8 +132,8 @@ export default function CalculatorLayout({
                             </div>
                             <div className="space-y-3">
                                 {[
-                                    { k: '30-Yr Avg · Oct 22', v: PMMS.thirtyYear.toFixed(2) + '%' },
-                                    { k: '15-Yr Avg · Oct 22', v: PMMS.fifteenYear.toFixed(2) + '%' },
+                                    { k: '30-Yr Avg · ' + PMMS.label, v: PMMS.thirtyYear.toFixed(2) + '%' },
+                                    { k: '15-Yr Avg · ' + PMMS.label, v: PMMS.fifteenYear.toFixed(2) + '%' },
                                     { k: 'Primary Residence DTI', v: '43%' },
                                     { k: 'PMI Required below', v: '20% Down' },
                                 ].map(bench => (

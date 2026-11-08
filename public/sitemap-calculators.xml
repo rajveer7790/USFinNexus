@@ -52,6 +52,10 @@
 <changefreq>monthly</changefreq>
 <priority>0.85</priority>
 </url><url>
+<loc>https://usfinnexus.com/calculators/paycheck</loc>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url><url>
 <loc>https://usfinnexus.com/calculators/down-payment</loc>
 <changefreq>monthly</changefreq>
 <priority>0.82</priority>

@@ -139,6 +139,9 @@ export interface RentVsBuyInputs {
     yearsToStay: number;
     investmentReturn: number;        // if renting, what return on down payment? percent
     sellingCostPercent: number;      // realtor + closing costs on sale
+    buyingCostPercent?: number;
+    annualMaintenancePercent?: number;
+    annualPropertyTaxIncrease?: number;
 }
 
 export interface RentVsBuyResult {
@@ -149,6 +152,7 @@ export interface RentVsBuyResult {
     netRentCost: number;
     winner: 'buy' | 'rent' | 'tie';
     breakEvenYear: number;
+    renterInitialInvestmentValue: number;
     yearlyData: { year: number; buyCumulative: number; rentCumulative: number; equity: number }[];
 }
 
@@ -348,7 +352,9 @@ export function calcAmortization(inputs: MortgageInputs): AmortizationRow[] {
 
         const interestCharge = balance * monthlyRate;
         let principalCharge = Math.min(basePayment - interestCharge, balance);
-        const extraPayment = Math.min(inputs.extraMonthly ?? 0, balance - principalCharge);
+        // Monthly-posting equivalent of 26 half payments: one extra P&I payment
+        // per year, spread evenly as principal-only payments across 12 months.
+        const extraPayment = Math.min(Math.max(0, inputs.extraMonthly ?? 0) + (inputs.biWeekly ? basePayment / 12 : 0), balance - principalCharge);
         principalCharge += extraPayment;
 
         // Annual lump sum (applied in month 12, 24, 36, ...)
@@ -489,10 +495,10 @@ export function calcRentVsBuy(inputs: RentVsBuyInputs): RentVsBuyResult {
 
     const loanAmount = homePrice - downPayment;
     const monthlyPI = calcMonthlyPI(loanAmount, mortgageRate, loanTermYears);
-    const monthlyTax = (homePrice * (annualPropertyTax / 100)) / 12;
+    let monthlyTax = (homePrice * (annualPropertyTax / 100)) / 12;
     const monthlyIns = annualInsurance / 12;
 
-    const purchaseCosts = homePrice * 0.03; // explicit illustrative 3% acquisition cost
+    const purchaseCosts = homePrice * (inputs.buyingCostPercent ?? 3) / 100;
     let buyTotal = purchaseCosts;
     let rentTotal = 0;
     let homeValue = homePrice;
@@ -501,11 +507,14 @@ export function calcRentVsBuy(inputs: RentVsBuyInputs): RentVsBuyResult {
     const yearlyData = [];
 
     // Investment growth on down payment (opportunity cost for buyer)
-    let investmentBalance = downPayment + purchaseCosts;
+    const initialInvestment = downPayment + purchaseCosts;
+    let investmentBalance = initialInvestment;
+    let investmentDifference = initialInvestment;
+    const monthlyGrowth = (1 + investmentReturn / 100) ** (1 / 12);
     let firstBreakEven = 0;
 
     for (let year = 1; year <= yearsToStay; year++) {
-        const monthlyMaintenance = (homeValue * 0.01) / 12; // 1% annual maintenance
+        const monthlyMaintenance = homeValue * (inputs.annualMaintenancePercent ?? 1) / 1200;
 
         for (let m = 0; m < 12; m++) {
             const monthlyRate = mortgageRate / 100 / 12;
@@ -513,23 +522,27 @@ export function calcRentVsBuy(inputs: RentVsBuyInputs): RentVsBuyResult {
             const principal = Math.min(balance, Math.max(0, monthlyPI - interest));
             balance = Math.max(0, balance - principal);
 
-            buyTotal += principal + interest + monthlyTax + monthlyIns + monthlyHOA + monthlyMaintenance;
+            const ownerPayment = principal + interest + monthlyTax + monthlyIns + monthlyHOA + monthlyMaintenance;
+            buyTotal += ownerPayment;
             rentTotal += rent;
+            investmentBalance *= monthlyGrowth;
+            investmentDifference = investmentDifference * monthlyGrowth + ownerPayment - rent;
         }
         rent *= (1 + annualRentIncrease / 100);
         homeValue *= (1 + annualHomeAppreciation / 100);
-        investmentBalance *= (1 + investmentReturn / 100);
+        monthlyTax *= 1 + (inputs.annualPropertyTaxIncrease ?? 0) / 100;
 
         const equity = homeValue - balance - homeValue * (sellingCostPercent / 100);
         const netBuy = buyTotal - equity + downPayment;
-        const netRent = rentTotal - (investmentBalance - downPayment - purchaseCosts);
+        const investmentGainDifference = investmentDifference - initialInvestment - (buyTotal - purchaseCosts - rentTotal);
+        const netRent = rentTotal - investmentGainDifference;
         if (!firstBreakEven && netBuy <= netRent) firstBreakEven = year;
         yearlyData.push({ year, buyCumulative: netBuy, rentCumulative: netRent, equity });
     }
 
     const homeEquity = homeValue - balance - homeValue * (sellingCostPercent / 100);
     const netBuyCost = buyTotal - homeEquity + downPayment;
-    const netRentCost = rentTotal - (investmentBalance - downPayment - purchaseCosts); // renter gains investment reduce the net cost
+    const netRentCost = yearlyData[yearlyData.length - 1]?.rentCumulative ?? 0;
 
     const breakEvenYear = firstBreakEven;
 
@@ -541,6 +554,7 @@ export function calcRentVsBuy(inputs: RentVsBuyInputs): RentVsBuyResult {
         netRentCost,
         winner: netBuyCost < netRentCost ? 'buy' : netRentCost < netBuyCost ? 'rent' : 'tie',
         breakEvenYear,
+        renterInitialInvestmentValue: investmentBalance,
         yearlyData,
     };
 }
@@ -696,6 +710,7 @@ export interface HELOCResult {
     repaymentMonthlyPayment: number; // P&I during repayment
     totalInterest: number;
     totalCost: number;
+    modeledDraw: number;
 }
 
 export function calcHELOC(inputs: HELOCInputs): HELOCResult {
@@ -704,7 +719,7 @@ export function calcHELOC(inputs: HELOCInputs): HELOCResult {
 
     const maxCreditLine = homeValue * (creditLimitPercent / 100) - mortgageBalance;
     const availableEquity = homeValue - mortgageBalance;
-    const amount = Math.min(drawAmount, Math.max(0, maxCreditLine));
+    const amount = Math.max(0, Math.min(drawAmount, Math.max(0, maxCreditLine)));
 
     // Draw period: interest-only payments
     const drawMonthlyRate = drawRate / 100 / 12;
@@ -720,6 +735,7 @@ export function calcHELOC(inputs: HELOCInputs): HELOCResult {
     const repaymentTotalInterest = repaymentTotalPaid - amount;
 
     return {
+        modeledDraw: amount,
         availableEquity,
         maxCreditLine: Math.max(0, maxCreditLine),
         drawMonthlyPayment,
@@ -744,7 +760,7 @@ export interface GovLoanInputs {
     // VA specific
     vaFirstTimeUse: boolean;
     vaDisabilityExempt: boolean;
-    // FHA specific: calculated automatically
+    financeUpfrontFee?: boolean;
 }
 
 export interface GovLoanResult {
@@ -756,6 +772,9 @@ export interface GovLoanResult {
     annualFeePercent: number;
     monthlyPrincipalInterest: number;
     monthlyMIP: number;
+    feeMonths: number;
+    upfrontCash: number;
+    totalAnnualFees: number;
     monthlyPropertyTax: number;
     monthlyInsurance: number;
     totalMonthly: number;
@@ -799,28 +818,37 @@ export function calcGovLoan(inputs: GovLoanInputs): GovLoanResult {
         annualFeePercent = 0.35;
     }
 
-    const upfrontFee = baseLoanAmount * (upfrontFeePercent / 100);
-    // FHA rolls upfront MIP into loan; VA/USDA can too
-    const loanAmount = baseLoanAmount + upfrontFee;
-    const annualFee = baseLoanAmount * (annualFeePercent / 100);
+    const upfrontFee = Math.round(baseLoanAmount * upfrontFeePercent) / 100;
+    const upfrontCash = inputs.financeUpfrontFee === false ? upfrontFee : 0;
+    const loanAmount = baseLoanAmount + upfrontFee - upfrontCash;
 
     const monthlyPI = calcMonthlyPI(loanAmount, annualInterestRate, loanTermYears);
+    const n = loanTermYears * 12;
+    const feeMonths = annualFeePercent === 0 ? 0 : loanType === "fha" && downPaymentPercent >= 10 ? Math.min(n, 132) : n;
+    const basePI = calcMonthlyPI(baseLoanAmount, annualInterestRate, loanTermYears);
+    let remainingBase = baseLoanAmount;
+    let annualFee = 0;
+    let totalAnnualFees = 0;
+    for (let m = 0; m < feeMonths; m++) {
+        // FHA and USDA: annual average of scheduled base balances, excluding financed upfront fee.
+        const fee = remainingBase * annualFeePercent / 1200;
+        totalAnnualFees += fee;
+        if (m < 12) annualFee += fee;
+        remainingBase = Math.max(0, remainingBase * (1 + annualInterestRate / 1200) - basePI);
+    }
     const monthlyMIP = annualFee / 12;
     const monthlyPropertyTax = annualPropertyTax / 12;
     const monthlyInsurance = annualInsurance / 12;
     const totalMonthly = monthlyPI + monthlyMIP + monthlyPropertyTax + monthlyInsurance;
 
-    const n = loanTermYears * 12;
     const totalPaid = monthlyPI * n;
     const totalInterest = totalPaid - loanAmount;
-    const feeMonths = loanType === "fha" && downPaymentPercent >= 10 ? Math.min(n,132) : n;
-    // Upfront fee is already financed in totalPaid; do not count it twice.
-    const totalCost = totalPaid + monthlyMIP * feeMonths;
+    const totalCost = totalPaid + upfrontCash + totalAnnualFees;
 
     return {
         loanAmount, baseLoanAmount, upfrontFee, upfrontFeePercent,
         annualFee, annualFeePercent,
-        monthlyPrincipalInterest: monthlyPI, monthlyMIP,
+        monthlyPrincipalInterest: monthlyPI, monthlyMIP, feeMonths, upfrontCash, totalAnnualFees,
         monthlyPropertyTax, monthlyInsurance, totalMonthly,
         totalInterest, totalCost,
     };
@@ -834,6 +862,8 @@ export interface ClosingCostInputs {
     state: string;           // two-letter state code
     loanType: 'conventional' | 'fha' | 'va';
     isNewConstruction: boolean;
+    quote?: Partial<Record<'origination' | 'appraisal' | 'titleSearch' | 'lenderTitle' | 'ownerTitle' | 'settlement' | 'transfer' | 'recording' | 'annualTax' | 'taxMonths' | 'annualInsurance' | 'insuranceReserveMonths' | 'rate' | 'interestDays' | 'credits' | 'deposit', number>>;
+    payFhaUpfrontInCash?: boolean;
 }
 
 export interface ClosingCostLineItem {
@@ -849,6 +879,7 @@ export interface ClosingCostResult {
     sellerItems: ClosingCostLineItem[];
     buyerPercent: number;
     sellerPercent: number;
+    cashToClose: number;
 }
 
 // State transfer tax rates per $1,000 of sale price (buyer side varies)
@@ -884,26 +915,27 @@ const STATE_TRANSFER_TAX: Record<string, { buyer: number; seller: number }> = {
 export { STATE_TRANSFER_TAX };
 
 export function calcClosingCosts(inputs: ClosingCostInputs): ClosingCostResult {
-    const { homePrice, loanAmount, state, loanType } = inputs;
+    const { homePrice, loanAmount, state, loanType, quote = {} } = inputs;
     const rates = STATE_TRANSFER_TAX[state] || { buyer: 0, seller: 0 };
 
     const buyerItems: ClosingCostLineItem[] = [
-        { label: 'Loan Origination Fee (1%)', amount: loanAmount * 0.01, category: 'lender' },
-        { label: 'Appraisal Fee', amount: 550, category: 'lender' },
+        { label: 'Loan Origination Fee', amount: quote.origination ?? loanAmount * 0.01, category: 'lender' },
+        { label: 'Appraisal Fee', amount: quote.appraisal ?? 550, category: 'lender' },
         { label: 'Credit Report', amount: 50, category: 'lender' },
         { label: 'Flood Certification', amount: 25, category: 'lender' },
-        { label: 'Title Search', amount: 400, category: 'title' },
-        { label: 'Title Insurance (Lender)', amount: loanAmount * 0.003, category: 'title' },
-        { label: 'Title Insurance (Owner)', amount: homePrice * 0.005, category: 'title' },
-        { label: 'Escrow/Settlement Fee', amount: 750, category: 'title' },
-        { label: `Transfer Tax (${state || 'N/A'})`, amount: (homePrice / 1000) * rates.buyer, category: 'government' },
-        { label: 'Recording Fees', amount: 150, category: 'government' },
-        { label: 'Prepaid Property Tax (3 months)', amount: (homePrice * 0.012 / 12) * 3, category: 'prepaid' },
-        { label: 'Prepaid Insurance (1 year)', amount: 1400, category: 'prepaid' },
-        { label: 'Prepaid Interest (15 days)', amount: (loanAmount * 0.065 / 365) * 15, category: 'prepaid' },
+        { label: 'Title Search', amount: quote.titleSearch ?? 400, category: 'title' },
+        { label: 'Title Insurance (Lender)', amount: quote.lenderTitle ?? loanAmount * 0.003, category: 'title' },
+        { label: 'Title Insurance (Owner)', amount: quote.ownerTitle ?? homePrice * 0.005, category: 'title' },
+        { label: 'Escrow/Settlement Fee', amount: quote.settlement ?? 750, category: 'title' },
+        { label: `Buyer Transfer Tax (${state || 'N/A'})`, amount: quote.transfer ?? (homePrice / 1000) * rates.buyer, category: 'government' },
+        { label: 'Recording Fees', amount: quote.recording ?? 150, category: 'government' },
+        { label: 'Initial Property Tax Escrow', amount: (quote.annualTax ?? homePrice * 0.012) / 12 * (quote.taxMonths ?? 3), category: 'prepaid' },
+        { label: 'Prepaid Insurance (1 year)', amount: quote.annualInsurance ?? 1400, category: 'prepaid' },
+        { label: 'Initial Insurance Escrow', amount: (quote.annualInsurance ?? 1400) / 12 * (quote.insuranceReserveMonths ?? 0), category: 'prepaid' },
+        { label: 'Prepaid Interest', amount: (loanAmount * (quote.rate ?? 6.5) / 100 / 365) * (quote.interestDays ?? 15), category: 'prepaid' },
     ];
 
-    if (loanType === 'fha') {
+    if (loanType === 'fha' && inputs.payFhaUpfrontInCash !== false) {
         buyerItems.push({ label: 'FHA Upfront MIP (1.75%)', amount: loanAmount * 0.0175, category: 'lender' });
     }
 
@@ -921,6 +953,7 @@ export function calcClosingCosts(inputs: ClosingCostInputs): ClosingCostResult {
 
     return {
         buyerTotal, sellerTotal,
+        cashToClose: homePrice - loanAmount + buyerTotal - (quote.credits ?? 0) - (quote.deposit ?? 0),
         buyerItems, sellerItems,
         buyerPercent: (buyerTotal / homePrice) * 100,
         sellerPercent: (sellerTotal / homePrice) * 100,
@@ -939,6 +972,7 @@ export interface DebtItem {
 export interface DebtPayoffInputs {
     debts: DebtItem[];
     extraMonthly: number;
+    rollMinimums?: boolean;
 }
 
 export interface DebtPayoffMonth {
@@ -956,6 +990,7 @@ export interface DebtPayoffResult {
     totalPaid: number;
     payoffOrder: string[];
     schedule: DebtPayoffMonth[];
+    remainingBalance: number;
 }
 
 export function calcDebtPayoff(
@@ -964,11 +999,12 @@ export function calcDebtPayoff(
 ): DebtPayoffResult {
     const { debts, extraMonthly } = inputs;
     if (debts.length === 0) {
-        return { totalMonths: 0, totalInterest: 0, totalPaid: 0, payoffOrder: [], schedule: [] };
+        return { totalMonths: 0, totalInterest: 0, totalPaid: 0, payoffOrder: [], schedule: [], remainingBalance: 0 };
     }
 
     // Clone balances
-    const balances = debts.map(d => d.balance);
+    const balances = debts.map(d => Math.max(0, d.balance));
+    const monthlyBudget = Math.max(0, extraMonthly) + debts.reduce((s, d, i) => s + (balances[i] > 0.01 ? Math.max(0, d.minPayment) : 0), 0);
     const schedule: DebtPayoffMonth[] = [];
     const payoffOrder: string[] = [];
     let totalInterest = 0;
@@ -977,7 +1013,8 @@ export function calcDebtPayoff(
 
     while (balances.some(b => b > 0.01) && month < 600) {
         month++;
-        let extraBudget = extraMonthly;
+        let extraBudget = inputs.rollMinimums === false ? Math.max(0, extraMonthly) : monthlyBudget;
+        const rows = new Map<number, DebtPayoffMonth>();
 
         // Sort order for targeting: snowball=lowest balance, avalanche=highest rate
         const activeIndices = balances
@@ -993,17 +1030,20 @@ export function calcDebtPayoff(
         for (const idx of activeIndices) {
             const rate = debts[idx].rate / 100 / 12;
             const interest = balances[idx] * rate;
-            const minPay = Math.min(debts[idx].minPayment, balances[idx] + interest);
-            const principal = Math.max(0, minPay - interest);
+            const minPay = Math.min(Math.max(0, debts[idx].minPayment), balances[idx] + interest);
+            const principal = minPay - interest;
             balances[idx] = Math.max(0, balances[idx] - principal);
             totalInterest += interest;
             totalPaid += minPay;
+            if (inputs.rollMinimums !== false) extraBudget -= minPay;
 
-            schedule.push({
+            const row = {
                 month, debtName: debts[idx].name,
                 payment: minPay, principal, interest,
                 balance: balances[idx],
-            });
+            };
+            rows.set(idx, row);
+            schedule.push(row);
         }
 
         // Apply extra to target debt
@@ -1015,7 +1055,7 @@ export function calcDebtPayoff(
             totalPaid += extra;
 
             // Update last schedule entry for this debt
-            const lastEntry = schedule.filter(s => s.month === month && s.debtName === debts[idx].name).pop();
+            const lastEntry = rows.get(idx);
             if (lastEntry) {
                 lastEntry.payment += extra;
                 lastEntry.principal += extra;
@@ -1032,7 +1072,24 @@ export function calcDebtPayoff(
         }
     }
 
-    return { totalMonths: month, totalInterest, totalPaid, payoffOrder, schedule };
+    return { totalMonths: month, totalInterest, totalPaid, payoffOrder, schedule, remainingBalance: balances.reduce((s, b) => s + b, 0) };
+}
+
+export function calcCardPayoff(balance: number, apr: number, paymentForBalance: (balance: number, interest: number) => number) {
+    let remaining = Math.max(0, balance);
+    let totalInterest = 0;
+    let months = 0;
+    const data: { month: number; balance: number; yearStr?: string }[] = [{ month: 0, balance: Math.round(remaining) }];
+    while (remaining > 0.005 && months < 600) {
+        const interest = Math.round(remaining * Math.max(0, apr) / 12) / 100;
+        const payment = Math.min(remaining + interest, Math.max(0, paymentForBalance(remaining, interest)));
+        if (payment <= interest) break;
+        remaining = Math.max(0, Math.round((remaining + interest - payment) * 100) / 100);
+        totalInterest += interest;
+        months++;
+        if (months % 6 === 0 || remaining === 0) data.push({ month: months, yearStr: 'Month ' + months, balance: Math.round(remaining) });
+    }
+    return { months, totalInterest, data, paidOff: remaining <= 0.005 };
 }
 
 // ─── Budget 50/30/20 Calculator ───────────────────────────────────────────────

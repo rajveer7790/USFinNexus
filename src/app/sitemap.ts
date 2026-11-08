@@ -22,6 +22,7 @@ const CALC_PRIORITY: Record<string, number> = {
     '/calculators/debt-payoff': 0.85,
     '/calculators/budget': 0.85,
     '/calculators/income-tax': 0.85,
+    '/calculators/paycheck': 0.90,
     '/calculators/down-payment': 0.82,
     '/calculators/heloc': 0.82,
     '/calculators/auto-loan': 0.82,

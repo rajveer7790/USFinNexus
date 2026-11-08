@@ -15,9 +15,11 @@ export default function HELOCClient() {
     const [repayYears, setRepayYears] = useState(20);
     const [drawRate, setDrawRate] = useState(8.5);
     const [repayRate, setRepayRate] = useState(9.0);
+    const [fixedRate, setFixedRate] = useState(8.75);
+    const [fixedYears, setFixedYears] = useState(15);
 
     const result = useMemo(() => {
-        if (homeValue <= 0 || drawAmount <= 0) return null;
+        if (homeValue <= 0 || drawAmount < 0 || mortgageBalance < 0 || cltvLimit < 0 || cltvLimit > 100 || Math.min(drawRate, repayRate) < 0 || ![drawYears, repayYears].every(y => Number.isInteger(y) && y >= 1 && y <= 40)) return null;
         return calcHELOC({
             homeValue, mortgageBalance, creditLimitPercent: cltvLimit,
             drawAmount, drawPeriodYears: drawYears, repaymentPeriodYears: repayYears,
@@ -27,8 +29,8 @@ export default function HELOCClient() {
 
     // Build amortization for CSV
     const schedule = useMemo(() => {
-        if (!result || drawAmount <= 0) return [];
-        const amt = Math.min(drawAmount, result.maxCreditLine);
+        if (!result?.modeledDraw) return [];
+        const amt = result.modeledDraw;
         const rows: { period: string; month: number; payment: number; principal: number; interest: number; balance: number }[] = [];
         // Draw period
         const drawMonthlyRate = drawRate / 100 / 12;
@@ -47,10 +49,11 @@ export default function HELOCClient() {
             rows.push({ period: 'Repayment', month: drawYears * 12 + m, payment: repayPI, principal, interest, balance: bal });
         }
         return rows;
-    }, [result, drawAmount, drawRate, drawYears, repayRate, repayYears]);
+    }, [result, drawRate, drawYears, repayRate, repayYears]);
 
     const equity = homeValue - mortgageBalance;
     const maxLine = useMemo(() => Math.max(0, homeValue * (cltvLimit / 100) - mortgageBalance), [homeValue, mortgageBalance, cltvLimit]);
+    const fixedPayment = result && fixedYears >= 1 && fixedYears <= 40 && Number.isInteger(fixedYears) && fixedRate >= 0 ? calcMonthlyPI(result.modeledDraw, fixedRate, fixedYears) : null;
 
     return (
         <div className="relative min-h-screen bg-white text-navy-900 pb-20">
@@ -67,10 +70,10 @@ export default function HELOCClient() {
                     <span className="text-xs font-black uppercase tracking-[0.3em] text-[#0da6f2]">Home Equity</span>
                 </div>
                 <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight bg-gradient-to-r from-navy-900 via-[#0da6f2] to-navy-900 bg-clip-text text-transparent">
-                    HELOC &amp; Home Equity Line of Credit Calculator
+                    HELOC &amp; Home Equity Loan Calculator
                 </h1>
                 <p className="text-gray-500 max-w-2xl font-medium text-lg">
-                    Calculate payments on a Home Equity Line of Credit. See interest-only draw period payments and full P&I repayment costs.
+                    Estimate your credit line, compare the draw-to-repayment payment change, and price a fixed home equity loan for the same amount.
                 </p>
             </div>
 
@@ -200,7 +203,7 @@ export default function HELOCClient() {
                                 {[
                                     ['Available Equity', formatCurrency(result.availableEquity)],
                                     ['Max Credit Line', formatCurrency(result.maxCreditLine)],
-                                    ['Your Draw', formatCurrency(Math.min(drawAmount, result.maxCreditLine))],
+                                    ['Modeled Draw', formatCurrency(result.modeledDraw)],
                                     ['Total Interest', formatCurrency(result.totalInterest)],
                                     ['Total Cost', formatCurrency(result.totalCost)],
                                     ['Total Term', `${drawYears + repayYears} years`],
@@ -219,9 +222,19 @@ export default function HELOCClient() {
                                     <p className="font-bold text-sm" style={{ color: '#00C853' }}>Payment Jump Warning</p>
                                 </div>
                                 <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>
-                                    When the draw period ends, your payment increases from <strong style={{ color: 'var(--color-text)' }}>{formatCurrency(result.drawMonthlyPayment)}</strong> (interest-only) to <strong style={{ color: 'var(--color-text)' }}>{formatCurrency(result.repaymentMonthlyPayment)}</strong> (full P&amp;I) - a {formatPercent(result.repaymentMonthlyPayment > 0 ? ((result.repaymentMonthlyPayment - result.drawMonthlyPayment) / result.drawMonthlyPayment) * 100 : 0, 0)} increase. Plan accordingly.
+                                    Monthly change: {formatCurrency(result.repaymentMonthlyPayment - result.drawMonthlyPayment, 2)}{result.drawMonthlyPayment > 0 ? ` (${formatPercent((result.repaymentMonthlyPayment / result.drawMonthlyPayment - 1) * 100, 1)})` : ''}. This assumes one initial draw, no principal payments during the draw, and unchanged rates within each phase.
                                 </p>
+                                {drawAmount > result.modeledDraw && <p className="mt-2 text-sm font-semibold">Requested draw exceeds the modeled borrowing limit. Both scenarios use {formatCurrency(result.modeledDraw)}.</p>}
                             </div>
+                            <section className="mb-6 border rounded-xl p-4 space-y-3">
+                                <h2 className="text-lg font-bold">Compare a fixed-rate home equity loan</h2>
+                                <div className="grid grid-cols-2 gap-3">
+                                    <label className="text-sm">Fixed interest rate (%)<input className="input-field" type="number" min={0} step="0.01" value={fixedRate} onChange={e => setFixedRate(+e.target.value)} /></label>
+                                    <label className="text-sm">Term (years)<input className="input-field" type="number" min={1} max={40} step="1" value={fixedYears} onChange={e => setFixedYears(+e.target.value)} /></label>
+                                </div>
+                                {fixedPayment === null ? <p className="text-sm">Enter a nonnegative rate and a whole term from 1 to 40 years.</p> : <p><strong>{formatCurrency(fixedPayment, 2)}/month</strong> · {formatCurrency(Math.max(0, fixedPayment * fixedYears * 12 - result.modeledDraw))} total interest</p>}
+                                <p className="text-sm text-slate-600">Fixed loan repays principal from month one. Both scenarios exclude fees and use the entered CLTV cap; actual terms may differ. Your home secures either loan.</p>
+                            </section>
 
                             {/* CSV download + schedule */}
                             <button onClick={() => exportGenericCSV(

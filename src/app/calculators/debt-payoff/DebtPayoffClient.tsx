@@ -165,21 +165,22 @@ export default function DebtPayoffClient() {
                             <div className="text-center glass-panel p-6 bg-rose-500/5 border-rose-500/20">
                                 <p className="text-xs font-black uppercase tracking-[0.3em] text-rose-500 mb-3">Avalanche</p>
                                 <p className="text-2xl font-black text-rose-400">
-                                    {Math.floor(avalanche.totalMonths / 12)}y {avalanche.totalMonths % 12}m
+                                    {avalanche.remainingBalance > .01 ? 'Not paid off' : `${Math.floor(avalanche.totalMonths / 12)}y ${avalanche.totalMonths % 12}m`}
                                 </p>
                                 <p className="text-xs mt-3 font-bold uppercase tracking-widest text-gray-500">Interest: {formatCurrency(avalanche.totalInterest)}</p>
                             </div>
                             <div className="text-center glass-panel p-6 bg-[#0da6f2]/5 border-[#0da6f2]/20">
                                 <p className="text-xs font-black uppercase tracking-[0.3em] text-[#0da6f2] mb-3">Snowball</p>
                                 <p className="text-2xl font-black text-[#0da6f2]">
-                                    {Math.floor(snowball.totalMonths / 12)}y {snowball.totalMonths % 12}m
+                                    {snowball.remainingBalance > .01 ? 'Not paid off' : `${Math.floor(snowball.totalMonths / 12)}y ${snowball.totalMonths % 12}m`}
                                 </p>
                                 <p className="text-xs mt-3 font-bold uppercase tracking-widest text-gray-500">Interest: {formatCurrency(snowball.totalInterest)}</p>
                             </div>
                         </div>
 
                         {/* Savings from extra payments */}
-                        {extra > 0 && noExtra.totalMonths > active.totalMonths && (
+                        {active.remainingBalance > .01 && <p role="status" className="mb-4 text-sm">Balance remains after the 50-year model limit. Check that your budget covers interest on all debts.</p>}
+                        {extra > 0 && noExtra.remainingBalance <= .01 && active.remainingBalance <= .01 && noExtra.totalMonths >= active.totalMonths && (
                             <div className="p-4 rounded-xl border mb-6" style={{ borderColor: '#00C853', background: 'rgba(0,200,83,0.05)' }}>
                                 <div className="flex items-center gap-2 mb-2">
                                     <Zap size={16} style={{ color: '#00C853' }} />
@@ -203,10 +204,10 @@ export default function DebtPayoffClient() {
                         )}
 
                         {/* Comparison */}
-                        {Math.abs(interestSaved) > 1 && (
+                        {avalanche.remainingBalance <= .01 && snowball.remainingBalance <= .01 && Math.abs(interestSaved) > 1 && (
                             <div className="p-3 rounded-xl border border-amber-200 bg-amber-50 mb-6">
                                 <p className="text-xs text-gray-400">
-                                    <strong>💡 Comparison:</strong> Avalanche saves <strong style={{ color: 'var(--color-text)' }}>{formatCurrency(Math.abs(interestSaved))}</strong> more in interest than Snowball. Snowball provides faster psychological wins by eliminating smaller debts first.
+                                    <strong>Comparison:</strong> {interestSaved > 0 ? 'Avalanche' : 'Snowball'} saves <strong style={{ color: 'var(--color-text)' }}>{formatCurrency(Math.abs(interestSaved))}</strong> in interest in this scenario. Both plans roll freed minimums into the remaining debt.
                                 </p>
                             </div>
                         )}

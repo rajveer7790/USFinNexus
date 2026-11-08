@@ -3,6 +3,8 @@
 import React, { useState, useMemo } from 'react';
 import CreditCardChart from './CreditCardChart';
 import CalculatorLayout from '@/components/ui/CalculatorLayout';
+import { calcCardPayoff, formatCurrency } from '@/lib/formulas';
+import Link from 'next/link';
 
 import LabeledInput from '@/components/ui/LabeledInput';
 import CustomSlider from '@/components/ui/CustomSlider';
@@ -11,59 +13,18 @@ export default function CreditCardClient() {
     const [balance, setBalance] = useState(5000);
     const [interestRate, setInterestRate] = useState(21.5);
     const [monthlyPayment, setMonthlyPayment] = useState(150);
-
-    const calculation = useMemo(() => {
-        const monthlyRate = interestRate / 100 / 12;
-        let currentBalance = balance;
-        let totalInterest = 0;
-        let months = 0;
-
-        const data = [];
-        data.push({ month: 0, balance: Math.round(currentBalance) });
-
-        // Min payment protection to prevent infinite loops (standard is ~2% of balance or $25)
-        const minPaymentReq = Math.max(balance * 0.02, 25);
-        let actualPayment = monthlyPayment;
-
-        if (monthlyPayment <= (balance * monthlyRate)) {
-            // Payment doesn't even cover interest
-            return {
-                months: Infinity,
-                totalInterest: Infinity,
-                chartData: [],
-                warning: 'Your payment is too low to cover the monthly interest. Your balance will grow indefinitely.'
-            };
-        }
-
-        while (currentBalance > 0 && months < 600) { // Max 50 years to cap infinite loop
-            const interest = currentBalance * monthlyRate;
-
-            // Adjust final payment
-            if (currentBalance + interest < actualPayment) {
-                actualPayment = currentBalance + interest;
-            }
-
-            const principal = actualPayment - interest;
-            totalInterest += interest;
-            currentBalance -= principal;
-            months++;
-
-            if (months % 6 === 0 || currentBalance <= 0) {
-                data.push({
-                    month: months,
-                    yearStr: `Month ${months}`,
-                    balance: Math.max(0, Math.round(currentBalance))
-                });
-            }
-        }
-
+    const [extra, setExtra] = useState(150);
+    const [floor, setFloor] = useState(25);
+    const [percent, setPercent] = useState(1);
+    const { calculation, minimum, accelerated } = useMemo(() => {
+        const minimumPayment = (b: number, interest: number) => Math.max(floor, b * percent / 100 + interest);
         return {
-            months,
-            totalInterest,
-            chartData: data,
-            warning: monthlyPayment < minPaymentReq ? `Warning: Your payment is below the typical minimum requirement ($${Math.round(minPaymentReq)}).` : null
+            calculation: calcCardPayoff(balance, interestRate, () => monthlyPayment),
+            minimum: calcCardPayoff(balance, interestRate, minimumPayment),
+            accelerated: calcCardPayoff(balance, interestRate, (b, i) => minimumPayment(b, i) + extra),
         };
-    }, [balance, interestRate, monthlyPayment]);
+    }, [balance, interestRate, monthlyPayment, extra, floor, percent]);
+    const duration = (months: number) => `${Math.floor(months / 12)}y ${months % 12}m`;
 
     const InputSection = (
         <div className="glass-card p-4 sm:p-6 space-y-6">
@@ -72,7 +33,7 @@ export default function CreditCardClient() {
                 prefix="$"
                 type="number"
                 value={balance}
-                onChange={(e) => setBalance(Number(e.target.value))}
+                onChange={(e) => setBalance(Math.max(0, Number(e.target.value)))}
             />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -81,7 +42,7 @@ export default function CreditCardClient() {
                     suffix="%"
                     type="number"
                     value={interestRate}
-                    onChange={(e) => setInterestRate(Number(e.target.value))}
+                    onChange={(e) => setInterestRate(Math.max(0, Number(e.target.value)))}
                     step="0.1"
                 />
             </div>
@@ -93,16 +54,23 @@ export default function CreditCardClient() {
                         prefix="$"
                         type="number"
                         value={monthlyPayment}
-                        onChange={(e) => setMonthlyPayment(Number(e.target.value))}
+                        onChange={(e) => setMonthlyPayment(Math.max(0, Number(e.target.value)))}
                         className="w-full sm:w-1/2"
                     />
                 </div>
-                <CustomSlider min={25} max={balance} step={10} value={monthlyPayment} onChange={setMonthlyPayment} />
+                <CustomSlider min={0} max={Math.max(25, balance)} step={5} value={monthlyPayment} onChange={setMonthlyPayment} />
             </div>
 
-            {calculation.warning && (
+            <h2 className="font-bold">Minimum payment comparison</h2>
+            <div className="grid gap-3 sm:grid-cols-2">
+                <LabeledInput label="Minimum payment floor ($)" type="number" value={floor} onChange={e => setFloor(Math.max(0, +e.target.value))} />
+                <LabeledInput label="Percent of balance + interest (%)" type="number" value={percent} onChange={e => setPercent(Math.max(0, +e.target.value))} />
+                <LabeledInput label="Extra above minimum each month ($)" type="number" value={extra} onChange={e => setExtra(Math.max(0, +e.target.value))} />
+            </div>
+            <p className="text-sm text-slate-600">The modeled minimum is the greater of the floor or the balance percentage plus interest. Use your issuer’s actual formula where it matches this structure. Assumes no new purchases, fees or APR changes.</p>
+            {!calculation.paidOff && (
                 <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-red-600 text-sm font-semibold">
-                    {calculation.warning}
+                    Fixed payment does not pay off this balance within the model. Check that it exceeds monthly interest.
                 </div>
             )}
         </div>
@@ -114,21 +82,28 @@ export default function CreditCardClient() {
                 <div className="glass-panel p-6 border-l-4 border-l-[#f59e0b]">
                     <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Time to Payoff</p>
                     <p className="text-4xl font-black text-navy-900 tabular-nums">
-                        {calculation.months === Infinity ? 'Never' : `${Math.floor(calculation.months / 12)}y ${calculation.months % 12}m`}
+                        {calculation.paidOff ? duration(calculation.months) : 'Not paid off'}
                     </p>
                 </div>
                 <div className="glass-panel p-6 border-l-4 border-l-[#dc2626]">
                     <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Total Interest Paid</p>
                     <p className="text-4xl font-black text-[#dc2626] tabular-nums">
-                        {calculation.totalInterest === Infinity ? 'Infinite' : `$${Math.round(calculation.totalInterest).toLocaleString('en-US')}`}
+                        {calculation.paidOff ? formatCurrency(calculation.totalInterest) : '—'}
                     </p>
                 </div>
             </div>
 
-            {calculation.months !== Infinity && calculation.chartData.length > 0 && (
+            <section className="glass-card p-5 space-y-3">
+                <h2 className="text-lg font-bold">Minimum only vs. minimum plus extra</h2>
+                <p>Minimum only: <strong>{minimum.paidOff ? `${duration(minimum.months)} · ${formatCurrency(minimum.totalInterest)} interest` : 'Not paid off in the model'}</strong></p>
+                <p>Minimum plus extra: <strong>{accelerated.paidOff ? `${duration(accelerated.months)} · ${formatCurrency(accelerated.totalInterest)} interest` : 'Not paid off in the model'}</strong></p>
+                {minimum.paidOff && accelerated.paidOff && <p><strong>{duration(minimum.months - accelerated.months)} sooner</strong> · {formatCurrency(minimum.totalInterest - accelerated.totalInterest)} interest saved</p>}
+                <Link href="/calculators/debt-payoff" className="underline text-sky-700">Compare snowball and avalanche for multiple debts</Link>
+            </section>
+            {calculation.paidOff && calculation.data.length > 0 && (
                 <div className="glass-card p-6 h-[400px]">
                     <h3 className="text-sm font-bold uppercase tracking-widest mb-4 text-gray-500">Balance Drop Timeline</h3>
-                    <CreditCardChart chartData={calculation.chartData} />
+                    <CreditCardChart chartData={calculation.data} />
                 </div>
             )}
         </div>
