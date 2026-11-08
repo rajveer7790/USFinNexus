@@ -125,12 +125,12 @@ export default function BlogPost() {
 
                 <div className="card p-6 sm:p-10 text-center bg-gradient-to-br from-blue-900 to-indigo-900 text-white rounded-3xl shadow-xl">
                     <Calculator className="w-12 h-12 mx-auto text-blue-300 mb-4" />
-                    <h3 className="text-2xl font-bold mb-3 text-white">Model Your Cash-Out Strategy</h3>
+                    <h3 className="text-2xl font-bold mb-3 text-white">Compare Payments on the Same Borrowed Amount</h3>
                     <p className="text-blue-100 mb-8 max-w-xl mx-auto">
-                        Before applying for a Home Equity Loan, use our Refinance Calculator. It allows you to model exactly how pulling $50,000 out of your house will alter your total mortgage structure and monthly cash flow.
+                        Compare a HELOC’s draw and repayment payments with a fixed-rate home equity loan. Enter your home value, outstanding liens and the lender’s borrowing limit before comparing the monthly costs.
                     </p>
-                    <Link href="/calculators/refinance" className="inline-block bg-white text-navy-900 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
-                        Calculate Home Equity Options
+                    <Link href="/calculators/heloc" className="inline-block bg-white text-navy-900 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
+                        Compare HELOC and Fixed Home Equity Payments
                     </Link>
                 </div>
 

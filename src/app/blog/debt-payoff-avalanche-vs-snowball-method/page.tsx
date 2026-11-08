@@ -152,10 +152,10 @@ export default function BlogPost() {
                     <Calculator className="w-12 h-12 mx-auto text-red-300 mb-4" />
                     <h3 className="text-2xl font-bold mb-3 text-white">How Do You Calculate Your Snowball?</h3>
                     <p className="text-red-100 mb-8 max-w-xl mx-auto">
-                        Do you want to see exactly how many months it will take to become debt-free under both strategies? Use our financial calculators to project your payoff dates and see exactly how much interest the Avalanche method will save you.
+                        Enter the balance, interest rate and minimum payment for each debt. Compare the estimated payoff time and interest under avalanche and snowball using the same monthly budget.
                     </p>
-                    <Link href="/calculators/mortgage" className="inline-block bg-white text-navy-900 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
-                        Explore Finance Calculators
+                    <Link href="/calculators/debt-payoff" className="inline-block bg-white text-navy-900 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
+                        Compare Snowball vs. Avalanche
                     </Link>
                 </div>
 

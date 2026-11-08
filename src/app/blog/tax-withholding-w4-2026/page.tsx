@@ -58,6 +58,7 @@ export default function TaxWithholdingPage() {
                     <h3>Step 4: Other adjustments</h3><p>Interest, dividends, retirement income, bonuses and self-employment income may require an additional adjustment. Extra withholding on a paycheck can be easier to administer than quarterly payments, but it must be large enough and start early enough.</p>
 
                     <h2>Refund Versus Take-Home Pay</h2>
+                    <p>Use the <Link href="/calculators/paycheck" className="text-blue-700 underline">salary and hourly paycheck calculator</Link> to compare the effect of your W-4 inputs and payroll deductions on a regular paycheck. Use the IRS estimator for your full-year household withholding and W-4 decisions.</p>
                     <p>There is no universal “best” refund. A refund means the IRS received more during the year than your final liability. Some households prefer a smaller refund and more take-home pay; others value a forced savings effect. The key is accuracy and cash-flow stability.</p>
                     <p>If your refund is large because of a refundable credit, do not remove withholding without checking eligibility. If your balance due is large because of a side business, a W-4 alone may not solve the issue; estimated payments and business tax planning may be required.</p>
 

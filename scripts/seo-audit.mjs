@@ -27,6 +27,11 @@ const redirectsPath = path.resolve('public/_redirects');
 const redirectSources = new Set(fs.existsSync(redirectsPath)
   ? fs.readFileSync(redirectsPath, 'utf8').split(/\r?\n/).map((line) => line.trim()).filter((line) => line && !line.startsWith('#')).map((line) => line.split(/\s+/)[0])
   : []);
+const permanentAliases = new Set(fs.existsSync(redirectsPath)
+  ? fs.readFileSync(redirectsPath, 'utf8').split(/\r?\n/).map(line => line.trim().split(/\s+/))
+    .filter(([source, target, status]) => source?.startsWith('/') && target?.startsWith('/') && status === '301' && !source.includes('*'))
+    .map(([source]) => source)
+  : []);
 const routeFiles = new Map(htmlFiles.map((file) => [routeFor(file), file]).filter(([route]) => !redirectSources.has(route)));
 const decodeEntities = (value) => value
   .replaceAll('&amp;', '&')
@@ -63,6 +68,9 @@ const findings = {
   duplicateFaqSchema: [],
   sitemapBadUrls: [],
   sitemapCanonicalMismatches: [],
+  sitemapNoindex: [],
+  redirectedInternalLinks: [],
+  missingPriorityLinks: [],
   oneIncomingInternalLink: [],
   depthOver3: [],
   missingHstsRule: [],
@@ -105,16 +113,30 @@ for (const file of routeFiles.values()) {
   if (ratio < 10) findings.lowTextHtmlRatio.push({ route, ratio, textChars, htmlBytes: html.length });
 
   const targets = new Set();
+  const mainTargets = new Set();
+  const main = html.match(/<main\b[^>]*\bid=["']main-content["'][^>]*>([\s\S]*?)<\/main>/i)?.[1] || '';
+  for (const [, href] of main.matchAll(/<a\b[^>]*href=["']([^"']+)["']/gi)) {
+    if (!href.startsWith('#')) {
+      const target = normalizeInternal(href);
+      if (target) mainTargets.add(target);
+    }
+  }
   for (const match of html.matchAll(/<a\b[^>]*href=["']([^"']+)["']/gi)) {
     const href = match[1];
     if (/^(#|mailto:|tel:|javascript:)/i.test(href)) continue;
     const target = normalizeInternal(href);
     if (target) targets.add(target);
+    if (target && permanentAliases.has(target)) findings.redirectedInternalLinks.push({ route, href, target });
     if (target && !routeFiles.has(target) && !fs.existsSync(path.join(outDir, target.slice(1)))) {
       findings.brokenInternalLinks.push({ route, href, target });
     }
   }
-  pageInfo.set(route, { canonical, targets });
+  const noindex = [...html.matchAll(/<meta\b[^>]*>/gi)].some(([meta]) => {
+    const name = meta.match(/\bname=["']([^"']+)["']/i)?.[1]?.toLowerCase();
+    const content = meta.match(/\bcontent=["']([^"']+)["']/i)?.[1]?.toLowerCase();
+    return ['robots', 'googlebot'].includes(name) && content?.split(/[\s,]+/).some(value => value === 'noindex' || value === 'none');
+  });
+  pageInfo.set(route, { canonical, targets, mainTargets, noindex });
   for (const match of html.matchAll(/<img\b[^>]*src=["']([^"']+)["']/gi)) {
     const src = match[1];
     if (/^(https?:|data:|blob:)/i.test(src)) continue;
@@ -151,6 +173,25 @@ if (fs.existsSync(sitemapPath)) {
     const target = normalizeInternal(loc);
     if (!target || !routeFiles.has(target)) findings.sitemapBadUrls.push(loc);
     else if (pageInfo.get(target)?.canonical && normalizeInternal(pageInfo.get(target).canonical) !== target) findings.sitemapCanonicalMismatches.push({ loc, canonical: pageInfo.get(target).canonical });
+    if (target && pageInfo.get(target)?.noindex) findings.sitemapNoindex.push(loc);
+  }
+}
+
+const priorityLinks = [
+  ['/calculators', '/calculators/paycheck'],
+  ['/calculators/income-tax', '/calculators/paycheck'],
+  ['/calculators/budget', '/calculators/paycheck'],
+  ['/blog/tax-withholding-w4-2026', '/calculators/paycheck'],
+  ['/calculators/paycheck', '/blog/tax-withholding-w4-2026'],
+  ['/blog/rent-vs-buy-calculator-2026-housing-market', '/calculators/rent-vs-buy'],
+  ['/blog/debt-payoff-avalanche-vs-snowball-method', '/calculators/debt-payoff'],
+  ['/blog/credit-card-payoff-calculator-strategies', '/calculators/credit-card'],
+  ['/blog/va-loan-benefits-2026-military-guide', '/calculators/va'],
+  ['/blog/heloc-vs-home-equity-loan-2026', '/calculators/heloc'],
+];
+for (const [source, target] of priorityLinks) {
+  if (!pageInfo.get(source)?.mainTargets.has(target) || !pageInfo.has(target) || permanentAliases.has(target)) {
+    findings.missingPriorityLinks.push({ source, target });
   }
 }
 
@@ -189,5 +230,5 @@ const counts = Object.fromEntries(Object.entries(findings).map(([key, value]) =>
 fs.mkdirSync('reports', { recursive: true });
 fs.writeFileSync('reports/seo-audit.json', `${JSON.stringify({ counts, findings }, null, 2)}\n`);
 console.log(JSON.stringify(counts, null, 2));
-const blocking = ['emptyHtml', 'missingTitle', 'missingDescription', 'h1NotOne', 'missingCanonical', 'canonicalMismatch', 'duplicateH1Title', 'brokenInternalLinks', 'brokenInternalImages', 'invalidApplicationSchema', 'duplicateFaqSchema', 'sitemapBadUrls', 'sitemapCanonicalMismatches', 'depthOver3', 'missingHstsRule'];
+const blocking = ['emptyHtml', 'missingTitle', 'missingDescription', 'h1NotOne', 'missingCanonical', 'canonicalMismatch', 'duplicateH1Title', 'brokenInternalLinks', 'brokenInternalImages', 'invalidApplicationSchema', 'duplicateFaqSchema', 'sitemapBadUrls', 'sitemapCanonicalMismatches', 'sitemapNoindex', 'redirectedInternalLinks', 'missingPriorityLinks', 'depthOver3', 'missingHstsRule'];
 if (blocking.some((key) => findings[key].length)) process.exitCode = 1;

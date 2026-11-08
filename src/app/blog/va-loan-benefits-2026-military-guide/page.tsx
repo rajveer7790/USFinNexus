@@ -122,12 +122,12 @@ export default function BlogPost() {
 
                 <div className="card p-6 sm:p-10 text-center bg-gradient-to-br from-indigo-900 to-violet-900 text-white rounded-3xl shadow-xl">
                     <Calculator className="w-12 h-12 mx-auto text-indigo-300 mb-4" />
-                    <h3 className="text-2xl font-bold mb-3 text-white">Compare VA vs Conventional Math</h3>
+                    <h3 className="text-2xl font-bold mb-3 text-white">Estimate Your VA Loan Payment</h3>
                     <p className="text-indigo-100 mb-8 max-w-xl mx-auto">
-                        Do not blindly assume the VA loan is cheaper if you actually have a large down payment saved up. Use our Mortgage Calculator to compare a $0 down VA loan (with the funding fee) against a 20% down Conventional loan to see which mathematically saves you more money over 30 years.
+                        Test the down payment, funding fee and monthly payment on a VA purchase. For a conventional scenario, use the <Link href="/calculators/mortgage" className="underline">conventional mortgage calculator</Link> with your actual rate and closing estimates.
                     </p>
-                    <Link href="/calculators/mortgage" className="inline-block bg-white text-navy-900 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
-                        Calculate Mortgage Comparison
+                    <Link href="/calculators/va" className="inline-block bg-white text-navy-900 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
+                        Calculate a VA Loan Payment
                     </Link>
                 </div>
 

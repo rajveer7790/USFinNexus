@@ -121,10 +121,10 @@ export default function BlogPost() {
                     <Calculator className="w-12 h-12 mx-auto text-blue-300 mb-4" />
                     <h3 className="text-2xl font-bold mb-3 text-white">How Do You Compare the Rent vs Buy Math?</h3>
                     <p className="text-blue-100 mb-8 max-w-xl mx-auto">
-                        Do not make a $500,000 decision based on emotion. Use our Amortization Calculator to see exactly how much unrecoverable interest you will throw away to the bank in the first 5 years of a mortgage.
+                        Compare renting and buying over the time you expect to stay. Test maintenance, closing costs, rent increases and the effect of investing the cash you would otherwise put toward a purchase.
                     </p>
-                    <Link href="/calculators/mortgage" className="inline-block bg-white text-navy-900 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
-                        Calculate Mortgage Interest Costs
+                    <Link href="/calculators/rent-vs-buy" className="inline-block bg-white text-navy-900 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
+                        Compare Renting vs. Buying
                     </Link>
                 </div>
 

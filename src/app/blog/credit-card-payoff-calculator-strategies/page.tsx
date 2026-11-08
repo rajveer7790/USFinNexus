@@ -151,10 +151,10 @@ export default function BlogPost() {
                     <TrendingDown className="w-12 h-12 mx-auto text-red-300 mb-4" />
                     <h3 className="text-2xl font-bold mb-3 text-white">How Do You Visualize Your Escape Plan?</h3>
                     <p className="text-red-100 mb-8 max-w-xl mx-auto">
-                        Do not guess how long it will take to get out of debt. Use our free financial calculators to model your exact balances, see how much interest you will pay under the Minimum Payment Trap, and compare the timeline of an Avalanche versus a Snowball.
+                        Compare your modeled minimum payment with a fixed payment or an extra amount each month. If you have several debts, use the <Link href="/calculators/debt-payoff" className="underline">snowball and avalanche calculator</Link> instead.
                     </p>
-                    <Link href="/calculators/mortgage" className="inline-block bg-white text-navy-900 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
-                        Explore Finance Calculators
+                    <Link href="/calculators/credit-card" className="inline-block bg-white text-navy-900 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
+                        Estimate Your Credit Card Payoff
                     </Link>
                 </div>
 
