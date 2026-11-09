@@ -36,6 +36,11 @@ function exists(url: string): boolean {
 export function blogImage(source: string, slug: string, category: string): string {
     // Prefer the article's own hero, not an unrelated category placeholder.
     const candidates = [
+        ...({
+            'closing-costs-itemized-breakdown-2026': ['/images/redesign/closing-costs.webp'],
+            'heloc-vs-home-equity-loan-2026': ['/images/redesign/home-equity.webp'],
+            'rent-vs-buy-calculator-2026-housing-market': ['/images/redesign/rent-buy.webp'],
+        } as Record<string, string[]>)[slug] ?? [],
         ...[...source.matchAll(/const\s+image\s*=\s*['"](\/images\/[^'"]+)['"]/g)].map(m => m[1]),
         ...[...source.matchAll(/(?:src|image)\s*=\s*['"](\/images\/[^'"]+)['"]/g)].map(m => m[1]),
         ...[...source.matchAll(/['"]https:\/\/usfinnexus\.com(\/images\/[^'"]+)['"]/g)].map(m => m[1]),

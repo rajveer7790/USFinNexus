@@ -6,6 +6,7 @@ import RelatedCalculators from '@/components/RelatedCalculators';
 import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
+import EditorialImage from '@/components/EditorialImage';
 
 export const metadata: Metadata = {
     title: 'Mortgage Closing Costs 2026: What Buyers Should Expect',
@@ -60,6 +61,7 @@ export default function BlogPost() {
                             <span>14 min read</span>
                         </div>
                     </header>
+            <EditorialImage className="fn-reading-cover" src="/images/redesign/closing-costs.webp" alt="Exterior and roof of a blue-gray home" width={1250} height={410} sizes="(min-width: 1050px) 790px, 100vw" priority />
 
                     <p className="lead text-2xl text-gray-700 mb-10 font-light leading-relaxed">
                         <strong>Answer first:</strong> Mortgage closing costs are the lender, title, government and prepaid items due when a home loan closes. The exact amount depends on the property and loan, so compare your lender’s <a href="https://www.consumerfinance.gov/owning-a-home/loan-estimate/" className="text-blue-700 underline">Loan Estimate</a> with the final <a href="https://www.consumerfinance.gov/owning-a-home/closing-disclosure/" className="text-blue-700 underline">Closing Disclosure</a> instead of relying on a generic percentage.

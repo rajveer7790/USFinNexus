@@ -20,11 +20,11 @@ const CATEGORY_ICONS: Record<string, React.ReactNode> = {
 
 export default function GuidesPage() {
     return (
-        <div className="max-w-6xl mx-auto px-4 py-7 sm:py-9">
+        <div className="fn-shell py-7 sm:py-9">
             <Breadcrumbs items={[{ name: 'Guides', item: '/guides' }]} />
 
-            <header className="mb-12 text-center md:text-left">
-                <span className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-blue-100 text-blue-700">
+            <header className="fn-inner-intro">
+                <span className="fn-card-topic">
                     U.S. Financial Handbook
                 </span>
                 <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight" style={{ color: 'var(--color-text)' }}>
@@ -37,7 +37,7 @@ export default function GuidesPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[...ALL_GUIDES].sort((a,b) => Number(a.category === "Cross-Border") - Number(b.category === "Cross-Border")).map((guide) => (
-                    <Link href={`/guides/${guide.slug}`} key={guide.slug} className="group flex flex-col h-full card hover:border-[var(--color-navy)] transition-colors overflow-hidden">
+                    <Link href={`/guides/${guide.slug}`} key={guide.slug} className="fn-card group flex flex-col h-full overflow-hidden">
                         <div className="p-6 flex flex-col flex-1">
                             <div className="flex items-center gap-2 mb-4">
                                 <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-gray-100 text-xs font-medium" style={{ color: 'var(--color-text)' }}>
@@ -49,7 +49,7 @@ export default function GuidesPage() {
                             <h2 className="text-lg font-bold mb-3 leading-snug group-hover:text-blue-600 transition-colors" style={{ color: 'var(--color-text)' }}>
                                 {guide.title}
                             </h2>
-                            <p className="text-sm line-clamp-2 mb-4" style={{ color: 'var(--color-text-muted)' }}>
+                            <p className="text-sm mb-4" style={{ color: 'var(--color-text-muted)' }}>
                                 {guide.excerpt}
                             </p>
                             <div className="mt-auto pt-4 flex items-center text-sm font-semibold text-blue-600">
@@ -66,7 +66,7 @@ export default function GuidesPage() {
                     Our guides provide the knowledge, but our tools provide the math. Use our 100% free premium calculators for mortgage, auto, and personal finance analysis.
                 </p>
                 <div className="flex justify-center">
-                    <Link href="/#calculators" className="btn-primary py-3 px-8 text-sm shadow-xl">
+                    <Link href="/calculators" className="fn-button fn-button-primary">
                         Launch All Calculators
                     </Link>
                 </div>

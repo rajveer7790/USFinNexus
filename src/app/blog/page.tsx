@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function BlogPage() {
     const POSTS = getAllBlogPosts();
     return (
-        <div className="fn-shell py-7 sm:py-9">
+        <div className="fn-shell fn-news-page py-5 sm:py-7">
             <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }]} />
             <div className="fn-inner-intro">
                 <span className="fn-card-topic">News &amp; guides</span>
@@ -22,17 +22,12 @@ export default function BlogPage() {
                 <p className="text-base sm:text-xl max-w-3xl" style={{ color: 'var(--color-text-muted)' }}>
                     Practical guides on home buying, mortgage calculations, refinancing, and personal finance—designed for everyday Americans in 2026.
                 </p>
-                <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-4xl text-left">
-                    <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p className="text-xs font-black uppercase tracking-wider text-blue-700">Answer first</p><p className="mt-1 text-sm text-slate-600">Check the decision, assumptions and source before acting.</p></div>
-                    <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p className="text-xs font-black uppercase tracking-wider text-blue-700">Reviewed dates</p><p className="mt-1 text-sm text-slate-600">Time-sensitive tax, rates and benefit pages show when facts were checked.</p></div>
-                    <div className="rounded-xl border border-slate-200 bg-slate-50 p-4"><p className="text-xs font-black uppercase tracking-wider text-blue-700">Use the math</p><p className="mt-1 text-sm text-slate-600">Open a calculator beside the guide and test your own numbers.</p></div>
-                </div>
             </div>
 
             <BlogDirectory posts={POSTS} />
 
             {/* SEO-rich calculator links */}
-            <div className="mt-12 sm:mt-16 bg-blue-50 rounded-3xl p-6 sm:p-10 border border-blue-100 text-center">
+            <div className="fn-news-utility mt-10 p-5 sm:p-8 text-center">
                 <h2 className="text-2xl font-black mb-4 text-navy-900">Run Your Own Numbers</h2>
                 <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
                     Test your own assumptions with free mortgage and housing calculators. No account required.
@@ -44,7 +39,7 @@ export default function BlogPage() {
                         ['Refinance Calc', '/calculators/refinance'],
                         ['Rent vs Buy', '/calculators/rent-vs-buy'],
                     ].map(([label, href]) => (
-                        <Link key={String(href)} href={String(href)} className="bg-white text-navy-900 font-bold py-3 px-4 rounded-xl border border-gray-200 hover:border-blue-500 hover:text-blue-600 transition-colors shadow-sm">
+                        <Link key={href} href={href} className="fn-card font-bold py-3 px-3">
                             {label}
                         </Link>
                     ))}

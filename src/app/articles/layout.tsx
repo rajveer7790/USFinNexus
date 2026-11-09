@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ReadingFrame from '@/components/ReadingFrame';
 
 export const metadata: Metadata = {
     robots: {
@@ -9,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function ArticlesLayout({ children }: { children: React.ReactNode }) {
-    return <>{children}</>;
+    return <ReadingFrame>{children}</ReadingFrame>;
 }

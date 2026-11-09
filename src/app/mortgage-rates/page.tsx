@@ -20,22 +20,22 @@ export const metadata: Metadata = {
 
 export default function MortgageRatesPage() {
     return (
-        <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-            <Breadcrumbs items={[{ name: 'Home', item: '/' }, { name: 'Mortgage Rates', item: '/mortgage-rates' }]} />
+        <div className="fn-report-page max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
+            <Breadcrumbs items={[{ name: 'Mortgage Rates', item: '/mortgage-rates' }]} />
             <article className="prose prose-slate max-w-none">
-                <header className="not-prose my-8">
-                    <p className="text-sm font-semibold text-blue-700">Data updated {SOURCE_DATE}</p>
+                <header className="fn-inner-intro not-prose mt-5">
+                    <span className="fn-card-topic">Freddie Mac snapshot · {SOURCE_DATE}</span>
                     <h1 className="text-4xl font-black text-navy-900 mt-2">Current Mortgage Rates: October 2026</h1>
                     <p className="text-lg text-gray-600 mt-3">National weekly averages are context, not a personalized lender quote.</p>
                 </header>
 
                 <div className="not-prose grid sm:grid-cols-2 gap-4 my-8">
-                    <section className="rounded-2xl border border-blue-200 bg-blue-50 p-6">
+                    <section className="fn-news-utility p-5">
                         <p className="text-sm text-gray-600">30-year fixed average</p>
                         <p className="text-4xl font-black text-navy-900">{PMMS.thirtyYear.toFixed(2)}%</p>
                         <p className="text-sm text-gray-600">Freddie Mac PMMS, {SOURCE_DATE}</p>
                     </section>
-                    <section className="rounded-2xl border border-blue-200 bg-blue-50 p-6">
+                    <section className="fn-news-utility p-5">
                         <p className="text-sm text-gray-600">15-year fixed average</p>
                         <p className="text-4xl font-black text-navy-900">{PMMS.fifteenYear.toFixed(2)}%</p>
                         <p className="text-sm text-gray-600">Freddie Mac PMMS, {SOURCE_DATE}</p>
@@ -68,6 +68,6 @@ export default function MortgageRatesPage() {
                     Source: <a href="https://www.freddiemac.com/pmms" rel="nofollow external">Freddie Mac Primary Mortgage Market Survey</a>. PMMS is generally published weekly. This page shows the source date prominently and should be refreshed after each new release; it does not predict future rates or represent an offer to lend.
                 </p>
             </article>
-        </main>
+        </div>
     );
 }

@@ -36,12 +36,12 @@ export default function ArticlesPage() {
     const rest = ALL_ARTICLES.slice(1);
 
     return (
-        <div className="max-w-6xl mx-auto px-4 py-7 sm:py-9">
+        <div className="fn-shell py-7 sm:py-9">
             <Breadcrumbs items={[{ name: 'Articles', item: '/articles' }]} />
 
             {/* Header */}
-            <header className="mb-6 sm:mb-10">
-                <span className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 bg-blue-100 text-blue-700 uppercase tracking-wider">
+            <header className="fn-inner-intro">
+                <span className="fn-card-topic">
                     Compliance &amp; Tax Guides
                 </span>
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-black mb-3 tracking-tight" style={{ color: 'var(--color-text)' }}>
@@ -56,10 +56,10 @@ export default function ArticlesPage() {
             {/* Featured Article - full-width hero card */}
             <Link
                 href={`/articles/${featured.slug}`}
-                className="group block mb-10 rounded-2xl overflow-hidden border border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all duration-200 bg-white"
+                className="fn-card group block mb-10 overflow-hidden"
             >
                 <div className="grid grid-cols-1 md:grid-cols-2">
-                    <div className="relative h-56 md:h-72 bg-gray-100 overflow-hidden">
+                    <div className="relative aspect-video bg-gray-100 overflow-hidden">
                         <Image
                             src={featured.image}
                             alt={featured.title}

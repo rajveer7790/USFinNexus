@@ -6,6 +6,7 @@ import RelatedCalculators from '@/components/RelatedCalculators';
 import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
+import EditorialImage from '@/components/EditorialImage';
 
 export const metadata: Metadata = {
     title: "Rent vs Buy in 2026: Why Renting is NOT Throwing Money Away | Guide",
@@ -52,6 +53,7 @@ export default function BlogPost() {
                     <span>10 min read</span>
                 </div>
             </header>
+            <EditorialImage className="fn-reading-cover" src="/images/redesign/rent-buy.webp" alt="City skyline above a tree-lined residential neighborhood" width={580} height={270} sizes="(min-width: 1050px) 790px, 100vw" priority />
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>

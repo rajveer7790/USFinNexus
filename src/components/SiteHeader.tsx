@@ -89,6 +89,14 @@ const reportLinks = [
     { href: '/data/home-affordability-by-city', label: 'Affordability by city' },
     { href: '/methodology', label: 'How the numbers are calculated' },
 ];
+const TOPIC_LINKS = ['Mortgage', 'Housing Market', 'Taxes', 'Banking', 'Retirement', 'Personal Finance'].map(label => ({
+    label, href: `/blog?topic=${encodeURIComponent(label)}#blog-library`,
+}));
+const QUICK_READS = [
+    { href: '/blog/closing-costs-itemized-breakdown-2026', label: 'Understand mortgage closing costs', desc: 'A fee-by-fee homebuying guide' },
+    { href: '/blog/heloc-vs-home-equity-loan-2026', label: 'HELOC vs. home equity loan', desc: 'Compare the two ways to borrow' },
+    { href: '/blog/rent-vs-buy-calculator-2026-housing-market', label: 'Rent or buy?', desc: 'Work through the trade-offs' },
+];
 
 const additional = [
     { href: '/calculators', label: 'All calculators', desc: 'Financial planning tools' },
@@ -140,6 +148,8 @@ export default function SiteHeader() {
 
     const close = () => { setMobile(false); setMenu(null); };
     const links = (items: ReadonlyArray<{ href: string; label: string }>) => items.map(item => <Link key={item.href} href={item.href} aria-current={current(item.href)} onClick={close}>{item.label}</Link>);
+    const topicLinks = TOPIC_LINKS.map(item => <a key={item.href} href={item.href} onClick={close}>{item.label}</a>);
+    const richLinks = (items: ReadonlyArray<{ href: string; label: string; desc: string }>) => items.map(item => <Link key={item.href} href={item.href} onClick={close}><span><b>{item.label}</b><small>{item.desc}</small></span><ArrowRight size={16} aria-hidden="true" /></Link>);
     const resources = NAV_RESOURCES.filter(item => item.href !== '/mortgage-rates');
     const controls = [
         { id: 'calculators', label: 'Calculators', active: isActive('/calculators') || isActive('/canada') },
@@ -148,9 +158,39 @@ export default function SiteHeader() {
     ] as const;
 
     function menuControl(control: (typeof controls)[number]) {
-        return <button ref={el => { menuButtons.current[control.id] = el; }} type="button" data-active={control.active} aria-expanded={menu === control.id} aria-controls={menu === control.id ? 'fn-desktop-panel' : undefined} onClick={() => setMenu(menu === control.id ? null : control.id)}>
-            {control.label}<ChevronDown size={15} aria-hidden="true" />
-        </button>;
+        const panelId = `fn-panel-${control.id}`;
+        const expanded = menu === control.id;
+        return <div className="fn-nav-slot">
+            <button ref={el => { menuButtons.current[control.id] = el; }} type="button" data-active={control.active} aria-expanded={expanded} aria-controls={expanded ? panelId : undefined} onClick={() => setMenu(expanded ? null : control.id)}
+                onKeyDown={event => {
+                    if (event.key !== 'ArrowDown') return;
+                    event.preventDefault();
+                    setMenu(control.id);
+                    requestAnimationFrame(() => document.querySelector<HTMLAnchorElement>(`#${panelId} a`)?.focus());
+                }}>
+                {control.label}<ChevronDown size={15} aria-hidden="true" />
+            </button>
+            {expanded && <div id={panelId} className="fn-nav-panel fn-mega">
+                {control.id === 'calculators' ? <>
+                    <div className="fn-mega-intro"><span><b>Find the right calculator</b><small>Run your own numbers, no account needed.</small></span><Link href="/calculators" onClick={close}>All calculators <ArrowRight size={16} aria-hidden="true" /></Link></div>
+                    <div className="fn-nav-columns">{NAV_CALCULATORS.map(group => <div key={group.category}><strong>{group.category}</strong>{links(group.items.slice(0, group.category === 'Mortgage & Housing' ? 7 : 6))}{group.category === 'Wealth & Tax' && links(additional.slice(1, 2))}</div>)}</div>
+                </> : control.id === 'news' ? <div className="fn-mega-news">
+                    <div><strong>Explore</strong>{richLinks(resources.slice(0, 3))}</div>
+                    <div><strong>Browse by topic</strong>{topicLinks}</div>
+                    <div className="fn-mega-feature"><strong>Start with a guide</strong>{richLinks(QUICK_READS)}</div>
+                </div> : <div className="fn-mega-reports">
+                    <div><strong>Housing data</strong>{richLinks([
+                        { ...reportLinks[0], desc: 'Compare U.S. states' },
+                        { ...reportLinks[1], desc: 'Compare major U.S. cities' },
+                        { href: '/mortgage-rates', label: 'Mortgage rate snapshot', desc: 'Source-dated national averages' },
+                    ])}</div>
+                    <div className="fn-mega-feature"><strong>Behind the data</strong>{richLinks([
+                        { ...reportLinks[2], desc: 'Sources, assumptions and limitations' },
+                        { href: '/calculators/affordability', label: 'Estimate your buying budget', desc: 'Test the numbers using your own inputs' },
+                    ])}</div>
+                </div>}
+            </div>}
+        </div>;
     }
 
     return <>
@@ -170,12 +210,6 @@ export default function SiteHeader() {
                     <Link href="/mortgage-rates" aria-current={current('/mortgage-rates')} onClick={close}>Mortgage Rates</Link>
                     {menuControl(controls[1])}
                     {menuControl(controls[2])}
-                    {menu && <div id="fn-desktop-panel" className={`fn-nav-panel ${menu === 'calculators' ? 'fn-nav-panel-wide' : ''}`}>
-                        {menu === 'calculators' ? <>
-                            <div className="fn-panel-top">{links(additional.slice(0, 2))}</div>
-                            <div className="fn-nav-columns">{NAV_CALCULATORS.map(group => <div key={group.category}><strong>{group.category}</strong>{links(group.items)}</div>)}</div>
-                        </> : links(menu === 'news' ? resources : reportLinks)}
-                    </div>}
                 </nav>
                 <div className="fn-desktop-search"><SiteSearch key={pathname} /></div>
                 <button ref={mobileButton} className="fn-mobile-toggle" type="button" aria-label={mobile ? 'Close menu' : 'Open menu'} aria-expanded={mobile} aria-controls={mobile ? 'mobile-nav' : undefined} onClick={() => setMobile(!mobile)}>{mobile ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}</button>
@@ -184,6 +218,7 @@ export default function SiteHeader() {
                 <div className="fn-shell">
                     <SiteSearch key={pathname} />
                     <div className="fn-mobile-links">{links([additional[0], NAV_RESOURCES[0], NAV_RESOURCES[1], NAV_RESOURCES[2]])}</div>
+                    <details className="fn-disclosure"><summary>News &amp; guide topics<ChevronDown size={16} aria-hidden="true" /></summary><div className="fn-mobile-links">{topicLinks}</div></details>
                     {NAV_CALCULATORS.map(group => <details className="fn-disclosure" key={group.category}><summary>{group.category}<ChevronDown size={16} aria-hidden="true" /></summary><div className="fn-mobile-links">{links(group.items)}</div></details>)}
                     <details className="fn-disclosure"><summary>Data &amp; reports<ChevronDown size={16} aria-hidden="true" /></summary><div className="fn-mobile-links">{links(reportLinks)}</div></details>
                     <div className="fn-mobile-links">{links([additional[1], ...resources.slice(2).filter(item => item.href !== '/methodology')])}</div>

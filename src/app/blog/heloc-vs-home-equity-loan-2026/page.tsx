@@ -6,6 +6,7 @@ import RelatedCalculators from '@/components/RelatedCalculators';
 import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
+import EditorialImage from '@/components/EditorialImage';
 
 export const metadata: Metadata = {
     title: "HELOC vs. Home Equity Loan: Which is Better in 2026? | Guide",
@@ -52,6 +53,7 @@ export default function BlogPost() {
                     <span>8 min read</span>
                 </div>
             </header>
+            <EditorialImage className="fn-reading-cover" src="/images/redesign/home-equity.webp" alt="Sunlit patio outside a home" width={580} height={270} sizes="(min-width: 1050px) 790px, 100vw" priority />
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
