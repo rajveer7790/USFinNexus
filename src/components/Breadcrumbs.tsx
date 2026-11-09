@@ -30,25 +30,25 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
     };
 
     return (
-        <nav className="flex mb-8 items-center space-x-2 text-xs font-semibold uppercase tracking-widest text-gray-700 overflow-x-auto whitespace-nowrap pb-2">
+        <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-x-1 gap-y-1 pb-2 mb-4 sm:mb-8 text-xs font-semibold uppercase tracking-wide text-gray-700">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             {allItems.map((item, index) => (
-                <div key={item.item} className="flex items-center">
+                <div key={item.item} className="flex min-w-0 max-w-full items-center">
                     {index === 0 ? (
                         <Link href={item.item} className="hover:text-[#0da6f2] transition-colors flex items-center gap-1.5">
-                            <Home size={12} />
+                            <Home size={12} className="shrink-0" />
                             {item.name}
                         </Link>
                     ) : (
-                        <Link href={item.item} className="hover:text-[#0da6f2] transition-colors">
+                        <Link href={item.item} aria-current={index === allItems.length - 1 ? 'page' : undefined} className="min-w-0 break-words hover:text-[#0da6f2] transition-colors">
                             {item.name}
                         </Link>
                     )}
                     {index < allItems.length - 1 && (
-                        <ChevronRight size={12} className="mx-2 text-gray-400" />
+                        <ChevronRight size={12} className="mx-1.5 shrink-0 text-gray-400" aria-hidden="true" />
                     )}
                 </div>
             ))}

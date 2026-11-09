@@ -85,7 +85,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body className={`${inter.className} ${plexMono.variable}`} suppressHydrationWarning>
                 <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" disableTransitionOnChange>
                     <SiteHeader />
-                    <main id="main-content" className="min-h-screen">{children}</main>
+                    <main id="main-content" className="site-main min-h-screen">{children}</main>
                     <Footer />
                     <Toaster position="bottom-right" toastOptions={{ style: { background: 'var(--color-card)', border: '1px solid var(--color-border)', color: 'var(--color-text)' } }} />
                 </ThemeProvider>

@@ -205,7 +205,7 @@ export default function MortgageCalculator({
 
             {/* Download Bar (Top) */}
             {summary && (
-                <div className="mb-6 animate-slide-up">
+                <div className="hidden sm:block mb-6 animate-slide-up">
                     <DownloadButtons
                         summary={summary}
                         amortization={amortization}
@@ -214,6 +214,7 @@ export default function MortgageCalculator({
                     />
                 </div>
             )}
+            {summary && <a href="#mortgage-estimate" className="sm:hidden mb-4 inline-flex min-h-11 items-center rounded-xl border border-sky-200 bg-sky-50 px-4 text-sm font-semibold text-sky-900">Jump to payment estimate</a>}
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 relative">
                 {/* ── LEFT: Inputs ──────────────────────────────────────────────────── */}
@@ -458,7 +459,7 @@ export default function MortgageCalculator({
                 </div>
 
                 {/* ── RIGHT: Results ─────────────────────────────────────────────────── */}
-                <div className="lg:col-span-8 space-y-6 flex flex-col lg:self-start">
+                <div id="mortgage-estimate" tabIndex={-1} className="min-w-0 lg:col-span-8 space-y-6 flex flex-col lg:self-start">
 
                     {/* Main Payment Card */}
                     {summary ? (
@@ -489,13 +490,13 @@ export default function MortgageCalculator({
                                 ].map(stat => (
                                     <div key={stat.label} className="glass-panel p-2 sm:p-4 text-center">
                                         <p className="text-xs font-bold uppercase tracking-wide text-gray-500 mb-1 leading-tight">{stat.label}</p>
-                                        <p className="text-xs sm:text-sm font-black text-navy-900 truncate">{stat.value}</p>
+                                        <p className="text-xs sm:text-sm font-black text-navy-900 break-words">{stat.value}</p>
                                     </div>
                                 ))}
                             </div>
 
                             {/* Tabs Navigation */}
-                            <div className="glass-tab-list justify-start sm:justify-center mb-4 sm:mb-5 mx-auto self-center overflow-x-auto scrollbar-hide w-full flex-nowrap">
+                            <div role="group" aria-label="Mortgage results views" className="glass-tab-list justify-start sm:justify-center mb-4 sm:mb-5 mx-auto self-center w-full">
                                 {([
                                     { key: 'breakdown', label: 'Payment Breakdown' },
                                     { key: 'amortization', label: 'Amortization Table' },
@@ -504,10 +505,10 @@ export default function MortgageCalculator({
                                 ] as { key: TabKey; label: string }[]).map(t => (
                                     <button
                                         key={t.key}
+                                        type="button"
                                         onClick={() => switchTab(t.key)}
                                         className={`glass-tab ${tab === t.key ? 'active' : ''}`}
-                                        role="tab"
-                                        aria-selected={tab === t.key}
+                                        aria-pressed={tab === t.key}
                                     >
                                         {t.label}
                                     </button>

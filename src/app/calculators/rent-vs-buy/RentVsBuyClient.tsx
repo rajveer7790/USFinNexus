@@ -133,7 +133,7 @@ export default function RentVsBuyClient() {
                                 </div>
 
                                 {/* Metrics Grid */}
-                                <div className="grid grid-cols-2 gap-4 sm:gap-6">
+                                <div className="mobile-stack-narrow grid grid-cols-2 gap-3 sm:gap-6">
                                     {[
                                         { label: 'Net Buy Cost', value: formatCurrency(result.netBuyCost), color: 'text-[#0da6f2]' },
                                         { label: 'Net Rent Cost', value: formatCurrency(result.netRentCost), color: 'text-purple-400' },
@@ -142,8 +142,8 @@ export default function RentVsBuyClient() {
                                         { label: 'Renter’s Upfront Cash, Invested', value: formatCurrency(result.renterInitialInvestmentValue), color: 'text-purple-600' },
                                     ].map(s => (
                                         <div key={s.label} className="glass-card p-4 sm:p-6 text-center group">
-                                            <p className="text-xs font-black uppercase tracking-[0.3em] text-gray-500 mb-4">{s.label}</p>
-                                            <p className={`text-3xl font-black tabular-nums transition-all group-hover:scale-105 duration-300 ${s.color}`}>{s.value}</p>
+                                            <p className="text-xs font-bold uppercase tracking-wide text-gray-600 mb-2 sm:mb-4">{s.label}</p>
+                                            <p className={`text-xl sm:text-3xl font-black tabular-nums leading-tight ${s.color}`}>{s.value}</p>
                                         </div>
                                     ))}
                                 </div>

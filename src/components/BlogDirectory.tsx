@@ -12,15 +12,21 @@ export default function BlogDirectory({ posts }: { posts: BlogPostEntry[] }) {
     return <section aria-label="Browse finance guides">
         <label className="block text-sm font-semibold mb-2" htmlFor="blog-search">Find a guide</label>
         <input id="blog-search" type="search" value={query} onChange={e => setQuery(e.target.value)} placeholder="Search mortgage, tax, retirement…" className="w-full max-w-xl rounded-xl border border-slate-300 px-4 py-3 mb-5" />
-        <div className="flex flex-wrap gap-2 mb-6">
+        <div className="sm:hidden mb-4">
+            <label htmlFor="blog-category" className="block text-sm font-semibold">Category</label>
+            <select id="blog-category" value={category} onChange={e => setCategory(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2">
+                {categories.map(c => <option key={c} value={c}>{c === 'All' ? 'All categories' : c}</option>)}
+            </select>
+        </div>
+        <div className="hidden sm:flex flex-wrap gap-2 mb-6">
             {categories.map(c => <button type="button" key={c} aria-pressed={category === c} onClick={() => setCategory(c)} className={`px-4 py-2 min-h-[44px] rounded-full text-sm font-semibold border ${category === c ? 'bg-slate-900 text-white border-slate-900' : 'bg-white border-slate-200 text-slate-700 hover:border-blue-500'}`}>{c}</button>)}
         </div>
         <p role="status" className="text-sm text-slate-600 mb-6">{filtered.length} guides</p>
         {/* All canonical cards are server-rendered on first load; filtering is optional. */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             {filtered.map(post => <Link href={`/blog/${post.slug}`} key={post.slug} className="group flex flex-col bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow no-underline">
-                <div className="relative w-full h-56 bg-slate-100 overflow-hidden"><EditorialImage src={post.image} alt={post.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" /></div>
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="relative w-full aspect-[1200/630] sm:aspect-auto sm:h-56 bg-slate-100 overflow-hidden"><EditorialImage src={post.image} alt={post.title} fill sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw" className="object-cover" /></div>
+                <div className="p-4 sm:p-6 flex flex-col flex-grow">
                     <span className="text-xs font-bold text-blue-700 mb-3">{post.category}</span>
                     <h2 className="font-bold text-lg mb-3 leading-snug text-slate-900 group-hover:text-blue-700">{post.title}</h2>
                     <p className="text-sm leading-relaxed text-slate-600 mb-4">{post.excerpt}</p>

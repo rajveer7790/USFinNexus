@@ -37,8 +37,7 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
-  max-width: 100%;
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -47,15 +46,6 @@ body {
   color: var(--color-text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-  max-width: 100%;
-  /* Never let a menu, chart or wide table disable vertical page scrolling. */
-  touch-action: pan-y;
-}
-
-body[data-mobile-menu-open="true"] {
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 /* ─── Typography ──────────────────────────────────────────────── */
@@ -363,19 +353,6 @@ h1, h2, h3, h4, h5 {
   }
   .prose h2, .prose-lg h2 {
     font-size: 1.25rem; /* xl instead of 2xl */
-  }
-  /* Prevent table overflow on mobile */
-  .prose table, .prose-lg table {
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    white-space: nowrap;
-  }
-  .prose table thead, .prose table tbody, .prose table tr,
-  .prose-lg table thead, .prose-lg table tbody, .prose-lg table tr {
-    display: table;
-    width: 100%;
-    table-layout: auto;
   }
 }
 
@@ -919,10 +896,84 @@ input[type=number] { -moz-appearance: textfield; }
 
 /* ═══ Accessibility ═══ */
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
   .neo-reveal { animation: none !important; opacity: 1; }
   .neo-orb { animation: none !important; }
   .neo-ticker-track { animation: none !important; }
   .neo-bar-fill { animation: none !important; }
   .neo-status-pulse::after { animation: none !important; }
+}
+
+/* Shared reflow rules: let content shrink, but never clip the document to hide bugs. */
+.site-main { min-inline-size: 0; overflow-wrap: anywhere; }
+:where(.site-main :is(.grid, .flex, .inline-flex) > *) { min-inline-size: 0; }
+.site-main :where(.card, .glass-card, .glass-panel, .tool-card, fieldset, figure) {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+.site-main :where(input, select, textarea, img, video, iframe, pre, .recharts-responsive-container) {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+.site-main :where(pre, .overflow-x-auto, .overflow-auto) {
+  max-inline-size: 100%;
+}
+.site-main pre { overflow: auto; }
+.site-main .recharts-wrapper { touch-action: pan-y pinch-zoom; }
+
+.mobile-nav-panel {
+  max-height: calc(100vh - 4.0625rem);
+  max-height: calc(100dvh - 4.0625rem);
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.mobile-nav-panel details summary::-webkit-details-marker { display: none; }
+
+@media (max-width: 639px) {
+  .site-main :is(.glass-card, .glass-panel, .card):is(.p-6, .p-8, .p-10, .p-12) {
+    padding: 1rem;
+  }
+  .site-main :is(input:not([type]), input[type=text], input[type=search], input[type=number], input[type=email], input[type=tel], input[type=date], select, textarea) {
+    min-block-size: 44px;
+    font-size: 1rem;
+  }
+  .site-main :is(.btn-primary, .btn-green, .btn-outline, .glass-tab) {
+    min-block-size: 44px;
+    white-space: normal;
+    text-align: center;
+  }
+  .site-main :is(.btn-primary, .btn-green, .btn-outline, .glass-tab) > svg { flex-shrink: 0; }
+  .site-main table:not(:where(.overflow-x-auto table, .overflow-auto table, .table-scroll table)) {
+    table-layout: fixed;
+    inline-size: 100%;
+  }
+  .site-main :where(table:not(.overflow-x-auto table, .overflow-auto table, .table-scroll table) :is(th, td)) {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    padding-inline: .375rem;
+  }
+  .site-main .glass-tab-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    background: #eef4f8;
+    border-color: #dce6ee;
+  }
+  .site-main .glass-tab { width: 100%; padding-inline: .375rem; }
+  .site-main .glass-tab.active { background-color: #075985; box-shadow: none; }
+  .site-main .glass-tab svg { display: none; }
+  .site-main .neo-hero { padding-block: 1.75rem; }
+  .site-main .neo-container { padding-inline: 1rem; }
+  .site-main .neo-hero-grid { grid-template-columns: minmax(0, 1fr); width: 100%; }
+  .site-main .neo-dash { transform: none; padding: 1rem; }
+  .site-main .neo-dash-chips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .375rem; }
+  .site-main .neo-chip { padding: .5rem .25rem; }
+  .site-main .neo-chip-lbl { font-size: .625rem; color: #a3adc2; }
+  .site-main .ph-quick-row { flex-wrap: wrap; }
+  .site-main .ph-quick-item { min-height: 44px; }
+}
+
+@media (max-width: 374px) {
+  .site-main .mobile-stack-narrow { grid-template-columns: minmax(0, 1fr); }
 }
 

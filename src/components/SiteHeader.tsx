@@ -90,22 +90,20 @@ export default function SiteHeader() {
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
     const [scrolled, setScrolled] = useState(false);
     const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const mobileToggle = useRef<HTMLButtonElement>(null);
 
-    /* ── Close menu & unlock scroll on route change ──────── */
+    /* ── Close menu on route change ──────────────────────── */
     useEffect(() => {
         setMobileOpen(false);
         setActiveMenu(null);
     }, [pathname]);
 
-    /* ── Keep the page scrollable on touch devices ─────────
-       The old global overflow lock could survive a mobile browser
-       navigation/gesture and leave the document stuck at one position.
-       The drawer has its own bounded scroll area, so the page never needs
-       to disable body scrolling. */
     useEffect(() => {
-        document.body.dataset.mobileMenuOpen = mobileOpen ? 'true' : 'false';
-        return () => { delete document.body.dataset.mobileMenuOpen; };
-    }, [mobileOpen]);
+        const desktop = window.matchMedia('(min-width: 1024px)');
+        const closeOnDesktop = () => { if (desktop.matches) setMobileOpen(false); };
+        desktop.addEventListener('change', closeOnDesktop);
+        return () => desktop.removeEventListener('change', closeOnDesktop);
+    }, []);
 
     /* ── Scroll shadow ───────────────────────────────────── */
     useEffect(() => {
@@ -120,11 +118,12 @@ export default function SiteHeader() {
             if (e.key === 'Escape') {
                 setActiveMenu(null);
                 setMobileOpen(false);
+                if (mobileOpen) mobileToggle.current?.focus();
             }
         };
         window.addEventListener('keydown', onKey);
         return () => window.removeEventListener('keydown', onKey);
-    }, []);
+    }, [mobileOpen]);
 
     const openMenu = useCallback((name: string) => {
         if (closeTimer.current) clearTimeout(closeTimer.current);
@@ -389,6 +388,8 @@ export default function SiteHeader() {
 
                             {/* Mobile hamburger - min 44×44 tap target */}
                             <button
+                                ref={mobileToggle}
+                                type="button"
                                 onClick={() => setMobileOpen(prev => !prev)}
                                 className="lg:hidden flex items-center justify-center w-11 h-11 rounded-lg text-gray-600 hover:bg-gray-100 active:bg-gray-200 transition-colors"
                                 aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
@@ -411,25 +412,26 @@ export default function SiteHeader() {
                             aria-hidden="true"
                         />
 
-                        {/* Animated drawer */}
-                        <div
+                        {/* Positioned panel keeps the page and scroll position stable. */}
+                        <nav
                             id="mobile-nav"
-                            className="lg:hidden relative z-50 border-t border-gray-100 bg-white overflow-y-auto overscroll-contain animate-slide-down"
-                            style={{ maxHeight: 'calc(100svh - 4rem)', WebkitOverflowScrolling: 'touch', touchAction: 'pan-y' }}
+                            className="mobile-nav-panel lg:hidden absolute inset-x-0 top-full z-50 border-t border-gray-100 bg-white shadow-xl"
                             aria-label="Mobile navigation"
                         >
-                            <div className="px-4 py-5 space-y-5">
+                            <div className="px-4 py-4 space-y-3">
+                                <div className="grid grid-cols-2 gap-2">
+                                    <Link href="/calculators" onClick={() => setMobileOpen(false)} className="min-h-11 grid place-items-center rounded-xl bg-[#0A192F] px-2 py-2 text-center text-sm font-bold text-white">All calculators</Link>
+                                    <Link href="/blog" onClick={() => setMobileOpen(false)} className="min-h-11 grid place-items-center rounded-xl bg-slate-100 px-2 py-2 text-center text-sm font-bold text-slate-800">Finance blog</Link>
+                                </div>
 
                                 {/* Calculator categories */}
                                 {NAV_CALCULATORS.map(col => (
-                                    <div key={col.category}>
-                                        <p
-                                            className="text-xs font-black uppercase tracking-widest px-1 py-1 mb-2"
-                                            style={{ color: col.color }}
-                                        >
-                                            {col.category}
-                                        </p>
-                                        <div className="grid grid-cols-2 gap-1">
+                                    <details key={col.category} className="group rounded-xl border border-slate-200">
+                                        <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-2 px-3 text-sm font-bold text-slate-800">
+                                            <span>{col.category}</span>
+                                            <ChevronDown size={16} aria-hidden="true" className="shrink-0 group-open:rotate-180" />
+                                        </summary>
+                                        <div className="grid grid-cols-2 gap-1 border-t border-slate-100 p-1">
                                             {col.items.map(item => {
                                                 const active = isActive(item.href);
                                                 return (
@@ -437,7 +439,7 @@ export default function SiteHeader() {
                                                         key={item.href}
                                                         href={item.href}
                                                         onClick={() => setMobileOpen(false)}
-                                                        className={`flex items-center gap-2 px-3 py-3 rounded-xl text-sm font-medium transition-colors min-h-[44px] ${
+                                                        className={`min-w-0 flex items-center gap-2 px-2 py-2 rounded-lg text-sm font-medium transition-colors min-h-[44px] ${
                                                             active
                                                                 ? 'bg-blue-50 text-[#0da6f2]'
                                                                 : 'text-gray-700 hover:bg-gray-50 hover:text-[#0da6f2]'
@@ -447,12 +449,12 @@ export default function SiteHeader() {
                                                             size={15}
                                                             className={`flex-shrink-0 ${active ? 'text-[#0da6f2]' : 'text-gray-400'}`}
                                                         />
-                                                        <span className="leading-tight text-xs sm:text-sm">{item.label}</span>
+                                                        <span className="min-w-0 break-words leading-tight text-xs sm:text-sm">{item.label}</span>
                                                     </Link>
                                                 );
                                             })}
                                         </div>
-                                    </div>
+                                    </details>
                                 ))}
 
                                 {/* Resources */}
@@ -495,7 +497,7 @@ export default function SiteHeader() {
                                 </Link>
 
                             </div>
-                        </div>
+                        </nav>
                     </>
                 )}
             </header>
