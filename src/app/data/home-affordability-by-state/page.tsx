@@ -14,14 +14,15 @@ export const metadata: Metadata = {
 
 export default function AffordabilityByStatePage() {
     return (
-        <main className="bg-white min-h-screen py-8 sm:py-10">
+        <div className="fn-report-page bg-white min-h-screen py-8 sm:py-10">
             <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-blue">
-                <header className="mb-6 sm:mb-10 text-center">
+                <header className="fn-inner-intro">
+                    <span className="fn-card-topic">Data &amp; reports · State comparison</span>
                     <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy-900 mb-4">
                         How Much Income Do You Need to Buy a House in Every US State? (2026 Data)
                     </h1>
                     <p className="text-base sm:text-lg text-gray-500">
-                        Based on the latest 2026 median home prices, state-specific property taxes, and a 6.5% interest rate, here is the exact salary you need to comfortably afford a home.
+                        Compare modeled income estimates using the home prices, property taxes and fixed-rate scenario shown below. These estimates are not lender qualification thresholds.
                     </p>
                 </header>
 
@@ -129,6 +130,6 @@ export default function AffordabilityByStatePage() {
                     Want to see exactly what you qualify for based on your personal income? Run your numbers through our <Link href="/calculators/affordability" className="text-blue-600 hover:underline">Affordability Calculator</Link>.
                 </p>
             </article>
-        </main>
+        </div>
     );
 }

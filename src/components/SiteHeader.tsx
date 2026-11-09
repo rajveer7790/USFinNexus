@@ -2,12 +2,12 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
     Home, TrendingUp, Car, DollarSign, Scale, ArrowLeftRight,
     Menu, X, ChevronDown, Landmark, FileText, Target, PiggyBank,
     Activity, Percent, BarChart2, Table2, LineChart, Map, Calculator,
-    BookOpen, Newspaper, Info, Phone, ChevronRight,
+    BookOpen, Newspaper, Info, Phone, Search, ArrowRight,
 } from 'lucide-react';
 import LogoIcon from './LogoIcon';
 
@@ -84,423 +84,111 @@ const NAV_RESOURCES = [
     { href: '/contact', label: 'Contact', icon: Phone, desc: 'Get in touch' },
 ];
 
+const reportLinks = [
+    { href: '/data/home-affordability-by-state', label: 'Affordability by state' },
+    { href: '/data/home-affordability-by-city', label: 'Affordability by city' },
+    { href: '/methodology', label: 'How the numbers are calculated' },
+];
+
+const additional = [
+    { href: '/calculators', label: 'All calculators', desc: 'Financial planning tools' },
+    { href: '/calculators/paycheck', label: 'Paycheck Calculator', desc: 'Salary, hourly and take-home pay' },
+    { href: '/data/home-affordability-by-state', label: 'Affordability by state', desc: 'Housing data and reports' },
+    { href: '/data/home-affordability-by-city', label: 'Affordability by city', desc: 'Housing data and reports' },
+];
+const searchItems = [...additional, ...NAV_CALCULATORS.flatMap(group => group.items), ...NAV_RESOURCES];
+
+function SiteSearch() {
+    const [query, setQuery] = useState('');
+    const [open, setOpen] = useState(false);
+    const input = useRef<HTMLInputElement>(null);
+    const terms = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
+    const matches = terms.length ? searchItems.filter(item => terms.every(term => `${item.label} ${item.desc} ${item.href}`.toLowerCase().includes(term))).slice(0, 6) : [];
+    return <div className="fn-search" onBlur={e => { if (!e.currentTarget.contains(e.relatedTarget)) setOpen(false); }} onKeyDown={e => {
+        if (e.key === 'Escape' && open) { e.stopPropagation(); setOpen(false); input.current?.focus(); }
+    }}>
+        <form action="/blog" method="get" role="search" aria-label="Search USFinNexus" onSubmit={() => setOpen(false)}>
+            <Search size={18} aria-hidden="true" />
+            <input ref={input} type="search" aria-label="Search USFinNexus" name="q" value={query} onChange={e => { setQuery(e.target.value); setOpen(true); }} onFocus={() => setOpen(true)} placeholder="Search USFinNexus" maxLength={100} autoComplete="off" />
+        </form>
+        {open && terms.length > 0 && <div className="fn-search-results" aria-label="Suggested pages">
+            {matches.map(item => <Link key={item.href} href={item.href} onClick={() => { setOpen(false); setQuery(''); }}>{item.label}</Link>)}
+            <Link href={`/blog?q=${encodeURIComponent(query.trim())}#blog-search`} onClick={() => { setOpen(false); setQuery(''); }}>Search articles for “{query.trim()}” <ArrowRight size={15} aria-hidden="true" /></Link>
+        </div>}
+    </div>;
+}
+
 export default function SiteHeader() {
     const pathname = usePathname();
-    const [mobileOpen, setMobileOpen] = useState(false);
-    const [activeMenu, setActiveMenu] = useState<string | null>(null);
-    const [scrolled, setScrolled] = useState(false);
-    const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-    const mobileToggle = useRef<HTMLButtonElement>(null);
+    const [mobile, setMobile] = useState(false);
+    const [menu, setMenu] = useState<'calculators' | 'news' | 'reports' | null>(null);
+    const header = useRef<HTMLElement>(null);
+    const mobileButton = useRef<HTMLButtonElement>(null);
+    const menuButtons = useRef<Record<string, HTMLButtonElement | null>>({});
+    const isActive = (href: string) => pathname === href || pathname.startsWith(href + '/');
+    const current = (href: string) => pathname === href ? 'page' as const : undefined;
 
-    /* ── Close menu on route change ──────────────────────── */
+    useEffect(() => { setMobile(false); setMenu(null); }, [pathname]);
     useEffect(() => {
-        setMobileOpen(false);
-        setActiveMenu(null);
-    }, [pathname]);
-
-    useEffect(() => {
-        const desktop = window.matchMedia('(min-width: 1024px)');
-        const closeOnDesktop = () => { if (desktop.matches) setMobileOpen(false); };
-        desktop.addEventListener('change', closeOnDesktop);
-        return () => desktop.removeEventListener('change', closeOnDesktop);
+        const desktop = window.matchMedia('(min-width: 1050px)');
+        const reset = () => { setMobile(false); setMenu(null); };
+        const outside = (e: PointerEvent) => { if (e.target instanceof Node && !header.current?.contains(e.target)) reset(); };
+        desktop.addEventListener('change', reset);
+        document.addEventListener('pointerdown', outside);
+        return () => { desktop.removeEventListener('change', reset); document.removeEventListener('pointerdown', outside); };
     }, []);
 
-    /* ── Scroll shadow ───────────────────────────────────── */
-    useEffect(() => {
-        const onScroll = () => setScrolled(window.scrollY > 8);
-        window.addEventListener('scroll', onScroll, { passive: true });
-        return () => window.removeEventListener('scroll', onScroll);
-    }, []);
+    const close = () => { setMobile(false); setMenu(null); };
+    const links = (items: ReadonlyArray<{ href: string; label: string }>) => items.map(item => <Link key={item.href} href={item.href} aria-current={current(item.href)} onClick={close}>{item.label}</Link>);
+    const resources = NAV_RESOURCES.filter(item => item.href !== '/mortgage-rates');
+    const controls = [
+        { id: 'calculators', label: 'Calculators', active: isActive('/calculators') || isActive('/canada') },
+        { id: 'news', label: 'News & Guides', active: ['/blog', '/guides', '/articles'].some(isActive) },
+        { id: 'reports', label: 'Data & Reports', active: isActive('/data') },
+    ] as const;
 
-    /* ── ESC closes all menus ────────────────────────────── */
-    useEffect(() => {
-        const onKey = (e: KeyboardEvent) => {
-            if (e.key === 'Escape') {
-                setActiveMenu(null);
-                setMobileOpen(false);
-                if (mobileOpen) mobileToggle.current?.focus();
-            }
-        };
-        window.addEventListener('keydown', onKey);
-        return () => window.removeEventListener('keydown', onKey);
-    }, [mobileOpen]);
+    function menuControl(control: (typeof controls)[number]) {
+        return <button ref={el => { menuButtons.current[control.id] = el; }} type="button" data-active={control.active} aria-expanded={menu === control.id} aria-controls={menu === control.id ? 'fn-desktop-panel' : undefined} onClick={() => setMenu(menu === control.id ? null : control.id)}>
+            {control.label}<ChevronDown size={15} aria-hidden="true" />
+        </button>;
+    }
 
-    const openMenu = useCallback((name: string) => {
-        if (closeTimer.current) clearTimeout(closeTimer.current);
-        setActiveMenu(name);
-    }, []);
-
-    const scheduleClose = useCallback(() => {
-        closeTimer.current = setTimeout(() => setActiveMenu(null), 150);
-    }, []);
-
-    /* ── Active route helpers ────────────────────────────── */
-    const isActive = (href: string) =>
-        pathname === href || pathname.startsWith(href + '/');
-
-    const isCalcActive = NAV_CALCULATORS.some(col =>
-        col.items.some(item => isActive(item.href))
-    );
-    const isResourceActive = NAV_RESOURCES.some(item => isActive(item.href));
-
-    return (
-        <>
-            <a href="#main-content" className="skip-to-content">Skip to main content</a>
-
-            <header
-                className={`sticky top-0 z-50 bg-white border-b transition-shadow duration-300 ${
-                    scrolled ? 'shadow-md border-gray-200' : 'border-gray-100'
-                }`}
-            >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex items-center h-16 gap-3 lg:gap-4">
-
-                        {/* ── Logo ──────────────────────────────────────── */}
-                        <Link
-                            href="/"
-                            className="flex items-center gap-2 sm:gap-2.5 flex-shrink-0 group"
-                            aria-label="USFinNexus - Home"
-                        >
-                            <LogoIcon size={30} />
-                            <div className="leading-none">
-                                <span className="font-black text-[#0A192F] text-sm sm:text-base tracking-tight">
-                                    <span className="text-[#0369a1]">US</span>FinNexus
-                                </span>
-                                <p className="hidden sm:block text-[9px] text-gray-500 font-medium tracking-widest uppercase mt-0.5">
-                                    Free Finance Tools
-                                </p>
-                            </div>
-                        </Link>
-
-                        {/* ── Desktop Nav ───────────────────────────────── */}
-                        <nav
-                            className="hidden lg:flex items-center gap-0.5 flex-1 ml-1"
-                            aria-label="Main navigation"
-                        >
-                            {/* Calculators mega-menu */}
-                            <div
-                                className="relative"
-                                onMouseEnter={() => openMenu('tools')}
-                                onMouseLeave={scheduleClose}
-                            >
-                                <button
-                                    onClick={() => setActiveMenu(activeMenu === 'tools' ? null : 'tools')}
-                                    onFocus={() => openMenu('tools')}
-                                    aria-expanded={activeMenu === 'tools'}
-                                    aria-haspopup="true"
-                                    className={`relative flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                                        activeMenu === 'tools' || isCalcActive
-                                            ? 'text-[#0da6f2] bg-blue-50'
-                                            : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
-                                    }`}
-                                >
-                                    Calculators
-                                    <ChevronDown
-                                        size={14}
-                                        className={`transition-transform duration-200 ${activeMenu === 'tools' ? 'rotate-180' : ''}`}
-                                    />
-                                    {isCalcActive && (
-                                        <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-[#0da6f2] rounded-full" />
-                                    )}
-                                </button>
-
-                                {activeMenu === 'tools' && (
-                                    <div
-                                        onMouseEnter={() => openMenu('tools')}
-                                        onMouseLeave={scheduleClose}
-                                        className="absolute top-full left-0 mt-1.5 bg-white rounded-xl border border-gray-100 overflow-hidden animate-fade-in"
-                                        style={{
-                                            boxShadow: '0 20px 60px rgba(0,0,0,0.14)',
-                                            /* Responsive: 4-col on xl, 2-col on lg */
-                                            width: 'min(860px, calc(100vw - 2rem))',
-                                        }}
-                                        role="menu"
-                                    >
-                                        <div className="flex items-center justify-between px-5 py-3 border-b border-gray-100 bg-gray-50/70">
-                                            <p className="text-xs font-bold text-gray-500 uppercase tracking-widest">
-                                                34 Free Calculators
-                                            </p>
-                                            <Link
-                                                href="/#tools"
-                                                onClick={() => setActiveMenu(null)}
-                                                className="flex items-center gap-1 text-xs font-semibold text-[#0da6f2] hover:underline"
-                                            >
-                                                View all <ChevronRight size={12} />
-                                            </Link>
-                                        </div>
-
-                                        {/* 2 cols on lg (1024-1279px), 4 cols on xl (1280px+) */}
-                                        <div className="grid grid-cols-2 xl:grid-cols-4 divide-x divide-gray-100">
-                                            {NAV_CALCULATORS.map(col => (
-                                                <div key={col.category} className="p-3">
-                                                    <p
-                                                        className="text-xs font-black uppercase tracking-widest px-2 py-1.5 mb-1"
-                                                        style={{ color: col.color }}
-                                                    >
-                                                        {col.category}
-                                                    </p>
-                                                    {col.items.map(item => {
-                                                        const active = isActive(item.href);
-                                                        return (
-                                                            <Link
-                                                                key={item.href}
-                                                                href={item.href}
-                                                                onClick={() => setActiveMenu(null)}
-                                                                role="menuitem"
-                                                                className={`flex items-center gap-2.5 px-2 py-2 rounded-lg group transition-colors ${
-                                                                    active ? 'bg-blue-50' : 'hover:bg-gray-50'
-                                                                }`}
-                                                            >
-                                                                <item.icon
-                                                                    size={14}
-                                                                    className={`flex-shrink-0 transition-colors ${
-                                                                        active ? 'text-[#0da6f2]' : 'text-gray-400 group-hover:text-[#0da6f2]'
-                                                                    }`}
-                                                                />
-                                                                <div>
-                                                                    <p className={`text-sm font-semibold leading-none transition-colors ${
-                                                                        active ? 'text-[#0da6f2]' : 'text-gray-800 group-hover:text-[#0da6f2]'
-                                                                    }`}>
-                                                                        {item.label}
-                                                                    </p>
-                                                                    <p className="text-xs text-gray-400 mt-0.5 leading-tight">
-                                                                        {item.desc}
-                                                                    </p>
-                                                                </div>
-                                                            </Link>
-                                                        );
-                                                    })}
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-
-                            {/* Quick-links with active indicators */}
-                            {[
-                                { href: '/calculators/mortgage', label: 'Mortgage' },
-                                { href: '/calculators/affordability', label: 'Affordability' },
-                                { href: '/calculators/refinance', label: 'Refinance' },
-                            ].map(({ href, label }) => {
-                                const active = isActive(href);
-                                return (
-                                    <Link
-                                        key={href}
-                                        href={href}
-                                        className={`relative px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                                            active
-                                                ? 'text-[#0da6f2] bg-blue-50'
-                                                : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
-                                        }`}
-                                    >
-                                        {label}
-                                        {active && (
-                                            <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-[#0da6f2] rounded-full" />
-                                        )}
-                                    </Link>
-                                );
-                            })}
-
-                            {/* Resources dropdown */}
-                            <div
-                                className="relative"
-                                onMouseEnter={() => openMenu('resources')}
-                                onMouseLeave={scheduleClose}
-                            >
-                                <button
-                                    onClick={() => setActiveMenu(activeMenu === 'resources' ? null : 'resources')}
-                                    onFocus={() => openMenu('resources')}
-                                    aria-expanded={activeMenu === 'resources'}
-                                    aria-haspopup="true"
-                                    className={`relative flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                                        activeMenu === 'resources' || isResourceActive
-                                            ? 'text-[#0da6f2] bg-blue-50'
-                                            : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
-                                    }`}
-                                >
-                                    Resources
-                                    <ChevronDown
-                                        size={14}
-                                        className={`transition-transform duration-200 ${activeMenu === 'resources' ? 'rotate-180' : ''}`}
-                                    />
-                                    {isResourceActive && (
-                                        <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-[#0da6f2] rounded-full" />
-                                    )}
-                                </button>
-
-                                {activeMenu === 'resources' && (
-                                    <div
-                                        onMouseEnter={() => openMenu('resources')}
-                                        onMouseLeave={scheduleClose}
-                                        className="absolute top-full right-0 mt-1.5 w-72 bg-white rounded-xl border border-gray-100 overflow-hidden animate-fade-in"
-                                        style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.14)' }}
-                                        role="menu"
-                                    >
-                                        <div className="p-2">
-                                            {NAV_RESOURCES.map(item => {
-                                                const active = isActive(item.href);
-                                                return (
-                                                    <Link
-                                                        key={item.href}
-                                                        href={item.href}
-                                                        onClick={() => setActiveMenu(null)}
-                                                        role="menuitem"
-                                                        className={`flex items-center gap-3 px-3 py-2.5 rounded-lg group transition-colors ${
-                                                            active ? 'bg-blue-50' : 'hover:bg-gray-50'
-                                                        }`}
-                                                    >
-                                                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center transition-colors flex-shrink-0 ${
-                                                            active ? 'bg-[#0da6f2]/10' : 'bg-gray-100 group-hover:bg-[#0da6f2]/10'
-                                                        }`}>
-                                                            <item.icon
-                                                                size={15}
-                                                                className={`transition-colors ${
-                                                                    active ? 'text-[#0da6f2]' : 'text-gray-500 group-hover:text-[#0da6f2]'
-                                                                }`}
-                                                            />
-                                                        </div>
-                                                        <div>
-                                                            <p className={`text-sm font-semibold leading-none transition-colors ${
-                                                                active ? 'text-[#0da6f2]' : 'text-gray-800 group-hover:text-[#0da6f2]'
-                                                            }`}>
-                                                                {item.label}
-                                                            </p>
-                                                            <p className="text-xs text-gray-400 mt-0.5">{item.desc}</p>
-                                                        </div>
-                                                    </Link>
-                                                );
-                                            })}
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-                        </nav>
-
-                        {/* ── Right: CTA + Mobile toggle ────────────────── */}
-                        <div className="flex items-center gap-2 ml-auto">
-                            <Link
-                                href="/calculators/mortgage"
-                                className="hidden lg:flex items-center gap-1.5 px-4 py-2 bg-[#0A192F] hover:bg-[#0d2640] text-white text-sm font-bold rounded-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20"
-                            >
-                                Free Calculator
-                            </Link>
-
-                            {/* Mobile hamburger - min 44×44 tap target */}
-                            <button
-                                ref={mobileToggle}
-                                type="button"
-                                onClick={() => setMobileOpen(prev => !prev)}
-                                className="lg:hidden flex items-center justify-center w-11 h-11 rounded-lg text-gray-600 hover:bg-gray-100 active:bg-gray-200 transition-colors"
-                                aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-                                aria-expanded={mobileOpen}
-                                aria-controls="mobile-nav"
-                            >
-                                {mobileOpen ? <X size={20} /> : <Menu size={20} />}
-                            </button>
-                        </div>
-                    </div>
+    return <>
+        <a href="#main-content" className="skip-to-content">Skip to main content</a>
+        <header className="fn-header" ref={header} onKeyDown={e => {
+            if (e.key !== 'Escape') return;
+            if (mobile) mobileButton.current?.focus();
+            if (menu) menuButtons.current[menu]?.focus();
+            close();
+        }}>
+            <div className="fn-shell fn-header-row">
+                <Link href="/" className="fn-brand" onClick={close} aria-label="USFinNexus home">
+                    <LogoIcon size={34} /><span><b>US</b>FinNexus</span>
+                </Link>
+                <nav className="fn-desktop-nav" aria-label="Main navigation" onBlur={e => { if (!e.currentTarget.contains(e.relatedTarget)) setMenu(null); }}>
+                    {menuControl(controls[0])}
+                    <Link href="/mortgage-rates" aria-current={current('/mortgage-rates')} onClick={close}>Mortgage Rates</Link>
+                    {menuControl(controls[1])}
+                    {menuControl(controls[2])}
+                    {menu && <div id="fn-desktop-panel" className={`fn-nav-panel ${menu === 'calculators' ? 'fn-nav-panel-wide' : ''}`}>
+                        {menu === 'calculators' ? <>
+                            <div className="fn-panel-top">{links(additional.slice(0, 2))}</div>
+                            <div className="fn-nav-columns">{NAV_CALCULATORS.map(group => <div key={group.category}><strong>{group.category}</strong>{links(group.items)}</div>)}</div>
+                        </> : links(menu === 'news' ? resources : reportLinks)}
+                    </div>}
+                </nav>
+                <div className="fn-desktop-search"><SiteSearch key={pathname} /></div>
+                <button ref={mobileButton} className="fn-mobile-toggle" type="button" aria-label={mobile ? 'Close menu' : 'Open menu'} aria-expanded={mobile} aria-controls={mobile ? 'mobile-nav' : undefined} onClick={() => setMobile(!mobile)}>{mobile ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}</button>
+            </div>
+            {mobile && <nav id="mobile-nav" className="mobile-nav-panel fn-mobile-panel" aria-label="Mobile navigation">
+                <div className="fn-shell">
+                    <SiteSearch key={pathname} />
+                    <div className="fn-mobile-links">{links([additional[0], NAV_RESOURCES[0], NAV_RESOURCES[1], NAV_RESOURCES[2]])}</div>
+                    {NAV_CALCULATORS.map(group => <details className="fn-disclosure" key={group.category}><summary>{group.category}<ChevronDown size={16} aria-hidden="true" /></summary><div className="fn-mobile-links">{links(group.items)}</div></details>)}
+                    <details className="fn-disclosure"><summary>Data &amp; reports<ChevronDown size={16} aria-hidden="true" /></summary><div className="fn-mobile-links">{links(reportLinks)}</div></details>
+                    <div className="fn-mobile-links">{links([additional[1], ...resources.slice(2).filter(item => item.href !== '/methodology')])}</div>
                 </div>
-
-                {/* ── Mobile Menu ───────────────────────────────────── */}
-                {mobileOpen && (
-                    <>
-                        {/* Tap-outside backdrop */}
-                        <div
-                            className="lg:hidden fixed inset-0 top-16 bg-black/25 backdrop-blur-sm z-40"
-                            onClick={() => setMobileOpen(false)}
-                            aria-hidden="true"
-                        />
-
-                        {/* Positioned panel keeps the page and scroll position stable. */}
-                        <nav
-                            id="mobile-nav"
-                            className="mobile-nav-panel lg:hidden absolute inset-x-0 top-full z-50 border-t border-gray-100 bg-white shadow-xl"
-                            aria-label="Mobile navigation"
-                        >
-                            <div className="px-4 py-4 space-y-3">
-                                <div className="grid grid-cols-2 gap-2">
-                                    <Link href="/calculators" onClick={() => setMobileOpen(false)} className="min-h-11 grid place-items-center rounded-xl bg-[#0A192F] px-2 py-2 text-center text-sm font-bold text-white">All calculators</Link>
-                                    <Link href="/blog" onClick={() => setMobileOpen(false)} className="min-h-11 grid place-items-center rounded-xl bg-slate-100 px-2 py-2 text-center text-sm font-bold text-slate-800">Finance blog</Link>
-                                </div>
-
-                                {/* Calculator categories */}
-                                {NAV_CALCULATORS.map(col => (
-                                    <details key={col.category} className="group rounded-xl border border-slate-200">
-                                        <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-2 px-3 text-sm font-bold text-slate-800">
-                                            <span>{col.category}</span>
-                                            <ChevronDown size={16} aria-hidden="true" className="shrink-0 group-open:rotate-180" />
-                                        </summary>
-                                        <div className="grid grid-cols-2 gap-1 border-t border-slate-100 p-1">
-                                            {col.items.map(item => {
-                                                const active = isActive(item.href);
-                                                return (
-                                                    <Link
-                                                        key={item.href}
-                                                        href={item.href}
-                                                        onClick={() => setMobileOpen(false)}
-                                                        className={`min-w-0 flex items-center gap-2 px-2 py-2 rounded-lg text-sm font-medium transition-colors min-h-[44px] ${
-                                                            active
-                                                                ? 'bg-blue-50 text-[#0da6f2]'
-                                                                : 'text-gray-700 hover:bg-gray-50 hover:text-[#0da6f2]'
-                                                        }`}
-                                                    >
-                                                        <item.icon
-                                                            size={15}
-                                                            className={`flex-shrink-0 ${active ? 'text-[#0da6f2]' : 'text-gray-400'}`}
-                                                        />
-                                                        <span className="min-w-0 break-words leading-tight text-xs sm:text-sm">{item.label}</span>
-                                                    </Link>
-                                                );
-                                            })}
-                                        </div>
-                                    </details>
-                                ))}
-
-                                {/* Resources */}
-                                <div className="border-t border-gray-100 pt-4">
-                                    <p className="text-xs font-black uppercase tracking-widest px-1 py-1 mb-2 text-gray-400">
-                                        Resources
-                                    </p>
-                                    <div className="space-y-1">
-                                        {NAV_RESOURCES.map(item => {
-                                            const active = isActive(item.href);
-                                            return (
-                                                <Link
-                                                    key={item.href}
-                                                    href={item.href}
-                                                    onClick={() => setMobileOpen(false)}
-                                                    className={`flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium transition-colors min-h-[44px] ${
-                                                        active
-                                                            ? 'bg-blue-50 text-[#0da6f2]'
-                                                            : 'text-gray-700 hover:bg-gray-50 hover:text-[#0da6f2]'
-                                                    }`}
-                                                >
-                                                    <item.icon
-                                                        size={15}
-                                                        className={`flex-shrink-0 ${active ? 'text-[#0da6f2]' : 'text-gray-400'}`}
-                                                    />
-                                                    {item.label}
-                                                </Link>
-                                            );
-                                        })}
-                                    </div>
-                                </div>
-
-                                    {/* Mobile CTA - same navy as desktop */}
-                                    <Link
-                                        href="/calculators/mortgage"
-                                        onClick={() => setMobileOpen(false)}
-                                        className="flex items-center justify-center gap-2 w-full py-3.5 bg-[#0A192F] hover:bg-[#0d2640] active:bg-[#0d2640] text-white font-bold rounded-xl transition-colors text-sm"
-                                    >                                  <Home size={16} />
-                                    Free Mortgage Calculator
-                                </Link>
-
-                            </div>
-                        </nav>
-                    </>
-                )}
-            </header>
-        </>
-    );
+            </nav>}
+        </header>
+    </>;
 }

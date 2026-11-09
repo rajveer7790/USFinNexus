@@ -14,9 +14,10 @@ export const metadata: Metadata = {
 export default function BlogPage() {
     const POSTS = getAllBlogPosts();
     return (
-        <div className="max-w-6xl mx-auto px-4 py-7 sm:py-9">
+        <div className="fn-shell py-7 sm:py-9">
             <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }]} />
-            <div className="mb-8 sm:mb-12 text-center sm:text-left">
+            <div className="fn-inner-intro">
+                <span className="fn-card-topic">News &amp; guides</span>
                 <h1 className="text-3xl sm:text-5xl font-black mb-4" style={{ color: 'var(--color-text)' }}>Mortgage & Finance Resources</h1>
                 <p className="text-base sm:text-xl max-w-3xl" style={{ color: 'var(--color-text-muted)' }}>
                     Practical guides on home buying, mortgage calculations, refinancing, and personal finance—designed for everyday Americans in 2026.
@@ -34,7 +35,7 @@ export default function BlogPage() {
             <div className="mt-12 sm:mt-16 bg-blue-50 rounded-3xl p-6 sm:p-10 border border-blue-100 text-center">
                 <h2 className="text-2xl font-black mb-4 text-navy-900">Run Your Own Numbers</h2>
                 <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-                    Stop guessing and start planning. Use our suite of free, zero-data-collection financial calculators to make the smartest money moves in 2026.
+                    Test your own assumptions with free mortgage and housing calculators. No account required.
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto">
                     {[

@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { Toaster } from 'sonner';
 import './globals.css';
+import './editorial.css';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;

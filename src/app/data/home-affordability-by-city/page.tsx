@@ -14,9 +14,10 @@ export const metadata: Metadata = {
 
 export default function AffordabilityByCityPage() {
     return (
-        <main className="bg-white min-h-screen py-8 sm:py-10">
+        <div className="fn-report-page bg-white min-h-screen py-8 sm:py-10">
             <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-blue">
-                <header className="mb-6 sm:mb-10 text-center">
+                <header className="fn-inner-intro">
+                    <span className="fn-card-topic">Data &amp; reports · Metro comparison</span>
                     <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy-900 mb-4">
                         2026 Home Affordability Index by Major US City
                     </h1>
@@ -123,6 +124,6 @@ export default function AffordabilityByCityPage() {
                     Generally, your total monthly debt payments (including the new mortgage) cannot exceed 43% of your gross monthly income. Calculate your personal chances of approval instantly using our <Link href="/calculators/dti" className="text-blue-600 hover:underline">DTI Calculator</Link>.
                 </p>
             </article>
-        </main>
+        </div>
     );
 }

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import {
     Home, DollarSign, TrendingUp, ArrowLeftRight, Landmark,
     Star, Activity, Percent, Table2, PiggyBank, BarChart2, Scale,
-    Car, BookOpen, Target, Calculator, LineChart, FileText, Map, ArrowRight
+    Car, BookOpen, Target, Calculator, LineChart, FileText, Map
 } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
@@ -72,31 +72,26 @@ const TOOLS = [
 
 export default function CalculatorsPage() {
     return (
-        <main className="neo-root">
-            <section className="neo-light-zone py-12">
-                <div className="neo-container">
+        <div>
+            <section className="py-8 sm:py-10">
+                <div className="fn-shell">
                     <p className="mb-4 text-sm">Looking for Canadian rules? Visit the separate <Link href="/canada" className="underline">Canada tools hub</Link>; U.S. loan rules below are not Canadian qualification rules.</p><Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }]} />
 
-                    <header className="mb-12">
-                        <div className="neo-sec-tag"><span className="neo-sec-dot" /> All Tools</div>
-                        <h1 className="neo-sec-h2">The Complete <em>Calculator Library</em></h1>
-                        <p className="neo-sec-p">
+                    <header className="fn-inner-intro">
+                        <span className="fn-card-topic">All tools</span>
+                        <h1>The Complete Calculator Library</h1>
+                        <p>
                             Browse our complete library of free U.S. calculators with clear assumptions and practical explanations.
                             No signup; calculator inputs are designed to stay in your browser. Export options vary by tool.
                         </p>
                     </header>
 
-                    <div className="neo-tools-grid">
+                    <div className="fn-library-grid">
                         {TOOLS.map((t) => (
-                            <Link key={t.href} href={t.href} className="neo-tool-card">
-                                {t.badge && (
-                                    <span className={`neo-tool-badge ${t.badge === 'hot' ? 'neo-badge-hot' : t.badge === 'new' ? 'neo-badge-new' : ''}`}>
-                                        {t.badge === 'hot' ? 'Popular' : 'New'}
-                                    </span>
-                                )}
-                                <h3><t.icon size={15} className="neo-tool-card-icon" /> {t.title}</h3>
+                            <Link key={t.href} href={t.href} className="fn-card fn-tool-card">
+                                <t.icon size={22} aria-hidden="true" />
+                                <h3>{t.title}</h3>
                                 <p>{t.desc}</p>
-                                <span className="neo-tool-go"><ArrowRight size={12} /></span>
                             </Link>
                         ))}
                     </div>
@@ -130,6 +125,6 @@ export default function CalculatorsPage() {
                     }),
                 }}
             />
-        </main>
+        </div>
     );
 }
