@@ -6,6 +6,7 @@ interface ArticleSchemaProps {
     dateModified: string;  // ISO 8601, e.g. "2026-03-12"
     authorName: string;
     image?: string;
+    imageSize?: { width: number; height: number };
     keywords?: string[];
 }
 
@@ -17,6 +18,7 @@ export default function ArticleSchema({
     dateModified,
     authorName,
     image = 'https://usfinnexus.com/icon-512.png',
+    imageSize = { width: 1200, height: 630 },
     keywords = [],
 }: ArticleSchemaProps) {
     const schema = {
@@ -30,8 +32,8 @@ export default function ArticleSchema({
         image: {
             '@type': 'ImageObject',
             url: image,
-            width: 1200,
-            height: 630,
+            width: imageSize.width,
+            height: imageSize.height,
         },
         inLanguage: 'en-US',
         isAccessibleForFree: true,

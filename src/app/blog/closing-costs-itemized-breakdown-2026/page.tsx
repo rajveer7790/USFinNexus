@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Target, Receipt, AlertCircle, HandCoins, Calculator, LineChart, ShieldCheck, PenTool, CheckCircle, Percent, Info, ArrowRight, Landmark } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
 import RelatedCalculators from '@/components/RelatedCalculators';
 import RelatedArticles from '@/components/RelatedArticles';
@@ -8,298 +7,76 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 import EditorialImage from '@/components/EditorialImage';
 
+const title = "Mortgage Closing Costs: What Homebuyers Should Expect";
+const description = "See which fees appear on a Loan Estimate, what changes your cash to close, and how to compare two lender offers.";
+const canonical = 'https://usfinnexus.com/blog/closing-costs-itemized-breakdown-2026';
+const cover = '/images/redesign/closing-costs.webp';
+const image = { url: 'https://usfinnexus.com' + cover, width: 1250, height: 410, alt: "Exterior and roof of a blue-gray home" };
+
 export const metadata: Metadata = {
-    title: 'Mortgage Closing Costs 2026: What Buyers Should Expect',
-    description: 'Mortgage closing costs explained for U.S. homebuyers: lender fees, title, appraisal, prepaids, escrow, taxes, seller credits and how to compare a Loan Estimate.',
-    alternates: { canonical: 'https://usfinnexus.com/blog/closing-costs-itemized-breakdown-2026' },
-    openGraph: {
-        type: 'article',
-        title: 'Mortgage Closing Costs: What Homebuyers Should Expect',
-        description: 'Read every major line on the Loan Estimate and Closing Disclosure, then estimate your cash to close.',
-        url: 'https://usfinnexus.com/blog/closing-costs-itemized-breakdown-2026',
-        siteName: 'USFinNexus',
-        images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Closing Costs Itemized' }]
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Itemized Mortgage Closing Costs 2026',
-        description: 'How to read your Loan Estimate and negotiate your closing costs down.',
-        images: ['https://usfinnexus.com/images/home-hero-v2.png']
-    }
+    title,
+    description,
+    alternates: { canonical },
+    openGraph: { type: 'article', title, description, url: canonical, siteName: 'USFinNexus', images: [image] },
+    twitter: { card: 'summary_large_image', title, description, images: [{ url: image.url, alt: image.alt }] },
 };
 
 export default function BlogPost() {
     return (
         <>
-
-            <ArticleSchema
-                title="Mortgage Closing Costs: What Homebuyers Should Expect"
-                description="Understand lender, title, prepaid and government charges and compare your Loan Estimate with the Closing Disclosure."
-                url="https://usfinnexus.com/blog/closing-costs-itemized-breakdown-2026"
-                datePublished="2026-05-26"
-                dateModified="2026-09-10"
-                authorName="USFinNexus Editorial Team"
-                keywords={['Home Buying', 'Mortgage', 'Closing Costs', '2026', 'Loan Estimate']}
-            />
-
+            <ArticleSchema title={title} description={description} url={canonical}
+                datePublished="2026-05-26" dateModified="2026-11-09" image={image.url} imageSize={image}
+                authorName={USFinNexusEditorialTeam.name} keywords={["Mortgage","Home Buying","Closing Costs","Loan Estimate"]} />
             <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
-                <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Closing Costs Breakdown', item: '/blog/closing-costs-itemized-breakdown-2026' }]} />
-                <article className="prose prose-slate prose-lg max-w-none">
-
-                    <header className="mb-12">
-                        <span className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-yellow-100 text-yellow-800">
-                            Home Buying Guide
-                        </span>
-                        <h1 className="text-4xl md:text-5xl font-black mb-6 text-navy-900 leading-tight">
-                            Mortgage Closing Costs: What Homebuyers Should Expect
-                        </h1>
-                        <div className="flex items-center text-sm text-gray-600 gap-4">
-                            <span className="font-semibold text-blue-700">By {USFinNexusEditorialTeam.name}</span>
-                            <span>·</span>
-                            <span>Updated for 2026</span>
-                            <span>·</span>
-                            <span>14 min read</span>
+                <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: "Mortgage closing costs", item: '/blog/closing-costs-itemized-breakdown-2026' }]} />
+                <article className="prose prose-slate max-w-none">
+                    <header className="fn-article-head">
+                        <span className="fn-article-kicker">Home buying</span>
+                        <h1>{title}</h1>
+                        <p className="fn-article-deck">Read your Loan Estimate line by line, separate fees from cash to close, and compare lender offers before you sign.</p>
+                        <div className="fn-article-byline">
+                            <span>By <Link href="/about">{USFinNexusEditorialTeam.name}</Link></span>
+                            <span>Updated <time dateTime="2026-11-09">November 9, 2026</time></span>
                         </div>
                     </header>
-            <EditorialImage className="fn-reading-cover" src="/images/redesign/closing-costs.webp" alt="Exterior and roof of a blue-gray home" width={1250} height={410} sizes="(min-width: 1050px) 790px, 100vw" priority />
-
-                    <p className="lead text-2xl text-gray-700 mb-10 font-light leading-relaxed">
-                        <strong>Answer first:</strong> Mortgage closing costs are the lender, title, government and prepaid items due when a home loan closes. The exact amount depends on the property and loan, so compare your lender’s <a href="https://www.consumerfinance.gov/owning-a-home/loan-estimate/" className="text-blue-700 underline">Loan Estimate</a> with the final <a href="https://www.consumerfinance.gov/owning-a-home/closing-disclosure/" className="text-blue-700 underline">Closing Disclosure</a> instead of relying on a generic percentage.
-                    </p>
-
-                    <p>
-                        Closing costs are the array of fees paid to the lender, the title company, the appraisers, and the local government to officially execute your mortgage and legally transfer the real estate into your name.
-                    </p>
-                    <p>
-                        These costs can be substantial, but they are not a fixed 2026 rate. A lender quote may include origination, appraisal, title and recording charges plus prepaid interest, taxes and insurance reserves. Keep the down payment, closing costs and cash reserves as separate lines in your buying plan.
-                    </p>
-                    <p>
-                        However, you do not have to accept the first number the bank gives you. Within three days of applying for a mortgage, your lender is legally required to send you a 3-page document called a <strong>Loan Estimate (LE)</strong>. Here is a line-by-line breakdown of exactly what every fee on that document means, and a strict guide on which fees you have the power to negotiate down to zero.
-                    </p>
-
-                    <hr className="my-10" />
-
-                    <h2 className="text-3xl font-bold mt-12 mb-6 text-navy-900 flex items-center gap-3">
-                        <Receipt className="w-8 h-8 text-emerald-600" />
-                        What Are the Lender Fees in Mortgage Closing Costs?
-                    </h2>
-
-                    <p>
-                        Section A of your Loan Estimate lists the fees the bank charges you directly for the privilege of borrowing their money. Because these fees go straight into the lender's profit margin and pay the loan officer's commission, they are highly negotiable. You should aggressively compare Section A across multiple lenders.
-                    </p>
-
-                    <ul className="space-y-6 my-8">
-                        <li className="flex gap-4">
-                            <span className="flex-shrink-0 w-8 h-8 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center font-bold">1</span>
-                            <div>
-                                <strong className="block text-navy-900 mb-1 text-xl">Origination Fee (0.5% to 1% of loan amount)</strong>
-                                <p className="text-slate-700 m-0">This is the lender's commission for putting the loan together. On a $400,000 loan, a 1% origination fee is $4,000. If you push back or show them a competing offer from another bank, lenders will often reduce or completely waive this fee to win your business.</p>
-                            </div>
-                        </li>
-                        <li className="flex gap-4">
-                            <span className="flex-shrink-0 w-8 h-8 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center font-bold">2</span>
-                            <div>
-                                <strong className="block text-navy-900 mb-1 text-xl">Underwriting Fee ($400 - $900)</strong>
-                                <p className="text-slate-700 m-0">This is the cost to pay the human underwriter who verifies your W-2s, tax returns, and bank statements to ensure you meet the federal lending guidelines.</p>
-                            </div>
-                        </li>
-                        <li className="flex gap-4">
-                            <span className="flex-shrink-0 w-8 h-8 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center font-bold">3</span>
-                            <div>
-                                <strong className="block text-navy-900 mb-1 text-xl">Application / Processing Fee ($300 - $500)</strong>
-                                <p className="text-slate-700 m-0">These are often considered "junk fees" charged simply to process paperwork. You should explicitly ask your loan officer to waive these fees entirely.</p>
-                            </div>
-                        </li>
-                        <li className="flex gap-4">
-                            <span className="flex-shrink-0 w-8 h-8 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center font-bold">4</span>
-                            <div>
-                                <strong className="block text-navy-900 mb-1 text-xl">Discount Points (Optional)</strong>
-                                <p className="text-slate-700 m-0">You can choose to pay thousands of dollars upfront to "buy down" your interest rate. For example, you might pay $4,000 in points at closing to permanently drop your rate from 6.5% to 6.25%. This is a strategic choice, not a mandatory fee.</p>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <h2 className="text-3xl font-bold mt-16 mb-6 text-navy-900 flex items-center gap-3">
-                        <Target className="w-8 h-8 text-blue-600" />
-                        What Are the Third-Party Fees in Mortgage Closing Costs?
-                    </h2>
-
-                    <p>
-                        These sections cover services the lender legally requires to approve the loan, but the lender does not provide the services themselves. They hire third-party companies. You generally cannot negotiate these fees with the lender because the lender is simply passing the exact third-party cost on to you without marking it up.
-                    </p>
-
-                    <div className="grid sm:grid-cols-2 gap-6 my-8 not-prose">
-                        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:border-blue-300 transition-colors">
-                            <CheckCircle className="w-8 h-8 text-blue-600 mb-3" />
-                            <h4 className="font-bold text-lg mb-1 text-navy-900">Appraisal Fee ($500 - $800)</h4>
-                            <p className="text-gray-600 text-sm">
-                                Pays a licensed, independent appraiser to visit the house and confirm it is actually worth the $400,000 you are paying for it. The bank will not lend more than the appraised value.
-                            </p>
-                        </div>
-                        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:border-blue-300 transition-colors">
-                            <CheckCircle className="w-8 h-8 text-blue-600 mb-3" />
-                            <h4 className="font-bold text-lg mb-1 text-navy-900">Credit Report Fee ($30 - $50)</h4>
-                            <p className="text-gray-600 text-sm">
-                                The exact cost the lender pays to pull your tri-merge FICO scores from Experian, Equifax, and TransUnion.
-                            </p>
-                        </div>
-                        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:border-blue-300 transition-colors">
-                            <CheckCircle className="w-8 h-8 text-blue-600 mb-3" />
-                            <h4 className="font-bold text-lg mb-1 text-navy-900">Flood Certification ($15 - $25)</h4>
-                            <p className="text-gray-600 text-sm">
-                                A quick check against federal maps to ensure the house is not located in a FEMA-designated high-risk flood zone (which would require separate flood insurance).
-                            </p>
-                        </div>
-                        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:border-blue-300 transition-colors">
-                            <CheckCircle className="w-8 h-8 text-blue-600 mb-3" />
-                            <h4 className="font-bold text-lg mb-1 text-navy-900">Tax Monitoring Fee ($50 - $100)</h4>
-                            <p className="text-gray-600 text-sm">
-                                Pays a service to monitor public records for the life of the loan to ensure you never fall behind on your property taxes (which could result in a tax lien taking priority over the mortgage).
-                            </p>
-                        </div>
+                    <EditorialImage className="fn-reading-cover" src={cover} alt={image.alt}
+                        width={image.width} height={image.height} sizes="(min-width: 1050px) 790px, 100vw" priority />
+                    <section className="fn-article-takeaways" aria-labelledby="key-takeaways">
+                        <h2 id="key-takeaways">Key takeaways</h2>
+                        <ul>
+                            <li>Closing costs cover lender charges, third-party services, government fees and certain upfront expenses. They are separate from the down payment.</li>
+                            <li>Use the same loan amount, term and rate-lock assumptions when comparing quotes. A lower rate can come with more upfront points.</li>
+                            <li>Compare the final Closing Disclosure with your most recent Loan Estimate, especially the cash-to-close amount.</li>
+                        </ul>
+                    </section>
+                    <h2 id="section-what-are-the-lender-fees-in-mortgage-closing-costs">Lender charges: Start with Section A</h2>
+                    <p>Open page 2 of your <a href="https://www.consumerfinance.gov/owning-a-home/loan-estimate/">Loan Estimate</a>. Section A shows origination charges. The names differ by lender: you might see underwriting, processing or an origination fee. Compare the <strong>section total</strong>, not the number of lines. A lender can combine services in one charge while another lists them separately.</p>
+                    <p>Look for discount points on the same page. Points are an upfront cost for a lower rate. Ask for a quote with no points as a baseline, then compare the upfront cost with the monthly savings over the time you expect to keep the loan.</p>
+                    <h2 id="section-what-are-the-third-party-fees-in-mortgage-closing-costs">Third-party services: What you can shop for</h2>
+                    <p>Section B lists services the lender requires but does not let you shop for; appraisal and credit report fees may appear there. You can still compare those charges <em>across lenders</em>. Section C lists services you can shop for. Ask your lender for its written provider list and confirm that any provider you choose meets its requirements.</p>
+                    <h2 id="section-what-are-title-fees-and-can-you-shop-around-for-them">Title fees: Ask which policy is included</h2>
+                    <p>A title search checks for recorded claims against the property. Lender’s title insurance protects the lender; an owner’s policy covers the buyer under its terms. When comparing quotes, check that both include the same policies and settlement services. A quote for the lender’s policy alone is not the same as a combined quote.</p>
+                    <h2 id="section-what-are-prepaids-and-escrow-deposits-at-closing">Prepaids, escrow and cash to close</h2>
+                    <p>Prepaids may include interest from your closing date to the start of your first payment period and an upfront insurance premium. The initial escrow deposit is separate: it sets aside money for bills such as property tax and insurance if your loan uses escrow. Moving the closing date can change these amounts without changing the lender’s origination fees.</p>
+                    <p><strong>Example:</strong> With a $40,000 down payment, $9,000 in closing costs, a $5,000 deposit you’ve already paid and a $2,000 seller credit, the simplified cash to close is $42,000. Your actual disclosure may include other credits and adjustments. Don’t add a credit twice if it is already reflected in your totals.</p>
+                    <h2 id="section-what-government-taxes-are-due-at-mortgage-closing">Recording fees and transfer taxes</h2>
+                    <p>Local recording charges and applicable transfer taxes can vary by jurisdiction and contract. Check the government charges on page 2 and ask who pays each item. A fee on a neighbor’s transaction isn’t a reliable estimate for a different property or closing agreement.</p>
+                    <h2 id="section-advanced-closing-cost-negotiation-strategies">Compare offers before you sign</h2>
+                    <p>Compare the estimated cash to close and page 3’s five-year cost figures, along with the monthly payment. If an offer advertises no closing costs, ask whether you are taking a higher rate, rolling charges into the loan, or receiving a separate credit. Those choices have different effects on your cash and longer-term costs.</p>
+                    <p>When the <a href="https://www.consumerfinance.gov/owning-a-home/closing-disclosure/">Closing Disclosure</a> arrives, compare its loan amount, interest rate, cash to close and individual charges with the latest Loan Estimate. Ask the lender to explain changes you don’t recognize before you sign. If upfront cash is tight, check both the closing estimate and your <Link href="/calculators/affordability">home affordability budget</Link> so you can keep room for moving and repairs.</p>
+                    <h3>Put a price on a lower rate</h3>
+                    <p>If two otherwise identical offers differ by $2,400 in points and $60 a month in principal and interest, the simple break-even is 40 payments. If you expect to move or refinance after 30 payments, the savings would be $1,800, less than the $2,400 upfront. This quick check ignores tax effects and the time value of money; it is a screening tool, not a complete comparison.</p>
+                    <div className="fn-article-next not-prose">
+                        <p>Put the numbers to work</p>
+                        <Link href="/calculators/closing-costs">Estimate your closing costs <span aria-hidden="true">→</span></Link>
                     </div>
-
-                    <h2 className="text-3xl font-bold mt-16 mb-6 text-navy-900 flex items-center gap-3">
-                        <ShieldCheck className="w-8 h-8 text-purple-600" />
-                        What Are Title Fees and Can You Shop Around for Them?
-                    </h2>
-
-                    <p>
-                        Before a bank gives you $400,000, they must ensure the seller <em>actually</em> owns the house and that there are no secret liens (like unpaid contractor bills, unpaid HOA dues, or IRS tax liens) attached to the property. This extensive legal research is handled by a Title Company.
-                    </p>
-
-                    <div className="bg-purple-50 p-8 rounded-2xl border border-purple-200 my-8 shadow-sm">
-                        <h3 className="text-xl font-bold mb-4 text-purple-900 border-b border-purple-200 pb-2 flex items-center gap-2">
-                            <HandCoins className="w-6 h-6" /> The Ultimate Title Shopping Hack
-                        </h3>
-                        <p className="text-purple-900 mb-4">
-                            Your lender or real estate agent will highly recommend a specific Title Company. <strong>You are not legally required to use them.</strong>
-                        </p>
-                        <p className="text-purple-900">
-                            Title fees can easily run from $1,500 to $3,500 depending on the state. By taking 30 minutes to call three independent, local title companies in your city and asking for a "Title Fee Quote," you can often save $500 to $1,000 on this line item alone. The bank must accept your choice of title company.
-                        </p>
-                    </div>
-
-                    <ul className="space-y-4 my-8">
-                        <li className="flex items-start gap-3">
-                            <ArrowRight className="w-6 h-6 text-purple-500 shrink-0 mt-1" />
-                            <div>
-                                <strong>Lender's Title Insurance ($1,000 - $2,000):</strong> A mandatory one-time insurance policy that protects the <em>bank</em> if a secret heir suddenly appears a decade later and successfully claims they own the house.
-                            </div>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <ArrowRight className="w-6 h-6 text-purple-500 shrink-0 mt-1" />
-                            <div>
-                                <strong>Owner's Title Insurance (Optional, $1,000 - $2,000):</strong> Protects <em>you</em> and your equity if someone sues for ownership of the house. While technically optional, it is highly recommended to purchase this.
-                            </div>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <ArrowRight className="w-6 h-6 text-purple-500 shrink-0 mt-1" />
-                            <div>
-                                <strong>Settlement / Escrow Fee ($500 - $800):</strong> Pays the escrow officer who physically manages the secure wire transfers, handles the giant stack of legal documents, and conducts the actual signing on closing day.
-                            </div>
-                        </li>
-                    </ul>
-
-                    <h2 className="text-3xl font-bold mt-16 mb-6 text-navy-900 flex items-center gap-3">
-                        <Percent className="w-8 h-8 text-amber-500" />
-                        What Are Prepaids and Escrow Deposits at Closing?
-                    </h2>
-
-                    <p>
-                        This category shocks buyers because it is usually the largest chunk of cash due at closing. However, these are not actually "fees." They are your own future bills that the bank forces you to pay upfront to fund your Escrow Account.
-                    </p>
-                    <p>
-                        The bank wants to guarantee that your property taxes and home insurance are paid on time. To do this, they collect the money from you upfront at closing, put it in a secure Escrow Account, and pay the bills on your behalf when they are due.
-                    </p>
-
-                    <ul className="space-y-6 my-8">
-                        <li className="flex gap-4">
-                            <span className="flex-shrink-0 w-8 h-8 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center font-bold">1</span>
-                            <div>
-                                <strong className="block text-navy-900 mb-1 text-xl">Homeowners Insurance Premium (1 Year Upfront)</strong>
-                                <p className="text-slate-700 m-0">The bank will not close the loan unless the house is insured against fire, wind, and damage. You must pay for the entire first year of insurance (e.g., $1,500 to $2,500) in cash at closing. The following year, your monthly mortgage payments will slowly build up enough escrow to pay the next renewal.</p>
-                            </div>
-                        </li>
-                        <li className="flex gap-4">
-                            <span className="flex-shrink-0 w-8 h-8 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center font-bold">2</span>
-                            <div>
-                                <strong className="block text-navy-900 mb-1 text-xl">Property Tax Buffer (2 - 3 Months)</strong>
-                                <p className="text-slate-700 m-0">The bank will collect several months of property taxes upfront to sit in your escrow account as a buffer. This ensures they have enough cash on hand to pay the county tax assessor when the massive bill comes due in the winter, even if taxes go up slightly.</p>
-                            </div>
-                        </li>
-                        <li className="flex gap-4">
-                            <span className="flex-shrink-0 w-8 h-8 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center font-bold">3</span>
-                            <div>
-                                <strong className="block text-navy-900 mb-1 text-xl">Prepaid Daily Interest</strong>
-                                <p className="text-slate-700 m-0">Mortgages are paid in arrears. If you close your loan on May 20th, your first official mortgage payment is not due until July 1st. You must prepay the daily interest for the 11 days between May 20th and May 31st in cash at the closing table.</p>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <h2 className="text-3xl font-bold mt-16 mb-6 text-navy-900 flex items-center gap-3">
-                        <Landmark className="w-8 h-8 text-slate-600" />
-                        What Government Taxes Are Due at Mortgage Closing?
-                    </h2>
-
-                    <p>
-                        Finally, your city, county, and state government want their cut of the transaction. You cannot negotiate these.
-                    </p>
-                    <ul className="list-disc pl-6 space-y-4 mb-8">
-                        <li>
-                            <strong>Recording Fees ($50 - $150):</strong> The minor fee the county clerk charges to officially record the new deed and the new mortgage lien in the public county courthouse records.
-                        </li>
-                        <li>
-                            <strong>Transfer Taxes (Varies wildly by state):</strong> Some states charge a massive tax simply for the privilege of transferring real estate. In states like New York, Pennsylvania, or Washington, transfer taxes can add thousands of dollars to your closing costs. In states like Texas or Missouri, they do not exist at all.
-                        </li>
-                    </ul>
-
-                    <hr className="my-10 border-gray-200" />
-
-                    <div className="card p-8 sm:p-12 text-center bg-gradient-to-br from-yellow-900 to-orange-900 text-white rounded-3xl shadow-xl mt-12">
-                        <Calculator className="w-16 h-16 mx-auto text-yellow-300 mb-6" />
-                        <h3 className="text-3xl font-bold mb-4 text-white">Don't Get Blindsided By Closing Costs</h3>
-                        <p className="text-yellow-100 mb-8 max-w-2xl mx-auto text-lg">
-                            Ensure you are mathematically prepared for closing day. Use our Affordability Calculator to model your income, debts, and your exact down payment to see exactly how much cash you must reserve for closing costs so you don't run short.
-                        </p>
-                        <Link href="/calculators/affordability" className="inline-block bg-white text-yellow-900 font-bold py-4 px-10 rounded-full hover:bg-gray-100 transition-transform hover:scale-105 shadow-lg">
-                            Calculate Your True Affordability
-                        </Link>
-                    </div>
-
+                    <p><strong>Sources:</strong> <a href="https://www.consumerfinance.gov/owning-a-home/loan-estimate/">CFPB Loan Estimate explainer</a> and <a href="https://www.consumerfinance.gov/owning-a-home/closing-disclosure/">Closing Disclosure explainer</a>.</p>
+                    <p>This article is for education only, not financial, tax, legal or lending advice.</p>
                 </article>
-
-                <div className="mt-16">
-
-                <hr className="my-12 border-gray-200" />
-                           <hr className="my-12 border-gray-200" />
-
-                <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 my-10 shadow-sm">
-                    <h2 className="text-3xl font-black mb-6 text-slate-900">Advanced Closing Cost Negotiation Strategies</h2>
-                    <p className="text-lg text-slate-700 mb-6">
-                        Understanding your Loan Estimate is only the first step. To keep more cash in your pocket, you must aggressively negotiate the terms before you sign the Closing Disclosure.
-                    </p>
-
-                    <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">The "Seller Concessions" Strategy</h3>
-                    <p className="text-slate-700 mb-4">
-                        In a buyer's market, or when a home has been sitting on the market for over 45 days, you have immense leverage. Instead of asking the seller to drop the price of the home by $10,000, ask them for $10,000 in "Seller Concessions" to cover your closing costs. The seller still nets the same amount of money, but you get to keep $10,000 in your bank account on closing day.
-                    </p>
-
-                    <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">No-Closing-Cost Mortgages: The Hidden Trap</h3>
-                    <p className="text-slate-700 mb-4">
-                        Lenders frequently advertise "No-Closing-Cost" mortgages. This is a marketing gimmick. The lender is simply paying your closing costs upfront and immediately recouping the money by charging you a higher interest rate for the entire 30-year life of the loan. While this saves you cash today, it will cost you tens of thousands of dollars in extra interest over the next three decades.
-                    </p>
-
-                    <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">Section C: Services You Can Shop For</h3>
-                    <p className="text-slate-700 mb-4">
-                        On page 2 of your Loan Estimate, look for "Section C." By law, the lender must allow you to shop for these services independently. This includes pest inspections, surveys, and the Title Insurance company. Never blindly accept the providers the lender recommends; they are often the most expensive options available.
-                    </p>
-                </div>            <RelatedCalculators />
-                    <RelatedArticles currentSlug="closing-costs-itemized-breakdown-2026" />
-                    <AuthorBio author={USFinNexusEditorialTeam} />
-                    <div className="mt-8 text-sm text-slate-600 border-t pt-6"><p><strong>Sources and disclaimer:</strong> Compare the official <a href="https://www.consumerfinance.gov/owning-a-home/loan-estimate/" className="text-blue-700 underline">Loan Estimate</a> and <a href="https://www.consumerfinance.gov/owning-a-home/closing-disclosure/" className="text-blue-700 underline">Closing Disclosure</a>. Costs vary by loan and state; this article is educational and is not a quote or legal advice.</p></div>
-                </div>
+                <AuthorBio author={USFinNexusEditorialTeam} updatedDate="November 9, 2026" />
             </div>
+            <RelatedCalculators limit={4} />
+            <RelatedArticles currentSlug="closing-costs-itemized-breakdown-2026" />
         </>
     );
 }
