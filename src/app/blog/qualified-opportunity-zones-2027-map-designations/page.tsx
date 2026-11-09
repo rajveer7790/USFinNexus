@@ -30,22 +30,23 @@ export default function Page() {
     <main className="mx-auto max-w-4xl px-4 py-8">
       <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: title, item: '/blog/qualified-opportunity-zones-2027-map-designations' }]} />
       <article className="prose prose-slate max-w-none">
-        <p className="text-sm font-semibold text-blue-700">Investing and real estate · Published and reviewed November 6, 2026 · USFinNexus Editorial Team</p>
+        <p className="fn-article-kicker">Investing and real estate</p>
         <h1>{title}</h1>
+        <p className="fn-article-byline">Published and reviewed November 6, 2026 · USFinNexus Editorial Team</p>
         <p className="lead"><strong>Answer first:</strong> Treasury and the IRS designated 6,576 census tracts as Qualified Opportunity Zones for the new round beginning January 1, 2027; 2,594 are rural zones. The designations run for ten years. Use Treasury&apos;s official dataset or the CDFI Fund map to confirm an exact census tract. A property being inside a shaded zone does not by itself create a tax benefit—the gain, 180-day investment timing, Qualified Opportunity Fund and continuing compliance must also satisfy federal rules.</p>
         <figure><EditorialImage src="/images/qualified-opportunity-zones-2027-map-designations.webp" width={1200} height={630} priority alt="Investor reviewing a color-coded U.S. community development map and property notes" className="h-auto w-full rounded-2xl" /><figcaption>Original editorial image illustrating tract-level Opportunity Zone research.</figcaption></figure>
 
-        <aside className="not-prose my-8 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-950"><strong>Map result is only step one.</strong> Verify the tract number in the official 2027 designation file, record the effective date and have a qualified adviser confirm that the gain and fund structure meet the law. A street address, marketing brochure or map screenshot is not a tax opinion.</aside>
+        <aside className="fn-article-takeaways not-prose"><strong>Map result is only step one.</strong> Verify the tract number in the official 2027 designation file, record the effective date and have a qualified adviser confirm that the gain and fund structure meet the law. A street address, marketing brochure or map screenshot is not a tax opinion.</aside>
 
         <h2>What Treasury announced</h2>
         <p>On November 5, 2026, Treasury and the IRS announced designations covering all 50 states, the District of Columbia and U.S. territories. Governors and the D.C. mayor nominated tracts from an eligible low-income-community list. Treasury reports that every one of the 6,576 nominated tracts was designated, including 2,594 rural tracts.</p>
-        <div className="overflow-x-auto"><table><thead><tr><th scope="col">2027 designation fact</th><th scope="col">Official figure</th></tr></thead><tbody>
+        <div className="fn-editorial-table"><table><thead><tr><th scope="col">2027 designation fact</th><th scope="col">Official figure</th></tr></thead><tbody>
           <tr><th scope="row">Eligible low-income tracts considered</th><td>25,332</td></tr>
           <tr><th scope="row">Eligible rural tracts in the nomination pool</th><td>8,334</td></tr>
           <tr><th scope="row">Newly designated 2027 QOZ tracts</th><td>6,576</td></tr>
           <tr><th scope="row">Designated rural QOZ tracts</th><td>2,594</td></tr>
           <tr><th scope="row">Effective date</th><td>January 1, 2027</td></tr>
-          <tr><th scope="row">Designation period</th><td>January 1, 2027–December 31, 2036</td></tr>
+          <tr><th scope="row">Designation period</th><td>January 1, 2027 – December 31, 2036</td></tr>
         </tbody></table></div>
         <p>The permanent program uses new designation rounds every ten years. A tract that appeared in the original 2018 program is not automatically part of the 2027 round, and an old map should not be used to confirm a new investment. Census boundaries and identifiers also matter more than neighborhood names.</p>
 

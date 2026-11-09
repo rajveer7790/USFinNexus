@@ -5,6 +5,7 @@
   --fn-teal-dark: #064e46;
   --fn-mint: #e7f4ef;
   --fn-border: #d8dfe7;
+  --fn-paper: #fff;
 }
 
 .fn-shell { width: min(100% - 2rem, 1320px); margin-inline: auto; }
@@ -196,7 +197,16 @@
 .fn-news-controls button { min-height: 44px; }
 .fn-news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr)); gap: 1rem; }
 .fn-news-grid > .fn-story { max-width: 500px; }
-.fn-news-empty, .fn-news-utility { background: var(--fn-mint); border: 1px solid var(--fn-border); border-radius: 12px; }
+.fn-news-empty, .fn-news-utility { background: var(--fn-paper); border: 1px solid var(--fn-border); border-radius: 12px; }
+.fn-articles-link { color: var(--fn-teal-dark); }
+.fn-articles-next { display: grid; gap: 1rem; margin-top: clamp(1.8rem, 4vw, 3rem); padding: clamp(1rem, 3vw, 1.75rem); background: var(--fn-paper); border: 1px solid var(--fn-border); border-radius: 12px; }
+.fn-articles-next h2 { color: var(--fn-ink); font-size: clamp(1.15rem, 2vw, 1.45rem); line-height: 1.25; }
+.fn-articles-next p { color: var(--fn-muted); max-width: 62ch; margin-top: .45rem; }
+.fn-articles-actions { display: flex; flex-wrap: wrap; gap: .65rem; align-items: center; }
+.fn-articles-actions a:focus-visible { outline: 2px solid var(--fn-teal); outline-offset: 3px; }
+@media (min-width: 900px) {
+  .fn-articles-next { grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1.5rem; }
+}
 .fn-news-empty { padding: 1rem; }
 .fn-news-more { margin-top: 1.2rem; display: grid; gap: 1rem; justify-items: start; }
 .fn-news-more details { width: 100%; }
@@ -218,12 +228,21 @@
 .fn-reading-content article:has(h1) :is(p, li) a:not([class]), .fn-reading-content article:has(h1) :is(p, li) a.underline { color: var(--fn-teal-dark); text-decoration: underline; text-underline-offset: .19em; text-decoration-thickness: .065em; }
 .fn-reading-content article:has(h1) p.lead { font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.55; margin-block: 1.2rem; }
 .fn-reading-content article img { max-width: 100%; }
+.fn-reading-content :is(.prose, article) table { width: 100%; border-collapse: collapse; background: var(--fn-paper); font-size: clamp(.875rem, 1.25vw, 1rem); line-height: 1.5; }
+.fn-reading-content :is(.prose, article) table :is(th, td) { padding: .65rem clamp(.55rem, 1.35vw, .9rem); border-bottom: 1px solid var(--fn-border); text-align: start; vertical-align: top; overflow-wrap: anywhere; }
+.fn-reading-content :is(.prose, article) table thead th { color: var(--fn-ink); font-weight: 800; border-bottom: 2px solid var(--fn-border); }
+.fn-reading-content :is(.prose, article) table tbody th { color: var(--fn-ink); font-weight: 650; }
+.fn-reading-content :is(.prose, article) table td { font-variant-numeric: tabular-nums; }
+.fn-editorial-table { margin-block: 1.25rem; border: 1px solid var(--fn-border); border-radius: 10px; overflow-x: auto; }
+.fn-editorial-table table { margin: 0; }
+.fn-editorial-table thead th:first-child { width: 54%; }
+.fn-editorial-table tbody tr:last-child > :is(th, td) { border-bottom: 0; }
 .fn-reading-cover { display: block; width: 100%; height: auto; aspect-ratio: 2.2; object-fit: cover; border-radius: 10px; margin-block: 1.25rem 1.5rem; }
 .fn-article-head { margin-bottom: 1.25rem; }
 .fn-article-kicker { display: block; color: var(--fn-teal-dark); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 800; margin-bottom: .55rem; }
 .fn-article-head .fn-article-deck { color: var(--fn-muted); font-size: clamp(1.12rem, 1.85vw, 1.35rem); line-height: 1.46; margin: 0 0 .9rem; }
 .fn-article-byline { display: flex; flex-wrap: wrap; align-items: baseline; gap: .22rem 1rem; font-size: .875rem; line-height: 1.5; color: var(--fn-muted); }
-.fn-article-takeaways { background: #edf6f2; border-inline-start: 3px solid var(--fn-teal); border-radius: 6px; padding: clamp(.9rem, 2.3vw, 1.4rem); margin-block: 1.4rem; }
+.fn-article-takeaways { background: var(--fn-paper); border: 1px solid var(--fn-border); border-inline-start: 3px solid var(--fn-teal); border-radius: 6px; padding: clamp(.9rem, 2.3vw, 1.4rem); margin-block: 1.4rem; }
 .fn-reading-content article .fn-article-takeaways h2 { font-size: 1.16rem; line-height: 1.3; color: var(--fn-ink); margin: 0 0 .4rem; }
 .fn-reading-content article .fn-article-takeaways ul { margin: 0; padding-inline-start: 1.15em; list-style: disc; font-size: 1rem; line-height: 1.55; }
 .fn-reading-content article .fn-article-takeaways li { margin-block: .32rem; }
@@ -235,7 +254,7 @@
 .fn-article-next p { color: var(--fn-muted); font-size: .8rem; font-weight: 740; margin: 0; }
 .fn-article-next a { display: inline-flex; align-items: center; min-height: 44px; gap: .5rem; color: var(--fn-teal-dark); font-weight: 750; text-decoration: underline; text-underline-offset: .19em; }
 .fn-reading-aside { grid-area: aside; min-width: 0; align-self: start; }
-.fn-reading-outline { border: 1px solid var(--fn-border); border-radius: 10px; background: #f7faf9; margin-top: .75rem; }
+.fn-reading-outline { border: 1px solid var(--fn-border); border-radius: 10px; background: var(--fn-paper); margin-top: .75rem; }
 .fn-reading-outline summary { display: flex; align-items: center; justify-content: space-between; padding: .5rem .75rem; min-height: 44px; cursor: pointer; font-weight: 780; list-style: none; }
 .fn-reading-outline summary::-webkit-details-marker { display: none; }
 .fn-reading-outline[open] summary svg { transform: rotate(180deg); }
@@ -245,7 +264,7 @@
 .fn-reading-return { display: none; color: var(--fn-teal-dark); font-weight: 650; font-size: .87rem; margin-top: .75rem; text-underline-offset: .2em; }
 .fn-news-page :is(a, button, input, select, summary):focus-visible, .fn-reading-shell :is(a, summary):focus-visible { outline: 2px solid var(--fn-teal); outline-offset: 3px; }
 
-.fn-footer { border-top: 1px solid var(--fn-border); background: #f2f7f5; color: var(--fn-ink); }
+.fn-footer { border-top: 1px solid var(--fn-border); background: var(--fn-paper); color: var(--fn-ink); }
 .fn-footer > .fn-shell { padding-block: 1.5rem 1rem; }
 .fn-footer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem 1rem; }
 .fn-footer > .fn-shell > .fn-footer-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: .55rem; }
