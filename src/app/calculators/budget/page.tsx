@@ -54,7 +54,7 @@ const BUDGET_FAQS = [
 
 export default function BudgetPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="50/30/20 Budget Calculator 2026"
                 description="Free monthly budget planner using the 50/30/20 rule. Categorize spending and find savings opportunities."
@@ -65,6 +65,6 @@ export default function BudgetPage() {
             <BudgetSeoContent />
             <CalculatorFAQ faqs={BUDGET_FAQS} title="Budget Planner — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="budget" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="budget" /></main>
+        <CalculatorBenchmarks slug="budget" /></div>
     );
 }

@@ -49,7 +49,7 @@ const DEBT_PAYOFF_FAQS = [
 
 export default function DebtPayoffPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Debt Payoff Calculator — Snowball vs Avalanche"
                 description="Compare debt snowball vs avalanche payoff strategies and find your fastest path to becoming debt-free."
@@ -60,6 +60,6 @@ export default function DebtPayoffPage() {
             <DebtPayoffSeoContent />
             <CalculatorFAQ faqs={DEBT_PAYOFF_FAQS} title="Debt Payoff — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="debt-payoff" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="debt-payoff" /></main>
+        <CalculatorBenchmarks slug="debt-payoff" /></div>
     );
 }

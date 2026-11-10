@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 
 export default function ArmCalculatorPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="ARM Calculator 2026"
                 description="Adjustable rate mortgage calculator with worst-case scenarios and rate cap analysis."
@@ -46,6 +46,6 @@ export default function ArmCalculatorPage() {
             <SemrushIntentSection slug="arm" />
             <ArmSeoContent />
         <ContextualInternalLinks currentSlug="arm" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="arm" /></main>
+        <CalculatorBenchmarks slug="arm" /></div>
     );
 }

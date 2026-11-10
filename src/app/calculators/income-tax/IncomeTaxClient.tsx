@@ -93,8 +93,7 @@ export default function IncomeTaxClient() {
     const InputSection = (
         <div className="glass-card p-4 sm:p-6 space-y-5">
             <div className="space-y-4">
-                <span className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2 block">Gross earned income</span>
-                <LabeledInput label="" prefix="$" type="number" value={income} onChange={(e) => setIncome(Number(e.target.value))} className="text-xl" />
+                <LabeledInput label="Gross earned income" prefix="$" type="number" value={income} onChange={(e) => setIncome(Number(e.target.value))} className="text-xl" />
             </div>
 
             <div className="space-y-4">

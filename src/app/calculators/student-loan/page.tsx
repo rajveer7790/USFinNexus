@@ -50,7 +50,7 @@ const STUDENT_LOAN_FAQS = [
 
 export default function StudentLoanPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Student Loan Payoff Calculator"
                 description="Calculate your student loan payoff schedule and see how much interest you save with extra payments."
@@ -62,6 +62,6 @@ export default function StudentLoanPage() {
 
             <CalculatorFAQ faqs={STUDENT_LOAN_FAQS} title="Student Loans — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="student-loan" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="student-loan" /></main>
+        <CalculatorBenchmarks slug="student-loan" /></div>
     );
 }

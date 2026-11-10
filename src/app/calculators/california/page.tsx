@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 
 export default function CaliforniaPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="California Mortgage Calculator 2026"
                 description="Free California mortgage calculator with Prop 13 tax limits and jumbo loan thresholds for 2026."
@@ -45,6 +45,6 @@ export default function CaliforniaPage() {
             <CaliforniaSeoContent />
             <SemrushIntentSection slug="california" />
         <ContextualInternalLinks currentSlug="california" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="california" /></main>
+        <CalculatorBenchmarks slug="california" /></div>
     );
 }

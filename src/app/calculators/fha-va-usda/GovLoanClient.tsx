@@ -101,10 +101,10 @@ export default function GovLoanClient({ initialTab = 'fha', heading, compare = f
 
                             <div className="space-y-5">
                                 <div>
-                                    <label className="input-label">Home Price</label>
+                                    <label htmlFor="govloan-home-price" className="input-label">Home Price</label>
                                     <div className="relative group">
                                         <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">$</span>
-                                        <input
+                                        <input id="govloan-home-price"
                                             type="number"
                                             className="glass-input pl-8"
                                             value={homePrice}
@@ -114,7 +114,7 @@ export default function GovLoanClient({ initialTab = 'fha', heading, compare = f
                                         />
                                     </div>
                                     <div className="mt-6 px-1">
-                                        <input
+                                        <input aria-label="Home Price slider"
                                             type="range"
                                             min={100000}
                                             max={1500000}
@@ -128,9 +128,9 @@ export default function GovLoanClient({ initialTab = 'fha', heading, compare = f
                                 </div>
 
                                 <div>
-                                    <label className="input-label">Down Payment (%)</label>
+                                    <label htmlFor="govloan-down-payment" className="input-label">Down Payment (%)</label>
                                     <div className="relative group">
-                                        <input
+                                        <input id="govloan-down-payment"
                                             type="number"
                                             className="glass-input pr-8"
                                             value={effectiveDown}
@@ -148,8 +148,8 @@ export default function GovLoanClient({ initialTab = 'fha', heading, compare = f
 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                                     <div>
-                                        <label className="input-label">Rate (%)</label>
-                                        <input
+                                        <label htmlFor="govloan-rate" className="input-label">Rate (%)</label>
+                                        <input id="govloan-rate"
                                             type="number"
                                             className="glass-input"
                                             value={rate}
@@ -160,8 +160,8 @@ export default function GovLoanClient({ initialTab = 'fha', heading, compare = f
                                         />
                                     </div>
                                     <div>
-                                        <label className="input-label">Term (Years)</label>
-                                        <select
+                                        <label htmlFor="govloan-term-years" className="input-label">Term (Years)</label>
+                                        <select id="govloan-term-years"
                                             className="glass-input appearance-none"
                                             value={term}
                                             onChange={e => setTerm(+e.target.value)}
@@ -175,8 +175,8 @@ export default function GovLoanClient({ initialTab = 'fha', heading, compare = f
 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                                     <div>
-                                        <label className="input-label">Taxes/yr</label>
-                                        <input
+                                        <label htmlFor="govloan-taxes-yr" className="input-label">Taxes/yr</label>
+                                        <input id="govloan-taxes-yr"
                                             type="number"
                                             className="glass-input"
                                             value={propTax}
@@ -186,8 +186,8 @@ export default function GovLoanClient({ initialTab = 'fha', heading, compare = f
                                         />
                                     </div>
                                     <div>
-                                        <label className="input-label">Insurance/yr</label>
-                                        <input
+                                        <label htmlFor="govloan-insurance-yr" className="input-label">Insurance/yr</label>
+                                        <input id="govloan-insurance-yr"
                                             type="number"
                                             className="glass-input"
                                             value={insurance}

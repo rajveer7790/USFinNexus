@@ -55,7 +55,7 @@ const RENTAL_FAQS = [
 
 export default function RentalPropertyPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <WebApplicationSchema
                 name="Rental Property ROI & Cash Flow Calculator"
                 description="Analyze rental property investments instantly. Calculate Cash Flow, Cap Rate, Cash-on-Cash Return, and NOI."
@@ -70,6 +70,6 @@ export default function RentalPropertyPage() {
             <SemrushIntentSection slug="rental-property" />
             <ContextualInternalLinks currentSlug="rental-property" showBlogs showCalculators />
             <CalculatorFAQ faqs={RENTAL_FAQS} title="Rental Property Investment — Frequently Asked Questions" />
-        <CalculatorBenchmarks slug="rental-property" /></main>
+        <CalculatorBenchmarks slug="rental-property" /></div>
     );
 }

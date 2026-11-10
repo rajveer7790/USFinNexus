@@ -98,18 +98,18 @@ export default function ClosingCostsClient() {
                         </h2>
 
                         <div className="mb-5">
-                            <label className="input-label">Home Price</label>
+                            <label htmlFor="closingcosts-home-price" className="input-label">Home Price</label>
                             <div className="relative">
                                 <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">$</span>
-                                <input type="number" className="input-field pl-7" value={homePrice} onChange={e => setHomePrice(+e.target.value)} min={50000} step={5000} />
+                                <input id="closingcosts-home-price" type="number" className="input-field pl-7" value={homePrice} onChange={e => setHomePrice(+e.target.value)} min={50000} step={5000} />
                             </div>
-                            <input type="range" min={100000} max={2000000} step={10000} value={homePrice} onChange={e => setHomePrice(+e.target.value)} className="slider w-full mt-2" style={{ '--value': `${((homePrice - 100000) / 1900000) * 100}%` } as React.CSSProperties} />
+                            <input aria-label="Home Price slider" type="range" min={100000} max={2000000} step={10000} value={homePrice} onChange={e => setHomePrice(+e.target.value)} className="slider w-full mt-2" style={{ '--value': `${((homePrice - 100000) / 1900000) * 100}%` } as React.CSSProperties} />
                         </div>
 
                         <div className="mb-5">
-                            <label className="input-label">Down Payment</label>
+                            <label htmlFor="closingcosts-down-payment" className="input-label">Down Payment</label>
                             <div className="relative">
-                                <input type="number" className="input-field pr-8" value={downPct} onChange={e => setDownPct(+e.target.value)} min={0} max={100} step={0.5} />
+                                <input id="closingcosts-down-payment" type="number" className="input-field pr-8" value={downPct} onChange={e => setDownPct(+e.target.value)} min={0} max={100} step={0.5} />
                                 <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">%</span>
                             </div>
                             <p className="text-xs mt-1" style={{ color: 'var(--color-text-muted)' }}>

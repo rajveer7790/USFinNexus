@@ -50,7 +50,7 @@ const CREDIT_CARD_FAQS = [
 
 export default function CreditCardPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Credit Card Payoff Calculator"
                 description="Calculate how long it takes to pay off your credit card balance and see how much interest you can save."
@@ -62,6 +62,6 @@ export default function CreditCardPage() {
             <SemrushIntentSection slug="credit-card" />
             <CalculatorFAQ faqs={CREDIT_CARD_FAQS} title="Credit Card Payoff — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="credit-card" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="credit-card" /></main>
+        <CalculatorBenchmarks slug="credit-card" /></div>
     );
 }

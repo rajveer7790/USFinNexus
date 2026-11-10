@@ -55,6 +55,7 @@ export default function RelatedCalculators({
                         <Link
                             key={calc.href}
                             href={calc.href}
+                            prefetch={false}
                             className="flex items-start gap-3 p-4 hover:bg-slate-50 transition-colors group"
                         >
                             <span className="text-lg shrink-0">{calc.emoji}</span>
@@ -62,7 +63,7 @@ export default function RelatedCalculators({
                                 <p className="text-xs font-bold text-slate-800 group-hover:text-[#0da6f2] transition-colors">
                                     {calc.label}
                                 </p>
-                                <p className="text-xs text-slate-400 mt-0.5 line-clamp-1">{calc.description}</p>
+                                <p className="text-xs text-slate-600 mt-0.5 line-clamp-1">{calc.description}</p>
                             </div>
                         </Link>
                     ))}
@@ -85,6 +86,7 @@ export default function RelatedCalculators({
                         <Link
                             key={calc.href}
                             href={calc.href}
+                            prefetch={false}
                             className="flex items-start gap-3 p-4 rounded-xl border transition-all hover:border-[#0da6f2]/50 hover:bg-[#0da6f2]/5 group"
                             style={{ borderColor: 'var(--color-border)' }}
                         >

@@ -99,16 +99,16 @@ export default function DripClient() {
                     <div className="space-y-4">
                         <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Investment Details</h3>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">Initial Investment ($)</label>
-                            <input type="number" value={initialInvestment} onChange={(e) => setInitialInvestment(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500" />
+                            <label htmlFor="drip-initial-investment" className="block text-sm font-medium text-gray-700 mb-1">Initial Investment ($)</label>
+                            <input id="drip-initial-investment" type="number" value={initialInvestment} onChange={(e) => setInitialInvestment(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500" />
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">Annual Contribution ($)</label>
-                            <input type="number" value={annualContribution} onChange={(e) => setAnnualContribution(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500" />
+                            <label htmlFor="drip-annual-contribution" className="block text-sm font-medium text-gray-700 mb-1">Annual Contribution ($)</label>
+                            <input id="drip-annual-contribution" type="number" value={annualContribution} onChange={(e) => setAnnualContribution(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500" />
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">Years to Grow</label>
-                            <input type="number" value={years} onChange={(e) => setYears(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500" />
+                            <label htmlFor="drip-years-to-grow" className="block text-sm font-medium text-gray-700 mb-1">Years to Grow</label>
+                            <input id="drip-years-to-grow" type="number" value={years} onChange={(e) => setYears(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500" />
                         </div>
                     </div>
 
@@ -116,17 +116,17 @@ export default function DripClient() {
                         <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Dividend & Stock Assumptions</h3>
                         <div className="grid grid-cols-2 gap-4">
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Initial Div. Yield (%)</label>
-                                <input type="number" step="0.1" value={dividendYield} onChange={(e) => setDividendYield(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500" />
+                                <label htmlFor="drip-initial-div-yield" className="block text-sm font-medium text-gray-700 mb-1">Initial Div. Yield (%)</label>
+                                <input id="drip-initial-div-yield" type="number" step="0.1" value={dividendYield} onChange={(e) => setDividendYield(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500" />
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Annual Div. Growth (%)</label>
-                                <input type="number" step="0.1" value={annualDividendGrowth} onChange={(e) => setAnnualDividendGrowth(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500" />
+                                <label htmlFor="drip-annual-div-growth" className="block text-sm font-medium text-gray-700 mb-1">Annual Div. Growth (%)</label>
+                                <input id="drip-annual-div-growth" type="number" step="0.1" value={annualDividendGrowth} onChange={(e) => setAnnualDividendGrowth(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500" />
                             </div>
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">Annual Stock Appreciation (%)</label>
-                            <input type="number" step="0.1" value={annualStockAppreciation} onChange={(e) => setAnnualStockAppreciation(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500" />
+                            <label htmlFor="drip-annual-stock-appreciation" className="block text-sm font-medium text-gray-700 mb-1">Annual Stock Appreciation (%)</label>
+                            <input id="drip-annual-stock-appreciation" type="number" step="0.1" value={annualStockAppreciation} onChange={(e) => setAnnualStockAppreciation(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500" />
                         </div>
                     </div>
 
@@ -158,8 +158,8 @@ export default function DripClient() {
                         </div>
                         {!inTaxAdvantagedAccount && (
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Dividend Tax Rate (%)</label>
-                                <input type="number" value={taxRate} onChange={(e) => setTaxRate(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500" />
+                                <label htmlFor="drip-dividend-tax-rate" className="block text-sm font-medium text-gray-700 mb-1">Dividend Tax Rate (%)</label>
+                                <input id="drip-dividend-tax-rate" type="number" value={taxRate} onChange={(e) => setTaxRate(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500" />
                                 <p className="text-xs text-gray-500 mt-1">Usually 15% for qualified dividends in the US.</p>
                             </div>
                         )}

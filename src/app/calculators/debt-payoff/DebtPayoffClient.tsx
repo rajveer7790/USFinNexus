@@ -80,26 +80,26 @@ export default function DebtPayoffClient() {
                         <div className="space-y-4">
                             {debts.map((debt, i) => (
                                 <div key={i} className="p-4 rounded-xl border relative" style={{ borderColor: 'var(--color-border)' }}>
-                                    {debts.length > 1 && (
-                                        <button onClick={() => removeDebt(i)} className="absolute top-2 right-2 p-1 rounded-lg hover:bg-red-100 text-red-400 hover:text-red-600 transition-colors">
-                                            <X size={14} />
-                                        </button>
-                                    )}
-                                    <div className="mb-3">
-                                        <input type="text" className="input-field text-sm font-bold" value={debt.name} onChange={e => updateDebt(i, 'name', e.target.value)} placeholder="Debt name" />
+                                    <div className="mb-3 flex items-center gap-2">
+                                        <input aria-label={`Debt ${i + 1} name`} type="text" className="input-field text-sm font-bold" value={debt.name} onChange={e => updateDebt(i, 'name', e.target.value)} placeholder="Debt name" />
+                                        {debts.length > 1 && (
+                                            <button type="button" aria-label={`Remove debt ${i + 1}`} onClick={() => removeDebt(i)} className="grid min-h-11 min-w-11 shrink-0 place-items-center rounded-lg hover:bg-red-100 text-red-700 transition-colors">
+                                                <X size={14} />
+                                            </button>
+                                        )}
                                     </div>
                                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                                         <div>
                                             <label className="text-xs font-bold uppercase mb-1 block" style={{ color: 'var(--color-text-muted)' }}>Balance</label>
                                             <div className="relative">
                                                 <span className="absolute left-2 top-1/2 -translate-y-1/2 text-xs text-gray-400">$</span>
-                                                <input type="number" className="input-field pl-5 text-sm" value={debt.balance} onChange={e => updateDebt(i, 'balance', +e.target.value)} min={0} step={100} />
+                                                <input aria-label={`Balance, debt ${i + 1}`} type="number" className="input-field pl-5 text-sm" value={debt.balance} onChange={e => updateDebt(i, 'balance', +e.target.value)} min={0} step={100} />
                                             </div>
                                         </div>
                                         <div>
                                             <label className="text-xs font-bold uppercase mb-1 block" style={{ color: 'var(--color-text-muted)' }}>APR</label>
                                             <div className="relative">
-                                                <input type="number" className="input-field pr-6 text-sm" value={debt.rate} onChange={e => updateDebt(i, 'rate', +e.target.value)} min={0} max={40} step={0.1} />
+                                                <input aria-label={`APR, debt ${i + 1}`} type="number" className="input-field pr-6 text-sm" value={debt.rate} onChange={e => updateDebt(i, 'rate', +e.target.value)} min={0} max={40} step={0.1} />
                                                 <span className="absolute right-2 top-1/2 -translate-y-1/2 text-xs text-gray-400">%</span>
                                             </div>
                                         </div>
@@ -107,7 +107,7 @@ export default function DebtPayoffClient() {
                                             <label className="text-xs font-bold uppercase mb-1 block" style={{ color: 'var(--color-text-muted)' }}>Min Pay</label>
                                             <div className="relative">
                                                 <span className="absolute left-2 top-1/2 -translate-y-1/2 text-xs text-gray-400">$</span>
-                                                <input type="number" className="input-field pl-5 text-sm" value={debt.minPayment} onChange={e => updateDebt(i, 'minPayment', +e.target.value)} min={10} step={10} />
+                                                <input aria-label={`Minimum payment, debt ${i + 1}`} type="number" className="input-field pl-5 text-sm" value={debt.minPayment} onChange={e => updateDebt(i, 'minPayment', +e.target.value)} min={10} step={10} />
                                             </div>
                                         </div>
                                     </div>
@@ -122,9 +122,9 @@ export default function DebtPayoffClient() {
                         </h2>
                         <div className="relative">
                             <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">$</span>
-                            <input type="number" className="input-field pl-7" value={extra} onChange={e => setExtra(+e.target.value)} min={0} step={25} />
+                            <input aria-label="Extra monthly payment" type="number" className="input-field pl-7" value={extra} onChange={e => setExtra(+e.target.value)} min={0} step={25} />
                         </div>
-                        <input type="range" min={0} max={2000} step={25} value={extra} onChange={e => setExtra(+e.target.value)} className="slider w-full mt-2" style={{ '--value': `${(extra / 2000) * 100}%` } as React.CSSProperties} />
+                        <input aria-label="Extra monthly payment slider" type="range" min={0} max={2000} step={25} value={extra} onChange={e => setExtra(+e.target.value)} className="slider w-full mt-2" style={{ '--value': `${(extra / 2000) * 100}%` } as React.CSSProperties} />
                         <p className="text-xs mt-1" style={{ color: 'var(--color-text-muted)' }}>
                             Total monthly: {formatCurrency(totalMinPayments + extra)} (minimums + extra)
                         </p>

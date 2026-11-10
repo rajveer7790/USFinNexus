@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 
 export default function VaLoanPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="VA Loan Calculator 2026"
                 description="Calculate your VA loan monthly payment with 0% down including the 2026 VA Funding Fee."
@@ -44,6 +44,6 @@ export default function VaLoanPage() {
                             <GovLoanClient initialTab="va" heading="VA Loan Calculator" />
             <VaSeoContent />
         <ContextualInternalLinks currentSlug="va" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="va" /></main>
+        <CalculatorBenchmarks slug="va" /></div>
     );
 }

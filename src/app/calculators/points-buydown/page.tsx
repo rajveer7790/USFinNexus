@@ -49,7 +49,7 @@ const POINTS_FAQS = [
 
 export default function PointsBuyDownPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Mortgage Points Buy-Down Calculator 2026"
                 description="Calculate if paying discount points is worth it. Find your break-even point and total interest savings."
@@ -60,6 +60,6 @@ export default function PointsBuyDownPage() {
             <PointsBuydownSeoContent />
             <CalculatorFAQ faqs={POINTS_FAQS} title="Mortgage Points — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="points-buydown" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="points-buydown" /></main>
+        <CalculatorBenchmarks slug="points-buydown" /></div>
     );
 }

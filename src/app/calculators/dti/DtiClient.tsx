@@ -53,18 +53,18 @@ export default function DtiClient() {
                     <div className="glass-card p-10">
                         <div className="space-y-6">{[{id:"dti-housing",label:"Proposed housing PITI + HOA",v:housing,set:setHousing},{id:"dti-auto",label:"Auto loan payments",v:auto,set:setAuto},{id:"dti-student",label:"Student loan payments",v:student,set:setStudent},{id:"dti-cards",label:"Credit card minimums",v:cards,set:setCards}].map(f=><label key={f.id} htmlFor={f.id} className="block"><span className="input-label">{f.label}</span><input id={f.id} type="number" min={0} value={f.v} onChange={e=>f.set(Math.max(0,+e.target.value))} className="glass-input" /></label>)}<p className="text-sm">Front-end housing DTI: {frontEnd.toFixed(1)}%. The total DTI below includes housing, auto, student loans, cards and other debt; avoid counting an obligation twice.</p>
                             <div>
-                                <label className="input-label">Gross Monthly Income (Before Taxes)</label>
+                                <label htmlFor="dti-gross-monthly-income-before-taxes" className="input-label">Gross Monthly Income (Before Taxes)</label>
                                 <div className="relative group">
                                     <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">$</span>
-                                    <input type="number" value={grossIncome || ''} onChange={(e) => setGrossIncome(Number(e.target.value))} className="glass-input pl-8" />
+                                    <input id="dti-gross-monthly-income-before-taxes" type="number" value={grossIncome || ''} onChange={(e) => setGrossIncome(Number(e.target.value))} className="glass-input pl-8" />
                                 </div>
                             </div>
                             <div>
-                                <label className="input-label">Other Monthly Debt Payments</label>
+                                <label htmlFor="dti-other-monthly-debt-payments" className="input-label">Other Monthly Debt Payments</label>
                                 <p className="text-xs text-gray-400 mb-3 font-medium">Include recurring obligations such as auto loans, student loans and required minimum debt payments. For mortgage underwriting, the exact debts counted can depend on program rules.</p>
                                 <div className="relative group">
                                     <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">$</span>
-                                    <input type="number" value={monthlyDebt || ''} onChange={(e) => setMonthlyDebt(Number(e.target.value))} className="glass-input pl-8" />
+                                    <input id="dti-other-monthly-debt-payments" type="number" value={monthlyDebt || ''} onChange={(e) => setMonthlyDebt(Number(e.target.value))} className="glass-input pl-8" />
                                 </div>
                             </div>
                         </div>

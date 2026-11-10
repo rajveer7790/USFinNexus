@@ -33,7 +33,7 @@ const FAQS = [
 
 export default function TrumpAccountPage() {
     return (
-        <main id="main-content" className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
+        <div id="main-content" className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
             <WebApplicationSchema
                 name="Trump Account Growth Calculator 2026"
                 description="Estimate the future value of a Trump Account using the federal pilot contribution and recurring contributions."
@@ -70,6 +70,6 @@ export default function TrumpAccountPage() {
                 <CalculatorFAQ faqs={FAQS} title="Trump Account Calculator FAQs" />
             </div>
         <ContextualInternalLinks currentSlug="trump-account" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="trump-account" /></main>
+        <CalculatorBenchmarks slug="trump-account" /></div>
     );
 }

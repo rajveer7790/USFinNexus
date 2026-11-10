@@ -128,7 +128,7 @@ export default function StudentLoanClient() {
                         className="w-full sm:w-1/2"
                     />
                 </div>
-                <CustomSlider min={0} max={1000} step={10} value={extraPayment} onChange={setExtraPayment} />
+                <CustomSlider label="Extra monthly payment slider" min={0} max={1000} step={10} value={extraPayment} onChange={setExtraPayment} />
             </div>
             
             <div className="p-4 rounded-xl bg-navy-900/5 border border-navy-900/10">

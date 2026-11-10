@@ -191,13 +191,13 @@ export default function ContextualInternalLinks({ currentSlug, showBlogs = true,
         <section className="not-prose mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-5" aria-labelledby="contextual-links-heading">
             <h2 id="contextual-links-heading" className="text-lg font-black text-slate-900">Continue your financial research</h2>
             <p className="mt-1 text-sm text-slate-600">Use these closely related USFinNexus guides and tools to plan your next step.</p>
-            {nextSteps.length > 0 && <div className="mt-4 space-y-3 text-sm text-slate-700">{nextSteps.map(link => <p key={link.href}>{link.before}<Link className="text-blue-700 underline" href={link.href}>{link.anchor}</Link>{link.after}</p>)}</div>}
+            {nextSteps.length > 0 && <div className="mt-4 space-y-3 text-sm text-slate-700">{nextSteps.map(link => <p key={link.href}>{link.before}<Link prefetch={false} className="text-blue-700 underline" href={link.href}>{link.anchor}</Link>{link.after}</p>)}</div>}
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
                 {blogs.length > 0 && (
                     <div>
                         <h3 className="text-sm font-bold text-slate-900">Related guides</h3>
                         <ul className="mt-2 space-y-2">
-                            {blogs.map((blog) => <li key={blog.slug}><Link className="text-sm font-semibold text-blue-700 hover:underline" href={`/blog/${blog.slug}`}>{blog.title}</Link></li>)}
+                            {blogs.map((blog) => <li key={blog.slug}><Link prefetch={false} className="text-sm font-semibold text-blue-700 hover:underline" href={`/blog/${blog.slug}`}>{blog.title}</Link></li>)}
                         </ul>
                     </div>
                 )}
@@ -205,7 +205,7 @@ export default function ContextualInternalLinks({ currentSlug, showBlogs = true,
                     <div>
                         <h3 className="text-sm font-bold text-slate-900">Related calculators</h3>
                         <ul className="mt-2 space-y-2">
-                            {calculators.map((calculator) => <li key={calculator.href}><Link className="text-sm font-semibold text-blue-700 hover:underline" href={calculator.href}>{calculator.label}</Link><span className="block text-xs text-slate-500">{calculator.description}</span></li>)}
+                            {calculators.map((calculator) => <li key={calculator.href}><Link prefetch={false} className="text-sm font-semibold text-blue-700 hover:underline" href={calculator.href}>{calculator.label}</Link><span className="block text-xs text-slate-500">{calculator.description}</span></li>)}
                         </ul>
                     </div>
                 )}

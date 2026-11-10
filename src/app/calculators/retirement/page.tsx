@@ -49,7 +49,7 @@ const RETIREMENT_FAQS = [
 
 export default function RetirementPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Free Retirement Calculator 2026"
                 description="Calculate how much you need to retire and see if your savings are on track with projected nest egg growth."
@@ -60,6 +60,6 @@ export default function RetirementPage() {
             <RetirementSeoContent />
             <CalculatorFAQ faqs={RETIREMENT_FAQS} title="Retirement Planning — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="retirement" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="retirement" /></main>
+        <CalculatorBenchmarks slug="retirement" /></div>
     );
 }

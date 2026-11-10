@@ -11,7 +11,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 const inter = Inter({ subsets: ['latin'], display: 'swap', weight: ['400', '500', '600', '700', '800', '900'], preload: true, variable: '--font-inter' });
-const plexMono = IBM_Plex_Mono({ subsets: ['latin'], display: 'swap', weight: ['400', '500', '600', '700'], variable: '--font-mono' });
+const plexMono = IBM_Plex_Mono({ subsets: ['latin'], display: 'swap', weight: ['400', '500', '600', '700'], preload: false, variable: '--font-mono' });
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://usfinnexus.com'),

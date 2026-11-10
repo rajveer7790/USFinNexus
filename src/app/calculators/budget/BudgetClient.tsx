@@ -97,12 +97,12 @@ export default function BudgetClient() {
 
                 {items.map((item, i) => (
                     <div key={i} className="flex items-center gap-2 mb-2">
-                        <input type="text" className="input-field text-sm flex-1 py-1.5 min-w-0" value={item.label} onChange={e => updateItem(group, i, 'label', e.target.value)} />
-                        <div className="relative w-28 flex-shrink-0">
+                        <input aria-label={`${group} item ${i + 1} name`} type="text" className="input-field text-sm flex-1 py-1.5 min-w-0" value={item.label} onChange={e => updateItem(group, i, 'label', e.target.value)} />
+                        <div className="relative w-24 sm:w-28 flex-shrink-0">
                             <span className="absolute left-2 top-1/2 -translate-y-1/2 text-xs text-gray-400">$</span>
-                            <input type="number" className="input-field pl-5 text-sm py-2 w-full" value={item.amount} onChange={e => updateItem(group, i, 'amount', e.target.value)} min={0} step={10} />
+                            <input aria-label={`${group} item ${i + 1} monthly amount in dollars`} type="number" className="input-field pl-5 text-sm py-2 w-full" value={item.amount} onChange={e => updateItem(group, i, 'amount', e.target.value)} min={0} step={10} />
                         </div>
-                        <button onClick={() => removeItem(group, i)} className="flex-shrink-0 p-2 min-h-[36px] min-w-[36px] flex items-center justify-center rounded hover:bg-red-100 text-red-400 hover:text-red-600">
+                        <button type="button" aria-label={`Remove ${group} item ${i + 1}`} onClick={() => removeItem(group, i)} className="flex-shrink-0 p-2 min-h-11 min-w-11 flex items-center justify-center rounded hover:bg-red-100 text-red-700">
                             <X size={12} />
                         </button>
                     </div>
@@ -169,9 +169,9 @@ export default function BudgetClient() {
                         </h2>
                         <div className="relative">
                             <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">$</span>
-                            <input type="number" className="input-field pl-7" value={income} onChange={e => setIncome(+e.target.value)} min={500} step={100} />
+                            <input aria-label="Monthly after-tax income" type="number" className="input-field pl-7" value={income} onChange={e => setIncome(+e.target.value)} min={500} step={100} />
                         </div>
-                        <input type="range" min={1000} max={25000} step={100} value={income} onChange={e => setIncome(+e.target.value)} className="slider w-full mt-2" style={{ '--value': `${((income - 1000) / 24000) * 100}%` } as React.CSSProperties} />
+                        <input aria-label="Monthly after-tax income slider" type="range" min={1000} max={25000} step={100} value={income} onChange={e => setIncome(+e.target.value)} className="slider w-full mt-2" style={{ '--value': `${((income - 1000) / 24000) * 100}%` } as React.CSSProperties} />
                     </div>
 
                     {/* Categories */}

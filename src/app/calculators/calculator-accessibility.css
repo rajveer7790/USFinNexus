@@ -1,0 +1,57 @@
+.fn-calculator-scope :is(input:not([type='checkbox'], [type='radio'], [type='range']), select, textarea):focus-visible,
+.fn-calculator-scope :is(button, input[type='range'], summary, a):focus-visible {
+    outline: 2px solid #0f766e;
+    outline-offset: 2px;
+}
+
+.fn-calculator-scope :is(.text-gray-400, .text-gray-500, .text-slate-400):not(svg, .bg-slate-950 *, .bg-emerald-800 *) {
+    color: #475569;
+}
+
+.fn-calculator-scope :is(.text-emerald-400, .text-emerald-500, .text-emerald-600, .text-green-500, .text-green-600):not(svg, .bg-slate-950 *, .bg-emerald-800 *) {
+    color: #065f46;
+}
+
+.fn-calculator-scope :is(.text-amber-400, .text-amber-500, .text-amber-600):not(svg, .bg-slate-950 *, .bg-emerald-800 *) {
+    color: #92400e;
+}
+
+.fn-calculator-scope :is(.text-rose-400, .text-rose-500, .text-red-500):not(svg, .bg-slate-950 *, .bg-emerald-800 *) {
+    color: #9f1239;
+}
+
+.fn-calculator-scope :is(.text-indigo-500, .text-blue-500, [class~="text-[#0da6f2]"]):not(svg, .bg-slate-950 *, .bg-emerald-800 *) {
+    color: #075985;
+}
+
+.fn-calculator-scope :is(.btn-green, .bg-green-600.text-white, .bg-emerald-500.text-white) {
+    background-color: #047857;
+}
+
+.fn-calculator-scope :is(.bg-indigo-500.text-white, .bg-blue-500.text-white, [class~="bg-[#0da6f2]"].text-white) {
+    background-color: #075985;
+}
+
+.fn-calculator-scope .fn-refinance-terms.glass-tab-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 767px) {
+    .fn-calculator-scope :is(input:not([type='checkbox'], [type='radio'], [type='range']), select, textarea) {
+        min-height: 44px;
+        font-size: 1rem;
+    }
+
+    .fn-calculator-scope :is(.glass-card, .glass-panel) {
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fn-calculator-scope *, .fn-calculator-scope *::before, .fn-calculator-scope *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}

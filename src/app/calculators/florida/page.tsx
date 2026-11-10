@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function FloridaPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Florida Mortgage Calculator 2026"
                 description="Free Florida mortgage calculator factoring in hurricane insurance, flood insurance, and property taxes."
@@ -43,6 +43,6 @@ export default function FloridaPage() {
                 <MortgageCalculator initialState="FL" heading="Florida Mortgage Calculator" intro="Model a Florida mortgage using your own tax and insurance assumptions." />
             <FloridaSeoContent />
         <ContextualInternalLinks currentSlug="florida" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="florida" /></main>
+        <CalculatorBenchmarks slug="florida" /></div>
     );
 }

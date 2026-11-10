@@ -54,7 +54,7 @@ const DRIP_FAQS = [
 
 export default function DripPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <WebApplicationSchema
                 name="Dividend Reinvestment (DRIP) Forecaster"
                 description="Calculate the compound growth of your dividend investing portfolio over time."
@@ -69,6 +69,6 @@ export default function DripPage() {
             <SemrushIntentSection slug="drip" />
             <CalculatorFAQ faqs={DRIP_FAQS} title="Dividend Investing — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="drip" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="drip" /></main>
+        <CalculatorBenchmarks slug="drip" /></div>
     );
 }

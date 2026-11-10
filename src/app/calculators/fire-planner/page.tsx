@@ -53,7 +53,7 @@ const FIRE_FAQS = [
 
 export default function FirePlannerPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <WebApplicationSchema
                 name="FIRE Timeline Planner Calculator"
                 description="Calculate your FIRE number and early retirement timeline. Free advanced financial independence calculator."
@@ -67,6 +67,6 @@ export default function FirePlannerPage() {
             <FirePlannerSeoContent />
             <CalculatorFAQ faqs={FIRE_FAQS} title="FIRE Movement — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="fire-planner" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="fire-planner" /></main>
+        <CalculatorBenchmarks slug="fire-planner" /></div>
     );
 }

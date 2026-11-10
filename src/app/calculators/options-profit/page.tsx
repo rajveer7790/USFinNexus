@@ -49,7 +49,7 @@ const OPTIONS_FAQS = [
 
 export default function OptionsProfitPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <WebApplicationSchema
                 name="Options Profit/Loss Visualizer"
                 description="Visualize your options trades. Calculate max profit, max loss, and break-even points."
@@ -63,6 +63,6 @@ export default function OptionsProfitPage() {
             <OptionsProfitSeoContent />
             <CalculatorFAQ faqs={OPTIONS_FAQS} title="Options Trading — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="options-profit" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="options-profit" /></main>
+        <CalculatorBenchmarks slug="options-profit" /></div>
     );
 }

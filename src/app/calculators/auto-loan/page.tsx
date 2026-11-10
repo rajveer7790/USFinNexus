@@ -54,7 +54,7 @@ const AUTO_LOAN_FAQS = [
 
 export default function AutoLoanPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Auto Loan Calculator"
                 description="Estimate monthly car payments, total interest and amortization using vehicle and loan assumptions."
@@ -67,6 +67,6 @@ export default function AutoLoanPage() {
             <SemrushIntentSection slug="auto-loan" />
             <CalculatorFAQ faqs={AUTO_LOAN_FAQS} title="Auto Loan Calculator FAQs" />
         <ContextualInternalLinks currentSlug="auto-loan" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="auto-loan" /></main>
+        <CalculatorBenchmarks slug="auto-loan" /></div>
     );
 }

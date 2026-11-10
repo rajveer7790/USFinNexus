@@ -50,7 +50,7 @@ const INVESTMENT_FAQS = [
 
 export default function InvestmentPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Compound Interest & Investment Calculator 2026"
                 description="Visualize how your investments grow with compound interest over any time period."
@@ -62,6 +62,6 @@ export default function InvestmentPage() {
             <SemrushIntentSection slug="investment" />
             <CalculatorFAQ faqs={INVESTMENT_FAQS} title="Compound Interest — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="investment" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="investment" /></main>
+        <CalculatorBenchmarks slug="investment" /></div>
     );
 }

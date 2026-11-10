@@ -61,7 +61,7 @@ export default function InterestOnlyClient() {
                                 <label className="input-label">{f.label}</label>
                                 <div className="relative">
                                     {f.prefix && <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">{f.prefix}</span>}
-                                    <input type="number" className={`input-field ${f.prefix ? 'pl-7' : ''}`} value={f.v} onChange={e => f.set(+e.target.value)} step={f.step} />
+                                    <input aria-label={f.label} type="number" className={`input-field ${f.prefix ? 'pl-7' : ''}`} value={f.v} onChange={e => f.set(+e.target.value)} step={f.step} />
                                 </div>
                             </div>
                         ))}
@@ -74,9 +74,9 @@ export default function InterestOnlyClient() {
                         </div>
 
                         <div className="mb-4">
-                            <label className="input-label">Interest Rate</label>
+                            <label htmlFor="interestonly-interest-rate" className="input-label">Interest Rate</label>
                             <div className="relative">
-                                <input type="number" className="input-field pr-8" value={interestRate} onChange={e => setInterestRate(+e.target.value)} step={0.125} />
+                                <input id="interestonly-interest-rate" type="number" className="input-field pr-8" value={interestRate} onChange={e => setInterestRate(+e.target.value)} step={0.125} />
                                 <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">%</span>
                             </div>
                         </div>

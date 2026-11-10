@@ -50,7 +50,7 @@ const PERSONAL_LOAN_FAQS = [
 
 export default function PersonalLoanPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Personal Loan Calculator 2026"
                 description="Calculate your monthly personal loan payment, total interest, and full payoff schedule."
@@ -62,6 +62,6 @@ export default function PersonalLoanPage() {
             <SemrushIntentSection slug="personal-loan" />
             <CalculatorFAQ faqs={PERSONAL_LOAN_FAQS} title="Personal Loans — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="personal-loan" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="personal-loan" /></main>
+        <CalculatorBenchmarks slug="personal-loan" /></div>
     );
 }

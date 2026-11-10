@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 
 export default function FhaLoanPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="FHA Loan Calculator 2026"
                 description="Calculate your estimated FHA loan monthly payment including upfront and annual MIP fees."
@@ -45,6 +45,6 @@ export default function FhaLoanPage() {
                             <GovLoanClient initialTab="fha" heading="FHA Mortgage Calculator" />
             <FhaSeoContent />
         <ContextualInternalLinks currentSlug="fha" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="fha" /></main>
+        <CalculatorBenchmarks slug="fha" /></div>
     );
 }

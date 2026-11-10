@@ -49,7 +49,7 @@ const COMPARISON_FAQS = [
 
 export default function ComparisonPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Mortgage Loan Comparison Calculator 2026"
                 description="Compare up to 3 mortgage scenarios side by side with different rates, terms, and down payments."
@@ -62,6 +62,6 @@ export default function ComparisonPage() {
             <ComparisonSeoContent />
             <CalculatorFAQ faqs={COMPARISON_FAQS} title="Loan Comparison — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="comparison" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="comparison" /></main>
+        <CalculatorBenchmarks slug="comparison" /></div>
     );
 }

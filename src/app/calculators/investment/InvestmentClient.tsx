@@ -79,7 +79,7 @@ export default function InvestmentClient() {
                         className="w-1/2"
                     />
                 </div>
-                <CustomSlider min={0} max={20} step={0.1} value={interestRate} onChange={setInterestRate} />
+                <CustomSlider label="Interest rate slider" min={0} max={20} step={0.1} value={interestRate} onChange={setInterestRate} />
             </div>
 
             <div className="pt-4 border-t border-gray-200 space-y-4">
@@ -93,7 +93,7 @@ export default function InvestmentClient() {
                         className="w-1/2"
                     />
                 </div>
-                <CustomSlider min={1} max={50} value={years} onChange={setYears} />
+                <CustomSlider label="Years to grow slider" min={1} max={50} value={years} onChange={setYears} />
             </div>
         </div>
     );

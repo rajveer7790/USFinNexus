@@ -83,7 +83,7 @@ export default function ComparisonClient() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
                 {scenarios.map((s, i) => (
                     <div key={i} className="glass-card p-6" style={{ borderTop: `3px solid ${COLORS[i]}`, borderTopLeftRadius: '0.75rem', borderTopRightRadius: '0.75rem' }}>
-                        <input type="text" className="input-field text-center font-bold mb-4" value={s.label} onChange={e => update(i, 'label', e.target.value)} />
+                        <input aria-label={`Loan scenario ${i + 1} name`} type="text" className="input-field text-center font-bold mb-4" value={s.label} onChange={e => update(i, 'label', e.target.value)} />
                         {[
                             { label: 'Home Price', field: 'homePrice' as keyof Scenario, prefix: '$', step: 5000 },
                             { label: 'Down Payment', field: 'downPayment' as keyof Scenario, prefix: '$', step: 5000 },
@@ -96,7 +96,7 @@ export default function ComparisonClient() {
                                 <label className="input-label">{f.label}</label>
                                 <div className="relative">
                                     {f.prefix && <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">{f.prefix}</span>}
-                                    <input type="number" className={`input-field ${f.prefix ? 'pl-7' : ''} ${f.suffix ? 'pr-8' : ''}`} value={Number(s[f.field])} onChange={e => update(i, f.field, +e.target.value)} step={f.step} min={0} />
+                                    <input aria-label={f.label} type="number" className={`input-field ${f.prefix ? 'pl-7' : ''} ${f.suffix ? 'pr-8' : ''}`} value={Number(s[f.field])} onChange={e => update(i, f.field, +e.target.value)} step={f.step} min={0} />
                                     {f.suffix && <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">{f.suffix}</span>}
                                 </div>
                             </div>

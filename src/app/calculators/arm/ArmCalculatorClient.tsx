@@ -65,10 +65,10 @@ export default function ArmCalculatorClient() {
                             <h2 className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 mb-5 sm:mb-8">Loan & Initial Terms</h2>
                             <div className="space-y-5 sm:space-y-6">
                                 <div>
-                                    <label className="input-label">Loan Amount</label>
+                                    <label htmlFor="armcalculator-loan-amount" className="input-label">Loan Amount</label>
                                     <div className="relative group">
                                         <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-amber-500 transition-colors">$</span>
-                                        <input type="number" className="glass-input pl-8" value={loanAmount} onChange={e => setLoanAmount(+e.target.value)} step={5000} />
+                                        <input id="armcalculator-loan-amount" type="number" className="glass-input pl-8" value={loanAmount} onChange={e => setLoanAmount(+e.target.value)} step={5000} />
                                     </div>
                                 </div>
 
@@ -90,9 +90,9 @@ export default function ArmCalculatorClient() {
                                 </div>
 
                                 <div>
-                                    <label className="input-label">Initial Interest Rate</label>
+                                    <label htmlFor="armcalculator-initial-interest-rate" className="input-label">Initial Interest Rate</label>
                                     <div className="relative group">
-                                        <input type="number" className="glass-input pr-8" value={initialRate} onChange={e => setInitialRate(+e.target.value)} step={0.125} />
+                                        <input id="armcalculator-initial-interest-rate" type="number" className="glass-input pr-8" value={initialRate} onChange={e => setInitialRate(+e.target.value)} step={0.125} />
                                         <span className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-amber-500 transition-colors">%</span>
                                     </div>
                                 </div>
@@ -123,7 +123,7 @@ export default function ArmCalculatorClient() {
                                     <div key={f.label}>
                                         <label className="input-label">{f.label}</label>
                                         <div className="relative group">
-                                            <input type="number" className="glass-input pr-8" value={f.v} onChange={e => f.set(+e.target.value)} step={f.step} />
+                                            <input aria-label={f.label} type="number" className="glass-input pr-8" value={f.v} onChange={e => f.set(+e.target.value)} step={f.step} />
                                             <span className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-amber-500 transition-colors">%</span>
                                         </div>
                                     </div>

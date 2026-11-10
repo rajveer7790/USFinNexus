@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import CanadaMortgageCalculatorClient from './CanadaMortgageCalculatorClient';
+import '../../calculators/calculator-accessibility.css';
 
 export const dynamic = 'force-static';
 
@@ -58,7 +59,7 @@ export default function CanadaMortgagePage() {
     };
 
     return (
-        <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div className="fn-calculator-scope mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
             <Breadcrumbs items={[
                 { name: 'Canada', item: '/canada' },
@@ -88,6 +89,6 @@ export default function CanadaMortgagePage() {
             </section>
 
             <CalculatorFAQ faqs={FAQS} title="Canadian Mortgage Calculator — Frequently Asked Questions" />
-        </main>
+        </div>
     );
 }

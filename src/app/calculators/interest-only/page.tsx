@@ -50,7 +50,7 @@ const INTEREST_ONLY_FAQS = [
 
 export default function InterestOnlyPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Interest-Only Mortgage Calculator 2026"
                 description="Calculate interest-only mortgage payments and see the payment jump when the loan fully amortizes."
@@ -62,6 +62,6 @@ export default function InterestOnlyPage() {
             <InterestOnlySeoContent />
             <CalculatorFAQ faqs={INTEREST_ONLY_FAQS} title="Interest-Only Mortgages — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="interest-only" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="interest-only" /></main>
+        <CalculatorBenchmarks slug="interest-only" /></div>
     );
 }

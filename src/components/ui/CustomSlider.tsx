@@ -1,8 +1,9 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
 interface CustomSliderProps {
+    label: string;
     min: number;
     max: number;
     step?: number;
@@ -11,19 +12,12 @@ interface CustomSliderProps {
     className?: string;
 }
 
-export default function CustomSlider({ min, max, step = 1, value, onChange, className = '' }: CustomSliderProps) {
-    const inputRef = useRef<HTMLInputElement>(null);
-
-    useEffect(() => {
-        if (inputRef.current) {
-            const percentage = ((value - min) / (max - min)) * 100;
-            inputRef.current.style.setProperty('--value', `${percentage}%`);
-        }
-    }, [value, min, max]);
-
+export default function CustomSlider({ label, min, max, step = 1, value, onChange, className = '' }: CustomSliderProps) {
+    const percentage = max > min ? Math.max(0, Math.min(100, ((value - min) / (max - min)) * 100)) : 0;
     return (
         <input
-            ref={inputRef}
+            aria-label={label}
+            style={{ '--value': `${percentage}%` } as React.CSSProperties}
             type="range"
             min={min}
             max={max}

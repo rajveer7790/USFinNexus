@@ -58,7 +58,7 @@ const DTI_FAQS = [
 
 export default function DtiPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Debt-to-Income Ratio Calculator"
                 description="Calculate recurring monthly debt as a percentage of gross monthly income."
@@ -72,6 +72,6 @@ export default function DtiPage() {
             <DtiSeoContentV2 />
             <CalculatorFAQ faqs={DTI_FAQS} title="Debt-to-Income Ratio Calculator FAQs" />
         <ContextualInternalLinks currentSlug="dti" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="dti" /></main>
+        <CalculatorBenchmarks slug="dti" /></div>
     );
 }

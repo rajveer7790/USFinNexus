@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function DownPaymentPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Down Payment Savings Calculator 2026"
                 description="See exactly how many months you need to save for your target down payment goal."
@@ -49,6 +49,6 @@ export default function DownPaymentPage() {
                 </div>
             <DownPaymentSeoContent />
         <ContextualInternalLinks currentSlug="down-payment" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="down-payment" /></main>
+        <CalculatorBenchmarks slug="down-payment" /></div>
     );
 }

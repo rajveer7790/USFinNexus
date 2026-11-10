@@ -63,7 +63,7 @@ const MORTGAGE_FAQS = [
 
 export default function MortgagePage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <WebApplicationSchema
                 name="Mortgage Calculator"
                 description="Estimate your monthly mortgage payment with principal, interest, taxes, insurance, PMI and HOA fees."
@@ -81,6 +81,6 @@ export default function MortgagePage() {
             </section>
             <CalculatorFAQ faqs={MORTGAGE_FAQS} title="Mortgage Calculator FAQs" />
         <ContextualInternalLinks currentSlug="mortgage" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="mortgage" /></main>
+        <CalculatorBenchmarks slug="mortgage" /></div>
     );
 }

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function TexasPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Texas Mortgage Calculator 2026"
                 description="Free Texas mortgage calculator factoring in high property tax rates and zero state income tax."
@@ -43,6 +43,6 @@ export default function TexasPage() {
                 <MortgageCalculator initialState="TX" heading="Texas Mortgage Calculator" intro="Model a Texas mortgage using your own tax and insurance assumptions." />
             <TexasSeoContent />
         <ContextualInternalLinks currentSlug="texas" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="texas" /></main>
+        <CalculatorBenchmarks slug="texas" /></div>
     );
 }

@@ -57,21 +57,21 @@ export default function PersonalLoanClient() {
                     <h2 className="text-sm font-bold uppercase tracking-wide mb-2" style={{ color: 'var(--color-text-muted)' }}>Loan Details</h2>
 
                     <div>
-                        <label className="input-label">Loan Amount</label>
+                        <label htmlFor="personalloan-loan-amount" className="input-label">Loan Amount</label>
                         <div className="relative">
                             <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">$</span>
-                            <input type="number" className="input-field pl-7" value={principal} onChange={e => setPrincipal(+e.target.value)} step={500} min={100} />
+                            <input id="personalloan-loan-amount" type="number" className="input-field pl-7" value={principal} onChange={e => setPrincipal(+e.target.value)} step={500} min={100} />
                         </div>
-                        <input type="range" min={1000} max={100000} step={500} value={principal} onChange={e => setPrincipal(+e.target.value)} className="slider w-full mt-2" style={{ '--value': `${((principal - 1000) / 99000) * 100}%` } as React.CSSProperties} />
+                        <input aria-label="Loan Amount slider" type="range" min={1000} max={100000} step={500} value={principal} onChange={e => setPrincipal(+e.target.value)} className="slider w-full mt-2" style={{ '--value': `${((principal - 1000) / 99000) * 100}%` } as React.CSSProperties} />
                     </div>
 
                     <div>
-                        <label className="input-label">Annual Note Interest Rate (excludes fees)</label>
+                        <label htmlFor="personalloan-annual-note-interest-rate-excludes-fees" className="input-label">Annual Note Interest Rate (excludes fees)</label>
                         <div className="relative">
-                            <input type="number" className="input-field pr-8" value={rate} onChange={e => setRate(+e.target.value)} step={0.1} min={0.1} max={36} />
+                            <input id="personalloan-annual-note-interest-rate-excludes-fees" type="number" className="input-field pr-8" value={rate} onChange={e => setRate(+e.target.value)} step={0.1} min={0.1} max={36} />
                             <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">%</span>
                         </div>
-                        <input type="range" min={1} max={36} step={0.5} value={rate} onChange={e => setRate(+e.target.value)} className="slider w-full mt-2" style={{ '--value': `${((rate - 1) / 35) * 100}%` } as React.CSSProperties} />
+                        <input aria-label="Annual Note Interest Rate (excludes fees) slider" type="range" min={1} max={36} step={0.5} value={rate} onChange={e => setRate(+e.target.value)} className="slider w-full mt-2" style={{ '--value': `${((rate - 1) / 35) * 100}%` } as React.CSSProperties} />
                     </div>
 
                     <div>

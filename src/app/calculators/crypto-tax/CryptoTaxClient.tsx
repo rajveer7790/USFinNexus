@@ -36,8 +36,8 @@ export default function CryptoTaxClient() {
                     <div className="space-y-4">
                         <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Your Profile</h3><div><label htmlFor="crypto-magi" className="block text-sm font-medium">MAGI before these crypto gains ($)</label><input id="crypto-magi" type="number" min={0} value={magiBefore} onChange={e => setMagiBefore(Math.max(0,+e.target.value))} className="w-full border rounded-md p-2" /><p className="text-xs">Estimated NIIT: {result.niit.toFixed(2)} dollars. Other net investment income, carryovers, deductions, state tax and special assets are excluded. Net-loss tax benefits are not modeled.</p></div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">Filing Status</label>
-                            <select
+                            <label htmlFor="cryptotax-filing-status" className="block text-sm font-medium text-gray-700 mb-1">Filing Status</label>
+                            <select id="cryptotax-filing-status"
                                 value={filingStatus}
                                 onChange={(e) => setFilingStatus(e.target.value as CryptoStatus)}
                                 className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
@@ -47,8 +47,8 @@ export default function CryptoTaxClient() {
                             </select>
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">Other Taxable Ordinary Income, After Deductions ($)</label>
-                            <input type="number" value={ordinaryIncome} onChange={(e) => setOrdinaryIncome(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500" />
+                            <label htmlFor="cryptotax-other-taxable-ordinary-income-after-deductions" className="block text-sm font-medium text-gray-700 mb-1">Other Taxable Ordinary Income, After Deductions ($)</label>
+                            <input id="cryptotax-other-taxable-ordinary-income-after-deductions" type="number" value={ordinaryIncome} onChange={(e) => setOrdinaryIncome(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500" />
                             <p className="text-xs text-gray-500 mt-1">Enter taxable ordinary income after deductions, excluding these crypto gains. This is not gross salary.</p>
                         </div>
                     </div>
@@ -57,12 +57,12 @@ export default function CryptoTaxClient() {
                         <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Short-Term (Held 1 Year or Less)</h3>
                         <div className="grid grid-cols-2 gap-4">
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Gains ($)</label>
-                                <input type="number" value={shortTermGains} onChange={(e) => setShortTermGains(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-green-600" />
+                                <label htmlFor="cryptotax-gains" className="block text-sm font-medium text-gray-700 mb-1">Gains ($)</label>
+                                <input id="cryptotax-gains" type="number" value={shortTermGains} onChange={(e) => setShortTermGains(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-green-600" />
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Losses ($)</label>
-                                <input type="number" value={shortTermLosses} onChange={(e) => setShortTermLosses(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-red-600" />
+                                <label htmlFor="cryptotax-losses" className="block text-sm font-medium text-gray-700 mb-1">Losses ($)</label>
+                                <input id="cryptotax-losses" type="number" value={shortTermLosses} onChange={(e) => setShortTermLosses(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-red-600" />
                             </div>
                         </div>
                     </div>
@@ -72,11 +72,11 @@ export default function CryptoTaxClient() {
                         <div className="grid grid-cols-2 gap-4">
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1">Gains ($)</label>
-                                <input type="number" value={longTermGains} onChange={(e) => setLongTermGains(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-green-600" />
+                                <input aria-label="Gains ($)" type="number" value={longTermGains} onChange={(e) => setLongTermGains(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-green-600" />
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1">Losses ($)</label>
-                                <input type="number" value={longTermLosses} onChange={(e) => setLongTermLosses(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-red-600" />
+                                <input aria-label="Losses ($)" type="number" value={longTermLosses} onChange={(e) => setLongTermLosses(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-red-600" />
                             </div>
                         </div>
                     </div>

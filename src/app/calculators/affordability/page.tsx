@@ -59,7 +59,7 @@ const AFFORDABILITY_FAQS = [
 
 export default function AffordabilityPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Home Affordability Calculator"
                 description="Estimate a home-price range using income, recurring debt, down payment, mortgage rate and housing-cost assumptions."
@@ -86,6 +86,6 @@ export default function AffordabilityPage() {
             <AffordabilitySeoContentV2 />
             <CalculatorFAQ faqs={AFFORDABILITY_FAQS} title="Home Affordability Calculator FAQs" />
         <ContextualInternalLinks currentSlug="affordability" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="affordability" /></main>
+        <CalculatorBenchmarks slug="affordability" /></div>
     );
 }

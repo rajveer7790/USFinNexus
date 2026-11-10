@@ -86,35 +86,35 @@ export default function HELOCClient() {
                         </h2>
 
                         <div className="mb-5">
-                            <label className="input-label">Home Value</label>
+                            <label htmlFor="heloc-home-value" className="input-label">Home Value</label>
                             <div className="relative">
                                 <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">$</span>
-                                <input type="number" className="input-field pl-7" value={homeValue} onChange={e => setHomeValue(+e.target.value)} min={50000} step={5000} />
+                                <input id="heloc-home-value" type="number" className="input-field pl-7" value={homeValue} onChange={e => setHomeValue(+e.target.value)} min={50000} step={5000} />
                             </div>
-                            <input type="range" min={100000} max={2000000} step={10000} value={homeValue} onChange={e => setHomeValue(+e.target.value)} className="slider w-full mt-2" style={{ '--value': `${((homeValue - 100000) / 1900000) * 100}%` } as React.CSSProperties} />
+                            <input aria-label="Home Value slider" type="range" min={100000} max={2000000} step={10000} value={homeValue} onChange={e => setHomeValue(+e.target.value)} className="slider w-full mt-2" style={{ '--value': `${((homeValue - 100000) / 1900000) * 100}%` } as React.CSSProperties} />
                         </div>
 
                         <div className="mb-5">
-                            <label className="input-label">Outstanding Mortgage Balance</label>
+                            <label htmlFor="heloc-outstanding-mortgage-balance" className="input-label">Outstanding Mortgage Balance</label>
                             <div className="relative">
                                 <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">$</span>
-                                <input type="number" className="input-field pl-7" value={mortgageBalance} onChange={e => setMortgageBalance(+e.target.value)} min={0} step={5000} />
+                                <input id="heloc-outstanding-mortgage-balance" type="number" className="input-field pl-7" value={mortgageBalance} onChange={e => setMortgageBalance(+e.target.value)} min={0} step={5000} />
                             </div>
                         </div>
 
                         <div className="mb-5">
-                            <label className="input-label">CLTV Limit <span className="text-xs font-normal">(lender max)</span></label>
+                            <label htmlFor="heloc-cltv-limit-lender-max" className="input-label">CLTV Limit <span className="text-xs font-normal">(lender max)</span></label>
                             <div className="relative">
-                                <input type="number" className="input-field pr-8" value={cltvLimit} onChange={e => setCltvLimit(+e.target.value)} min={50} max={100} step={5} />
+                                <input id="heloc-cltv-limit-lender-max" type="number" className="input-field pr-8" value={cltvLimit} onChange={e => setCltvLimit(+e.target.value)} min={50} max={100} step={5} />
                                 <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">%</span>
                             </div>
                         </div>
 
                         <div className="mb-5">
-                            <label className="input-label">Draw Amount</label>
+                            <label htmlFor="heloc-draw-amount" className="input-label">Draw Amount</label>
                             <div className="relative">
                                 <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">$</span>
-                                <input type="number" className="input-field pl-7" value={drawAmount} onChange={e => setDrawAmount(+e.target.value)} min={1000} step={1000} />
+                                <input id="heloc-draw-amount" type="number" className="input-field pl-7" value={drawAmount} onChange={e => setDrawAmount(+e.target.value)} min={1000} step={1000} />
                             </div>
                             {drawAmount > maxLine && maxLine > 0 && (
                                 <p className="text-xs mt-1.5 text-amber-600 flex items-center gap-1">
@@ -146,16 +146,16 @@ export default function HELOCClient() {
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                             <div>
-                                <label className="input-label">Draw Period</label>
+                                <label htmlFor="heloc-draw-period" className="input-label">Draw Period</label>
                                 <div className="relative">
-                                    <input type="number" className="input-field pr-10" value={drawYears} onChange={e => setDrawYears(+e.target.value)} min={1} max={15} />
+                                    <input id="heloc-draw-period" type="number" className="input-field pr-10" value={drawYears} onChange={e => setDrawYears(+e.target.value)} min={1} max={15} />
                                     <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-gray-400">YRS</span>
                                 </div>
                             </div>
                             <div>
-                                <label className="input-label">Repayment Period</label>
+                                <label htmlFor="heloc-repayment-period" className="input-label">Repayment Period</label>
                                 <div className="relative">
-                                    <input type="number" className="input-field pr-10" value={repayYears} onChange={e => setRepayYears(+e.target.value)} min={5} max={30} />
+                                    <input id="heloc-repayment-period" type="number" className="input-field pr-10" value={repayYears} onChange={e => setRepayYears(+e.target.value)} min={5} max={30} />
                                     <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-gray-400">YRS</span>
                                 </div>
                             </div>
@@ -163,16 +163,16 @@ export default function HELOCClient() {
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
-                                <label className="input-label">Draw Rate (Variable)</label>
+                                <label htmlFor="heloc-draw-rate-variable" className="input-label">Draw Rate (Variable)</label>
                                 <div className="relative">
-                                    <input type="number" className="input-field pr-8" value={drawRate} onChange={e => setDrawRate(+e.target.value)} min={1} max={20} step={0.125} />
+                                    <input id="heloc-draw-rate-variable" type="number" className="input-field pr-8" value={drawRate} onChange={e => setDrawRate(+e.target.value)} min={1} max={20} step={0.125} />
                                     <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">%</span>
                                 </div>
                             </div>
                             <div>
-                                <label className="input-label">Repayment Rate</label>
+                                <label htmlFor="heloc-repayment-rate" className="input-label">Repayment Rate</label>
                                 <div className="relative">
-                                    <input type="number" className="input-field pr-8" value={repayRate} onChange={e => setRepayRate(+e.target.value)} min={1} max={20} step={0.125} />
+                                    <input id="heloc-repayment-rate" type="number" className="input-field pr-8" value={repayRate} onChange={e => setRepayRate(+e.target.value)} min={1} max={20} step={0.125} />
                                     <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">%</span>
                                 </div>
                             </div>

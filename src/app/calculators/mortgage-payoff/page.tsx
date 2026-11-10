@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 
 export default function MortgagePayoffPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <WebApplicationSchema
                 name="Mortgage Payoff Calculator"
                 description="Model extra mortgage principal payments, payoff timing and estimated interest savings."
@@ -63,6 +63,6 @@ export default function MortgagePayoffPage() {
                 </p>
             </article>
         <ContextualInternalLinks currentSlug="mortgage-payoff" showBlogs showCalculators />
-        <CalculatorFAQ faqs={[{question:"Does an extra payment lower my required payment?",answer:"Not automatically. Extra principal generally shortens payoff and reduces interest while the contractual payment remains due. A servicer-approved recast is a different transaction."},{question:"Can I enter a one-time lump sum?",answer:"Yes. This model applies it immediately to principal while keeping the original required payment. An annual extra payment is applied every 12 months."},{question:"Does this include escrow?",answer:"No. Taxes, homeowners insurance and escrow refunds are separate from loan principal and interest. They do not disappear when you make extra principal payments."},{question:"Is this a payoff statement?",answer:"No. Obtain a dated payoff statement from your servicer for daily interest, fees and exact good-through dates before paying the balance in full."},{question:"Should I pay fees for a biweekly program?",answer:"Compare the quoted setup and debit fees with making extra principal yourself. One extra monthly payment per year can be approximated by adding one-twelfth of the monthly P&I each month, without claiming the timing is identical."}]} /><CalculatorBenchmarks slug="mortgage-payoff" /></main>
+        <CalculatorFAQ faqs={[{question:"Does an extra payment lower my required payment?",answer:"Not automatically. Extra principal generally shortens payoff and reduces interest while the contractual payment remains due. A servicer-approved recast is a different transaction."},{question:"Can I enter a one-time lump sum?",answer:"Yes. This model applies it immediately to principal while keeping the original required payment. An annual extra payment is applied every 12 months."},{question:"Does this include escrow?",answer:"No. Taxes, homeowners insurance and escrow refunds are separate from loan principal and interest. They do not disappear when you make extra principal payments."},{question:"Is this a payoff statement?",answer:"No. Obtain a dated payoff statement from your servicer for daily interest, fees and exact good-through dates before paying the balance in full."},{question:"Should I pay fees for a biweekly program?",answer:"Compare the quoted setup and debit fees with making extra principal yourself. One extra monthly payment per year can be approximated by adding one-twelfth of the monthly P&I each month, without claiming the timing is identical."}]} /><CalculatorBenchmarks slug="mortgage-payoff" /></div>
     );
 }

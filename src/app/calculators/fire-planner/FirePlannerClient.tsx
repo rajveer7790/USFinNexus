@@ -84,39 +84,39 @@ export default function FirePlannerClient() {
                         <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Current Situation</h3>
                         <div className="grid grid-cols-2 gap-4">
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Current Age</label>
-                                <input type="number" value={currentAge} onChange={(e) => setCurrentAge(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500" />
+                                <label htmlFor="fireplanner-current-age" className="block text-sm font-medium text-gray-700 mb-1">Current Age</label>
+                                <input id="fireplanner-current-age" type="number" value={currentAge} onChange={(e) => setCurrentAge(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500" />
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Current Savings ($)</label>
-                                <input type="number" value={currentSavings} onChange={(e) => setCurrentSavings(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500" />
+                                <label htmlFor="fireplanner-current-savings" className="block text-sm font-medium text-gray-700 mb-1">Current Savings ($)</label>
+                                <input id="fireplanner-current-savings" type="number" value={currentSavings} onChange={(e) => setCurrentSavings(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500" />
                             </div>
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">Annual Income (After Tax) ($)</label>
-                            <input type="number" value={annualIncome} onChange={(e) => setAnnualIncome(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500" />
+                            <label htmlFor="fireplanner-annual-income-after-tax" className="block text-sm font-medium text-gray-700 mb-1">Annual Income (After Tax) ($)</label>
+                            <input id="fireplanner-annual-income-after-tax" type="number" value={annualIncome} onChange={(e) => setAnnualIncome(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500" />
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">Annual Expenses ($)</label>
-                            <input type="number" value={annualExpenses} onChange={(e) => setAnnualExpenses(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500" />
+                            <label htmlFor="fireplanner-annual-expenses" className="block text-sm font-medium text-gray-700 mb-1">Annual Expenses ($)</label>
+                            <input id="fireplanner-annual-expenses" type="number" value={annualExpenses} onChange={(e) => setAnnualExpenses(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500" />
                             <p className="text-xs text-gray-500 mt-1">Current Savings Rate: {annualSavingsRate.toFixed(1)}%</p>
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1">Adjust Savings Rate (%)</label>
-                            <input type="range" min="0" max="99" value={annualSavingsRate} onChange={(e) => handleSavingsRateChange(Number(e.target.value))} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" />
+                            <input aria-label="Adjust Savings Rate (%) slider" type="range" min="0" max="99" value={annualSavingsRate} onChange={(e) => handleSavingsRateChange(Number(e.target.value))} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" />
                         </div>
                     </div>
 
                     <div className="space-y-4">
                         <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Assumptions</h3>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">Real Inv. Return (%)</label>
-                            <input type="number" step="0.1" value={expectedReturn} onChange={(e) => setExpectedReturn(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500" />
+                            <label htmlFor="fireplanner-real-inv-return" className="block text-sm font-medium text-gray-700 mb-1">Real Inv. Return (%)</label>
+                            <input id="fireplanner-real-inv-return" type="number" step="0.1" value={expectedReturn} onChange={(e) => setExpectedReturn(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500" />
                             <p className="text-xs text-gray-500 mt-1">Return after accounting for inflation (typically 5-7%)</p>
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">Safe Withdrawal Rate (%)</label>
-                            <input type="number" step="0.1" value={safeWithdrawalRate} onChange={(e) => setSafeWithdrawalRate(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500" />
+                            <label htmlFor="fireplanner-safe-withdrawal-rate" className="block text-sm font-medium text-gray-700 mb-1">Safe Withdrawal Rate (%)</label>
+                            <input id="fireplanner-safe-withdrawal-rate" type="number" step="0.1" value={safeWithdrawalRate} onChange={(e) => setSafeWithdrawalRate(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500" />
                             <p className="text-xs text-gray-500 mt-1">Commonly 3.5% - 4.0%</p>
                         </div>
                     </div>

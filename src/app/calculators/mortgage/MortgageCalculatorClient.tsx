@@ -239,7 +239,7 @@ export default function MortgageCalculator({
                                     aria-label="Home price in dollars"
                                 />
                             </div>
-                            <input
+                            <input aria-label="Home price slider"
                                 type="range" min={50000} max={2000000} step={5000}
                                 value={homePrice}
                                 onChange={e => syncFromHomePrice(parseInt(e.target.value))}
@@ -304,7 +304,7 @@ export default function MortgageCalculator({
                                 />
                                 <span className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">%</span>
                             </div>
-                            <input
+                            <input aria-label="Annual Interest Rate slider"
                                 type="range" min={1} max={15} step={0.125}
                                 value={rate}
                                 onChange={e => setRate(parseFloat(e.target.value))}

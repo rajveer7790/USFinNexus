@@ -58,7 +58,7 @@ const CLOSING_COSTS_FAQS = [
 
 export default function ClosingCostsPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Closing Cost Calculator"
                 description="Estimate common home-purchase closing-cost categories using transaction and location assumptions."
@@ -71,6 +71,6 @@ export default function ClosingCostsPage() {
             <SemrushIntentSection slug="closing-costs" />
             <CalculatorFAQ faqs={CLOSING_COSTS_FAQS} title="Closing Cost Calculator FAQs" />
         <ContextualInternalLinks currentSlug="closing-costs" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="closing-costs" /></main>
+        <CalculatorBenchmarks slug="closing-costs" /></div>
     );
 }

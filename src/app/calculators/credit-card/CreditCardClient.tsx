@@ -58,7 +58,7 @@ export default function CreditCardClient() {
                         className="w-full sm:w-1/2"
                     />
                 </div>
-                <CustomSlider min={0} max={Math.max(25, balance)} step={5} value={monthlyPayment} onChange={setMonthlyPayment} />
+                <CustomSlider label="Monthly payment slider" min={0} max={Math.max(25, balance)} step={5} value={monthlyPayment} onChange={setMonthlyPayment} />
             </div>
 
             <h2 className="font-bold">Minimum payment comparison</h2>

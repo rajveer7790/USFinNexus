@@ -53,7 +53,7 @@ const CRYPTO_FAQS = [
 
 export default function CryptoTaxPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <WebApplicationSchema
                 name="Crypto Capital Gains Tax Estimator"
                 description="Estimate your cryptocurrency taxes instantly. Free US federal capital gains tax calculator."
@@ -67,6 +67,6 @@ export default function CryptoTaxPage() {
             <CryptoTaxSeoContent />
             <CalculatorFAQ faqs={CRYPTO_FAQS} title="Cryptocurrency Taxes — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="crypto-tax" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="crypto-tax" /></main>
+        <CalculatorBenchmarks slug="crypto-tax" /></div>
     );
 }

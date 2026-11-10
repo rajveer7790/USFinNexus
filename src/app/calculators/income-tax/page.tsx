@@ -58,7 +58,7 @@ const INCOME_TAX_FAQS = [
 
 export default function IncomeTaxPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="2026 Federal Income Tax Calculator"
                 description="Estimate 2026 federal income tax using official IRS brackets and standard deductions."
@@ -70,6 +70,6 @@ export default function IncomeTaxPage() {
             <SemrushIntentSection slug="income-tax" />
             <CalculatorFAQ faqs={INCOME_TAX_FAQS} title="2026 Federal Income Tax Calculator FAQs" />
         <ContextualInternalLinks currentSlug="income-tax" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="income-tax" /></main>
+        <CalculatorBenchmarks slug="income-tax" /></div>
     );
 }

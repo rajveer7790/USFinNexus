@@ -97,8 +97,8 @@ export default function OptionsProfitClient() {
                     <div className="space-y-4">
                         <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Strategy Setup</h3>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">Strategy</label>
-                            <select
+                            <label htmlFor="optionsprofit-strategy" className="block text-sm font-medium text-gray-700 mb-1">Strategy</label>
+                            <select id="optionsprofit-strategy"
                                 value={strategy}
                                 onChange={(e) => setStrategy(e.target.value)}
                                 className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
@@ -111,22 +111,22 @@ export default function OptionsProfitClient() {
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Current Stock $</label>
-                                <input type="number" step="0.01" value={stockPrice} onChange={(e) => setStockPrice(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                <label htmlFor="optionsprofit-current-stock" className="block text-sm font-medium text-gray-700 mb-1">Current Stock $</label>
+                                <input id="optionsprofit-current-stock" type="number" step="0.01" value={stockPrice} onChange={(e) => setStockPrice(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Strike Price $</label>
-                                <input type="number" step="0.01" value={strikePrice} onChange={(e) => setStrikePrice(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                <label htmlFor="optionsprofit-strike-price" className="block text-sm font-medium text-gray-700 mb-1">Strike Price $</label>
+                                <input id="optionsprofit-strike-price" type="number" step="0.01" value={strikePrice} onChange={(e) => setStrikePrice(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
                             </div>
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Premium/Cost $</label>
-                                <input type="number" step="0.01" value={premium} onChange={(e) => setPremium(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                <label htmlFor="optionsprofit-premium-cost" className="block text-sm font-medium text-gray-700 mb-1">Premium/Cost $</label>
+                                <input id="optionsprofit-premium-cost" type="number" step="0.01" value={premium} onChange={(e) => setPremium(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Contracts</label>
-                                <input type="number" min="1" value={contracts} onChange={(e) => setContracts(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                <label htmlFor="optionsprofit-contracts" className="block text-sm font-medium text-gray-700 mb-1">Contracts</label>
+                                <input id="optionsprofit-contracts" type="number" min="1" value={contracts} onChange={(e) => setContracts(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
                             </div>
                         </div>
                         <div className="bg-blue-50 p-3 rounded border border-blue-100 text-sm text-blue-800">

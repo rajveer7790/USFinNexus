@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function RentVsBuyPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Rent vs. Buy Calculator 2026"
                 description="Compare total renting vs. buying costs over any time horizon. Includes home appreciation, tax savings, and opportunity cost."
@@ -43,6 +43,6 @@ export default function RentVsBuyPage() {
             <RentVsBuyClient />
             <RentVsBuySeoContent />
         <ContextualInternalLinks currentSlug="rent-vs-buy" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="rent-vs-buy" /></main>
+        <CalculatorBenchmarks slug="rent-vs-buy" /></div>
     );
 }

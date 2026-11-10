@@ -50,7 +50,7 @@ const GOV_LOAN_FAQS = [
 
 export default function GovLoanComparisonPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="FHA vs VA vs USDA Loan Calculator 2026"
                 description="Side-by-side comparison of FHA, VA, and USDA government loan programs. Compare down payments, fees, and monthly costs."
@@ -62,6 +62,6 @@ export default function GovLoanComparisonPage() {
 
             <CalculatorFAQ faqs={GOV_LOAN_FAQS} title="Government Loans — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="fha-va-usda" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="fha-va-usda" /></main>
+        <CalculatorBenchmarks slug="fha-va-usda" /></div>
     );
 }

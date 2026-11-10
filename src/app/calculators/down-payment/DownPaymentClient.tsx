@@ -49,20 +49,20 @@ export default function DownPaymentClient() {
                     {/* Inputs */}
                     <div className="glass-card p-4 sm:p-6 space-y-6">
                         <div>
-                            <label className="input-label">Target Home Price</label>
+                            <label htmlFor="downpayment-target-home-price" className="input-label">Target Home Price</label>
                             <div className="relative group">
                                 <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-emerald-500 transition-colors">$</span>
-                                <input type="number" value={homePrice || ''} onChange={(e) => setHomePrice(Number(e.target.value))} className="glass-input pl-8" />
+                                <input id="downpayment-target-home-price" type="number" value={homePrice || ''} onChange={(e) => setHomePrice(Number(e.target.value))} className="glass-input pl-8" />
                             </div>
                         </div>
 
                         <div>
                             <div className="flex justify-between mb-3">
-                                <label className="input-label mb-0">Down Payment %</label>
+                                <label htmlFor="downpayment-down-payment" className="input-label mb-0">Down Payment %</label>
                                 <span className="text-sm font-black text-emerald-500">{formatCurrency(targetDownPayment)}</span>
                             </div>
                             <div className="relative group mb-3">
-                                <input type="number" value={downPct || ''} onChange={(e) => setDownPct(Number(e.target.value))} className="glass-input pr-8" />
+                                <input id="downpayment-down-payment" type="number" value={downPct || ''} onChange={(e) => setDownPct(Number(e.target.value))} className="glass-input pr-8" />
                                 <span className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-emerald-500 transition-colors">%</span>
                             </div>
                             <div className="glass-tab-list p-1 flex gap-1">
@@ -76,18 +76,18 @@ export default function DownPaymentClient() {
                         </div>
 
                         <div>
-                            <label className="input-label">Current Savings Dedicated to House</label>
+                            <label htmlFor="downpayment-current-savings-dedicated-to-house" className="input-label">Current Savings Dedicated to House</label>
                             <div className="relative group">
                                 <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-emerald-500 transition-colors">$</span>
-                                <input type="number" value={currentSavings || ''} onChange={(e) => setCurrentSavings(Number(e.target.value))} className="glass-input pl-8" />
+                                <input id="downpayment-current-savings-dedicated-to-house" type="number" value={currentSavings || ''} onChange={(e) => setCurrentSavings(Number(e.target.value))} className="glass-input pl-8" />
                             </div>
                         </div>
 
                         <div>
-                            <label className="input-label" htmlFor="savings-apy">Illustrative savings APY (%)</label><input id="savings-apy" type="number" min={0} max={20} step={0.1} value={savingsApy} onChange={e => setSavingsApy(Math.max(0, Math.min(20, +e.target.value)))} className="glass-input mb-3" /><p className="text-xs mb-3">User assumption, not a current savings offer. Monthly end-of-period deposits; interest tax and future yield changes excluded.</p><label className="input-label">Monthly Contributions</label>
+                            <label className="input-label" htmlFor="savings-apy">Illustrative savings APY (%)</label><input id="savings-apy" type="number" min={0} max={20} step={0.1} value={savingsApy} onChange={e => setSavingsApy(Math.max(0, Math.min(20, +e.target.value)))} className="glass-input mb-3" /><p className="text-xs mb-3">User assumption, not a current savings offer. Monthly end-of-period deposits; interest tax and future yield changes excluded.</p><label htmlFor="downpayment-monthly-contributions" className="input-label">Monthly Contributions</label>
                             <div className="relative group">
                                 <span className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-base font-semibold text-gray-500 group-focus-within:text-emerald-500 transition-colors">$</span>
-                                <input type="number" value={monthlySavings || ''} onChange={(e) => setMonthlySavings(Number(e.target.value))} className="glass-input pl-8" />
+                                <input id="downpayment-monthly-contributions" type="number" value={monthlySavings || ''} onChange={(e) => setMonthlySavings(Number(e.target.value))} className="glass-input pl-8" />
                             </div>
                         </div>
                     </div>

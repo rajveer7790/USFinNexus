@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 
 export default function AmortizationPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Mortgage Amortization Calculator"
                 description="Generate a month-by-month mortgage amortization schedule showing principal, interest, remaining balance and extra-payment impacts."
@@ -46,6 +46,6 @@ export default function AmortizationPage() {
             <SemrushIntentSection slug="amortization" />
             <AmortizationSeoContent />
         <ContextualInternalLinks currentSlug="amortization" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="amortization" /></main>
+        <CalculatorBenchmarks slug="amortization" /></div>
     );
 }

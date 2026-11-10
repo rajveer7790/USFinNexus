@@ -52,7 +52,7 @@ const HELOC_FAQS = [
 
 export default function HELOCPage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="HELOC Calculator 2026"
                 description="Calculate your HELOC payments, available equity, and total interest across draw and repayment periods."
@@ -65,6 +65,6 @@ export default function HELOCPage() {
             <p className="mx-auto mt-6 max-w-4xl text-sm text-slate-600">Compare HELOCs with other second-lien options in our <Link className="font-semibold text-blue-700 hover:underline" href="/blog/second-mortgage-guide">second-mortgage guide</Link>.</p>
             <CalculatorFAQ faqs={HELOC_FAQS} title="HELOC — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="heloc" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="heloc" /></main>
+        <CalculatorBenchmarks slug="heloc" /></div>
     );
 }

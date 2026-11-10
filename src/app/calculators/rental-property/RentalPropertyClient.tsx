@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
 export default function RentalPropertyClient() {
     const [purchasePrice, setPurchasePrice] = useState<number>(300000);
@@ -78,6 +77,14 @@ export default function RentalPropertyClient() {
     ];
 
     const COLORS = ['#3b82f6', '#ef4444', '#f59e0b', '#10b981', '#8b5cf6', '#64748b', '#ec4899'];
+    const chartTotal = expenseData.reduce((sum, entry) => sum + Math.max(0, entry.value), 0);
+    let chartOffset = 0;
+    const chartStops = chartTotal > 0 ? expenseData.flatMap((entry, index) => {
+        if (!(entry.value > 0)) return [];
+        const start = chartOffset;
+        chartOffset += entry.value / chartTotal * 100;
+        return `${COLORS[index]} ${start}% ${chartOffset}%`;
+    }).join(', ') : '';
 
     return (
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-8">
@@ -91,59 +98,59 @@ export default function RentalPropertyClient() {
                     <div className="space-y-4">
                         <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Property & Loan</h3><div><label htmlFor="rental-closing" className="block text-sm font-medium">Purchase closing costs ($)</label><input id="rental-closing" type="number" min={0} value={closingCosts} onChange={e => setClosingCosts(Math.max(0,+e.target.value))} className="w-full border rounded-md p-2" /><p className="text-xs">Upfront cash includes down payment, closing costs and initial repairs. NOI-based DSCR: {dscr === null ? "No debt" : dscr.toFixed(2) + "x"}. This is not a lender rent/PITIA qualification ratio. Replacement reserves are included in this conservative operating estimate.</p></div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">Purchase Price ($)</label>
-                            <input type="number" value={purchasePrice} onChange={(e) => setPurchasePrice(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                            <label htmlFor="rentalproperty-purchase-price" className="block text-sm font-medium text-gray-700 mb-1">Purchase Price ($)</label>
+                            <input id="rentalproperty-purchase-price" type="number" value={purchasePrice} onChange={(e) => setPurchasePrice(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Down Payment (%)</label>
-                                <input type="number" value={downPaymentPercent} onChange={(e) => setDownPaymentPercent(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                <label htmlFor="rentalproperty-down-payment" className="block text-sm font-medium text-gray-700 mb-1">Down Payment (%)</label>
+                                <input id="rentalproperty-down-payment" type="number" value={downPaymentPercent} onChange={(e) => setDownPaymentPercent(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Interest Rate (%)</label>
-                                <input type="number" step="0.1" value={interestRate} onChange={(e) => setInterestRate(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                <label htmlFor="rentalproperty-interest-rate" className="block text-sm font-medium text-gray-700 mb-1">Interest Rate (%)</label>
+                                <input id="rentalproperty-interest-rate" type="number" step="0.1" value={interestRate} onChange={(e) => setInterestRate(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
                             </div>
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">Initial Repairs/Rehab ($)</label>
-                            <input type="number" value={repairCosts} onChange={(e) => setRepairCosts(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                            <label htmlFor="rentalproperty-initial-repairs-rehab" className="block text-sm font-medium text-gray-700 mb-1">Initial Repairs/Rehab ($)</label>
+                            <input id="rentalproperty-initial-repairs-rehab" type="number" value={repairCosts} onChange={(e) => setRepairCosts(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
                         </div>
                     </div>
 
                     <div className="space-y-4">
                         <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Income & Expenses</h3>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">Monthly Gross Rent ($)</label>
-                            <input type="number" value={monthlyRent} onChange={(e) => setMonthlyRent(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                            <label htmlFor="rentalproperty-monthly-gross-rent" className="block text-sm font-medium text-gray-700 mb-1">Monthly Gross Rent ($)</label>
+                            <input id="rentalproperty-monthly-gross-rent" type="number" value={monthlyRent} onChange={(e) => setMonthlyRent(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Annual Taxes ($)</label>
-                                <input type="number" value={annualTaxes} onChange={(e) => setAnnualTaxes(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                <label htmlFor="rentalproperty-annual-taxes" className="block text-sm font-medium text-gray-700 mb-1">Annual Taxes ($)</label>
+                                <input id="rentalproperty-annual-taxes" type="number" value={annualTaxes} onChange={(e) => setAnnualTaxes(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Annual Ins ($)</label>
-                                <input type="number" value={annualInsurance} onChange={(e) => setAnnualInsurance(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
-                            </div>
-                        </div>
-                        <div className="grid grid-cols-2 gap-4">
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Property Mgmt (%)</label>
-                                <input type="number" value={propertyManagement} onChange={(e) => setPropertyManagement(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
-                            </div>
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Vacancy Rate (%)</label>
-                                <input type="number" value={vacancyRate} onChange={(e) => setVacancyRate(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                <label htmlFor="rentalproperty-annual-ins" className="block text-sm font-medium text-gray-700 mb-1">Annual Ins ($)</label>
+                                <input id="rentalproperty-annual-ins" type="number" value={annualInsurance} onChange={(e) => setAnnualInsurance(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
                             </div>
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Maintenance (%)</label>
-                                <input type="number" value={maintenance} onChange={(e) => setMaintenance(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                <label htmlFor="rentalproperty-property-mgmt" className="block text-sm font-medium text-gray-700 mb-1">Property Mgmt (%)</label>
+                                <input id="rentalproperty-property-mgmt" type="number" value={propertyManagement} onChange={(e) => setPropertyManagement(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">CapEx (%)</label>
-                                <input type="number" value={capEx} onChange={(e) => setCapEx(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                <label htmlFor="rentalproperty-vacancy-rate" className="block text-sm font-medium text-gray-700 mb-1">Vacancy Rate (%)</label>
+                                <input id="rentalproperty-vacancy-rate" type="number" value={vacancyRate} onChange={(e) => setVacancyRate(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                            <div>
+                                <label htmlFor="rentalproperty-maintenance" className="block text-sm font-medium text-gray-700 mb-1">Maintenance (%)</label>
+                                <input id="rentalproperty-maintenance" type="number" value={maintenance} onChange={(e) => setMaintenance(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                            </div>
+                            <div>
+                                <label htmlFor="rentalproperty-capex" className="block text-sm font-medium text-gray-700 mb-1">CapEx (%)</label>
+                                <input id="rentalproperty-capex" type="number" value={capEx} onChange={(e) => setCapEx(Number(e.target.value))} className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
                             </div>
                         </div>
                     </div>
@@ -173,35 +180,19 @@ export default function RentalPropertyClient() {
 
                     <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
                         <h3 className="text-lg font-semibold text-gray-800 mb-4">Monthly Income & Expenses Breakdown</h3>
-                        <div className="h-64 w-full">
-                            <ResponsiveContainer width="100%" height="100%">
-                                <PieChart>
-                                    <Pie
-                                        data={expenseData}
-                                        cx="50%"
-                                        cy="50%"
-                                        innerRadius={60}
-                                        outerRadius={80}
-                                        paddingAngle={5}
-                                        dataKey="value"
-                                    >
-                                        {expenseData.map((entry, index) => (
-                                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                                        ))}
-                                    </Pie>
-                                    <RechartsTooltip formatter={(value: number) => `$${value.toFixed(2)}`} />
-                                </PieChart>
-                            </ResponsiveContainer>
+                        <div aria-hidden="true" className="grid h-48 place-items-center">
+                            <div className="grid h-40 w-40 place-items-center rounded-full" style={{ background: chartStops ? `conic-gradient(${chartStops})` : '#e2e8f0' }}>
+                                <div className="h-28 w-28 rounded-full bg-gray-50" />
+                            </div>
                         </div>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-2 mt-4 text-sm">
+                        <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 mt-4 text-sm">
                             {expenseData.map((entry, index) => (
-                                <div key={index} className="flex items-center">
-                                    <span className="w-3 h-3 rounded-full mr-2" style={{ backgroundColor: COLORS[index % COLORS.length] }}></span>
-                                    <span className="text-gray-600 truncate mr-2">{entry.name}:</span>
-                                    <span className="font-semibold">${entry.value.toFixed(0)}</span>
+                                <div key={entry.name} className="flex flex-wrap items-baseline justify-between gap-x-2">
+                                    <dt className="text-gray-700"><span aria-hidden="true" className="inline-block w-3 h-3 rounded-full mr-2" style={{ backgroundColor: COLORS[index] }} />{entry.name}</dt>
+                                    <dd className="font-semibold tabular-nums">${entry.value.toFixed(2)}</dd>
                                 </div>
                             ))}
-                        </div>
+                        </dl>
                     </div>
                 </div>
             </div>

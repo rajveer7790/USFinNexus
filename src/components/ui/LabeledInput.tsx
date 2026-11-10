@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useId } from 'react';
 
 interface LabeledInputProps {
     label: string;
@@ -29,15 +29,16 @@ export default function LabeledInput({
     className = '',
     helpText,
 }: LabeledInputProps) {
+    const id = useId();
     return (
         <div className={`flex flex-col group ${className}`}>
             <div className="flex justify-between items-end mb-1.5">
-                <label className="text-xs font-bold uppercase tracking-wider text-gray-500 group-focus-within:text-[#0da6f2] transition-colors">
+                <label htmlFor={id} className="text-xs font-bold uppercase tracking-wider text-slate-700 group-focus-within:text-teal-800 transition-colors">
                     {label}
                 </label>
                 {helpText && (
                     /* text-xs = 12px minimum - accessible */
-                    <span className="text-xs text-gray-400 font-medium">{helpText}</span>
+                    <span id={id + '-help'} className="text-xs text-slate-600 font-medium">{helpText}</span>
                 )}
             </div>
             <div className="relative flex items-center">
@@ -47,6 +48,9 @@ export default function LabeledInput({
                     </span>
                 )}
                 <input
+                    id={id}
+                    aria-describedby={helpText ? id + '-help' : undefined}
+                    inputMode={type === 'number' ? 'decimal' : undefined}
                     type={type}
                     value={value}
                     onChange={onChange}

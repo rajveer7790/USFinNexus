@@ -71,7 +71,7 @@ export default function RetirementClient() {
                 onChange={(e) => setCurrentAge(Number(e.target.value))}
                 min={18} max={75}
             />
-            <CustomSlider min={18} max={75} value={currentAge} onChange={setCurrentAge} />
+            <CustomSlider label="Current age slider" min={18} max={75} value={currentAge} onChange={setCurrentAge} />
 
             <LabeledInput
                 label="Retirement Age"
@@ -80,7 +80,7 @@ export default function RetirementClient() {
                 onChange={(e) => setRetireAge(Number(e.target.value))}
                 min={currentAge + 1} max={85}
             />
-            <CustomSlider min={currentAge + 1} max={85} value={retireAge} onChange={setRetireAge} />
+            <CustomSlider label="Retirement age slider" min={currentAge + 1} max={85} value={retireAge} onChange={setRetireAge} />
 
             <div className="pt-4 border-t border-gray-200 space-y-6">
                 <LabeledInput

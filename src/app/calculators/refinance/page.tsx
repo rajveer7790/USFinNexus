@@ -58,7 +58,7 @@ const REFINANCE_FAQS = [
 
 export default function RefinancePage() {
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
             <WebApplicationSchema
                 name="Mortgage Refinance Calculator"
                 description="Compare a current mortgage with a proposed refinance and estimate payment savings, costs and break-even timing."
@@ -72,6 +72,6 @@ export default function RefinancePage() {
             <RefinanceSeoContentV2 />
             <CalculatorFAQ faqs={REFINANCE_FAQS} title="Mortgage Refinance Calculator FAQs" />
         <ContextualInternalLinks currentSlug="refinance" showBlogs showCalculators />
-        <CalculatorBenchmarks slug="refinance" /></main>
+        <CalculatorBenchmarks slug="refinance" /></div>
     );
 }

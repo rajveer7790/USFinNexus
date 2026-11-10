@@ -42,7 +42,7 @@ export default function PointsBuyDownClient() {
                             <label className="input-label">{f.label}</label>
                             <div className="relative">
                                 {f.prefix && <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">{f.prefix}</span>}
-                                <input type="number" className={`input-field ${f.prefix ? 'pl-7' : ''} ${f.suffix ? 'pr-8' : ''}`} value={f.v} onChange={e => f.set(+e.target.value)} step={f.step} min={f.min ?? 0} max={f.max} />
+                                <input aria-label={f.label} type="number" className={`input-field ${f.prefix ? 'pl-7' : ''} ${f.suffix ? 'pr-8' : ''}`} value={f.v} onChange={e => f.set(+e.target.value)} step={f.step} min={f.min ?? 0} max={f.max} />
                                 {f.suffix && <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-500">{f.suffix}</span>}
                             </div>
                         </div>
