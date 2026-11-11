@@ -170,7 +170,7 @@ export default function HsaContributionLimits2026Page() {
 
                     <h2>Medicare timing can create excess contributions</h2>
                     <p>HSA contribution eligibility generally stops for months when an individual is enrolled in Medicare. The existing HSA can remain open, and qualified medical withdrawals can continue, but new contributions must reflect the eligible months.</p>
-                    <p>Medicare Part A enrollment can be retroactive in some situations when a person applies after age 65. That makes late enrollment a common planning trap. Someone delaying Social Security and Medicare while working should coordinate the final HSA payroll contribution before applying, rather than waiting for the tax return to discover an excess.</p>
+                    <p>Medicare Part A enrollment can be retroactive in some situations when a person applies after age 65. That makes late enrollment a common planning trap. Someone delaying Social Security and Medicare while working should coordinate the final HSA payroll contribution before applying, rather than waiting for the tax return to discover an excess. Use our <Link href="/blog/hsa-medicare-when-to-stop-contributions">HSA-to-Medicare contribution timing checklist</Link> to separate the application date from the coverage start date and reconcile employer deposits.</p>
                     <p>Medicare eligibility alone is not identical to Medicare enrollment, but the exact facts matter. Employer size, active employment coverage, Social Security timing and spouse coverage can affect the decision. Obtain benefits and tax guidance before changing coverage.</p>
 
                     <h2>HSA tax advantages and qualified withdrawals</h2>
