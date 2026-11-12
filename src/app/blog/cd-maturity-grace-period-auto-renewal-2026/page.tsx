@@ -68,6 +68,7 @@ export default function Page() {
       <p>Finish with a confirmation showing the redeemed amount or the new principal, APY and maturity date. Reconcile it with your transaction history. Use the <Link href="/calculators/budget">budget calculator</Link> to assign any withdrawn money before it blends into ordinary checking. The goal is a deliberate next use for the savings, supported by a clear paper trail.</p>
       <h2>Frequently asked questions</h2>{faqs.map(f => <section key={f.question}><h3>{f.question}</h3><p>{f.answer}</p></section>)}
       <h2>Sources, scope and financial disclaimer</h2>
+      <p>Holding a CD through a brokerage instead? Read our <Link href="/blog/brokered-cd-vs-bank-cd">brokered CD versus bank CD guide</Link> for secondary-market sale losses, call provisions and issuer-level deposit-insurance checks.</p>
       <p>Primary guidance checked October 17, 2026: CFPB CD renewal guidance and Regulation DD sections 1030.4 and 1030.5, the FDIC CD shopping guide and the OCC matured-CD explainer linked above. The rate comparison and planning workflow are original educational illustrations. This guide covers ordinary consumer bank CDs; brokered, callable, structured and retirement-account CDs can require additional analysis. It is not personalized banking, investment, tax or legal advice. Confirm the current agreement and deadlines with your institution.</p>
     </article></main>
   </>;
