@@ -43,6 +43,9 @@ for (const [path, heading, addedFaq] of pages) {
   results.push({path, guideWords:words});
 }
 const rent = readFileSync(join(root, 'calculators/rent-vs-buy.html'), 'utf8');
+const refinance = readFileSync(join(root, 'calculators/refinance.html'), 'utf8');
+assert.ok(!refinance.includes('pure savings') && !refinance.includes('typically excellent'));
+assert.ok(refinance.includes('Compare Payment Savings With Total Cost'));
 assert.ok(!rent.includes('real 2026 data') && !rent.includes('real 2026 appreciation'));
 assert.ok(rent.includes('Tax deductions and PMI are not modeled.'));
 const home = readFileSync(join(root, 'index.html'), 'utf8');

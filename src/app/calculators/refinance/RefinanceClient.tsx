@@ -25,7 +25,8 @@ export default function RefinanceClient() {
         } catch { return null; }
     }, [currentBalance, currentRate, currentMonthlyPayment, monthsRemaining, newRate, newTerm, closingCosts]);
 
-    const isWorthIt = result && result.monthlySavings > 0 && result.netSavings > 0 && result.breakEvenMonths !== Infinity && result.breakEvenMonths <= 60;
+    // A modeled cost difference is not a personalized recommendation or holding-period test.
+    const isWorthIt = result && result.netSavings > 0;
     return (
         <div className="bg-white text-navy-900 pb-6 sm:pb-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 sm:pt-7 lg:pt-8 pb-8 sm:pb-12 relative z-10">
@@ -120,7 +121,7 @@ export default function RefinanceClient() {
                                         <input id={id + '-costs'} aria-describedby={id + '-costs-note'} type="number" inputMode="decimal" className="glass-input pl-8" value={closingCosts} onChange={e => setClosingCosts(+e.target.value)} step={500} min={0} />
                                     </div>
                                     <p id={id + '-costs-note'} className="text-xs mt-2 font-bold text-slate-600 uppercase tracking-tighter italic">
-                                        Typically $3,000-$6,000 (1-3% of loan amount)
+                                        Enter the loan costs from your actual quote; sample inputs are not a market average.
                                     </p>
                                 </div>
                             </div>
@@ -139,12 +140,12 @@ export default function RefinanceClient() {
                                         </div>
                                         <div>
                                             <p className={`text-xl font-black mb-2 ${isWorthIt ? 'text-emerald-800' : 'text-amber-900'}`}>
-                                                {isWorthIt ? 'Potential Savings After Break-Even' : 'Review Break-Even Before Refinancing'}
+                                                {isWorthIt ? 'Lower Modeled Lifetime Cost' : 'Compare Payment Savings With Total Cost'}
                                             </p>
                                             <p className="text-sm font-medium text-gray-500">
                                                 {result.monthlySavings > 0
-                                                    ? `You break-even in ${result.breakEvenMonths} months (${(result.breakEvenMonths / 12).toFixed(1)} yrs). After that, it's pure savings.`
-                                                    : 'Your new payment is higher than the current one. Consider a different term or rate.'}
+                                                    ? `Simple payment payback is ${result.breakEvenMonths} months. A longer term or different remaining balance can still make refinancing cost more overall.`
+                                                    : 'There is no monthly payment reduction in this scenario. Compare the term, total modeled cost and your reason for refinancing.'}
                                             </p>
                                         </div>
                                     </div>
@@ -191,7 +192,7 @@ export default function RefinanceClient() {
                                             <div key={row.label} className="grid grid-cols-3 gap-2 sm:gap-4 py-2 sm:py-3 border-b border-white/5 last:border-0 hover:bg-white/5 px-2 rounded-lg transition-colors group">
                                                 <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">{row.label}</span>
                                                 <span className="text-sm font-semibold text-center tabular-nums text-slate-700">{row.current}</span>
-                                                <span className="text-sm font-black text-center tabular-nums text-emerald-800">{row.newVal}</span>
+                                                <span className={`text-sm font-black text-center tabular-nums ${row.label === 'Net Savings (lifetime)' && result.netSavings < 0 ? 'text-rose-800' : 'text-emerald-800'}`}>{row.newVal}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -201,7 +202,7 @@ export default function RefinanceClient() {
                                     <div className="flex gap-4">
                                         <Info className="flex-shrink-0 text-emerald-400" size={20} />
                                         <p className="text-sm font-medium leading-relaxed text-gray-600">
-                                            A break-even under 24 months is typically excellent. Plan to stay in the home long enough to exceed the break-even point to realize savings. Factor in closing costs carefully.
+                                            Simple payment payback is not a complete savings test. Compare remaining balances, total costs and the period you expect to keep the loan. A shorter payback alone does not establish that refinancing is worthwhile.
                                         </p>
                                     </div>
                                 </div>
