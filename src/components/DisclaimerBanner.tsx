@@ -10,7 +10,7 @@ export default function DisclaimerBanner({
     className = '',
 }: DisclaimerBannerProps) {
     return (
-        <div className={`disclaimer-banner flex gap-3 ${className}`} role="note" aria-label="Disclaimer">
+        <div className={`disclaimer-banner flex gap-3 ${className}`} role="note" aria-label="Disclaimer" data-nosnippet="">
             <AlertTriangle size={16} className="mt-0.5 flex-shrink-0" />
             <p>
                 <strong>Estimation Only:</strong>{' '}

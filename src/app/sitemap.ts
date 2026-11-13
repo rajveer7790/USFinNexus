@@ -123,7 +123,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Use explicit dates only where we know a meaningful content update occurred.
     // Do not use filesystem mtimes: a fresh Cloudflare checkout can make unchanged URLs look newly modified.
     const corePages: MetadataRoute.Sitemap = [
-        { url: `${baseUrl}/`, lastModified: new Date('2026-08-07'), changeFrequency: 'weekly', priority: 1.0 },
+        { url: `${baseUrl}/`, lastModified: new Date('2026-11-13'), changeFrequency: 'weekly', priority: 1.0 },
         { url: `${baseUrl}/calculators`, changeFrequency: 'weekly', priority: 0.90 },
         { url: `${baseUrl}/canada`, changeFrequency: 'weekly', priority: 0.80 },
         { url: `${baseUrl}/blog`, lastModified: new Date('2026-11-13'), changeFrequency: 'weekly', priority: 0.80 },
@@ -144,7 +144,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     const calculators: MetadataRoute.Sitemap = Object.entries(CALC_PRIORITY).map(([route, priority]) => ({
         url: `${baseUrl}${route}`,
-        ...(route === '/calculators/income-tax' ? { lastModified: new Date('2026-08-07') } : {}),
+        ...(['/calculators/refinance', '/calculators/amortization', '/calculators/rent-vs-buy'].includes(route)
+            ? { lastModified: new Date('2026-11-13') }
+            : route === '/calculators/income-tax' ? { lastModified: new Date('2026-08-07') } : {}),
         changeFrequency: 'monthly' as const,
         priority,
     }));

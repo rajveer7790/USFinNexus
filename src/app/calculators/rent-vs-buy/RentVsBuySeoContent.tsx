@@ -1,94 +1,43 @@
-import React from 'react';
 import Link from 'next/link';
+import CalculatorFAQ from '@/components/CalculatorFAQ';
+
+const faqs = [
+    { question: 'How does this rent vs buy calculator compare the options?', answer: 'It models owner costs, remaining mortgage balance and sale equity against renting and investment assumptions. It accounts for upfront cash and monthly cost differences rather than comparing rent with principal and interest alone.' },
+    { question: 'Are the default rates and growth assumptions current market data?', answer: 'No. Defaults are editable examples, not live mortgage quotes, guaranteed investment returns or forecasts of rent and house prices. Replace them with local evidence and test alternative scenarios.' },
+    { question: 'Does this calculator include mortgage tax deductions or PMI?', answer: 'No. Tax deductions, PMI and renter’s insurance are not modeled. These omissions can matter, especially with a low down payment. Review them separately before relying on the comparison.' },
+    { question: 'What does the break-even year mean?', answer: 'It is the first modeled year-end when buying net cost is no greater than renting net cost within the selected horizon. It is not an exact month or a guarantee that buying remains ahead in every later year.' },
+    { question: 'Is buying always better if I stay long enough?', answer: 'No. Home-price growth, rent, maintenance, transaction costs, mortgage terms and investment outcomes can change the comparison. Lifestyle, mobility and financial resilience also matter.' },
+];
 
 export default function RentVsBuySeoContent() {
-    return (
-        <section className="bg-white border-t border-gray-100 py-10 mt-6">
+    return <>
+        <section className="bg-white border-t border-gray-100 py-10 mt-6" aria-labelledby="rent-buy-guide">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-blue">
-                <h2 className="text-3xl font-black text-navy-900 mb-6">
-                    Should I Rent or Buy? The 2026 Guide
-                </h2>
-                <p className="lead text-xl text-gray-600">
-                    The classic debate of renting vs. buying a home is often simplified to &quot;renting is throwing money away.&quot; But in 2026, with higher interest rates and soaring home prices, the math is far more nuanced. Our Rent vs. Buy calculator removes the emotion and gives you hard numbers, accounting for opportunity costs, property taxes, maintenance, and home appreciation.
-                </p>
-
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    The Hidden Costs of Buying a Home
-                </h3>
-                <p>
-                    When you buy a home, your mortgage is only the beginning. To make an accurate comparison against renting, you must factor in the &quot;sunk costs&quot; of homeownership that do not build equity:
-                </p>
-                <ul>
-                    <li><strong>Property Taxes:</strong> Averaging 1% to 2% of the home&apos;s value annually in the US, paid forever.</li>
-                    <li><strong>Homeowners Insurance and HOA Fees:</strong> Mandatory monthly costs that provide no financial return.</li>
-                    <li><strong>Maintenance and Repairs:</strong> A general rule of thumb is to budget 1% of the home&apos;s value per year for maintenance (new roofs, broken AC units, landscaping).</li>
-                    <li><strong>Closing Costs:</strong> Buying a home costs roughly 2% to 5% of the purchase price, and selling it costs roughly 6% to 10% (realtor commissions + closing costs).</li>
-                </ul>
-
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    The Hidden Costs of Renting
-                </h3>
-                <p>
-                    Renting has a different set of financial drawbacks:
-                </p>
-                <ul>
-                    <li><strong>0% Return on Investment:</strong> You are paying your landlord&apos;s mortgage, building their equity instead of yours.</li>
-                    <li><strong>Rent Increases:</strong> Unlike a fixed-rate mortgage, your rent is virtually guaranteed to increase every year based on inflation and local market demand.</li>
-                    <li><strong>No Tax Benefits:</strong> Homeowners can often deduct their mortgage interest and property taxes, lowering their effective cost (see our <Link href="/calculators/mortgage" className="text-blue-600 hover:underline">Mortgage Calculator</Link> for interest totals).</li>
-                </ul>
-
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    The Deciding Factor: How Long Will You Stay?
-                </h3>
-                <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 my-6">
-                    <p className="mb-0 text-navy-900 font-medium">
-                        The break-even horizon is the most critical metric in this calculation. This is the year where the accumulated costs of renting finally exceed the accumulated costs of buying (including the massive fees to eventually sell the home). 
-                    </p>
-                </div>
-                <p>
-                    If your time horizon is shorter than the break-even year (typically 4 to 7 years), financially, <strong>you are better off renting</strong>. In the short term, the massive transaction costs of buying and selling a home wipe out any equity or appreciation you might gain.
-                </p>
-                <p>
-                    If you plan to stay in the home for 10, 15, or 30 years, buying almost always wins mathematically due to the long-term leverage of real estate appreciation and forced savings.
-                </p>
-
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    The Opportunity Cost: What If You Invested Your Down Payment?
-                </h3>
-                <p>
-                    Our calculator includes a critical and often-overlooked metric: <strong>Investment Return Rate</strong>. 
-                </p>
-                <p>
-                    If you buy a $400,000 home with 20% down, that is $80,000 locked into brick and mortar. If you rent instead, you keep that $80,000. If you invest that money into an S&amp;P 500 index fund returning 7% annually, the compound growth over 10 years will be massive. A true rent vs. buy analysis credits the renter with the theoretical returns they make on that invested down payment. 
-                </p>
-
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Frequently Asked Questions
-                </h3>
-                
-                <div className="space-y-6 mt-6">
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">Is a mortgage cheaper than rent?</h4>
-                        <p className="text-gray-600">
-                            It depends entirely on your local market and interest rates. In many major US cities in 2026, the monthly cost of a new mortgage (PITI) is significantly higher than renting an equivalent property. However, over a 30-year span, buying normally becomes cheaper as rents climb while your fixed mortgage payment stays the same.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">What is the 5% Rule?</h4>
-                        <p className="text-gray-600">
-                            The 5% rule (popularized by Ben Felix) estimates the unrecoverable costs of homeownership at roughly 5% of the home&apos;s value annually (1% property tax + 1% maintenance + 3% cost of capital/debt). You divide the home&apos;s value by 5%, then divide by 12. If a home costs $500,000, the unrecoverable cost is roughly $25,000/year or $2,083/month. If you can rent an equivalent home for less than $2,083/month, renting is financially optimal. 
-                        </p>
-                    </div>
-
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">Does building equity guarantee wealth?</h4>
-                        <p className="text-gray-600">
-                            Not always. Real estate is highly geographic. While national averages show properties appreciating, local markets can stagnate or decline. Furthermore, your first 5-7 years of mortgage payments go almost entirely toward interest, meaning you build very little equity early on.
-                        </p>
-                    </div>
-                </div>
+                <h2 id="rent-buy-guide">Rent or buy? Compare total costs, equity and flexibility</h2>
+                <p><strong>Quick answer:</strong> A useful rent-versus-buy comparison includes the mortgage, property taxes, insurance, maintenance, transaction costs and money that could be invested instead. The result depends on your local alternatives and how long you stay. Neither renting nor buying is the automatic financial winner, and the defaults here are assumptions—not live market data.</p>
+                <h3>Compare similar homes and a realistic time horizon</h3>
+                <p>Use a rental and purchase option that meet similar needs for location, space and commuting. Comparing a small apartment with a large detached house can make the result reflect a lifestyle upgrade rather than a tenure decision. Enter the number of years you realistically expect to stay, including the possibility that work or family plans change.</p>
+                <p>The <a href="https://www.consumerfinance.gov/owning-a-home/prepare/consider-whether-its-the-right-time-for-you-to-buy/">CFPB recommends testing several economic scenarios</a> because future price growth can materially alter a rent-or-buy calculation. Run a short, medium and longer stay rather than selecting a favorable horizon after seeing the answer. A scenario that only works if every assumption is optimistic deserves another look.</p>
+                <h3>Build the owner-cost side from local evidence</h3>
+                <p>Start with the purchase price, down payment and quoted mortgage rate. Add an annual property-tax assumption, insurance quote, HOA dues, maintenance allowance and buying costs. Use local records and written estimates where possible. The <a href="https://www.consumerfinance.gov/ask-cfpb/what-are-some-of-the-financial-considerations-of-buying-a-home-en-119/">CFPB’s homeownership-cost guidance</a> emphasizes repairs and ongoing obligations beyond the mortgage.</p>
+                <p>A maintenance percentage is a budgeting approximation, not a prediction that repairs arrive evenly every month. An older roof or mechanical system can create a large early expense. Review inspection findings and keep a cash reserve. The tool grows the modeled maintenance allowance with home value and changes property tax using your tax-growth input; insurance and HOA inputs remain level in this projection.</p>
+                <p>Buying and selling costs should reflect your actual situation rather than a universal national percentage. Ask for local title, transfer, lender and selling estimates. Fees and negotiated services vary. Use the <Link href="/calculators/closing-costs">closing-cost calculator</Link> as a planning worksheet, then replace assumptions with written figures.</p>
+                <h3>Keep rent separate from the cash you can invest</h3>
+                <p>Rent pays for housing services and flexibility; it is not accurate to call every rent payment “throwing money away.” A renter may retain the down payment and purchase costs, but the financial benefit depends on whether that money is actually saved or invested. Spending it elsewhere does not produce the modeled investment balance.</p>
+                <p>This tool starts the investment comparison with the upfront cash difference and models monthly cost differences at your selected investment-return assumption. It does not guarantee stock-market returns. Try a lower return or a loss scenario alongside your base case. Our <Link href="/calculators/investment">compound interest calculator</Link> can show how contributions and growth assumptions interact, without predicting the market.</p>
+                <p>Lease-renewal increases are also assumptions, not a certainty that every landlord raises rent every year. Enter a realistic figure for the local alternative and stress-test it. Add renter’s insurance, deposits, moving costs or utilities separately when they differ materially; the current comparison does not model every renter-specific charge.</p>
+                <h3>Read sale equity and net cost carefully</h3>
+                <p>The owner’s modeled sale equity equals the projected home value minus the remaining mortgage balance and assumed selling costs. It is not the home’s gross value or cash already available in a bank account. Changes in market value can offset principal repayment. If sale equity is negative, additional cash may be needed to complete a sale.</p>
+                <p>Net buying cost subtracts modeled sale equity from the cash committed to ownership. Net renting cost incorporates the investment-gain difference. These are modeled economic comparisons, not simply the sum of monthly bills. Review the annual table instead of relying only on a large “rent” or “buy” label.</p>
+                <h3>The break-even year is a checkpoint, not a forecast</h3>
+                <p>The calculator checks costs at each year-end through the chosen horizon. The first year where buying net cost is no greater than renting net cost is reported as break-even. It does not calculate an exact month, guarantee that the crossing will occur in real life or prove buying stays ahead at every later checkpoint. If no crossing appears, buying did not reach this threshold within the modeled period.</p>
+                <p>Change one input at a time to understand sensitivity: shorten the stay, reduce appreciation, raise maintenance or adjust investment returns. Record which assumptions reverse the result. A narrow difference can be less important than the risk that you must move unexpectedly or cannot cover an urgent repair.</p>
+                <h3>What this model does not include</h3>
+                <p>PMI, mortgage tax deductions and renter’s insurance are not included. Do not assume a low-down-payment scenario captures mortgage insurance, or that the displayed ownership cost includes a tax refund. Tax treatment depends on individual facts and current law. Ask for a separate review where those items are material, rather than adding a universal percentage tax saving.</p>
+                <p>The <a href="https://yourhome.fanniemae.com/buy/rent-vs-buy-whats-right-you">Fannie Mae renting-versus-buying overview</a> provides a broader cost checklist. Also consider job stability, responsibility for repairs and the value of being able to move. Use the <Link href="/calculators/affordability">home affordability calculator</Link> for a separate budget check; an attractive long-run comparison does not establish lender approval or enough cash for closing.</p>
+                <p><span data-nosnippet="">Reviewed November 13, 2026. Educational scenarios only. Local costs, actual loan terms and future outcomes may differ; no investment return, tax benefit or property appreciation is guaranteed.</span></p>
             </div>
         </section>
-    );
+        <CalculatorFAQ faqs={faqs} title="Rent vs Buy Calculator FAQs" />
+    </>;
 }

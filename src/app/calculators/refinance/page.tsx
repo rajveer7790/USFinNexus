@@ -63,10 +63,10 @@ export default function RefinancePage() {
                 name="Mortgage Refinance Calculator"
                 description="Compare a current mortgage with a proposed refinance and estimate payment savings, costs and break-even timing."
                 url="https://usfinnexus.com/calculators/refinance"
-                dateModified="2026-09-09"
+                dateModified="2026-11-13"
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Mortgage Refinance Calculator', item: '/calculators/refinance' }]} />
-            <p className="text-xs text-gray-500 mt-1 mb-4">Reviewed September 9, 2026 &middot; Use a current lender quote for rate and fee assumptions</p>
+            <p className="text-xs text-gray-500 mt-1 mb-4" data-nosnippet="">Reviewed November 13, 2026 &middot; Use a current lender quote for rate and fee assumptions</p>
             <RefinanceClient />
             <SemrushIntentSection slug="refinance" />
             <RefinanceSeoContentV2 />

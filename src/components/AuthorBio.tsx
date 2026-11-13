@@ -34,7 +34,7 @@ interface AuthorBioProps {
 
 export default function AuthorBio({ author = USFinNexusEditorialTeam, updatedDate }: AuthorBioProps) {
     return (
-        <div className="mt-12 border-t pt-8" style={{ borderColor: 'var(--color-border)' }}>
+        <div className="mt-12 border-t pt-8" style={{ borderColor: 'var(--color-border)' }} data-nosnippet="">
             {/* Article schema */}
             <script
                 type="application/ld+json"

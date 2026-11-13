@@ -10,7 +10,7 @@ import QuickMortgageEstimate from '@/components/QuickMortgageEstimate';
 import { getAllBlogPosts } from '@/lib/blogs';
 
 export const metadata: Metadata = {
-    title: 'Free U.S. Mortgage & Finance Calculators 2026',
+    title: 'USFinNexus: Free Mortgage & Finance Calculators',
     description: 'Free U.S. financial calculators for mortgages, home affordability, refinancing, debt, loans, retirement and federal taxes. No account required.',
     alternates: { canonical: '/' },
     openGraph: {
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
         locale: 'en_US',
         url: 'https://usfinnexus.com/',
         siteName: 'USFinNexus',
-        title: 'Free U.S. Mortgage & Finance Calculators 2026',
+        title: 'USFinNexus: Free Mortgage & Finance Calculators',
         description: 'Free U.S. mortgage and personal-finance calculators with clear assumptions and no account required.',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'USFinNexus financial calculators' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Free U.S. Mortgage & Finance Calculators 2026',
+        title: 'USFinNexus: Free Mortgage & Finance Calculators',
         description: 'Free U.S. mortgage and personal-finance calculators with clear assumptions and no account required.',
         images: ['https://usfinnexus.com/icon-512.png'],
     },
@@ -152,7 +152,7 @@ export default function HomePage() {
         <section className="fn-hero" aria-labelledby="home-heading">
             <div className="fn-hero-copy">
                 <h1 id="home-heading">Free U.S. financial calculators</h1>
-                <p>Make more informed money decisions with free calculators, practical guides and data on mortgages, homeownership, budgeting and consumer loans.</p>
+                <p>USFinNexus helps you estimate mortgage payments with taxes and insurance, compare refinancing, plan a home purchase and explore personal-finance scenarios. Free tools, clear assumptions and no account required.</p>
                 <div className="fn-hero-actions">
                     <Link href="/calculators" className="fn-button fn-button-primary">Browse calculators <ArrowRight size={19} aria-hidden="true" /></Link>
                     <Link href="/mortgage-rates" className="fn-button fn-button-secondary">Explore mortgage rates <ArrowRight size={19} aria-hidden="true" /></Link>

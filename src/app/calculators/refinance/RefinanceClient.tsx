@@ -37,10 +37,10 @@ export default function RefinanceClient() {
                         <span className="text-xs font-black uppercase tracking-[0.2em] text-emerald-800">Savings Analysis</span>
                     </div>
                     <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight leading-tight text-navy-900">
-                        Refinance Savings Calculator
+                        Mortgage Refinance Calculator
                     </h1>
                     <p className="text-gray-500 max-w-2xl font-medium text-lg">
-                        See your break-even point and total lifetime savings from refinancing your mortgage.
+                        Compare your current mortgage with a new loan: estimate monthly payment changes, closing costs, simple break-even timing and projected interest. Inputs are examples, not current rate offers.
                     </p>
                 </div>
 

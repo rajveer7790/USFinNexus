@@ -1,19 +1,28 @@
 import Link from 'next/link';
 
 export default function RefinanceSeoContentV2() {
-    return (
-        <section className="bg-white border-t border-gray-100 py-10 mt-6">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-blue">
-                <h2>How to Use a Mortgage Refinance Calculator</h2>
-                <p>A mortgage refinance calculator compares your current loan with a proposed new loan. The most useful outputs are the monthly principal-and-interest change, estimated upfront costs, a simple break-even period and the effect of changing the remaining loan term.</p>
-                <h3>Break-even is useful, but it is not the whole decision</h3>
-                <p>A simple break-even estimate divides upfront refinance costs by monthly payment savings. It does not automatically account for extending the loan term, cash taken out, taxes, opportunity cost or differences in total interest. Compare the full remaining cost of both loans when those factors matter.</p>
-                <h3>Use your actual quoted rate and fees</h3>
-                <p>Mortgage rates change over time and vary by borrower, property, loan type, points and lender. Enter the rate and closing costs from a current quote rather than relying on a generic market average.</p>
-                <h3>Related tools</h3>
-                <p>Use the <Link href="/calculators/mortgage">Mortgage Calculator</Link> for a payment estimate, the <Link href="/calculators/amortization">Mortgage Amortization Calculator</Link> to compare payoff schedules, and the <Link href="/calculators/points-buydown">Mortgage Points Calculator</Link> for discount-point break-even scenarios.</p>
-                <p><strong>Reviewed:</strong> August 7, 2026. Estimates are educational and are not a lender quote or financial advice.</p>
-            </div>
-        </section>
-    );
+    return <section className="bg-white border-t border-gray-100 py-10 mt-6" aria-labelledby="refinance-guide">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-blue">
+            <h2 id="refinance-guide">How to compare refinance savings and closing costs</h2>
+            <p><strong>Quick answer:</strong> A mortgage refinance calculator compares the payment and remaining cost of your current loan with a proposed replacement. Simple break-even equals upfront refinance costs divided by monthly principal-and-interest savings. A lower payment is not automatically a lower total cost, especially when the new loan extends repayment.</p>
+            <h3>Enter the current loan from your statement</h3>
+            <p>Use the remaining principal balance, current principal-and-interest payment and months remaining. Do not enter the entire escrow-inclusive mortgage bill as principal and interest: property taxes and insurance are separate expenses. Include recurring mortgage insurance in a separate comparison if it changes. Check the balance and payoff date with your servicer before relying on a closing calculation.</p>
+            <p>The current-rate field provides context, but this tool compares the current payment you enter with a newly amortized payment. A current payment inconsistent with the balance or remaining term can distort projected savings. For a loan with payment changes, a balloon or another unusual structure, this simple comparison may not capture the contract.</p>
+            <h3>Use the new rate and costs from a comparable quote</h3>
+            <p>Enter a quoted interest rate, not an APR that already incorporates certain borrowing costs. Record the proposed term and the lender and third-party charges needed to refinance. Separate true loan costs from cash-flow items such as a new escrow deposit, prepaid expenses or an eventual old-escrow refund. Those amounts still affect cash needed at closing, but they should not be silently treated as identical economic costs.</p>
+            <p>The <a href="https://www.consumerfinance.gov/owning-a-home/explore/select-the-kind-of-loan-that-fits-your-needs/">CFPB recommends comparing Loan Estimates for comparable loan structures</a>. Keep rate-lock timing, points, credits and term consistent when possible. See our <Link href="/blog/loan-estimate-comparison-checklist-2026">Loan Estimate comparison checklist</Link> for a document-by-document approach.</p>
+            <h3>A simple break-even example</h3>
+            <p>Assume an illustrative refinance costs $4,500 upfront and reduces monthly principal and interest by $150. Simple break-even is 30 months: $4,500 divided by $150. Selling or refinancing again after 18 months would leave only $2,700 of payment savings against those costs. Staying past month 30 clears this simple cash-flow test, but does not prove the refinance creates the greatest overall benefit.</p>
+            <p>When monthly savings are zero or negative, the usual cost-divided-by-savings calculation has no useful positive payback period. A borrower might still choose a different loan to shorten the term or change risk, but that is a different goal. Do not turn an unavailable break-even value into a recommendation to refinance.</p>
+            <h3>Compare the remaining term before restarting a long loan</h3>
+            <p>A mortgage with 20 years remaining and a new 30-year mortgage have different repayment endpoints. Lowering the monthly payment can improve cash flow while adding years of interest. Use the “Match remaining term” control to compare a new loan over the current remaining duration, then compare it with a longer term. Decide whether the payment difference is worth the additional commitment.</p>
+            <p>The lifetime comparison here uses the entered current payment multiplied by months remaining versus the modeled new payment over the new term, plus entered costs. It is not a present-value or after-tax analysis. A holding-period comparison also needs the remaining balances at sale, because a payment-only calculation can overlook differences in equity. Use the <Link href="/calculators/amortization">amortization schedule calculator</Link> to inspect those balances.</p>
+            <h3>“No closing cost” does not mean costs disappear</h3>
+            <p><a href="https://www.consumerfinance.gov/ask-cfpb/is-there-such-a-thing-as-a-no-cost-or-no-closing-loan-or-refinancing-en-141/">CFPB guidance explains that costs may be offset through a higher rate or added to the loan</a>. Compare the actual offers rather than assigning zero cost from the marketing label. Financing costs also changes the balance being financed; this tool does not automatically add entered closing costs to principal.</p>
+            <p>This calculator uses the current balance for the replacement-loan principal. It does not separately model cash-out proceeds, financed fees, investment opportunity cost, taxes or changing escrow bills. If the replacement principal differs materially, request a complete lender comparison or use additional payment and balance calculations. Our <Link href="/blog/refinancing-costs-2026-breakdown">refinancing-cost guide</Link> explains the categories to reconcile.</p>
+            <h3>Run more than one scenario before deciding</h3>
+            <ul><li>Test the quoted term against the current remaining term.</li><li>Compare paying points with a lender-credit offer using their actual rates and fees.</li><li>Review the shortest and longest periods you realistically expect to keep the loan.</li><li>Keep an emergency reserve after closing rather than judging only the monthly saving.</li></ul>
+            <p>For related decisions, compare <Link href="/blog/mortgage-recast-vs-refinance-2026">recasting versus refinancing</Link> or estimate discount-point payback with the <Link href="/calculators/points-buydown">points calculator</Link>. <span data-nosnippet="">Reviewed November 13, 2026. Educational estimates, not a lender offer, approval or individualized financial advice.</span></p>
+        </div>
+    </section>;
 }

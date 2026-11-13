@@ -1,60 +1,39 @@
-import React from 'react';
+import Link from 'next/link';
+import CalculatorFAQ from '@/components/CalculatorFAQ';
+
+const faqs = [
+    { question: 'What does a mortgage amortization schedule show?', answer: 'It estimates each scheduled principal-and-interest payment, the interest portion, the principal reduction and the remaining balance. Taxes, insurance and HOA charges do not reduce the loan principal.' },
+    { question: 'Does every 30-year loan pay mostly interest for the same number of years?', answer: 'No. The interest-principal crossover depends on the rate, term and payment history. There is no universal year that applies to every mortgage.' },
+    { question: 'Will an extra principal payment lower my required payment?', answer: 'Not necessarily. With a typical fixed payment, extra principal can shorten repayment and reduce future interest without changing the required monthly payment. A recast is a separate process requiring lender approval.' },
+    { question: 'Can my amortization schedule change?', answer: 'Yes. Extra payments, a rate adjustment, recast, modification, missed payments or other servicing events can change the actual path. A refinance replaces the loan with a new schedule.' },
+    { question: 'Is an amortization balance the same as a payoff quote?', answer: 'No. A payoff quote can include interest through a specified payoff date and applicable charges. Request a dated payoff statement from the servicer before paying off the loan.' },
+];
 
 export default function AmortizationSeoContent() {
-    return (
-        <section className="bg-white border-t border-gray-100 py-10 mt-6">
+    return <>
+        <section className="bg-white border-t border-gray-100 py-10 mt-6" aria-labelledby="amortization-guide">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-blue">
-                <h2 className="text-3xl font-black text-navy-900 mb-6">
-                    How Does a Mortgage Amortization Schedule Work?
-                </h2>
-                <p className="lead text-xl text-gray-600">
-                    A mortgage amortization schedule shows how each payment splits between principal (balance reduction) and interest (lender profit). In Year 1 of a 30-year mortgage, over 80% of each payment is interest—not equity. The table above shows your exact principal-interest split for every month of your loan term.
-                </p>
-
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Why Do You Pay Mostly Interest in the First Years?
-                </h3>
-                <p>
-                    Because interest is calculated based on your <strong>outstanding loan balance</strong>, your highest interest payments occur at the very beginning of the loan. 
-                </p>
-                <ul>
-                    <li><strong>Years 1-7:</strong> The massive majority of your monthly payment goes directly to interest. You are building equity at a painfully slow pace.</li>
-                    <li><strong>Years 15-20:</strong> The &quot;tipping point.&quot; The scales finally balance, and your payment starts going more toward principal than interest.</li>
-                    <li><strong>Years 25-30:</strong> Your loan balance is incredibly low, meaning very little interest is generated. Almost your entire monthly payment goes directly to principal.</li>
-                </ul>
-
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    How Do Extra Mortgage Payments Speed Up Your Loan Payoff?
-                </h3>
-                <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 my-6">
-                    <p className="mb-0 text-navy-900 font-medium">
-                        When you make an &quot;Extra Principal&quot; payment, you instantly jump forward in the amortization schedule. Every $100 you pay early directly reduces the outstanding balance, meaning the bank can never charge you compound interest on that $100 again.
-                    </p>
-                </div>
-                <p>
-                    By looking at our amortization chart, you can clearly see the impact of adding just $200 a month in extra payments. On a $400,000 mortgage at 7%, paying an extra $200 a month will shave roughly <strong>6 years off the loan</strong> and save you tens of thousands of dollars in lifetime interest.
-                </p>
-
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Frequently Asked Questions
-                </h3>
-                
-                <div className="space-y-6 mt-6">
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">Can an amortization schedule change?</h4>
-                        <p className="text-gray-600">
-                            Only under three circumstances: 1) You have an Adjustable-Rate Mortgage (ARM) where the rate resets, 2) You &quot;recast&quot; your loan by making a massive lump-sum payment and having the lender recalculate the payment, or 3) You refinance into an entirely new loan.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">Are bi-weekly payments worth it?</h4>
-                        <p className="text-gray-600">
-                            Yes. By dividing your monthly payment in half and paying it every two weeks, you end up making 26 half-payments a year (which equals 13 full payments). That one &quot;hidden&quot; extra payment per year dramatically speeds up your amortization schedule. Try toggling the &quot;Bi-Weekly&quot; switch in our calculator to see the math.
-                        </p>
-                    </div>
-                </div>
+                <h2 id="amortization-guide">How to read a mortgage amortization schedule</h2>
+                <p><strong>Quick answer:</strong> A mortgage amortization schedule separates each principal-and-interest payment into borrowing cost and balance reduction. For a typical fixed-rate, fully amortizing loan, the scheduled payment stays level while the interest portion falls as principal is repaid. Extra principal can change the payoff date, but the precise effect depends on the loan and payment timing.</p>
+                <h3>Start with principal and interest, not the whole housing bill</h3>
+                <p>Principal is the amount still owed. Interest is the borrowing charge for the period. The <a href="https://www.consumerfinance.gov/ask-cfpb/how-does-paying-down-a-mortgage-work-en-1943/">CFPB explains that only the principal portion reduces the mortgage balance</a>. Escrow deposits, homeowners insurance, property taxes and HOA charges are separate. They matter to affordability but are not principal repayment.</p>
+                <p>A fixed principal-and-interest payment therefore does not guarantee a fixed total housing payment. Your tax or insurance bill can change even if the loan rate does not. Compare the complete budget using the <Link href="/calculators/mortgage">mortgage payment calculator with taxes and insurance</Link>, then use this schedule to understand the debt itself.</p>
+                <h3>The payment formula and a first-month example</h3>
+                <p>For a level-payment loan, monthly principal and interest equals P × r ÷ (1 − (1 + r)<sup>−n</sup>), where P is the starting loan principal, r is the annual note rate divided by 12 in decimal form, and n is the number of monthly payments. At a zero interest rate, the payment is simply P divided by n. <a href="https://www.consumerfinance.gov/ask-cfpb/how-do-mortgage-lenders-calculate-monthly-payments-en-1965/">CFPB payment guidance</a> distinguishes this ordinary fixed-rate model from balloon and adjustable-rate structures.</p>
+                <p>For an illustrative $300,000 loan at 6% for 30 years, the modeled monthly principal-and-interest payment is about $1,798.65. First-month interest is $1,500: $300,000 × 0.06 ÷ 12. About $298.65 reduces principal, leaving approximately $299,701.35. These are hypothetical inputs, not a current rate offer; rounding and servicing conventions can make statement amounts differ.</p>
+                <h3>There is no universal “interest becomes principal” year</h3>
+                <p>At a higher rate, interest can dominate for longer; at a lower rate or shorter term, principal can represent more of a payment earlier. Do not rely on a blanket claim that every loan crosses over in year ten, fifteen or twenty. Read the actual schedule generated for your inputs. The rate, loan term and extra-payment history determine the result.</p>
+                <p>Nor is accumulated principal repayment the same thing as total home equity. Equity depends on the home’s current value and all debts secured by it. A buyer can repay principal while market value falls, or gain market equity without making an extra payment. Selling expenses also affect the amount available after a sale.</p>
+                <h3>How extra payments affect the schedule</h3>
+                <p>An extra amount applied to principal lowers the balance used for future interest calculations. With the regular payment unchanged, more of later payments can go toward principal and repayment may finish sooner. The benefit depends on when the extra payment is made and how the servicer applies it. Verify principal-only instructions, the contract and any applicable prepayment terms before sending money.</p>
+                <p>Do not assume an extra payment automatically reduces the next required monthly payment. Recasting and refinancing are separate decisions. Use the <Link href="/calculators/extra-payment">extra-payment calculator</Link> to test an affordable additional amount, and compare the result with retaining cash for emergencies or other goals. The calculator does not make that household tradeoff for you.</p>
+                <h3>Biweekly scheduling is not twice-monthly scheduling</h3>
+                <p>Twenty-six half-payments in a year equal thirteen full monthly-payment amounts. Twenty-four half-payments equal twelve. But the savings depend on when the servicer actually credits funds to principal; a payment service holding partial amounts may not reproduce a model that applies them immediately. Confirm the arrangement and any fees. The <Link href="/calculators/biweekly-mortgage">biweekly mortgage calculator</Link> is the dedicated place to compare that schedule.</p>
+                <h3>Reconcile the model with your statement</h3>
+                <p>For an existing loan, start with a current balance and the correct remaining term rather than simply recreating the original closing loan. Check the next interest and principal entries against the servicer’s statement. A modification, payment deferral or other servicing event can make the original schedule outdated. Adjustable rates require a new projection when the rate changes.</p>
+                <p>A schedule balance is also not an amount to wire at payoff. Read the <Link href="/blog/mortgage-payoff-statement-escrow-refund-2026">payoff-statement and escrow-refund checklist</Link> and request a dated quote. For replacing the loan, use the <Link href="/calculators/refinance">refinance break-even calculator</Link>. <span data-nosnippet="">Reviewed November 13, 2026. Educational projections; verify actual loan terms and servicing records.</span></p>
             </div>
         </section>
-    );
+        <CalculatorFAQ faqs={faqs} title="Mortgage Amortization Schedule FAQs" />
+    </>;
 }

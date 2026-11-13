@@ -96,7 +96,7 @@ function FooterGroup({ title, links }: { title: string; links: { href: string; l
 export default function Footer() {
     return (
         <footer className="fn-footer">
-            <div className="fn-shell">
+            <div className="fn-shell" data-nosnippet="">
                 <nav className="fn-footer-grid" aria-label="Footer">
                     <div className="fn-footer-brand">
                         <Link href="/" aria-label="USFinNexus home"><LogoIcon size={29} /><span>USFinNexus</span></Link>
