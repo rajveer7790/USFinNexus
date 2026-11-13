@@ -127,6 +127,7 @@ export default function ContributionLimits2026Page() {
                     </aside>
 
                     <h2>2026 401(k) limits at a glance</h2>
+                    <p>Planning next year’s payroll? See the <Link href="/blog/401k-contribution-limits-2027">new 2027 401(k) contribution limits</Link>, announced November 12, 2026. The larger 2027 amounts do not apply to 2026 contributions.</p>
                     <div className="not-prose my-6 overflow-x-auto rounded-2xl border border-slate-200">
                         <table className="w-full text-left text-sm">
                             <thead className="bg-slate-950 text-white">

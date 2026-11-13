@@ -109,6 +109,7 @@ export default function BlogPost() {
                 </p>
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Are the 3 Balance Transfer Traps to Avoid?</h2>
+                <p>Before adding purchases to a transfer card, read our <Link href="/blog/credit-card-grace-period-interest">credit-card grace-period and residual-interest guide</Link>. A promotional transfer rate does not automatically make new purchases interest-free.</p>
                 <p>
                     If the math is so good, how do banks make money off balance transfers? They rely on consumer psychology and three distinct traps hidden in the fine print.
                 </p>
