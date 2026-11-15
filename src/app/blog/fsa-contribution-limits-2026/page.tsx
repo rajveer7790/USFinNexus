@@ -58,7 +58,7 @@ export default function FsaContributionLimits2026Page() {
                 </div>
 
                 <div className="prose prose-slate mx-auto max-w-3xl prose-headings:font-black prose-a:text-blue-700">
-                    <p><strong>Quick answer:</strong> The 2026 health FSA contribution limit is $3,400 for employee salary reductions. If the employer&apos;s plan allows unused money to carry into the next plan year, the maximum federally permitted carryover is $680. These are ceilings, not guarantees: an employer can set a lower contribution limit and does not have to offer carryover.</p>
+                    <p><strong>Quick answer:</strong> The 2026 health FSA contribution limit is $3,400 for employee salary reductions. If the employer&apos;s plan allows unused money to carry into the next plan year, the maximum federally permitted carryover is $680. These are ceilings, not guarantees: an employer can set a lower contribution limit and does not have to offer carryover. For the newly announced amounts, see the <Link href="/blog/fsa-contribution-limits-2027">2027 Health FSA limit and carryover guide</Link>.</p>
 
                     <aside className="not-prose my-8 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-950">This article is general tax and benefits education, not individualized tax, legal or medical advice. Your employer&apos;s plan document controls eligibility, reimbursement, carryover, grace periods and claim deadlines. Confirm an election with the plan administrator before open enrollment closes.</aside>
 
