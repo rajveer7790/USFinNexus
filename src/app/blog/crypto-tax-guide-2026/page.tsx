@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Target, Bitcoin, AlertTriangle, Receipt, Landmark, Calculator, ArrowRightLeft } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "The 2026 Crypto Tax Guide: What the IRS New Rules Mean for You | Guide",
     description: 'The Wild West is officially over. Learn how the new IRS Form 1099-DA changes crypto taxes in 2026, and how staking, mining, and airdrops are taxed.',
     alternates: { canonical: 'https://usfinnexus.com/blog/crypto-tax-guide-2026' },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         siteName: 'USFinNexus',
         images: [{ url: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: 'Crypto Tax Guide' }]
     }
-};
+});
 
 export default function BlogPost() {
     return (
@@ -188,10 +188,11 @@ export default function BlogPost() {
 
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 26, 2026" />
             </div>
+            <ContextualInternalLinks currentSlug="crypto-tax-guide-2026" />
             </article>
         </div>
-        <RelatedCalculators exclude={[]} limit={4} title="Related Calculators" />
-        <RelatedArticles currentSlug="crypto-tax-guide-2026" category="Taxes" />
+
+
         </>
     );
 }

@@ -1,3 +1,4 @@
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
@@ -7,7 +8,7 @@ import RelatedCalculators from '@/components/RelatedCalculators';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "Streamline Refinance 2026: Fast Track for FHA, VA, & USDA Loans | Guide",
     description: 'Learn how to bypass appraisals, skip income verification, and secure a lower mortgage rate in weeks using a government Streamline Refinance program.',
     openGraph: {
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
         images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Streamline Refinance Guide 2026' }]
     },
     alternates: { canonical: 'https://usfinnexus.com/blog/streamline-refinance-fha-va-usda' }
-};
+});
 
 export default function PostComponent() {
     return (

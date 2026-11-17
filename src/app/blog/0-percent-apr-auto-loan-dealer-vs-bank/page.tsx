@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { AlertTriangle, CheckCircle2, DollarSign, Calculator, Car, TrendingDown, Percent, FileText } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "0% APR Auto Loans in 2026: The Hidden Cost of Dealer Financing | Guide",
     description: 'Is a 0% APR auto loan actually a good deal? Learn the hidden math behind captive dealer financing vs. traditional bank auto loans in 2026, and how taking the cash rebate often saves you more money.',
     alternates: { canonical: 'https://usfinnexus.com/blog/0-percent-apr-auto-loan-dealer-vs-bank' },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         description: 'Why giving up a 0% APR loan might actually save you thousands of dollars.',
         images: ['https://usfinnexus.com/icon-512.png']
     },
-};
+});
 
 export default function BlogPost() {
     return (
@@ -310,10 +310,11 @@ export default function BlogPost() {
 
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 26, 2026" />
             </div>
+            <ContextualInternalLinks currentSlug="0-percent-apr-auto-loan-dealer-vs-bank" />
             </article>
         </div>
-        <RelatedCalculators exclude={['/calculators/auto-loan']} limit={4} title="Related Financial Tools" />
-        <RelatedArticles currentSlug="0-percent-apr-auto-loan-dealer-vs-bank" category="Auto Loans" />
+
+
         </>
     );
 }

@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Calculator, Percent, ArrowDownToLine, Scale, AlertTriangle, Coins } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: 'Mortgage Points Break-Even Guide 2026',
     description: 'Are mortgage points worth buying? Learn the 1% cost rule, lender-specific rate quotes, break-even math, cash-flow trade-offs and IRS deduction limits.',
     openGraph: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: 'https://usfinnexus.com/blog/mortgage-points-buydown-calculator',
     },
-};
+});
 
 export default function PostComponent() {
     return (
@@ -173,15 +173,16 @@ export default function PostComponent() {
                         You will have a higher monthly payment, but you get to keep $4,000 in your pocket today. This is an excellent strategy for first-time buyers struggling to scrape together enough cash to close, or for buyers who know they will refinance or sell within 2 or 3 years anyway.
                     </p>
 
-                </article>
+                <ContextualInternalLinks currentSlug="mortgage-points-buydown-calculator" />
+            </article>
 
                 <div className="mt-16">
 
 
 
 
-                <RelatedCalculators />
-                    <RelatedArticles />
+
+
                     <AuthorBio author={USFinNexusEditorialTeam} />
                     <div className="mt-8 text-sm text-slate-600 border-t pt-6"><p><strong>Sources and disclaimer:</strong> Review <a href="https://www.irs.gov/publications/p936" className="text-blue-700 underline">IRS Publication 936</a> for points-deduction rules and ask the lender for a written rate/credit worksheet. Break-even results are educational estimates, not tax, mortgage or investment advice.</p></div>
                 </div>

@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Target, TrendingDown, DollarSign, Calculator, AlertTriangle, ShieldCheck, Activity } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "Tax-Loss Harvesting in 2026: IRS Wash-Sale Rules & Examples | Guide",
     description: 'Learn how tax-loss harvesting offsets capital gains, the IRS wash-sale rule, the $3,000 net-loss limit, and why no tax result is guaranteed.',
     alternates: { canonical: 'https://usfinnexus.com/blog/tax-loss-harvesting-calculator-strategy' },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         siteName: 'USFinNexus',
         images: [{ url: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: 'Tax Loss Harvesting' }]
     }
-};
+});
 
 export default function BlogPost() {
     return (
@@ -134,10 +134,11 @@ export default function BlogPost() {
 
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 26, 2026" />
             </div>
+            <ContextualInternalLinks currentSlug="tax-loss-harvesting-calculator-strategy" />
             </article>
         </div>
-        <RelatedCalculators exclude={[]} limit={4} title="Related Calculators" />
-        <RelatedArticles currentSlug="tax-loss-harvesting-calculator-strategy" category="Investing Strategy" />
+
+
         </>
     );
 }

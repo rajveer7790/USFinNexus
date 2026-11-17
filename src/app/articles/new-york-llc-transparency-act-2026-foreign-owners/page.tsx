@@ -1,3 +1,4 @@
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ReviewedGuide from '@/components/ReviewedGuide';
@@ -5,7 +6,7 @@ const title = "New York LLC Transparency Act 2026: Who Must File and When";
 const description = "New York's 2026 beneficial-owner rules apply to qualifying foreign-country LLCs. Check formation country, exemptions and the correct filing deadline.";
 const url = 'https://usfinnexus.com/articles/new-york-llc-transparency-act-2026-foreign-owners';
 const image = '/images/ny_llc_transparency_hero_1772351646909.png';
-export const metadata: Metadata = { title, description, alternates: { canonical: url }, openGraph: { title, description, url, type: 'article', images: [{ url: image, width: 1200, height: 630 }] }, twitter: { card: 'summary_large_image', title, description, images: [image] } };
+export const metadata: Metadata = completeEditorialMetadata({ title, description, alternates: { canonical: url }, openGraph: { title, description, url, type: 'article', images: [{ url: image, width: 1200, height: 630 }] }, twitter: { card: 'summary_large_image', title, description, images: [image] } });
 export default function Page() {
  const faqs: [string,string][] = [["Does a Delaware LLC have to file under this New York law?","New York's current FAQ says LLCs formed in a U.S. state or territory are not required to file beneficial-owner disclosure reports under this law. Other business registration, tax and reporting duties are separate."],["Does having a foreign owner make a U.S. LLC subject to the law?","No. The state FAQ uses the LLC's jurisdiction of formation. Foreign ownership alone does not turn a U.S.-created LLC into a foreign-country-formed LLC."],["What is the deadline for an existing covered LLC?","The Department of State says covered foreign-country LLCs authorized before January 1, 2026 must file their initial disclosure or applicable exemption attestation by December 31, 2026."],["What about a covered LLC newly authorized in 2026?","The state FAQ says covered foreign-country LLCs authorized on or after January 1, 2026 must file within 30 days of authorization, subject to the applicable reporting or exemption-attestation requirements."]];
  return <ReviewedGuide title={title} description={description} path="/articles/new-york-llc-transparency-act-2026-foreign-owners" published="2026-02-24" image={image} alt="Illustration of New York City and business compliance documents" faqs={faqs} legal answer={"The key distinction is where the LLC was formed, not the owner's nationality. New York's current guidance covers LLCs formed under foreign-country law and authorized to do business in New York. U.S.-formed LLCs, including those formed in other U.S. states, are outside this disclosure requirement."}>
@@ -22,5 +23,7 @@ export default function Page() {
 <h2>A practical review checklist</h2>
 <ol><li>Locate the formation jurisdiction and legal entity type.</li><li>Confirm New York authorization and its effective date.</li><li>Check the current state FAQ for reporting scope and any exemption attestation.</li><li>Document the filing deadline and who is responsible.</li><li>Use the state's official submission instructions; keep proof of any filing.</li></ol>
 <p>Business changes can create separate update obligations. Review the latest state instructions when an owner, control arrangement or entity status changes. Do not rely on a third-party article's old headline as your compliance calendar.</p>
+ <h2>Related entity-filing checks</h2>
+ <p>For the distinction between ownership disclosure, registration and tax obligations, read our <Link href="/articles/california-new-york-texas-state-boi-rules-2026">California, New York and Texas entity-filing comparison</Link>. Property buyers should separately check the <Link href="/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do">current FinCEN residential real-estate reporting status</Link>; a state LLC filing answer does not determine that separate transaction issue.</p>
  </ReviewedGuide>;
 }

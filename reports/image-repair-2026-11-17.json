@@ -1,0 +1,8 @@
+{
+  "asset": "public/images/resilient-investor-checklist-2026.webp",
+  "issue": "The previous 360-byte asset could not be decoded as WebP.",
+  "replacement": "Original AI-generated editorial image, encoded as 1200x630 WebP, 55952 bytes.",
+  "generation": "Built-in image generation",
+  "prompt_summary": "Natural-light editorial photograph of an adult reviewing investment documents at a home-office desk, calculator and abstract laptop interface; navy and teal accents; no text, logos, watermark or return promises.",
+  "additional_fix": "Removed a missing silver_tsunami_housing.png social-card reference and ignore malformed WebP card candidates when choosing blog images."
+}

@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Target, Key, AlertCircle, Handshake, Calculator, FileWarning, HelpCircle } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "Assumable Mortgages in 2026: FHA, VA & USDA Rules | Guide",
     description: 'Learn how mortgage assumptions work, how to verify FHA, VA or USDA eligibility, and how to budget for the seller’s equity gap and lender review.',
     alternates: { canonical: 'https://usfinnexus.com/blog/assumable-mortgages-2026-strategy' },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         siteName: 'USFinNexus',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Assumable Mortgage 2026' }]
     }
-};
+});
 
 export default function BlogPost() {
     return (
@@ -193,10 +193,11 @@ export default function BlogPost() {
 
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 26, 2026" />
             </div>
+            <ContextualInternalLinks currentSlug="assumable-mortgages-2026-strategy" />
             </article>
         </div>
-        <RelatedCalculators exclude={[]} limit={4} title="Related Calculators" />
-        <RelatedArticles currentSlug="assumable-mortgages-2026-strategy" category="Mortgage" />
+
+
         </>
     );
 }

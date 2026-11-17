@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Shield, Home, TrendingUp, AlertCircle, Percent, DollarSign, Calculator, Clock, HelpCircle, CheckSquare } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "Is 20% Down Still the Golden Standard in 2026? The PMI Myth | Guide",
     description: 'The 20% down payment rule is outdated. Discover why the average first-time buyer in 2026 puts down just 6%, the real cost of PMI, and how waiting to save 20% can cost you thousands in lost equity.',
     alternates: { canonical: 'https://usfinnexus.com/blog/20-percent-down-payment-standard-2026' },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         description: 'Why you do NOT need 20% down to buy a house today.',
         images: ['https://usfinnexus.com/images/home-hero-v2.png']
     },
-};
+});
 
 export default function BlogPost() {
     return (
@@ -247,7 +247,8 @@ export default function BlogPost() {
                         </Link>
                     </div>
 
-                </article>
+                <ContextualInternalLinks currentSlug="20-percent-down-payment-standard-2026" />
+            </article>
 
                 <div className="mt-16">
 
@@ -284,8 +285,8 @@ export default function BlogPost() {
                     </p>
                 </div>
 
-                <RelatedCalculators />
-                    <RelatedArticles currentSlug="20-percent-down-payment-standard-2026" />
+
+
                     <AuthorBio author={USFinNexusEditorialTeam} />
                 </div>
             </div>

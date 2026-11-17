@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Target, Home, AlertTriangle, Key, Landmark, Calculator, Tractor } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "Chattel Mortgages Explained: How to Finance a Mobile Home in 2026 | Guide",
     description: 'Buying a manufactured home on rented land? You cannot use a traditional mortgage. Learn how chattel mortgages work, the interest rate trap, and how to protect yourself.',
     alternates: { canonical: 'https://usfinnexus.com/blog/chattel-mortgages-mobile-homes-financing' },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         siteName: 'USFinNexus',
         images: [{ url: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: 'Chattel Mortgage Mobile Home' }]
     }
-};
+});
 
 export default function BlogPost() {
     return (
@@ -221,10 +221,11 @@ export default function BlogPost() {
 
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 26, 2026" />
             </div>
+            <ContextualInternalLinks currentSlug="chattel-mortgages-mobile-homes-financing" />
             </article>
         </div>
-        <RelatedCalculators exclude={['/calculators/mortgage']} limit={4} title="Related Calculators" />
-        <RelatedArticles currentSlug="chattel-mortgages-mobile-homes-financing" category="Mortgage" />
+
+
         </>
     );
 }

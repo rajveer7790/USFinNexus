@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Target, Activity, AlertCircle, TrendingDown, ShieldCheck, Home, Banknote } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "Reverse Mortgages Explained (2026): The Good, The Bad, and The Scam | Guide",
     description: 'A reverse mortgage can save a retiree from bankruptcy, or it can destroy their family\'s inheritance. Learn the terrifying math behind HECM loans and how banks seize the house.',
     alternates: { canonical: 'https://usfinnexus.com/blog/reverse-mortgage-hecm-pros-cons-2026' },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         siteName: 'USFinNexus',
         images: [{ url: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: 'Reverse Mortgage' }]
     }
-};
+});
 
 export default function BlogPost() {
     return (
@@ -142,10 +142,11 @@ export default function BlogPost() {
 
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 26, 2026" />
             </div>
+            <ContextualInternalLinks currentSlug="reverse-mortgage-hecm-pros-cons-2026" />
             </article>
         </div>
-        <RelatedCalculators exclude={[]} limit={4} title="Related Calculators" />
-        <RelatedArticles currentSlug="reverse-mortgage-hecm-pros-cons-2026" category="Retirement" />
+
+
         </>
     );
 }

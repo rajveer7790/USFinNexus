@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -19,11 +21,11 @@ const faqs = [
   { question: 'Does full entitlement guarantee mortgage approval or zero closing costs?', answer: 'No. The lender still evaluates your finances and the property. Appraisal, purchase price, funding-fee status and closing costs must be reviewed separately from entitlement.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', locale: 'en_US', title, description, url, siteName: 'USFinNexus', publishedTime: date, modifiedTime: date, images: [{ url: image, width: 1200, height: 630, alt }] },
   twitter: { card: 'summary_large_image', title, description, images: [{ url: image, alt }] },
-};
+});
 
 export default function Page() {
   return <>
@@ -97,7 +99,8 @@ export default function Page() {
         <h2 id="faq">VA entitlement restoration FAQs</h2>
         {faqs.map(f => <section key={f.question}><h3>{f.question}</h3><p>{f.answer}</p></section>)}
         <aside aria-label="Financial disclaimer"><p><strong>Educational disclaimer:</strong> This article provides general U.S. mortgage information, not lending, legal, tax or financial advice. It is not affiliated with VA and does not determine eligibility, entitlement, occupancy compliance or loan approval. Confirm your COE and restoration history with VA and your lender. Examples are hypothetical, and calculator outputs are estimates rather than offers.</p></aside>
-      </article>
+      <ContextualInternalLinks currentSlug="va-loan-entitlement-restoration" />
+            </article>
     </div>
   </>;
 }

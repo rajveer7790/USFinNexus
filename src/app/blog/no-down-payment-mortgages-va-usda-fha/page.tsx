@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Target, CheckCircle2, DollarSign, AlertTriangle, ShieldCheck, Home, MapPin, Calculator, XCircle } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "No Down Payment Mortgages: VA, USDA, and FHA Loans in 2026 | Guide",
     description: 'Stop waiting years to save 20%. Learn how to buy a house with zero money down in 2026 using VA loans, USDA rural housing loans, and FHA down payment assistance.',
     alternates: { canonical: 'https://usfinnexus.com/blog/no-down-payment-mortgages-va-usda-fha' },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         description: 'You do not need a 20% down payment to buy a home. Explore VA, USDA, and FHA options.',
         images: ['https://usfinnexus.com/images/home-hero-v2.png']
     }
-};
+});
 
 export default function BlogPost() {
     return (
@@ -206,7 +206,8 @@ export default function BlogPost() {
                         </Link>
                     </div>
 
-                </article>
+                <ContextualInternalLinks currentSlug="no-down-payment-mortgages-va-usda-fha" />
+            </article>
 
                 <div className="mt-16">
 
@@ -214,8 +215,8 @@ export default function BlogPost() {
 
 
 
-                <RelatedCalculators />
-                    <RelatedArticles currentSlug="no-down-payment-mortgages-va-usda-fha" />
+
+
                     <AuthorBio author={USFinNexusEditorialTeam} />
                 </div>
             </div>

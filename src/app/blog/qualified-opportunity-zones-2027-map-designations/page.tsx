@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -17,11 +19,11 @@ const faqs = [
   { question: 'Can I rely on an online map to support a tax return position?', answer: 'Treasury warns that its data-transparency page is informational and may not be relied upon to substantiate a tax return position. Keep the official tract dataset and obtain tax advice for the transaction.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', title, description, url, publishedTime: '2026-11-06', modifiedTime: '2026-11-06', siteName: 'USFinNexus', images: [{ url: image, width: 1200, height: 630, alt: 'Investor reviewing a color-coded U.S. community development map and property notes' }] },
   twitter: { card: 'summary_large_image', title, description, images: [image] },
-};
+});
 
 export default function Page() {
   return <>
@@ -94,7 +96,8 @@ export default function Page() {
 
         <h2>Sources and investment disclaimer</h2>
         <p>Primary sources reviewed November 6, 2026: Treasury&apos;s <a href="https://home.treasury.gov/news/press-releases/sb0682">November 5 designation announcement</a> and <a href="https://home.treasury.gov/policy-issues/tax-policy/data-transparency/qualified-opportunity-zones">Qualified Opportunity Zones data page</a>, IRS <a href="https://www.irs.gov/irb/2026-20_IRB">Revenue Procedure 2026-14</a>, IRS <a href="https://www.irs.gov/pub/irs-drop/n-26-40.pdf">Notice 2026-40 transitional guidance</a>, and the current text of <a href="https://uscode.house.gov/us/usc/119-134/t26/s1400Z-2/">26 U.S.C. § 1400Z-2</a>. This article is general education, not tax, legal, securities or investment advice. Opportunity Zone transactions are complex, illiquid and fact-specific; consult qualified professionals before selling an asset or investing in a fund.</p>
-      </article>
+      <ContextualInternalLinks currentSlug="qualified-opportunity-zones-2027-map-designations" />
+            </article>
     </main>
   </>;
 }

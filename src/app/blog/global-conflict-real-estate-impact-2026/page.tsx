@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Home, Globe, AlertTriangle, TrendingUp, DollarSign } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "How Global Conflicts Are Impacting US Real Estate in 2026 | Guide",
     description: "Think a war across the globe doesn\'t affect your local housing market? Think again. Here is how supply chains and foreign capital alter US real estate.",
     openGraph: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: 'https://usfinnexus.com/blog/global-conflict-real-estate-impact-2026',
     },
-};
+});
 
 export default function GlobalConflictRealEstateBlog() {
     return (
@@ -166,10 +166,11 @@ export default function GlobalConflictRealEstateBlog() {
 
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 3, 2026" />
             </div>
+            <ContextualInternalLinks currentSlug="global-conflict-real-estate-impact-2026" />
             </article>
         </div>
-        <RelatedCalculators exclude={[]} limit={4} title="Real Estate Tools" />
-        <RelatedArticles currentSlug="global-conflict-real-estate-impact-2026" category="Housing Market" />
+
+
         </>
     );
 }

@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -19,11 +21,11 @@ const faqs = [
   { question: 'What if Medicare was backdated and I contributed too much?', answer: 'Ask the HSA custodian and a tax professional to calculate whether there is an excess and arrange the correct return of excess contributions and attributable earnings. An ordinary withdrawal is not necessarily a completed correction.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', locale: 'en_US', title, description, url, siteName: 'USFinNexus', publishedTime: date, modifiedTime: date, images: [{ url: image, width: 1200, height: 630, alt }] },
   twitter: { card: 'summary_large_image', title, description, images: [{ url: image, alt }] },
-};
+});
 
 export default function Page() {
   return <>
@@ -102,7 +104,8 @@ export default function Page() {
         <h2 id="faq">HSA and Medicare FAQs</h2>
         {faqs.map(f => <section key={f.question}><h3>{f.question}</h3><p>{f.answer}</p></section>)}
         <aside aria-label="Financial disclaimer"><p><strong>Educational disclaimer:</strong> This guide is general U.S. information, not personalized tax, legal, insurance, investment or medical advice. Rules and forms can change. Confirm enrollment dates with SSA or Medicare and contribution corrections with your HSA custodian and a qualified tax professional. Examples are hypothetical; calculator results are estimates.</p></aside>
-      </article>
+      <ContextualInternalLinks currentSlug="hsa-medicare-when-to-stop-contributions" />
+            </article>
     </div>
   </>;
 }

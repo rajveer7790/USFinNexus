@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Calculator, FastForward, PiggyBank, Calendar, AlertTriangle, TrendingDown, Target } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "How to Pay Off Your Mortgage in 10 Years Without Refinancing | Guide",
     description: 'Learn the exact math and strategies to pay off a 30-year mortgage in 10 years or less. Accelerate your payoff with extra principal payments.',
     openGraph: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: 'https://usfinnexus.com/blog/pay-off-mortgage-early-strategy',
     },
-};
+});
 
 export default function PostComponent() {
     return (
@@ -166,15 +166,16 @@ export default function PostComponent() {
                         If your mortgage rate is 7.5%, every extra dollar you put toward the principal yields a <strong>guaranteed, risk-free 7.5% return on investment</strong>. There is nowhere else in the stock market where you can get a guaranteed 7.5% return with zero volatility. In today's high-rate environment, paying down the mortgage is one of the smartest financial moves you can make.
                     </p>
 
-                </article>
+                <ContextualInternalLinks currentSlug="pay-off-mortgage-early-strategy" />
+            </article>
 
                 <div className="mt-16">
 
 
 
 
-                <RelatedCalculators />
-                    <RelatedArticles />
+
+
                     <AuthorBio author={USFinNexusEditorialTeam} />
                 </div>
             </div>

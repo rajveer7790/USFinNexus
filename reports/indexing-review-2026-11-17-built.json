@@ -1,0 +1,2404 @@
+{
+  "checked": "2026-11-17",
+  "scope": 77,
+  "googleIndexStatus": "Not independently accessible; user supplied exclusion examples without category heading",
+  "records": [
+    {
+      "path": "/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+      "kind": "supporting resource",
+      "preferred": "",
+      "status": 0,
+      "final": "",
+      "error": "",
+      "title": "",
+      "description": "",
+      "canonical": "",
+      "h1": [],
+      "words": 0,
+      "robots": "",
+      "articleLinks": [],
+      "sourceLinks": [],
+      "schemaTypes": []
+    },
+    {
+      "path": "/sitemap.xml",
+      "kind": "supporting resource",
+      "preferred": "",
+      "status": 0,
+      "final": "",
+      "error": "",
+      "title": "",
+      "description": "",
+      "canonical": "",
+      "h1": [],
+      "words": 0,
+      "robots": "",
+      "articleLinks": [],
+      "sourceLinks": [],
+      "schemaTypes": []
+    },
+    {
+      "path": "/sitemap-index.xml",
+      "kind": "supporting resource",
+      "preferred": "",
+      "status": 0,
+      "final": "",
+      "error": "",
+      "title": "",
+      "description": "",
+      "canonical": "",
+      "h1": [],
+      "words": 0,
+      "robots": "",
+      "articleLinks": [],
+      "sourceLinks": [],
+      "schemaTypes": []
+    },
+    {
+      "path": "/robots.txt",
+      "kind": "supporting resource",
+      "preferred": "",
+      "status": 0,
+      "final": "",
+      "error": "",
+      "title": "",
+      "description": "",
+      "canonical": "",
+      "h1": [],
+      "words": 0,
+      "robots": "",
+      "articleLinks": [],
+      "sourceLinks": [],
+      "schemaTypes": []
+    },
+    {
+      "path": "/blog/ai-personal-finance-investing-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/ai-personal-finance-investing-2026",
+      "status": 200,
+      "final": "/blog/ai-personal-finance-investing-2026",
+      "error": "",
+      "title": "AI Personal Finance Tools: Uses, Costs and Investing Risks",
+      "description": "Evaluate AI budgeting and investing tools without return promises. Check adviser registration, data access, direct-indexing costs and tax-loss harvesting limits.",
+      "canonical": "https://usfinnexus.com/blog/ai-personal-finance-investing-2026",
+      "h1": [
+        "AI Personal Finance Tools: Uses, Costs and Investing Risks"
+      ],
+      "words": 904,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/budget",
+        "/calculators/investment",
+        "/blog/sp500-vs-real-estate-investing-2026"
+      ],
+      "sourceLinks": [
+        "https://www.investor.gov/introduction-investing/investing-basics/glossary/robo-adviser",
+        "https://adviserinfo.sec.gov/",
+        "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-alerts/artificial-intelligence-fraud"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/articles/2026-tax-changes-20-percent-qbi-deduction-permanent",
+      "kind": "canonical article",
+      "preferred": "/articles/2026-tax-changes-20-percent-qbi-deduction-permanent",
+      "status": 200,
+      "final": "/articles/2026-tax-changes-20-percent-qbi-deduction-permanent",
+      "error": "",
+      "title": "2026 QBI Deduction: Permanent 20% Rule and Income Limits",
+      "description": "Understand the permanent QBI deduction, verified 2026 threshold and phase-in ranges, taxable-income limits and why an LLC does not guarantee a tax deduction.",
+      "canonical": "https://usfinnexus.com/articles/2026-tax-changes-20-percent-qbi-deduction-permanent",
+      "h1": [
+        "2026 QBI Deduction: Permanent 20% Rule and Income Limits"
+      ],
+      "words": 731,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/income-tax",
+        "/articles/california-new-york-texas-state-boi-rules-2026",
+        "/blog/2026-federal-tax-brackets-standard-deduction"
+      ],
+      "sourceLinks": [
+        "https://www.irs.gov/publications/p334",
+        "https://www.irs.gov/irb/2025-45_IRB",
+        "https://www.irs.gov/newsroom/qualified-business-income-deduction"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/blog/defense-cybersecurity-stocks-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/defense-cybersecurity-stocks-2026",
+      "status": 200,
+      "final": "/blog/defense-cybersecurity-stocks-2026",
+      "error": "",
+      "title": "Defense and Cybersecurity Stocks: Sector Risks to Review",
+      "description": "Evaluate defense and cybersecurity stocks through filings, valuations and fund concentration. Government spending does not guarantee revenue or investor returns.",
+      "canonical": "https://usfinnexus.com/blog/defense-cybersecurity-stocks-2026",
+      "h1": [
+        "Defense and Cybersecurity Stocks: Sector Risks to Review"
+      ],
+      "words": 581,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/investment",
+        "/blog/treasury-bills-vs-high-yield-savings-2026",
+        "/blog/investing-during-geopolitical-conflict-2026"
+      ],
+      "sourceLinks": [
+        "https://www.sec.gov/edgar/search/",
+        "https://www.investor.gov/introduction-investing/getting-started/asset-allocation"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/_next/static/media/37786be940ec402b-s.p.woff2",
+      "kind": "supporting resource",
+      "preferred": "",
+      "status": 0,
+      "final": "",
+      "error": "",
+      "title": "",
+      "description": "",
+      "canonical": "",
+      "h1": [],
+      "words": 0,
+      "robots": "",
+      "articleLinks": [],
+      "sourceLinks": [],
+      "schemaTypes": []
+    },
+    {
+      "path": "/articles/avoid-costly-mistakes-fincen-real-estate-reporting-guide",
+      "kind": "canonical alias",
+      "preferred": "/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "status": 200,
+      "final": "/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "error": "",
+      "title": "FinCEN Real Estate Reporting Rule: Vacatur and Current Status",
+      "description": "FinCEN says its residential real estate rule was vacated March 19, 2026. See the current filing status and how it differs from BOI and other closing checks.",
+      "canonical": "https://usfinnexus.com/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "h1": [
+        "FinCEN Real Estate Reporting Rule: Vacatur and Current Status"
+      ],
+      "words": 758,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/articles/new-york-llc-transparency-act-2026-foreign-owners",
+        "/calculators/closing-costs",
+        "/articles/california-new-york-texas-state-boi-rules-2026"
+      ],
+      "sourceLinks": [
+        "https://www.fincen.gov/rre"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/_next/static/media/d3ebbfd689654d3a-s.p.woff2",
+      "kind": "supporting resource",
+      "preferred": "",
+      "status": 0,
+      "final": "",
+      "error": "",
+      "title": "",
+      "description": "",
+      "canonical": "",
+      "h1": [],
+      "words": 0,
+      "robots": "",
+      "articleLinks": [],
+      "sourceLinks": [],
+      "schemaTypes": []
+    },
+    {
+      "path": "/blog/what-is-a-good-debt-to-income-ratio",
+      "kind": "canonical alias",
+      "preferred": "/blog/debt-to-income-ratio-dti-calculator-2026",
+      "status": 200,
+      "final": "/blog/debt-to-income-ratio-dti-calculator-2026",
+      "error": "",
+      "title": "Debt-to-Income Ratio (DTI): Why It Matters in 2026",
+      "description": "Understand debt-to-income ratio (DTI), the formula lenders use, what counts as debt, and practical ways to lower DTI before a mortgage or personal-loan application.",
+      "canonical": "https://usfinnexus.com/blog/debt-to-income-ratio-dti-calculator-2026",
+      "h1": [
+        "What Is Debt-to-Income Ratio (DTI) and Why Does It Matter?"
+      ],
+      "words": 1169,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/dti",
+        "/blog/front-end-vs-back-end-dti-2026",
+        "/blog/28-36-rule-explained-lender-standards",
+        "/blog/how-much-house-can-i-afford-2026",
+        "/calculators/affordability",
+        "/calculators/mortgage"
+      ],
+      "sourceLinks": [
+        "https://selling-guide.fanniemae.com/sel/b3-6-02/debt-income-ratios",
+        "https://www.hud.gov/sites/default/files/OCHCO/documents/40001-hsgh-Update-17.pdf",
+        "https://www.benefits.va.gov/warms/docs/admin26/m26-07/chapter_4_credit_underwriting.pdf",
+        "https://www.consumerfinance.gov/owning-a-home/"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/_next/static/media/db96af6b531dc71f-s.p.woff2",
+      "kind": "supporting resource",
+      "preferred": "",
+      "status": 0,
+      "final": "",
+      "error": "",
+      "title": "",
+      "description": "",
+      "canonical": "",
+      "h1": [],
+      "words": 0,
+      "robots": "",
+      "articleLinks": [],
+      "sourceLinks": [],
+      "schemaTypes": []
+    },
+    {
+      "path": "/_next/static/media/98e207f02528a563-s.p.woff2",
+      "kind": "supporting resource",
+      "preferred": "",
+      "status": 0,
+      "final": "",
+      "error": "",
+      "title": "",
+      "description": "",
+      "canonical": "",
+      "h1": [],
+      "words": 0,
+      "robots": "",
+      "articleLinks": [],
+      "sourceLinks": [],
+      "schemaTypes": []
+    },
+    {
+      "path": "/blog/how-much-house-can-i-afford-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/how-much-house-can-i-afford-2026",
+      "status": 200,
+      "final": "/blog/how-much-house-can-i-afford-2026",
+      "error": "",
+      "title": "How Much House Can I Afford Based on My Income? (2026)",
+      "description": "Learn how much house you can afford based on income, down payment, debts and PITI. Use the 28/36 guideline and a free affordability calculator for a realistic budget.",
+      "canonical": "https://usfinnexus.com/blog/how-much-house-can-i-afford-2026",
+      "h1": [
+        "How Much House Can I Afford Based on My Income?"
+      ],
+      "words": 1389,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/affordability",
+        "/calculators/dti"
+      ],
+      "sourceLinks": [
+        "https://www.consumerfinance.gov/owning-a-home/"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/manifest.json",
+      "kind": "supporting resource",
+      "preferred": "",
+      "status": 0,
+      "final": "",
+      "error": "",
+      "title": "",
+      "description": "",
+      "canonical": "",
+      "h1": [],
+      "words": 0,
+      "robots": "",
+      "articleLinks": [],
+      "sourceLinks": [],
+      "schemaTypes": []
+    },
+    {
+      "path": "/articles/end-of-anonymous-all-cash-home-buying-fincen-march-2026",
+      "kind": "canonical alias",
+      "preferred": "/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "status": 200,
+      "final": "/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "error": "",
+      "title": "FinCEN Real Estate Reporting Rule: Vacatur and Current Status",
+      "description": "FinCEN says its residential real estate rule was vacated March 19, 2026. See the current filing status and how it differs from BOI and other closing checks.",
+      "canonical": "https://usfinnexus.com/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "h1": [
+        "FinCEN Real Estate Reporting Rule: Vacatur and Current Status"
+      ],
+      "words": 758,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/articles/new-york-llc-transparency-act-2026-foreign-owners",
+        "/calculators/closing-costs",
+        "/articles/california-new-york-texas-state-boi-rules-2026"
+      ],
+      "sourceLinks": [
+        "https://www.fincen.gov/rre"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/blog/no-tax-on-overtime-deduction-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/no-tax-on-overtime-deduction-2026",
+      "status": 200,
+      "final": "/blog/no-tax-on-overtime-deduction-2026",
+      "error": "",
+      "title": "No Tax on Overtime 2026: Rules, Limits &amp; Examples",
+      "description": "Understand the 2026 qualified overtime deduction: what pay counts, the $12,500/$25,000 limits, MAGI phaseout, W-2 reporting and filing records.",
+      "canonical": "https://usfinnexus.com/blog/no-tax-on-overtime-deduction-2026",
+      "h1": [
+        "No Tax on Overtime 2026: What Workers Can Actually Deduct"
+      ],
+      "words": 1740,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/budget",
+        "/calculators/debt-payoff",
+        "/blog/federal-tax-brackets-standard-deduction-2027",
+        "/blog/charitable-tax-deduction-2026",
+        "/blog/senior-tax-deduction-6000-2026-schedule-1a",
+        "/calculators/income-tax",
+        "/calculators/paycheck"
+      ],
+      "sourceLinks": [
+        "https://www.irs.gov/newsroom/what-to-know-about-the-no-tax-on-overtime-deduction",
+        "https://www.irs.gov/newsroom/questions-and-answers-about-the-new-deduction-for-qualified-overtime-compensation",
+        "https://www.irs.gov/newsroom/working-families-tax-cuts-individuals-and-workers",
+        "https://www.dol.gov/agencies/whd/overtime",
+        "https://www.dol.gov/agencies/whd/flsa"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/articles/new-york-llc-transparency-act-2026-foreign-owners",
+      "kind": "canonical article",
+      "preferred": "/articles/new-york-llc-transparency-act-2026-foreign-owners",
+      "status": 200,
+      "final": "/articles/new-york-llc-transparency-act-2026-foreign-owners",
+      "error": "",
+      "title": "New York LLC Transparency Act 2026: Who Must File and When",
+      "description": "New York&#x27;s 2026 beneficial-owner rules apply to qualifying foreign-country LLCs. Check formation country, exemptions and the correct filing deadline.",
+      "canonical": "https://usfinnexus.com/articles/new-york-llc-transparency-act-2026-foreign-owners",
+      "h1": [
+        "New York LLC Transparency Act 2026: Who Must File and When"
+      ],
+      "words": 711,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+        "/articles/california-new-york-texas-state-boi-rules-2026"
+      ],
+      "sourceLinks": [
+        "https://dos.ny.gov/beneficial-ownership-disclosure-frequently-asked-questions"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/blog/0-percent-apr-auto-loan-dealer-vs-bank",
+      "kind": "canonical article",
+      "preferred": "/blog/0-percent-apr-auto-loan-dealer-vs-bank",
+      "status": 200,
+      "final": "/blog/0-percent-apr-auto-loan-dealer-vs-bank",
+      "error": "",
+      "title": "0% APR Auto Loans in 2026: The Hidden Cost of Dealer Financing | Guide",
+      "description": "Is a 0% APR auto loan actually a good deal? Learn the hidden math behind captive dealer financing vs. traditional bank auto loans in 2026, and how taking the cash rebate often saves you more money.",
+      "canonical": "https://usfinnexus.com/blog/0-percent-apr-auto-loan-dealer-vs-bank",
+      "h1": [
+        "0% APR Auto Loans in 2026: The Hidden Cost of Dealer Financing"
+      ],
+      "words": 2275,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/auto-loan",
+        "/blog/auto-loan-calculator-car-affordability",
+        "/blog/auto-loan-terms-60-72-84-month",
+        "/blog/car-trade-in-value-auto-loan",
+        "/calculators/dti",
+        "/calculators/budget"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/tax-extension-deadline-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/tax-extension-deadline-2026",
+      "status": 200,
+      "final": "/blog/tax-extension-deadline-2026",
+      "error": "",
+      "title": "Tax Extension Deadline 2026: October 15 Filing Guide",
+      "description": "The 2026 federal tax extension deadline is October 15. Learn who must file, late penalties, payment-plan options and the final filing checklist.",
+      "canonical": "https://usfinnexus.com/blog/tax-extension-deadline-2026",
+      "h1": [
+        "Tax Extension Deadline 2026: October 15 Filing and Payment Guide"
+      ],
+      "words": 1827,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/income-tax",
+        "/blog/estimated-tax-payment-dates-2026",
+        "/calculators/budget",
+        "/blog/2026-federal-tax-brackets-standard-deduction",
+        "/blog/earned-income-tax-credit-2027-income-limits",
+        "/blog/gift-estate-tax-limits-2027",
+        "/blog/child-tax-credit-2027-income-limits-refund",
+        "/calculators/paycheck"
+      ],
+      "sourceLinks": [
+        "https://www.irs.gov/newsroom/if-you-need-more-time-to-file-request-an-extension",
+        "https://www.irs.gov/filing/get-an-extension-to-file-your-tax-return",
+        "https://www.irs.gov/forms-pubs/about-form-4868",
+        "https://www.irs.gov/payments/failure-to-file-penalty",
+        "https://www.irs.gov/payments/failure-to-pay-penalty",
+        "https://www.irs.gov/payments/online-payment-agreement-application"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/streamline-refinance-fha-va-usda",
+      "kind": "canonical article",
+      "preferred": "/blog/streamline-refinance-fha-va-usda",
+      "status": 200,
+      "final": "/blog/streamline-refinance-fha-va-usda",
+      "error": "",
+      "title": "Streamline Refinance 2026: Fast Track for FHA, VA, &amp; USDA Loans | Guide",
+      "description": "Learn how to bypass appraisals, skip income verification, and secure a lower mortgage rate in weeks using a government Streamline Refinance program.",
+      "canonical": "https://usfinnexus.com/blog/streamline-refinance-fha-va-usda",
+      "h1": [
+        "Streamline Refinance 2026: Fast Track for FHA, VA, USDA Loans"
+      ],
+      "words": 940,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/refinance",
+        "/blog/mortgage-recast-vs-refinance-2026",
+        "/blog/mortgage-refinance-break-even-2026",
+        "/blog/cash-out-refinance-guide-2026",
+        "/calculators/heloc",
+        "/calculators/mortgage"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/silver-tsunami-housing-shift-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/silver-tsunami-housing-shift-2026",
+      "status": 200,
+      "final": "/blog/silver-tsunami-housing-shift-2026",
+      "error": "",
+      "title": "The Silver Tsunami Housing Shift: Aging Boomers in 2026",
+      "description": "How the aging Baby Boomer generation is finally unlocking the 2026 housing market inventory, and the regions where millennials can capitalize on this shift.",
+      "canonical": "https://usfinnexus.com/blog/silver-tsunami-housing-shift-2026",
+      "h1": [
+        "The Silver Tsunami Housing Shift: How Aging Boomers are Unlocking 2026 Inventory"
+      ],
+      "words": 1133,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/calculators/dti",
+        "/blog/rent-vs-buy-calculator-2026-housing-market",
+        "/blog/tariffs-housing-market-impact-2026",
+        "/blog/commercial-real-estate-reset-2026",
+        "/calculators/rent-vs-buy",
+        "/calculators/affordability"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/piggyback-mortgage-80-10-10-strategy",
+      "kind": "canonical article",
+      "preferred": "/blog/piggyback-mortgage-80-10-10-strategy",
+      "status": 200,
+      "final": "/blog/piggyback-mortgage-80-10-10-strategy",
+      "error": "",
+      "title": "Piggyback Mortgages (80/10/10): How to Avoid PMI in 2026",
+      "description": "Avoid Private Mortgage Insurance (PMI) without a 20% down payment using the 80/10/10 piggyback loan strategy. Compare the math and risks for 2026 buyers.",
+      "canonical": "https://usfinnexus.com/blog/piggyback-mortgage-80-10-10-strategy",
+      "h1": [
+        "Piggyback Mortgages (80/10/10): The Loophole to Avoid PMI in 2026"
+      ],
+      "words": 903,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/blog/fomc-october-2026-mortgage-rates",
+        "/blog/mortgage-servicer-error-letter",
+        "/blog/mortgage-servicing-transfer-checklist-2026",
+        "/calculators/rent-vs-buy",
+        "/calculators/affordability"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/interest-only-mortgages-explained",
+      "kind": "canonical alias",
+      "preferred": "/blog/interest-only-mortgage-pros-cons",
+      "status": 200,
+      "final": "/blog/interest-only-mortgage-pros-cons",
+      "error": "",
+      "title": "Interest-Only Mortgage Risks, Payments &amp; Reset Guide",
+      "description": "Why do millionaires refuse to pay down their mortgage principal? Learn the dangerous math behind Interest-Only loans and the terrifying Payment Shock trap.",
+      "canonical": "https://usfinnexus.com/blog/interest-only-mortgage-pros-cons",
+      "h1": [
+        "Interest-Only Mortgages: The Wealthy Investor s Cheat Code"
+      ],
+      "words": 845,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/blog/reverse-mortgage-hecm-pros-cons-2026",
+        "/blog/mortgage-payment-at-718-november-2026",
+        "/blog/mortgage-payoff-statement-escrow-refund-2026",
+        "/calculators/mortgage-payoff",
+        "/calculators/amortization"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/articles/march-1-2026-fincen-rule-all-cash-home-buyers",
+      "kind": "canonical alias",
+      "preferred": "/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "status": 200,
+      "final": "/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "error": "",
+      "title": "FinCEN Real Estate Reporting Rule: Vacatur and Current Status",
+      "description": "FinCEN says its residential real estate rule was vacated March 19, 2026. See the current filing status and how it differs from BOI and other closing checks.",
+      "canonical": "https://usfinnexus.com/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "h1": [
+        "FinCEN Real Estate Reporting Rule: Vacatur and Current Status"
+      ],
+      "words": 758,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/articles/new-york-llc-transparency-act-2026-foreign-owners",
+        "/calculators/closing-costs",
+        "/articles/california-new-york-texas-state-boi-rules-2026"
+      ],
+      "sourceLinks": [
+        "https://www.fincen.gov/rre"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/blog/investing-during-geopolitical-conflict-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/investing-during-geopolitical-conflict-2026",
+      "status": 200,
+      "final": "/blog/investing-during-geopolitical-conflict-2026",
+      "error": "",
+      "title": "Investing During Geopolitical Conflict: A Risk Checklist",
+      "description": "Review liquidity, concentration and time horizon during geopolitical uncertainty. Avoid guaranteed safe-haven claims and headline-driven investment decisions.",
+      "canonical": "https://usfinnexus.com/blog/investing-during-geopolitical-conflict-2026",
+      "h1": [
+        "Investing During Geopolitical Conflict: A Risk Checklist"
+      ],
+      "words": 557,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/blog/defense-cybersecurity-stocks-2026",
+        "/blog/safe-yields-bonds-treasuries-2026",
+        "/calculators/budget",
+        "/calculators/investment"
+      ],
+      "sourceLinks": [
+        "https://www.investor.gov/introduction-investing/getting-started/asset-allocation",
+        "https://www.investor.gov/introduction-investing/investing-basics/glossary/bond-funds-and-income-funds"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/blog/va-loan-benefits-2026-military-guide",
+      "kind": "canonical article",
+      "preferred": "/blog/va-loan-benefits-2026-military-guide",
+      "status": 200,
+      "final": "/blog/va-loan-benefits-2026-military-guide",
+      "error": "",
+      "title": "VA Loan Benefits 2026: The Ultimate Military Housing Guide | Guide",
+      "description": "The VA Loan is the most powerful mortgage in America. Learn how veterans can buy a $500,000 house with $0 down and absolutely no Private Mortgage Insurance (PMI).",
+      "canonical": "https://usfinnexus.com/blog/va-loan-benefits-2026-military-guide",
+      "h1": [
+        "VA Loan Benefits 2026: The Ultimate Military Housing Guide"
+      ],
+      "words": 809,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/calculators/va",
+        "/blog/ssi-benefits-2027-payment-amounts",
+        "/blog/snap-benefits-2027",
+        "/blog/social-security-spousal-benefits-2026",
+        "/calculators/budget",
+        "/calculators/retirement"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/va-loans-military-benefits",
+      "kind": "canonical alias",
+      "preferred": "/blog/va-loan-benefits-2026-military-guide",
+      "status": 200,
+      "final": "/blog/va-loan-benefits-2026-military-guide",
+      "error": "",
+      "title": "VA Loan Benefits 2026: The Ultimate Military Housing Guide | Guide",
+      "description": "The VA Loan is the most powerful mortgage in America. Learn how veterans can buy a $500,000 house with $0 down and absolutely no Private Mortgage Insurance (PMI).",
+      "canonical": "https://usfinnexus.com/blog/va-loan-benefits-2026-military-guide",
+      "h1": [
+        "VA Loan Benefits 2026: The Ultimate Military Housing Guide"
+      ],
+      "words": 809,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/calculators/va",
+        "/blog/ssi-benefits-2027-payment-amounts",
+        "/blog/snap-benefits-2027",
+        "/blog/social-security-spousal-benefits-2026",
+        "/calculators/budget",
+        "/calculators/retirement"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/no-down-payment-mortgages-va-usda-fha",
+      "kind": "canonical article",
+      "preferred": "/blog/no-down-payment-mortgages-va-usda-fha",
+      "status": 200,
+      "final": "/blog/no-down-payment-mortgages-va-usda-fha",
+      "error": "",
+      "title": "No Down Payment Mortgages: VA, USDA, and FHA Loans in 2026 | Guide",
+      "description": "Stop waiting years to save 20%. Learn how to buy a house with zero money down in 2026 using VA loans, USDA rural housing loans, and FHA down payment assistance.",
+      "canonical": "https://usfinnexus.com/blog/no-down-payment-mortgages-va-usda-fha",
+      "h1": [
+        "No Down Payment Mortgages: VA, USDA, and FHA Loans in 2026"
+      ],
+      "words": 1263,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/blog/conventional-fha-va-mortgages-guide",
+        "/blog/fha-alternative-credit-scores-2027",
+        "/blog/mortgage-closing-wire-fraud-checklist-2026",
+        "/calculators/down-payment",
+        "/calculators/closing-costs"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/auto-loan-terms-60-72-84-month",
+      "kind": "canonical article",
+      "preferred": "/blog/auto-loan-terms-60-72-84-month",
+      "status": 200,
+      "final": "/blog/auto-loan-terms-60-72-84-month",
+      "error": "",
+      "title": "60 vs 72 vs 84-Month Auto Loan: The Hidden Dangers of Long-Term Car Loans",
+      "description": "Dealers are pushing 84-month auto loans to artificially lower your monthly payment. See the exact math on how long-term car loans destroy your wealth through depreciation and interest.",
+      "canonical": "https://usfinnexus.com/blog/auto-loan-terms-60-72-84-month",
+      "h1": [
+        "60 vs 72 vs 84-Month Auto Loan: The Hidden Dangers of Long-Term Financing"
+      ],
+      "words": 1289,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/blog/0-percent-apr-auto-loan-dealer-vs-bank",
+        "/blog/auto-loan-calculator-car-affordability",
+        "/blog/car-trade-in-value-auto-loan",
+        "/calculators/auto-loan",
+        "/calculators/dti",
+        "/calculators/budget"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/down-payment-assistance-dpa-programs",
+      "kind": "canonical article",
+      "preferred": "/blog/down-payment-assistance-dpa-programs",
+      "status": 200,
+      "final": "/blog/down-payment-assistance-dpa-programs",
+      "error": "",
+      "title": "Down Payment Assistance (DPA) Programs: The 2026 Guide | Guide",
+      "description": "Stop waiting years to save 20%. Learn how state and federal Down Payment Assistance (DPA) programs can give you free grants or forgivable loans to buy a house in 2026.",
+      "canonical": "https://usfinnexus.com/blog/down-payment-assistance-dpa-programs",
+      "h1": [
+        "Down Payment Assistance (DPA) Programs: The 2026 Guide"
+      ],
+      "words": 1346,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/blog/20-percent-down-payment-standard-2026",
+        "/blog/down-payment-strategies-comparison-2026",
+        "/blog/gifted-down-payment-rules-documentation",
+        "/calculators/down-payment",
+        "/calculators/closing-costs"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/20-percent-down-payment-standard-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/20-percent-down-payment-standard-2026",
+      "status": 200,
+      "final": "/blog/20-percent-down-payment-standard-2026",
+      "error": "",
+      "title": "Is 20% Down Still the Golden Standard in 2026? The PMI Myth | Guide",
+      "description": "The 20% down payment rule is outdated. Discover why the average first-time buyer in 2026 puts down just 6%, the real cost of PMI, and how waiting to save 20% can cost you thousands in lost equity.",
+      "canonical": "https://usfinnexus.com/blog/20-percent-down-payment-standard-2026",
+      "h1": [
+        "Is 20% Down Still the Golden Standard in 2026? (The PMI Myth)"
+      ],
+      "words": 1351,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/blog/down-payment-assistance-dpa-programs",
+        "/blog/down-payment-strategies-comparison-2026",
+        "/blog/gifted-down-payment-rules-documentation",
+        "/calculators/down-payment",
+        "/calculators/closing-costs"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/mega-backdoor-roth-ira-guide-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/mega-backdoor-roth-ira-guide-2026",
+      "status": 200,
+      "final": "/blog/mega-backdoor-roth-ira-guide-2026",
+      "error": "",
+      "title": "Mega Backdoor Roth in 2026: Plan Rules and Contribution Room",
+      "description": "Learn how after-tax 401(k) contributions and Roth conversions work, calculate 2026 contribution room and check the plan features before acting.",
+      "canonical": "https://usfinnexus.com/blog/mega-backdoor-roth-ira-guide-2026",
+      "h1": [
+        "Mega Backdoor Roth in 2026: Plan Rules and Contribution Room"
+      ],
+      "words": 831,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/blog/roth-ira-vs-401k-comparison-2026",
+        "/calculators/retirement"
+      ],
+      "sourceLinks": [
+        "https://www.irs.gov/pub/irs-drop/n-25-67.pdf",
+        "https://www.irs.gov/retirement-plans/rollovers-of-after-tax-contributions-in-retirement-plans"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/blog/chattel-mortgages-mobile-homes-financing",
+      "kind": "canonical article",
+      "preferred": "/blog/chattel-mortgages-mobile-homes-financing",
+      "status": 200,
+      "final": "/blog/chattel-mortgages-mobile-homes-financing",
+      "error": "",
+      "title": "Chattel Mortgages Explained: How to Finance a Mobile Home in 2026 | Guide",
+      "description": "Buying a manufactured home on rented land? You cannot use a traditional mortgage. Learn how chattel mortgages work, the interest rate trap, and how to protect yourself.",
+      "canonical": "https://usfinnexus.com/blog/chattel-mortgages-mobile-homes-financing",
+      "h1": [
+        "Chattel Mortgages Explained: How to Finance a Mobile Home in 2026"
+      ],
+      "words": 1321,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/blog/cd-maturity-grace-period-auto-renewal-2026",
+        "/blog/0-percent-apr-auto-loan-dealer-vs-bank",
+        "/blog/auto-loan-calculator-car-affordability",
+        "/calculators/auto-loan",
+        "/calculators/dti",
+        "/calculators/budget"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/when-to-refinance-1-percent-rule",
+      "kind": "canonical alias",
+      "preferred": "/blog/should-i-refinance-2026",
+      "status": 200,
+      "final": "/blog/should-i-refinance-2026",
+      "error": "",
+      "title": "Should I Refinance? Costs, Break-Even and Loan-Term Math",
+      "description": "Compare refinance costs, monthly savings and the remaining loan term. See a worked example and why no-closing-cost offers still involve trade-offs.",
+      "canonical": "https://usfinnexus.com/blog/should-i-refinance-2026",
+      "h1": [
+        "Should I Refinance? Costs, Break-Even and Loan-Term Math"
+      ],
+      "words": 711,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/refinance",
+        "/blog/mortgage-refinance-break-even-2026",
+        "/blog/mortgage-recast-vs-refinance-2026"
+      ],
+      "sourceLinks": [
+        "https://www.consumerfinance.gov/ask-cfpb/is-there-such-a-thing-as-a-no-cost-or-no-closing-loan-or-refinancing-en-141/",
+        "https://www.consumerfinance.gov/owning-a-home/loan-estimate/"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/blog/global-conflict-real-estate-impact-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/global-conflict-real-estate-impact-2026",
+      "status": 200,
+      "final": "/blog/global-conflict-real-estate-impact-2026",
+      "error": "",
+      "title": "How Global Conflicts Are Impacting US Real Estate in 2026 | Guide",
+      "description": "Think a war across the globe doesn&#x27;t affect your local housing market? Think again. Here is how supply chains and foreign capital alter US real estate.",
+      "canonical": "https://usfinnexus.com/blog/global-conflict-real-estate-impact-2026",
+      "h1": [
+        "How Global Conflicts Are Impacting US Real Estate in 2026"
+      ],
+      "words": 1099,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/blog/commercial-real-estate-reset-2026",
+        "/blog/top-sunbelt-real-estate-markets-2026",
+        "/blog/tariffs-housing-market-impact-2026",
+        "/calculators/rent-vs-buy",
+        "/calculators/affordability"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/mortgage-closing-costs-2026-guide",
+      "kind": "canonical alias",
+      "preferred": "/blog/closing-costs-itemized-breakdown-2026",
+      "status": 200,
+      "final": "/blog/closing-costs-itemized-breakdown-2026",
+      "error": "",
+      "title": "Mortgage Closing Costs: What Homebuyers Should Expect",
+      "description": "See which fees appear on a Loan Estimate, what changes your cash to close, and how to compare two lender offers.",
+      "canonical": "https://usfinnexus.com/blog/closing-costs-itemized-breakdown-2026",
+      "h1": [
+        "Mortgage Closing Costs: What Homebuyers Should Expect"
+      ],
+      "words": 776,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/affordability",
+        "/calculators/closing-costs",
+        "/blog/california-closing-costs-2026",
+        "/blog/closing-disclosure-three-day-rule-2026",
+        "/blog/mortgage-closing-wire-fraud-checklist-2026",
+        "/calculators/mortgage",
+        "/calculators/down-payment"
+      ],
+      "sourceLinks": [
+        "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+        "https://www.consumerfinance.gov/owning-a-home/closing-disclosure/"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/top-sunbelt-real-estate-markets-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/top-sunbelt-real-estate-markets-2026",
+      "status": 200,
+      "final": "/blog/top-sunbelt-real-estate-markets-2026",
+      "error": "",
+      "title": "Sunbelt Real Estate Markets: A Local Research Checklist",
+      "description": "Compare Sunbelt rental markets using dated local housing, jobs, permits and property costs. Avoid unsupported city rankings and guaranteed cash-flow claims.",
+      "canonical": "https://usfinnexus.com/blog/top-sunbelt-real-estate-markets-2026",
+      "h1": [
+        "Sunbelt Real Estate Markets: A Local Research Checklist"
+      ],
+      "words": 579,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/rental-property",
+        "/blog/investment-property-mortgage-rates-2026",
+        "/blog/multifamily-real-estate-investing-2026",
+        "/calculators/affordability"
+      ],
+      "sourceLinks": [
+        "https://www.census.gov/programs-surveys/popest.html",
+        "https://www.bls.gov/lau/",
+        "https://www.census.gov/construction/bps/"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/blog/28-36-rule-explained-lender-standards",
+      "kind": "canonical article",
+      "preferred": "/blog/28-36-rule-explained-lender-standards",
+      "status": 200,
+      "final": "/blog/28-36-rule-explained-lender-standards",
+      "error": "",
+      "title": "The 28/36 Rule Explained: How Lenders Size Your Mortgage in 2026 | Guide",
+      "description": "Learn exactly how mortgage lenders use the 28/36 rule to determine your borrowing limit in 2026. Calculate your front-end and back-end DTI to guarantee approval.",
+      "canonical": "https://usfinnexus.com/blog/28-36-rule-explained-lender-standards",
+      "h1": [
+        "The 28/36 Rule Explained: How Lenders Size Your Mortgage in 2026"
+      ],
+      "words": 1610,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/dti",
+        "/blog/debt-to-income-ratio-dti-calculator-2026",
+        "/blog/front-end-vs-back-end-dti-2026",
+        "/blog/how-much-house-can-i-afford-2026",
+        "/calculators/affordability",
+        "/calculators/mortgage"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/reverse-mortgage-hecm-explained",
+      "kind": "canonical alias",
+      "preferred": "/blog/reverse-mortgage-hecm-pros-cons-2026",
+      "status": 200,
+      "final": "/blog/reverse-mortgage-hecm-pros-cons-2026",
+      "error": "",
+      "title": "Reverse Mortgages Explained (2026): The Good, The Bad, and The Scam | Guide",
+      "description": "A reverse mortgage can save a retiree from bankruptcy, or it can destroy their family&#x27;s inheritance. Learn the terrifying math behind HECM loans and how banks seize the house.",
+      "canonical": "https://usfinnexus.com/blog/reverse-mortgage-hecm-pros-cons-2026",
+      "h1": [
+        "Reverse Mortgages Explained (2026): The Good, The Bad, and The Scam"
+      ],
+      "words": 903,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/refinance",
+        "/blog/interest-only-mortgage-pros-cons",
+        "/blog/mortgage-payment-at-718-november-2026",
+        "/blog/mortgage-payoff-statement-escrow-refund-2026",
+        "/calculators/mortgage",
+        "/calculators/mortgage-payoff",
+        "/calculators/amortization"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/reverse-mortgage-hecm-pros-cons-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/reverse-mortgage-hecm-pros-cons-2026",
+      "status": 200,
+      "final": "/blog/reverse-mortgage-hecm-pros-cons-2026",
+      "error": "",
+      "title": "Reverse Mortgages Explained (2026): The Good, The Bad, and The Scam | Guide",
+      "description": "A reverse mortgage can save a retiree from bankruptcy, or it can destroy their family&#x27;s inheritance. Learn the terrifying math behind HECM loans and how banks seize the house.",
+      "canonical": "https://usfinnexus.com/blog/reverse-mortgage-hecm-pros-cons-2026",
+      "h1": [
+        "Reverse Mortgages Explained (2026): The Good, The Bad, and The Scam"
+      ],
+      "words": 903,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/refinance",
+        "/blog/interest-only-mortgage-pros-cons",
+        "/blog/mortgage-payment-at-718-november-2026",
+        "/blog/mortgage-payoff-statement-escrow-refund-2026",
+        "/calculators/mortgage",
+        "/calculators/mortgage-payoff",
+        "/calculators/amortization"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/articles/ny-boi-law-starts-january-2026-even-if-federal-exempt",
+      "kind": "canonical alias",
+      "preferred": "/articles/new-york-llc-transparency-act-2026-foreign-owners",
+      "status": 200,
+      "final": "/articles/new-york-llc-transparency-act-2026-foreign-owners",
+      "error": "",
+      "title": "New York LLC Transparency Act 2026: Who Must File and When",
+      "description": "New York&#x27;s 2026 beneficial-owner rules apply to qualifying foreign-country LLCs. Check formation country, exemptions and the correct filing deadline.",
+      "canonical": "https://usfinnexus.com/articles/new-york-llc-transparency-act-2026-foreign-owners",
+      "h1": [
+        "New York LLC Transparency Act 2026: Who Must File and When"
+      ],
+      "words": 711,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+        "/articles/california-new-york-texas-state-boi-rules-2026"
+      ],
+      "sourceLinks": [
+        "https://dos.ny.gov/beneficial-ownership-disclosure-frequently-asked-questions"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "kind": "canonical article",
+      "preferred": "/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "status": 200,
+      "final": "/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "error": "",
+      "title": "FinCEN Real Estate Reporting Rule: Vacatur and Current Status",
+      "description": "FinCEN says its residential real estate rule was vacated March 19, 2026. See the current filing status and how it differs from BOI and other closing checks.",
+      "canonical": "https://usfinnexus.com/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "h1": [
+        "FinCEN Real Estate Reporting Rule: Vacatur and Current Status"
+      ],
+      "words": 758,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/articles/new-york-llc-transparency-act-2026-foreign-owners",
+        "/calculators/closing-costs",
+        "/articles/california-new-york-texas-state-boi-rules-2026"
+      ],
+      "sourceLinks": [
+        "https://www.fincen.gov/rre"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/blog/investment-property-mortgage-rates-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/investment-property-mortgage-rates-2026",
+      "status": 200,
+      "final": "/blog/investment-property-mortgage-rates-2026",
+      "error": "",
+      "title": "Investment Property Mortgage Rates 2026: The DSCR Loophole | Guide",
+      "description": "Buying a rental property is entirely different from buying a primary residence. Learn why investment mortgages are more expensive, and how to use DSCR loans to bypass income requirements.",
+      "canonical": "https://usfinnexus.com/blog/investment-property-mortgage-rates-2026",
+      "h1": [
+        "Investment Property Mortgage Rates 2026: The DSCR Loophole"
+      ],
+      "words": 908,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/blog/portfolio-loans-non-qm-mortgages-2026",
+        "/blog/i-bond-rate-2026",
+        "/blog/resilient-investor-checklist-2026",
+        "/calculators/investment",
+        "/calculators/retirement"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/should-i-refinance-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/should-i-refinance-2026",
+      "status": 200,
+      "final": "/blog/should-i-refinance-2026",
+      "error": "",
+      "title": "Should I Refinance? Costs, Break-Even and Loan-Term Math",
+      "description": "Compare refinance costs, monthly savings and the remaining loan term. See a worked example and why no-closing-cost offers still involve trade-offs.",
+      "canonical": "https://usfinnexus.com/blog/should-i-refinance-2026",
+      "h1": [
+        "Should I Refinance? Costs, Break-Even and Loan-Term Math"
+      ],
+      "words": 711,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/refinance",
+        "/blog/mortgage-refinance-break-even-2026",
+        "/blog/mortgage-recast-vs-refinance-2026"
+      ],
+      "sourceLinks": [
+        "https://www.consumerfinance.gov/ask-cfpb/is-there-such-a-thing-as-a-no-cost-or-no-closing-loan-or-refinancing-en-141/",
+        "https://www.consumerfinance.gov/owning-a-home/loan-estimate/"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/blog/tcja-tax-sunset-2026-mortgage-impact",
+      "kind": "canonical alias",
+      "preferred": "/blog/2026-federal-tax-brackets-standard-deduction",
+      "status": 200,
+      "final": "/blog/2026-federal-tax-brackets-standard-deduction",
+      "error": "",
+      "title": "2026 Tax Brackets &amp; Standard Deduction Guide",
+      "description": "See the 2026 federal income tax brackets, standard deduction by filing status, marginal-rate examples and practical withholding steps.",
+      "canonical": "https://usfinnexus.com/blog/2026-federal-tax-brackets-standard-deduction",
+      "h1": [
+        "2026 Federal Tax Brackets and Standard Deduction: Complete Guide"
+      ],
+      "words": 1637,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/income-tax",
+        "/blog/child-tax-credit-2026",
+        "/blog/no-tax-on-tips-deduction-2026",
+        "/blog/no-tax-on-overtime-deduction-2026",
+        "/blog/federal-tax-brackets-standard-deduction-2027",
+        "/blog/federal-scholarship-tax-credit-2027",
+        "/blog/charitable-tax-deduction-2026",
+        "/calculators/paycheck"
+      ],
+      "sourceLinks": [
+        "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill",
+        "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+        "https://www.irs.gov/filing/federal-income-tax-rates-and-brackets",
+        "https://www.irs.gov/individuals/tax-withholding-estimator"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/personal-loan-vs-credit-card-comparison",
+      "kind": "canonical article",
+      "preferred": "/blog/personal-loan-vs-credit-card-comparison",
+      "status": 200,
+      "final": "/blog/personal-loan-vs-credit-card-comparison",
+      "error": "",
+      "title": "Personal Loan vs Credit Card: Compare Total Cost Before Borrowing",
+      "description": "Compare personal loans and credit cards using APR, fees, payoff time and cash flow. See a worked example and a checklist for choosing an affordable repayment plan.",
+      "canonical": "https://usfinnexus.com/blog/personal-loan-vs-credit-card-comparison",
+      "h1": [
+        "Personal Loan vs Credit Card: Compare Total Cost Before Borrowing"
+      ],
+      "words": 1062,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/personal-loan",
+        "/calculators/credit-card",
+        "/blog/debt-payoff-avalanche-vs-snowball-method",
+        "/calculators/debt-payoff"
+      ],
+      "sourceLinks": [
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-personal-installment-loan-en-2114/",
+        "https://www.consumerfinance.gov/ask-cfpb/do-personal-installment-loans-have-fees-en-2120/",
+        "https://www.consumerfinance.gov/consumer-tools/credit-cards/"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/blog/fractional-real-estate-investing-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/fractional-real-estate-investing-2026",
+      "status": 200,
+      "final": "/blog/fractional-real-estate-investing-2026",
+      "error": "",
+      "title": "Fractional Real Estate Investing: How to Buy a Rental Property for | Guide",
+      "description": "You no longer need a $80,000 down payment to become a landlord. Learn how fractional real estate platforms allow you to buy shares of rental properties in 2026.",
+      "canonical": "https://usfinnexus.com/blog/fractional-real-estate-investing-2026",
+      "h1": [
+        "Fractional Real Estate Investing: How to Buy a Rental Property for $100"
+      ],
+      "words": 1353,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/refinance",
+        "/blog/multifamily-real-estate-investing-2026",
+        "/blog/opportunity-zones-real-estate-investing",
+        "/blog/sp500-vs-real-estate-investing-2026",
+        "/calculators/investment",
+        "/calculators/retirement"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/lender-paid-pmi-vs-borrower-paid",
+      "kind": "canonical article",
+      "preferred": "/blog/lender-paid-pmi-vs-borrower-paid",
+      "status": 200,
+      "final": "/blog/lender-paid-pmi-vs-borrower-paid",
+      "error": "",
+      "title": "Lender-Paid PMI (LPMI) vs Borrower-Paid PMI (BPMI): Which Costs | Guide",
+      "description": "Compare Lender-Paid PMI (LPMI) and Borrower-Paid PMI (BPMI) in 2026. Learn the math behind higher interest rates vs monthly insurance premiums to see which saves you money.",
+      "canonical": "https://usfinnexus.com/blog/lender-paid-pmi-vs-borrower-paid",
+      "h1": [
+        "Lender-Paid PMI (LPMI) vs Borrower-Paid PMI (BPMI): Which Costs Less?"
+      ],
+      "words": 1057,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/blog/fha-mortgage-calculator-pmi-mip-2026",
+        "/blog/fha-mortgage-pmi-mip-2026",
+        "/blog/no-pmi-mortgages-down-payment",
+        "/calculators/pmi-removal",
+        "/calculators/fha"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/social-security-cola-increase-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/social-security-cola-increase-2026",
+      "status": 200,
+      "final": "/blog/social-security-cola-increase-2026",
+      "error": "",
+      "title": "2026 Social Security COLA: 2.8% and Your Net Benefit",
+      "description": "The confirmed 2026 Social Security COLA is 2.8%. Understand gross benefits, Medicare deductions, hold-harmless limits and the separate 2027 update.",
+      "canonical": "https://usfinnexus.com/blog/social-security-cola-increase-2026",
+      "h1": [
+        "2026 Social Security COLA: 2.8% and Your Net Benefit"
+      ],
+      "words": 716,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/blog/social-security-cola-2027",
+        "/calculators/budget",
+        "/blog/social-security-payment-schedule-2027"
+      ],
+      "sourceLinks": [
+        "https://www.ssa.gov/news/en/press/releases/2025-10-24.html",
+        "https://www.ssa.gov/cola/factsheets/2026.html",
+        "https://www.medicare.gov/basics/costs/medicare-costs",
+        "https://secure.ssa.gov/poms.nsf/lnx/0601001004"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/blog/no-pmi-mortgages-down-payment",
+      "kind": "canonical article",
+      "preferred": "/blog/no-pmi-mortgages-down-payment",
+      "status": 200,
+      "final": "/blog/no-pmi-mortgages-down-payment",
+      "error": "",
+      "title": "No PMI Mortgages: How to Buy a House Without 20% Down | Guide",
+      "description": "Avoid Private Mortgage Insurance without draining your savings. Explore Lender-Paid PMI, Piggyback loans, VA loans, and specialized physician programs for 2026.",
+      "canonical": "https://usfinnexus.com/blog/no-pmi-mortgages-down-payment",
+      "h1": [
+        "No PMI Mortgages: How to Buy a House Without 20% Down"
+      ],
+      "words": 779,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/down-payment",
+        "/blog/fha-mortgage-calculator-pmi-mip-2026",
+        "/blog/fha-mortgage-pmi-mip-2026",
+        "/blog/lender-paid-pmi-vs-borrower-paid",
+        "/calculators/pmi-removal",
+        "/calculators/fha",
+        "/calculators/mortgage"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/pay-off-mortgage-early-strategy",
+      "kind": "canonical article",
+      "preferred": "/blog/pay-off-mortgage-early-strategy",
+      "status": 200,
+      "final": "/blog/pay-off-mortgage-early-strategy",
+      "error": "",
+      "title": "How to Pay Off Your Mortgage in 10 Years Without Refinancing | Guide",
+      "description": "Learn the exact math and strategies to pay off a 30-year mortgage in 10 years or less. Accelerate your payoff with extra principal payments.",
+      "canonical": "https://usfinnexus.com/blog/pay-off-mortgage-early-strategy",
+      "h1": [
+        "How to Pay Off Your Mortgage in 10 Years (Without Refinancing)"
+      ],
+      "words": 872,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage-payoff",
+        "/blog/mortgage-payment-at-718-november-2026",
+        "/blog/mortgage-payoff-statement-escrow-refund-2026",
+        "/blog/homeowners-insurance-mortgage-payment-2026",
+        "/calculators/mortgage",
+        "/calculators/amortization"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/lender-quote-vs-online-calculator",
+      "kind": "canonical article",
+      "preferred": "/blog/lender-quote-vs-online-calculator",
+      "status": 200,
+      "final": "/blog/lender-quote-vs-online-calculator",
+      "error": "",
+      "title": "Why Your Lender&#x27;s Quote is Higher Than the Online Calculator",
+      "description": "Frustrated that your official Loan Estimate is hundreds of dollars higher than what the online calculator promised? Learn the 4 hidden costs lenders legally have to include.",
+      "canonical": "https://usfinnexus.com/blog/lender-quote-vs-online-calculator",
+      "h1": [
+        "Why Your Lender s Quote is $800 Higher Than the Online Calculator"
+      ],
+      "words": 712,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/blog/qualified-opportunity-zones-2027-map-designations",
+        "/blog/catastrophic-health-insurance-plans-2027",
+        "/blog/pbm-transparency-rule-2026",
+        "/calculators/budget",
+        "/calculators/paycheck"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/roth-ira-vs-401k-comparison-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/roth-ira-vs-401k-comparison-2026",
+      "status": 200,
+      "final": "/blog/roth-ira-vs-401k-comparison-2026",
+      "error": "",
+      "title": "Roth IRA vs 401(k) in 2026: Limits, Taxes and What to Fund First",
+      "description": "Compare 2026 Roth IRA and 401(k) limits, employer matches, taxes and withdrawal rules. Choose a savings order that fits your cash flow.",
+      "canonical": "https://usfinnexus.com/blog/roth-ira-vs-401k-comparison-2026",
+      "h1": [
+        "Roth IRA vs 401(k) in 2026: Limits, Taxes and What to Fund First"
+      ],
+      "words": 1412,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/budget",
+        "/calculators/retirement",
+        "/blog/mega-backdoor-roth-ira-guide-2026"
+      ],
+      "sourceLinks": [
+        "https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500",
+        "https://www.irs.gov/retirement-plans/roth-iras"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/blog/mortgage-affordability-28-36-rule",
+      "kind": "canonical alias",
+      "preferred": "/blog/28-36-rule-explained-lender-standards",
+      "status": 200,
+      "final": "/blog/28-36-rule-explained-lender-standards",
+      "error": "",
+      "title": "The 28/36 Rule Explained: How Lenders Size Your Mortgage in 2026 | Guide",
+      "description": "Learn exactly how mortgage lenders use the 28/36 rule to determine your borrowing limit in 2026. Calculate your front-end and back-end DTI to guarantee approval.",
+      "canonical": "https://usfinnexus.com/blog/28-36-rule-explained-lender-standards",
+      "h1": [
+        "The 28/36 Rule Explained: How Lenders Size Your Mortgage in 2026"
+      ],
+      "words": 1610,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/dti",
+        "/blog/debt-to-income-ratio-dti-calculator-2026",
+        "/blog/front-end-vs-back-end-dti-2026",
+        "/blog/how-much-house-can-i-afford-2026",
+        "/calculators/affordability",
+        "/calculators/mortgage"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/pmi-explained-cost-removal-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/pmi-explained-cost-removal-2026",
+      "status": 200,
+      "final": "/blog/pmi-explained-cost-removal-2026",
+      "error": "",
+      "title": "PMI Explained: What It Is, How Much It Costs, and When It Ends | Guide",
+      "description": "Private Mortgage Insurance (PMI) explained for 2026. Learn exactly how much PMI costs, who it protects, and the strategies you can use to avoid paying it.",
+      "canonical": "https://usfinnexus.com/blog/pmi-explained-cost-removal-2026",
+      "h1": [
+        "PMI Explained: What It Is, How Much It Costs, and When It Ends"
+      ],
+      "words": 1001,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/blog/fha-mortgage-calculator-pmi-mip-2026",
+        "/blog/fha-mortgage-pmi-mip-2026",
+        "/blog/lender-paid-pmi-vs-borrower-paid",
+        "/calculators/pmi-removal",
+        "/calculators/fha"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/remove-pmi-mortgage-hpa-rules-2026",
+      "kind": "canonical alias",
+      "preferred": "/blog/pmi-explained-cost-removal-2026",
+      "status": 200,
+      "final": "/blog/pmi-explained-cost-removal-2026",
+      "error": "",
+      "title": "PMI Explained: What It Is, How Much It Costs, and When It Ends | Guide",
+      "description": "Private Mortgage Insurance (PMI) explained for 2026. Learn exactly how much PMI costs, who it protects, and the strategies you can use to avoid paying it.",
+      "canonical": "https://usfinnexus.com/blog/pmi-explained-cost-removal-2026",
+      "h1": [
+        "PMI Explained: What It Is, How Much It Costs, and When It Ends"
+      ],
+      "words": 1001,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/blog/fha-mortgage-calculator-pmi-mip-2026",
+        "/blog/fha-mortgage-pmi-mip-2026",
+        "/blog/lender-paid-pmi-vs-borrower-paid",
+        "/calculators/pmi-removal",
+        "/calculators/fha"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/multifamily-real-estate-investing-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/multifamily-real-estate-investing-2026",
+      "status": 200,
+      "final": "/blog/multifamily-real-estate-investing-2026",
+      "error": "",
+      "title": "Multifamily Real Estate Investing 2026: The House Hacking Blueprint | Guide",
+      "description": "Stop buying single-family homes. Learn the mathematical superiority of multifamily real estate and how to buy a 4-unit apartment building with just 3.5% down.",
+      "canonical": "https://usfinnexus.com/blog/multifamily-real-estate-investing-2026",
+      "h1": [
+        "Multifamily Real Estate Investing 2026: The House Hacking Blueprint"
+      ],
+      "words": 860,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/blog/fractional-real-estate-investing-2026",
+        "/blog/opportunity-zones-real-estate-investing",
+        "/blog/sp500-vs-real-estate-investing-2026",
+        "/calculators/investment",
+        "/calculators/retirement"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/how-to-calculate-monthly-mortgage-payment",
+      "kind": "canonical article",
+      "preferred": "/blog/how-to-calculate-monthly-mortgage-payment",
+      "status": 200,
+      "final": "/blog/how-to-calculate-monthly-mortgage-payment",
+      "error": "",
+      "title": "How to Calculate a Monthly Mortgage Payment - Formula &amp; Guide 2026",
+      "description": "Stop relying on black-box calculators. Learn the exact mathematical formula to calculate your monthly mortgage payment by hand, and see what the banks hide in PITI.",
+      "canonical": "https://usfinnexus.com/blog/how-to-calculate-monthly-mortgage-payment",
+      "h1": [
+        "How to Calculate Your Mortgage Payment by Hand"
+      ],
+      "words": 884,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/blog/how-does-mortgage-escrow-work",
+        "/calculators/mortgage",
+        "/blog/mortgage-payment-at-718-november-2026",
+        "/blog/mortgage-payoff-statement-escrow-refund-2026",
+        "/blog/homeowners-insurance-mortgage-payment-2026",
+        "/calculators/mortgage-payoff",
+        "/calculators/amortization"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "graph",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/articles/california-new-york-texas-state-boi-rules-2026",
+      "kind": "canonical article",
+      "preferred": "/articles/california-new-york-texas-state-boi-rules-2026",
+      "status": 200,
+      "final": "/articles/california-new-york-texas-state-boi-rules-2026",
+      "error": "",
+      "title": "California, New York and Texas: Separate State LLC Filing Checks",
+      "description": "Separate federal BOI from California entity statements, New York foreign-country LLC disclosure and Texas information reports. Use the correct state agency.",
+      "canonical": "https://usfinnexus.com/articles/california-new-york-texas-state-boi-rules-2026",
+      "h1": [
+        "California, New York and Texas: Separate State LLC Filing Checks"
+      ],
+      "words": 632,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/articles/new-york-llc-transparency-act-2026-foreign-owners",
+        "/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do"
+      ],
+      "sourceLinks": [
+        "https://www.sos.ca.gov/business-programs/business-entities/statements",
+        "https://comptroller.texas.gov/taxes/franchise/pir-oir-filing-req.php"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/blog/tax-loss-harvesting-calculator-strategy",
+      "kind": "canonical article",
+      "preferred": "/blog/tax-loss-harvesting-calculator-strategy",
+      "status": 200,
+      "final": "/blog/tax-loss-harvesting-calculator-strategy",
+      "error": "",
+      "title": "Tax-Loss Harvesting in 2026: IRS Wash-Sale Rules &amp; Examples | Guide",
+      "description": "Learn how tax-loss harvesting offsets capital gains, the IRS wash-sale rule, the $3,000 net-loss limit, and why no tax result is guaranteed.",
+      "canonical": "https://usfinnexus.com/blog/tax-loss-harvesting-calculator-strategy",
+      "h1": [
+        "Tax-Loss Harvesting Explained: Turn Your Losing Stocks Into Cash"
+      ],
+      "words": 798,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/investment",
+        "/blog/tax-loss-harvesting-wash-sale-2026",
+        "/blog/direct-indexing-tax-loss-harvesting-2026",
+        "/blog/earned-income-tax-credit-2027-income-limits",
+        "/calculators/income-tax",
+        "/calculators/paycheck"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/30-year-vs-15-year-mortgage-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/30-year-vs-15-year-mortgage-2026",
+      "status": 200,
+      "final": "/blog/30-year-vs-15-year-mortgage-2026",
+      "error": "",
+      "title": "30-Year vs 15-Year Mortgage in 2026: Which Saves You More? | Guide",
+      "description": "A 15-year mortgage saves you massive amounts of interest, but is it the smartest financial move? Compare the exact math, monthly payments, and the &quot;invest the difference&quot; strategy for 2026.",
+      "canonical": "https://usfinnexus.com/blog/30-year-vs-15-year-mortgage-2026",
+      "h1": [
+        "30-Year vs 15-Year Mortgage in 2026: Which Saves You More?"
+      ],
+      "words": 1581,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/blog/fomc-october-2026-mortgage-rates",
+        "/blog/mortgage-servicer-error-letter",
+        "/blog/mortgage-servicing-transfer-checklist-2026",
+        "/calculators/rent-vs-buy",
+        "/calculators/affordability"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/2026-loan-limits-conforming",
+      "kind": "canonical article",
+      "preferred": "/blog/2026-loan-limits-conforming",
+      "status": 200,
+      "final": "/blog/2026-loan-limits-conforming",
+      "error": "",
+      "title": "2026 Conforming Loan Limits: Conventional, FHA, and VA Guide | Guide",
+      "description": "The Federal Housing Finance Agency (FHFA) has officially announced the 2026 conforming loan limits. See how much you can borrow before needing a Jumbo loan.",
+      "canonical": "https://usfinnexus.com/blog/2026-loan-limits-conforming",
+      "h1": [
+        "2026 Conforming Loan Limits: Conventional, FHA, and VA Guide"
+      ],
+      "words": 1423,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/affordability",
+        "/blog/fha-loan-limits-2026",
+        "/blog/jumbo-mortgages-over-loan-limit",
+        "/blog/va-loan-entitlement-restoration",
+        "/calculators/mortgage",
+        "/calculators/down-payment",
+        "/calculators/closing-costs"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/articles/fincen-irs-compliance-checklist-us-llc-2026",
+      "kind": "canonical alias",
+      "preferred": "/guides/boi-reporting-2026",
+      "status": 200,
+      "final": "/guides/boi-reporting-2026",
+      "error": "",
+      "title": "BOI Reporting 2026 | FinCEN Exemptions Guide",
+      "description": "Current 2026 FinCEN BOI rules explained: U.S.-created companies are exempt, while certain foreign-formed entities registered to do business in the United States may still report.",
+      "canonical": "https://usfinnexus.com/guides/boi-reporting-2026",
+      "h1": [
+        "BOI Reporting in 2026: FinCEN Exemptions and Foreign-Entity Rules"
+      ],
+      "words": 567,
+      "robots": "index, follow",
+      "articleLinks": [],
+      "sourceLinks": [
+        "https://www.fincen.gov/boi",
+        "https://dos.ny.gov/beneficial-owner-disclosure"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/articles/2026-income-tax-brackets-how-the-tcja-sunset-affects-you",
+      "kind": "canonical alias",
+      "preferred": "/blog/2026-federal-tax-brackets-standard-deduction",
+      "status": 200,
+      "final": "/blog/2026-federal-tax-brackets-standard-deduction",
+      "error": "",
+      "title": "2026 Tax Brackets &amp; Standard Deduction Guide",
+      "description": "See the 2026 federal income tax brackets, standard deduction by filing status, marginal-rate examples and practical withholding steps.",
+      "canonical": "https://usfinnexus.com/blog/2026-federal-tax-brackets-standard-deduction",
+      "h1": [
+        "2026 Federal Tax Brackets and Standard Deduction: Complete Guide"
+      ],
+      "words": 1637,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/income-tax",
+        "/blog/child-tax-credit-2026",
+        "/blog/no-tax-on-tips-deduction-2026",
+        "/blog/no-tax-on-overtime-deduction-2026",
+        "/blog/federal-tax-brackets-standard-deduction-2027",
+        "/blog/federal-scholarship-tax-credit-2027",
+        "/blog/charitable-tax-deduction-2026",
+        "/calculators/paycheck"
+      ],
+      "sourceLinks": [
+        "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill",
+        "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+        "https://www.irs.gov/filing/federal-income-tax-rates-and-brackets",
+        "https://www.irs.gov/individuals/tax-withholding-estimator"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/safe-yields-bonds-treasuries-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/safe-yields-bonds-treasuries-2026",
+      "status": 200,
+      "final": "/blog/safe-yields-bonds-treasuries-2026",
+      "error": "",
+      "title": "Treasuries vs Emerging-Market Bonds: Yield and Risk",
+      "description": "Compare Treasury securities and emerging-market bonds without treating yield as safety. Understand duration, credit, currency, fund structure and liquidity.",
+      "canonical": "https://usfinnexus.com/blog/safe-yields-bonds-treasuries-2026",
+      "h1": [
+        "Treasuries vs Emerging-Market Bonds: Yield and Risk"
+      ],
+      "words": 565,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/blog/treasury-bill-ladder",
+        "/blog/treasury-bills-vs-high-yield-savings-2026",
+        "/calculators/investment"
+      ],
+      "sourceLinks": [
+        "https://www.treasurydirect.gov/marketable-securities/treasury-bills/",
+        "https://www.investor.gov/introduction-investing/investing-basics/glossary/bond-funds-and-income-funds"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/blog/portfolio-loans-non-qm-mortgages-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/portfolio-loans-non-qm-mortgages-2026",
+      "status": 200,
+      "final": "/blog/portfolio-loans-non-qm-mortgages-2026",
+      "error": "",
+      "title": "Portfolio Loans &amp; Non-QM Mortgages: The 2026 Freelancer Guide | Guide",
+      "description": "If you are self-employed or a freelancer, traditional banks will deny your mortgage. Learn how to use Bank Statement Loans and Non-QM mortgages to buy a house without a W-2.",
+      "canonical": "https://usfinnexus.com/blog/portfolio-loans-non-qm-mortgages-2026",
+      "h1": [
+        "Portfolio Loans Non-QM Mortgages: The 2026 Freelancer Guide"
+      ],
+      "words": 703,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/blog/investment-property-mortgage-rates-2026",
+        "/blog/resilient-investor-checklist-2026",
+        "/blog/i-bond-rate-2026",
+        "/calculators/investment",
+        "/calculators/retirement"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/mortgage-points-buydown-calculator",
+      "kind": "canonical article",
+      "preferred": "/blog/mortgage-points-buydown-calculator",
+      "status": 200,
+      "final": "/blog/mortgage-points-buydown-calculator",
+      "error": "",
+      "title": "Mortgage Points Break-Even Guide 2026",
+      "description": "Are mortgage points worth buying? Learn the 1% cost rule, lender-specific rate quotes, break-even math, cash-flow trade-offs and IRS deduction limits.",
+      "canonical": "https://usfinnexus.com/blog/mortgage-points-buydown-calculator",
+      "h1": [
+        "Are Mortgage Points Worth Buying? Break-Even Guide 2026"
+      ],
+      "words": 804,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/blog/mortgage-payment-at-718-november-2026",
+        "/blog/mortgage-payoff-statement-escrow-refund-2026",
+        "/blog/homeowners-insurance-mortgage-payment-2026",
+        "/calculators/mortgage-payoff",
+        "/calculators/amortization"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/assumable-mortgages-2026-strategy",
+      "kind": "canonical article",
+      "preferred": "/blog/assumable-mortgages-2026-strategy",
+      "status": 200,
+      "final": "/blog/assumable-mortgages-2026-strategy",
+      "error": "",
+      "title": "Assumable Mortgages in 2026: FHA, VA &amp; USDA Rules | Guide",
+      "description": "Learn how mortgage assumptions work, how to verify FHA, VA or USDA eligibility, and how to budget for the seller’s equity gap and lender review.",
+      "canonical": "https://usfinnexus.com/blog/assumable-mortgages-2026-strategy",
+      "h1": [
+        "Assumable Mortgages in 2026: How to Buy a Home with a 2.5% Rate"
+      ],
+      "words": 1368,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/refinance",
+        "/blog/mortgage-closing-wire-fraud-checklist-2026",
+        "/blog/mortgage-cash-reserves-after-closing-2026",
+        "/blog/conventional-fha-va-mortgages-guide",
+        "/calculators/mortgage",
+        "/calculators/down-payment",
+        "/calculators/closing-costs"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/debt-payoff-avalanche-vs-snowball-method",
+      "kind": "canonical article",
+      "preferred": "/blog/debt-payoff-avalanche-vs-snowball-method",
+      "status": 200,
+      "final": "/blog/debt-payoff-avalanche-vs-snowball-method",
+      "error": "",
+      "title": "Debt Payoff Methods: The Math vs. The Psychology of Avalanche &amp; | Guide",
+      "description": "Are you trying to pay off student loans, car notes, and credit cards? Understand the exact mathematical difference between the Debt Avalanche and Debt Snowball methods.",
+      "canonical": "https://usfinnexus.com/blog/debt-payoff-avalanche-vs-snowball-method",
+      "h1": [
+        "Debt Payoff Methods: The Math vs. The Psychology of Avalanche Snowball"
+      ],
+      "words": 1181,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/debt-payoff",
+        "/blog/mortgage-payoff-statement-escrow-refund-2026",
+        "/blog/credit-card-payoff-calculator-strategies",
+        "/blog/mortgage-payment-at-718-november-2026",
+        "/calculators/mortgage",
+        "/calculators/mortgage-payoff",
+        "/calculators/amortization"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/homeowner-tax-deductions-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/homeowner-tax-deductions-2026",
+      "status": 200,
+      "final": "/blog/homeowner-tax-deductions-2026",
+      "error": "",
+      "title": "Homeowner Tax Deductions for 2026",
+      "description": "IRS-verified homeowner tax deductions for tax year 2026, including the $40,400 SALT limit, mortgage-interest rules and the enhanced $6,000 senior deduction.",
+      "canonical": "https://usfinnexus.com/blog/homeowner-tax-deductions-2026",
+      "h1": [
+        "Every Homeowner Tax Deduction You Can Claim in 2026"
+      ],
+      "words": 1399,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/blog/federal-tax-brackets-standard-deduction-2027",
+        "/blog/charitable-tax-deduction-2026",
+        "/blog/senior-tax-deduction-6000-2026-schedule-1a",
+        "/calculators/income-tax",
+        "/calculators/paycheck"
+      ],
+      "sourceLinks": [
+        "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill",
+        "https://www.irs.gov/filing/federal-income-tax-rates-and-brackets"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/crypto-tax-guide-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/crypto-tax-guide-2026",
+      "status": 200,
+      "final": "/blog/crypto-tax-guide-2026",
+      "error": "",
+      "title": "The 2026 Crypto Tax Guide: What the IRS New Rules Mean for You | Guide",
+      "description": "The Wild West is officially over. Learn how the new IRS Form 1099-DA changes crypto taxes in 2026, and how staking, mining, and airdrops are taxed.",
+      "canonical": "https://usfinnexus.com/blog/crypto-tax-guide-2026",
+      "h1": [
+        "The 2026 Crypto Tax Guide: What the IRS New Rules Mean for You"
+      ],
+      "words": 1377,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/blog/roth-conversion-tax-planning-2026",
+        "/blog/treasury-bill-ladder",
+        "/blog/traditional-ira-deduction-limits-2027",
+        "/calculators/crypto-tax",
+        "/calculators/investment"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/sp500-vs-real-estate-investing-2026",
+      "kind": "canonical article",
+      "preferred": "/blog/sp500-vs-real-estate-investing-2026",
+      "status": 200,
+      "final": "/blog/sp500-vs-real-estate-investing-2026",
+      "error": "",
+      "title": "S&amp;P 500 vs. Real Estate: The Ultimate 2026 Investing Showdown | Guide",
+      "description": "Should you buy an index fund or a rental property? Learn the mathematical difference between compound interest and real estate leverage in 2026.",
+      "canonical": "https://usfinnexus.com/blog/sp500-vs-real-estate-investing-2026",
+      "h1": [
+        "S P 500 vs. Real Estate: The Ultimate 2026 Investing Showdown"
+      ],
+      "words": 830,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/refinance",
+        "/blog/fractional-real-estate-investing-2026",
+        "/blog/multifamily-real-estate-investing-2026",
+        "/blog/opportunity-zones-real-estate-investing",
+        "/calculators/investment",
+        "/calculators/retirement"
+      ],
+      "sourceLinks": [],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/articles/title-companies-investors-10000-penalty-march-1-2026",
+      "kind": "canonical alias",
+      "preferred": "/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "status": 200,
+      "final": "/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "error": "",
+      "title": "FinCEN Real Estate Reporting Rule: Vacatur and Current Status",
+      "description": "FinCEN says its residential real estate rule was vacated March 19, 2026. See the current filing status and how it differs from BOI and other closing checks.",
+      "canonical": "https://usfinnexus.com/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "h1": [
+        "FinCEN Real Estate Reporting Rule: Vacatur and Current Status"
+      ],
+      "words": 758,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/articles/new-york-llc-transparency-act-2026-foreign-owners",
+        "/calculators/closing-costs",
+        "/articles/california-new-york-texas-state-boi-rules-2026"
+      ],
+      "sourceLinks": [
+        "https://www.fincen.gov/rre"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/articles/buying-house-through-llc-2026-fincen-rule-changes",
+      "kind": "canonical alias",
+      "preferred": "/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "status": 200,
+      "final": "/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "error": "",
+      "title": "FinCEN Real Estate Reporting Rule: Vacatur and Current Status",
+      "description": "FinCEN says its residential real estate rule was vacated March 19, 2026. See the current filing status and how it differs from BOI and other closing checks.",
+      "canonical": "https://usfinnexus.com/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do",
+      "h1": [
+        "FinCEN Real Estate Reporting Rule: Vacatur and Current Status"
+      ],
+      "words": 758,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/articles/new-york-llc-transparency-act-2026-foreign-owners",
+        "/calculators/closing-costs",
+        "/articles/california-new-york-texas-state-boi-rules-2026"
+      ],
+      "sourceLinks": [
+        "https://www.fincen.gov/rre"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/blog/spring-2026-housing-market-forecast",
+      "kind": "canonical article",
+      "preferred": "/blog/spring-2026-housing-market-forecast",
+      "status": 200,
+      "final": "/blog/spring-2026-housing-market-forecast",
+      "error": "",
+      "title": "Spring 2026 Housing Market Forecast: Rates, Prices &amp; Buyer Strategy",
+      "description": "Spring 2026 housing market analysis: mortgage rate outlook, home price trends, inventory data by region, and expert strategy for buyers and sellers navigating this market.",
+      "canonical": "https://usfinnexus.com/blog/spring-2026-housing-market-forecast",
+      "h1": [
+        "Spring 2026 Housing Market Forecast: Rates, Prices What Buyers Should Expect"
+      ],
+      "words": 1489,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/affordability",
+        "/calculators/rent-vs-buy",
+        "/blog/home-equity-line-vs-loan-2026",
+        "/blog/prime-rate-7-percent-credit-cards-heloc",
+        "/blog/mortgage-recast-vs-refinance-2026",
+        "/calculators/refinance",
+        "/calculators/heloc",
+        "/calculators/mortgage"
+      ],
+      "sourceLinks": [
+        "https://www.nar.realtor",
+        "https://www.freddiemac.com",
+        "https://www.realtor.com",
+        "https://www.redfin.com",
+        "https://www.census.gov",
+        "https://www.federalreserve.gov"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    },
+    {
+      "path": "/blog/usa-people-search-finance",
+      "kind": "canonical article",
+      "preferred": "/blog/usa-people-search-finance",
+      "status": 200,
+      "final": "/blog/usa-people-search-finance",
+      "error": "",
+      "title": "How to Find Unclaimed Money in the USA 2026 — Free Government Databases",
+      "description": "Step-by-step guide to finding unclaimed money using free government databases. Includes forgotten 401(k) accounts, FHA mortgage refunds, uncashed tax refunds, and state unclaimed property.",
+      "canonical": "https://usfinnexus.com/blog/usa-people-search-finance",
+      "h1": [
+        "How to Find Unclaimed Money in the USA (2026 Guide)"
+      ],
+      "words": 1056,
+      "robots": "index, follow",
+      "articleLinks": [
+        "/calculators/mortgage",
+        "/calculators/debt-payoff",
+        "/blog/qualified-opportunity-zones-2027-map-designations",
+        "/blog/catastrophic-health-insurance-plans-2027",
+        "/blog/pbm-transparency-rule-2026",
+        "/calculators/budget",
+        "/calculators/paycheck"
+      ],
+      "sourceLinks": [
+        "https://www.naupa.org",
+        "https://www.pbgc.gov",
+        "https://www.dol.gov",
+        "https://www.irs.gov",
+        "https://www.hud.gov",
+        "https://www.naic.org"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BlogPosting",
+        "BreadcrumbList",
+        "Organization"
+      ]
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -19,11 +21,11 @@ const faqs = [
   { question: 'How quickly can I restore a lost grace period?', answer: 'There is no single restoration schedule to assume for every card. Ask the issuer what must be paid, how many full-payment cycles are required under its terms and the date new purchases will again qualify.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', locale: 'en_US', title, description, url, siteName: 'USFinNexus', publishedTime: date, modifiedTime: date, images: [{ url: image, width: 1200, height: 630, alt }] },
   twitter: { card: 'summary_large_image', title, description, images: [{ url: image, alt }] },
-};
+});
 
 export default function Page() {
   return <>
@@ -78,7 +80,8 @@ export default function Page() {
         <h2 id="faq">Credit-card grace-period FAQs</h2>
         {faqs.map(f => <section key={f.question}><h3>{f.question}</h3><p>{f.answer}</p></section>)}
         <aside aria-label="Financial disclaimer"><p><strong>Educational disclaimer:</strong> CFPB, FTC and OCC guidance checked November 13, 2026. Examples and APRs are hypothetical, not current offers or personalized financial or legal advice. Account agreements, transaction categories and payment timing determine actual charges. Confirm the required payment and grace-period status directly with the issuer.</p></aside>
-      </article>
+      <ContextualInternalLinks currentSlug="credit-card-grace-period-interest" />
+            </article>
     </div>
   </>;
 }

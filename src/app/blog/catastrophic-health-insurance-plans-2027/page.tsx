@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -16,11 +18,11 @@ const faqs = [
   { question: 'When is 2027 Marketplace open enrollment?', answer: 'For HealthCare.gov, 2027 open enrollment runs November 1, 2026 through January 15, 2027. State-based Marketplaces may use different deadlines.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', title, description, url, publishedTime: '2026-11-02', modifiedTime: '2026-11-02', siteName: 'USFinNexus', images: [{ url: image, width: 1200, height: 630, alt: 'Health-plan comparison materials, calculator and first-aid kit on a kitchen table' }] },
   twitter: { card: 'summary_large_image', title, description, images: [image] },
-};
+});
 
 export default function Page() {
   return <>
@@ -104,7 +106,8 @@ export default function Page() {
 
         <h2>Sources and health-finance disclaimer</h2>
         <p>Primary sources reviewed November 2, 2026: HealthCare.gov&apos;s <a href="https://www.healthcare.gov/health-coverage-exemptions/">exemption overview</a>, <a href="https://www.healthcare.gov/health-coverage-exemptions/forms-how-to-apply/">forms and 2027 affordability threshold</a>, and <a href="https://www.healthcare.gov/choose-a-plan/catastrophic-health-plans/">catastrophic-plan guide</a>; CMS&apos;s <a href="https://www.cms.gov/newsroom/fact-sheets/hhs-notice-benefit-payment-parameters-2027-final-rule">2027 final-rule fact sheet</a> and <a href="https://www.cms.gov/newsroom/fact-sheets/plan-year-2027-marketplace-plans-prices-fact-sheet-0">2027 plans and prices fact sheet</a>. This is general education, not medical, legal, tax or insurance advice. Eligibility, plan availability, networks and costs depend on your household, location and official Marketplace determination.</p>
-      </article>
+      <ContextualInternalLinks currentSlug="catastrophic-health-insurance-plans-2027" />
+            </article>
     </main>
   </>;
 }

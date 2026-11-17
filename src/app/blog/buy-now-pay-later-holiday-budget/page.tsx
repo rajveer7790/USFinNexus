@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -18,11 +20,11 @@ const faqs = [
   { question: 'Can I stop autopay if I cannot afford a BNPL installment?', answer: 'Stopping an automatic debit does not cancel the debt. Contact the lender before the due date about available options and ask your bank about payment authorization procedures if necessary. Arrange another payment method where required.' },
   { question: 'Is BNPL the same as deferred-interest financing?', answer: 'No. Pay-in-four splits a purchase into installments; deferred-interest financing can impose previously accrued interest if its conditions are not met. Some longer BNPL loans charge interest, so compare each contract separately.' },
 ];
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', locale: 'en_US', title, description, url, siteName: 'USFinNexus', publishedTime: date, modifiedTime: date, images: [{ url: image, width: 1200, height: 630, alt }] },
   twitter: { card: 'summary_large_image', title, description, images: [{ url: image, alt }] },
-};
+});
 export default function HolidayBnplPage() {
   return <>
     <ArticleSchema title={title} description={description} url={url} image={image} datePublished="2026-11-17" dateModified="2026-11-17" authorName="USFinNexus Editorial Team" keywords={['buy now pay later holiday budget', 'BNPL payment calendar', 'pay in four budgeting', 'BNPL returns and refunds']} />
@@ -74,6 +76,7 @@ export default function HolidayBnplPage() {
         <p>Before checkout, answer five questions: Would I buy this at the full price today? Have I listed every installment? Can the tightest pay period absorb it? Do I understand fees and returns? Could I manage repayment without another loan? An uncertain answer is a reason to pause, not a reason to open a second financing account.</p>
         <h2>Frequently asked questions</h2>{faqs.map(f => <section key={f.question}><h3>{f.question}</h3><p>{f.answer}</p></section>)}
         <h2>Sources, review and financial disclaimer</h2><p>Reviewed November 17, 2026 against the linked CFPB and FTC resources. Examples are hypothetical and do not represent a specific provider&apos;s offer. Educational information only, not financial, credit or legal advice. Terms and consumer protections vary; consult current agreements and qualified professionals for your circumstances.</p>
-      </article></div>
+      <ContextualInternalLinks currentSlug="buy-now-pay-later-holiday-budget" />
+            </article></div>
   </>;
 }

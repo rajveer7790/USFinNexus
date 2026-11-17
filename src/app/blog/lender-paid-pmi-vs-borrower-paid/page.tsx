@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Target, CheckCircle2, DollarSign, ExternalLink, AlertTriangle, Scale, Calculator, ShieldCheck, PiggyBank, RefreshCw } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "Lender-Paid PMI (LPMI) vs Borrower-Paid PMI (BPMI): Which Costs | Guide",
     description: 'Compare Lender-Paid PMI (LPMI) and Borrower-Paid PMI (BPMI) in 2026. Learn the math behind higher interest rates vs monthly insurance premiums to see which saves you money.',
     alternates: { canonical: 'https://usfinnexus.com/blog/lender-paid-pmi-vs-borrower-paid' },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         description: 'The math behind taking a higher interest rate to avoid monthly PMI payments.',
         images: ['https://usfinnexus.com/images/home-hero-v2.png']
     }
-};
+});
 
 export default function BlogPost() {
     return (
@@ -223,7 +223,8 @@ export default function BlogPost() {
                         </Link>
                     </div>
 
-                </article>
+                <ContextualInternalLinks currentSlug="lender-paid-pmi-vs-borrower-paid" />
+            </article>
 
                 <div className="mt-16">
 
@@ -231,8 +232,8 @@ export default function BlogPost() {
 
 
 
-                <RelatedCalculators />
-                    <RelatedArticles currentSlug="lender-paid-pmi-vs-borrower-paid" />
+
+
                     <AuthorBio author={USFinNexusEditorialTeam} />
                 </div>
             </div>

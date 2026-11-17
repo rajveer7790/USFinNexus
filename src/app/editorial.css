@@ -228,6 +228,17 @@
 .fn-reading-content article:has(h1) :is(p, li) a:not([class]), .fn-reading-content article:has(h1) :is(p, li) a.underline { color: var(--fn-teal-dark); text-decoration: underline; text-underline-offset: .19em; text-decoration-thickness: .065em; }
 .fn-reading-content article:has(h1) p.lead { font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.55; margin-block: 1.2rem; }
 .fn-reading-content article img { max-width: 100%; }
+.fn-reading-content :is(article, .prose, section, figure, .card) { min-inline-size: 0; }
+.fn-reading-content :is(h1, h2, h3, p, li, a, th, td) { overflow-wrap: anywhere; }
+.fn-reading-content figure { margin-inline: 0; }
+.fn-reading-content :is(.overflow-x-auto, .fn-editorial-table) { max-inline-size: 100%; overscroll-behavior-inline: contain; }
+@media (max-width: 639px) {
+  .fn-reading-content article { padding-inline: 0; }
+  .fn-reading-content article :is(.p-8, .p-10, .p-12) { padding: 1rem; }
+  .fn-reading-content article :is(.flex-1) { min-inline-size: 0; }
+  .fn-reading-content article a.whitespace-nowrap { white-space: normal; text-align: center; }
+  .fn-reading-content article :is(th, td) { font-size: .875rem; }
+}
 .fn-reading-content :is(.prose, article) table { width: 100%; border-collapse: collapse; background: var(--fn-paper); font-size: clamp(.875rem, 1.25vw, 1rem); line-height: 1.5; }
 .fn-reading-content :is(.prose, article) table :is(th, td) { padding: .65rem clamp(.55rem, 1.35vw, .9rem); border-bottom: 1px solid var(--fn-border); text-align: start; vertical-align: top; overflow-wrap: anywhere; }
 .fn-reading-content :is(.prose, article) table thead th { color: var(--fn-ink); font-weight: 800; border-bottom: 2px solid var(--fn-border); }

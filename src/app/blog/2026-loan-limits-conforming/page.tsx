@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Landmark, TrendingUp, AlertCircle, DollarSign, Calculator, MapPin, Building2, CheckCircle2 } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "2026 Conforming Loan Limits: Conventional, FHA, and VA Guide | Guide",
     description: 'The Federal Housing Finance Agency (FHFA) has officially announced the 2026 conforming loan limits. See how much you can borrow before needing a Jumbo loan.',
     alternates: { canonical: 'https://usfinnexus.com/blog/2026-loan-limits-conforming' },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         siteName: 'USFinNexus',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: '2026 Loan Limits' }]
     }
-};
+});
 
 export default function BlogPost() {
     return (
@@ -227,10 +227,11 @@ export default function BlogPost() {
 
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 26, 2026" />
             </div>
+            <ContextualInternalLinks currentSlug="2026-loan-limits-conforming" />
             </article>
         </div>
-        <RelatedCalculators exclude={['/calculators/mortgage']} limit={4} title="Related Tools" />
-        <RelatedArticles currentSlug="2026-loan-limits-conforming" category="Mortgage" />
+
+
         </>
     );
 }

@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Target, HandCoins, AlertCircle, Building, MapPin, Calculator, ShieldCheck } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "Down Payment Assistance (DPA) Programs: The 2026 Guide | Guide",
     description: 'Stop waiting years to save 20%. Learn how state and federal Down Payment Assistance (DPA) programs can give you free grants or forgivable loans to buy a house in 2026.',
     alternates: { canonical: 'https://usfinnexus.com/blog/down-payment-assistance-dpa-programs' },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         siteName: 'USFinNexus',
         images: [{ url: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: 'Down Payment Assistance' }]
     }
-};
+});
 
 export default function BlogPost() {
     return (
@@ -184,10 +184,11 @@ export default function BlogPost() {
 
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 26, 2026" />
             </div>
+            <ContextualInternalLinks currentSlug="down-payment-assistance-dpa-programs" />
             </article>
         </div>
-        <RelatedCalculators exclude={['/calculators/mortgage']} limit={4} title="Related Calculators" />
-        <RelatedArticles currentSlug="down-payment-assistance-dpa-programs" category="Home Buying" />
+
+
         </>
     );
 }

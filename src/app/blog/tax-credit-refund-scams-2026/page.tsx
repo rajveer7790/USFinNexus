@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -16,11 +18,11 @@ const faqs = [
   { question: 'What should I do if a false return was already filed?', answer: 'Get a complete copy, verify it against IRS account records, stop relying on the promoter and consult a reputable tax professional about an amended return. If identity theft is involved, follow IRS identity-theft steps and consider an IP PIN.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', title, description, url, publishedTime: '2026-11-04', modifiedTime: '2026-11-04', siteName: 'USFinNexus', images: [{ url: image, width: 1200, height: 630, alt: 'Phone warning, security shield and tax documents representing refund scams' }] },
   twitter: { card: 'summary_large_image', title, description, images: [image] },
-};
+});
 
 export default function Page() {
   return <>
@@ -101,7 +103,8 @@ export default function Page() {
 
         <h2>Sources and tax disclaimer</h2>
         <p>Primary sources reviewed November 4, 2026: the IRS October 29 <a href="https://www.irs.gov/newsroom/trick-or-treat-dont-get-tricked-by-tax-credit-scammers">tax-credit scam warning</a>, current <a href="https://www.irs.gov/help/tax-scams">Tax Scams hub</a>, <a href="https://www.irs.gov/newsroom/be-aware-of-dirty-dozen-tax-scams-for-2026">2026 Dirty Dozen summary</a>, and guidance on <a href="https://www.irs.gov/tax-professionals/make-a-complaint-about-a-tax-return-preparer">reporting preparer misconduct</a>. This article is general education, not legal or individualized tax advice. Use official IRS instructions or a qualified professional for your facts.</p>
-      </article>
+      <ContextualInternalLinks currentSlug="tax-credit-refund-scams-2026" />
+            </article>
     </main>
   </>;
 }

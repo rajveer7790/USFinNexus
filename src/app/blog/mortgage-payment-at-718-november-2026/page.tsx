@@ -1,3 +1,4 @@
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -19,11 +20,11 @@ const faqs = [
   { question: 'Should I wait for mortgage rates to fall?', answer: 'Do not rely on a future rate decline to make today’s purchase affordable. Compare the full payment, cash reserves, home price, lender offers and possible refinance costs under several scenarios.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', title, description, url, siteName: 'USFinNexus', publishedTime: '2026-11-07', modifiedTime: '2026-11-07', images: [{ url: image, width: 1200, height: 630, alt: 'Homebuyers comparing November 2026 mortgage payment scenarios at a dining table' }] },
   twitter: { card: 'summary_large_image', title, description, images: [image] },
-};
+});
 
 export default function MortgagePayment718Page() {
   return <main id="main-content" className="mx-auto max-w-5xl px-4 py-8 sm:px-6">

@@ -1,3 +1,4 @@
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ReviewedGuide from '@/components/ReviewedGuide';
@@ -5,7 +6,7 @@ const title = "FinCEN Real Estate Reporting Rule: Vacatur and Current Status";
 const description = "FinCEN says its residential real estate rule was vacated March 19, 2026. See the current filing status and how it differs from BOI and other closing checks.";
 const url = 'https://usfinnexus.com/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do';
 const image = '/images/real_estate_rule_hero_1772351582917.png';
-export const metadata: Metadata = { title, description, alternates: { canonical: url }, openGraph: { title, description, url, type: 'article', images: [{ url: image, width: 1200, height: 630 }] }, twitter: { card: 'summary_large_image', title, description, images: [image] } };
+export const metadata: Metadata = completeEditorialMetadata({ title, description, alternates: { canonical: url }, openGraph: { title, description, url, type: 'article', images: [{ url: image, width: 1200, height: 630 }] }, twitter: { card: 'summary_large_image', title, description, images: [image] } });
 export default function Page() {
  const faqs: [string,string][] = [["Must an LLC buyer file a Real Estate Report under this rule now?","FinCEN's current notice says reporting persons do not have to file Real Estate Reports while the March 19, 2026 vacatur remains in force. Check the agency's current notice before relying on this status."],["Was the residential real estate rule permanently repealed?","Do not describe it that way. FinCEN says the court vacated it and that the government appealed. The operative status can change through further legal action."],["Does this eliminate federal BOI reporting or state duties?","No. Residential Real Estate Reports, federal company BOI reports and state business disclosures are separate requirements with different scopes."],["Can a title company still request ownership information?","Yes. A closing participant may request documents for other legal, underwriting, contractual or identity-verification reasons. Ask what requirement and purpose apply rather than assuming this vacated rule is the basis."]];
  return <ReviewedGuide title={title} description={description} path="/articles/fincen-real-estate-reporting-rule-what-llc-buyers-must-do" published="2026-02-25" image={image} alt="Residential property and business ownership documents" faqs={faqs} legal answer={"FinCEN says a federal court vacated the Residential Real Estate Rule on March 19, 2026. While that order remains in force, reporting persons are not required to file Real Estate Reports under the rule and are not liable for failing to do so. An appeal is pending; check FinCEN for changes."}>
@@ -24,5 +25,6 @@ export default function Page() {
 <p>Other closing requirements remain relevant. A vacated reporting rule does not eliminate title review, lender documentation or the need to verify payment instructions. Ask for a clear explanation and send sensitive documents through a verified channel.</p>
 <h2>How this page will be used</h2>
 <p>This page provides a dated status check rather than a prediction of the appeal. Recheck the official agency notice close to the transaction date. If a professional advises that a filing is required, ask them to identify the current authority and how it applies to the specific transfer.</p>
+ <p>Keep legal compliance separate from the purchase budget. The <Link href="/calculators/closing-costs">closing-cost calculator</Link> estimates financial inputs only; it does not decide whether a reporting obligation applies. Compare other entity-level duties in our <Link href="/articles/california-new-york-texas-state-boi-rules-2026">state LLC filing guide</Link>.</p>
  </ReviewedGuide>;
 }

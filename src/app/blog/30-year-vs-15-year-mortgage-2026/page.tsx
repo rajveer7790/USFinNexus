@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Scale, TrendingUp, AlertCircle, DollarSign, Calculator, ShieldCheck, Clock } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "30-Year vs 15-Year Mortgage in 2026: Which Saves You More? | Guide",
     description: 'A 15-year mortgage saves you massive amounts of interest, but is it the smartest financial move? Compare the exact math, monthly payments, and the "invest the difference" strategy for 2026.',
     alternates: { canonical: 'https://usfinnexus.com/blog/30-year-vs-15-year-mortgage-2026' },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         siteName: 'USFinNexus',
         images: [{ url: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: '30-Year vs 15-Year Mortgage' }]
     }
-};
+});
 
 export default function BlogPost() {
     return (
@@ -241,10 +241,11 @@ export default function BlogPost() {
 
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 26, 2026" />
             </div>
+            <ContextualInternalLinks currentSlug="30-year-vs-15-year-mortgage-2026" />
             </article>
         </div>
-        <RelatedCalculators exclude={['/calculators/mortgage']} limit={4} title="Related Calculators" />
-        <RelatedArticles currentSlug="30-year-vs-15-year-mortgage-2026" category="Mortgage" />
+
+
         </>
     );
 }

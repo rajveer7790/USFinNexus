@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -34,11 +36,11 @@ const separate = [
   ['24%', '$109,126–$208,325'], ['32%', '$208,326–$264,550'], ['35%', '$264,551–$396,825'], ['37%', 'Over $396,825'],
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', title, description, url, publishedTime: '2026-11-06', modifiedTime: '2026-11-06', siteName: 'USFinNexus', images: [{ url: image, width: 1200, height: 630, alt: 'Taxpayer reviewing a 2027 federal tax bracket planning worksheet' }] },
   twitter: { card: 'summary_large_image', title, description, images: [image] },
-};
+});
 
 function BracketTable({ rows, label }: { rows: string[][]; label: string }) {
   return <div className="overflow-x-auto"><table><caption>{label}</caption><thead><tr><th scope="col">Marginal rate</th><th scope="col">2027 taxable income</th></tr></thead><tbody>{rows.map(([rate, range]) => <tr key={rate}><th scope="row">{rate}</th><td>{range}</td></tr>)}</tbody></table></div>;
@@ -111,7 +113,8 @@ export default function Page() {
 
         <h2>Sources and tax disclaimer</h2>
         <p>Primary sources reviewed November 6, 2026: the IRS <a href="https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2027-taxpayers-continue-to-benefit-from-the-working-families-tax-cuts">2027 inflation-adjustment announcement</a> and <a href="https://www.irs.gov/pub/irs-drop/rp-26-35.pdf">Revenue Procedure 2026-35</a>. This article is general education, not individualized tax, legal or investment advice. Tax results depend on filing status, income type, deductions, credits and later guidance. Consult current IRS instructions or a qualified tax professional before filing or changing estimated payments.</p>
-      </article>
+      <ContextualInternalLinks currentSlug="federal-tax-brackets-standard-deduction-2027" />
+            </article>
     </main>
   </>;
 }

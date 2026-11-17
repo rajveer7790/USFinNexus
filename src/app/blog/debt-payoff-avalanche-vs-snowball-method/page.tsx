@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Target, TrendingDown, Target as TargetIcon, Brain, Calculator, LineChart, Banknote } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "Debt Payoff Methods: The Math vs. The Psychology of Avalanche & | Guide",
     description: 'Are you trying to pay off student loans, car notes, and credit cards? Understand the exact mathematical difference between the Debt Avalanche and Debt Snowball methods.',
     alternates: { canonical: 'https://usfinnexus.com/blog/debt-payoff-avalanche-vs-snowball-method' },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         siteName: 'USFinNexus',
         images: [{ url: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: 'Debt Payoff Avalanche Snowball' }]
     }
-};
+});
 
 export default function BlogPost() {
     return (
@@ -186,10 +186,11 @@ export default function BlogPost() {
 
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 26, 2026" />
             </div>
+            <ContextualInternalLinks currentSlug="debt-payoff-avalanche-vs-snowball-method" />
             </article>
         </div>
-        <RelatedCalculators exclude={[]} limit={4} title="Related Calculators" />
-        <RelatedArticles currentSlug="debt-payoff-avalanche-vs-snowball-method" category="Debt Management" />
+
+
         </>
     );
 }

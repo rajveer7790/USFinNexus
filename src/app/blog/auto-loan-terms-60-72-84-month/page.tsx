@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Target, CalendarClock, AlertTriangle, TrendingDown, Calculator, LineChart, Banknote } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: '60 vs 72 vs 84-Month Auto Loan: The Hidden Dangers of Long-Term Car Loans',
     description: 'Dealers are pushing 84-month auto loans to artificially lower your monthly payment. See the exact math on how long-term car loans destroy your wealth through depreciation and interest.',
     alternates: { canonical: 'https://usfinnexus.com/blog/auto-loan-terms-60-72-84-month' },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         siteName: 'USFinNexus',
         images: [{ url: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: 'Auto Loan Terms' }]
     }
-};
+});
 
 export default function BlogPost() {
     return (
@@ -207,10 +207,11 @@ export default function BlogPost() {
 
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 26, 2026" />
             </div>
+            <ContextualInternalLinks currentSlug="auto-loan-terms-60-72-84-month" />
             </article>
         </div>
-        <RelatedCalculators exclude={[]} limit={4} title="Related Calculators" />
-        <RelatedArticles currentSlug="auto-loan-terms-60-72-84-month" category="Auto Loans" />
+
+
         </>
     );
 }

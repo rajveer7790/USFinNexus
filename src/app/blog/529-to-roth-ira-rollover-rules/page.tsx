@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -19,11 +21,11 @@ const faqs = [
   { question: 'Is a qualifying rollover tax-free in every state?', answer: 'Federal qualification does not establish identical treatment in every state. Check current state rules and whether prior deductions or credits could be recaptured before authorizing a transfer.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', locale: 'en_US', title, description, url, siteName: 'USFinNexus', publishedTime: date, modifiedTime: date, images: [{ url: image, width: 1200, height: 630, alt }] },
   twitter: { card: 'summary_large_image', title, description, images: [{ url: image, alt }] },
-};
+});
 
 export default function Page() {
   return <>
@@ -81,7 +83,8 @@ export default function Page() {
         <h2 id="faq">529-to-Roth rollover FAQs</h2>
         {faqs.map(f => <section key={f.question}><h3>{f.question}</h3><p>{f.answer}</p></section>)}
         <aside aria-label="Financial disclaimer"><p><strong>Educational disclaimer:</strong> Official sources checked November 12, 2026. Examples are hypothetical and assume all unstated eligibility tests are met. This is not individualized financial, investment, legal or tax advice. Confirm current federal guidance, state treatment and institution instructions before transferring funds.</p></aside>
-      </article>
+      <ContextualInternalLinks currentSlug="529-to-roth-ira-rollover-rules" />
+            </article>
     </div>
   </>;
 }

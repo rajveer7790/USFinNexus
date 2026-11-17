@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { AlertTriangle, Target, Building, PieChart, Coins, Share2, Calculator, ShieldCheck } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "Fractional Real Estate Investing: How to Buy a Rental Property for | Guide",
     description: 'You no longer need a $80,000 down payment to become a landlord. Learn how fractional real estate platforms allow you to buy shares of rental properties in 2026.',
     alternates: { canonical: 'https://usfinnexus.com/blog/fractional-real-estate-investing-2026' },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         siteName: 'USFinNexus',
         images: [{ url: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: 'Fractional Real Estate' }]
     }
-};
+});
 
 export default function BlogPost() {
     return (
@@ -183,10 +183,11 @@ export default function BlogPost() {
 
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 26, 2026" />
             </div>
+            <ContextualInternalLinks currentSlug="fractional-real-estate-investing-2026" />
             </article>
         </div>
-        <RelatedCalculators exclude={[]} limit={4} title="Related Calculators" />
-        <RelatedArticles currentSlug="fractional-real-estate-investing-2026" category="Advanced Investing" />
+
+
         </>
     );
 }

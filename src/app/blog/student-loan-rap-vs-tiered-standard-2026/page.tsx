@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -17,11 +19,11 @@ const faqs = [
   { question: 'What happens if a SAVE borrower misses the plan-selection deadline?', answer: 'After the servicer’s 90-day notice and final 30-day notice, a borrower who does not choose another eligible plan may be placed in Standard or Tiered Standard, depending on loan disbursement dates.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', title, description, url, publishedTime: '2026-11-05', modifiedTime: '2026-11-05', siteName: 'USFinNexus', images: [{ url: image, width: 1200, height: 630, alt: 'Borrower comparing income-based and fixed student loan repayment worksheets' }] },
   twitter: { card: 'summary_large_image', title, description, images: [image] },
-};
+});
 
 export default function Page() {
   return <>
@@ -85,7 +87,8 @@ export default function Page() {
 
         <h2>Sources and student-loan disclaimer</h2>
         <p>Primary sources reviewed November 5, 2026: Federal Student Aid&apos;s <a href="https://studentaid.gov/manage-loans/repayment/plans">repayment-plan comparison</a>, <a href="https://studentaid.gov/articles/faqs-idr-plan/">IDR FAQs</a>, and <a href="https://studentaid.gov/articles/save/">SAVE borrower transition FAQs</a>, plus the Education Department&apos;s <a href="https://www.ed.gov/about/news/press-release/fact-sheet-trump-administration-making-higher-education-more-affordable-expanding-opportunity-and-simplifying-student-loan-repayment">July 1 plan fact sheet</a>. This article is general education, not individualized financial, tax or legal advice. Your official account, servicer notice and federal rules control eligibility and payment calculations.</p>
-      </article>
+      <ContextualInternalLinks currentSlug="student-loan-rap-vs-tiered-standard-2026" />
+            </article>
     </main>
   </>;
 }

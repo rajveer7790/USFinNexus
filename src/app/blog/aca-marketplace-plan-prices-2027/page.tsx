@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -16,13 +18,13 @@ const faqs = [
   { question: 'Can my final premium differ from the preview price?', answer: 'Yes. The preview uses limited information and estimated savings. The application asks for more details about household, income and coverage offers. The official eligibility determination and selected plan produce the price you should use.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title,
   description,
   alternates: { canonical: url },
   openGraph: { type: 'article', title, description, url, publishedTime: '2026-11-01', modifiedTime: '2026-11-01', siteName: 'USFinNexus', images: [{ url: image, width: 1200, height: 630, alt: 'Couple comparing 2027 Marketplace health plan premiums and household costs' }] },
   twitter: { card: 'summary_large_image', title, description, images: [image] },
-};
+});
 
 export default function Page() {
   return <>
@@ -99,7 +101,8 @@ export default function Page() {
 
         <h2>Sources and insurance disclaimer</h2>
         <p>Primary sources reviewed November 1, 2026: the CMS <a href="https://www.cms.gov/newsroom/fact-sheets/plan-year-2027-marketplace-plans-prices-fact-sheet-0">Plan Year 2027 Marketplace Plans and Prices Fact Sheet</a>, CMS <a href="https://www.cms.gov/marketplace/resources/data/public-use-files">2027 Exchange public-use files</a>, and HealthCare.gov pages for <a href="https://www.healthcare.gov/apply-and-enroll/health-insurance-plans-estimator-overview/">previewing plans and prices</a> and <a href="https://www.healthcare.gov/get-coverage/">getting 2027 coverage</a>. This article is general education, not insurance, legal, medical, tax or financial advice. Official eligibility notices, plan documents and state rules control.</p>
-      </article>
+      <ContextualInternalLinks currentSlug="aca-marketplace-plan-prices-2027" />
+            </article>
     </main>
   </>;
 }

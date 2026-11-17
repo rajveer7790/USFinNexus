@@ -1,3 +1,4 @@
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ReviewedGuide from '@/components/ReviewedGuide';
@@ -5,7 +6,7 @@ const title = "Personal Loan vs Credit Card: Compare Total Cost Before Borrowing
 const description = "Compare personal loans and credit cards using APR, fees, payoff time and cash flow. See a worked example and a checklist for choosing an affordable repayment plan.";
 const url = 'https://usfinnexus.com/blog/personal-loan-vs-credit-card-comparison';
 const image = '/images/emergency-fund-how-much-2026.webp';
-export const metadata: Metadata = { title, description, alternates: { canonical: url }, openGraph: { title, description, url, type: 'article', images: [{ url: image, width: 1200, height: 630 }] }, twitter: { card: 'summary_large_image', title, description, images: [image] } };
+export const metadata: Metadata = completeEditorialMetadata({ title, description, alternates: { canonical: url }, openGraph: { title, description, url, type: 'article', images: [{ url: image, width: 1200, height: 630 }] }, twitter: { card: 'summary_large_image', title, description, images: [image] } });
 export default function Page() {
  const faqs: [string,string][] = [
  ['Is a personal loan always cheaper than a credit card?', 'No. Compare the actual APR, fees, amount received, repayment period and total payments. A longer loan can lower the monthly payment while increasing total cost.'],

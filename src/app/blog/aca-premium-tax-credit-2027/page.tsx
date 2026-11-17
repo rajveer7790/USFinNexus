@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -20,13 +22,13 @@ const faqs = [
   { question: 'When is 2027 Marketplace Open Enrollment?', answer: 'On HealthCare.gov, open enrollment runs from November 1, 2026 through January 15, 2027. Enroll or change plans by December 15 for coverage starting January 1; later state-exchange deadlines can differ.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title,
   description,
   alternates: { canonical: url },
   openGraph: { type: 'article', locale: 'en_US', title, description, url, siteName: 'USFinNexus', publishedTime: date, modifiedTime: date, images: [{ url: image, width: 1200, height: 630, alt }] },
   twitter: { card: 'summary_large_image', title, description, images: [{ url: image, alt }] },
-};
+});
 
 export default function AcaPremiumTaxCredit2027Page() {
   return (
@@ -122,7 +124,8 @@ export default function AcaPremiumTaxCredit2027Page() {
           {faqs.map((faq) => <section key={faq.question}><h3>{faq.question}</h3><p>{faq.answer}</p></section>)}
 
           <aside aria-label="Financial disclaimer"><p><strong>Educational disclaimer:</strong> Official guidance checked November 16, 2026, including CMS plan-year 2027 training, IRS Revenue Procedure 2026-26 and HealthCare.gov enrollment dates. This article is general education, not individualized tax, legal, health-insurance or benefits advice. Marketplace and state-exchange determinations, later guidance and household facts can change the result.</p></aside>
-        </article>
+        <ContextualInternalLinks currentSlug="aca-premium-tax-credit-2027" />
+            </article>
       </div>
     </>
   );

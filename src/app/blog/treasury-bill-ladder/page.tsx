@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -18,11 +20,11 @@ const faqs = [
   { question: 'Are Treasury bill earnings subject to state income tax?', answer: 'Interest from Treasury bills is subject to federal income tax but exempt from state and local income taxes. This describes directly held Treasury securities; fund distributions and other account structures require their own tax review.' },
   { question: 'Can I sell a Treasury bill in TreasuryDirect before maturity?', answer: 'TreasuryDirect does not sell securities directly. You must transfer an eligible security to a bank, broker or dealer to sell it. Original purchases generally have a 45-day holding restriction, so a four-week bill matures before it can be transferred for sale.' },
 ];
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', locale: 'en_US', title, description, url, siteName: 'USFinNexus', publishedTime: date, modifiedTime: date, images: [{ url: image, width: 1200, height: 630, alt }] },
   twitter: { card: 'summary_large_image', title, description, images: [{ url: image, alt }] },
-};
+});
 export default function TreasuryBillLadderPage() {
   return <>
     <ArticleSchema title={title} description={description} url={url} image={image} datePublished="2026-11-17" dateModified="2026-11-17" authorName="USFinNexus Editorial Team" keywords={['Treasury bill ladder', 'how to build a T bill ladder', 'four week Treasury ladder', 'TreasuryDirect reinvestment']} />
@@ -78,6 +80,7 @@ export default function TreasuryBillLadderPage() {
         <p>Finally, stress-test a lower replacement yield and an earlier-than-expected cash need. A ladder spreads reinvestment decisions across time; it does not eliminate rate changes. Its main benefit is matching a transparent schedule to a real household goal, with enough money kept outside it to avoid a forced sale or a rushed transfer.</p>
         <h2>Frequently asked questions</h2>{faqs.map(f => <section key={f.question}><h3>{f.question}</h3><p>{f.answer}</p></section>)}
         <h2>Sources, review and financial disclaimer</h2><p>Reviewed November 17, 2026 against the linked U.S. Treasury resources. Dollar amounts and ladder structures are hypothetical, not current auction quotations or individualized recommendations. Educational information only, not investment, financial or tax advice. Confirm current auction announcements, platform instructions and tax rules before acting.</p>
-      </article></div>
+      <ContextualInternalLinks currentSlug="treasury-bill-ladder" />
+            </article></div>
   </>;
 }

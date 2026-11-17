@@ -1,3 +1,4 @@
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -19,11 +20,11 @@ const faqs = [
   { question: 'What is the 2027 exclusion for gifts to a noncitizen spouse?', answer: 'The inflation-adjusted annual exclusion for qualifying gifts to a spouse who is not a U.S. citizen is $201,000 for 2027, subject to statutory requirements.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', title, description, url, siteName: 'USFinNexus', publishedTime: '2026-11-08', modifiedTime: '2026-11-08', images: [{ url: image, width: 1200, height: 630, alt: 'Family discussing a 2027 gift and estate plan with a financial professional' }] },
   twitter: { card: 'summary_large_image', title, description, images: [image] },
-};
+});
 
 export default function GiftEstateTax2027Page() {
   return <main id="main-content" className="mx-auto max-w-5xl px-4 py-8 sm:px-6">

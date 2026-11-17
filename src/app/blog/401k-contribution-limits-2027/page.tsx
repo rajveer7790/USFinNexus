@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -19,11 +21,11 @@ const faqs = [
   { question: 'Does a new job give me a fresh employee contribution limit?', answer: 'Generally, no. Employee elective deferrals to multiple 401(k) plans must be coordinated within your individual annual limit. Give the new payroll department your earlier year-to-date deferrals rather than assuming the new system knows them.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', locale: 'en_US', title, description, url, siteName: 'USFinNexus', publishedTime: date, modifiedTime: date, images: [{ url: image, width: 1200, height: 630, alt }] },
   twitter: { card: 'summary_large_image', title, description, images: [{ url: image, alt }] },
-};
+});
 
 export default function Page() {
   return <>
@@ -80,7 +82,8 @@ export default function Page() {
         <h2 id="faq">2027 401(k) contribution FAQs</h2>
         {faqs.map(f => <section key={f.question}><h3>{f.question}</h3><p>{f.answer}</p></section>)}
         <aside aria-label="Financial disclaimer"><p><strong>Educational disclaimer:</strong> Official guidance checked November 13, 2026, including the November 12 IRS announcement and Notice 2026-66. Examples are hypothetical, not personalized tax, investment, legal or benefits advice. This guide concerns ordinary 401(k) planning; compensation, plan terms and special arrangements can change the result. Confirm elections with your administrator.</p></aside>
-      </article>
+      <ContextualInternalLinks currentSlug="401k-contribution-limits-2027" />
+            </article>
     </div>
   </>;
 }

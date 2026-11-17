@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -16,13 +18,13 @@ const faqs = [
   { question: 'Does the prime rate directly set 30-year mortgage rates?', answer: 'No. Fixed mortgage rates are influenced more by longer-term bond yields, mortgage-backed securities, inflation expectations and lender pricing. Prime is more directly relevant to many variable short-term products.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title,
   description,
   alternates: { canonical: url },
   openGraph: { type: 'article', title, description, url, publishedTime: '2026-11-01', modifiedTime: '2026-11-01', siteName: 'USFinNexus', images: [{ url: image, width: 1200, height: 630, alt: 'Consumer reviewing variable credit card and home equity interest costs' }] },
   twitter: { card: 'summary_large_image', title, description, images: [image] },
-};
+});
 
 export default function Page() {
   return <>
@@ -92,7 +94,8 @@ export default function Page() {
 
         <h2>Sources and financial disclaimer</h2>
         <p>Primary sources reviewed November 1, 2026: the Federal Reserve&apos;s <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm">October 28 FOMC statement</a>, <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a1.htm">implementation note</a> and H.15-derived <a href="https://fred.stlouisfed.org/series/RIFSPBLPND">bank prime loan rate series</a>; and the CFPB explanation of <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-fixed-apr-and-a-variable-apr-en-45/">fixed versus variable APRs</a>. This article is general education, not individualized credit, legal, tax or financial advice. Your agreement and current disclosures control.</p>
-      </article>
+      <ContextualInternalLinks currentSlug="prime-rate-7-percent-credit-cards-heloc" />
+            </article>
     </main>
   </>;
 }

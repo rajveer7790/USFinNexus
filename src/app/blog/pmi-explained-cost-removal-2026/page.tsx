@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ShieldCheck, AlertTriangle, PenTool, Home, FileCheck, Scale, Calculator, DollarSign, Clock, ShieldAlert, Target } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "PMI Explained: What It Is, How Much It Costs, and When It Ends | Guide",
     description: 'Private Mortgage Insurance (PMI) explained for 2026. Learn exactly how much PMI costs, who it protects, and the strategies you can use to avoid paying it.',
     alternates: { canonical: 'https://usfinnexus.com/blog/pmi-explained-cost-removal-2026' },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         description: 'Private Mortgage Insurance protects the bank, not you. Here is exactly how much it costs and the strategies you can use to stop paying it in 2026.',
         images: ['https://usfinnexus.com/images/home-hero-v2.png']
     }
-};
+});
 
 export default function BlogPost() {
     return (
@@ -201,15 +201,16 @@ export default function BlogPost() {
                         </Link>
                     </div>
 
-                </article>
+                <ContextualInternalLinks currentSlug="pmi-explained-cost-removal-2026" />
+            </article>
 
                 <div className="mt-16">
 
 
 
 
-                <RelatedCalculators />
-                    <RelatedArticles currentSlug="pmi-explained-cost-removal-2026" />
+
+
                     <AuthorBio author={USFinNexusEditorialTeam} />
                 </div>
             </div>

@@ -1,3 +1,4 @@
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Image from '@/components/EditorialImage';
 import Link from 'next/link';
@@ -9,7 +10,7 @@ import AuthorBio from '@/components/AuthorBio';
 const URL = 'https://usfinnexus.com/blog/tax-extension-deadline-2026';
 const IMAGE = 'https://usfinnexus.com/images/tax-extension-deadline-2026.webp';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: 'Tax Extension Deadline 2026: October 15 Filing Guide',
     description: 'The 2026 federal tax extension deadline is October 15. Learn who must file, late penalties, payment-plan options and the final filing checklist.',
     alternates: { canonical: URL },
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
         description: 'File on time, understand what an extension does not cover and know your IRS payment options.',
         images: [IMAGE],
     },
-};
+});
 
 const faqs = [
     { question: 'What is the federal tax extension deadline in 2026?', answer: 'For most calendar-year individual taxpayers who timely requested an extension for their 2025 federal return, the extended filing deadline is October 15, 2026. An IRS disaster-relief notice, combat-zone rule or another special rule may provide a different deadline.' },

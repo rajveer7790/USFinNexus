@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Target, TrendingUp, Building, Calculator, AlertTriangle, ShieldCheck, DollarSign, Activity } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "S&P 500 vs. Real Estate: The Ultimate 2026 Investing Showdown | Guide",
     description: 'Should you buy an index fund or a rental property? Learn the mathematical difference between compound interest and real estate leverage in 2026.',
     alternates: { canonical: 'https://usfinnexus.com/blog/sp500-vs-real-estate-investing-2026' },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         siteName: 'USFinNexus',
         images: [{ url: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: 'Stocks vs Real Estate' }]
     }
-};
+});
 
 export default function BlogPost() {
     return (
@@ -140,10 +140,11 @@ export default function BlogPost() {
 
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 26, 2026" />
             </div>
+            <ContextualInternalLinks currentSlug="sp500-vs-real-estate-investing-2026" />
             </article>
         </div>
-        <RelatedCalculators exclude={[]} limit={4} title="Related Calculators" />
-        <RelatedArticles currentSlug="sp500-vs-real-estate-investing-2026" category="Investing" />
+
+
         </>
     );
 }

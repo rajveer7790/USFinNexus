@@ -40,7 +40,7 @@ export default function ReadingFrame({ children }: { children: ReactNode }) {
             }
             return { id: heading.id, text };
         });
-        setOutline(next.length >= 3 ? next : []);
+        setOutline(next);
         const hash = location.hash.slice(1);
         if (hash.startsWith('section-')) document.getElementById(hash)?.scrollIntoView();
     }, [isDetail, pathname]);
@@ -48,10 +48,10 @@ export default function ReadingFrame({ children }: { children: ReactNode }) {
     if (!isDetail) return <>{children}</>;
     return <div className="fn-reading-shell">
         <aside className="fn-reading-aside" aria-label="Reading tools">
-            {outline.length > 0 && <details className="fn-reading-outline" open={wide}>
+            <details className="fn-reading-outline" open={wide}>
                 <summary>In this article <ChevronDown size={16} aria-hidden="true" /></summary>
                 <ol>{outline.map(item => <li key={item.id}><a href={`#${item.id}`}>{item.text}</a></li>)}</ol>
-            </details>}
+            </details>
             <Link className="fn-reading-return" href={`/${pathname.split('/')[1]}`}>Back to {pathname.startsWith('/blog/') ? 'News & Guides' : pathname.startsWith('/guides/') ? 'all guides' : 'all articles'}</Link>
         </aside>
         <div className="fn-reading-content" ref={content}>{children}</div>

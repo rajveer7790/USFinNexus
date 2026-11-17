@@ -1,3 +1,4 @@
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
@@ -7,7 +8,7 @@ import RelatedCalculators from '@/components/RelatedCalculators';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: 'Piggyback Mortgages (80/10/10): How to Avoid PMI in 2026',
     description: 'Avoid Private Mortgage Insurance (PMI) without a 20% down payment using the 80/10/10 piggyback loan strategy. Compare the math and risks for 2026 buyers.',
     openGraph: {
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
         images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Piggyback Mortgage 80/10/10 Guide 2026' }]
     },
     alternates: { canonical: 'https://usfinnexus.com/blog/piggyback-mortgage-80-10-10-strategy' },
-};
+});
 
 export default function PostComponent() {
     return (

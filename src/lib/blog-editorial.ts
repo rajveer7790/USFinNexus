@@ -30,7 +30,14 @@ const FALLBACKS: Record<string, string> = {
 };
 
 function exists(url: string): boolean {
-    return url.startsWith('/images/') && fs.existsSync(path.join(process.cwd(), 'public', url));
+    if (!url.startsWith('/images/')) return false;
+    const file = path.join(process.cwd(), 'public', url);
+    if (!fs.existsSync(file)) return false;
+    if (url.endsWith('.webp')) {
+        const data = fs.readFileSync(file);
+        return data.length > 12 && data.toString('ascii', 0, 4) === 'RIFF' && data.toString('ascii', 8, 12) === 'WEBP';
+    }
+    return true;
 }
 
 export function blogImage(source: string, slug: string, category: string): string {

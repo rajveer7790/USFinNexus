@@ -1,3 +1,4 @@
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
 import Link from 'next/link';
@@ -8,7 +9,7 @@ import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: 'How Much House Can I Afford Based on My Income? (2026)',
     description: 'Learn how much house you can afford based on income, down payment, debts and PITI. Use the 28/36 guideline and a free affordability calculator for a realistic budget.',
     alternates: { canonical: 'https://usfinnexus.com/blog/how-much-house-can-i-afford-2026' },
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
         siteName: 'USFinNexus',
         images: [{ url: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: 'Home Affordability' }]
     }
-};
+});
 
 export default function BlogPost() {
     return (

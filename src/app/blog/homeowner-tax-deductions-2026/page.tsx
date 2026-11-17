@@ -1,19 +1,19 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Target, CheckCircle2, DollarSign, ExternalLink, AlertTriangle, ShieldCheck, FileCheck, Scale, Info, PlusCircle, Landmark, Calculator } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: 'Homeowner Tax Deductions for 2026',
     description: 'IRS-verified homeowner tax deductions for tax year 2026, including the $40,400 SALT limit, mortgage-interest rules and the enhanced $6,000 senior deduction.',
     alternates: { canonical: 'https://usfinnexus.com/blog/homeowner-tax-deductions-2026' },
     openGraph: { type: 'article', title: 'Homeowner Tax Deductions for 2026', description: 'IRS-verified 2026 SALT, mortgage-interest and enhanced senior-deduction rules.', url: 'https://usfinnexus.com/blog/homeowner-tax-deductions-2026', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Homeowner Tax Deductions 2026' }] },
     twitter: { card: 'summary_large_image', title: 'Homeowner Tax Deductions for 2026', description: 'IRS-verified SALT, mortgage-interest and senior-deduction rules for tax year 2026.', images: ['https://usfinnexus.com/images/home-hero-v2.png'] },
-};
+});
 
 export default function HomeownerTaxDeductionsBlog() {
     return (
@@ -261,7 +261,8 @@ export default function HomeownerTaxDeductionsBlog() {
                         </p>
                     </div>
 
-                </article>
+                <ContextualInternalLinks currentSlug="homeowner-tax-deductions-2026" />
+            </article>
 
                 <div className="mt-16">
 
@@ -305,8 +306,8 @@ export default function HomeownerTaxDeductionsBlog() {
                     </div>
                 </div>
 
-                <RelatedCalculators />
-                    <RelatedArticles currentSlug="homeowner-tax-deductions-2026" />
+
+
                     <AuthorBio author={USFinNexusEditorialTeam} />
                 </div>
             </div>

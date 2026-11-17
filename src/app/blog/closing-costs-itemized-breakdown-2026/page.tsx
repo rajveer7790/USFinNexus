@@ -1,8 +1,8 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 import EditorialImage from '@/components/EditorialImage';
@@ -13,13 +13,13 @@ const canonical = 'https://usfinnexus.com/blog/closing-costs-itemized-breakdown-
 const cover = '/images/redesign/closing-costs.webp';
 const image = { url: 'https://usfinnexus.com' + cover, width: 1250, height: 410, alt: "Exterior and roof of a blue-gray home" };
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title,
     description,
     alternates: { canonical },
     openGraph: { type: 'article', title, description, url: canonical, siteName: 'USFinNexus', images: [image] },
     twitter: { card: 'summary_large_image', title, description, images: [{ url: image.url, alt: image.alt }] },
-};
+});
 
 export default function BlogPost() {
     return (
@@ -72,11 +72,12 @@ export default function BlogPost() {
                     </div>
                     <p><strong>Sources:</strong> <a href="https://www.consumerfinance.gov/owning-a-home/loan-estimate/">CFPB Loan Estimate explainer</a> and <a href="https://www.consumerfinance.gov/owning-a-home/closing-disclosure/">Closing Disclosure explainer</a>.</p>
                     <p>This article is for education only, not financial, tax, legal or lending advice.</p>
-                </article>
+                <ContextualInternalLinks currentSlug="closing-costs-itemized-breakdown-2026" />
+            </article>
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="November 9, 2026" />
             </div>
-            <RelatedCalculators limit={4} />
-            <RelatedArticles currentSlug="closing-costs-itemized-breakdown-2026" />
+
+
         </>
     );
 }

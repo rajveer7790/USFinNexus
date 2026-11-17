@@ -1,3 +1,4 @@
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ReviewedGuide from '@/components/ReviewedGuide';
@@ -5,7 +6,7 @@ const title = "Roth IRA vs 401(k) in 2026: Limits, Taxes and What to Fund First"
 const description = "Compare 2026 Roth IRA and 401(k) limits, employer matches, taxes and withdrawal rules. Choose a savings order that fits your cash flow.";
 const url = 'https://usfinnexus.com/blog/roth-ira-vs-401k-comparison-2026';
 const image = '/images/401k-contribution-limits-2026.webp';
-export const metadata: Metadata = { title, description, alternates: { canonical: url }, openGraph: { title, description, url, type: 'article', images: [{ url: image, width: 1200, height: 630 }] }, twitter: { card: 'summary_large_image', title, description, images: [image] } };
+export const metadata: Metadata = completeEditorialMetadata({ title, description, alternates: { canonical: url }, openGraph: { title, description, url, type: 'article', images: [{ url: image, width: 1200, height: 630 }] }, twitter: { card: 'summary_large_image', title, description, images: [image] } });
 export default function Page() {
  const faqs: [string,string][] = [
  ['Can I contribute to a Roth IRA and a 401(k) in the same year?', 'Yes, if you qualify for each account. Workplace-plan deferrals and IRA contributions have separate limits. Direct Roth IRA contributions also depend on compensation, filing status and modified adjusted gross income.'],

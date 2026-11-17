@@ -1,3 +1,4 @@
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -19,11 +20,11 @@ const faqs = [
   { question: 'When will families claim the 2027 Child Tax Credit?', answer: 'The credit generally applies to income and family circumstances during tax year 2027 and is claimed on the federal return normally filed in 2028 using Form 1040 and Schedule 8812.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', title, description, url, siteName: 'USFinNexus', publishedTime: '2026-11-07', modifiedTime: '2026-11-07', images: [{ url: image, width: 1200, height: 630, alt: 'American family organizing household tax records for the 2027 Child Tax Credit' }] },
   twitter: { card: 'summary_large_image', title, description, images: [image] },
-};
+});
 
 export default function ChildTaxCredit2027Page() {
   return <main id="main-content" className="mx-auto max-w-5xl px-4 py-8 sm:px-6">

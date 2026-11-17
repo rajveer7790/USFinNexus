@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { getAllBlogPosts, type BlogPostEntry } from '@/lib/blogs';
+import { getRelatedBlogPosts, type BlogPostEntry } from '@/lib/blogs';
 import { EDITORIAL_LINKS } from '@/lib/editorial-links';
+import { editorialTopic, TOPIC_CALCULATORS } from '@/lib/editorial-topics';
 
 interface ContextualInternalLinksProps {
     currentSlug: string;
@@ -36,71 +37,6 @@ const CALCULATORS: CalculatorLink[] = [
     { href: '/calculators/fire-planner', label: 'FIRE Planner', description: 'Estimate an early-retirement savings timeline.', keywords: ['fire', 'retirement', 'invest', 'savings', 'withdrawal'] },
 ];
 
-const CLUSTERS: Record<string, string[]> = {
-    housing: ['home', 'house', 'housing', 'mortgage', 'refinance', 'pmi', 'heloc', 'equity', 'fha', 'va', 'usda', 'jumbo', 'closing', 'down-payment', 'loan-limit', 'appraisal', 'escrow', 'buyer', 'seller', 'real-estate'],
-    debt: ['loan', 'debt', 'credit', 'card', 'payoff', 'apr', 'personal', 'student', 'auto', 'car', 'refinance'],
-    tax: ['tax', 'irs', 'deduction', 'credit', 'income', 'capital-gains', 'withholding', 'salt', 'mileage', 'overtime', 'tips'],
-    investing: ['invest', 'investment', 'bond', 'stock', 'ira', '401k', 'roth', 'dividend', 'portfolio', 'capital-gains'],
-    retirement: ['retire', 'retirement', 'social-security', 'medicare', 'rmd', 'fire', '401k', 'ira', 'pension'],
-    education: ['fafsa', 'pell', 'student', 'college', 'education', '529'],
-    benefits: ['snap', 'medicare', 'social-security', 'benefit', 'disability', 'aca'],
-};
-
-const STOP_WORDS = new Set(['2026', '2027', '2028', 'guide', 'calculator', 'explained', 'complete', 'rules', 'rule', 'how', 'what', 'which', 'and', 'the', 'for', 'with', 'vs', 'v2']);
-
-const CALCULATOR_TOPIC_TERMS: Record<string, string> = {
-    affordability: 'home house mortgage buyer down-payment affordability',
-    'biweekly-mortgage': 'biweekly mortgage payment payoff interest amortization',
-    arizona: 'arizona mortgage home housing property tax',
-    amortization: 'mortgage payment amortization payoff interest',
-    arm: 'mortgage adjustable-rate refinance rate',
-    'auto-loan': 'auto car vehicle loan affordability',
-    budget: 'budget savings debt income expenses',
-    california: 'california mortgage home housing jumbo',
-    'closing-costs': 'closing mortgage home buyer seller',
-    comparison: 'mortgage 15-year 30-year points down-payment pmi',
-    'credit-card': 'credit card debt payoff balance apr',
-    'crypto-tax': 'crypto tax capital-gains investing',
-    'debt-payoff': 'debt payoff credit loan avalanche snowball',
-    'down-payment': 'down-payment home buyer mortgage pmi',
-    drip: 'investment dividend investing retirement',
-    dti: 'dti debt mortgage income qualification',
-    colorado: 'colorado mortgage home housing property tax',
-    'extra-payment': 'extra payment mortgage payoff principal interest amortization',
-    georgia: 'georgia mortgage home housing property tax',
-    illinois: 'illinois mortgage home housing property tax',
-    massachusetts: 'massachusetts mortgage home housing property tax',
-    'new-jersey': 'new jersey mortgage home housing property tax',
-    'new-york': 'new york mortgage home housing property tax',
-    'north-carolina': 'north carolina mortgage home housing property tax',
-    ohio: 'ohio mortgage home housing property tax',
-    pennsylvania: 'pennsylvania mortgage home housing property tax',
-    fha: 'fha mortgage home buyer loan limits',
-    'fha-va-usda': 'fha va usda mortgage home buyer',
-    'fire-planner': 'fire retirement investing savings withdrawal',
-    florida: 'florida mortgage home housing',
-    heloc: 'heloc equity home second-mortgage refinance',
-    'income-tax': 'tax irs income deduction credit withholding',
-    'interest-only': 'interest-only mortgage home loan',
-    investment: 'investment investing stocks bonds compound interest',
-    mortgage: 'mortgage home housing buyer loan payment',
-    'mortgage-payoff': 'mortgage payoff extra payment refinance',
-    'options-profit': 'investing options stock profit',
-    'personal-loan': 'personal loan debt credit payoff',
-    pmi: 'pmi mortgage insurance cancellation loan-to-value down-payment home',
-    virginia: 'virginia mortgage home housing property tax',
-    washington: 'washington mortgage home housing property tax',
-    'points-buydown': 'mortgage points buydown rate closing',
-    refinance: 'refinance mortgage rate break-even equity',
-    'rent-vs-buy': 'rent buy home mortgage housing',
-    'rental-property': 'rental property real-estate mortgage investing',
-    retirement: 'retirement 401k ira social-security investing',
-    'student-loan': 'student loan college education fafsa pell',
-    texas: 'texas mortgage home housing',
-    'trump-account': 'trump accounts 529 college education',
-    va: 'va mortgage veteran home loan',
-};
-
 const CALCULATOR_OVERRIDES: Record<string, string[]> = {
     pmi: ['/calculators/mortgage', '/calculators/fha', '/calculators/refinance'],
     'extra-payment': ['/calculators/mortgage', '/calculators/mortgage-payoff', '/calculators/debt-payoff'],
@@ -123,62 +59,22 @@ const CALCULATOR_OVERRIDES: Record<string, string[]> = {
     'snap-benefits-2027': ['/calculators/budget', '/calculators/income-tax', '/calculators/debt-payoff'],
 };
 
-function tokens(value: string): Set<string> {
-    return new Set(value.toLowerCase().split(/[^a-z0-9]+/).filter((token) => token.length > 2 && !STOP_WORDS.has(token)));
-}
-
-function clusterMatches(value: string): Set<string> {
-    const source = tokens(value);
-    return new Set(Object.entries(CLUSTERS).filter(([, terms]) => terms.some((term) => source.has(term))).map(([cluster]) => cluster));
-}
-
-function linkSource(currentSlug: string): string {
-    return `${currentSlug} ${CALCULATOR_TOPIC_TERMS[currentSlug] || ''}`;
-}
-
-function scoreBlog(currentSlug: string, candidate: BlogPostEntry): number {
-    const currentTokens = tokens(linkSource(currentSlug));
-    const candidateTokens = tokens(candidate.slug);
-    const sharedTokens = [...currentTokens].filter((token) => candidateTokens.has(token)).length;
-    const currentClusters = clusterMatches(linkSource(currentSlug));
-    const candidateClusters = clusterMatches(candidate.slug);
-    const sharedClusters = [...currentClusters].filter((cluster) => candidateClusters.has(cluster)).length;
-    const sameCategory = candidate.category === getAllBlogPosts().find((post) => post.slug === currentSlug)?.category;
-    return sharedTokens * 4 + sharedClusters * 5 + (sameCategory ? 2 : 0);
-}
-
 function getBlogSuggestions(currentSlug: string): BlogPostEntry[] {
-    const all = getAllBlogPosts();
-    return all
-        .filter((post) => post.slug !== currentSlug)
-        .map((post, index) => ({ post, score: scoreBlog(currentSlug, post), index }))
-        .sort((a, b) => b.score - a.score || a.index - b.index)
-        .filter(({ score }) => score > 0)
-        .slice(0, 3)
-        .map(({ post }) => post);
+    return getRelatedBlogPosts(currentSlug, 3);
 }
 
 function getCalculatorSuggestions(currentSlug: string): CalculatorLink[] {
-    const overrideHrefs = CALCULATOR_OVERRIDES[currentSlug];
+    const overrideHrefs = CALCULATOR_OVERRIDES[currentSlug] || TOPIC_CALCULATORS[editorialTopic(currentSlug)]?.map(slug => `/calculators/${slug}`);
     if (overrideHrefs) {
         return overrideHrefs
             .filter((href) => href !== `/calculators/${currentSlug}`)
-            .map((href) => CALCULATORS.find((calculator) => calculator.href === href))
+            .map((href) => CALCULATORS.find((calculator) => calculator.href === href) || {
+                href, label: href.split('/').pop()!.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') + ' Calculator',
+                description: 'Explore an educational estimate with your own inputs.', keywords: [],
+            })
             .filter((calculator): calculator is CalculatorLink => Boolean(calculator));
     }
-    const source = currentSlug.toLowerCase();
-    const sourceClusters = clusterMatches(source);
-    return CALCULATORS
-        .map((calculator, index) => {
-            const directMatches = calculator.keywords.reduce((total, keyword) => total + (source.includes(keyword) ? 1 : 0), 0);
-            const calculatorClusters = clusterMatches(calculator.keywords.join(' '));
-            const sharedClusters = [...sourceClusters].filter((cluster) => calculatorClusters.has(cluster)).length;
-            return { calculator, score: directMatches * 3 + sharedClusters * 2, index };
-        })
-        .filter(({ calculator, score }) => score > 0 && calculator.href !== `/calculators/${currentSlug}`)
-        .sort((a, b) => b.score - a.score || a.index - b.index)
-        .slice(0, 3)
-        .map(({ calculator }) => calculator);
+    return [];
 }
 
 export default function ContextualInternalLinks({ currentSlug, showBlogs = true, showCalculators = true }: ContextualInternalLinksProps) {
@@ -188,8 +84,8 @@ export default function ContextualInternalLinks({ currentSlug, showBlogs = true,
     if (blogs.length === 0 && calculators.length === 0) return null;
 
     return (
-        <section className="not-prose mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-5" aria-labelledby="contextual-links-heading">
-            <h2 id="contextual-links-heading" className="text-lg font-black text-slate-900">Continue your financial research</h2>
+        <section className="not-prose mt-10 rounded-2xl border border-slate-200 bg-white p-4 sm:p-5" aria-label="Related financial guides and calculators" data-nosnippet="true">
+            <h2 className="text-lg font-black text-slate-900">Continue your financial research</h2>
             <p className="mt-1 text-sm text-slate-600">Use these closely related USFinNexus guides and tools to plan your next step.</p>
             {nextSteps.length > 0 && <div className="mt-4 space-y-3 text-sm text-slate-700">{nextSteps.map(link => <p key={link.href}>{link.before}<Link prefetch={false} className="text-blue-700 underline" href={link.href}>{link.anchor}</Link>{link.after}</p>)}</div>}
             <div className="mt-4 grid gap-4 sm:grid-cols-2">

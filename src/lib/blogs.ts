@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { BLOG_ALIASES } from '@/lib/canonical-routes';
 import { blogCategory, blogExcerpt, blogImage, blogTitle } from '@/lib/blog-editorial';
+import { editorialTopic, editorialFamily, meaningfulTerms, CURATED_RELATED } from '@/lib/editorial-topics';
 
 export interface BlogPostEntry {
     slug: string;
@@ -37,13 +38,16 @@ export function getAllBlogPosts(): BlogPostEntry[] {
     return cachedPosts;
 }
 
-const STOP = new Set(['2026','2027','guide','calculator','how','what','your','with','the','and','for','vs']);
 export function getRelatedBlogPosts(currentSlug: string, count = 4, category?: string): BlogPostEntry[] {
     const all = getAllBlogPosts();
     const current = all.find(p => p.slug === currentSlug);
-    const terms = new Set(currentSlug.split('-').filter(t => t.length > 2 && !STOP.has(t)));
+    const terms = meaningfulTerms(currentSlug);
+    const topic = editorialTopic(currentSlug);
     return all.filter(p => p.slug !== currentSlug).map(post => ({
         post,
-        score: post.slug.split('-').filter(t => terms.has(t)).length * 5 + (post.category === (category || current?.category) ? 2 : 0),
-    })).filter(x => x.score > 0).sort((a,b) => b.score-a.score || a.post.slug.localeCompare(b.post.slug)).slice(0,count).map(x=>x.post);
+        score: (CURATED_RELATED[currentSlug]?.includes(post.slug) ? 100 - CURATED_RELATED[currentSlug].indexOf(post.slug) : 0)
+            + (editorialTopic(post.slug) === topic ? 40 : editorialFamily(editorialTopic(post.slug)) === editorialFamily(topic) ? 8 : 0)
+            + [...meaningfulTerms(post.slug)].filter(t => terms.has(t)).length * 3
+            + (post.category === (category || current?.category) ? 1 : 0),
+    })).filter(x => x.score >= 8).sort((a,b) => b.score-a.score || (b.post.dateISO || '').localeCompare(a.post.dateISO || '') || a.post.slug.localeCompare(b.post.slug)).slice(0,count).map(x=>x.post);
 }

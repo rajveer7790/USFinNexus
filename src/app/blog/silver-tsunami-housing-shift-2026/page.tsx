@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Home, Users, ArrowRight, Waves, MapPin, Key, Building } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: 'The Silver Tsunami Housing Shift: Aging Boomers in 2026',
     description: 'How the aging Baby Boomer generation is finally unlocking the 2026 housing market inventory, and the regions where millennials can capitalize on this shift.',
     alternates: { canonical: 'https://usfinnexus.com/blog/silver-tsunami-housing-shift-2026' },
@@ -17,15 +17,15 @@ export const metadata: Metadata = {
         url: 'https://usfinnexus.com/blog/silver-tsunami-housing-shift-2026',
         type: 'article',
         siteName: 'USFinNexus',
-        images: [{ url: 'https://usfinnexus.com/images/silver_tsunami_housing.png', width: 1200, height: 630, alt: 'Silver Tsunami Housing 2026' }],
+        images: [{ url: 'https://usfinnexus.com/images/mortgage-cash-reserves-after-closing-2026.webp', width: 1200, height: 630, alt: 'Illustration of household housing decisions' }],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'The Silver Tsunami is Here: 2026 Housing Market Impact',
         description: 'Baby boomers are finally moving. Where is the inventory unlocking, and how can buyers capitalize?',
-        images: ['https://usfinnexus.com/images/silver_tsunami_housing.png'],
+        images: ['https://usfinnexus.com/images/mortgage-cash-reserves-after-closing-2026.webp'],
     },
-};
+});
 
 export default function SilverTsunamiBlog() {
     return (
@@ -211,11 +211,12 @@ export default function SilverTsunamiBlog() {
 
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 16, 2026" />
                 </div>
+            <ContextualInternalLinks currentSlug="silver-tsunami-housing-shift-2026" />
             </article>
 
             <div className="mt-16">
-                <RelatedCalculators exclude={[]} limit={4} title="Homebuyer Tools" />
-                <RelatedArticles currentSlug="silver-tsunami-housing-shift-2026" category="Real Estate" />
+
+
             </div>
         </div>
         </>

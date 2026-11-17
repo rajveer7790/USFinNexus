@@ -1,3 +1,4 @@
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ReviewedGuide from '@/components/ReviewedGuide';
@@ -5,7 +6,7 @@ const title = "Mega Backdoor Roth in 2026: Plan Rules and Contribution Room";
 const description = "Learn how after-tax 401(k) contributions and Roth conversions work, calculate 2026 contribution room and check the plan features before acting.";
 const url = 'https://usfinnexus.com/blog/mega-backdoor-roth-ira-guide-2026';
 const image = '/images/401k-contribution-limits-2026.webp';
-export const metadata: Metadata = { title, description, alternates: { canonical: url }, openGraph: { title, description, url, type: 'article', images: [{ url: image, width: 1200, height: 630 }] }, twitter: { card: 'summary_large_image', title, description, images: [image] } };
+export const metadata: Metadata = completeEditorialMetadata({ title, description, alternates: { canonical: url }, openGraph: { title, description, url, type: 'article', images: [{ url: image, width: 1200, height: 630 }] }, twitter: { card: 'summary_large_image', title, description, images: [image] } });
 export default function Page() {
  const faqs: [string,string][] = [
  ['Is $72,000 a new Roth IRA contribution limit?', 'No. It is the 2026 overall defined-contribution annual-additions limit, excluding catch-ups and subject to compensation limits. Employer contributions and employee deferrals use part of that room. An IRA has a separate, much smaller annual contribution limit.'],

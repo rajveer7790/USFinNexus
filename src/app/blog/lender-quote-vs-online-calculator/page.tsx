@@ -1,3 +1,4 @@
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
@@ -7,7 +8,7 @@ import RelatedCalculators from '@/components/RelatedCalculators';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "Why Your Lender's Quote is Higher Than the Online Calculator",
     description: 'Frustrated that your official Loan Estimate is hundreds of dollars higher than what the online calculator promised? Learn the 4 hidden costs lenders legally have to include.',
     openGraph: {
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
         images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Lender Quote vs Calculator Guide' }]
     },
     alternates: { canonical: 'https://usfinnexus.com/blog/lender-quote-vs-online-calculator' },
-};
+});
 
 export default function PostComponent() {
     return (

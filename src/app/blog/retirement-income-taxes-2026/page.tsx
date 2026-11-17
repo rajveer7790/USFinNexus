@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -16,11 +18,11 @@ const faqs = [
   { question: 'When do required minimum distributions start?', answer: 'The IRS says traditional IRA and certain plan owners generally start required minimum distributions at age 73 under current rules, although workplace-plan timing and inherited-account rules can differ.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', title, description, url, publishedTime: '2026-11-04', modifiedTime: '2026-11-04', siteName: 'USFinNexus', images: [{ url: image, width: 1200, height: 630, alt: 'Retired couple reviewing pension, investment and tax-planning documents' }] },
   twitter: { card: 'summary_large_image', title, description, images: [image] },
-};
+});
 
 export default function Page() {
   return <>
@@ -92,7 +94,8 @@ export default function Page() {
 
         <h2>Sources and tax disclaimer</h2>
         <p>Primary sources reviewed November 4, 2026: the IRS <a href="https://www.irs.gov/newsroom/preparing-for-retirement-know-how-it-can-affect-taxes">retirement tax tip</a>, <a href="https://www.irs.gov/taxtopics/tc410">Topic 410 on pensions and annuities</a>, <a href="https://www.irs.gov/publications/p915">Publication 915</a>, and <a href="https://www.irs.gov/retirement-plans/retirement-plan-and-ira-required-minimum-distributions-faqs">RMD FAQs</a>. This article is general education, not individualized tax, legal, investment or Medicare advice. Confirm current forms and rules for the tax year you are filing.</p>
-      </article>
+      <ContextualInternalLinks currentSlug="retirement-income-taxes-2026" />
+            </article>
     </main>
   </>;
 }

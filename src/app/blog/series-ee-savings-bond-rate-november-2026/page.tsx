@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -16,11 +18,11 @@ const faqs = [
   { question: 'Is an EE bond better than an I bond?', answer: 'They solve different problems. EE bonds offer a fixed rate and a 20-year doubling guarantee; I bonds combine a lifetime fixed component with an inflation component that resets every six months. Your time horizon and inflation concern determine the better fit.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', title, description, url, publishedTime: '2026-11-02', modifiedTime: '2026-11-02', siteName: 'USFinNexus', images: [{ url: image, width: 1200, height: 630, alt: 'Savings certificate, hourglass and long-term growth chart representing Series EE bonds' }] },
   twitter: { card: 'summary_large_image', title, description, images: [image] },
-};
+});
 
 export default function Page() {
   return <>
@@ -89,7 +91,8 @@ export default function Page() {
 
         <h2>Sources and financial disclaimer</h2>
         <p>Primary sources reviewed November 2, 2026: TreasuryDirect&apos;s <a href="https://www.treasurydirect.gov/savings-bonds/ee-bonds/">Series EE bond page</a>, <a href="https://www.treasurydirect.gov/savings-bonds/buy-a-bond/">buying guide</a>, and <a href="https://www.treasurydirect.gov/savings-bonds/tax-information-ee-i-bonds/">tax information</a>; and the IRS <a href="https://www.irs.gov/forms-pubs/about-publication-550">Publication 550 hub</a>. This article is educational, not individualized investment, tax, legal or estate advice. Treasury terms, tax rules and your time horizon should be checked before purchase.</p>
-      </article>
+      <ContextualInternalLinks currentSlug="series-ee-savings-bond-rate-november-2026" />
+            </article>
     </main>
   </>;
 }

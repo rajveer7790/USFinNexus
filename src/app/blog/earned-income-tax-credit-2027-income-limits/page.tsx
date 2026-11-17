@@ -1,3 +1,4 @@
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -19,11 +20,11 @@ const faqs = [
   { question: 'When is the 2027 EITC claimed?', answer: 'The 2027 EITC is generally claimed on the federal income-tax return filed in 2028. Taxpayers should use the final 2027 Form 1040 instructions and Schedule EIC when available.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', title, description, url, siteName: 'USFinNexus', publishedTime: '2026-11-08', modifiedTime: '2026-11-08', images: [{ url: image, width: 1200, height: 630, alt: 'American family reviewing income records for the 2027 Earned Income Tax Credit' }] },
   twitter: { card: 'summary_large_image', title, description, images: [image] },
-};
+});
 
 export default function EarnedIncomeTaxCredit2027Page() {
   return <main id="main-content" className="mx-auto max-w-5xl px-4 py-8 sm:px-6">

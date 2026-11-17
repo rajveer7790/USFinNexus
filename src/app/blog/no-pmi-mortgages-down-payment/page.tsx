@@ -1,3 +1,4 @@
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ContextualInternalLinks from '@/components/ContextualInternalLinks';
@@ -7,7 +8,7 @@ import RelatedCalculators from '@/components/RelatedCalculators';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "No PMI Mortgages: How to Buy a House Without 20% Down | Guide",
     description: 'Avoid Private Mortgage Insurance without draining your savings. Explore Lender-Paid PMI, Piggyback loans, VA loans, and specialized physician programs for 2026.',
     openGraph: {
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
         images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'No PMI Mortgages Guide 2026' }]
     },
     alternates: { canonical: 'https://usfinnexus.com/blog/no-pmi-mortgages-down-payment' },
-};
+});
 
 export default function PostComponent() {
     return (

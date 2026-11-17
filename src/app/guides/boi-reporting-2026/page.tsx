@@ -1,3 +1,4 @@
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -9,13 +10,13 @@ const title = 'BOI Reporting in 2026: FinCEN Exemptions and Foreign-Entity Rules
 const description = 'Current 2026 FinCEN BOI rules explained: U.S.-created companies are exempt, while certain foreign-formed entities registered to do business in the United States may still report.';
 const url = 'https://usfinnexus.com/guides/boi-reporting-2026';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title: 'BOI Reporting 2026 | FinCEN Exemptions Guide',
   description,
   alternates: { canonical: url },
-  openGraph: { type: 'article', title, description, url, siteName: 'USFinNexus' },
+  openGraph: { type: 'article', title, description, url, siteName: 'USFinNexus', images: [{ url: '/images/state_rules_hero_1772351467101.png', alt: 'Illustration of state business filing documents' }] },
   twitter: { card: 'summary_large_image', title, description },
-};
+});
 
 const faq = [
   ['Does a U.S.-created LLC file BOI in 2026?', 'No. FinCEN says entities created in the United States, and their U.S. person beneficial owners, are exempt from BOI reporting under the current rule.'],

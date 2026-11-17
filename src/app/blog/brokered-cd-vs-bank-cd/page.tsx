@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -19,11 +21,11 @@ const faqs = [
   { question: 'Which CD is better for an emergency fund?', answer: 'Neither label guarantees appropriate access. Compare the bank withdrawal agreement or available secondary-market exit with your need for immediate cash. Money needed unexpectedly may belong in a separately accessible insured deposit account instead.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', locale: 'en_US', title, description, url, siteName: 'USFinNexus', publishedTime: date, modifiedTime: date, images: [{ url: image, width: 1200, height: 630, alt }] },
   twitter: { card: 'summary_large_image', title, description, images: [{ url: image, alt }] },
-};
+});
 
 export default function Page() {
   return <>
@@ -76,7 +78,8 @@ export default function Page() {
         <h2 id="faq">Brokered CD versus bank CD FAQs</h2>
         {faqs.map(f => <section key={f.question}><h3>{f.question}</h3><p>{f.answer}</p></section>)}
         <aside aria-label="Financial disclaimer"><p><strong>Educational disclaimer:</strong> Sources checked November 12, 2026. All prices, fees, rates and balances in examples are hypothetical, not offers or current market averages. This is not personalized banking, investment, legal or tax advice. Verify the issuer, offering document, withdrawal terms and applicable insurance coverage before investing.</p></aside>
-      </article>
+      <ContextualInternalLinks currentSlug="brokered-cd-vs-bank-cd" />
+            </article>
     </div>
   </>;
 }

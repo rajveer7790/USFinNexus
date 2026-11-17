@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Target, AlertCircle, Percent, DollarSign, Calculator, LineChart, FileCheck } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "The 28/36 Rule Explained: How Lenders Size Your Mortgage in 2026 | Guide",
     description: 'Learn exactly how mortgage lenders use the 28/36 rule to determine your borrowing limit in 2026. Calculate your front-end and back-end DTI to guarantee approval.',
     alternates: { canonical: 'https://usfinnexus.com/blog/28-36-rule-explained-lender-standards' },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         siteName: 'USFinNexus',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: '28/36 Mortgage Rule' }]
     }
-};
+});
 
 export default function BlogPost() {
     return (
@@ -230,10 +230,11 @@ export default function BlogPost() {
 
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 26, 2026" />
             </div>
+            <ContextualInternalLinks currentSlug="28-36-rule-explained-lender-standards" />
             </article>
         </div>
-        <RelatedCalculators exclude={['/calculators/dti']} limit={4} title="Related Calculators" />
-        <RelatedArticles currentSlug="28-36-rule-explained-lender-standards" category="Mortgage" />
+
+
         </>
     );
 }

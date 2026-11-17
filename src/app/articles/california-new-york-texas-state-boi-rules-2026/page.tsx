@@ -1,3 +1,4 @@
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ReviewedGuide from '@/components/ReviewedGuide';
@@ -5,7 +6,7 @@ const title = "California, New York and Texas: Separate State LLC Filing Checks"
 const description = "Separate federal BOI from California entity statements, New York foreign-country LLC disclosure and Texas information reports. Use the correct state agency.";
 const url = 'https://usfinnexus.com/articles/california-new-york-texas-state-boi-rules-2026';
 const image = '/images/state_rules_hero_1772351467101.png';
-export const metadata: Metadata = { title, description, alternates: { canonical: url }, openGraph: { title, description, url, type: 'article', images: [{ url: image, width: 1200, height: 630 }] }, twitter: { card: 'summary_large_image', title, description, images: [image] } };
+export const metadata: Metadata = completeEditorialMetadata({ title, description, alternates: { canonical: url }, openGraph: { title, description, url, type: 'article', images: [{ url: image, width: 1200, height: 630 }] }, twitter: { card: 'summary_large_image', title, description, images: [image] } });
 export default function Page() {
  const faqs: [string,string][] = [
  ['Does federal BOI exemption end state filing requirements?', 'No. Federal BOI, state entity statements and state tax information reports are separate. Check the entity type and current instructions from each responsible agency.'],

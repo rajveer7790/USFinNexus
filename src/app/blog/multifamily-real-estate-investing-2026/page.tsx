@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Target, Building, Home, Users, Landmark, Calculator, Key } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: "Multifamily Real Estate Investing 2026: The House Hacking Blueprint | Guide",
     description: 'Stop buying single-family homes. Learn the mathematical superiority of multifamily real estate and how to buy a 4-unit apartment building with just 3.5% down.',
     alternates: { canonical: 'https://usfinnexus.com/blog/multifamily-real-estate-investing-2026' },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         siteName: 'USFinNexus',
         images: [{ url: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: 'Multifamily Investing' }]
     }
-};
+});
 
 export default function BlogPost() {
     return (
@@ -139,10 +139,11 @@ export default function BlogPost() {
 
                 <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 26, 2026" />
             </div>
+            <ContextualInternalLinks currentSlug="multifamily-real-estate-investing-2026" />
             </article>
         </div>
-        <RelatedCalculators exclude={['/calculators/mortgage']} limit={4} title="Related Calculators" />
-        <RelatedArticles currentSlug="multifamily-real-estate-investing-2026" category="Real Estate Investing" />
+
+
         </>
     );
 }

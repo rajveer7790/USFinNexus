@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Calculator, DollarSign, BrainCircuit, LineChart, AlertCircle, Percent } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: 'How to Calculate a Monthly Mortgage Payment - Formula & Guide 2026',
     description: 'Stop relying on black-box calculators. Learn the exact mathematical formula to calculate your monthly mortgage payment by hand, and see what the banks hide in PITI.',
     openGraph: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         images: [{ url: 'https://usfinnexus.com/images/home-hero-v2.png', width: 1200, height: 630, alt: 'Mortgage Payment Formula Guide' }]
     },
     alternates: { canonical: 'https://usfinnexus.com/blog/how-to-calculate-monthly-mortgage-payment' },
-};
+});
 
 export default function PostComponent() {
     return (
@@ -273,7 +273,8 @@ export default function PostComponent() {
                         This is why calculating the math correctly, locking in the lowest possible rate, and understanding exactly what the bank is charging you is critical to building long-term wealth.
                     </p>
 
-                </article>
+                <ContextualInternalLinks currentSlug="how-to-calculate-monthly-mortgage-payment" />
+            </article>
 
                 <div className="mt-16">
                     
@@ -327,8 +328,8 @@ export default function PostComponent() {
                     </p>
                 </div>
 
-                <RelatedCalculators />
-                <RelatedArticles currentSlug="how-to-calculate-monthly-mortgage-payment" />
+
+
                 <AuthorBio author={USFinNexusEditorialTeam} />
                 </div>
             </div>

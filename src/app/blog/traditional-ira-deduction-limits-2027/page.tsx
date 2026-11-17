@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -20,13 +22,13 @@ const faqs = [
   { question: 'Do traditional and Roth IRAs have separate annual limits?', answer: 'No. The general $7,500 limit, plus the $1,100 age-50 catch-up when eligible, is shared across all traditional and Roth IRA contributions for one person.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title,
   description,
   alternates: { canonical: url },
   openGraph: { type: 'article', locale: 'en_US', title, description, url, siteName: 'USFinNexus', publishedTime: date, modifiedTime: date, images: [{ url: image, width: 1200, height: 630, alt }] },
   twitter: { card: 'summary_large_image', title, description, images: [{ url: image, alt }] },
-};
+});
 
 export default function TraditionalIraDeductionLimits2027Page() {
   return (
@@ -127,7 +129,8 @@ export default function TraditionalIraDeductionLimits2027Page() {
           {faqs.map((faq) => <section key={faq.question}><h3>{faq.question}</h3><p>{faq.answer}</p></section>)}
 
           <aside aria-label="Financial disclaimer"><p><strong>Educational disclaimer:</strong> Official guidance checked November 16, 2026, including IRS Notice 2026-66 and the November 12 IRS announcement. This article is general education, not individualized tax, legal, investment or retirement advice. Later IRS forms, compensation, workplace-plan status, filing status and transactions can change the result.</p></aside>
-        </article>
+        <ContextualInternalLinks currentSlug="traditional-ira-deduction-limits-2027" />
+            </article>
       </div>
     </>
   );

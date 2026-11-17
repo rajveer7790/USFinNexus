@@ -101,7 +101,7 @@ function getBlogEntries(): Array<{ slug: string; lastModified?: Date }> {
             .filter((entry) => entry.isDirectory() && !canonicalizedAliases.has(entry.name) && fs.existsSync(path.join(blogDir, entry.name, 'page.tsx')))
             .map((entry) => {
                 const source = fs.readFileSync(path.join(blogDir, entry.name, 'page.tsx'), 'utf8');
-                const modified = source.includes('<ReviewedGuide') ? '2026-10-17' : source.match(/dateModified=["'](\d{4}-\d{2}-\d{2})["']/)?.[1];
+                const modified = source.match(/(?:dateModified|modified)=["'](\d{4}-\d{2}-\d{2})["']/)?.[1] || (source.includes('<ReviewedGuide') ? '2026-10-17' : undefined);
                 const published = source.match(/(?:datePublished|published)=["'](\d{4}-\d{2}-\d{2})["']/)?.[1];
                 return { slug: entry.name, lastModified: safeDate(modified || published) };
             });

@@ -1,163 +1,31 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { CheckCircle2, AlertTriangle, TrendingUp, Info } from 'lucide-react';
-import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
-import Breadcrumbs from '@/components/Breadcrumbs';
-import ArticleSchema from '@/components/ArticleSchema';
+import ReviewedGuide from '@/components/ReviewedGuide';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
+const title = "Should I Refinance? Costs, Break-Even and Loan-Term Math";
+const description = "Compare refinance costs, monthly savings and the remaining loan term. See a worked example and why no-closing-cost offers still involve trade-offs.";
+const url = 'https://usfinnexus.com/blog/should-i-refinance-2026';
+const image = '/images/mortgage-recast-vs-refinance-2026.webp';
+export const metadata: Metadata = completeEditorialMetadata({ title, description, alternates: { canonical: url }, openGraph: { title, description, url, type: 'article', publishedTime: '2026-02-25', modifiedTime: '2026-11-17', images: [{ url: image, width: 1200, height: 630, alt: title }] } });
+export default function Page() {
+const faqs: [string, string][] = [["Is a one-percentage-point rate drop required to refinance?","No. The useful rate change depends on the balance, fees, remaining term, new term and expected holding period. Compare actual Loan Estimates rather than a universal percentage rule."],["How do I calculate simple refinance break-even?","Divide the nonrecoverable refinance costs by the monthly payment savings being compared. It is a screening estimate and does not by itself account for different payoff dates, balances or investment returns."],["Is no-closing-cost refinancing free?","No. Costs can be covered through a higher rate and lender credit or added to the loan balance. Review the rate, principal and total cost in the Loan Estimate."]];
+return <ReviewedGuide title={title} description={description} path="/blog/should-i-refinance-2026" published="2026-02-25" modified="2026-11-17" image={image} alt={title} faqs={faqs} answer={<>Refinancing may help when its costs and loan terms improve your position over the time you expect to keep the mortgage. Calculate a simple break-even, then compare balances, total payments, term changes and financed fees. There is no universal minimum rate drop or two-year rule that guarantees a good result.</>}>
 
-export const metadata: Metadata = {
-    title: 'Should You Refinance in 2026? Break-Even Calculator + Complete Guide',
-    description: 'Is refinancing worth it in 2026? Calculate your break-even month, monthly savings, and lifetime interest reduction. Includes when NOT to refinance and current rate guidance.',
-    alternates: { canonical: 'https://usfinnexus.com/blog/should-i-refinance-2026' },
-    openGraph: { type: 'article', title: 'Should You Refinance in 2026? Break-Even Guide', description: 'Break-even calculator, monthly savings, and the complete guide to whether refinancing makes sense at current 2026 rates.', url: 'https://usfinnexus.com/blog/should-i-refinance-2026', siteName: 'USFinNexus', images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Should I Refinance 2026' }] },
-    twitter: { card: 'summary_large_image', title: 'Should You Refinance in 2026? Break-Even Guide', description: 'Calculate your break-even month and monthly savings before refinancing at 2026 rates.', images: ['https://usfinnexus.com/icon-512.png'] },
-};
+<h2>Use your actual quote, not an undated national rate</h2>
+<p>A national survey is context, not the rate offered to your household. Credit, equity, loan purpose, property type, points and the rate-lock date can change a quote. Start with a current Loan Estimate for the same transaction and compare it with your existing statement. This guide does not claim that an illustrative rate is today's market average.</p>
+<p>Use the <Link href="/calculators/refinance">refinance calculator</Link> for scenarios, then review the lender's written figures. Our <Link href="/blog/mortgage-refinance-break-even-2026">refinance break-even guide</Link> explains how the holding period changes the decision.</p>
+<h2>A worked principal-and-interest example</h2>
+<p>For an illustration with a $350,000 balance and exactly 30 years remaining, a fixed 7.5% rate produces approximately $2,447.25 monthly principal and interest. At 6.5% over the same 30 years, it is approximately $2,212.24. The difference is approximately $235.01 per month. With hypothetical nonrecoverable costs of $7,000 paid separately, simple break-even is about 29.8 months.</p>
+<p>These are calculated examples, not offers. They exclude property taxes, homeowners insurance, mortgage insurance, HOA dues and any costs added to principal. A borrower who has 20 years left and replaces the loan with a new 30-year term cannot use this same comparison without recalculating both schedules.</p>
+<h2>What simple break-even leaves out</h2>
+<p>Closing costs divided by monthly savings is a helpful first screen. It does not show how much principal remains at a future sale or how much interest accrues over the full term. It also does not assign an opportunity cost to cash paid at closing. A smaller required payment can coexist with a larger remaining balance or more lifetime interest.</p>
+<p>Compare both loans at the same future date. Record total payments, cash paid upfront, remaining principal and costs of selling or refinancing again. Keep recoverable escrow funding and prepaid items separate from true transaction costs where appropriate; do not treat a refunded old escrow balance as free profit from the new loan.</p>
+<h2>No-closing-cost means a trade-off</h2>
+<p>The <a href="https://www.consumerfinance.gov/ask-cfpb/is-there-such-a-thing-as-a-no-cost-or-no-closing-loan-or-refinancing-en-141/">CFPB explains two common no-closing-cost structures</a>: a higher rate with lender credits or costs added to the balance. Compare each structure against the cash-paid alternative. An offer can reduce upfront cash without reducing the economic cost.</p>
+<p>Read the lender-credit and origination sections rather than judging the offer by a marketing label. Ask how long the rate is locked, which costs can change and how cash-to-close was calculated. The <a href="https://www.consumerfinance.gov/owning-a-home/loan-estimate/">CFPB Loan Estimate explainer</a> helps locate those fields.</p>
+<h2>Program eligibility and household budget matter</h2>
+<p>FHA, VA and USDA refinance programs have different eligibility, seasoning, payment-history, benefit-test and documentation rules. Some transactions may not require an appraisal, but that is not a universal promise for every streamline or lender. Confirm the applicable program and any lender requirements before assuming approval.</p>
+<p>Also compare refinancing with keeping the existing loan, making extra principal payments or asking about a recast where available. See our <Link href="/blog/mortgage-recast-vs-refinance-2026">recast-versus-refinance comparison</Link>. Preserve enough cash for repairs, essential bills and emergencies. A lower monthly payment is useful only when the broader loan and household trade-offs make sense.</p>
 
-export default function BlogPost() {
-    return (
-        <>
-        <ArticleSchema
-            title="Should You Refinance in 2026? Calculator + Break-Even Guide"
-            description="Use our break-even analysis to determine if refinancing your mortgage in 2026 makes financial sense. Free calculator included."
-            url="https://usfinnexus.com/blog/should-i-refinance-2026"
-            datePublished="2026-02-25"
-            dateModified="2026-03-12"
-            authorName="USFinNexus Editorial Team"
-        />
-        <div className="max-w-4xl mx-auto px-4 py-7 sm:py-9">
-            <Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: 'Should I Refinance in 2026?', item: '/blog/should-i-refinance-2026' }]} />
-            <article className="prose prose-slate max-w-none">
-
-            <header className="mb-10">
-                <span className="inline-block px-3 py-1 rounded text-xs font-bold mb-4" style={{ background: 'rgba(0,200,83,0.12)', color: '#00C853' }}>
-                    Refinance
-                </span>
-                <h1 className="text-3xl md:text-5xl font-black mb-6 leading-tight" style={{ color: 'var(--color-text)' }}>
-                    Should You Refinance in 2026? Calculator + Break-Even Guide
-                </h1>
-                <div className="flex flex-wrap items-center gap-3 text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>
-                    <span>By {USFinNexusEditorialTeam.name}</span>
-                    <span>·</span>
-                    <span>February 25, 2026</span>
-                    <span>·</span>
-                    <span>8 min read</span>
-                    <span>·</span>
-                    <span className="text-[#0da6f2] font-bold">Updated March 12, 2026</span>
-                </div>
-            </header>
-
-            <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
-                <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
-                    With 2026 mortgage rates fluctuating between 6.25% and 7.25%, many homeowners who locked in at peak 2023-2024 rates (7.5%+) are wondering: is now the right time to refinance? The answer depends entirely on your <strong>break-even point</strong>.
-                </p>
-
-                <h2 className="text-2xl font-bold mt-12 mb-4">How Do You Calculate the Refinance Break-Even Point?</h2>
-                <p className="mb-6">
-                    The single most important number in any refinance decision is your <strong>break-even point</strong>-the number of months it takes for your monthly savings to exceed the total cost of refinancing.
-                </p>
-
-                <div className="card p-6 mb-8 border-l-4" style={{ borderLeftColor: 'var(--color-navy)' }}>
-                    <div className="flex gap-4">
-                        <Info className="w-6 h-6 shrink-0" style={{ color: 'var(--color-navy)' }} />
-                        <div>
-                            <h3 className="font-bold mb-2">The Formula</h3>
-                            <p className="text-lg font-mono m-0 mb-2"><strong>Break-Even Months = Total Closing Costs ÷ Monthly Savings</strong></p>
-                            <p className="text-sm m-0">If your break-even is under 24 months and you plan to stay in the home for at least 5 more years, refinancing is almost always worth it.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <h2 className="text-2xl font-bold mt-12 mb-4">How Does Refinancing Save Money on a $350,000 Mortgage?</h2>
-                <div className="bg-gray-50 rounded-xl p-6 mb-8">
-                    <ul className="space-y-3">
-                        <li className="flex items-start gap-3">
-                            <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#00C853' }} />
-                            <span><strong>Current rate:</strong> 7.5% → Monthly P&amp;I payment: $2,447</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#00C853' }} />
-                            <span><strong>New rate:</strong> 6.5% → Monthly P&amp;I payment: $2,212</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#00C853' }} />
-                            <span><strong>Monthly savings:</strong> $235</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#00C853' }} />
-                            <span><strong>Closing costs:</strong> ~$7,000 (2% of loan)</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <TrendingUp className="w-5 h-5 shrink-0 mt-0.5 text-green-500" />
-                            <span><strong>Break-even:</strong> 30 months (2.5 years)</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <h2 className="text-2xl font-bold mt-12 mb-4">When Should You NOT Refinance Your Mortgage?</h2>
-                <div className="card p-6 mb-8 bg-yellow-50 border-l-4 border-yellow-500">
-                    <div className="flex gap-4">
-                        <AlertTriangle className="w-6 h-6 shrink-0 text-yellow-600" />
-                        <div>
-                            <h3 className="font-bold mb-2">Red Flags to Watch For</h3>
-                            <ul className="text-sm space-y-1 m-0 pl-4 list-disc">
-                                <li><strong>You plan to move within 3 years:</strong> You won&apos;t recoup closing costs.</li>
-                                <li><strong>Rate difference is less than 0.5%:</strong> Savings are too small to justify fees.</li>
-                                <li><strong>You&apos;re extending the term:</strong> Restarting a 30-year clock on a loan you&apos;ve been paying for 10 years adds massive interest.</li>
-                                <li><strong>Cash-out refi for non-essentials:</strong> Don&apos;t tap equity to fund lifestyle inflation.</li>
-                                <li><strong>Your credit score dropped:</strong> You may not qualify for a better rate.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <h2 className="text-2xl font-bold mt-12 mb-4">What Types of Mortgage Refinancing Are Available in 2026?</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 not-prose">
-                    <div className="card p-5">
-                        <h4 className="font-bold mb-2" style={{ color: 'var(--color-navy)' }}>Rate-and-Term Refi</h4>
-                        <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>Lower your rate and/or shorten your term. No cash out. This is the most common and lowest-risk option.</p>
-                    </div>
-                    <div className="card p-5">
-                        <h4 className="font-bold mb-2" style={{ color: 'var(--color-navy)' }}>Cash-Out Refi</h4>
-                        <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>Borrow more than you owe and pocket the difference. Best for home improvements or debt consolidation-not vacations.</p>
-                    </div>
-                    <div className="card p-5">
-                        <h4 className="font-bold mb-2" style={{ color: 'var(--color-navy)' }}>Streamline Refi</h4>
-                        <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>Available for FHA, VA, and USDA loans. Minimal paperwork, no appraisal needed. Fast and cheap.</p>
-                    </div>
-                    <div className="card p-5">
-                        <h4 className="font-bold mb-2" style={{ color: 'var(--color-navy)' }}>No-Closing-Cost Refi</h4>
-                        <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>Costs are rolled into the loan or offset by a slightly higher rate. Good if you&apos;re short on cash but still want the savings.</p>
-                    </div>
-                </div>
-
-                <h2 className="text-2xl font-bold mt-12 mb-4">Should You Refinance Your Mortgage in 2026?</h2>
-                <p className="mb-6">
-                    Refinancing in 2026 can save you hundreds per month-but only if the numbers work. Always calculate your break-even point before committing. If the math checks out and you plan to stay in your home long enough, refinancing is one of the most financially impactful moves you can make.
-                </p>
-
-                <hr className="my-10 border-gray-200" />
-
-                <div className="card p-4 sm:p-6 text-center">
-                    <h3 className="text-xl font-bold mb-3">Run Your Refinance Numbers</h3>
-                    <p className="text-sm mb-6" style={{ color: 'var(--color-text-muted)' }}>
-                        Compare your current mortgage to a refinanced scenario and see your exact break-even point.
-                    </p>
-                    <Link href="/calculators/refinance" className="btn-primary py-3 px-6 text-sm inline-block">
-                        Open Refinance Calculator
-                    </Link>
-                </div>
-
-
-
-
-                <AuthorBio author={USFinNexusEditorialTeam} updatedDate="March 12, 2026" />
-            </div>
-            </article>
-        </div>
-        <RelatedCalculators exclude={['/calculators/refinance']} limit={4} title="Related Calculators" />
-        <RelatedArticles currentSlug="should-i-refinance-2026" category="Refinance" />
-        </>
-    );
+</ReviewedGuide>;
 }

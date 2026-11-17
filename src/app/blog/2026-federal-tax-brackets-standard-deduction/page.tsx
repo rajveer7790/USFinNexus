@@ -1,3 +1,4 @@
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Image from '@/components/EditorialImage';
 import Link from 'next/link';
@@ -9,7 +10,7 @@ import AuthorBio from '@/components/AuthorBio';
 const URL = 'https://usfinnexus.com/blog/2026-federal-tax-brackets-standard-deduction';
 const IMAGE = 'https://usfinnexus.com/images/2026-federal-tax-brackets-standard-deduction.webp';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: '2026 Tax Brackets & Standard Deduction Guide',
     description: 'See the 2026 federal income tax brackets, standard deduction by filing status, marginal-rate examples and practical withholding steps.',
     alternates: { canonical: URL },
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
         description: 'Understand the 2026 IRS brackets, deductions and marginal-rate math before adjusting withholding.',
         images: [IMAGE],
     },
-};
+});
 
 const faqs = [
     {

@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -33,11 +35,11 @@ const faqs = [
   }
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', title, description, url, siteName: 'USFinNexus', publishedTime: date, modifiedTime: date, images: [{ url: image, width: 1200, height: 630, alt }] },
   twitter: { card: 'summary_large_image', title, description, images: [{ url: image, alt }] },
-};
+});
 
 export default function Page() {
   return <>
@@ -91,7 +93,8 @@ export default function Page() {
         {faqs.map(f => <section key={f.question}><h3>{f.question}</h3><p>{f.answer}</p></section>)}
         <h2>Sources and disclaimer</h2>
         <p><a href="https://www.ssa.gov/medicare/lower-irmaa">SSA guidance for lowering IRMAA</a>, <a href="https://www.ssa.gov/forms/ssa-44.pdf">Form SSA-44</a>, <a href="https://secure.ssa.gov/poms.nsf/lnx/0601120001">SSA new determination policy</a> and <a href="https://secure.ssa.gov/poms.nsf/lnx/0601140001">SSA reconsideration policy</a>. This guide is educational, not individualized benefits, legal, tax or financial advice. Follow the instructions and deadlines in your own SSA notice.</p>
-      </article>
+      <ContextualInternalLinks currentSlug="medicare-irmaa-appeal-ssa-44" />
+            </article>
     </div>
   </>;
 }

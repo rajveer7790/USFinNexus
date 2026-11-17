@@ -1,3 +1,5 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleSchema from '@/components/ArticleSchema';
@@ -17,11 +19,11 @@ const faqs = [
   { question: 'How can I check my exact 2027 benefit?', answer: 'SSA says eligible users can view a personalized COLA notice in the Message Center of a my Social Security account, while recipients not using paperless notices receive a mailed notice.' },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
   title, description, alternates: { canonical: url },
   openGraph: { type: 'article', title, description, url, publishedTime: '2026-11-05', modifiedTime: '2026-11-05', siteName: 'USFinNexus', images: [{ url: image, width: 1200, height: 630, alt: 'Older adult and caregiver reviewing a monthly SSI household budget' }] },
   twitter: { card: 'summary_large_image', title, description, images: [image] },
-};
+});
 
 export default function Page() {
   return <>
@@ -90,7 +92,8 @@ export default function Page() {
 
         <h2>Sources and benefits disclaimer</h2>
         <p>Primary sources reviewed November 5, 2026: SSA&apos;s <a href="https://www.ssa.gov/news/en/cola/factsheets/2027.html">2027 COLA fact sheet</a>, <a href="https://www.ssa.gov/oact/cola/SSI.html">2027 federal SSI payment calculation</a>, <a href="https://www.ssa.gov/ssi/eligibility">SSI eligibility page</a>, and <a href="https://www.ssa.gov/faqs/en/questions/KA-01951.html">2027 COLA timing FAQ</a>. This article is general education, not legal, tax or individualized benefits advice. SSA notices and official program determinations control eligibility and payment amounts.</p>
-      </article>
+      <ContextualInternalLinks currentSlug="ssi-benefits-2027-payment-amounts" />
+            </article>
     </main>
   </>;
 }

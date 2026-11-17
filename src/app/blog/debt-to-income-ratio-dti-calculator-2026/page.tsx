@@ -1,13 +1,13 @@
+import ContextualInternalLinks from '@/components/ContextualInternalLinks';
+import { completeEditorialMetadata } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Target, Calculator, AlertTriangle, Percent, Landmark, ShieldCheck } from 'lucide-react';
 import AuthorBio, { USFinNexusEditorialTeam } from '@/components/AuthorBio';
-import RelatedCalculators from '@/components/RelatedCalculators';
-import RelatedArticles from '@/components/RelatedArticles';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = completeEditorialMetadata({
     title: 'Debt-to-Income Ratio (DTI): Why It Matters in 2026',
     description: 'Understand debt-to-income ratio (DTI), the formula lenders use, what counts as debt, and practical ways to lower DTI before a mortgage or personal-loan application.',
     alternates: { canonical: 'https://usfinnexus.com/blog/debt-to-income-ratio-dti-calculator-2026' },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         siteName: 'USFinNexus',
         images: [{ url: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', width: 800, height: 533, alt: 'DTI Calculator' }]
     }
-};
+});
 
 export default function BlogPost() {
     return (
@@ -29,7 +29,7 @@ export default function BlogPost() {
             description="Calculate DTI, understand what lenders count and learn practical ways to improve your ratio before applying."
             url="https://usfinnexus.com/blog/debt-to-income-ratio-dti-calculator-2026"
             datePublished="2026-05-26"
-            dateModified="2026-09-10"
+            dateModified="2026-11-17"
             authorName="USFinNexus Editorial Team"
             keywords={['Mortgage', 'DTI', 'Home Buying', '2026']}
         />
@@ -59,7 +59,7 @@ export default function BlogPost() {
                 </p>
 
                 <p>
-                    A perfect credit score proves you are <em>willing</em> to pay your debts. It does not prove you have the <em>capacity</em> to pay a new $3,000-a-month mortgage.
+                    A strong credit history is one part of a mortgage application. It does not establish that your current income and obligations can support a new $3,000-a-month housing payment.
                 </p>
                 <p>
                     DTI is one underwriting input, not an automatic pass-or-fail score. A lower ratio generally gives a borrower more room for a proposed housing payment, while a higher ratio can limit options or require stronger compensating factors.
@@ -79,7 +79,7 @@ export default function BlogPost() {
 
                 <h3 className="text-xl font-bold mt-8 mb-3">What Counts as "Debt"?</h3>
                 <p>
-                    The bank does NOT count your living expenses (groceries, gas, Netflix, cell phone bill, car insurance). They only count legally binding debt obligations that appear on your credit report:
+                    Mortgage DTI generally includes the proposed housing payment and qualifying recurring obligations. Ordinary living expenses are usually assessed separately in your household budget, but debts do not have to appear on a credit report to matter. Disclose all required obligations and let the lender apply its program rules:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 mb-8">
                     <li>Minimum monthly credit card payments</li>
@@ -112,13 +112,13 @@ export default function BlogPost() {
 
                 <ul className="list-disc pl-6 space-y-4 mb-8">
                     <li>
-                        <strong>Conventional Loans:</strong> Fannie Mae and Freddie Mac strongly prefer a DTI below <strong>36% to 43%</strong>. If you have excellent credit and large cash reserves, their automated underwriting software may occasionally approve a DTI up to 50%.
+                        <strong>Fannie Mae conventional loans:</strong> The <a href="https://selling-guide.fanniemae.com/sel/b3-6-02/debt-income-ratios">Selling Guide</a> sets a 36% maximum for manual underwriting, with up to 45% when its credit and reserve conditions are met. Desktop Underwriter casefiles have a 50% maximum, subject to applicable exceptions and the full underwriting result. These are not universal approval promises for every conventional product.
                     </li>
                     <li>
-                        <strong>FHA Loans:</strong> The FHA is much more forgiving. They will routinely approve borrowers with a DTI of <strong>50%</strong>. If you have compensating factors (like a higher credit score or extra savings), the FHA hard cap is technically <strong>56.9%</strong>.
+                        <strong>FHA loans:</strong> Manual and automated underwriting are different paths. The <a href="https://www.hud.gov/sites/default/files/OCHCO/documents/40001-hsgh-Update-17.pdf">HUD Handbook 4000.1</a> provides ratio and compensating-factor requirements. Do not treat 50% or 56.9% as a universal FHA entitlement or a guarantee that changing programs solves a qualification problem.
                     </li>
                     <li>
-                        <strong>VA Loans:</strong> The VA does not strictly enforce a hard DTI cap, preferring to look at "residual income" (how much cash you have left over after paying bills). However, most lenders prefer a VA DTI below <strong>41%</strong>.
+                        <strong>VA loans:</strong> The <a href="https://www.benefits.va.gov/warms/docs/admin26/m26-07/chapter_4_credit_underwriting.pdf">VA underwriting handbook</a> treats DTI as a guide alongside residual income and other credit factors. A ratio above 41% calls for closer review under its instructions, rather than automatic approval or rejection.
                     </li>
                 </ul>
 
@@ -151,7 +151,7 @@ export default function BlogPost() {
                     <li>A $9,000 auto loan with a <strong>$600/month payment</strong>.</li>
                 </ol>
                 <p>
-                    If you dump the $10,000 onto the student loan, your balance drops to $20,000, but your monthly payment remains exactly $300. <strong>Your DTI does not change at all.</strong> Your mortgage application will still be denied.
+                    In this hypothetical example, a $10,000 principal payment reduces the student-loan balance to $20,000. If the lender still uses the same $300 qualifying monthly payment, that payment alone does not improve DTI. Other repayment plans or program-specific student-loan calculations can produce a different result; ask the lender before moving cash.
                 </p>
                 <p>
                     Paying off the auto loan may remove its monthly payment from qualifying DTI after the lender verifies the account is satisfied. Do not drain your emergency fund or down payment without comparing the lender’s documentation requirements and cash-flow trade-off.
@@ -191,17 +191,18 @@ export default function BlogPost() {
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-slate-800">3. Switch Loan Programs</h3>
                     <p className="text-slate-700 mb-4">
-                        If you're applying for a Conventional loan and being denied because your DTI is 48%, simply ask your lender to switch the application to an FHA loan. The FHA regularly approves DTIs up to 50% (and sometimes higher with compensating factors), instantly solving the problem without you needing to pay off any debt.
+                        Ask the lender to compare eligible programs using the complete file, not just DTI. A different program can change mortgage insurance, required cash, property eligibility and the qualifying payment. Switching to FHA does not automatically resolve a denial, and a ratio below a stated ceiling does not establish approval.
                     </p>
                 </div>
 
-                <AuthorBio author={USFinNexusEditorialTeam} updatedDate="May 26, 2026" />
+                <AuthorBio author={USFinNexusEditorialTeam} updatedDate="November 17, 2026" />
                 <div className="mt-8 text-sm text-slate-600 border-t pt-6"><p><strong>Sources and disclaimer:</strong> DTI limits vary by product and lender. Review <a href="https://www.consumerfinance.gov/owning-a-home/" className="text-blue-700 underline">CFPB home-loan guidance</a> and ask how your file is underwritten. This article is educational, not a credit decision or financial advice.</p></div>
             </div>
+            <ContextualInternalLinks currentSlug="debt-to-income-ratio-dti-calculator-2026" />
             </article>
         </div>
-        <RelatedCalculators exclude={['/calculators/dti']} limit={4} title="Related Calculators" />
-        <RelatedArticles currentSlug="debt-to-income-ratio-dti-calculator-2026" category="Home Buying" />
+
+
         </>
     );
 }
