@@ -65,7 +65,7 @@ export default function GovLoanClient({ initialTab = 'fha', heading, compare = f
                         {heading || 'FHA / VA / USDA Loan Calculator'}
                     </h1>
                     <p className="text-gray-500 max-w-2xl font-medium text-lg">
-                        Precision calculations for MIP, VA funding fees, and USDA guarantee fees updated for 2026.
+                        {loanType === 'fha' ? 'Estimate upfront MIP, monthly mortgage insurance and your FHA purchase payment.' : loanType === 'va' ? 'Estimate your VA purchase funding fee, exemption scenario and monthly payment.' : 'Estimate USDA guarantee fees and monthly payments.'}
                     </p>
                 </div>
 
@@ -212,7 +212,7 @@ export default function GovLoanClient({ initialTab = 'fha', heading, compare = f
                                                         className="w-5 h-5 rounded border-2 border-white/20 bg-transparent accent-[#0da6f2] transition-all cursor-pointer"
                                                     />
                                                 </div>
-                                                <span className="text-sm font-semibold text-gray-600 group-hover:text-white transition-colors">First-time VA use</span>
+                                                <span className="text-sm font-semibold text-gray-600 group-hover:text-white transition-colors">First use of VA loan benefit</span>
                                             </label>
                                             <label className="flex items-center gap-4 cursor-pointer group">
                                                 <input
@@ -273,7 +273,7 @@ export default function GovLoanClient({ initialTab = 'fha', heading, compare = f
                                         <div className="space-y-4">
                                             {[
                                                 { label: 'Principal & Interest', value: result.monthlyPrincipalInterest, color: activeTab.color },
-                                                { label: loanType === 'fha' ? 'Monthly MIP' : loanType === 'usda' ? 'Gov Guarantee Fee' : 'VA Admin Fee', value: result.monthlyMIP, color: '#f59e0b' },
+                                                { label: loanType === 'fha' ? 'Monthly MIP' : loanType === 'usda' ? 'Gov Guarantee Fee' : 'Monthly mortgage insurance', value: result.monthlyMIP, color: '#f59e0b' },
                                                 { label: 'Property Tax', value: result.monthlyPropertyTax, color: '#00C853' },
                                                 { label: 'Home Insurance', value: result.monthlyInsurance, color: '#0da6f2' },
                                             ].filter(r => r.value > 0).map(row => (

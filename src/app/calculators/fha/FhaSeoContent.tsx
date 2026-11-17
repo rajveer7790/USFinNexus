@@ -1,94 +1,40 @@
-import React from 'react';
 import Link from 'next/link';
+import CalculatorFAQ from '@/components/CalculatorFAQ';
 
+const faqs = [
+ { question: 'How do I calculate FHA mortgage insurance?', answer: 'For a standard FHA purchase, upfront MIP is 1.75% of the base loan. Annual MIP depends on the original LTV, base loan and term. This calculator estimates first-year monthly premiums from scheduled base balances; the lender determines actual charges.' },
+ { question: 'Is FHA MIP always 0.55%?', answer: 'No. For terms over 15 years and base loans of $726,200 or less, annual MIP is 0.55% above 95% original LTV and 0.50% at 95% LTV or below. Larger loans and shorter terms have different rates.' },
+ { question: 'Does FHA MIP stop at 20% equity?', answer: 'For standard case numbers assigned on or after June 3, 2013, annual MIP generally lasts 11 years at original LTV of 90% or less, or the mortgage term above 90%. Later appreciation does not create conventional PMI cancellation rights. Older loans can differ.' },
+ { question: 'Can I finance FHA upfront MIP?', answer: 'Yes. The calculator initially finances the 1.75% upfront premium. Switch off financing to compare paying it at closing with the lower financed balance.' },
+ { question: 'Does a 580 credit score guarantee FHA approval?', answer: 'No. FHA permits maximum financing at a decision credit score of 580 or higher, but lenders may apply stricter requirements. Income, debts, appraisal and property eligibility also affect approval.' },
+ { question: 'Is MIP the same as homeowners insurance?', answer: 'No. MIP protects the lender against default. Homeowners insurance protects the property against covered losses. Both can appear in the monthly payment alongside property taxes.' },
+];
 export default function FhaSeoContent() {
-    return (
-        <section className="bg-white border-t border-gray-100 py-10 mt-6">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-green">
-                <h2 className="text-3xl font-black text-navy-900 mb-6">
-                    How to Use the FHA Loan Calculator
-                </h2>
-                <p className="lead text-xl text-gray-600">
-                    Federal Housing Administration (FHA) loans are one of the most popular paths to homeownership in the United States, particularly for first-time buyers. Because they require lower credit scores and smaller down payments, they open doors for many borrowers. However, they come with specific Mortgage Insurance Premium (MIP) requirements. Our calculator accounts for these exact 2026 FHA guidelines.
-                </p>
-
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    FHA Loan Requirements Explained
-                </h3>
-                <p>
-                    Unlike conventional loans, FHA loans are insured by the government. This reduces the risk for lenders, which in turn allows them to offer more lenient qualifying terms:
-                </p>
-                <ul>
-                    <li>
-                        <strong>Low Down Payment:</strong> If your credit score is 580 or higher, you are eligible for an FHA loan with just a <strong>3.5% down payment</strong>. If your score is between 500 and 579, a 10% down payment is required.
-                    </li>
-                    <li>
-                        <strong>FHA Loan Limits:</strong> The FHA limits how much you can borrow, based on the county you live in. In 2026, the baseline FHA loan limit &quot;floor&quot; in low-cost areas is $541,287, while high-cost &quot;ceiling&quot; areas go up to $1,249,125. Our calculator will alert you if you exceed these limits.
-                    </li>
-                    <li>
-                        <strong>Debt-to-Income (DTI) Ratios:</strong> FHA loans generally allow for higher debt-to-income ratios-often approving borrowers with DTI ratios up to 43%, and sometimes up to 50% with &quot;compensating factors.&quot;
-                    </li>
-                </ul>
-
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Understanding FHA MIP (Mortgage Insurance Premium)
-                </h3>
-                <p>
-                    Because FHA loans require such a small down payment, the risk of default is higher. To protect lenders, the FHA charges borrowers a Mortgage Insurance Premium (MIP). Unlike conventional Private Mortgage Insurance (PMI), FHA MIP has two distinct components:
-                </p>
-                
-                <div className="bg-green-50 p-6 rounded-xl border border-green-100 my-6">
-                    <h4 className="font-bold text-green-800 mb-2">1. Upfront Mortgage Insurance Premium (UFMIP)</h4>
-                    <p className="mb-4">
-                        Currently set at <strong>1.75%</strong> of the base loan amount. Most borrowers choose to roll this fee directly into their total loan balance rather than paying it outright at closing. Our calculator automatically handles this inclusion.
-                    </p>
-                    <h4 className="font-bold text-green-800 mb-2">2. Annual Mortgage Insurance Premium</h4>
-                    <p className="mb-0">
-                        Paid monthly, this fee is typically <strong>0.55%</strong> of the outstanding loan balance for a standard 30-year FHA loan with 3.5% down. Note: If you put down less than 10%, this annual MIP <em>cannot be cancelled</em> and stays for the life of the loan. If you put down 10% or more, it drops off after 11 years.
-                    </p>
-                </div>
-
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    FHA vs. Conventional Loans
-                </h3>
-                <p>
-                    Which is right for you? It largely depends on your credit score and available cash:
-                </p>
-                <ul>
-                    <li><strong>Choose FHA if:</strong> Your credit score is under 620, or if you have a higher DTI ratio. Even with lower scores, FHA interest rates are often very competitive.</li>
-                    <li><strong>Choose Conventional if:</strong> You have strong credit (680+) and aim to put down at least 5% or 20%. With conventional loans, the monthly PMI will eventually fall off automatically once you reach 22% equity.</li>
-                </ul>
-                <p>
-                    Many borrowers start with an FHA loan to acquire the house, build equity, and improve their credit. A few years later, they often use a <Link href="/calculators/refinance" className="text-green-600 hover:underline">Mortgage Refinance</Link> to switch from an FHA to a conventional loan to eliminate the permanent MIP.
-                </p>
-
-                <h3 className="text-2xl font-bold mt-10 mb-4 text-navy-800">
-                    Frequently Asked Questions
-                </h3>
-                
-                <div className="space-y-6 mt-6">
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">Are FHA loans only for first-time buyers?</h4>
-                        <p className="text-gray-600">
-                            No. While they are extremely popular among first-time homebuyers due to the low down payment requirements, FHA loans can be used by anyone, provided the property will be their primary residence. You cannot use an FHA loan for an investment property or a vacation home.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">Can I remove FHA Mortgage Insurance?</h4>
-                        <p className="text-gray-600">
-                            If you made a down payment of less than 10%, the annual MIP cannot be removed-it lasts for the life of the loan. The only way to remove it is to refinance the mortgage into a non-FHA loan. If you made a down payment of 10% or more, the MIP will automatically fall off after 11 years.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h4 className="text-lg font-bold text-navy-900 mb-2">What is the FHA down payment requirement?</h4>
-                        <p className="text-gray-600">
-                            The standard minimum is 3.5%, assuming your credit score is at least 580. This down payment can come from your personal savings, or it can be fully funded by a gift from a family member or an approved down payment assistance program.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+ return <><article className="prose prose-slate mx-auto max-w-3xl py-8">
+ <p className="text-sm">Reviewed <time dateTime="2026-11-17">November 17, 2026</time> · USFinNexus Editorial Team · <Link href="/methodology">Methodology</Link></p>
+ <h2 id="fha-mortgage-insurance">FHA mortgage insurance calculator: upfront and monthly MIP</h2>
+ <p><strong>Quick answer:</strong> Standard FHA purchase financing includes a 1.75% upfront mortgage insurance premium plus annual MIP collected monthly. A base loan of $726,200 or less, a term over 15 years and original LTV above 95% generally uses a 0.55% annual rate. Loan size, original LTV and term change that rate; 0.55% is not universal.</p>
+ <p>Use the FHA loan calculator above to estimate principal and interest, mortgage insurance, property taxes and homeowners insurance together. Enter a lender quote rather than treating the illustrative interest-rate default as today's average. This is a purchase-loan planning tool, not a credit approval or official FHA premium invoice.</p>
+ <h2>How to use this FHA MIP calculator</h2>
+ <ol><li>Enter the price and planned down payment; the tool models at least 3.5% down.</li><li>Select the fixed term and quoted interest rate.</li><li>Replace annual taxes and homeowners insurance with local estimates.</li><li>Compare financing upfront MIP with paying it at closing.</li><li>Review the base loan, financed balance, monthly MIP and total payment separately.</li></ol>
+ <p>Base loan equals price minus down payment. Upfront MIP equals base loan × 0.0175. Financing increases the balance used for principal-and-interest payments. The tool estimates annual MIP from scheduled declining base balances and displays a first-year monthly average. It does not reproduce every HUD servicing, rounding or annual-renewal rule.</p>
+ <h2>FHA annual mortgage insurance rate table</h2>
+ <p>The standard forward-mortgage schedule was introduced in <a href="https://www.hud.gov/sites/dfiles/OCHCO/documents/2023-05hsgml.pdf">HUD Mortgagee Letter 2023-05</a> and incorporated into the <a href="https://www.hud.gov/hud-partners/single-family-handbook-4000-1">Single Family Housing Policy Handbook</a>. The $726,200 MIP pricing threshold is not the annually adjusted county loan limit.</p>
+ <div className="overflow-x-auto"><table><caption>Standard annual MIP; special program and refinance exceptions excluded.</caption><thead><tr><th>Term</th><th>Base loan</th><th>Original LTV</th><th>Annual rate</th></tr></thead><tbody>
+ <tr><td>Over 15 years</td><td>≤ $726,200</td><td>≤ 95%</td><td>0.50%</td></tr><tr><td>Over 15 years</td><td>≤ $726,200</td><td>Over 95%</td><td>0.55%</td></tr>
+ <tr><td>Over 15 years</td><td>Over $726,200</td><td>≤ 95%</td><td>0.70%</td></tr><tr><td>Over 15 years</td><td>Over $726,200</td><td>Over 95%</td><td>0.75%</td></tr>
+ <tr><td>15 years or less</td><td>≤ $726,200</td><td>≤ 90%</td><td>0.15%</td></tr><tr><td>15 years or less</td><td>≤ $726,200</td><td>Over 90%</td><td>0.40%</td></tr>
+ <tr><td>15 years or less</td><td>Over $726,200</td><td>≤ 78%</td><td>0.15%</td></tr><tr><td>15 years or less</td><td>Over $726,200</td><td>Over 78% through 90%</td><td>0.40%</td></tr><tr><td>15 years or less</td><td>Over $726,200</td><td>Over 90%</td><td>0.65%</td></tr>
+ </tbody></table></div>
+ <h2>Example: $300,000 home with 3.5% down</h2>
+ <p>A $10,500 down payment leaves a $289,500 base loan. Upfront MIP at 1.75% is $5,066.25. Financing it produces a $294,566.25 starting balance before other permitted adjustments. For a 30-year term at 96.5% original LTV, the standard annual MIP rate is 0.55%.</p>
+ <p>The simple starting-balance approximation is $289,500 × 0.55% ÷ 12 = $132.69 monthly. The calculator's first-year average differs slightly because the scheduled base balance declines. Add principal and interest, taxes and property insurance; HOA dues, flood insurance and closing costs may require additional budgeting.</p>
+ <h2>When does FHA mortgage insurance end?</h2>
+ <p>For standard loans with case numbers assigned on or after June 3, 2013, original LTV of 90% or less generally means 11 years of annual MIP. Above 90%, annual MIP generally remains for the mortgage term. Reaching 80% LTV later does not create conventional PMI cancellation rights. Older FHA mortgages require their own case-date review.</p>
+ <p>Refinancing into a non-FHA loan may remove FHA MIP but can introduce a different rate, closing costs and conventional PMI. Compare the whole transaction with the <Link href="/calculators/refinance">refinance calculator</Link>, not just the insurance line. Conventional borrowers should use the <Link href="/calculators/pmi-removal">PMI removal calculator</Link>.</p>
+ <h2>Approval, county limits and what this tool cannot check</h2>
+ <p>FHA permits 3.5% minimum down for borrowers meeting maximum-financing credit requirements; a 500–579 decision credit score generally requires at least 10% down. Lender overlays and underwriting still apply. The tool does not check a credit file, verify income, approve a loan or validate a county limit.</p>
+ <p>Check county and unit count in the <a href="https://entp.hud.gov/idapp/html/hicostlook.cfm">official HUD loan-limit lookup</a>. A base loan can meet a MIP pricing band while exceeding the county limit. Use the <Link href="/calculators/dti">DTI calculator</Link> for a budget screen and <Link href="/calculators/closing-costs">closing-costs calculator</Link> for additional cash needs. Neither replaces underwriting.</p>
+ <p><strong>Educational estimate:</strong> HUD guidance checked November 17, 2026. Standard purchase assumptions exclude older-case rules, special refinances and program exceptions. Confirm final premiums with your lender. Not individualized financial, legal or lending advice.</p>
+ </article><CalculatorFAQ faqs={faqs} title="FHA mortgage insurance FAQs" /></>;
 }

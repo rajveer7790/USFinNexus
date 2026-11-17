@@ -144,7 +144,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     const calculators: MetadataRoute.Sitemap = Object.entries(CALC_PRIORITY).map(([route, priority]) => ({
         url: `${baseUrl}${route}`,
-        ...(['/calculators/refinance', '/calculators/amortization', '/calculators/rent-vs-buy'].includes(route)
+        ...(['/calculators/pmi-removal', '/calculators/fha', '/calculators/va'].includes(route)
+            ? { lastModified: new Date('2026-11-17') }
+            : ['/calculators/refinance', '/calculators/amortization', '/calculators/rent-vs-buy'].includes(route)
             ? { lastModified: new Date('2026-11-13') }
             : route === '/calculators/income-tax' ? { lastModified: new Date('2026-08-07') } : {}),
         changeFrequency: 'monthly' as const,
