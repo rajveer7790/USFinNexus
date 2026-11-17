@@ -62,6 +62,7 @@ export default function Page() {
         <p>A Treasury bill held to maturity pays on a known date. Selling before maturity requires a marketable account and exposes you to the current price. If yields rose after purchase, the bill may sell for less than expected. TreasuryDirect securities also have transfer and holding-period procedures that can prevent instant liquidation. Do not put rent, a near-term tax payment or medical cash into a maturity that misses the needed date.</p>
 
         <h2>Build a Treasury-bill ladder</h2>
+        <p>For a practical purchase calendar, rollover rules and a four-week example, follow our <Link href="/blog/treasury-bill-ladder">step-by-step Treasury bill ladder guide</Link>.</p>
         <p>A ladder divides cash across staggered maturities. Instead of investing the full amount in one bill, you might place portions in bills maturing at regular intervals. Each maturity can fund a planned expense or be reinvested. This reduces the risk of locking all cash at one rate and improves scheduled access.</p>
         <p>A ladder is not a substitute for liquid emergency savings. Decide the minimum bank balance first, then ladder only the portion that can wait. Record purchase price, maturity value, maturity date and automatic-reinvestment settings. If using TreasuryDirect, understand how proceeds move to the linked bank and how long account changes can take.</p>
 
