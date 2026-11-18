@@ -77,6 +77,7 @@ export default function Page() {
 
         <h2 id="action-list">Your November-to-January action list</h2>
         <p>Save the new notice, confirm your 2027 age band, request the plan’s election deadline and identify the wage figure used for Roth catch-up screening. Then choose an affordable annual target and verify match timing. If reaching the maximum would leave the household unable to meet essential bills, adjust the target rather than treating the IRS ceiling as a spending requirement.</p>
+        <p>If your plan enrolls workers by default, also review our <Link href="/blog/secure-2-auto-enrollment-final-rules">SECURE 2.0 automatic-enrollment final-rules guide</Link>. The November 2026 regulations address default rates, annual escalation, opt-out rights and plan exceptions; those rules are separate from the annual contribution ceilings on this page.</p>
         <p>After the first 2027 paycheck, compare the deduction, tax treatment and employer deposit with your election. Recheck after a raise, bonus or job change. If you discover a possible excess, contact the administrator promptly about the correct correction procedure rather than making an ordinary withdrawal yourself. A short verification routine is more reliable than assuming payroll automation eliminates every cross-employer or eligibility mistake.</p>
 
         <h2 id="faq">2027 401(k) contribution FAQs</h2>

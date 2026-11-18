@@ -59,6 +59,7 @@ export default function TaxWithholdingPage() {
 
                     <h2>Refund Versus Take-Home Pay</h2>
                     <p>Use the <Link href="/calculators/paycheck" className="text-blue-700 underline">salary and hourly paycheck calculator</Link> to compare the effect of your W-4 inputs and payroll deductions on a regular paycheck. Use the IRS estimator for your full-year household withholding and W-4 decisions.</p>
+                    <p>If you are comparing an offer or a payroll change, first confirm whether the employer pays every two weeks or twice each month. Our <Link href="/blog/biweekly-vs-semimonthly-pay" className="text-blue-700 underline">biweekly versus semimonthly pay guide</Link> explains 26 versus 24 paychecks, gross salary conversion and three-paycheck months before you estimate withholding.</p>
                     <p>There is no universal “best” refund. A refund means the IRS received more during the year than your final liability. Some households prefer a smaller refund and more take-home pay; others value a forced savings effect. The key is accuracy and cash-flow stability.</p>
                     <p>If your refund is large because of a refundable credit, do not remove withholding without checking eligibility. If your balance due is large because of a side business, a W-4 alone may not solve the issue; estimated payments and business tax planning may be required.</p>
 
