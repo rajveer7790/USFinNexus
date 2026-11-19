@@ -58,6 +58,7 @@ export default function Page() { return <>
       <h2>Seven numbers to copy from every offer</h2>
       <ol><li><strong>Loan amount:</strong> the principal on which payments are based.</li><li><strong>Net proceeds:</strong> cash delivered after deducted fees.</li><li><strong>Interest rate:</strong> the contractual rate used to calculate interest.</li><li><strong>APR:</strong> the standardized borrowing-cost measure including applicable fees.</li><li><strong>Monthly payment:</strong> the required installment, not an estimated minimum.</li><li><strong>Number of payments:</strong> a lower payment over more months can cost more overall.</li><li><strong>Total of payments:</strong> the scheduled dollar amount if every payment is made on time.</li></ol>
       <p>Put the offers side by side using identical assumptions. If one lender quotes 36 months and another quotes 60 months, request matching terms. Otherwise the longer loan may appear cheaper only because repayment is stretched out.</p>
+      <p>For a term-only comparison with three worked U.S. dollar scenarios, see our <Link href="/blog/personal-loan-36-vs-60-months">36- versus 60-month personal loan guide</Link>. It shows the monthly-payment relief and added scheduled interest when the same principal is extended from three years to five.</p>
 
       <h2>Fees and features that deserve a second look</h2>
       <h3>Optional credit or disability insurance</h3>

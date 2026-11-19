@@ -187,6 +187,10 @@ export default function SpringHousingMarketBlog() {
                     </li>
                 </ul>
 
+                <div className="card p-4 sm:p-6 mb-8">
+                    <p className="m-0 text-sm"><strong>New data:</strong> The Census Bureau&apos;s November 18 release showed October starts rebounding while permits fell sharply. Read our <Link href="/blog/october-2026-housing-starts-permits" className="text-[#0da6f2] hover:underline">October 2026 housing starts and building permits explainer</Link> for the current figures, uncertainty ranges and buyer implications.</p>
+                </div>
+
                 <h2 className="text-2xl font-bold mt-12 mb-4">Should You Buy Now or Wait?</h2>
                 <p className="mb-4">
                     This is the question everyone asks, and the honest answer is: <strong>it depends entirely on your personal finances</strong>, not on market timing. Here is the framework financial advisors actually use:
