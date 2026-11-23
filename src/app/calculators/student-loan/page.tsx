@@ -8,6 +8,7 @@ import WebApplicationSchema from '@/components/WebApplicationSchema';
 import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
 import StudentLoanSeoContent from './StudentLoanSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
+import Link from 'next/link';
 
 import StudentLoanClient from './StudentLoanClient';
 
@@ -59,6 +60,9 @@ export default function StudentLoanPage() {
             <Breadcrumbs items={[{ name: 'Calculators', item: '/#tools' }, { name: 'Student Loan', item: '/calculators/student-loan' }]} />
             <StudentLoanClient />
             <SemrushIntentSection slug="student-loan" />
+            <p className="mx-auto mt-6 max-w-4xl rounded-xl border border-slate-200 bg-white p-4 text-sm text-slate-700">
+                Having a servicing problem? Review the <Link className="font-bold text-blue-700 underline" href="/blog/private-student-loan-complaints-2026">2026 CFPB private student loan complaint findings and documentation checklist</Link> before escalating the issue.
+            </p>
 
             <CalculatorFAQ faqs={STUDENT_LOAN_FAQS} title="Student Loans — Frequently Asked Questions" />
         <ContextualInternalLinks currentSlug="student-loan" showBlogs showCalculators />

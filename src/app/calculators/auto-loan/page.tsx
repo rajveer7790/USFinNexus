@@ -8,6 +8,7 @@ import WebApplicationSchema from '@/components/WebApplicationSchema';
 import AutoLoanSeoContent from './AutoLoanSeoContent';
 import CalculatorFAQ from '@/components/CalculatorFAQ';
 import SemrushIntentSection from '@/components/seo/SemrushIntentSection';
+import Link from 'next/link';
 
 import AutoLoanClient from './AutoLoanClient';
 
@@ -63,6 +64,10 @@ export default function AutoLoanPage() {
             />
             <Breadcrumbs items={[{ name: 'Calculators', item: '/calculators' }, { name: 'Auto Loan Calculator', item: '/calculators/auto-loan' }]} />
             <AutoLoanClient />
+
+            <p className="mx-auto mt-6 max-w-4xl rounded-xl border border-slate-200 bg-white p-4 text-sm text-slate-700">
+                Already financing a vehicle? Compare the <Link className="font-bold text-blue-700 underline" href="/blog/auto-loan-extra-payment">$50, $100 and $200 auto-loan extra-payment examples</Link>, then confirm how your servicer applies additional principal.
+            </p>
 
             <SemrushIntentSection slug="auto-loan" />
             <CalculatorFAQ faqs={AUTO_LOAN_FAQS} title="Auto Loan Calculator FAQs" />
