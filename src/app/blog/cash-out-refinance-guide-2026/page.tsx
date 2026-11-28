@@ -17,6 +17,7 @@ export const metadata: Metadata = {
         description: 'Should you sacrifice your old interest rate to pull $50,000 out of your house? We break down the math on debt consolidation vs. home renovations.',
         url: 'https://usfinnexus.com/blog/cash-out-refinance-guide-2026',
         siteName: 'USFinNexus',
+        modifiedTime: '2026-11-28',
         images: [{ url: 'https://usfinnexus.com/icon-512.png', width: 512, height: 512, alt: 'Cash Out Refinance 2026' }]
     }
 };
@@ -29,7 +30,7 @@ export default function BlogPost() {
             description="A cash-out refinance allows you to turn your home equity into liquid cash, but it resets your entire mortgage. Here is the exact math."
             url="https://usfinnexus.com/blog/cash-out-refinance-guide-2026"
             datePublished="2026-05-26"
-            dateModified="2026-05-26"
+            dateModified="2026-11-28"
             authorName="USFinNexus Editorial Team"
             keywords={['Refinance', 'Home Equity', 'Debt Consolidation', '2026']}
         />
@@ -52,6 +53,16 @@ export default function BlogPost() {
                     <span>10 min read</span>
                 </div>
             </header>
+            <h2>Compare a HELOC with cash-out refinancing on the same balance</h2>
+            <p>Freddie Mac reported a <a href="https://www.freddiemac.com/pmms">7.21% average 30-year fixed mortgage rate</a> on November 25, down from 7.28% the prior week. The New York Fed’s <a href="https://www.newyorkfed.org/newsevents/news/research/2026/20261110">November 10 household debt release</a> reported that third-quarter HELOC balances rose by $23 billion to $481 billion. The survey rate is a market reference. Ask for a written cash-out quote and a separate line-of-credit quote for your property.</p>
+            <p>Suppose you owe $250,000 at 3.5% with 25 years left and need $50,000 today. The refinance scenario replaces both amounts with a $300,000, 30-year loan at an illustrative 7.21%. The HELOC scenarios keep the existing payment, assume a full draw and compare an interest-only month with a later 10-year amortization of the same $50,000. Each scenario holds the displayed rate constant for illustration.</p>
+            <div className="overflow-x-auto"><table><caption>Illustrative monthly loan payments, rounded to the nearest dollar</caption>
+                <thead><tr><th scope="col">HELOC rate</th><th scope="col">First mortgage + interest-only draw</th><th scope="col">First mortgage + amortizing HELOC</th><th scope="col">Cash-out refinance principal and interest</th></tr></thead>
+                <tbody><tr><td>7%</td><td>$1,543</td><td>$1,832</td><td>$2,038</td></tr><tr><td>9%</td><td>$1,627</td><td>$1,885</td><td>$2,038</td></tr><tr><td>11%</td><td>$1,710</td><td>$1,940</td><td>$2,038</td></tr></tbody>
+            </table></div>
+            <p>The table excludes taxes, homeowners insurance, mortgage insurance, HOA dues and fees. The interest-only amount leaves the drawn principal outstanding. The alternatives have different payoff dates, so a smaller payment alone tells you little about total cost. Compare payments, fees and remaining balances over the same period you expect to keep the home. For variable-rate terms and repayment risks, see the <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-a-home-equity-line-of-credit-heloc-en-107/">CFPB HELOC explanation</a>.</p>
+            <p>Use the <Link href="/calculators/heloc">HELOC payment calculator</Link> and <Link href="/calculators/refinance">refinance calculator</Link> to test actual quote inputs. The <Link href="/blog/heloc-draw-period-repayment-2026">HELOC draw and repayment guide</Link> explains what to check before the line switches to repayment. Review the planned payoff date and available cash reserves before committing. These examples are educational estimates and are not lending, tax or financial advice.</p>
+
 
             <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text)' }}>
                 <p className="lead text-xl font-medium mb-8" style={{ color: 'var(--color-text-muted)' }}>
@@ -94,7 +105,7 @@ export default function BlogPost() {
 
                 <h2 className="text-2xl font-bold mt-12 mb-4">What Is the Risk of a Cash-Out Refinance in 2026?</h2>
                 <p>
-                    If you bought or refinanced your home between 2020 and 2021, you likely have a mortgage rate around 2.5% to 3.5%. In the 2026 economic environment, average mortgage rates are significantly higher (e.g., 6.5%).
+                    If your existing mortgage rate is below a written refinance quote, compare the cost of repricing the entire balance with borrowing only the additional amount.
                 </p>
                 <p>
                     If you execute a cash-out refinance today, you do not just pay 6.5% on the $50,000 you pulled out. <strong>You pay 6.5% on the entire $250,000 balance.</strong> You permanently forfeit your historic 3% interest rate.
