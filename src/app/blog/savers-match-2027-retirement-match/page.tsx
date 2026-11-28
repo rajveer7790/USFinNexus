@@ -5,10 +5,19 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import EditorialImage from '@/components/EditorialImage';
 
 const title = "Saver's Match 2027: Who Qualifies for the $1,000 Match?";
-const description = "See how the 2027 Saver's Match works, income phaseouts, eligible contributions, account rules, examples and steps to prepare before filing in 2028.";
+const description = "Estimate your 2027 Saver's Match with a phaseout chart and worked examples. Check income limits, eligible accounts and what to prepare before filing in 2028.";
 const url = 'https://usfinnexus.com/blog/savers-match-2027-retirement-match';
 const image = 'https://usfinnexus.com/images/savers-match-2027-retirement-match.webp';
+const singleFilerExamples = [
+  { income: 20500, rate: 50, match: 1000 },
+  { income: 23500, rate: 40, match: 800 },
+  { income: 28000, rate: 25, match: 500 },
+  { income: 32500, rate: 10, match: 200 },
+  { income: 35500, rate: 0, match: 0 },
+];
+const dollars = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
 const faqs = [
+  { question: "How much is the match if I am single and my 2027 MAGI is $28,000?", answer: "At $28,000 of 2027 MAGI, a qualifying single filer has a 25% match rate. That is an estimated $500 on $2,000 of qualified contributions after any applicable distribution reductions." },
   { question: "What is the Saver's Match starting in 2027?", answer: "It is a federal retirement-savings match for eligible low- and moderate-income savers. The match is generally up to 50% of as much as $2,000 of qualified contributions, for a maximum of $1,000 per eligible person, and is generally deposited into a designated retirement account." },
   { question: "When will I receive a match for a 2027 contribution?", answer: "You claim the match on your 2027 federal return, normally filed in 2028. It is not an immediate employer match and should not be included in a 2027 spending plan as cash in hand." },
   { question: "What are the 2027 Saver's Match income limits?", answer: "The match begins phasing down above MAGI of $20,500 for single or married-separate filers, $30,750 for heads of household, and $41,000 for joint filers or surviving spouses. It reaches zero at $35,500, $53,250, and $71,000, respectively." },
@@ -21,17 +30,17 @@ export const metadata: Metadata = {
   title: "Saver's Match 2027: Income Limits and $1,000 Match",
   description,
   alternates: { canonical: url },
-  openGraph: { type: 'article', title, description, url, publishedTime: '2026-10-22', modifiedTime: '2026-10-22', images: [{ url: image, width: 1200, height: 630, alt: "Couple reviewing retirement savings beside two equal stacks of coins representing the 2027 Saver's Match" }] },
+  openGraph: { type: 'article', title, description, url, publishedTime: '2026-10-22', modifiedTime: '2026-11-28', images: [{ url: image, width: 1200, height: 630, alt: "Couple reviewing retirement savings beside two equal stacks of coins representing the 2027 Saver's Match" }] },
   twitter: { card: 'summary_large_image', title, description, images: [image] },
 };
 
 export default function Page() {
   return <>
-    <ArticleSchema title={title} description={description} url={url} image={image} datePublished="2026-10-22" dateModified="2026-10-22" authorName="USFinNexus Editorial Team" keywords={["Saver's Match 2027", "2027 retirement match", "Saver's Match income limits", "government retirement match"]} />
+    <ArticleSchema title={title} description={description} url={url} image={image} datePublished="2026-10-22" dateModified="2026-11-28" authorName="USFinNexus Editorial Team" keywords={["Saver's Match 2027", "2027 retirement match", "Saver's Match income limits", "government retirement match"]} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })) }) }} />
     <main className="mx-auto max-w-4xl px-4 py-8"><Breadcrumbs items={[{ name: 'Blog', item: '/blog' }, { name: title, item: '/blog/savers-match-2027-retirement-match' }]} />
       <article className="prose prose-slate max-w-none">
-        <p className="text-sm font-semibold text-blue-700">Retirement savings · Published and reviewed October 22, 2026 · USFinNexus Editorial Team</p>
+        <p className="text-sm font-semibold text-blue-700">Retirement savings · Published October 22, 2026 · Updated November 28, 2026 · USFinNexus Editorial Team</p>
         <h1>{title}</h1>
         <p className="lead"><strong>Answer first:</strong> Starting with 2027 contributions, an eligible saver can receive a federal match of up to 50% of the first $2,000 saved—up to $1,000 per person. The percentage phases down as modified adjusted gross income rises. You claim it on the 2027 return filed in 2028, and the money generally goes into a designated retirement account rather than your checking account.</p>
         <figure><EditorialImage src="/images/savers-match-2027-retirement-match.webp" width={1200} height={630} priority alt="Couple reviewing retirement savings beside two equal stacks of coins representing the 2027 Saver's Match" className="h-auto w-full rounded-2xl" /><figcaption>Original AI-generated editorial photograph; no real taxpayer, account statement or financial company is shown.</figcaption></figure>
@@ -41,13 +50,26 @@ export default function Page() {
         <div className="not-prose overflow-x-auto"><table className="w-full text-left text-sm"><thead><tr><th className="border p-3">2027 filing status</th><th className="border p-3">Full 50% rate through MAGI</th><th className="border p-3">No match at or above MAGI</th><th className="border p-3">Maximum per eligible person</th></tr></thead><tbody>
           <tr><td className="border p-3">Single or married filing separately</td><td className="border p-3">$20,500</td><td className="border p-3">$35,500</td><td className="border p-3">$1,000</td></tr>
           <tr><td className="border p-3">Head of household</td><td className="border p-3">$30,750</td><td className="border p-3">$53,250</td><td className="border p-3">$1,000</td></tr>
-          <tr><td className="border p-3">Married filing jointly or surviving spouse</td><td className="border p-3">$41,000</td><td className="border p-3">$71,000</td><td className="border p-3">$1,000 for each eligible spouse</td></tr>
+          <tr><td className="border p-3">Married filing jointly or surviving spouse</td><td className="border p-3">$41,000</td><td className="border p-3">$71,000</td><td className="border p-3">$1,000 per eligible person</td></tr>
         </tbody></table></div>
         <p>These figures come from <a href="https://www.irs.gov/pub/irs-drop/n-26-48.pdf">IRS Notice 2026-48</a>. They are 2027 thresholds, not the contribution limits for a 401(k) or IRA. The ordinary annual limit for the account is a separate rule, and savers should use the official IRS limit that applies when making a 2027 contribution.</p>
 
         <h2>How the federal match is calculated</h2>
         <p>The basic calculation is qualified contributions up to $2,000 multiplied by the applicable percentage. At the full 50% rate, a $500 contribution could produce a $250 match, $1,000 could produce $500, and $2,000 could produce the $1,000 maximum. Saving more than $2,000 can still serve your retirement plan, but it does not raise this federal match above $1,000.</p>
         <p>Inside the phaseout range, the percentage declines gradually rather than dropping from 50% to zero in a single step. The notice rounds the percentage-point reduction down as directed by the statute. That makes a general table useful for planning but not a substitute for the final Form 8880-A calculation.</p>
+        <h3>How to read the phaseout chart</h3>
+        <p>The chart holds the contribution at $2,000 and varies income for a qualifying single filer. At $28,000 of modified adjusted gross income, the filer is $7,500 above the $20,500 starting point. That is halfway across the $15,000 phaseout range, so the rate falls by 25 percentage points to 25%. The resulting match estimate is $500. With only $1,200 of qualified contributions at that same income, the estimate would be $300.</p>
+        <figure className="not-prose rounded-xl border border-slate-200 p-4 sm:p-6">
+          <figcaption className="mb-4 font-semibold text-slate-900">Estimated 2027 match on $2,000 of qualified contributions, single filer</figcaption>
+          <ul className="m-0 list-none space-y-3 p-0">
+            {singleFilerExamples.map(({ income, rate, match }) => <li key={income} className="grid grid-cols-[1fr_auto] gap-x-3 gap-y-1 text-sm text-slate-900">
+              <span>{dollars.format(income)} MAGI</span><span className="text-right font-semibold tabular-nums">{rate}% · {dollars.format(match)}</span>
+              <span aria-hidden="true" className="col-span-2 block h-2.5 rounded-full bg-slate-100"><span className="block h-full rounded-full bg-teal-700" style={{ width: `${match / 10}%` }} /></span>
+            </li>)}
+          </ul>
+          <p className="mt-4 text-sm text-slate-700">Each bar is scaled to the $1,000 maximum. Examples assume the filer meets the eligibility rules and has no distributions reducing the contribution base.</p>
+        </figure>
+        <p>To work through a different filing status, subtract its full-rate income threshold from your estimated MAGI. If the result is positive, divide it by that status’s phaseout range, multiply by 50, and round the reduction down to a whole percentage point. Subtract the reduction from 50%, with a floor of zero. Then multiply the rate by your qualifying contribution base, capped at $2,000. See <a href="https://uscode.house.gov/us/usc/119-118/t26/s6433/">26 U.S.C. § 6433</a> for the statutory calculation.</p>
         <h3>Official IRS example: a $285 match</h3>
         <p>The IRS illustrates a single filer with $30,000 of 2027 MAGI and a $1,500 traditional IRA contribution. Under the phaseout formula, the applicable percentage is 19%, so the match is $285. A saver should not multiply every contribution by 50% after income has entered the phaseout range.</p>
         <h3>Official joint-return example</h3>
@@ -80,7 +102,7 @@ export default function Page() {
           <li><strong>Designate a receiving account:</strong> confirm that the plan or IRA provider can accept the federal deposit.</li>
           <li><strong>Use final IRS instructions:</strong> complete Form 8880-A with the 2027 return filed in 2028.</li>
         </ol>
-        <p>Use the <Link href="/calculators/budget">budget calculator</Link> to test a payroll or monthly contribution against essential expenses, and the <Link href="/calculators/investment">investment calculator</Link> to explore long-term scenarios. Neither calculator determines tax eligibility or predicts returns. For current workplace-plan context, see the <Link href="/blog/401k-contribution-limits-2026">401(k) contribution limits guide</Link>; do not reuse its 2026 limits for 2027.</p>
+        <p>Use the <Link href="/calculators/budget">budget calculator</Link> to test a payroll or monthly contribution against essential expenses, and the <Link href="/calculators/investment">investment calculator</Link> to explore long-term scenarios. Neither calculator determines tax eligibility or predicts returns. For workplace-plan context, see the <Link href="/blog/401k-contribution-limits-2027">2027 401(k) contribution limits guide</Link>. The workplace plan limit and the $2,000 Saver&apos;s Match calculation cap serve different purposes.</p>
 
         <h2>Tax treatment and early withdrawals</h2>
         <p>The federal match is generally not included in gross income when deposited. Later distributions attributable to matching funds can be taxable unless moved in a permitted rollover or transfer. Early or nonqualified distributions can also trigger recovery-tax and additional-tax rules. Treat the deposit as retirement money, not a short-term emergency-fund bonus.</p>
@@ -88,7 +110,7 @@ export default function Page() {
 
         <h2>Frequently asked questions</h2>{faqs.map(f => <section key={f.question}><h3>{f.question}</h3><p>{f.answer}</p></section>)}
         <h2>Sources and financial disclaimer</h2>
-        <p>The <a href="https://www.irs.gov/credits-deductions/savers-match">IRS Saver&apos;s Match overview</a>, <a href="https://www.irs.gov/pub/irs-drop/n-26-48.pdf">Notice 2026-48</a>, and the <a href="https://www.irs.gov/pub/irs-news/9-28-2026-report-to-congress.pdf">September 28, 2026 Treasury and IRS report to Congress</a> were reviewed October 22, 2026. Additional regulations, forms and provider procedures can change implementation before claims begin. This article is general federal tax and retirement education, not tax, legal or investment advice. Confirm eligibility, MAGI, contribution coding and the receiving account with the final IRS instructions and qualified professionals.</p>
+        <p>The <a href="https://www.irs.gov/credits-deductions/savers-match">IRS Saver&apos;s Match overview</a>, <a href="https://www.irs.gov/pub/irs-drop/n-26-48.pdf">Notice 2026-48</a>, and the <a href="https://www.irs.gov/pub/irs-news/9-28-2026-report-to-congress.pdf">September 28, 2026 Treasury and IRS report to Congress</a> were reviewed for this guide. Additional regulations, forms and provider procedures can change implementation before claims begin. This article is general federal tax and retirement education, not tax, legal or investment advice. Confirm eligibility, MAGI, contribution coding and the receiving account with the final IRS instructions and qualified professionals.</p>
       </article>
     </main>
   </>;
